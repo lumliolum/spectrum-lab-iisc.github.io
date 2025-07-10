@@ -6,7 +6,7 @@
       {%- for funder in sorted_funding -%}
         <div class="col-sm-4 height=50px p-y-5">
           <a href="{{ funder.url }}">
-            <img class="img-fluid mx-auto d-block" src="{{ funder.logo }}" alt="{{ funder.name }}">
+            <img class="img-fluid mx-auto d-block" src="{{ funder.logo | relative_url }}" alt="{{ funder.name }}">
           </a>
         </div>
       {%- endfor %}

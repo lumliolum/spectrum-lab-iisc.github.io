@@ -34,7 +34,7 @@ is a research group led by [Prof. Chandra Sekhar Seelamantula](https://yani.ai) 
     </div>
 </div>
 <div class="caption">
-    CML had <a href="https://www.calgaryml.com/assets/pdf/cml_neurips_2024.pdf">5 different works being presented by 6 students</a> at the premier machine learning conference, <a href="https://neurips.cc/Conferences/2024">Neural Information Processing Systems (NeurIPS) 2024</a>, across the workshops and main conference.
+    CML had <a href="{{ '/assets/pdf/cml_neurips_2024.pdf' | relative_url }}">5 different works being presented by 6 students</a> at the premier machine learning conference, <a href="https://neurips.cc/Conferences/2024">Neural Information Processing Systems (NeurIPS) 2024</a>, across the workshops and main conference.
 </div>
 
 <div class="row align-items-center">

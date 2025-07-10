@@ -16,9 +16,9 @@ footer_text: >
 keywords: IISc, Bengaluru, Indian Institute of Science, signal processing, machine learing, computational imaging, reserach, generative modelling, artificial intelligence # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 # icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
-logo: /assets/img/SpectrumLogo.png # the logo image used in the navbar and footer (alternatively, provide an emoji)
-url: https://www.calgaryml.com # the base hostname & protocol for your site
-baseurl: "" # the subpath of your site, e.g. /blog/
+logo: assets/img/SpectrumLogo.png # the logo image used in the navbar and footer (alternatively, provide an emoji)
+url: "https://spectrum-lab-iisc.github.io" # the base hostname & protocol for your site
+baseurl: "/spectrum-website" # the subpath of your site, e.g. /blog/
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button

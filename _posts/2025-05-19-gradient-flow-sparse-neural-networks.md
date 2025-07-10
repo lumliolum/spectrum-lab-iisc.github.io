@@ -49,7 +49,7 @@ A common way to obtain a sparse network is by **pruning** a large, trained dense
 <div class="container">
   <div class="row justify-content-center align-items-center">
       <div class="col-lg mt-3 mt-md-0 bg-white">
-          <img src="/assets/img/gradientflow/sparsetrainingproblem.svg" alt="Training Outcomes: Pruning pipeline vs. sparse training problem." class="img-fluid rounded z-depth-0" loading="eager" />
+          <img src="{{ '/assets/img/gradientflow/sparsetrainingproblem.svg' | relative_url }}" alt="Training Outcomes: Pruning pipeline vs. sparse training problem." class="img-fluid rounded z-depth-0" loading="eager" />
       </div>
   </div>
   <div class="caption">Figure 1: (Left) The standard pruning pipeline: train a dense model, prune it, and optionally fine-tune to get a good sparse model. (Right) The sparse training problem: initializing a sparse network randomly and training it often leads to poor performance compared to the pruned model.</div>
@@ -68,11 +68,11 @@ Many advancements in training dense DNNs have come from understanding and improv
 <div class="container">
   <div class="row align-items-center justify-content-center">
       <div class="col-6 mt-3 mt-md-0">
-          <img src="/assets/img/gradientflow/dense_fanin.svg" alt="Dense fan-in in a neural network." class="img-fluid rounded z-depth-0" loading="eager" />
+          <img src="{{ '/assets/img/gradientflow/dense_fanin.svg' | relative_url }}" alt="Dense fan-in in a neural network." class="img-fluid rounded z-depth-0" loading="eager" />
           <div class="caption">(a) Dense layer, every neuron has the same number of incoming connections</div>
       </div>
       <div class="col-6 mt-3 mt-md-0">
-          <img src="/assets/img/gradientflow/sparse_fanin.svg" alt="Heterogeneous sparse fan-in in a neural network." class="img-fluid rounded z-depth-0" loading="eager" />
+          <img src="{{ '/assets/img/gradientflow/sparse_fanin.svg' | relative_url }}" alt="Heterogeneous sparse fan-in in a neural network." class="img-fluid rounded z-depth-0" loading="eager" />
           <div class="caption">(b) Sparse layer, every neuron can have a different number of incoming connections</div>
       </div>
   </div>
@@ -93,11 +93,11 @@ where $\textbf{fan-in}$ is the number of incoming connections for the layer, and
 <div class="container">
   <div class="row align-items-center justify-content-center">
       <div class="col-6 mt-3 mt-md-0">
-          <img src="/assets/img/gradientflow/sparse_fanin_unequalout.svg" alt="Sparse neural network with dense init." class="img-fluid rounded z-depth-0" loading="eager" />
+          <img src="{{ '/assets/img/gradientflow/sparse_fanin_unequalout.svg' | relative_url }}" alt="Sparse neural network with dense init." class="img-fluid rounded z-depth-0" loading="eager" />
           <div class="caption">(a) Dense initialization assumes every neuron has same number of connections, and on average, uses weights that are too small</div>
       </div>
       <div class="col-6 mt-3 mt-md-0">
-          <img src="/assets/img/gradientflow/sparse_fanin_equalout.svg" alt="Sparse neural network with sparse init.." class="img-fluid rounded z-depth-0" loading="eager" />
+          <img src="{{ '/assets/img/gradientflow/sparse_fanin_equalout.svg' | relative_url }}" alt="Sparse neural network with sparse init.." class="img-fluid rounded z-depth-0" loading="eager" />
           <div class="caption">(b) Sparse initialization calculates the correct weight variance for each neuron based on the number of incoming connections</div>
       </div>
   </div>
@@ -118,7 +118,7 @@ where $\text{fan-in}_i^{[l]}$ is the number of incoming connections for neuron $
 <div class="container">
   <div class="row justify-content-center align-items-center">
       <div class="col-8 mt-3 mt-md-0 bg-white">
-          <img src="/assets/img/gradientflow/sparseinit_signalprop.svg" alt="Signal Propagation at Initialization: Graph showing standard deviation of output vs. sparsity." class="img-fluid rounded z-depth-0" loading="eager" />
+          <img src="{{ '/assets/img/gradientflow/sparseinit_signalprop.svg' | relative_url }}" alt="Signal Propagation at Initialization: Graph showing standard deviation of output vs. sparsity." class="img-fluid rounded z-depth-0" loading="eager" />
       </div>
   </div>
   <div class="caption">Figure 3: Standard deviation of the pre-softmax output ($\sigma(f(x))$) in LeNet-5 vs. sparsity level. Dense initialization (blue) shows signal vanishing with increasing sparsity. Sparsity-aware initializations (Liu et al. <d-cite key="Liu2019Rethinking"></d-cite> and "Ours" - the paper's proposal) maintain signal strength.</div>
@@ -133,13 +133,13 @@ While a good initialization helps, it's not the whole story. Sparse networks can
 <div class="container">
   <div class="row justify-content-center align-items-center bg-white">
       <div class="col-6 mt-3 mt-md-0">
-          <img src="/assets/img/gradientflow/mnist_gradnorm_logx.svg" alt="Gradient Norm During Training: Graphs for LeNet-5, VGG-16, and ResNet-50." class="img-fluid rounded z-depth-0" loading="eager" />
+<img src="{{ '/assets/img/gradientflow/mnist_gradnorm_logx.svg' | relative_url }}" alt="Gradient Norm During Training: Graphs for LeNet-5, VGG-16, and ResNet-50." class="img-fluid rounded z-depth-0" loading="eager" />
+</div>
+<div class="col-6 mt-3 mt-md-0">
+<img src="{{ '/assets/img/gradientflow/vgg_gradnorm.svg' | relative_url }}" alt="Gradient Norm During Training: Graphs for LeNet-5, VGG-16, and ResNet-50." class="img-fluid rounded z-depth-0" loading="eager" />
       </div>
       <div class="col-6 mt-3 mt-md-0">
-          <img src="/assets/img/gradientflow/vgg_gradnorm.svg" alt="Gradient Norm During Training: Graphs for LeNet-5, VGG-16, and ResNet-50." class="img-fluid rounded z-depth-0" loading="eager" />
-      </div>
-      <div class="col-6 mt-3 mt-md-0">
-          <img src="/assets/img/gradientflow/resnet_gradnorm.svg" alt="Gradient Norm During Training: Graphs for LeNet-5, VGG-16, and ResNet-50." class="img-fluid rounded z-depth-0" loading="eager" />
+<img src="{{ '/assets/img/gradientflow/resnet_gradnorm.svg' | relative_url }}" alt="Gradient Norm During Training: Graphs for LeNet-5, VGG-16, and ResNet-50." class="img-fluid rounded z-depth-0" loading="eager" />
       </div>
   </div>
   <div class="caption">Figure 4: Gradient norm during training for LeNet-5 (left), VGG-16 (center), and ResNet-50 (right) under different setups. 'Scratch' (training a sparse mask from random dense initialization) often shows very low gradient norm initially. 'Scratch+' (with sparsity-aware initialization) improves this. 'RigL+' (a DST method with sparsity-aware init) often shows stronger gradient flow.</div>
@@ -157,7 +157,7 @@ The paper shows that DST methods, particularly RigL, significantly improve gradi
 <div class="container">
   <div class="row justify-content-center align-items-center">
       <div class="col-lg mt-3 mt-md-0 bg-white">
-          <img src="/assets/img/gradientflow/lotterticketsolution.svg" alt="Lottery Ticket Hypothesis Concept: Diagram illustrating the LTH process." class="img-fluid rounded z-depth-0" loading="eager" />
+<img src="{{ '/assets/img/gradientflow/lotterticketsolution.svg' | relative_url }}" alt="Lottery Ticket Hypothesis Concept: Diagram illustrating the LTH process." class="img-fluid rounded z-depth-0" loading="eager" />
       </div>
   </div>
   <div class="caption">Figure 5: The Lottery Ticket Hypothesis: A dense network is trained (obtaining a dense solution), then pruned. The "winning ticket" uses the *initial weights* ($\Theta_{t=0}$ or an early snapshot $\Theta_{0<t \ll T}$) corresponding to the pruned mask and is then trained.</div>
@@ -175,7 +175,7 @@ So, if LTs don't fix the gradient flow problem, why do they work so well? The pa
 <div class="container">
   <div class="row justify-content-center align-items-center">
       <div class="col-9 mt-3 mt-md-0 bg-white">
-          <img src="/assets/img/gradientflow/mnist_mds.svg" alt="MDS Plot of Solutions: 2D projection of solution distances for LeNet5." class="img-fluid rounded z-depth-0" loading="eager" />
+<img src="{{ '/assets/img/gradientflow/mnist_mds.svg' | relative_url }}" alt="MDS Plot of Solutions: 2D projection of solution distances for LeNet5." class="img-fluid rounded z-depth-0" loading="eager" />
       </div>
   </div>
   <div class="caption">Figure 6: A 2D MDS projection showing the relative distances between different solutions for LeNet5. 'Lottery-start' is closer to 'Prune-end' than 'Scratch-start'. 'Lottery-end' converges very close to 'Prune-end', while 'Scratch-end' solutions are more dispersed and further away.</div>
@@ -187,10 +187,10 @@ So, if LTs don't fix the gradient flow problem, why do they work so well? The pa
 <div class="container">
   <div class="row justify-content-center align-items-center">
       <div class="col-6 mt-3 mt-md-0 bg-white">
-          <img src="/assets/img/gradientflow/mnist_interpol.svg" alt="Loss Interpolation: Graph showing training loss along interpolation paths for LeNet5." class="img-fluid rounded z-depth-0" loading="eager" />
-      </div>
-      <div class="col-6 mt-3 mt-md-0 bg-white">
-          <img src="/assets/img/gradientflow/resnet_interpol.svg" alt="Loss Interpolation: Graph showing training loss along interpolation paths for LeNet5." class="img-fluid rounded z-depth-0" loading="eager" />
+<img src="{{ '/assets/img/gradientflow/mnist_interpol.svg' | relative_url }}" alt="Loss Interpolation: Graph showing training loss along interpolation paths for LeNet5." class="img-fluid rounded z-depth-0" loading="eager" />
+</div>
+<div class="col-6 mt-3 mt-md-0 bg-white">
+<img src="{{ '/assets/img/gradientflow/resnet_interpol.svg' | relative_url }}" alt="Loss Interpolation: Graph showing training loss along interpolation paths for LeNet5." class="img-fluid rounded z-depth-0" loading="eager" />
       </div>
   </div>
   <div class="caption">Figure 7: Training loss along a linear interpolation path between a starting point ($\alpha=0$, e.g., Lottery-start or Scratch-start) and the Pruned Solution ($\alpha=1$) for LeNet5. The path between 'Lottery End' and 'Pruned Solution' is relatively flat, indicating they are in the same basin. The path from 'Scratch End' often shows a barrier.</div>
@@ -238,7 +238,7 @@ Table 1: Ensemble & Prediction Disagreement. We compare the function disagreemen
 <div class="container l-screen">
   <div class="row justify-content-center align-items-center">
       <div class="col-lg mt-3 mt-md-0 bg-white">
-          <img src="/assets/img/gradientflow/initializations_explained.svg" alt="Loss Landscape Intuition: Diagram illustrating basins of attraction for LT and Scratch." class="img-fluid rounded z-depth-0" loading="eager" />
+          <img src="{{ '/assets/img/gradientflow/initializations_explained.svg' | relative_url }}" alt="Loss Landscape Intuition: Diagram illustrating basins of attraction for LT and Scratch." class="img-fluid rounded z-depth-0" loading="eager" />
       </div>
   </div>
   <div class="caption">Figure 8: An intuitive illustration. A Lottery Ticket initialization (blue circle) is already positioned within the basin of attraction of the good Pruning Solution (green circle). Random (Scratch) initializations (red circles) are more likely to fall into different, potentially suboptimal, basins.</div>

@@ -43,7 +43,7 @@
       </table>
       {% if page.latest_posts.scrollable and latest_posts_size > page.latest_posts.limit %}
         <div class="col-12 text-center">
-          <a href="/blog/">See full list of research posts here</a>
+          <a href="{{ '/blog/' | relative_url }}">See full list of research posts here</a>
         </div>
       {% endif %}
     </div>

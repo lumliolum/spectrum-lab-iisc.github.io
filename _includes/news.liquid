@@ -29,7 +29,7 @@
       </table>
       {% if include.limit and page.announcements.scrollable and news_size > 3 %}
         <div class="col-12 text-center">
-          <a href="/news/">See full list of announcements here</a>
+          <a href="{{ '/news/' | relative_url }}">See full list of announcements here</a>
         </div>
       {% endif %}
     </div>

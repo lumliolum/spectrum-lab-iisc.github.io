@@ -30,7 +30,7 @@ is a research group led by [Prof. Chandra Sekhar Seelamantula](https://ee.iisc.a
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="{{ 'assets/img/labphotos/icassp2025.jpg' | relative_url }}" title="ICASSP 2025" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path='assets/img/labphotos/icassp2025.jpg' title="ICASSP 2025" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

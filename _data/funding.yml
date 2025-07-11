@@ -9,15 +9,21 @@
   invert : false
 
 - logo: /assets/img/National_Research_Foundation_logo.svg
-  url: 
+  url: https://serb.gov.in/
   name: "National Research Foundation"
   invert : true
 
 - logo: /assets/img/goi.svg
-  url: 
+  url: https://www.education.gov.in/
   name: "Ministry of Education"
   invert : true
+
 - logo: /assets/img/isro.png
-  url: 
+  url: https://www.isro.gov.in/
   name: "Indian Space Research Organisation"
   invert : true
+
+- logo: /assets/img/IISc/IISc_Master_Seal_Transparent.png
+  url: https://www.iisc.ac.in
+  name: "Indian Institute of Science"
+  invert : false

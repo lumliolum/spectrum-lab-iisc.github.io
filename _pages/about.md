@@ -26,7 +26,7 @@ latest_posts:
 ---
 
 The **Spectrum Lab**
-is a research group led by [Prof. Chandra Sekhar Seelamantula](https://yani.ai) in the [Department of Electrical Engineering](https://schulich.ucalgary.ca) at the [Indian Institute of Science](https://www.ucalgary.ca). The lab focuses on problems in the intersection of computational imaging and maching learning.
+is a research group led by [Prof. Chandra Sekhar Seelamantula](https://ee.iisc.ac.in/chandra-sekhar-seelamantula/) in the [Department of Electrical Engineering](https://ee.iisc.ac.in/) at the [Indian Institute of Science](https://iisc.ac.in/). The lab focuses on problems in the intersection of computational imaging and machine learning.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

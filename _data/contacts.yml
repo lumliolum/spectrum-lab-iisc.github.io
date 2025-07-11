@@ -1,0 +1,17 @@
+administrative_assistant:
+  name: "Ms. Manjula Shankar"
+  email: "mmanjulashankar@gmail.com"
+  phone: "+91 80 2293 2392/2376"
+
+mailing_address:
+  line1: "C234 Department of Electrical Engineering"
+  line2: "Indian Institute of Science"
+  line3: "CV Raman Avenue, Malleshwaram"
+  line4: "Bengaluru 560 012"
+
+lab_location:
+  name: "The Spectrum Lab"
+  department: "Department of Electrical Engineering"
+  institution: "Indian Institute of Science (IISc)"
+  city: "Bengaluru"
+  info_url: "https://iisc.ac.in/"

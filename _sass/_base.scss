@@ -1478,3 +1478,19 @@ ninja-keys::part(ninja-input-wrapper) {
 // .table-dark {
 //   color: #000;
 // }
+
+// Funding logo selective black-to-white inversion for dark mode
+// Only applied when invert: true is set in funding.yml
+.funding-logo-invert {
+  transition: filter 0.3s ease;
+}
+
+html[data-theme="dark"] .funding-logo-invert {
+  // Selective approach: invert only dark colors, preserve colored elements
+  filter: invert(1) hue-rotate(180deg) brightness(1.2) contrast(0.9);
+  // This combination inverts black to white but tries to preserve other colors
+  // by rotating hue twice (360deg total) and adjusting brightness/contrast
+  
+  // Alternative: Use a more conservative approach for better color preservation
+  // filter: brightness(1.2) contrast(1.1) saturate(0.8);
+}

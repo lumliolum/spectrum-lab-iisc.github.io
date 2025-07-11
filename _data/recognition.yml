@@ -1,0 +1,96 @@
+- name: "Nareddy Kartheek Kumar Reddy"
+  award: "Qualcomm Innovation Fellowship"
+  year: "2020"
+  category: "Fellowship"
+
+- name: "Nareddy Kartheek Kumar Reddy"
+  award: "Prime Minister's Research Fellowship"
+  year: ""
+  category: "Fellowship"
+
+- name: "Abijith Kamath"
+  award: "Prime Minister's Research Fellowship"
+  year: ""
+  category: "Fellowship"
+
+- name: "Siddarth Asokan"
+  award: "Robert Bosch Centre for Cyberphysical Systems PhD Fellowship"
+  year: "2020, 2021"
+  category: "Fellowship"
+
+- name: "Siddarth Asokan"
+  award: "Microsoft India PhD Fellowship"
+  year: ""
+  category: "Fellowship"
+
+- name: "Satish Mulleti"
+  award: "D. J. Badkas Medal for the Best Doctoral Dissertation"
+  year: ""
+  category: "Award"
+
+- name: "Subhadip Mukherjee"
+  award: "SPCOM 2020 Best Doctoral Dissertation (Second place)"
+  year: "2020"
+  category: "Award"
+
+- name: "Sunder Ram Krishnan"
+  award: "The Hay Medal for the Best M.Sc.(Eng.) thesis"
+  year: ""
+  category: "Award"
+
+- name: "Sudarshan Nagesh"
+  award: "The Hay Medal for the Best M.Sc.(Eng.) thesis"
+  year: ""
+  category: "Award"
+
+- name: "Subhadip Mukherjee"
+  award: "Tata Consultancy Services PhD Fellowship"
+  year: ""
+  category: "Fellowship"
+
+- name: "Subhadip Mukherjee"
+  award: "Prof. I.S.N. Murthy Medal for the outstanding M.Tech.(SP) student"
+  year: ""
+  category: "Award"
+
+- name: "Debabrata Mahapatra"
+  award: "N.R. Khambati Memorial Award for the outstanding M.Tech.(SSA) student"
+  year: ""
+  category: "Award"
+
+- name: "Aditya Pediredla"
+  award: "N. R. Khambati Memorial Award for the outstanding M.Tech.(SSA) student"
+  year: "2011"
+  category: "Award"
+
+- name: "Aditya Pediredla"
+  award: "Indian National Academy of Engineering, Innovative Masters project award"
+  year: "2011"
+  category: "Award"
+
+- name: "Satish Mulleti"
+  award: "Top 10% Paper Award at IEEE International Conference on Image Processing"
+  year: "2014"
+  category: "Award"
+
+- name: "Chandra Sekhar Seelamantula"
+  award: "Intellectual Ventures Invention Award for the invention, \"Level-crossing computation technique for analog signals\""
+  year: "2011"
+  category: "Award"
+
+- name: "Chandra Sekhar Seelamantula"
+  award: "Intellectual Ventures Invention Award for the invention, \"Multiband AM-FM-based speech/audio coder\""
+  year: "2011"
+  category: "Award"
+  co_inventors: "T.V. Sreenivas"
+
+- name: "Chandra Sekhar Seelamantula"
+  award: "Intellectual Ventures Invention Award for the invention, \"Multimodal density estimation approach to formant tracking\""
+  year: "2010"
+  category: "Award"
+  co_inventors: "Harshavardhan Sundar and T. V. Sreenivas"
+
+- name: "Haricharan Aragonda"
+  award: "First prize in the 2010 IEEE India M.V. Chauhan student paper contest for the paper titled, \"Quadrature approximations in R2\""
+  year: "2010"
+  category: "Award"

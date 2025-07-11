@@ -4,7 +4,8 @@
     <div class="container">
       <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
         {%- if site.logo -%}
-          <img class="navbar" src="{{ site.logo | relative_url }}" alt="{{ site.title }}"></img>
+          <img class="navbar spectrum-logo-light" src="{{ '/assets/img/SpectrumLab/SpectrumLogo Black.png' | relative_url }}" alt="{{ site.title }}"></img>
+          <img class="navbar spectrum-logo-dark" src="{{ '/assets/img/SpectrumLab/SpectrumLogo White.png' | relative_url }}" alt="{{ site.title }}"></img>
         {% else %}
           {% if site.first_name %}
             <span class="font-weight-bold">

@@ -62,6 +62,13 @@
   .repo-img-dark {
     display: none;
   }
+  
+  .spectrum-logo-light {
+    display: block;
+  }
+  .spectrum-logo-dark {
+    display: none;
+  }
 
   #back-to-top {
     color: var(--global-back-to-top-text-color);
@@ -115,6 +122,13 @@ html[data-theme="dark"] {
     display: none;
   }
   .repo-img-dark {
+    display: block;
+  }
+  
+  .spectrum-logo-light {
+    display: none;
+  }
+  .spectrum-logo-dark {
     display: block;
   }
 }

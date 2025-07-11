@@ -1,19 +1,23 @@
 - logo: /assets/img/Qualcomm.jpg
   url: https://www.qualcomm.com
   name: "Qualcomm"
+  invert : false
 
 - logo: /assets/img/Zeiss.jpg
   url: 
   name: "Zeiss"
+  invert : false
 
-- logo: /assets/img/national-research-foundation.png
+- logo: /assets/img/National_Research_Foundation_logo.svg
   url: 
   name: "National Research Foundation"
+  invert : true
 
-- logo: /assets/img/goi.png
+- logo: /assets/img/goi.svg
   url: 
   name: "Ministry of Education"
-
+  invert : true
 - logo: /assets/img/isro.png
   url: 
   name: "Indian Space Research Organisation"
+  invert : true

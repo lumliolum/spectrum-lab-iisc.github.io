@@ -34,7 +34,7 @@ is a research group led by [Prof. Chandra Sekhar Seelamantula](https://ee.iisc.a
     </div>
 </div>
 <div class="caption">
-    CML had <a href="{{ 'assets/img/labphotos/icassp2025.jpg' | relative_url }}">3 different works being presented by 3 students</a> at the premier signal processing conference, <a href="https://2025.ieeeicassp.org/">ICASSP</a>, across the workshops and main conference.
+    Spectrum had <a href="{{ 'assets/img/labphotos/icassp2025.jpg' | relative_url }}">3 different works being presented by 3 students</a> at the premier signal processing conference, <a href="https://2025.ieeeicassp.org/">ICASSP</a>, across the workshops and main conference.
 </div>
 
 <div class="row align-items-center">

@@ -9,6 +9,6 @@ github: matharg7
 redirect: https://github.com/matharg7
 email: muhammadathar.ganaie@ucalgary.ca
 scholar_userid: HHh9JMkAAAAJ
-category: MSc Students
+category: M.Tech. Students
 show: true
 ---

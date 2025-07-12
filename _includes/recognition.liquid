@@ -1,29 +1,29 @@
 <div class="recognition">
   <div class="container-md">
-    <h3 class="mb-1">Awards</h3>
-    <div class="list-group">
+    <h3 class="mb-4">Awards</h3>
+    <div class="awards-grid">
       {%- assign awards = site.data.recognition | where: "category", "Award" -%}
       {%- assign sorted_awards = awards | sort: "year" | reverse -%}
       {%- for award in sorted_awards -%}
-      <div class="list-group-item border-0 px-0 py-2">
-          <div class="pe-3 flex-grow-2">
-            {%- if award.url -%}
+      <div class="award-card">
+        <div class="award-content">
+          {% if award.url %}
             <h6 class="mb-1 text-primary">
               <a href="{{ award.url }}" target="_blank" rel="noopener noreferrer">{{ award.name }}</a>
             </h6>
-            {%- else -%}
+          {% else %}
             <h6 class="mb-1 text-primary">{{ award.name }}</h6>
-            {%- endif -%}
-            <p class="mb-1">{{ award.award }}</p>
-            {%- if award.co_inventors -%}
+          {% endif %}
+          <p class="mb-1">{{ award.award }}</p>
+          {% if award.co_inventors %}
             <small class="text-muted">Co-inventors: {{ award.co_inventors }}</small>
-            {%- endif -%}
-          </div>
-          <div class="text-end">
-            {%- if award.year != "" -%}
-            <small style="min-width: 3rem;">{{ award.year }}</small>
-            {%- endif -%}
-          </div>
+          {% endif %}
+        </div>
+        {% if award.year %}
+        <div class="award-year">
+          <small class="text-muted">{{ award.year }}</small>
+        </div>
+        {% endif %}
       </div>
       {%- endfor -%}
     </div>
@@ -31,8 +31,49 @@
 </div>
 
 <style>
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
 
-  html[data-theme="dark"] .list-group .list-group-item {
-    background: var(--code-bg-color-dark) !important;
-  }
+.award-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg, #f9f9f9);
+  padding: 1rem;
+  border-radius: 8px;
+  height: 100%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.award-content {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.award-year {
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+/* Dark mode compatibility */
+html[data-theme="dark"] .award-card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: 0 2px 6px rgba(255,255,255,0.05);
+}
+
+html[data-theme="dark"] .text-muted {
+  color: #aaa !important;
+}
+
+html[data-theme="dark"] .text-primary a {
+  color: #90caf9 !important;
+}
+
+html[data-theme="dark"] a:hover {
+  color: #ffffff;
+}
+
 </style>

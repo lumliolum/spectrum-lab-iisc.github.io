@@ -3,7 +3,7 @@ layout: page
 firstname: Chandra Sekhar
 lastname: Seelamantula
 description: Professor, Electrical Engineering
-img: assets/img/people/Chandra_backup.jpg
+img: assets/img/people/lab_director/Chandra_backup.jpg
 redirect:
 orcid_id: 
 linkedin_username: 

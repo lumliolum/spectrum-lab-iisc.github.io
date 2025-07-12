@@ -1,29 +1,29 @@
-- logo: /assets/img/Qualcomm.jpg
+- logo: /assets/img/funders/Qualcomm.jpg
   url: https://www.qualcomm.com
   name: "Qualcomm"
   invert : false
 
-- logo: /assets/img/Zeiss.jpg
+- logo: /assets/img/funders/Zeiss.jpg
   url: 
   name: "Zeiss"
   invert : false
 
-- logo: /assets/img/National_Research_Foundation_logo.svg
+- logo: /assets/img/funders/National_Research_Foundation_logo.svg
   url: https://serb.gov.in/
   name: "National Research Foundation"
   invert : true
 
-- logo: /assets/img/goi.svg
+- logo: /assets/img/funders/goi.svg
   url: https://www.education.gov.in/
   name: "Ministry of Education"
   invert : true
 
-- logo: /assets/img/isro.png
+- logo: /assets/img/funders/isro.png
   url: https://www.isro.gov.in/
   name: "Indian Space Research Organisation"
   invert : true
 
-- logo: /assets/img/IISc/IISc_Master_Seal_Transparent.png
+- logo: /assets/img/funders/IISc_Master_Seal_Transparent.png
   url: https://www.iisc.ac.in
   name: "Indian Institute of Science"
   invert : false

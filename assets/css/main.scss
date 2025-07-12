@@ -24,6 +24,9 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-outline.scss"
 ;
 
+/* Include mathpazo fonts for MathJax */
+@import "mathpazo-fonts";
+
 * {
 font-family: "proxima-nova", "Proxima Nova", Arial, Helvetica, sans-serif;
 };

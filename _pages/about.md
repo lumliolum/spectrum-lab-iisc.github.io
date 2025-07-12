@@ -18,7 +18,7 @@ announcements:
   enabled: true # includes a list of news items
   scrollable: false # adds a vertical scroll bar if there are more than 3 news items
   limit: 3 # leave blank to include all the news in the `_news` folder
-display_categories: [Lab Director, PhD Students, M.Tech. Students, Undergraduates]
+display_categories: [Lab Director, PhD Students, MTech Students]
 latest_posts:
   enabled: true
   scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
@@ -34,27 +34,27 @@ is a research group led by [Prof. Chandra Sekhar Seelamantula](https://ee.iisc.a
     </div>
 </div>
 <div class="caption">
-    Spectrum had <a href="{{ 'assets/img/labphotos/icassp2025.jpg' | relative_url }}">3 different works being presented by 3 students</a> at the premier signal processing conference, <a href="https://2025.ieeeicassp.org/">ICASSP</a>, across the workshops and main conference.
+    Spectrum Lab, past and present, at <a href="https://2025.ieeeicassp.org/">ICASSP 2025</a>, in Hyderabad, India.
 </div>
 
 <div class="row align-items-center">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/labphotos/lab_schulich_april2024.jpg" title="Schulich School of Engineering, University of Calgary" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/labphotos/chitradurga-2024.jpg" title="Visiting the Challakere Campus" class="img-fluid rounded z-depth-1" %}
         <div class="caption">
-            Schulich School of Engineering, University of Calgary (April 2024)
+            Visiting IISc. Challakere Campus (May 2024)
         </div>
     </div>
     <div class="col-sm">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/labphotos/neurips2024.jpg" title="NeurIPS 2024" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/labphotos/icassp-2019.jpg" title="ICASSP 2019" class="img-fluid rounded z-depth-1" %}
         <div class="caption">
-            NeurIPS 2024, Vancouver, BC, Canada (December 2024)
+            ICASSP 2019, Brighton, UK (May 2019)
         </div>
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/labphotos/peyto2023.jpg" title="Peyto Lake, Banff National Park" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/labphotos/iscs-2025.jpg" title="Spectrum Lab @ ISCS 2025" class="img-fluid rounded z-depth-1" %}
         <div class="caption">
-            Peyto Lake, Banff National Park, AB, Canada (August 2023)
+            Spectrum Lab @ ISCS 2025, Luxembourg (June 2025)
         </div>
     </div>
     </div>

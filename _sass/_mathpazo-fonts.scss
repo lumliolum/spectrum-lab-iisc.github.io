@@ -1,0 +1,56 @@
+/* Custom CSS for mathpazo-style fonts in MathJax */
+.MathJax {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+}
+
+/* For MathJax CHTML output */
+.MathJax_CHTML {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+}
+
+/* For MathJax SVG output */
+.MathJax_SVG {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+}
+
+/* For MathJax HTML-CSS output */
+.MathJax_HTML-CSS {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+}
+
+/* Target specific MathJax elements */
+mjx-container[jax="CHTML"] {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+}
+
+mjx-container[jax="SVG"] {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+}
+
+/* For newer MathJax versions */
+mjx-math {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+}
+
+/* Specific styling for math elements */
+.mjx-chtml {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+}
+
+.mjx-math {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+}
+
+/* Override any existing font settings for math */
+math {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+}
+
+/* Additional styling for inline and display math */
+span.mjx-chtml {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+}
+
+div.mjx-chtml {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+}

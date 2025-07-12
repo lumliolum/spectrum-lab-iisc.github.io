@@ -16,7 +16,7 @@
 - logo: /assets/img/funders/goi.svg
   url: https://www.education.gov.in/
   name: "Ministry of Education"
-  invert : true
+  invert : false
 
 - logo: /assets/img/funders/isro.png
   url: https://www.isro.gov.in/

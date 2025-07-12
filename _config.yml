@@ -6,7 +6,7 @@ title: # the website title (if blank, full name will be used instead)
 first_name: Spectrum
 middle_name:
 last_name: Lab
-email: yani.ioannou@ucalgary.ca
+email: css@iisc.ac.in
 description: Spectrum Lab
 long_description: "Spectrum Lab is a research group directed by Prof. Chandra Sekhar Seelamantula at the Department of Electrical Engineering at the Indian Institute of Science, Bengaluru."
 territorial_acknowledgement: 
@@ -141,7 +141,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: Research # blog_name will be displayed in your blog page
-blog_description: Short articles on our research and topics in machine learning
+blog_description:
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 

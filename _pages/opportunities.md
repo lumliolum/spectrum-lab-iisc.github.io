@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /opportunities/
-title: opportunities
-description: Join our research team and contribute to cutting-edge research in signal processing, machine learning, and computational imaging.
+title: Opportunities
+description:
 nav: true
 nav_order: 5
 ---
@@ -16,20 +16,20 @@ nav_order: 5
         
         <div class="alert alert-info" role="alert">
           <i class="fas fa-info-circle"></i> 
-          <strong>Required Skills:</strong> If you are exceptionally good in at least one of the following skills, you might be a good fit for our lab:
-          <ul class="mt-2">
-            <li>Analytical abilities</li>
-            <li>Programming (Matlab, Java, Python, C, C++)</li>
-            <li>Website development</li>
-            <li>LaTeX</li>
-            <li>Multimedia content creation</li>
-            <li>Or a combination of these</li>
+          <strong class="alert-info">Required Skills:</strong> If you are exceptionally good in at least one of the following skills, you might be a good fit for our lab:
+          <ul class="mt-2 para-wtv">
+            <li class="para-wtv">Analytical abilities</li>
+            <li class="para-wtv">Programming (Matlab, Java, Python, C, C++)</li>
+            <li class="para-wtv">Website development</li>
+            <li class="para-wtv">LaTeX</li>
+            <li class="para-wtv">Multimedia content creation</li>
+            <li class="para-wtv">Or a combination of these</li>
           </ul>
         </div>
 
         <div class="alert alert-warning" role="alert">
           <i class="fas fa-envelope"></i>
-          <strong>Application Process:</strong> Send a neatly crafted resume (max. 2 pages, in PDF only) focused on technical skills by email to <a href="mailto:css@iisc.ac.in">css@iisc.ac.in</a>. You will receive an acknowledgment in two days. Otherwise, please send a gentle reminder.
+          <strong class="para-wtv">Application Process:</strong> Send a neatly crafted resume (max. 2 pages, in PDF only) focused on technical skills by email to <a href="mailto:css@iisc.ac.in">css@iisc.ac.in</a>. You will receive an acknowledgment in two days. Otherwise, please send a gentle reminder.
         </div>
       </div>
     </div>
@@ -43,7 +43,7 @@ nav_order: 5
     <div class="row">
       <div class="col-md-6 mb-4">
         <div class="card h-100">
-          <div class="card-header bg-primary text-white">
+          <div class="card-header alert-info text-white">
             <h4 class="card-title mb-0"><i class="fas fa-sun"></i> Summer Internship</h4>
           </div>
           <div class="card-body">
@@ -56,8 +56,8 @@ nav_order: 5
 
       <div class="col-md-6 mb-4">
         <div class="card h-100">
-          <div class="card-header bg-success text-white">
-            <h4 class="card-title mb-0"><i class="fas fa-graduation-cap"></i> B.Tech. Project Students</h4>
+          <div class="card-header alert-info text-white">
+            <h4 class="card-title mb-0"><i class="fas fa-graduation-cap"></i> BTech Project Students</h4>
           </div>
           <div class="card-body">
             <p><strong>Target:</strong> Motivated and brilliant students in their fourth year of Bachelors.</p>
@@ -69,24 +69,24 @@ nav_order: 5
 
       <div class="col-md-6 mb-4">
         <div class="card h-100">
-          <div class="card-header bg-info text-white">
-            <h4 class="card-title mb-0"><i class="fas fa-user-graduate"></i> M.Tech. Project Students</h4>
+          <div class="card-header alert-info text-white">
+            <h4 class="card-title mb-0"><i class="fas fa-user-graduate"></i> MTech Project Students</h4>
           </div>
           <div class="card-body">
-            <p><strong>Target:</strong> Top-notch M.Tech. students from Signal Processing, Artificial Intelligence programs of IISc</p>
-            <p><strong>Other Programs:</strong> Interested, high-performing M.Tech. students from other programs/departments at IISc may send an expression of interest and they will be considered only if their parent department allows them to undertake a project in Spectrum Lab.</p>
+            <p><strong>Target:</strong> Top-notch MTech students from Signal Processing, Artificial Intelligence programs of IISc</p>
+            <p><strong>Other Programs:</strong> Interested, high-performing MTech. students from other programs/departments at IISc may send an expression of interest and they will be considered only if their parent department allows them to undertake a project in Spectrum Lab.</p>
           </div>
         </div>
       </div>
 
       <div class="col-md-6 mb-4">
         <div class="card h-100">
-          <div class="card-header bg-warning text-white">
-            <h4 class="card-title mb-0"><i class="fas fa-flask"></i> M.Tech.(Research) and PhD Aspirants</h4>
+          <div class="card-header alert-info text-white">
+            <h4 class="card-title mb-0"><i class="fas fa-flask"></i> MTech (Res.) and PhD Aspirants</h4>
           </div>
           <div class="card-body">
             <p><strong>Application:</strong> Interested candidates are welcome to apply for admission to the Department of Electrical Engineering.</p>
-            <p><strong>GATE Requirement:</strong> GATE qualification in EC, EE, & CS papers is required for M.Tech.(Research) and M.Tech. programs.</p>
+            <p><strong>GATE Requirement:</strong> GATE qualification in EC, EE, & CS papers is required for MTech (Research) and MTech programs.</p>
             <p><strong>Direct PhD:</strong> GATE qualification is not mandatory for direct PhD applicants from Centrally Funded Technical Institutes (CFTIs) with a CGPA greater than 8 (on a scale of 10).</p>
             <p><strong>CFTI List:</strong> <a href="https://iisc.ac.in/admissions/overview/centrally-funded-technical-institute-cfti/" target="_blank">View list of CFTIs</a></p>
           </div>
@@ -95,8 +95,8 @@ nav_order: 5
 
       <div class="col-md-6 mb-4">
         <div class="card h-100">
-          <div class="card-header bg-secondary text-white">
-            <h4 class="card-title mb-0"><i class="fas fa-briefcase"></i> External Registration Program (ERP) PhD</h4>
+          <div class="card-header alert-info text-white">
+            <h4 class="card-title mb-0"><i class="fas fa-briefcase"></i> External Registration Program</h4>
           </div>
           <div class="card-body">
             <p><strong>Target:</strong> Working professionals who are interested in pursuing a part-time PhD on a topic of interest to the company/industry they are working for.</p>
@@ -107,7 +107,7 @@ nav_order: 5
 
       <div class="col-md-6 mb-4">
         <div class="card h-100">
-          <div class="card-header bg-dark text-white">
+          <div class="card-header alert-info text-white">
             <h4 class="card-title mb-0"><i class="fas fa-hands-helping"></i> Project Assistants</h4>
           </div>
           <div class="card-body">
@@ -122,7 +122,7 @@ nav_order: 5
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title"><i class="fas fa-link"></i> Additional Resources</h3>
+            <h3 class="card-title-2 card-title"><i class="fas fa-link"></i> Additional Resources</h3>
           </div>
           <div class="card-body">
             <p>For more detailed information about modes of entry to IISc, please visit:</p>
@@ -140,7 +140,7 @@ nav_order: 5
       <div class="col-md-12">
         <div class="alert alert-success" role="alert">
           <h4 class="alert-heading"><i class="fas fa-rocket"></i> Ready to Apply?</h4>
-          <p>We encourage you to contact us if you believe you're a good fit for our research team. Send your resume to <a href="mailto:css@iisc.ac.in" class="alert-link">css@iisc.ac.in</a> and take the first step towards an exciting research journey with Spectrum Lab!</p>
+          <p class="para-wtv">We encourage you to contact us if you believe you're a good fit for our research team. Send your resume to <a href="mailto:css@iisc.ac.in" class="alert-link">css@iisc.ac.in</a> and take the first step towards an exciting research journey with Spectrum Lab!</p>
         </div>
       </div>
     </div>
@@ -176,7 +176,7 @@ nav_order: 5
 }
 
 .opportunities .alert-success {
-  border-left-color: #28a745;
+  border-left-color:rgb(99, 178, 118);
 }
 
 .opportunities .lead {
@@ -190,6 +190,18 @@ html[data-theme="dark"] .opportunities .card {
 }
 
 html[data-theme="dark"] .opportunities .card-header {
+  color: black !important;
+}
+
+html[data-theme="dark"] .card .card-title {
+  color: black !important;
+}
+
+html[data-theme="dark"] .card .card-title-2 {
   color: white !important;
+}
+
+html[data-theme="dark"] .para-wtv {
+  color: black !important;
 }
 </style>

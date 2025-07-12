@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: Home
 permalink: /
 subtitle:
 nav_order: 0
@@ -18,7 +18,7 @@ announcements:
   enabled: true # includes a list of news items
   scrollable: false # adds a vertical scroll bar if there are more than 3 news items
   limit: 3 # leave blank to include all the news in the `_news` folder
-display_categories: [Lab Director, PhD Students, MTech Students]
+display_categories: [Lab Director, PhD Students]
 latest_posts:
   enabled: true
   scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
@@ -39,14 +39,14 @@ is a research group led by [Prof. Chandra Sekhar Seelamantula](https://ee.iisc.a
 
 <div class="row align-items-center">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/labphotos/chitradurga-2024.jpg" title="Visiting the Challakere Campus" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/labphotos/chitradurga-2024.JPG" title="Visiting the Challakere Campus" class="img-fluid rounded z-depth-1" %}
         <div class="caption">
             Visiting IISc. Challakere Campus (May 2024)
         </div>
     </div>
     <div class="col-sm">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/labphotos/icassp-2019.jpg" title="ICASSP 2019" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/labphotos/icassp-2019.JPG" title="ICASSP 2019" class="img-fluid rounded z-depth-1" %}
         <div class="caption">
             ICASSP 2019, Brighton, UK (May 2019)
         </div>

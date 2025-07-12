@@ -1495,7 +1495,7 @@ html[data-theme="dark"] .funding-logo-invert {
   // filter: brightness(1.2) contrast(1.1) saturate(0.8);
 }
 
-/* Use Palatino (mathpazo) for KaTeX math */
-.katex {
-  font-family: 'Palatino Linotype', Palatino, 'URW Palladio L', serif !important;
+html[data-theme="dark"] .blog-ready {
+  // Selective approach: invert only dark colors, preserve colored elements
+  filter: invert(1) hue-rotate(180deg) brightness(1.2) contrast(0.775);
 }

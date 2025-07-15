@@ -1,15 +1,54 @@
 <div class="funding">
-  <!-- Generate cards for each person -->
   <div class="container-md p-4">
-    <div class="row align-items-center justify-content-center">
-      {%- assign sorted_funding = site.data.funding | sort: 'name' %}
-      {%- for funder in sorted_funding -%}
-      <div class="col-sm-4 height=50px p-y-5">
-        <a href="{{ funder.url }}">
-          <img class="img-fluid mx-auto d-block{% if funder.invert %} funding-logo-invert{% endif %}" src="{{ funder.logo | relative_url }}" alt="{{ funder.name }}">
-        </a>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        {%- assign sorted_funding = site.data.funding | sort: 'name' %}
+        {%- for funder in sorted_funding -%}
+        <div class="swiper-slide d-flex justify-content-center align-items-center">
+          <a href="{{ funder.url }}">
+            <img
+              class="img-fluid mx-auto d-block{% if funder.invert %} funding-logo-invert{% endif %}"
+              src="{{ funder.logo | relative_url }}"
+              alt="{{ funder.name }}"
+              style="width: 220px; height: 140px; object-fit: contain;"
+            >
+          </a>
+        </div>
+        {%- endfor %}
       </div>
-      {%- endfor %}
+      <!-- Pagination dots -->
+      <div class="swiper-pagination"></div>
     </div>
   </div>
 </div>
+<style>
+  .mySwiper .swiper-pagination {
+    margin-top: 32px;
+    position: static;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Swiper('.mySwiper', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      speed: 800, // Smooth transition (default is 300ms)
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        768: { slidesPerView: 3 },
+        576: { slidesPerView: 2 },
+        0:   { slidesPerView: 1 }
+      }
+    });
+  });
+</script>

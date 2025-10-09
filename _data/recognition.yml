@@ -7,6 +7,7 @@
   award: "Qualcomm Innovation Fellowship"
   year: "2025"
   category: "Award"
+  image: "assets/img/news/qualcomm-2025.JPG"
 
 - name: "Abijith Jagannath Kamath"
   award: "Outstanding Teaching Assistant Award"
@@ -14,15 +15,35 @@
   category: "Award"
   image: "assets/img/news/teaching-award.jpeg"
 
+- name: "Siddarth Asokan"
+  award: "IEI (India) Young Engineer Award"
+  year: "2024"
+  category: "Award"
+  image: "assets/img/news/sid-iei.jpeg"
+
+- name: "Siddarth Asokan"
+  award: "Prof. Satish Dhawan Research Award"
+  year: "2024"
+  category: "Award"
+  image: "assets/img/news/sid-rajesh.jpeg"
+
+- name: "Siddarth Asokan"
+  award: "Best Presentation Award, EECS Symposium"
+  year: "2023"
+  category: "Award"
+  image: "assets/img/news/sid-eecs.jpeg"
+
 - name: "Nishanth Shetty"
   award: "Qualcomm Innovation Fellowship"
   year: "2024"
   category: "Award"
+  image: "assets/img/news/qualcomm-2024.jpeg"
 
 - name: "Nishanth Shetty"
   award: "Qualcomm Innovation Fellowship"
   year: "2023"
   category: "Award"
+  image: "assets/img/news/qualcomm-2023.jpeg"
 
 - name: "Nygel George Thomas"
   award: "Qualcomm Innovation Fellowship"

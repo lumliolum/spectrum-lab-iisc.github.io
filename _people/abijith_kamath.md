@@ -1,6 +1,6 @@
 ---
 layout: person
-title: Abijith Kamath
+title: Abijith J. Kamath
 firstname: Abijith
 lastname: Kamath
 description: PhD Student

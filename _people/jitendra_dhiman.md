@@ -9,6 +9,7 @@ redirect:
 linkedin_username: 
 github_username:
 category: Alumni
+current_position: Qualcomm Speech RnD
 show: true
 year: 2021
 ---

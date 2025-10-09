@@ -5,10 +5,11 @@ firstname: Ravi
 lastname: Shenoy
 description: PhD 
 img: assets/img/people/alumni/ravi-shenoy.jpg
-redirect: 
+redirect: https://www.lightmetrics.co/about-us
 linkedin_username: 
 github_username:
 category: Alumni
+current_position: LightMetrics
 show: true
 year: 2016
 ---

@@ -9,6 +9,7 @@ redirect:
 linkedin_username: 
 github_username:
 category: Alumni
+current_position: BITS Pilani
 show: true
 year: 2021
 ---

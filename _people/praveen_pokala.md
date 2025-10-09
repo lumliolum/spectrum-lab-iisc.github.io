@@ -9,6 +9,7 @@ redirect:
 linkedin_username: 
 github_username:
 category: Alumni
+current_position: JP Morgan Chase
 show: true
 year: 2022
 ---

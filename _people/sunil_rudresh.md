@@ -9,6 +9,7 @@ redirect:
 linkedin_username: 
 github_username:
 category: Alumni
+current_position: Walmart Global Tech India
 show: true
 year: 2020
 ---

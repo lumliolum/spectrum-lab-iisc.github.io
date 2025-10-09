@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Jitendra Kumar Dhiman
 firstname: Jitendra Kumar
 lastname: Dhiman
 description: PhD 

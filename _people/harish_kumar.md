@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Harish Kumar J. R.
 firstname: Harish Kumar
 lastname: J. R.
 description: PhD 

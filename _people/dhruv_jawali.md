@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Dhruv Jawali
 firstname: Dhruv
 lastname: Jawali
 description: PhD 
@@ -8,6 +9,7 @@ redirect:
 linkedin_username: 
 github_username:
 category: Alumni
+current_position: Google DeepMind
 show: true
 year: 2023
 ---

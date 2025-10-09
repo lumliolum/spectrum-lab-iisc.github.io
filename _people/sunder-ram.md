@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Sunder Ram Krishnan
 firstname: Sunder Ram
 lastname: Krishnan
 description: MTech (Res.)

@@ -12,11 +12,7 @@
   award: "Outstanding Teaching Assistant Award"
   year: "2024"
   category: "Award"
-
-- name: "Nishanth Shetty"
-  award: "Qualcomm Innovation Fellowship"
-  year: "2024"
-  category: "Award"
+  image: "assets/img/news/teaching-award.jpeg"
 
 - name: "Nishanth Shetty"
   award: "Qualcomm Innovation Fellowship"

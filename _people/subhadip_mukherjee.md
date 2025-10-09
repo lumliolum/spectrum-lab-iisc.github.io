@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Subhadip Mukherjee
 firstname: Subhadip
 lastname: Mukherjee
 description: PhD 

@@ -1,5 +1,6 @@
 ---
 layout: about
+title: Pramath Haritz
 firstname: Pramath
 lastname: Haritz
 description: Project Associate

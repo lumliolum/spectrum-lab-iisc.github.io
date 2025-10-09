@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Haricharan Aragonda
 firstname: Haricharan
 lastname: Aragonda
 description: MTech (Res.)

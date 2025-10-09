@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Ravi Shenoy
 firstname: Ravi
 lastname: Shenoy
 description: PhD 

@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Harini Kishan
 firstname: Harini
 lastname: Kishan
 description: MTech (Res.)

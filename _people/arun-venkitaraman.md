@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Arun Venkitaraman
 firstname: Arun
 lastname: Venkitaraman
 description: MTech (Res.)

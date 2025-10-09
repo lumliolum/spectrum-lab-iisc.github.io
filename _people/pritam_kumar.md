@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Pritam Kumar
 firstname: Pritam
 lastname: Kumar
 description: MTech AI 

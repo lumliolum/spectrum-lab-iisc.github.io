@@ -1,5 +1,6 @@
 ---
 layout: about
+title: Indranil Patra
 firstname: Indranil
 lastname: Patra
 description: MTech Signal Processing

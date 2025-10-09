@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Basty Ajay Shenoy
 firstname: Basty Ajay
 lastname: Shenoy
 description: PhD 

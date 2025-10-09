@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Praveen Kumar Pokala
 firstname: Praveen Kumar
 lastname: Pokala
 description: PhD 

@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Mani Madhoolika Bulusu
 firstname: Mani Madhoolika
 lastname: Bulusu
 description: MTech (Res.)

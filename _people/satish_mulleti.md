@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Satish Mulleti
 firstname: Satish
 lastname: Mulleti
 description: PhD 
@@ -8,6 +9,7 @@ redirect:
 linkedin_username: 
 github_username:
 category: Alumni
+current_position: IIT Bombay
 show: true
 year: 2017
 ---

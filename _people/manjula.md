@@ -1,5 +1,6 @@
 ---
 layout: about
+title: Manjula M
 firstname: Manjula
 lastname: M
 description: Administrator

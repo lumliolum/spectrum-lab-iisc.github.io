@@ -1,5 +1,6 @@
 ---
 layout: about
+title: Parth Gupte
 firstname: Parth
 lastname: Gupte
 description: Project Associate

@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Sreeram Menon
 firstname: Sreeram
 lastname: Menon
 description: MTech (Res.)

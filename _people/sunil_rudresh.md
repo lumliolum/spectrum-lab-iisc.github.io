@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Sunil Rudresh
 firstname: Sunil
 lastname: Rudresh
 description: PhD 

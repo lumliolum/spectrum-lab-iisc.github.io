@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Vinayak Killedar
 firstname: Vinayak
 lastname: Killedar
 description: MTech (Res.)

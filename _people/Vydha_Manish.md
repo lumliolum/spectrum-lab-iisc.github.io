@@ -1,5 +1,6 @@
 ---
 layout: about
+title: Vydha Manish
 firstname: Vydha
 lastname: Manish
 description: MTech Signal Processing

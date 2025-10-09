@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Aniruddha Adiga
 firstname: Aniruddha
 lastname: Adiga
 description: PhD 

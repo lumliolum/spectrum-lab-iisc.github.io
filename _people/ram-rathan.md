@@ -1,5 +1,6 @@
 ---
 layout: about
+title: Ram Rathan K R
 firstname: Ram Rathan
 lastname: K R
 description: MTech (SP)

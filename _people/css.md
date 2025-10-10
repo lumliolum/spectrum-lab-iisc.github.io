@@ -4,7 +4,7 @@ title: Chandra Sekhar Seelamantula
 firstname: Chandra Sekhar
 lastname: Seelamantula
 description: Professor
-img: assets/img/people/lab_director/Chandra.jpg
+img: assets/img/people/lab_director/CSSPic.jpeg
 redirect:
 orcid_id: 
 linkedin_username: 

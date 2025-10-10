@@ -100,6 +100,7 @@ layout: default
   <div class="publications">
     <h3 class="mt-5 mb-3">Publications</h3>
     {% capture debug_query %}@*[emails~={{ page.email }}]{% endcapture %}
+    <p> {{ debug_query }} </p>
 
     {% bibliography --query {{debug_query}} %}
   </div>

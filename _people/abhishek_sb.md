@@ -2,7 +2,7 @@
 layout: person
 title: Abhishek S B
 firstname: Abhishek
-lastname: S B
+lastname: S. B.
 description:  PhD Student
 img: assets/img/people/phd/AbhishekSB.jpeg
 website: https://www.linkedin.com/in/abhishek-bhandiwad

@@ -91,7 +91,18 @@ layout: default
       {% endif %}
     </div>
   </div>
+
+  {% unless page.email == "css@iisc.ac.in" %}
+
+  <div class="publications">
+  <h2 class="mt-5 mb-4">Publications</h2>
+  {% bibliography --query @*[emails ~= {{ page.email }}] %}
+
+  </div>
+  {% endunless %}
+
 </div>
+
 
 <style>
 html[data-theme="dark"] {

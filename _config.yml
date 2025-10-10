@@ -377,6 +377,7 @@ filtered_bibtex_keywords:
     bibtex_show,
     blog,
     code,
+    emails,
     google_scholar_id,
     html,
     inspirehep_id,

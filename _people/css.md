@@ -20,8 +20,8 @@ show: true
 biography_paragraphs:
   - "Chandra Sekhar Seelamantula (Senior Member, IEEE) received the <strong>Bachelor of Engineering</strong> degree with <em>Prof. K. K. Nair Gold Medal</em> and <em>Best Thesis Award</em> from Osmania University in 1999 and the <strong>Ph.D.</strong> from IISc in 2005 with an IBM India Research Lab Fellowship."
   - "From 2005–2006, he was a consultant at ESQUBE Communication Solutions. From 2006–2009, he was a Postdoctoral Fellow at the Biomedical Imaging Group, EPFL, Switzerland, focusing on tomography, splines, and sparse signal processing."
-  - "Since 2009, he has been a Professor in the Electrical Engineering Department, IISc, leading the <strong>Spectrum Lab</strong>. His research interests include speech/image processing, compressed sensing, inverse problems, and machine learning."
-
+  - "Since 2009, he has been on the Faculty of Electrical Engineering Department, IISc, where he is now Professor and leads the R&D activities of <strong>Spectrum Lab</strong>. His research interests include signal processing, machine learning, Generative AI, computational imaging, and AI for Healthcare."
+    
 # Academic and Editorial Roles (optional section)
 show_academic_roles: true
 academic_roles:

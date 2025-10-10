@@ -98,7 +98,8 @@ layout: default
 
   {% unless page.email == "css@iisc.ac.in" %}
   <div class="publications">
-    {% capture debug_query %}@*[emails={{ page.email }}]{% endcapture %}
+    <h3 class="mt-5 mb-3">Publications</h3>
+    {% capture debug_query %}@*[emails~={{ page.email }}]{% endcapture %}
 
     {% bibliography --query {{debug_query}} %}
   </div>

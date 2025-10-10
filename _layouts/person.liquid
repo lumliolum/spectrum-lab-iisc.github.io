@@ -96,7 +96,8 @@ layout: default
 
   <div class="publications">
   <h2 class="mt-5 mb-4">Publications</h2>
-  {% bibliography --query @*[emails ~= {{ page.email }}] %}
+  {% assign email_query = page.email %}
+  {% bibliography --query @*[emails ~= {{ email_query }}] %}
 
   </div>
   {% endunless %}

@@ -8,7 +8,7 @@ img: assets/img/people/alumni/satish-mulleti.jpg
 redirect: 
 linkedin_username: 
 github_username:
-category: Alumni
+category: PhD Graduates
 current_position: IIT Bombay
 show: true
 year: 2017

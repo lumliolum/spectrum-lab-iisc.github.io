@@ -9,7 +9,7 @@ redirect:
 linkedin_username: 
 github_username: 
 current_position: University of Virginia
-category: Alumni
+category: PhD Graduates
 show: true
 year: 2018
 ---

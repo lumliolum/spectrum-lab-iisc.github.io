@@ -8,7 +8,7 @@ img: assets/img/people/alumni/ajay-shenoy.jpg
 redirect: https://ajayshenoy.github.io/genai_intro
 linkedin_username: 
 github_username:
-category: Alumni
+category: PhD Graduates
 show: true
 year: 2017
 ---

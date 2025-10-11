@@ -9,7 +9,7 @@ current_position: German Aerospace Center
 redirect: 
 linkedin_username: 
 github_username: kartheekkumar65
-category: Alumni
+category: PhD Graduates
 show: true
 year: 2024
 ---

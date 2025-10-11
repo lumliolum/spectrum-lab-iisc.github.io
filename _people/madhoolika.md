@@ -8,7 +8,7 @@ img: assets/img/people/alumni/madhoolika.png
 redirect: 
 linkedin_username: 
 github_username:
-category: Alumni
+category: MTech (Res.) Graduates
 show: true
 year: 2023
 ---

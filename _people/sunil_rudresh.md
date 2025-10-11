@@ -8,7 +8,7 @@ img: assets/img/people/alumni/sunil-rudresh.png
 redirect: 
 linkedin_username: 
 github_username:
-category: Alumni
+category: PhD Graduates
 current_position: Walmart Global Tech India
 show: true
 year: 2020

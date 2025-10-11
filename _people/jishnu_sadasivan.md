@@ -8,7 +8,7 @@ img: assets/img/people/alumni/jishnu-sadasivan.png
 redirect: 
 linkedin_username: 
 github_username:
-category: Alumni
+category: PhD Graduates
 current_position: Ericsson Research
 show: true
 year: 2019

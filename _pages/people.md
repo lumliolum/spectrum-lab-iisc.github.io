@@ -1,0 +1,153 @@
+---
+layout: page
+title: People
+permalink: /people/
+subtitle:
+nav: true
+nav_order: 6
+display_categories: [PhD Students, Project Associates, M.Tech Students, PhD Graduates, MTech (Res.) Graduates, Administrator]
+horizontal: true
+---
+
+<style>
+.people .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.people .grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 1 1 300px; /* Allow items to grow/shrink with minimum width */
+  max-width: 350px; /* Prevent items from becoming too wide */
+  height: 450px;
+}
+
+.people .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.people .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.people .card-title {
+  margin-bottom: 0.5rem;
+}
+
+.people .card-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.people .card-text {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+</style>
+
+<!-- <hr style="border-top: 1px solid #bbb;"> -->
+
+<!-- pages/people.md -->
+<div class="people">
+  <!-- Display categorized people except Alumni -->
+  {%- for category in page.display_categories %}
+      <!-- <h2 class="category">{{ category }}</h2> -->
+      {%- assign categorized_people = site.people | where: "category", category -%}
+      {%- assign sorted_people = categorized_people | sort: "year" | reverse %}
+      <h2 style="text-align: right;">{{ category }}</h2>    <hr>
+      <div class="grid">
+        {%- for person in sorted_people -%}
+          {%- if person.show -%}
+            <!-- Custom alumni display with current_position -->
+            <div class="grid-item">
+              {%- if person.redirect -%}
+                <a href="{{ person.redirect }}">
+              {%- else -%}
+                <a href="{{ person.url | relative_url }}">
+              {%- endif %}
+                <div class="card hoverable">
+                  {%- if person.img %}
+                    {%- include figure.liquid
+                      path=person.img
+                      alt="Portrait"
+                      class="img-fluid rounded-circle z-depth-0"
+                    -%}
+                  {%- endif %}
+                  <h2 class="card-title text-capitalize">
+                    {{ person.firstname }} {{ person.lastname }}
+                  </h2>
+                  {%- if person.current_position -%}
+                    <h3 class="card-text mt-1 mb-2" style="font-size: 0.9rem; color: #666;">
+                      {{ person.current_position }}
+                    </h3>
+                  {%- endif -%}
+                  {%- if person.pronouns -%}
+                    <h3 class="card-title card-pronouns mb-2">
+                      {{ person.pronouns }}
+                    </h3>
+                  {%- endif -%}
+                  <div class="card-icons">
+                    {%- if person.email -%}
+                      <a href="mailto:{{ person.email | encode_email }}" title="e-mail">
+                        <i class="icon mr-1 p-0 fas fa-envelope"></i>
+                      </a>
+                    {% endif %}
+                    {%- if person.orcid_id -%}
+                      <a href="https://orcid.org/{{ person.orcid_id }}" title="ORCID">
+                        <i class="icon mr-1 p-0 ai ai-orcid"></i>
+                      </a>
+                    {% endif %}
+                    {%- if person.scholar_userid -%}
+                      <a href="https://scholar.google.com/citations?user={{ person.scholar_userid }}" title="Google Scholar">
+                        <i class="icon mr-1 p-0 ai ai-google-scholar"></i>
+                      </a>
+                    {% endif %}
+                    {%- if person.github_username -%}
+                      <a href="https://github.com/{{ person.github_username }}" title="GitHub">
+                        <i class="icon mr-1 p-0 fab fa-github"></i>
+                      </a>
+                    {% endif %}
+                    {%- if person.linkedin_username -%}
+                      <a href="https://www.linkedin.com/in/{{ person.linkedin_username }}" title="LinkedIn">
+                        <i class="icon mr-1 p-0 fab fa-linkedin"></i>
+                      </a>
+                    {% endif %}
+                    {%- if person.twitter_username -%}
+                      <a href="https://twitter.com/{{ person.twitter_username }}" title="Twitter">
+                        <i class="icon mr-1 p-0 fab fa-twitter"></i>
+                      </a>
+                    {% endif %}
+                    {%- if person.website -%}
+                      <a href="{{ person.website }}" title="Website">
+                        <i class="icon mr-1 p-0 fas fa-globe"></i>
+                      </a>
+                    {% endif %}
+                  </div>
+                  <div class="card-body">
+                    <!-- <h3 class="card-text mt-1">{{ person.description }}</h3> -->
+                  </div>
+                </div>
+              </a>
+            </div>
+          {%- endif -%}
+        {%- endfor %}
+      </div>
+  {%- endfor %}
+</div>

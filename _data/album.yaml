@@ -1,44 +1,119 @@
-- event: Convocation Day 2024
-  folder: convocation-day
-  date: 2024-08-15
+- event: IISc.
+  folder: around-the-Institute
+  description: "Around the Indian Institute of Science campus"
+  photos:
+    - image: /assets/img/album/around-the-institute/2.jpg
+      caption: "Lush greenery on campus"
+      order: 1
+
+- event: Awards
+  folder: awards
   description: "Celebrating our graduates' achievements and milestones"
   photos:
-    - image: /assets/img/album/convocation-day/download-1.jpg
-      caption: "Group photo at the ceremony"
+    - image: /assets/img/album/awards/1.jpg
+      caption: "Subhadip Mukherjee receiving Prof. I.S.N. Murthy Medal for the outstanding M.Tech. (SP) student."
       order: 1
-    - image: /assets/img/album/convocation-day/download-2.jpg
-      caption: "Receiving the degree"
+    - image: /assets/img/album/awards/2.jpg
+      caption: "Aditya K. Pediredla with N.R. Khambati Medal for the outstanding M.Tech. (SSA) student"
       order: 2
-    - image: /assets/img/album/convocation-day/download-3.jpg
-      caption: "Faculty and graduates together"
+    - image: /assets/img/album/awards/3.jpg
+      caption: "Debabrata Mahapatra with the N.R. Khambati Medal for the outstanding M.Tech. (SSA) student."
       order: 3
-    - image: /assets/img/album/convocation-day/download-4.jpg
-      caption: "Celebration moments"
+    - image: /assets/img/album/awards/4.jpg
+      caption: "M.Tech.(SSA) 2017 graduates from Spectrum Lab."
       order: 4
-    - image: /assets/img/album/convocation-day/download-5.jpg
-      caption: "Academic procession"
+    - image: /assets/img/album/awards/5.jpg
+      caption: "Convocation Ceremony 2017."
       order: 5
-    - image: /assets/img/album/convocation-day/download-6.jpg
-      caption: "Proud graduates"
+    - image: /assets/img/album/awards/6.jpg
+      caption: "Ashutosh Gupta receiving his M.Tech.(SSA) degree at the 2017 convocation."
       order: 6
-    - image: /assets/img/album/convocation-day/download-7.jpg
-      caption: "Award ceremony"
+    - image: /assets/img/album/awards/7.jpg
+      caption: "Jitendra K. Dhiman receiving the Best Poster Award at EECS Symposium from Prof. Y. Narahari, Divisional Chair, EECS, IISc."
       order: 7
-    - image: /assets/img/album/convocation-day/download-8.jpg
-      caption: "Family celebrations"
+    - image: /assets/img/album/awards/8.jpg
+      caption: "Dhruv Jawali defending his PhD thesis titled 'Learning Filters, Filterbanks, Wavelets and Multiscale Representations'."
       order: 8
-    - image: /assets/img/album/convocation-day/download-9.jpg
-      caption: "Graduate presentations"
+
+- event: Chakṣu
+  folder: eye-care
+  description:
+  photos:
+    - image: /assets/img/album/eye-care/1.png
+      caption: "Eye screening in progress."
+      order: 1
+    - image: /assets/img/album/eye-care/2.jpg
+      caption: "Spectrum Lab booth at the S20 Summit Expo."
+      order: 2
+    - image: /assets/img/album/eye-care/4.jpg
+      caption: "Demonstrating 'Nayana' -- AI based eyecare to Hon. Minister of Finance, Smt. Nirmala Seetharaman at the S20 Summit."
+      order: 3
+    - image: /assets/img/album/eye-care/5.jpg
+      caption: "Demonstrating Chakṣu to Shri Ramesh Pokhriyal 'Nishank', Hon. Minister of Education."
+      order: 4
+    - image: /assets/img/album/eye-care/6.jpg
+      caption: "'Nayana': AI based eye care and diagnostics."
+      order: 5
+    - image: /assets/img/album/eye-care/7.jpg
+      caption: "Demonstrating glaucoma prescreening at the IMPRINT Tech Expo 2019."
+      order: 6
+    - image: /assets/img/album/eye-care/8.jpg
+      caption: "Demonstrating 'Nayana' -- AI based eyecare to Hon. Minister of Finance, Smt. Nirmala Seetharaman at the S20 Summit."
+      order: 7
+    - image: /assets/img/album/eye-care/9.jpg
+      caption: "Inauguration of the Zeiss - IISc. Lab on AI for Eye Care."
+      order: 8
+    - image: /assets/img/album/eye-care/10.jpg
+      caption:
       order: 9
-    - image: /assets/img/album/convocation-day/download-10.jpg
-      caption: "Fellowship of graduates"
+    - image: /assets/img/album/eye-care/11.jpg
+      caption: "We have an MoU with Carl Zeiss to set up a lab on AI for Eye Care at IISc."
       order: 10
 
-- event: Open Day 2023
-  folder: open-day-2023
-  date: 2023-03-10
-  description: "Visitors exploring our lab and research facilities"
+- event:
+  folder: random-collection
+  description:
   photos:
-    - image: /assets/img/album/open-day-2023/download-15.jpg
-      caption: "Lab demonstration and visitor interaction"
+    - image: /assets/img/album/random-collection/1.jpg
       order: 1
+    - image: /assets/img/album/random-collection/2.jpg
+      order: 2
+    - image: /assets/img/album/random-collection/3.jpg
+      order: 3
+    - image: /assets/img/album/random-collection/4.jpg
+      order: 4
+    - image: /assets/img/album/random-collection/5.jpg
+      order: 5
+    - image: /assets/img/album/random-collection/6.jpg
+      order: 6
+    - image: /assets/img/album/random-collection/7.jpg
+      order: 7
+    - image: /assets/img/album/random-collection/8.jpg
+      order: 8
+    - image: /assets/img/album/random-collection/9.jpg
+      order: 9
+    - image: /assets/img/album/random-collection/10.jpg
+      order: 10
+    - image: /assets/img/album/random-collection/11.jpg
+      order: 11
+    - image: /assets/img/album/random-collection/12.jpg
+      order: 12
+    - image: /assets/img/album/random-collection/13.jpg
+      order: 13
+    - image: /assets/img/album/random-collection/14.JPG
+      order: 14
+    - image: /assets/img/album/random-collection/15.JPG 
+      order: 15
+    - image: /assets/img/album/random-collection/16.JPG
+      order: 16
+    - image: /assets/img/album/random-collection/17.JPG
+      order: 17
+    - image: /assets/img/album/random-collection/18.jpg
+      order: 18
+    - image: /assets/img/album/random-collection/19.jpg
+      order: 19
+    - image: /assets/img/album/random-collection/20.JPG
+      order: 20
+    - image: /assets/img/album/random-collection/21.JPG
+      order: 21
+  

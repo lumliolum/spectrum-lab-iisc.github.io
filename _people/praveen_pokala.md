@@ -8,7 +8,7 @@ img: assets/img/people/alumni/praveen-pokala.jpg
 redirect: 
 linkedin_username: 
 github_username:
-category: Alumni
+category: PhD Graduates
 current_position: JP Morgan Chase
 show: true
 year: 2022

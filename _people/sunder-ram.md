@@ -8,7 +8,7 @@ img: assets/img/people/alumni/sunder-ram.jpg
 redirect: 
 linkedin_username: 
 github_username:
-category: Alumni
+category: MTech (Res.) Graduates
 show: true
 year: 2011
 ---

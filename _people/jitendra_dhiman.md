@@ -8,7 +8,7 @@ img: assets/img/people/alumni/jitendra-dhiman.png
 redirect: 
 linkedin_username: 
 github_username:
-category: Alumni
+category: PhD Graduates
 current_position: Qualcomm Speech RnD
 show: true
 year: 2021

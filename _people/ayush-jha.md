@@ -4,7 +4,7 @@ title: Ayush Jha
 firstname: Ayush
 lastname: Jha
 description:  PhD Student
-img: assets/img/people/phd/Default_pfp.jpg
+img: assets/img/people/phd/ayush.jpeg
 website: 
 linkedin_username: 
 github_username: 

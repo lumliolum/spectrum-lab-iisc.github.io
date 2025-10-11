@@ -64,37 +64,57 @@ html[data-theme="dark"] .recognition-card:hover {
 }
 
 .recognition-grid {
-  column-count: 3;
+  columns: 3;
   column-gap: 1.5rem;
   margin-top: 1rem;
 }
 
 .recognition-card {
-  display: inline-block;
-  width: 100%;
   margin-bottom: 1.5rem;
   break-inside: avoid;
   page-break-inside: avoid;
+  height: fit-content;
+  display: inline-block;
+  width: 100%;
 }
 
 .recognition-card-no-image {
+  margin-bottom: 1.5rem;
+  break-inside: avoid;
+  page-break-inside: avoid;
   height: fit-content;
+  display: inline-block;
+  width: 100%;
+}
+
+.year-section {
+  margin-bottom: 3rem;
+}
+
+.year-header {
+  text-align: right;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--global-theme-color);
 }
 
 @media (max-width: 992px) {
   .recognition-grid {
-    column-count: 2;
+    columns: 2;
+    column-gap: 1rem;
+  }
+  
+  .recognition-card,
+  .recognition-card-no-image {
+    margin-bottom: 1rem;
   }
 }
 
 @media (max-width: 768px) {
   .recognition-grid {
-    column-count: 2;
+    columns: 2;
     column-gap: 1rem;
-  }
-  
-  .recognition-card {
-    margin-bottom: 1rem;
   }
   
   .recognition-photo {
@@ -104,13 +124,47 @@ html[data-theme="dark"] .recognition-card:hover {
 
 @media (max-width: 576px) {
   .recognition-grid {
-    column-count: 1;
+    columns: 1;
     column-gap: 0;
   }
   
   .recognition-photo {
     height: 180px;
   }
+}
+
+/* Modal backdrop blur effect */
+.modal-backdrop {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Enhanced modal styling */
+.modal-content {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode modal styling */
+html[data-theme="dark"] .modal-content {
+  background: rgba(33, 37, 41, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme="dark"] .modal-header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme="dark"] .modal-title {
+  color: var(--global-text-color);
+}
+
+html[data-theme="dark"] .btn-close {
+  filter: invert(1);
 }
 </style>
 
@@ -119,13 +173,51 @@ html[data-theme="dark"] .recognition-card:hover {
 
 <!-- Recognition display -->
 <div class="recognition-container">
-  {% assign sorted_categories = site.data.recognition | group_by: "category" %}
+  {% comment %} Create a hash to group items by individual years {% endcomment %}
+  {% assign years_hash = '' | split: ',' %}
+  {% assign year_items = '' | split: ',' %}
   
-  {% for category_group in sorted_categories %}
-      
-      {% if category_group.items.size > 0 %}
-        {% assign sorted_items = category_group.items | sort: "year" | reverse %}
+  {% comment %} First pass: collect all unique years {% endcomment %}
+  {% assign all_years = '' | split: ',' %}
+  {% for item in site.data.recognition %}
+    {% if item.year and item.year != '' %}
+      {% assign item_years = item.year | split: ', ' %}
+      {% for year in item_years %}
+        {% assign year = year | strip %}
+        {% unless all_years contains year %}
+          {% assign all_years = all_years | push: year %}
+        {% endunless %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+  
+  {% comment %} Sort years in descending order {% endcomment %}
+  {% assign sorted_years = all_years | sort | reverse %}
+  
+  {% comment %} Display items grouped by year {% endcomment %}
+  {% for year in sorted_years %}
+    {% assign year_items = '' | split: ',' %}
+    
+    {% comment %} Collect items for this year {% endcomment %}
+    {% for item in site.data.recognition %}
+      {% if item.year and item.year != '' %}
+        {% assign item_years = item.year | split: ', ' %}
+        {% for item_year in item_years %}
+          {% assign item_year = item_year | strip %}
+          {% if item_year == year %}
+            {% assign year_items = year_items | push: item %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+    
+    {% if year_items.size > 0 %}
+      <div class="year-section">
+        <h2 class="year-header">{{ year }}</h2>
+        <hr>
         <div class="recognition-grid">
+          {% assign sorted_items = year_items | sort: "name" %}
           {% for item in sorted_items %}
             {% if item.image %}
               <div class="card recognition-card h-100">
@@ -150,25 +242,58 @@ html[data-theme="dark"] .recognition-card:hover {
                 {% if item.co_inventors %}
                   <small class="text-muted mb-2">Co-inventors: {{ item.co_inventors }}</small>
                 {% endif %}
-                {% if item.year %}
-                  <div class="mt-auto">
-                    <small class="text-muted">
-                      <i class="fas fa-calendar-alt"></i> {{ item.year }}
-                    </small>
-                  </div>
-                {% endif %}
               </div>
             </div>
           {% endfor %}
         </div>
-      {% else %}
-        <div class="alert alert-info">
-          <i class="fas fa-info-circle"></i>
-          No {{ category_group.name | downcase }}s recorded yet.
-        </div>
-      {% endif %}
-    </div>
+      </div>
+    {% endif %}
   {% endfor %}
+  
+  {% comment %} Handle items without years {% endcomment %}
+  {% assign no_year_items = '' | split: ',' %}
+  {% for item in site.data.recognition %}
+    {% if item.year == '' or item.year == nil %}
+      {% assign no_year_items = no_year_items | push: item %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if no_year_items.size > 0 %}
+    <div class="year-section">
+      <h2 class="year-header">Other</h2>
+      <hr>
+      <div class="recognition-grid">
+        {% assign sorted_items = no_year_items | sort: "name" %}
+        {% for item in sorted_items %}
+          {% if item.image %}
+            <div class="card recognition-card h-100">
+              <div class="position-relative overflow-hidden">
+                <img src="{{ item.image | relative_url }}" 
+                     class="card-img-top recognition-photo" 
+                     alt="{{ item.name }} - {{ item.award }}"
+                     loading="lazy">
+              </div>
+          {% else %}
+            <div class="card recognition-card recognition-card-no-image">
+          {% endif %}
+            <div class="card-body d-flex flex-column">
+              {% if item.url %}
+                <h6 class="card-title mb-1 text-primary">
+                  <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
+                </h6>
+              {% else %}
+                <h6 class="card-title mb-1 text-primary">{{ item.name }}</h6>
+              {% endif %}
+              <p class="recognition-caption card-text flex-grow-1">{{ item.award }}</p>
+              {% if item.co_inventors %}
+                <small class="text-muted mb-2">Co-inventors: {{ item.co_inventors }}</small>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
   
   {% if site.data.recognition.size == 0 %}
     <div class="text-center py-5">
@@ -187,7 +312,7 @@ html[data-theme="dark"] .recognition-card:hover {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="imageModalLabel">Recognition</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-mdb-dismiss="modal" aria-label="Close" id="recognitionModalCloseBtn"></button>
       </div>
       <div class="modal-body text-center">
         <img id="modalImage" src="" class="img-fluid" alt="">
@@ -210,11 +335,43 @@ document.addEventListener('DOMContentLoaded', function() {
       modalImage.src = this.src;
       modalImage.alt = this.alt;
       modalCaption.textContent = this.alt;
+      
+      // Show modal and enhance backdrop
       modal.show();
+      
+      // Enhance backdrop blur after modal is shown
+      setTimeout(() => {
+        const backdrop = document.querySelector('.modal-backdrop');
+        if (backdrop) {
+          backdrop.style.backdropFilter = 'blur(10px)';
+          backdrop.style.webkitBackdropFilter = 'blur(10px)';
+        }
+      }, 100);
     });
     
     // Add pointer cursor to indicate clickability
     photo.style.cursor = 'pointer';
+  });
+  
+  // Ensure close button works with both Bootstrap and MDB
+  const closeBtn = document.getElementById('recognitionModalCloseBtn');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      modal.hide();
+    });
+  }
+  
+  // Also handle ESC key and backdrop clicks
+  document.getElementById('imageModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      modal.hide();
+    }
+  });
+  
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && document.getElementById('imageModal').classList.contains('show')) {
+      modal.hide();
+    }
   });
 });
 </script>

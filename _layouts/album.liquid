@@ -97,6 +97,40 @@ html[data-theme="dark"] .album-swiper {
     font-size: 0.9rem;
   }
 }
+
+/* Modal backdrop blur effect */
+.modal-backdrop {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Enhanced modal styling */
+.modal-content {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode modal styling */
+html[data-theme="dark"] .modal-content {
+  background: rgba(33, 37, 41, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme="dark"] .modal-header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme="dark"] .modal-title {
+  color: var(--global-text-color);
+}
+
+html[data-theme="dark"] .btn-close {
+  filter: invert(1);
+}
 </style>
 
 <!-- Page content (from markdown) -->
@@ -165,7 +199,7 @@ html[data-theme="dark"] .album-swiper {
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="imageModalLabel">Photo</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" data-mdb-dismiss="modal" aria-label="Close" id="albumModalCloseBtn"></button>
       </div>
       <div class="modal-body text-center">
         <img id="modalImage" src="" class="img-fluid" alt="">
@@ -195,8 +229,40 @@ document.addEventListener('DOMContentLoaded', function() {
       const captionText = this.getAttribute('data-caption') || this.alt;
       
       modalCaption.textContent = captionText;
+      
+      // Show modal and enhance backdrop
       modal.show();
+      
+      // Enhance backdrop blur after modal is shown
+      setTimeout(() => {
+        const backdrop = document.querySelector('.modal-backdrop');
+        if (backdrop) {
+          backdrop.style.backdropFilter = 'blur(10px)';
+          backdrop.style.webkitBackdropFilter = 'blur(10px)';
+        }
+      }, 100);
     });
+  });
+  
+  // Ensure close button works with both Bootstrap and MDB
+  const closeBtn = document.getElementById('albumModalCloseBtn');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      modal.hide();
+    });
+  }
+  
+  // Also handle ESC key and backdrop clicks
+  document.getElementById('imageModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      modal.hide();
+    }
+  });
+  
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && document.getElementById('imageModal').classList.contains('show')) {
+      modal.hide();
+    }
   });
   
   // Initialize all album swipers

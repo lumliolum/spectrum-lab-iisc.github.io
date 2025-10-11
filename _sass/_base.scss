@@ -387,18 +387,18 @@ ul.task-list input[type="checkbox"] {
     color: var(--global-theme-color);
     transition: all 0.3s ease;
     
-    // V-shaped color drop effect
+    // V-shaped color drop effect with rounded corners
     &::after {
       content: '';
       position: absolute;
       bottom: -5px;
       left: 50%;
       transform: translateX(-50%);
-      width: 0;
-      height: 0;
-      border-left: 8px solid transparent;
-      border-right: 8px solid transparent;
-      border-top: 6px solid var(--global-theme-color);
+      width: 16px;
+      height: 8px;
+      background: var(--global-theme-color);
+      clip-path: polygon(20% 0%, 50% 100%, 80% 0%);
+      border-radius: 2px 2px 0 0;
       transition: all 0.3s ease;
       opacity: 1;
     }
@@ -407,7 +407,7 @@ ul.task-list input[type="checkbox"] {
       color: var(--global-hover-color);
       
       &::after {
-        border-top-color: var(--global-hover-color);
+        background: var(--global-hover-color);
         transform: translateX(-50%) scale(1.1);
       }
     }

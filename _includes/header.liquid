@@ -1,37 +1,53 @@
 <header>
   <!-- Nav Bar -->
-  <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
-    <div class="container">
-      <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
+  <nav id="navbar" class="navbar navbar-light navbar-expand-lg {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
+    <div class="container-fluid px-3">
+      
+      <!-- Logo/Brand - Left side on desktop, center on mobile -->
+      <a class="navbar-brand title font-weight-lighter d-flex align-items-center" href="{{ site.baseurl }}/">
         {%- if site.logo -%}
-          <img class="navbar spectrum-logo-light" src="{{ '/assets/img/SpectrumLab/SpectrumLogo Black.png' | relative_url }}" alt="{{ site.title }}"></img>
-          <img class="navbar spectrum-logo-dark" src="{{ '/assets/img/SpectrumLab/SpectrumLogo White.png' | relative_url }}" alt="{{ site.title }}"></img>
+          <img class="navbar-logo spectrum-logo-light" src="{{ '/assets/img/SpectrumLab/SpectrumLogo Black.png' | relative_url }}" alt="{{ site.title }}">
+          <img class="navbar-logo spectrum-logo-dark" src="{{ '/assets/img/SpectrumLab/SpectrumLogo White.png' | relative_url }}" alt="{{ site.title }}">
         {% else %}
-          {% if site.first_name %}
-            <span class="font-weight-bold">
-              {{- site.first_name -}}
-            </span>
-          {% endif %}
-          {% if site.middle_name %}
-            {{- site.middle_name -}}
-          {% endif %}
-          {% if site.last_name %}
-            {{- site.last_name -}}
-          {% endif %}
+          <span class="navbar-title">
+            {% if site.first_name %}
+              <span class="font-weight-bold">
+                {{- site.first_name -}}
+              </span>
+            {% endif %}
+            {% if site.middle_name %}
+              {{- site.middle_name -}}
+            {% endif %}
+            {% if site.last_name %}
+              {{- site.last_name -}}
+            {% endif %}
+          </span>
         {% else %}
-          {{- site.title -}}
+          <span class="navbar-title">{{- site.title -}}</span>
         {% endif %}
       </a>
-      {% if site.enable_navbar_social %}
-        <!-- Social Icons -->
-        <div class="navbar-brand social">{% include social.liquid %}</div>
-      {% endif %}
+      
+      <!-- Mobile social icons and theme toggle -->
+      <div class="d-lg-none mobile-nav-actions">
+        {% if site.enable_navbar_social %}
+          <div class="navbar-brand social d-inline-block">{% include social.liquid %}</div>
+        {% endif %}
+        {% if site.enable_darkmode %}
+          <!-- Mobile theme toggle -->
+          <button id="mobile-light-toggle" class="mobile-theme-toggle" title="Change theme">
+            <i class="ti ti-sun-moon" id="mobile-light-toggle-system"></i>
+            <i class="ti ti-moon-filled" id="mobile-light-toggle-dark"></i>
+            <i class="ti ti-sun-filled" id="mobile-light-toggle-light"></i>
+          </button>
+        {% endif %}
+      </div>
+      
       <!-- Navbar Toggle -->
       <button
-        class="navbar-toggler collapsed ml-auto"
+        class="navbar-toggler collapsed"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
         aria-controls="navbarNav"
         aria-expanded="false"
         aria-label="Toggle navigation"
@@ -42,8 +58,8 @@
         <span class="icon-bar bottom-bar"></span>
       </button>
 
-      <div class="collapse navbar-collapse text-right" id="navbarNav">
-        <ul class="navbar-nav ml-auto flex-nowrap">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto flex-wrap">
           {% for page in site.pages %}
             {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
           {% endfor %}
@@ -75,7 +91,7 @@
                     href="#"
                     id="navbarDropdown"
                     role="button"
-                    data-toggle="dropdown"
+                    data-bs-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
@@ -84,7 +100,7 @@
                       <span class="sr-only">(current)</span>
                     {% endif %}
                   </a>
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     {% for child in p.children %}
                       {% if child.title == 'divider' %}
                         <div class="dropdown-divider"></div>
@@ -112,15 +128,21 @@
           {% endfor %}
           {% if site.search_enabled %}
             <!-- Search -->
-            <li class="nav-item">
-              <button id="search-toggle" title="Search" onclick="openSearchModal()">
-                <span class="nav-link">ctrl k <i class="ti ti-search"></i></span>
+            <li class="nav-item d-none d-lg-block">
+              <button id="search-toggle" class="nav-search-btn" title="Search" onclick="openSearchModal()">
+                <span class="nav-link"><span class="search-shortcut">ctrl k</span> <i class="ti ti-search"></i></span>
+              </button>
+            </li>
+            <!-- Mobile search -->
+            <li class="nav-item d-lg-none">
+              <button id="mobile-search-toggle" class="nav-search-btn" title="Search" onclick="openSearchModal()">
+                <span class="nav-link"><i class="ti ti-search"></i></span>
               </button>
             </li>
           {% endif %}
           {% if site.enable_darkmode %}
-            <!-- Toogle theme mode -->
-            <li class="toggle-container">
+            <!-- Desktop theme toggle -->
+            <li class="toggle-container d-none d-lg-block">
               <button id="light-toggle" title="Change theme">
                 <i class="ti ti-sun-moon" id="light-toggle-system"></i>
                 <i class="ti ti-moon-filled" id="light-toggle-dark"></i>

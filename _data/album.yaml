@@ -1,0 +1,44 @@
+- event: Convocation Day 2024
+  folder: convocation-day
+  date: 2024-08-15
+  description: "Celebrating our graduates' achievements and milestones"
+  photos:
+    - image: /assets/img/album/convocation-day/download-1.jpg
+      caption: "Group photo at the ceremony"
+      order: 1
+    - image: /assets/img/album/convocation-day/download-2.jpg
+      caption: "Receiving the degree"
+      order: 2
+    - image: /assets/img/album/convocation-day/download-3.jpg
+      caption: "Faculty and graduates together"
+      order: 3
+    - image: /assets/img/album/convocation-day/download-4.jpg
+      caption: "Celebration moments"
+      order: 4
+    - image: /assets/img/album/convocation-day/download-5.jpg
+      caption: "Academic procession"
+      order: 5
+    - image: /assets/img/album/convocation-day/download-6.jpg
+      caption: "Proud graduates"
+      order: 6
+    - image: /assets/img/album/convocation-day/download-7.jpg
+      caption: "Award ceremony"
+      order: 7
+    - image: /assets/img/album/convocation-day/download-8.jpg
+      caption: "Family celebrations"
+      order: 8
+    - image: /assets/img/album/convocation-day/download-9.jpg
+      caption: "Graduate presentations"
+      order: 9
+    - image: /assets/img/album/convocation-day/download-10.jpg
+      caption: "Fellowship of graduates"
+      order: 10
+
+- event: Open Day 2023
+  folder: open-day-2023
+  date: 2023-03-10
+  description: "Visitors exploring our lab and research facilities"
+  photos:
+    - image: /assets/img/album/open-day-2023/download-15.jpg
+      caption: "Lab demonstration and visitor interaction"
+      order: 1

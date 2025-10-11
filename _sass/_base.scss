@@ -248,6 +248,92 @@ ul.task-list input[type="checkbox"] {
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
+  min-height: 56px;
+  
+  // Center navbar content on desktop
+  @media (min-width: 992px) {
+    .container-fluid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+    }
+    
+    .navbar-brand {
+      position: static;
+      margin-bottom: 0.5rem;
+      order: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.25rem 0;
+    }
+    
+    .navbar-collapse {
+      flex: none;
+      order: 2;
+    }
+    
+    // Hide mobile actions on desktop
+    .mobile-nav-actions {
+      display: none !important;
+    }
+    
+    // Hide navbar toggler on desktop  
+    .navbar-toggler {
+      display: none !important;
+    }
+  }
+
+  // Responsive logo styling
+  .navbar-logo {
+    height: 45px;
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+    transition: height 0.3s ease;
+    
+    @media (max-width: 768px) {
+      height: 38px;
+    }
+    
+    @media (max-width: 480px) {
+      height: 32px;
+    }
+    
+    @media (max-width: 400px) {
+      height: 28px;
+    }
+  }
+  
+  // Navbar brand responsive adjustments
+  .navbar-brand {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    
+    @media (max-width: 768px) {
+      margin-right: 0.5rem;
+      padding-top: 0.2rem;
+      padding-bottom: 0.2rem;
+    }
+    
+    .navbar-title {
+      font-size: 1.25rem;
+      
+      @media (max-width: 768px) {
+        font-size: 1.1rem;
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 1rem;
+      }
+    }
+  }
 }
 
 .navbar .dropdown-menu {
@@ -326,6 +412,14 @@ ul.task-list input[type="checkbox"] {
 }
 
 .navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  
+  &:focus {
+    box-shadow: none;
+  }
+  
   .icon-bar {
     display: block;
     width: 22px;
@@ -334,6 +428,11 @@ ul.task-list input[type="checkbox"] {
     border-radius: 1px;
     margin-bottom: 4px;
     transition: all 0.2s;
+    
+    @media (max-width: 480px) {
+      width: 20px;
+      height: 2px;
+    }
   }
 
   .top-bar {
@@ -366,7 +465,9 @@ ul.task-list input[type="checkbox"] {
 }
 
 #light-toggle,
-#search-toggle {
+#search-toggle,
+#mobile-light-toggle,
+#mobile-search-toggle {
   padding: 0;
   border: 0;
   background-color: inherit;
@@ -375,6 +476,211 @@ ul.task-list input[type="checkbox"] {
   &:hover {
     color: var(--global-hover-color);
   }
+}
+
+// Mobile navigation enhancements
+.mobile-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+  .mobile-theme-toggle {
+    padding: 0.25rem;
+    font-size: 1.1rem;
+    
+    @media (max-width: 480px) {
+      font-size: 1rem;
+      padding: 0.2rem;
+    }
+  }
+  
+  .social {
+    font-size: 1.2rem;
+    
+    a {
+      margin: 0 0.2rem;
+    }
+    
+    @media (max-width: 480px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Navigation search button improvements
+.nav-search-btn {
+  .search-shortcut {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    margin-right: 0.25rem;
+    
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+}
+
+// Responsive navbar collapse
+.navbar-collapse {
+  @media (max-width: 991px) {
+    border-top: 1px solid var(--global-divider-color);
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    width: 100%;
+    
+    .navbar-nav {
+      text-align: center;
+      width: 100%;
+      justify-content: center;
+      
+      .nav-item {
+        margin: 0.25rem 0;
+        
+        .nav-link {
+          padding: 0.5rem 1rem;
+          border-radius: 0.25rem;
+          transition: background-color 0.2s;
+          
+          &:hover {
+            background-color: rgba(var(--global-theme-color), 0.1);
+          }
+        }
+      }
+      
+      .dropdown-menu {
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        
+        .dropdown-item {
+          text-align: center;
+          padding: 0.4rem 1rem;
+          
+          &:hover {
+            background-color: rgba(var(--global-theme-color), 0.1);
+          }
+        }
+      }
+    }
+  }
+  
+  // Desktop centering
+  @media (min-width: 992px) {
+    .navbar-nav {
+      justify-content: center;
+    }
+  }
+}
+
+// Scroll-to-hide navbar functionality
+.navbar {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  will-change: transform;
+  
+  &.navbar-hidden {
+    transform: translateY(-100%);
+    
+    // Don't hide when mobile menu is open
+    &.navbar-menu-open {
+      transform: translateY(0);
+    }
+  }
+  
+  &.navbar-scrolled {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  [data-theme="dark"] & {
+    &.navbar-scrolled {
+      box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    }
+  }
+  
+  // Ensure mobile menu always stays visible when open
+  &.navbar-menu-open {
+    transform: translateY(0) !important;
+  }
+}
+
+// Enhanced mobile responsiveness
+@media (max-width: 576px) {
+  .navbar {
+    padding: 0.25rem 0;
+    
+    .container-fluid {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+      flex-direction: row !important; // Override centering on mobile
+      justify-content: space-between !important;
+    }
+    
+    .navbar-brand {
+      font-size: 1rem;
+      position: static !important;
+      order: 1;
+      margin-bottom: 0 !important;
+    }
+    
+    .mobile-nav-actions {
+      order: 2;
+    }
+    
+    .navbar-toggler {
+      order: 3;
+    }
+  }
+  
+  .navbar-nav {
+    .nav-item .nav-link {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    .mobile-nav-actions {
+      gap: 0.25rem;
+      
+      .social {
+        font-size: 0.9rem;
+      }
+      
+      .mobile-theme-toggle {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+// Theme toggle responsive behavior
+#mobile-light-toggle-system,
+#mobile-light-toggle-dark,
+#mobile-light-toggle-light {
+  display: none;
+}
+
+html[data-theme-setting="dark"] {
+  #mobile-light-toggle-system { display: none; }
+  #mobile-light-toggle-dark { display: block; }
+  #mobile-light-toggle-light { display: none; }
+}
+
+html[data-theme-setting="light"] {
+  #mobile-light-toggle-system { display: none; }
+  #mobile-light-toggle-dark { display: none; }
+  #mobile-light-toggle-light { display: block; }
+}
+
+html:not([data-theme-setting]) {
+  #mobile-light-toggle-system { display: block; }
+  #mobile-light-toggle-dark { display: none; }
+  #mobile-light-toggle-light { display: none; }
 }
 
 // Social (bottom)
@@ -1087,6 +1393,18 @@ progress {
 
   /* Progress bar value for IE10  */
   color: var(--global-theme-color);
+  
+  /* Hide with navbar */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hide progress bar when navbar is hidden */
+progress.progress-hidden,
+.progress-container.progress-hidden {
+  transform: translateY(-100%) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, visibility 0.3s ease;
 }
 
 progress::-webkit-progress-bar {
@@ -1109,7 +1427,10 @@ progress::-moz-progress-bar {
   left: 0;
   height: 5px;
   display: block;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* Progress container will be controlled by JavaScript */
 
 .progress-bar {
   background-color: var(--global-theme-color);

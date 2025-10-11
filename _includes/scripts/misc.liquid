@@ -41,3 +41,189 @@
 <script defer src="{{ '/assets/js/jupyter_new_tab.js' | relative_url | bust_file_cache }}"></script>
 
 {% assign site.test-library.url = site.test-library.url | append: 'teste' %}
+
+{% if site.enable_darkmode %}
+  <!-- Mobile Theme Toggle Synchronization -->
+  <script type="text/javascript">
+    // Synchronize mobile theme toggle with main theme toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileToggle = document.getElementById('mobile-light-toggle');
+      const desktopToggle = document.getElementById('light-toggle');
+      
+      if (mobileToggle && desktopToggle) {
+        mobileToggle.addEventListener('click', function() {
+          desktopToggle.click();
+        });
+      }
+      
+      // Update Bootstrap 5 data attributes for navbar collapse
+      const navbarToggle = document.querySelector('.navbar-toggler');
+      if (navbarToggle) {
+        // Ensure Bootstrap 5 functionality works
+        if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+          const target = navbarToggle.getAttribute('data-bs-target');
+          if (target) {
+            const collapseElement = document.querySelector(target);
+            if (collapseElement) {
+              // Bootstrap should handle this automatically, but ensure it's working
+              navbarToggle.addEventListener('click', function() {
+                const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseElement);
+                bsCollapse.toggle();
+              });
+            }
+          }
+        }
+      }
+    });
+  </script>
+{% endif %}
+
+<!-- Scroll-to-Hide Navbar -->
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.getElementById('navbar');
+    if (!navbar) return;
+    
+    // Get progress bar elements
+    const progressBar = document.getElementById('progress');
+    const progressContainer = document.querySelector('.progress-container');
+    
+    // Debug: Log if elements are found
+    console.log('Progress elements found:', { progressBar: !!progressBar, progressContainer: !!progressContainer });
+    
+    let lastScrollTop = 0;
+    let scrollTimer = null;
+    const scrollThreshold = 5; // Minimum scroll distance to trigger  
+    const hideThreshold = 50; // Scroll distance to start hiding (reduced for testing)
+    
+    // Debug: Add more aggressive logging
+    console.log('Scroll-to-hide initialized on page:', window.location.pathname);
+    
+    function handleScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollDelta = scrollTop - lastScrollTop;
+      const documentHeight = document.documentElement.scrollHeight;
+      const windowHeight = window.innerHeight;
+      
+      // Debug: Log scroll activity
+      if (Math.abs(scrollDelta) > scrollThreshold) {
+        console.log('Scroll detected:', { scrollTop, scrollDelta, hideThreshold, page: window.location.pathname });
+      }
+      
+      // Add scrolled class for shadow effect
+      if (scrollTop > 20) {
+        navbar.classList.add('navbar-scrolled');
+      } else {
+        navbar.classList.remove('navbar-scrolled');
+      }
+      
+      // Always show navbar when at the top or bottom
+      if (scrollTop <= hideThreshold || (scrollTop + windowHeight >= documentHeight - 100)) {
+        navbar.classList.remove('navbar-hidden');
+        if (progressBar) {
+          progressBar.classList.remove('progress-hidden');
+          progressBar.style.transform = '';
+          progressBar.style.opacity = '';
+        }
+        if (progressContainer) {
+          progressContainer.classList.remove('progress-hidden');
+          progressContainer.style.transform = '';
+          progressContainer.style.opacity = '';
+        }
+        lastScrollTop = scrollTop;
+        return;
+      }
+      
+      // Only hide/show if we've scrolled enough and we're past the threshold
+      if (Math.abs(scrollDelta) > scrollThreshold) {
+        if (scrollDelta > 0) {
+          // Scrolling down - hide navbar and progress bar
+          navbar.classList.add('navbar-hidden');
+          if (progressBar) {
+            progressBar.classList.add('progress-hidden');
+            progressBar.style.transform = 'translateY(-100%)';
+            progressBar.style.opacity = '0';
+          }
+          if (progressContainer) {
+            progressContainer.classList.add('progress-hidden');
+            progressContainer.style.transform = 'translateY(-100%)';
+            progressContainer.style.opacity = '0';
+          }
+        } else {
+          // Scrolling up - show navbar and progress bar
+          navbar.classList.remove('navbar-hidden');
+          if (progressBar) {
+            progressBar.classList.remove('progress-hidden');
+            progressBar.style.transform = '';
+            progressBar.style.opacity = '';
+          }
+          if (progressContainer) {
+            progressContainer.classList.remove('progress-hidden');
+            progressContainer.style.transform = '';
+            progressContainer.style.opacity = '';
+          }
+        }
+      }
+      
+      lastScrollTop = scrollTop;
+    }
+    
+    // Throttle scroll events for better performance
+    function throttledScroll() {
+      if (scrollTimer) return;
+      scrollTimer = setTimeout(function() {
+        handleScroll();
+        scrollTimer = null;
+      }, 16); // ~60fps
+    }
+    
+    // Add scroll listener
+    window.addEventListener('scroll', throttledScroll, { passive: true });
+    
+    // Show navbar when hovering near the top of the screen
+    document.addEventListener('mousemove', function(e) {
+      if (e.clientY <= 100) {
+        navbar.classList.remove('navbar-hidden');
+        if (progressBar) {
+          progressBar.classList.remove('progress-hidden');
+          progressBar.style.transform = '';
+          progressBar.style.opacity = '';
+        }
+        if (progressContainer) {
+          progressContainer.classList.remove('progress-hidden');
+          progressContainer.style.transform = '';
+          progressContainer.style.opacity = '';
+        }
+      }
+    });
+    
+    // Always show navbar when mobile menu is open
+    const navbarToggle = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('#navbarNav');
+    
+    if (navbarToggle && navbarCollapse) {
+      navbarCollapse.addEventListener('show.bs.collapse', function() {
+        navbar.classList.remove('navbar-hidden');
+        if (progressBar) {
+          progressBar.classList.remove('progress-hidden');
+          progressBar.style.transform = '';
+          progressBar.style.opacity = '';
+        }
+        if (progressContainer) {
+          progressContainer.classList.remove('progress-hidden');
+          progressContainer.style.transform = '';
+          progressContainer.style.opacity = '';
+        }
+      });
+      
+      // Prevent hiding while mobile menu is open
+      navbarCollapse.addEventListener('shown.bs.collapse', function() {
+        navbar.classList.add('navbar-menu-open');
+      });
+      
+      navbarCollapse.addEventListener('hidden.bs.collapse', function() {
+        navbar.classList.remove('navbar-menu-open');
+      });
+    }
+  });
+</script>

@@ -385,72 +385,30 @@ ul.task-list input[type="checkbox"] {
     position: relative;
     font-weight: bolder;
     color: var(--global-theme-color);
-    background: linear-gradient(135deg, var(--global-theme-color), rgba(var(--global-theme-color-rgb), 0.7));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 200%;
-    animation: gradientShift 3s ease-in-out infinite;
     transition: all 0.3s ease;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    margin: 0.25rem;
     
-    // Color drop shadow effect
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, 
-        rgba(var(--global-theme-color-rgb), 0.1), 
-        rgba(var(--global-theme-color-rgb), 0.05)
-      );
-      border-radius: 0.5rem;
-      box-shadow: 
-        0 4px 8px rgba(var(--global-theme-color-rgb), 0.2),
-        0 2px 4px rgba(var(--global-theme-color-rgb), 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-      z-index: -1;
-      transition: all 0.3s ease;
-    }
-    
-    // Glowing accent bar underneath
+    // V-shaped color drop effect
     &::after {
       content: '';
       position: absolute;
-      bottom: -2px;
+      bottom: -5px;
       left: 50%;
       transform: translateX(-50%);
-      width: 60%;
-      height: 2px;
-      background: linear-gradient(90deg, 
-        transparent, 
-        var(--global-theme-color), 
-        transparent
-      );
-      border-radius: 1px;
-      box-shadow: 0 0 8px rgba(var(--global-theme-color-rgb), 0.6);
-      animation: pulseGlow 2s ease-in-out infinite;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 6px solid var(--global-theme-color);
+      transition: all 0.3s ease;
+      opacity: 1;
     }
 
     &:hover {
-      -webkit-text-fill-color: var(--global-hover-color);
       color: var(--global-hover-color);
-      transform: translateY(-1px);
-      
-      &::before {
-        box-shadow: 
-          0 6px 12px rgba(var(--global-theme-color-rgb), 0.25),
-          0 3px 6px rgba(var(--global-theme-color-rgb), 0.2),
-          inset 0 1px 0 rgba(255, 255, 255, 0.15);
-      }
       
       &::after {
-        width: 80%;
-        box-shadow: 0 0 12px rgba(var(--global-theme-color-rgb), 0.8);
+        border-top-color: var(--global-hover-color);
+        transform: translateX(-50%) scale(1.1);
       }
     }
   }
@@ -1885,23 +1843,3 @@ html[data-theme="dark"] .blog-ready {
   filter: invert(1) hue-rotate(180deg) brightness(1.2) contrast(0.775);
 }
 
-// Keyframe animations for active navbar effects
-@keyframes gradientShift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-@keyframes pulseGlow {
-  0%, 100% {
-    opacity: 0.6;
-    transform: translateX(-50%) scaleX(1);
-  }
-  50% {
-    opacity: 1;
-    transform: translateX(-50%) scaleX(1.1);
-  }
-}

@@ -28,6 +28,14 @@ latest_posts:
 The **Spectrum Lab**
 is a research group led by [Prof. Chandra Sekhar Seelamantula](https://ee.iisc.ac.in/chandra-sekhar-seelamantula/) in the [Department of Electrical Engineering](https://ee.iisc.ac.in/) at the [Indian Institute of Science](https://iisc.ac.in/). The lab focuses on problems in the intersection of computational imaging and machine learning.
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path='assets/img/album/random-collection/18.jpg' title="ICASSP 2025" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Spectrum Lab, past and present, at <a href="https://2025.ieeeicassp.org/">ICASSP 2025</a>, in Hyderabad, India.
+</div>
 
 <!-- pages/people.md -->
 <div class="people">

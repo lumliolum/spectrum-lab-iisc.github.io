@@ -6,6 +6,53 @@
       caption: "Lush greenery on campus"
       order: 1
 
+- event:
+  folder: random-collection
+  description:
+  photos:
+    - image: /assets/img/album/random-collection/1.jpg
+      order: 1
+    - image: /assets/img/album/random-collection/2.jpg
+      order: 2
+    - image: /assets/img/album/random-collection/3.jpg
+      order: 3
+    - image: /assets/img/album/random-collection/4.jpg
+      order: 4
+    - image: /assets/img/album/random-collection/5.jpg
+      order: 5
+    - image: /assets/img/album/random-collection/6.jpg
+      order: 6
+    - image: /assets/img/album/random-collection/7.jpg
+      order: 7
+    - image: /assets/img/album/random-collection/8.jpg
+      order: 8
+    - image: /assets/img/album/random-collection/9.jpg
+      order: 9
+    - image: /assets/img/album/random-collection/10.jpg
+      order: 10
+    - image: /assets/img/album/random-collection/11.jpg
+      order: 11
+    - image: /assets/img/album/random-collection/12.jpg
+      order: 12
+    - image: /assets/img/album/random-collection/13.jpg
+      order: 13
+    - image: /assets/img/album/random-collection/14.JPG
+      order: 14
+    - image: /assets/img/album/random-collection/15.JPG 
+      order: 15
+    - image: /assets/img/album/random-collection/16.JPG
+      order: 16
+    - image: /assets/img/album/random-collection/17.JPG
+      order: 17
+    - image: /assets/img/album/random-collection/18.jpg
+      order: 18
+    - image: /assets/img/album/random-collection/19.jpg
+      order: 19
+    - image: /assets/img/album/random-collection/20.JPG
+      order: 20
+    - image: /assets/img/album/random-collection/21.JPG
+      order: 21
+
 - event: Awards
   folder: awards
   description: "Celebrating our graduates' achievements and milestones"
@@ -69,51 +116,3 @@
     - image: /assets/img/album/eye-care/11.jpg
       caption: "We have an MoU with Carl Zeiss to set up a lab on AI for Eye Care at IISc."
       order: 10
-
-- event:
-  folder: random-collection
-  description:
-  photos:
-    - image: /assets/img/album/random-collection/1.jpg
-      order: 1
-    - image: /assets/img/album/random-collection/2.jpg
-      order: 2
-    - image: /assets/img/album/random-collection/3.jpg
-      order: 3
-    - image: /assets/img/album/random-collection/4.jpg
-      order: 4
-    - image: /assets/img/album/random-collection/5.jpg
-      order: 5
-    - image: /assets/img/album/random-collection/6.jpg
-      order: 6
-    - image: /assets/img/album/random-collection/7.jpg
-      order: 7
-    - image: /assets/img/album/random-collection/8.jpg
-      order: 8
-    - image: /assets/img/album/random-collection/9.jpg
-      order: 9
-    - image: /assets/img/album/random-collection/10.jpg
-      order: 10
-    - image: /assets/img/album/random-collection/11.jpg
-      order: 11
-    - image: /assets/img/album/random-collection/12.jpg
-      order: 12
-    - image: /assets/img/album/random-collection/13.jpg
-      order: 13
-    - image: /assets/img/album/random-collection/14.JPG
-      order: 14
-    - image: /assets/img/album/random-collection/15.JPG 
-      order: 15
-    - image: /assets/img/album/random-collection/16.JPG
-      order: 16
-    - image: /assets/img/album/random-collection/17.JPG
-      order: 17
-    - image: /assets/img/album/random-collection/18.jpg
-      order: 18
-    - image: /assets/img/album/random-collection/19.jpg
-      order: 19
-    - image: /assets/img/album/random-collection/20.JPG
-      order: 20
-    - image: /assets/img/album/random-collection/21.JPG
-      order: 21
-  

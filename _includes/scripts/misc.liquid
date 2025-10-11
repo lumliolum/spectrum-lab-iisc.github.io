@@ -56,24 +56,6 @@
         });
       }
       
-      // Update Bootstrap 5 data attributes for navbar collapse
-      const navbarToggle = document.querySelector('.navbar-toggler');
-      if (navbarToggle) {
-        // Ensure Bootstrap 5 functionality works
-        if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
-          const target = navbarToggle.getAttribute('data-bs-target');
-          if (target) {
-            const collapseElement = document.querySelector(target);
-            if (collapseElement) {
-              // Bootstrap should handle this automatically, but ensure it's working
-              navbarToggle.addEventListener('click', function() {
-                const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseElement);
-                bsCollapse.toggle();
-              });
-            }
-          }
-        }
-      }
     });
   </script>
 {% endif %}
@@ -197,12 +179,9 @@
       }
     });
     
-    // Always show navbar when mobile menu is open
-    const navbarToggle = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('#navbarNav');
-    
-    if (navbarToggle && navbarCollapse) {
-      navbarCollapse.addEventListener('show.bs.collapse', function() {
+    // Always show navbar when mobile menu is open  
+    $(document).ready(function() {
+      $('#navbarNav').on('show.bs.collapse', function() {
         navbar.classList.remove('navbar-hidden');
         if (progressBar) {
           progressBar.classList.remove('progress-hidden');
@@ -217,13 +196,13 @@
       });
       
       // Prevent hiding while mobile menu is open
-      navbarCollapse.addEventListener('shown.bs.collapse', function() {
+      $('#navbarNav').on('shown.bs.collapse', function() {
         navbar.classList.add('navbar-menu-open');
       });
       
-      navbarCollapse.addEventListener('hidden.bs.collapse', function() {
+      $('#navbarNav').on('hidden.bs.collapse', function() {
         navbar.classList.remove('navbar-menu-open');
       });
-    }
+    });
   });
 </script>

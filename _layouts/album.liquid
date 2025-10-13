@@ -157,11 +157,7 @@ html[data-theme="dark"] .btn-close {
           <div class="swiper-wrapper">
             {% for photo in sorted_photos %}
               <div class="swiper-slide d-flex justify-content-center align-items-center">
-                <img src="{{ photo.image | relative_url }}" 
-                     class="album-photo" 
-                     alt="{{ photo.caption }}"
-                     data-caption="{{ photo.caption }}"
-                     loading="lazy">
+                {% include responsive-image.liquid path=photo.image alt=photo.caption class="album-photo" data-caption=photo.caption %}
               </div>
             {% endfor %}
           </div>

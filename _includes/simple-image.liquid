@@ -1,0 +1,17 @@
+{% comment %}
+Simple image include for logos and other images that don't need responsive WebP variants
+Usage: {% include simple-image.liquid path="assets/img/example.jpg" alt="Description" class="img-fluid" %}
+{% endcomment %}
+
+{% assign image_path = include.path %}
+{% assign image_alt = include.alt | default: "" %}
+{% assign image_class = include.class | default: "img-fluid" %}
+{% assign image_style = include.style | default: "" %}
+
+<img 
+  src="{{ image_path | relative_url }}" 
+  alt="{{ image_alt }}"
+  class="{{ image_class }}"
+  {% if image_style != "" %}style="{{ image_style }}"{% endif %}
+  {% if include.data-caption %}data-caption="{{ include.data-caption }}"{% endif %}
+  loading="lazy">

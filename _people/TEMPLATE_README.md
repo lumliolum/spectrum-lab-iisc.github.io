@@ -93,7 +93,7 @@ firstname: Jane
 lastname: Doe
 description: PhD Student
 img: assets/img/people/phd_students/jane-doe.jpg
-redirect:
+website:
 orcid_id: 0000-0000-0000-0000
 linkedin_username: jane-doe
 github: janedoe

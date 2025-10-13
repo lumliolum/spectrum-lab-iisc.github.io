@@ -5,7 +5,7 @@ firstname: [First Name]
 lastname: [Last Name]
 description: [Position/Title]
 img: assets/img/people/[category]/[photo_filename.jpg]
-redirect:
+website:
 orcid_id: [ORCID ID if available]
 linkedin_username: [LinkedIn username if available]
 github: [GitHub username if available]

@@ -1,0 +1,371 @@
+---
+layout: default
+---
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <article class="post-content {{ page.title | escape }} clearfix">
+    
+    {% if page.activity_type == "talks_delivered" %}
+      
+      <div class="talks-delivered-content">
+        <p>The following is a selected list of invited talks that Prof. Chandra Sekhar Seelamantula has delivered at various premier forums.</p>
+        <hr>
+        
+        <div class="talk-list">
+          {% for talk in site.data.activities.talks_delivered %}
+            <div class="talk-item">
+              <h3 class="talk-title">{{ forloop.index }}. {{ talk.title }}</h3>
+              <div class="talk-details">
+                <em>{{ talk.venue }}</em>{% if talk.date %}, {{ talk.date }}{% endif %}{% if talk.note %} ({{ talk.note }}){% endif %}.
+                {% if talk.type %}
+                  <span class="talk-type">{{ talk.type }}</span>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    {% elsif page.activity_type == "talks_organized" %}
+      
+      <div class="talks-organized-content">
+        <p>This page lists the invited talks that have been organized by Prof. Chandra Sekhar Seelamantula and the Spectrum Lab team, bringing distinguished speakers to share their expertise with the academic community.</p>
+        <hr>
+        
+        <div class="organized-talk-list">
+          {% for talk in site.data.activities.talks_organized %}
+            <div class="organized-talk-item">
+              <h3 class="organized-talk-title">{{ forloop.index }}. {{ talk.title }}</h3>
+              <div class="organized-talk-speaker">
+                by <strong>{{ talk.speaker }}</strong>{% if talk.speaker_affiliation %}, <em>{{ talk.speaker_affiliation }}</em>{% endif %}
+              </div>
+              <div class="organized-talk-date">{{ talk.date }}</div>
+              {% if talk.note %}
+                <div class="organized-talk-note">{{ talk.note }}</div>
+              {% endif %}
+              {% if talk.website %}
+                <div class="organized-talk-website">
+                  <a href="{{ talk.website }}" target="_blank">{{ talk.website }}</a>
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    {% elsif page.activity_type == "committees" %}
+      
+      <div class="committees-content">
+        <p>Prof. Chandra Sekhar Seelamantula's service to the academic and professional community through various committee memberships, editorial roles, and organizational responsibilities.</p>
+        <hr>
+
+        <div class="committee-sections">
+          
+          <!-- Current Roles -->
+          <section class="committee-section">
+            <h2>🏛️ Current Roles & Positions</h2>
+            <div class="committee-items current-roles">
+              {% for item in site.data.activities.committees.current_roles %}
+                <div class="committee-item">
+                  <h4 class="committee-title">{{ item.title }}</h4>
+                  <div class="committee-org"><em>{{ item.organization }}</em></div>
+                  {% if item.period %}<div class="committee-period">{{ item.period }}</div>{% endif %}
+                  {% if item.note %}<div class="committee-note">{{ item.note }}</div>{% endif %}
+                </div>
+              {% endfor %}
+            </div>
+          </section>
+
+          <!-- Academic Service -->
+          <section class="committee-section">
+            <h2>🎓 Academic & Administrative Service</h2>
+            <div class="committee-items academic-service">
+              {% for item in site.data.activities.committees.academic_service %}
+                <div class="committee-item">
+                  <h4 class="committee-title">{{ item.title }}</h4>
+                  <div class="committee-org"><em>{{ item.organization }}</em></div>
+                  {% if item.period %}<div class="committee-period">{{ item.period }}</div>{% endif %}
+                  {% if item.note %}<div class="committee-note">{{ item.note }}</div>{% endif %}
+                </div>
+              {% endfor %}
+            </div>
+          </section>
+
+          <!-- Conference Organization -->
+          <section class="committee-section">
+            <h2>📊 Conference Organization & Leadership</h2>
+            <div class="committee-items conference-org">
+              {% for item in site.data.activities.committees.conference_organization %}
+                <div class="committee-item">
+                  <h4 class="committee-title">{{ item.title }}</h4>
+                  <div class="committee-org"><em>{{ item.organization }}</em>{% if item.location %}, {{ item.location }}{% endif %}</div>
+                  {% if item.period %}<div class="committee-period">{{ item.period }}</div>{% endif %}
+                  {% if item.note %}<div class="committee-note">{{ item.note }}</div>{% endif %}
+                </div>
+              {% endfor %}
+            </div>
+          </section>
+
+          <!-- Editorial Service -->
+          <section class="committee-section">
+            <h2>✍️ Editorial Service</h2>
+            <div class="committee-items editorial-service">
+              {% for item in site.data.activities.committees.editorial_service %}
+                <div class="committee-item">
+                  <h4 class="committee-title">{{ item.title }}</h4>
+                  <div class="committee-org"><em>{{ item.organization }}</em></div>
+                  {% if item.period %}<div class="committee-period">{{ item.period }}</div>{% endif %}
+                  {% if item.note %}<div class="committee-note">{{ item.note }}</div>{% endif %}
+                </div>
+              {% endfor %}
+            </div>
+          </section>
+
+          <!-- Session Organization -->
+          <section class="committee-section">
+            <h2>🎤 Session & Special Session Organization</h2>
+            <div class="committee-items session-org">
+              {% for item in site.data.activities.committees.session_organization %}
+                <div class="committee-item">
+                  <h4 class="committee-title">{{ item.title }}</h4>
+                  <div class="committee-org"><em>{{ item.organization }}</em></div>
+                  {% if item.period %}<div class="committee-period">{{ item.period }}</div>{% endif %}
+                  {% if item.note %}<div class="committee-note">{{ item.note }}</div>{% endif %}
+                </div>
+              {% endfor %}
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Recognition Section -->
+        <section class="recognition-section">
+          <h2>📈 Impact & Recognition</h2>
+          <ul class="recognition-list">
+            {% for item in site.data.activities.recognition %}
+              <li>
+                <strong>{{ item.title }}</strong>: 
+                {% if item.organization %}{{ item.organization }}{% endif %}{% if item.year %}, {{ item.year }}{% endif %}
+                {% if item.description %}{{ item.description }}{% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
+
+      </div>
+
+    {% endif %}
+
+    {% if content != "" %}
+      {{ content }}
+    {% endif %}
+
+  </article>
+
+</div>
+
+<style>
+/* Talks Delivered Styling */
+.talk-list {
+  counter-reset: talk-counter;
+}
+
+.talk-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.talk-item:last-child {
+  border-bottom: none;
+}
+
+.talk-title {
+  color: var(--global-theme-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.talk-details em {
+  color: var(--global-text-color-light);
+}
+
+.talk-type {
+  display: inline-block;
+  background: rgba(var(--global-theme-color-rgb), 0.1);
+  color: var(--global-theme-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+/* Talks Organized Styling */
+.organized-talk-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.organized-talk-item {
+  border-left: 3px solid var(--global-theme-color);
+  padding-left: 1rem;
+  background: var(--global-bg-color);
+}
+
+.organized-talk-title {
+  color: var(--global-theme-color);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.organized-talk-speaker {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.organized-talk-speaker strong {
+  color: var(--global-text-color);
+}
+
+.organized-talk-speaker em {
+  color: var(--global-text-color-light);
+}
+
+.organized-talk-date {
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.organized-talk-note {
+  font-style: italic;
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.organized-talk-website a {
+  color: var(--global-theme-color);
+  text-decoration: none;
+}
+
+.organized-talk-website a:hover {
+  text-decoration: underline;
+}
+
+/* Committees Styling */
+.committee-sections {
+  display: grid;
+  gap: 3rem;
+}
+
+.committee-section h2 {
+  color: var(--global-theme-color);
+  border-bottom: 2px solid var(--global-theme-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.committee-items {
+  background: rgba(var(--global-theme-color-rgb), 0.05);
+  border-left: 4px solid var(--global-theme-color);
+  padding: 1.5rem;
+  border-radius: 0 8px 8px 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.committee-item {
+  
+}
+
+.committee-title {
+  color: var(--global-theme-color);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.committee-org {
+  color: var(--global-text-color-light);
+  margin-bottom: 0.25rem;
+}
+
+.committee-period {
+  color: var(--global-text-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.committee-note {
+  font-style: italic;
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Recognition Section */
+.recognition-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--global-divider-color);
+}
+
+.recognition-section h2 {
+  color: var(--global-theme-color);
+  margin-bottom: 1.5rem;
+}
+
+.recognition-list li {
+  background: rgba(var(--global-theme-color-rgb), 0.1);
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  border-left: 3px solid var(--global-theme-color);
+}
+
+.recognition-list li strong {
+  color: var(--global-theme-color);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .committee-items {
+    padding: 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border-radius: 0;
+  }
+  
+  .committee-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .organized-talk-item {
+    padding-left: 0.75rem;
+  }
+}
+
+/* Dark Mode */
+html[data-theme="dark"] .committee-items {
+  background: rgba(var(--global-theme-color-rgb), 0.1);
+}
+
+html[data-theme="dark"] .recognition-list li {
+  background: rgba(var(--global-theme-color-rgb), 0.15);
+}
+
+html[data-theme="dark"] .organized-talk-item {
+  background: var(--global-bg-color);
+}
+</style>

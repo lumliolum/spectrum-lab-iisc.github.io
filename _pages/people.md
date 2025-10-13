@@ -4,7 +4,7 @@ title: People
 permalink: /people/
 subtitle:
 nav: true
-nav_order: 6
+nav_order: 8
 dropdown: true
 children:
   - title: All People

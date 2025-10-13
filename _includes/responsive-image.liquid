@@ -21,9 +21,9 @@ Usage: {% include responsive-image.liquid path="assets/img/example.jpg" alt="Des
 <picture>
   {% comment %} WebP sources for modern browsers {% endcomment %}
   <source 
-    srcset="{{ path_without_file }}{{ name_only }}-480.webp 480w,
-            {{ path_without_file }}{{ name_only }}-800.webp 800w,
-            {{ path_without_file }}{{ name_only }}-1400.webp 1400w"
+    srcset="{{ path_without_file | relative_url }}{{ name_only }}-480.webp 480w,
+            {{ path_without_file | relative_url }}{{ name_only }}-800.webp 800w,
+            {{ path_without_file | relative_url }}{{ name_only }}-1400.webp 1400w"
     sizes="(max-width: 480px) 480px, (max-width: 800px) 800px, 1400px"
     type="image/webp">
   

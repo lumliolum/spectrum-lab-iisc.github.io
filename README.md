@@ -1,4 +1,25 @@
-# Adding People, Categories, and Publications
+# Spectrum Lab Website Documentation
+
+## People Navigation
+
+The People section uses a dropdown navigation system to organize team members by categories. This provides better navigation and cleaner organization compared to displaying everyone on a single long page.
+
+### Navigation Structure
+
+The People dropdown includes:
+- **All People** - Shows everyone (main people page)
+- **PhD Students** - Current PhD students
+- **Project Associates** - Current project associates
+- **M.Tech Students** - Current M.Tech students
+- **PhD Graduates** - PhD graduates from the lab
+- **MTech (Res.) Graduates** - MTech (Research) graduates
+- **Administrator** - Administrative staff
+
+### How It Works
+
+The dropdown navigation is configured in `_pages/people.md` with the `dropdown: true` setting and a `children:` list that defines each category page. Individual category pages are located in `_pages/people/` and use the `people_category` layout to display people filtered by category.
+
+## Adding People, Categories, and Publications
 
 ## Adding a Person
 
@@ -30,9 +51,37 @@ To add a person to the website:
    - `assets/img/people/project-associates/` for Project Associates
 **Necessarily make the image square**
 
-4. **Category**: You can categorize people as "PhD Students", "MSc Students", "M.Tech Students", "Alumni", "Undergraduates", or "Lab Director". Add accordingly under `category`.
+4. **Category**: You can categorize people as "PhD Students", "Project Associates", "M.Tech Students", "PhD Graduates", "MTech (Res.) Graduates", or "Administrator". Add accordingly under `category`. The category must match exactly with the categories defined in the People dropdown.
 
 5. **Image Path**: Update the `img:` field to reflect the correct folder structure, e.g., `assets/img/people/phd/yourname.jpg`
+
+## Managing People Categories
+
+### Adding a New Category
+
+To add a new people category to the dropdown:
+
+1. **Create a category page**: Create a new file in `_pages/people/` (e.g., `new-category.md`) with:
+   ```yaml
+   ---
+   layout: people_category
+   title: New Category
+   permalink: /people/new-category/
+   category: New Category
+   description: Description for this category
+   nav: false
+   ---
+   ```
+
+2. **Update the main People page**: Edit `_pages/people.md` to add the new category to the `children:` list and `display_categories:` list.
+
+3. **Update image folders**: Create corresponding folders in `assets/img/people/` if needed.
+
+### Removing a Category
+
+1. Delete the category page from `_pages/people/`
+2. Remove the category from the `children:` and `display_categories:` lists in `_pages/people.md`
+3. Move or reassign people from that category to other categories
 
 ## Categories
 
@@ -63,6 +112,49 @@ To add a publication:
     ```
 
 3. **Additional Info**: Optional fields include `abstract`, `doi`, `pdf`, etc., which can be linked in the assets directory.
+
+## Technical Implementation Details
+
+### People Dropdown System
+
+The People dropdown navigation system consists of:
+
+1. **Main People Page** (`_pages/people.md`):
+   - Contains `dropdown: true` to enable dropdown functionality
+   - Defines `children:` list with links to category pages
+   - Maintains `display_categories:` for backward compatibility
+   - Shows all people when accessed directly at `/people/`
+
+2. **Category Pages** (`_pages/people/*.md`):
+   - Use `layout: people_category` for consistent display
+   - Filter people by the specified `category` field
+   - Individual pages for each category (e.g., `/people/phd-students/`)
+
+3. **People Category Layout** (`_layouts/people_category.liquid`):
+   - Reusable layout that filters and displays people by category
+   - Maintains the same styling and functionality as the original people page
+   - Handles empty states when no people exist in a category
+
+4. **Navigation Integration**:
+   - Header automatically detects `dropdown: true` in page front matter
+   - Renders dropdown menu with children links
+   - Supports dividers and active state highlighting
+
+### File Structure
+```
+_pages/
+├── people.md                    # Main people page with dropdown config
+└── people/
+    ├── phd-students.md          # PhD Students category page
+    ├── project-associates.md     # Project Associates category page
+    ├── mtech-students.md        # M.Tech Students category page
+    ├── phd-graduates.md         # PhD Graduates category page
+    ├── mtech-res-graduates.md   # MTech (Res.) Graduates category page
+    └── administrator.md         # Administrator category page
+
+_layouts/
+└── people_category.liquid       # Layout for category pages
+```
 
 ## Organization Structure
 

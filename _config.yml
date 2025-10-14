@@ -13,7 +13,7 @@ territorial_acknowledgement:
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/calgaryml/calgaryml.github.io">customized theme</a> based on <a href="https://github.com/alshedivat/al-folio">al-folio</a>.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: IISc, Bengaluru, Indian Institute of Science, signal processing, machine learing, computational imaging, reserach, generative modelling, artificial intelligence # add your own keywords or leave empty
+keywords: IISc, Bengaluru, Indian Institute of Science, signal processing, machine learing, computational imaging, research, generative modelling, artificial intelligence # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 # icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 logo: assets/img/SpectrumLogo.png # the logo image used in the navbar and footer (alternatively, provide an emoji)
@@ -140,7 +140,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Research # blog_name will be displayed in your blog page
+blog_name: Research Highlights # blog_name will be displayed in your blog page
 blog_description:
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts

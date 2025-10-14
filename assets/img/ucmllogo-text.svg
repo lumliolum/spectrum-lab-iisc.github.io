@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="60" viewBox="0 0 180 60">
+  <rect width="180" height="60" fill="#0066cc" rx="5"/>
+  <text x="90" y="35" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    SPECTRUM LAB
+  </text>
+</svg>

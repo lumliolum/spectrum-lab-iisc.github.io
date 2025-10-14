@@ -99,3 +99,104 @@ text.ucalgary-outline-color {
     font-size: larger;
   }
 }
+
+// Lab Director Section Styling
+.lab-director-section {
+  margin: 2rem 0;
+  
+  .profile-card {
+    padding: 1rem;
+    
+    .profile-image {
+      max-width: 200px;
+      transition: transform 0.2s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    
+    .card-title {
+      color: var(--global-text-color);
+      font-size: 1.5rem;
+      
+      a {
+        color: inherit;
+        
+        &:hover {
+          color: var(--global-theme-color);
+          text-decoration: none;
+        }
+      }
+    }
+    
+    .card-icons {
+      margin-top: 1rem;
+      
+      a {
+        margin: 0 0.5rem;
+        
+        i::before {
+          color: var(--global-text-color);
+          transition: color 0.2s ease;
+        }
+        
+        &:hover i::before {
+          color: var(--global-theme-color);
+        }
+      }
+      
+      .icon {
+        font-size: 1.2em;
+      }
+    }
+  }
+  
+  .biography-content {
+    padding: 1rem;
+    
+    .biography-text {
+      p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+        color: var(--global-text-color);
+        font-size: 1rem;
+        
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    
+    .read-more-link {
+      margin-top: 1.5rem;
+      text-align: left;
+      
+      .btn {
+        transition: all 0.2s ease;
+        
+        &:hover {
+          transform: translateY(-1px);
+        }
+      }
+    }
+  }
+  
+  // Responsive adjustments
+  @media (max-width: 767px) {
+    .profile-card,
+    .biography-content {
+      padding: 1rem 0;
+      text-align: center;
+    }
+    
+    .biography-text p {
+      text-align: justify !important;
+      margin-bottom: 1rem;
+    }
+    
+    .read-more-link {
+      text-align: center;
+    }
+  }
+}

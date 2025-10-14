@@ -22,7 +22,7 @@ children:
     permalink: /people/mtech-res-graduates/
   - title: Administrator
     permalink: /people/administrator/
-display_categories: [PhD Students, Project Associates, M.Tech Students, PhD Graduates, MTech (Res.) Graduates, Administrator]
+display_categories: [Administrator, PhD Students, Project Associates, M.Tech Students, PhD Graduates, MTech (Res.) Graduates]
 horizontal: true
 ---
 

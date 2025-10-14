@@ -3,7 +3,7 @@ layout: page
 permalink: /activities/
 title: Activities
 description: Professional activities, invited talks, and service contributions
-nav: true
+nav: false
 nav_order: 4
 dropdown: true
 children:

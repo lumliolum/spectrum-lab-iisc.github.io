@@ -35,7 +35,7 @@ layout: default
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
       <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Our Research</a>
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Research Highlights</a>
       </h2>
       <hr>
       {% include latest_posts.liquid %}
@@ -44,7 +44,7 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-      <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
+      <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Recent Publications</a>
       </h2>
       <hr>
       {% include selected_papers.liquid %}

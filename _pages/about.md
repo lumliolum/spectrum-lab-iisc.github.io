@@ -24,10 +24,49 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-The **Spectrum Lab**
-is a research group led by [Prof. Chandra Sekhar Seelamantula](https://ee.iisc.ac.in/chandra-sekhar-seelamantula/) in the [Department of Electrical Engineering](https://ee.iisc.ac.in/) at the [Indian Institute of Science](https://iisc.ac.in/). The lab focuses on problems in the intersection of computational imaging and machine learning.
+<!-- Hero Section with Clean Design -->
+<div class="hero-section">
+  <div class="container-fluid px-4 py-3">
+    <div class="row align-items-center">
+      <div class="col-lg-9 col-md-8">
+        <div class="hero-content">
+          <p class="hero-description mb-0">
+            The <strong>Spectrum Lab</strong> is a research group led by 
+            <a href="https://ee.iisc.ac.in/chandra-sekhar-seelamantula/" class="text-decoration-none">Prof. Chandra Sekhar Seelamantula</a> 
+            in the <a href="https://ee.iisc.ac.in/" class="text-decoration-none">Department of Electrical Engineering</a> 
+            at the <a href="https://iisc.ac.in/" class="text-decoration-none">Indian Institute of Science</a>. 
+            The lab focuses on problems in the intersection of computational imaging and machine learning.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 text-center">
+        <div class="hero-logos">
+          <div class="logo-item">
+            {% include figure.liquid 
+              path='assets/img/logo/iisc/IISc_Seal_Master_logo_Black.png' 
+              alt="Indian Institute of Science" 
+              class="logo-img iisc-logo iisc-logo-light"
+            %}
+            {% include figure.liquid 
+              path='assets/img/logo/iisc/IISc_Seal_Master_logo_White.png' 
+              alt="Indian Institute of Science" 
+              class="logo-img iisc-logo iisc-logo-dark"
+            %}
+          </div>
+          <div class="logo-item">
+            {% include figure.liquid 
+              path='assets/img/logo/iisc/ee_logo.png' 
+              alt="Department of Electrical Engineering" 
+              class="logo-img ee-logo"
+            %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div class="row">
+<div class="row mt-4">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid path='assets/img/album/random-collection/18.jpg' title="ICASSP 2025" class="img-fluid rounded z-depth-1" %}
     </div>

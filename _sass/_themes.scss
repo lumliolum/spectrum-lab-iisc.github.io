@@ -70,6 +70,13 @@
   .spectrum-logo-dark {
     display: none;
   }
+  
+  .iisc-logo-light {
+    display: block;
+  }
+  .iisc-logo-dark {
+    display: none;
+  }
 
   #back-to-top {
     color: var(--global-back-to-top-text-color);
@@ -131,6 +138,13 @@ html[data-theme="dark"] {
     display: none;
   }
   .spectrum-logo-dark {
+    display: block;
+  }
+  
+  .iisc-logo-light {
+    display: none;
+  }
+  .iisc-logo-dark {
     display: block;
   }
 }

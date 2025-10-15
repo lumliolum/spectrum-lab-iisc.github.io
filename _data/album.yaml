@@ -57,28 +57,28 @@
   folder: awards
   description: "Celebrating our graduates' achievements and milestones"
   photos:
-    - image: /assets/img/album/awards/1.jpg
+    - image: /assets/img/recognition/awards/1.jpg
       caption: "Subhadip Mukherjee receiving Prof. I.S.N. Murthy Medal for the outstanding M.Tech. (SP) student."
       order: 1
-    - image: /assets/img/album/awards/2.jpg
+    - image: /assets/img/recognition/awards/2.jpg
       caption: "Aditya K. Pediredla with N.R. Khambati Medal for the outstanding M.Tech. (SSA) student"
       order: 2
-    - image: /assets/img/album/awards/3.jpg
+    - image: /assets/img/recognition/awards/3.jpg
       caption: "Debabrata Mahapatra with the N.R. Khambati Medal for the outstanding M.Tech. (SSA) student."
       order: 3
-    - image: /assets/img/album/awards/4.jpg
+    - image: /assets/img/recognition/awards/4.jpg
       caption: "M.Tech.(SSA) 2017 graduates from Spectrum Lab."
       order: 4
-    - image: /assets/img/album/awards/5.jpg
+    - image: /assets/img/recognition/awards/5.jpg
       caption: "Convocation Ceremony 2017."
       order: 5
-    - image: /assets/img/album/awards/6.jpg
+    - image: /assets/img/recognition/awards/6.jpg
       caption: "Ashutosh Gupta receiving his M.Tech.(SSA) degree at the 2017 convocation."
       order: 6
-    - image: /assets/img/album/awards/7.jpg
+    - image: /assets/img/recognition/awards/7.jpg
       caption: "Jitendra K. Dhiman receiving the Best Poster Award at EECS Symposium from Prof. Y. Narahari, Divisional Chair, EECS, IISc."
       order: 7
-    - image: /assets/img/album/awards/8.jpg
+    - image: /assets/img/recognition/awards/8.jpg
       caption: "Dhruv Jawali defending his PhD thesis titled 'Learning Filters, Filterbanks, Wavelets and Multiscale Representations'."
       order: 8
 

@@ -20,8 +20,33 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      BUNDLE_DEPLOYMENT: false
+      BUNDLE_PATH: vendor/bundle
+      BUNDLE_JOBS: 4
+      BUNDLE_RETRY: 3
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Needed for incremental builds
+
+      # Cache system dependencies
+      - name: Cache system packages
+        uses: actions/cache@v4
+        with:
+          path: /var/cache/apt
+          key: ${{ runner.os }}-apt-${{ hashFiles('.github/workflows/jekyll.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-apt-
+
+      # Cache Python dependencies
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -29,24 +54,32 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: true
 
+      # Install system dependencies with optimizations
       - name: 📦 Install system dependencies (ImageMagick + Jupyter)
         run: |
-          sudo apt-get update
-          sudo apt-get install -y imagemagick libmagickwand-dev python3-pip
-          pip3 install --upgrade jupyter nbconvert
-          # Verify ImageMagick installation
-          convert -version
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends imagemagick libmagickwand-dev python3-pip
+          pip3 install --upgrade --user jupyter nbconvert
 
-      - name: Install Ruby dependencies
-        run: |
-          gem install bundler
-          bundle install
+      # Cache Jekyll build artifacts
+      - name: Cache Jekyll build
+        uses: actions/cache@v4
+        with:
+          path: |
+            .jekyll-cache
+            .jekyll-metadata
+            vendor
+          key: ${{ runner.os }}-jekyll-${{ hashFiles('**/*.md', '**/*.html', '**/*.yml', '_config.yml', 'Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-jekyll-
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Build Jekyll site
-        run: bundle exec jekyll build --destination ./_site
+        run: |
+          export JEKYLL_ENV=production
+          bundle exec jekyll build --destination ./_site --incremental --profile
         env:
           JEKYLL_ENV: production
 

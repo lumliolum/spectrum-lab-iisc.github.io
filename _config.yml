@@ -221,11 +221,20 @@ collections:
 # Jekyll settings
 # -----------------------------------------------------------------------------
 
+# Performance optimizations
+incremental: false  # Set to true for development, false for production
+lsi: false  # Latent Semantic Indexing for related posts
+profile: false  # Show build time profiling
+safe: false  # Allow custom plugins
+parallel_jobs: 4  # Number of parallel processing jobs
+
 # Markdown and syntax highlight
 markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
+  auto_ids: true
+  hard_wrap: false
   syntax_highlighter_opts:
     css_class: "highlight"
     span:
@@ -256,6 +265,16 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
+  - node_modules/
+  - .git/
+  - .github/
+  - .gitignore
+  - .jekyll-cache/
+  - .jekyll-metadata
+  - .sass-cache/
+  - tmp/
+  - .DS_Store
+  - Thumbs.db
   # Custom excludes
   - assets/plotly/
   - assets/plotly/demo.html
@@ -346,6 +365,8 @@ scholar:
 
   replace_strings: true
   join_strings: true
+  sort_by: year,month
+  order: descending,ascending
 
   details_dir: bibliography
   details_link: Details

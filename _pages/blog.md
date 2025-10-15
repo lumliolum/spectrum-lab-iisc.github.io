@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /blog/
-title: Research
+title: Research Highlights
 nav: true
 nav_order: 2
 pagination:

@@ -3,12 +3,12 @@ layout: person
 title: Bitupan Arandhara
 firstname: Bitupan
 lastname: Arandhara
-description: MTech (Research)
-img: assets/img/people/mtech/bitupan.PNG
+description: M.Tech Research Student
+img: assets/img/people/mtech-research/bitupan.PNG
 website: 
 linkedin_username: bitupan-arandhara
 github_username: Bitupan132
 email: bitupana@iisc.ac.in
-category: M.Tech (Res.) Students
+category: M.Tech Research Students
 show: true
 ---

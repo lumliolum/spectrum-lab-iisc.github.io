@@ -51,15 +51,16 @@ JEKYLL_ENV=production bundle exec jekyll build
 People are organized in `_people/` with subdirectories by category:
 ```
 _people/
-├── lab-director/         # Lab director (Prof. CSS)
-├── phd-students/         # Current PhD students  
-├── phd-graduates/        # PhD graduates (with redirects)
-├── mtech-students/       # Current M.Tech students
-├── mtech-graduates/      # M.Tech (Res.) graduates
-├── project-associates/   # Project associates
-├── administrator/        # Administrative staff
-├── person_template.md    # Template for new profiles
-└── TEMPLATE_README.md    # Template documentation
+├── lab-director/             # Lab director (Prof. CSS)
+├── phd-students/             # Current PhD students  
+├── phd-graduates/            # PhD graduates (with redirects)
+├── mtech-students/           # Current M.Tech students
+├── mtech-research/           # Current M.Tech Research students
+├── mtech-research-graduates/ # M.Tech Research graduates
+├── project-associates/       # Project associates
+├── administrator/            # Administrative staff
+├── person_template.md        # Template for new profiles
+└── TEMPLATE_README.md        # Template documentation
 ```
 
 ### Adding a New Person
@@ -106,7 +107,8 @@ _people/
 - **PhD Students**: `category: PhD Students`  
 - **PhD Graduates**: `category: PhD Graduates` (use `redirect:` instead of `website:`)
 - **M.Tech Students**: `category: M.Tech Students`
-- **MTech (Res.) Graduates**: `category: MTech (Res.) Graduates`
+- **M.Tech Research Students**: `category: M.Tech Research Students`
+- **M.Tech Research Graduates**: `category: M.Tech Research Graduates`
 - **Project Associates**: `category: Project Associates`
 - **Administrator**: `category: Administrator`
 
@@ -279,13 +281,14 @@ Research projects can be managed through pages or collections.
 ```
 assets/img/
 ├── people/
-│   ├── phd/              # PhD student photos
-│   ├── mtech/            # M.Tech student photos  
-│   ├── lab_director/     # Lab director photo
-│   ├── phd-graduates/    # PhD graduate photos
-│   ├── mtech-graduates/  # M.Tech graduate photos
-│   ├── project-associates/ # Project associate photos
-│   └── administrator/    # Administrator photos
+│   ├── phd/                    # PhD student photos
+│   ├── mtech/                  # M.Tech student photos  
+│   ├── mtech-research/         # M.Tech Research student photos
+│   ├── lab_director/           # Lab director photo
+│   ├── phd-graduates/          # PhD graduate photos
+│   ├── mtech-research-graduates/ # M.Tech Research graduate photos
+│   ├── project-associates/     # Project associate photos
+│   └── administrator/          # Administrator photos
 ├── publication_preview/  # Publication preview images
 ├── funders/             # Funding agency logos
 ├── news/               # News-related images

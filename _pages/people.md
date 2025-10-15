@@ -16,13 +16,15 @@ children:
     permalink: /people/project-associates/
   - title: M.Tech Students
     permalink: /people/mtech-students/
+  - title: M.Tech Research Students
+    permalink: /people/mtech-research/
   - title: PhD Graduates
     permalink: /people/phd-graduates/
-  - title: MTech (Res.) Graduates
-    permalink: /people/mtech-res-graduates/
+  - title: M.Tech Research Graduates
+    permalink: /people/mtech-research-graduates/
   - title: Administrator
     permalink: /people/administrator/
-display_categories: [Administrator, PhD Students, Project Associates, M.Tech Students, PhD Graduates, MTech (Res.) Graduates]
+display_categories: [Administrator, PhD Students, Project Associates, M.Tech Students, M.Tech Research Students, PhD Graduates, M.Tech Research Graduates]
 horizontal: true
 ---
 

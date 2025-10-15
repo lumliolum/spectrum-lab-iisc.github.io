@@ -12,7 +12,7 @@ github:
 email: bdhanasekaran777@gmail.com
 scholar_userid: 
 twitter_username:
-category: Project Associate
+category: Project Associates
 show: true
 
 # Biography content

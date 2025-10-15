@@ -1,8 +1,8 @@
 ---
 layout: people_category
-title: MTech (Res.) Graduates
-permalink: /people/mtech-res-graduates/
-category: MTech (Res.) Graduates
-description: MTech (Research) graduates from the Spectrum Lab
+title: M.Tech Research Graduates
+permalink: /people/mtech-research-graduates/
+category: M.Tech Research Graduates
+description: M.Tech (Research) graduates from the Spectrum Lab
 nav: false
 ---

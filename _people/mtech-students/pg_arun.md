@@ -4,7 +4,7 @@ title: PG Arun Madhav
 firstname: Arun
 lastname: Madhav
 description: MTech AI 
-img: assets/img/people/phd/Default_pfp.jpg
+img: assets/img/people/mtech/pg_arun_madhav.jpeg
 website:
 linkedin_username:
 github_username:

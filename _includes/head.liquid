@@ -1,6 +1,9 @@
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
+<!-- Cross-Domain Configuration -->
+{% include cross-domain-config.liquid %}
+
 <!-- Bootstrap & MDB -->
 <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url | bust_file_cache }}">
 <link
@@ -151,10 +154,8 @@
 {% endif %}
 
 {% if page.tikzjax %}
-  <link defer rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+  <link defer rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css"/>
 {% endif %}
 
 
-<!-- Add these to your <head> -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />

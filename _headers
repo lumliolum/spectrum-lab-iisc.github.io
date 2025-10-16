@@ -1,0 +1,68 @@
+# Headers file for GitHub Pages
+# This file configures HTTP headers for cross-domain requests
+
+/*
+  # Cross-Origin Resource Sharing (CORS)
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, POST, OPTIONS, HEAD
+  Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control
+  Access-Control-Allow-Credentials: false
+  Access-Control-Max-Age: 86400
+  
+  # Security Headers - Anti-Clickjacking Protection
+  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: frame-ancestors 'self'
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  
+  # Cache Control for static assets
+  Cache-Control: public, max-age=31536000, immutable
+
+# Specific rules for API endpoints or JSON files
+/*.json
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, HEAD, OPTIONS
+  Content-Type: application/json; charset=utf-8
+  
+# Specific rules for CSS files
+/*.css
+  Access-Control-Allow-Origin: *
+  Content-Type: text/css; charset=utf-8
+  
+# Specific rules for JavaScript files  
+/*.js
+  Access-Control-Allow-Origin: *
+  Content-Type: application/javascript; charset=utf-8
+
+# Specific rules for font files
+/*.woff
+  Access-Control-Allow-Origin: *
+  
+/*.woff2
+  Access-Control-Allow-Origin: *
+  
+/*.ttf
+  Access-Control-Allow-Origin: *
+  
+/*.otf
+  Access-Control-Allow-Origin: *
+
+# Specific rules for image files
+/*.svg
+  Access-Control-Allow-Origin: *
+  
+/*.png
+  Access-Control-Allow-Origin: *
+  
+/*.jpg
+  Access-Control-Allow-Origin: *
+  
+/*.jpeg
+  Access-Control-Allow-Origin: *
+  
+/*.gif
+  Access-Control-Allow-Origin: *
+  
+/*.webp
+  Access-Control-Allow-Origin: *

@@ -98,18 +98,18 @@ latest_posts:
               {{ css_profile.firstname }} {{ css_profile.lastname }}
             </a>
           </h2>
-          <p class="text-muted mb-3">{{ css_profile.description }}</p>
+          <p class="text-muted mb-3 text-center">{{ css_profile.description }}</p>
           
           <!-- Contact icons -->
           <div class="card-icons">
             {%- if css_profile.email -%}
               <a href="mailto:{{ css_profile.email | encode_email }}" title="e-mail">
-                <i class="icon mr-1 p-0 fas fa-envelope"></i>
+                <i class="icon me-1 p-0 fas fa-envelope"></i>
               </a>
             {% endif %}
             {%- if css_profile.scholar_userid -%}
               <a href="https://scholar.google.com/citations?user={{ css_profile.scholar_userid }}" title="Google Scholar">
-                <i class="icon mr-1 p-0 ai ai-google-scholar"></i>
+                <i class="icon me-1 p-0 ai ai-google-scholar"></i>
               </a>
             {% endif %}
           </div>

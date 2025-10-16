@@ -900,6 +900,11 @@ footer.sticky-bottom {
       padding-bottom: 0;
     }
 
+    // Justify post descriptions in list view
+    p {
+      text-align: justify;
+    }
+
     a {
       color: var(--global-text-color);
       text-decoration: none;
@@ -1036,6 +1041,7 @@ footer.sticky-bottom {
   .card {
     // Removed position: relative;
     box-shadow: none;
+    border: none;
     background-color: var(--global-bg-color);
     img {
       width: 100%;
@@ -1389,6 +1395,18 @@ html.transition *:after {
       }
     }
   }
+
+  // Justify paragraphs in blog posts
+  .post-content {
+    p {
+      text-align: justify;
+    }
+  }
+
+  // Also apply to the main post list descriptions
+  p {
+    text-align: justify;
+  }
 }
 
 progress {
@@ -1599,6 +1617,11 @@ nav[data-toggle="toc"] {
     font-size: 0.875rem;
     margin-bottom: 0;
     padding-top: 0.5rem;
+  }
+
+  // Justify featured post descriptions
+  p {
+    text-align: justify;
   }
 }
 

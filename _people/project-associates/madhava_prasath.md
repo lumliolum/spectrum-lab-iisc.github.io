@@ -2,7 +2,7 @@
 layout: person
 title: Madhava Prasath
 firstname: Madhava 
-lastname: Prasath.J
+lastname: Prasath J.
 description: Project Associate
 img: assets/img/people/project-associates/Madhavaprasath.jpeg
 website: https://madhavaprasath23.github.io/

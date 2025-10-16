@@ -23,7 +23,7 @@ biography_paragraphs:
   - "<div style='text-align: justify;'> Since 2009, he has been on the Faculty of Electrical Engineering Department, IISc, where he is now Professor and leads the R&D activities of <strong>Spectrum Lab</strong>. His research interests include signal processing, machine learning, Generative AI, computational imaging, and AI for Healthcare.</div>"
     
 # Academic and Editorial Roles (optional section)
-show_academic_roles: true
+show_academic_roles: false
 academic_roles:
   - "Chair, IEEE Signal Processing Society Bangalore Chapter (2017–2021)"
   - "Senior Area Editor, IEEE Signal Processing Letters (2017–2021)"
@@ -36,7 +36,7 @@ awards:
   - "Prof. Priti Shankar Teaching Award, IISc"
   - "Digital Health Prize, NBEC 2018"
   - "Grand Challenges Exploration Award, Gates Foundation + BIRAC, 2020"
-  - "Qualcomm Innovation Fellowship (4x), 2019–2022"
+  - "Qualcomm Innovation Fellowship, 2019–2025"
   - "Outstanding Editorial Board Member, IEEE Trans. on Image Processing, 2022"
 
 # Visiting Positions (optional section)

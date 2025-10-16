@@ -51,6 +51,8 @@ horizontal: true
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: none;
+  box-shadow: none;
 }
 
 .people .card-body {
@@ -125,37 +127,37 @@ horizontal: true
                   <div class="card-icons">
                     {%- if person.email -%}
                       <a href="mailto:{{ person.email | encode_email }}" title="e-mail">
-                        <i class="icon mr-1 p-0 fas fa-envelope"></i>
+                        <i class="icon me-1 p-0 fas fa-envelope"></i>
                       </a>
                     {% endif %}
                     {%- if person.orcid_id -%}
                       <a href="https://orcid.org/{{ person.orcid_id }}" title="ORCID">
-                        <i class="icon mr-1 p-0 ai ai-orcid"></i>
+                        <i class="icon me-1 p-0 ai ai-orcid"></i>
                       </a>
                     {% endif %}
                     {%- if person.scholar_userid -%}
                       <a href="https://scholar.google.com/citations?user={{ person.scholar_userid }}" title="Google Scholar">
-                        <i class="icon mr-1 p-0 ai ai-google-scholar"></i>
+                        <i class="icon me-1 p-0 ai ai-google-scholar"></i>
                       </a>
                     {% endif %}
                     {%- if person.github_username -%}
                       <a href="https://github.com/{{ person.github_username }}" title="GitHub">
-                        <i class="icon mr-1 p-0 fab fa-github"></i>
+                        <i class="icon me-1 p-0 fab fa-github"></i>
                       </a>
                     {% endif %}
                     {%- if person.linkedin_username -%}
                       <a href="https://www.linkedin.com/in/{{ person.linkedin_username }}" title="LinkedIn">
-                        <i class="icon mr-1 p-0 fab fa-linkedin"></i>
+                        <i class="icon me-1 p-0 fab fa-linkedin"></i>
                       </a>
                     {% endif %}
                     {%- if person.twitter_username -%}
                       <a href="https://twitter.com/{{ person.twitter_username }}" title="Twitter">
-                        <i class="icon mr-1 p-0 fab fa-twitter"></i>
+                        <i class="icon me-1 p-0 fab fa-twitter"></i>
                       </a>
                     {% endif %}
                     {%- if person.website -%}
                       <a href="{{ person.website }}" title="Website">
-                        <i class="icon mr-1 p-0 fas fa-globe"></i>
+                        <i class="icon me-1 p-0 fas fa-globe"></i>
                       </a>
                     {% endif %}
                   </div>

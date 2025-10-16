@@ -8,7 +8,7 @@ layout: default
     <div class="col-md-4 text-center">
       {% include responsive-image.liquid path=page.img alt=page.firstname class="img-fluid rounded shadow mb-3" style="max-height: 300px;" %}
       <h3 class="mt-3">{{ page.firstname }} {{ page.lastname }}</h3>
-      <p class="text-muted mb-2">{{ page.description }}</p>
+      <h3 class="text-muted mb-2 text-center">{{ page.description }}</h3>
 
       {% if page.email %}
       <p><i class="bi bi-envelope-fill me-2"></i><a href="mailto:{{ page.email }}">{{ page.email }}</a></p>
@@ -84,9 +84,9 @@ layout: default
             <div class="card">
               <div class="card-header" id="talksDeliveredHeading">
                 <h5 class="mb-0">
-                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#talksDeliveredCollapse" aria-expanded="false" aria-controls="talksDeliveredCollapse">
-                    <i class="fas fa-microphone mr-2"></i>Invited Talks Delivered
-                    <i class="fas fa-chevron-down float-right mt-1"></i>
+                  <button class="btn btn-link btn-block text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#talksDeliveredCollapse" aria-expanded="false" aria-controls="talksDeliveredCollapse">
+                    <i class="fas fa-microphone me-2"></i>Invited Talks Delivered
+                    <i class="fas fa-chevron-down float-end mt-1"></i>
                   </button>
                 </h5>
               </div>
@@ -96,9 +96,9 @@ layout: default
                   {% for talk in talks_delivered %}
                   <div class="mb-3 p-3 border rounded">
                     <h6 class="mb-1">{{ talk.title }}</h6>
-                    <p class="text-muted mb-1"><i class="fas fa-map-marker-alt mr-1"></i>{{ talk.venue }}</p>
-                    <p class="text-muted mb-1"><i class="fas fa-calendar mr-1"></i>{{ talk.date }}</p>
-                    {% if talk.type %}<span class="badge badge-primary mr-2">{{ talk.type }}</span>{% endif %}
+                    <p class="text-muted mb-1"><i class="fas fa-map-marker-alt me-1"></i>{{ talk.venue }}</p>
+                    <p class="text-muted mb-1"><i class="fas fa-calendar me-1"></i>{{ talk.date }}</p>
+                    {% if talk.type %}<span class="badge bg-primary me-2">{{ talk.type }}</span>{% endif %}
                     {% if talk.note %}<small class="text-muted">{{ talk.note }}</small>{% endif %}
                   </div>
                   {% endfor %}
@@ -113,9 +113,9 @@ layout: default
             <div class="card">
               <div class="card-header" id="talksOrganizedHeading">
                 <h5 class="mb-0">
-                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#talksOrganizedCollapse" aria-expanded="false" aria-controls="talksOrganizedCollapse">
-                    <i class="fas fa-users mr-2"></i>Invited Talks Organized
-                    <i class="fas fa-chevron-down float-right mt-1"></i>
+                  <button class="btn btn-link btn-block text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#talksOrganizedCollapse" aria-expanded="false" aria-controls="talksOrganizedCollapse">
+                    <i class="fas fa-users me-2"></i>Invited Talks Organized
+                    <i class="fas fa-chevron-down float-end mt-1"></i>
                   </button>
                 </h5>
               </div>
@@ -125,11 +125,11 @@ layout: default
                   {% for talk in talks_organized %}
                   <div class="mb-3 p-3 border rounded">
                     <h6 class="mb-1">{{ talk.title }}</h6>
-                    <p class="text-muted mb-1"><i class="fas fa-user mr-1"></i><strong>{{ talk.speaker }}</strong></p>
-                    <p class="text-muted mb-1"><i class="fas fa-university mr-1"></i>{{ talk.speaker_affiliation }}</p>
-                    <p class="text-muted mb-1"><i class="fas fa-calendar mr-1"></i>{{ talk.date }}</p>
+                    <p class="text-muted mb-1"><i class="fas fa-user me-1"></i><strong>{{ talk.speaker }}</strong></p>
+                    <p class="text-muted mb-1"><i class="fas fa-university me-1"></i>{{ talk.speaker_affiliation }}</p>
+                    <p class="text-muted mb-1"><i class="fas fa-calendar me-1"></i>{{ talk.date }}</p>
                     {% if talk.note %}<small class="text-muted">{{ talk.note }}</small>{% endif %}
-                    {% if talk.website %}<p><a href="{{ talk.website }}" target="_blank"><i class="fas fa-link mr-1"></i>More Information</a></p>{% endif %}
+                    {% if talk.website %}<p><a href="{{ talk.website }}" target="_blank"><i class="fas fa-link me-1"></i>More Information</a></p>{% endif %}
                   </div>
                   {% endfor %}
                   {% if site.data.activities.talks_organized.size > 10 %}
@@ -143,9 +143,9 @@ layout: default
             <div class="card">
               <div class="card-header" id="committeesHeading">
                 <h5 class="mb-0">
-                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#committeesCollapse" aria-expanded="false" aria-controls="committeesCollapse">
-                    <i class="fas fa-clipboard-list mr-2"></i>Committees & Editorial Boards
-                    <i class="fas fa-chevron-down float-right mt-1"></i>
+                  <button class="btn btn-link btn-block text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#committeesCollapse" aria-expanded="false" aria-controls="committeesCollapse">
+                    <i class="fas fa-clipboard-list me-2"></i>Committees & Editorial Boards
+                    <i class="fas fa-chevron-down float-end mt-1"></i>
                   </button>
                 </h5>
               </div>
@@ -156,9 +156,9 @@ layout: default
                   {% for role in site.data.activities.committees.current_roles %}
                   <div class="mb-3 p-3 border rounded">
                     <h6 class="mb-1">{{ role.title }}</h6>
-                    <p class="text-muted mb-1"><i class="fas fa-building mr-1"></i>{{ role.organization }}</p>
-                    <span class="badge badge-success mr-2">{{ role.type }}</span>
-                    <span class="badge badge-info">{{ role.period }}</span>
+                    <p class="text-muted mb-1"><i class="fas fa-building me-1"></i>{{ role.organization }}</p>
+                    <span class="badge bg-success me-2">{{ role.type }}</span>
+                    <span class="badge bg-info">{{ role.period }}</span>
                     {% if role.note %}<p class="mt-2 text-muted"><small>{{ role.note }}</small></p>{% endif %}
                   </div>
                   {% endfor %}
@@ -169,9 +169,9 @@ layout: default
                   {% for service in site.data.activities.committees.academic_service %}
                   <div class="mb-3 p-3 border rounded">
                     <h6 class="mb-1">{{ service.title }}</h6>
-                    <p class="text-muted mb-1"><i class="fas fa-building mr-1"></i>{{ service.organization }}</p>
-                    <span class="badge badge-primary mr-2">{{ service.type }}</span>
-                    <span class="badge badge-secondary">{{ service.period }}</span>
+                    <p class="text-muted mb-1"><i class="fas fa-building me-1"></i>{{ service.organization }}</p>
+                    <span class="badge bg-primary me-2">{{ service.type }}</span>
+                    <span class="badge bg-secondary">{{ service.period }}</span>
                     {% if service.note %}<p class="mt-2 text-muted"><small>{{ service.note }}</small></p>{% endif %}
                   </div>
                   {% endfor %}
@@ -182,9 +182,9 @@ layout: default
                   {% for conf in site.data.activities.committees.conference_organization %}
                   <div class="mb-3 p-3 border rounded">
                     <h6 class="mb-1">{{ conf.title }}</h6>
-                    <p class="text-muted mb-1"><i class="fas fa-calendar-alt mr-1"></i>{{ conf.organization }} ({{ conf.period }})</p>
-                    {% if conf.location %}<p class="text-muted mb-1"><i class="fas fa-map-marker-alt mr-1"></i>{{ conf.location }}</p>{% endif %}
-                    <span class="badge badge-warning text-dark">{{ conf.type }}</span>
+                    <p class="text-muted mb-1"><i class="fas fa-calendar-alt me-1"></i>{{ conf.organization }} ({{ conf.period }})</p>
+                    {% if conf.location %}<p class="text-muted mb-1"><i class="fas fa-map-marker-alt me-1"></i>{{ conf.location }}</p>{% endif %}
+                    <span class="badge bg-warning text-dark">{{ conf.type }}</span>
                     {% if conf.note %}<p class="mt-2 text-muted"><small>{{ conf.note }}</small></p>{% endif %}
                   </div>
                   {% endfor %}
@@ -195,9 +195,9 @@ layout: default
                   {% for editorial in site.data.activities.committees.editorial_service %}
                   <div class="mb-3 p-3 border rounded">
                     <h6 class="mb-1">{{ editorial.title }}</h6>
-                    <p class="text-muted mb-1"><i class="fas fa-journal-whills mr-1"></i>{{ editorial.organization }}</p>
-                    <span class="badge badge-info mr-2">{{ editorial.type }}</span>
-                    <span class="badge badge-secondary">{{ editorial.period }}</span>
+                    <p class="text-muted mb-1"><i class="fas fa-journal-whills me-1"></i>{{ editorial.organization }}</p>
+                    <span class="badge bg-info me-2">{{ editorial.type }}</span>
+                    <span class="badge bg-secondary">{{ editorial.period }}</span>
                     {% if editorial.note %}<p class="mt-2 text-muted"><small>{{ editorial.note }}</small></p>{% endif %}
                   </div>
                   {% endfor %}
@@ -212,7 +212,7 @@ layout: default
               <div class="card-header" id="visitingPositionsHeading">
                 <h5 class="mb-0">
                   <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#visitingPositionsCollapse" aria-expanded="false" aria-controls="visitingPositionsCollapse">
-                    <i class="fas fa-globe mr-2"></i>Visiting Positions
+                    <i class="fas fa-globe mr-2"></i> Visiting Positions
                     <i class="fas fa-chevron-down float-right mt-1"></i>
                   </button>
                 </h5>

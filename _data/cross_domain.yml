@@ -1,0 +1,61 @@
+# Cross-Domain Configuration Settings
+# This file contains settings for CORS and cross-domain functionality
+
+# CORS Settings
+cors:
+  enabled: true
+  allow_origin: "*"  # Use "*" for all origins, or specify domains like "https://example.com"
+  allow_methods: "GET, POST, OPTIONS, HEAD"
+  allow_headers: "Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control"
+  allow_credentials: false
+  max_age: 86400  # 24 hours in seconds
+
+# Security Headers
+security:
+  x_frame_options: "SAMEORIGIN"  # Legacy anti-clickjacking header
+  frame_ancestors: "'self'"  # Modern CSP anti-clickjacking directive
+  x_content_type_options: "nosniff"
+  referrer_policy: "strict-origin-when-cross-origin"
+  x_xss_protection: "1; mode=block"
+
+# Trusted Domains for Enhanced Security
+trusted_domains:
+  - "spectrum-lab-iisc.github.io"
+  - "*.github.io"
+  - "localhost"
+  - "127.0.0.1"
+
+# External CDN Domains (already allowed in CSP)
+external_cdns:
+  - "cdn.jsdelivr.net"
+  - "fonts.googleapis.com"
+  - "fonts.gstatic.com"
+  - "unpkg.com"
+  - "ajax.googleapis.com"
+  - "api.github.com"
+  - "github.com"
+  
+# Resource Types that should allow cross-origin access
+allowed_resources:
+  - "css"
+  - "js"
+  - "json"
+  - "woff"
+  - "woff2"
+  - "ttf"
+  - "otf"
+  - "svg"
+  - "png"
+  - "jpg"
+  - "jpeg"
+  - "gif"
+  - "webp"
+
+# API Endpoints (if any)
+api:
+  enabled: false
+  endpoints: []
+  # Example:
+  # - path: "/api/data"
+  #   methods: ["GET", "POST"]
+  #   cors: true

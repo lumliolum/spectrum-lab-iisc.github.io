@@ -1,0 +1,42 @@
+<!-- Cross-Domain Configuration for Spectrum Lab -->
+<!-- This file adds CORS and additional security headers for cross-domain requests -->
+
+{% if site.data.cross_domain.cors.enabled %}
+<!-- CORS Headers for API endpoints and resources -->
+<meta http-equiv="Access-Control-Allow-Origin" content="{{ site.data.cross_domain.cors.allow_origin }}">
+<meta http-equiv="Access-Control-Allow-Methods" content="{{ site.data.cross_domain.cors.allow_methods }}">
+<meta http-equiv="Access-Control-Allow-Headers" content="{{ site.data.cross_domain.cors.allow_headers }}">
+<meta http-equiv="Access-Control-Allow-Credentials" content="{{ site.data.cross_domain.cors.allow_credentials }}">
+<meta http-equiv="Access-Control-Max-Age" content="{{ site.data.cross_domain.cors.max_age }}">
+{% endif %}
+
+<!-- Additional Security Headers for Cross-Domain -->
+<!-- Anti-Clickjacking Protection -->
+<meta http-equiv="X-Frame-Options" content="{{ site.data.cross_domain.security.x_frame_options }}">
+<meta http-equiv="Content-Security-Policy" content="frame-ancestors {{ site.data.cross_domain.security.frame_ancestors | default: "'self'" }}">
+<meta http-equiv="X-Content-Type-Options" content="{{ site.data.cross_domain.security.x_content_type_options }}">
+<meta http-equiv="Referrer-Policy" content="{{ site.data.cross_domain.security.referrer_policy }}">
+<meta http-equiv="X-XSS-Protection" content="{{ site.data.cross_domain.security.x_xss_protection }}">
+
+<!-- Preconnect to external domains for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://api.github.com">
+<link rel="preconnect" href="https://github.com">
+
+<!-- DNS prefetch for commonly used external domains -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="//api.github.com">
+<link rel="dns-prefetch" href="//github.com">
+
+<!-- Resource hints for external resources -->
+{% if site.google_analytics %}
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+{% endif %}
+
+{% if site.enable_google_verification %}
+<link rel="preconnect" href="https://www.google.com">
+{% endif %}

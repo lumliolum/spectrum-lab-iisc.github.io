@@ -5,9 +5,9 @@ firstname: Abijith
 lastname: Kamath
 description: PhD Student
 img: assets/img/people/phd/Abijith.jpg
-website: https://kamath-abhijith.github.io
+website: https://kamathabijithj.github.io
 linkedin_username: abijith-kamath-556870111
-github_username: kamath-abhijith
+github_username: kamathabijithj
 email: abijithj@iisc.ac.in
 category: PhD Students
 scholar_userid: yPXzUJMAAAAJ

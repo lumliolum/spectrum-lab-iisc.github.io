@@ -3,7 +3,7 @@
 
 /*
   # Cross-Origin Resource Sharing (CORS)
-  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Origin: https://spectrum-lab-iisc.github.io
   Access-Control-Allow-Methods: GET, POST, OPTIONS, HEAD
   Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control
   Access-Control-Allow-Credentials: false

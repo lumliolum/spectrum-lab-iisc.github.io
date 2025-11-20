@@ -3,8 +3,8 @@
 
 # CORS Settings
 cors:
-  enabled: true
-  allow_origin: "*"  # Use "*" for all origins, or specify domains like "https://example.com"
+  enabled: false  # Disabled to prevent generating useless/insecure meta tags
+  allow_origin: "https://spectrum-lab-iisc.github.io"
   allow_methods: "GET, POST, OPTIONS, HEAD"
   allow_headers: "Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control"
   allow_credentials: false

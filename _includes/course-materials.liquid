@@ -22,6 +22,57 @@
       </div>
     </div>
 
+    <!-- Course Schedule -->
+    {% if page.schedule %}
+    <div class="course-schedule mb-4">
+      <h3 class="mb-3">📅 Schedule</h3>
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            {% if page.schedule.dates_time %}
+            <div class="col-md-12 mb-2">
+              <strong><i class="fas fa-clock me-2"></i>Date and Time:</strong> {{ page.schedule.dates_time }}
+            </div>
+            {% endif %}
+            {% if page.schedule.classroom %}
+            <div class="col-md-12 mb-2">
+              <strong><i class="fas fa-map-marker-alt me-2"></i>Classroom:</strong> {{ page.schedule.classroom }}
+            </div>
+            {% endif %}
+            {% if page.schedule.duration %}
+            <div class="col-md-12">
+              <strong><i class="fas fa-calendar-alt me-2"></i>Duration:</strong> {{ page.schedule.duration }}
+            </div>
+            {% endif %}
+          </div>
+          
+          {% if page.schedule_details %}
+          <div class="table-responsive mt-3">
+            <table class="table table-bordered table-hover mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>Lecture No.</th>
+                  <th>Date</th>
+                  <th>Venue</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for session in page.schedule_details %}
+                <tr>
+                  <td>{{ session.lecture }}</td>
+                  <td>{{ session.date }}</td>
+                  <td>{{ session.venue }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
     <!-- Course Materials -->
     <div class="materials-section">
       <h3 class="mb-4">Course Materials</h3>

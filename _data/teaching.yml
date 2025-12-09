@@ -14,6 +14,14 @@
   permalink: "/teaching/e9-241o-digital-image-processing/"
   course_id: "e9-241o"
 
+- title: "Dimension Reduction: Theory and Applications to Image Processing"
+  description: "This course introduces the theory and applications of dimension reduction techniques, with a focus on image processing applications."
+  instructor: "Prof. S. Lakshmivarahan"
+  teaching_assistants: ["Parth Gupte", "Pramath Haritz"]
+  semester: "Dec. 2025"
+  permalink: "/teaching/dimension-reduction/"
+  course_id: "dr"
+
 # - title: "Machine Learning"
 #   description: "Introduction to machine learning algorithms, pattern recognition, and statistical learning theory"
 #   instructor: "Prof. Chandra Sekhar Seelamantula"

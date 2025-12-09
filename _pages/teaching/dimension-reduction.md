@@ -1,15 +1,35 @@
 ---
 layout: page
-title: Dimension Reduction: Theory and Applications to Image
-Processing
+title: "Dimension Reduction: Theory and Applications to Image Processing"
 permalink: /teaching/dimension-reduction/
 description:
-course_id: 
-nav: false
+course_id: dr
+nav: true
+schedule:
+  dates_time: "Tuesday-Thursday; From 2.30 pm to 4.00 pm"
+  classroom: "B308 (December 9, 16, 18, 30) and B306 (December 23), EE Department, IISc"
+  duration: "December 9-30, 2025"
+schedule_details:
+  - date: "December 9, 2025"
+    lecture: 1
+    venue: "B308"
+  - date: "December 16, 2025"
+    lecture: 2
+    venue: "B308"
+  - date: "December 18, 2025"
+    lecture: 3
+    venue: "B308"
+  - date: "December 23, 2025"
+    lecture: 4
+    venue: "B306"
+  - date: "December 30, 2025"
+    lecture: 5
+    venue: "B308"
 
 lectures:
+
   - title: "Lecture 1: Introduction"
-    slides: ""
+    slides: "/assets/teaching/dimension-reduction/Dimension Reduction (Lecture-1).pdf"
     description:
   
   # - title: "Digital Filters"
@@ -35,7 +55,20 @@ assignments:
 #     due_date: "March 15, 2024"
 
 resources:
- # - title: "Time-Frequency Analysis, by Leon Cohen"
+ - title: "A. Blum, J. Hopcroft, and R. Kannan (2020) Foundations of Data Sciences, Cambridge University Press"
+   url: "https://www.cambridge.org/core/books/foundations-of-data-science/6A43CE830DE83BED6CC5171E62B0AA9E"
+
+ - title: " J. M. Lewis, S. Lakshmivarahan and S. K. Dhall (2006) Dynamic Data Assimilation: a least squares approach, Cambridge University Press"
+   url: "https://www.cambridge.org/core/books/dynamic-data-assimilation/91BD4736A2CD99B575002A89518DB63C"
+
+ - title: "J. Wang (2012) Geometric Structure of High-Dimensional Data and Dimensionality Reduction, Springer"
+   url: "https://link.springer.com/book/10.1007/978-3-642-27497-8"
+
+ - title: "S. Mirniaharikandehei, M. Heidari, G. Danala, S. Lakshmivarahan, and Bin Zheng (2021) Applying a random projection algorithm to optimize machine learning model for predicting peritoneal metastasis in gastric cancer patients using CT images”, Computer Methods and Programs in BIOMEDICINE, Vol 200, 105937"
+   url: "https://pubmed.ncbi.nlm.nih.gov/33486339/"
+
+ - title: " M. Heidari, S. Lakshmivarahan, S. Mirniaharikandehei, G. Danala, Sai Kiran R. Maryada, and Bin Zheng (2021) 'Applying a Random Projection Algorithm to Optimize Machine Learning Model for Breast Lesion Classification,' inIEEE Transactions on Biomedical Engineering, Vol 68, 2764-2775"
+   url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8310536/"
  #   url: "https://www.amazon.in/Time-Frequency-Analysis-Applications-Prentice-Hall/dp/0135945321"
 
  # - title: "A Wavelet Tour of Signal Processing: The Sparse Way, by Stephane Mallat"
@@ -50,5 +83,6 @@ resources:
 <strong style="color: black;">Important Announcement:</strong><br>
 First class is on Aug. 5, 2025 from 11:40 AM, EE C240. Please register for the course on SAP or send an email to <a href="mailto:css@iisc.ac.in">css@iisc.ac.in</a>.
 </div> -->
+
 
 {% include course-materials.liquid %}

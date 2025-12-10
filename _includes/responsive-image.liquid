@@ -27,14 +27,13 @@ Usage: {% include responsive-image.liquid path="assets/img/example.jpg" alt="Des
     sizes="(max-width: 480px) 480px, (max-width: 800px) 800px, 1400px"
     type="image/webp">
   
-  {% comment %} Fallback to original image {% endcomment %}
+  {% comment %} Use WebP as default src to prevent double loading - fallback handled by onerror {% endcomment %}
   <img 
-    src="{{ image_path | relative_url }}" 
+    src="{{ path_without_file | relative_url }}{{ name_only }}-800.webp"
     alt="{{ image_alt }}"
     class="{{ image_class }}"
     {% if image_style != "" %}style="{{ image_style }}"{% endif %}
     {% if include.data-caption %}data-caption="{{ include.data-caption }}"{% endif %}
     loading="lazy"
-    width="800"
-    height="auto">
+    onerror="this.onerror=null; this.src='{{ image_path | relative_url }}';">
 </picture>

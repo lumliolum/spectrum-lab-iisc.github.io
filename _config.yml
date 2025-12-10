@@ -449,18 +449,27 @@ imagemagick:
   input_directories:
     - assets/img/
   input_formats:
+    # Standard formats (lowercase)
     - ".jpg"
     - ".jpeg"
     - ".png"
     - ".tiff"
+    - ".tif"
     - ".gif"
+    - ".bmp"
+    - ".webp"
+    # Standard formats (uppercase)
     - ".JPG"
     - ".JPEG"
     - ".PNG"
     - ".TIFF"
+    - ".TIF"
     - ".GIF"
+    - ".BMP"
+    - ".WEBP"
   output_formats:
-    webp: "-quality 85"
+    # Convert all images to optimized WebP with good compression
+    webp: "-strip -quality 80 -define webp:method=6"
 
 # Lazy loading images
 #   If you enable lazy loading, all images will add the loading="lazy" attribute.

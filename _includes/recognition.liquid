@@ -20,7 +20,7 @@
           {% endif %}
           {% if award.image %}
           <div class="award-image">
-            <img src="{{ award.image | relative_url }}" alt="{{ award.name }}" loading="lazy">
+            {% include responsive-image.liquid path=award.image alt=award.name class="img-fluid" %}
           </div>
           {% endif %}
         </div>

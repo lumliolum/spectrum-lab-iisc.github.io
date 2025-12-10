@@ -56,10 +56,7 @@ layout: default
             {% if item.image %}
               <div class="card recognition-card h-100">
                 <div class="position-relative overflow-hidden">
-                  <img src="{{ item.image | relative_url }}" 
-                       class="card-img-top recognition-photo" 
-                       alt="{{ item.name }} - {{ item.award }}"
-                       loading="lazy">
+                  {% include responsive-image.liquid path=item.image class="card-img-top recognition-photo" alt=item.name %}
                 </div>
             {% else %}
               <div class="card recognition-card recognition-card-no-image">
@@ -102,10 +99,7 @@ layout: default
           {% if item.image %}
             <div class="card recognition-card h-100">
               <div class="position-relative overflow-hidden">
-                <img src="{{ item.image | relative_url }}" 
-                     class="card-img-top recognition-photo" 
-                     alt="{{ item.name }} - {{ item.award }}"
-                     loading="lazy">
+                {% include responsive-image.liquid path=item.image class="card-img-top recognition-photo" alt=item.name %}
               </div>
           {% else %}
             <div class="card recognition-card recognition-card-no-image">

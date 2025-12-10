@@ -48,7 +48,7 @@ horizontal: true
               {%- endif %}
                 <div class="card hoverable">
                   {%- if person.img %}
-                    {%- include figure.liquid
+                    {%- include responsive-image.liquid
                       path=person.img
                       alt="Portrait"
                       class="img-fluid rounded-circle z-depth-0"

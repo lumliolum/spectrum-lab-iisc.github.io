@@ -18,17 +18,9 @@ A clean, Apple-inspired navigation bar.
       <a class="navbar-brand" href="{{ site.baseurl }}/" aria-label="{{ site.title }} - Home">
         {%- if site.logo -%}
           {%- comment -%} Light mode logo {%- endcomment -%}
-          <img 
-            class="navbar-logo spectrum-logo-light" 
-            src="{{ '/assets/img/logo/spectrum/SpectrumLogo Black.png' | relative_url }}" 
-            alt="{{ site.title }}"
-          >
+          <span class="spectrum-logo-light">{% include simple-image.liquid path="assets/img/logo/spectrum/SpectrumLogo Black.png" alt=site.title class="navbar-logo" %}</span>
           {%- comment -%} Dark mode logo {%- endcomment -%}
-          <img 
-            class="navbar-logo spectrum-logo-dark" 
-            src="{{ '/assets/img/logo/spectrum/SpectrumLogo White.png' | relative_url }}" 
-            alt="{{ site.title }}"
-          >
+          <span class="spectrum-logo-dark">{% include simple-image.liquid path="assets/img/logo/spectrum/SpectrumLogo White.png" alt=site.title class="navbar-logo" %}</span>
         {%- else -%}
           <span class="navbar-title">
             {%- if site.first_name -%}

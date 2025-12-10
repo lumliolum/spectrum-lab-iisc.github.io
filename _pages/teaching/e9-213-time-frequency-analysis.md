@@ -3,6 +3,7 @@ layout: page
 title: Time-Frequency Analysis
 permalink: /teaching/e9-213-time-frequency-analysis/
 description:
+type: "Regular Course"
 course_id: "e9-213"
 nav: false
 

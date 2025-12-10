@@ -4,6 +4,7 @@ title: Digital Image Processing
 permalink: /teaching/e9-241o-digital-image-processing/
 description:
 course_id: "e9-241o"
+type: "Regular Course"
 nav: false
 
 lectures:

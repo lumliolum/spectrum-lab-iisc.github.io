@@ -2,6 +2,20 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
+// Global Font Stack
+body {
+  font-family: "Helvetica Neue", Helvetica, "Google Sans", "Google Sans Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+// Preserve icon font families
+.fas, .far, .fab, .fa,
+[class^="fa-"], [class*=" fa-"],
+.ti, [class^="ti-"], [class*=" ti-"],
+.material-icons,
+.academicons {
+  font-family: inherit !important;
+}
+
 // Typography
 
 p,

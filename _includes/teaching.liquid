@@ -1,106 +1,223 @@
-<div class="teaching">
-  <div class="container-md">
-    <h3 class="mb-4">Courses</h3>
-    <div class="courses-grid">
-      {%- assign courses = site.data.teaching -%}
-      {%- for course in courses -%}
-      {% if course.permalink %}
-      <a href="{{ course.permalink }}" class="course-link">
-      {% endif %}
-      <div class="course-card{% if course.permalink %} clickable{% endif %}">
-        <div class="course-content">
-          <h6 class="mb-1 text-primary">{{ course.title }}</h6>
-          <p class="mb-1">{{ course.description }}</p>
-          {% if course.instructor %}
-            <small class="text-muted d-block">Instructor: {{ course.instructor }}</small>
-          {% endif %}
-          {% if course.teaching_assistants and course.teaching_assistants.size > 0 %}
-            <small class="text-muted d-block">TAs: 
-              {% for ta in course.teaching_assistants %}
-                {{ ta }}{% unless forloop.last %}, {% endunless %}
-              {% endfor %}
-            </small>
-          {% endif %}
+{%- comment -%}
+  Teaching Page - Course Listing
+  
+  A minimal, Apple-inspired layout for displaying courses.
+  Uses the modular _teaching.scss design system.
+{%- endcomment -%}
+
+{%- assign all_courses = site.data.teaching -%}
+{%- assign grouped_courses = all_courses | group_by: "type" -%}
+
+<div class="teaching-wrapper">
+  <div class="container-md py-4">
+
+    {%- for group in grouped_courses -%}
+    <section class="course-section fade-in mb-5">
+      
+      <!-- Section Label -->
+      <div class="section-label">
+        <div class="section-label__icon">
+          {%- if group.name contains "Short" -%}
+            <i class="fas fa-bolt"></i>
+          {%- elsif group.name contains "Graduate" -%}
+            <i class="fas fa-graduation-cap"></i>
+          {%- else -%}
+            <i class="fas fa-book"></i>
+          {%- endif -%}
         </div>
-        {% if course.semester %}
-        <div class="course-semester">
-          <small class="text-muted">{{ course.semester }}</small>
-        </div>
-        {% endif %}
+        <span class="section-label__text">
+          {%- if group.name and group.name != "" -%}
+            {{ group.name }}
+          {%- else -%}
+            Courses
+          {%- endif -%}
+        </span>
       </div>
-      {% if course.permalink %}
-      </a>
-      {% endif %}
-      {%- endfor -%}
-    </div>
+
+      <!-- Course Grid -->
+      <div class="teaching-grid teaching-grid--courses">
+        {%- for course in group.items -%}
+        
+        {%- if course.permalink -%}
+        <a href="{{ course.permalink }}" class="course-card-link">
+        {%- endif -%}
+        
+          <article class="course-card minimal-card minimal-card--interactive">
+            
+            <!-- Card Header -->
+            <header class="course-card__header">
+              <h3 class="course-card__title t-title">{{ course.title }}</h3>
+              {%- if course.semester -%}
+              <span class="pill pill--muted">{{ course.semester }}</span>
+              {%- endif -%}
+            </header>
+
+            <!-- Description -->
+            <p class="course-card__desc t-body">{{ course.description }}</p>
+
+            <!-- Meta -->
+            <footer class="course-card__meta">
+              {%- if course.instructor -%}
+              <div class="meta-row">
+                <i class="fas fa-user"></i>
+                <span>{{ course.instructor }}</span>
+              </div>
+              {%- endif -%}
+              
+              {%- if course.teaching_assistants and course.teaching_assistants.size > 0 -%}
+              <div class="meta-row">
+                <i class="fas fa-users"></i>
+                <span>{{ course.teaching_assistants | join: ", " }}</span>
+              </div>
+              {%- endif -%}
+            </footer>
+
+            <!-- Arrow indicator -->
+            {%- if course.permalink -%}
+            <div class="course-card__arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+            {%- endif -%}
+
+          </article>
+        
+        {%- if course.permalink -%}
+        </a>
+        {%- endif -%}
+
+        {%- endfor -%}
+      </div>
+
+    </section>
+    {%- endfor -%}
+
   </div>
 </div>
 
 <style>
-.courses-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 1.5rem;
+/* =============================================================================
+   Teaching Page - Minimal Styles
+   Scoped to .teaching-wrapper for modularity
+   ============================================================================= */
+
+.teaching-wrapper {
+  --card-padding: 1.5rem;
+  --transition-duration: 200ms;
+  --transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Course Card Link Reset */
+.course-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.course-card-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Course Card */
 .course-card {
   display: flex;
   flex-direction: column;
-  background-color: var(--card-bg, #f9f9f9);
-  padding: 1rem;
-  border-radius: 8px;
   height: 100%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: relative;
+  padding: var(--card-padding);
 }
 
-.course-content {
-  flex-grow: 1;
-  text-align: left;
+.course-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
 }
 
-.course-semester {
-  margin-top: 0.5rem;
-  text-align: left;
+.course-card__title {
+  margin: 0;
+  flex: 1;
+  transition: color var(--transition-duration) var(--transition-easing);
 }
 
-/* Clickable card styling */
-.course-link {
-  text-decoration: none;
-  color: inherit;
+.course-card-link:hover .course-card__title {
+  color: var(--global-theme-color);
 }
 
-.course-link:hover {
-  text-decoration: none;
-  color: inherit;
+.course-card__desc {
+  margin: 0 0 1.25rem 0;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.course-card.clickable {
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.course-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--global-divider-color);
+  margin-top: auto;
 }
 
-.course-card.clickable:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+.meta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--global-text-color-light);
 }
 
-/* Dark mode compatibility */
-html[data-theme="dark"] .course-card {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
-  box-shadow: 0 2px 6px rgba(255,255,255,0.05);
+.meta-row i {
+  width: 16px;
+  opacity: 0.6;
+  font-size: 0.8rem;
 }
 
-html[data-theme="dark"] .text-muted {
-  color: #aaa !important;
+/* Arrow Indicator */
+.course-card__arrow {
+  position: absolute;
+  bottom: var(--card-padding);
+  right: var(--card-padding);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--global-bg-color);
+  color: var(--global-text-color-light);
+  font-size: 0.75rem;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all var(--transition-duration) var(--transition-easing);
 }
 
-html[data-theme="dark"] .text-primary a {
-  color: #90caf9 !important;
+.course-card-link:hover .course-card__arrow {
+  opacity: 1;
+  transform: translateX(0);
+  background: var(--global-theme-color);
+  color: white;
 }
 
-html[data-theme="dark"] a:hover {
-  color: #ffffff;
+/* Animation delay for staggered effect */
+.course-section:nth-child(1) { animation-delay: 0ms; }
+.course-section:nth-child(2) { animation-delay: 100ms; }
+.course-section:nth-child(3) { animation-delay: 200ms; }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .teaching-grid--courses {
+    grid-template-columns: 1fr;
+  }
+  
+  .course-card__header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 </style>
-

@@ -4,27 +4,12 @@ title: "Dimension Reduction"
 permalink: /teaching/dimension-reduction/
 description:
 course_id: dr
+type: "Short Course"
 nav: false
 schedule:
   dates_time: "Tuesday-Thursday; From 2.30 pm to 4.00 pm"
   classroom: "B308 (December 9, 16, 18, 30) and B306 (December 23), EE Department, IISc"
   duration: "December 9-30, 2025"
-schedule_details:
-  - date: "December 9, 2025"
-    lecture: 1
-    venue: "B308"
-  - date: "December 16, 2025"
-    lecture: 2
-    venue: "B308"
-  - date: "December 18, 2025"
-    lecture: 3
-    venue: "B308"
-  - date: "December 23, 2025"
-    lecture: 4
-    venue: "B306"
-  - date: "December 30, 2025"
-    lecture: 5
-    venue: "B308"
 
 lectures:
 

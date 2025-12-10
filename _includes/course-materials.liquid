@@ -1,245 +1,483 @@
-{% assign course_data = site.data.teaching | where: "course_id", page.course_id | first %}
+{%- comment -%}
+  Course Materials Page
+  
+  A minimal, Apple-inspired layout for displaying course content.
+  Uses the modular _teaching.scss design system.
+{%- endcomment -%}
 
-<div class="course-materials">
-  <div class="container-md">
-    <!-- Course Info -->
-    <div class="course-info mb-4">
-      <p class="lead mb-2">{{ course_data.description }}</p>
-      <div class="course-meta">
-        {% if course_data.instructor %}
-          <span class="badge badge-primary me-2">{{ course_data.instructor }}</span>
-        {% endif %}
-        {% if course_data.teaching_assistants and course_data.teaching_assistants.size > 0 %}
-          <span class="badge badge-info me-2">TAs: 
-            {% for ta in course_data.teaching_assistants %}
-              {{ ta }}{% unless forloop.last %}, {% endunless %}
-            {% endfor %}
-          </span>
-        {% endif %}
-        {% if course_data.semester %}
-          <span class="badge badge-secondary">{{ course_data.semester }}</span>
-        {% endif %}
+{%- assign course_data = site.data.teaching | where: "course_id", page.course_id | first -%}
+
+<div class="course-wrapper">
+  <div class="container-md py-4">
+
+    <!-- Course Header -->
+    <header class="course-header fade-in">
+      <p class="course-header__desc t-body">{{ course_data.description }}</p>
+      
+      <div class="course-header__meta cluster cluster--sm">
+        {%- if course_data.instructor -%}
+        <span class="pill pill--accent">
+          <i class="fas fa-user"></i>
+          {{ course_data.instructor }}
+        </span>
+        {%- endif -%}
+        
+        {%- if course_data.semester -%}
+        <span class="pill pill--muted">
+          <i class="fas fa-calendar"></i>
+          {{ course_data.semester }}
+        </span>
+        {%- endif -%}
+        
+        {%- if course_data.teaching_assistants and course_data.teaching_assistants.size > 0 -%}
+        <span class="pill pill--muted">
+          <i class="fas fa-users"></i>
+          TAs: {{ course_data.teaching_assistants | join: ", " }}
+        </span>
+        {%- endif -%}
       </div>
-    </div>
+    </header>
 
-    <!-- Course Schedule -->
-    {% if page.schedule %}
-    <div class="course-schedule mb-4">
-      <h3 class="mb-3">📅 Schedule</h3>
-      <div class="card">
-        <div class="card-body">
-          <div class="row">
-            {% if page.schedule.dates_time %}
-            <div class="col-md-12 mb-2">
-              <strong><i class="fas fa-clock me-2"></i>Date and Time:</strong> {{ page.schedule.dates_time }}
-            </div>
-            {% endif %}
-            {% if page.schedule.classroom %}
-            <div class="col-md-12 mb-2">
-              <strong><i class="fas fa-map-marker-alt me-2"></i>Classroom:</strong> {{ page.schedule.classroom }}
-            </div>
-            {% endif %}
-            {% if page.schedule.duration %}
-            <div class="col-md-12">
-              <strong><i class="fas fa-calendar-alt me-2"></i>Duration:</strong> {{ page.schedule.duration }}
-            </div>
-            {% endif %}
+    <!-- Schedule Section -->
+    {%- if page.schedule -%}
+    <section class="content-section fade-in">
+      <div class="section-label">
+        <div class="section-label__icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <span class="section-label__text">Schedule</span>
+      </div>
+
+      <div class="minimal-card minimal-card--elevated">
+        <!-- Logistics Grid -->
+        <div class="logistics-grid">
+          {%- if page.schedule.dates_time -%}
+          <div class="logistics-item">
+            <span class="logistics-item__label t-overline">Date & Time</span>
+            <span class="logistics-item__value t-body">{{ page.schedule.dates_time }}</span>
+          </div>
+          {%- endif -%}
+          
+          {%- if page.schedule.classroom -%}
+          <div class="logistics-item">
+            <span class="logistics-item__label t-overline">Classroom</span>
+            <span class="logistics-item__value t-body">{{ page.schedule.classroom }}</span>
+          </div>
+          {%- endif -%}
+          
+          {%- if page.schedule.duration -%}
+          <div class="logistics-item">
+            <span class="logistics-item__label t-overline">Duration</span>
+            <span class="logistics-item__value t-body">{{ page.schedule.duration }}</span>
+          </div>
+          {%- endif -%}
+        </div>
+
+        <!-- Schedule Table -->
+        {%- if page.schedule_details -%}
+        <div class="schedule-table-wrapper">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Date</th>
+                <th>Topic / Venue</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for session in page.schedule_details -%}
+              <tr>
+                <td><span class="lecture-num">#{{ session.lecture }}</span></td>
+                <td>{{ session.date }}</td>
+                <td>{{ session.venue }}</td>
+              </tr>
+              {%- endfor -%}
+            </tbody>
+          </table>
+        </div>
+        {%- endif -%}
+      </div>
+    </section>
+    {%- endif -%}
+
+    <!-- Lectures Section -->
+    {%- if page.lectures and page.lectures.size > 0 -%}
+    <section class="content-section fade-in">
+      <div class="section-label">
+        <div class="section-label__icon section-label__icon--blue">
+          <i class="fas fa-book-open"></i>
+        </div>
+        <span class="section-label__text">Lectures</span>
+      </div>
+
+      <div class="teaching-grid teaching-grid--materials">
+        {%- for lecture in page.lectures -%}
+        <article class="material-card material-card--lecture minimal-card">
+          <div class="material-card__content">
+            <h4 class="material-card__title t-title">{{ lecture.title }}</h4>
+            {%- if lecture.description -%}
+            <p class="material-card__desc t-body">{{ lecture.description }}</p>
+            {%- endif -%}
           </div>
           
-          {% if page.schedule_details %}
-          <div class="table-responsive mt-3">
-            <table class="table table-bordered table-hover mb-0">
-              <thead class="table-light">
-                <tr>
-                  <th>Lecture No.</th>
-                  <th>Date</th>
-                  <th>Venue</th>
-                </tr>
-              </thead>
-              <tbody>
-                {% for session in page.schedule_details %}
-                <tr>
-                  <td>{{ session.lecture }}</td>
-                  <td>{{ session.date }}</td>
-                  <td>{{ session.venue }}</td>
-                </tr>
-                {% endfor %}
-              </tbody>
-            </table>
+          <div class="material-card__actions">
+            {%- if lecture.slides -%}
+            <a href="{{ lecture.slides }}" class="btn-minimal btn-minimal--ghost" target="_blank">
+              <i class="fas fa-desktop"></i> Slides
+            </a>
+            {%- endif -%}
+            {%- if lecture.video -%}
+            <a href="{{ lecture.video }}" class="btn-minimal btn-minimal--ghost" target="_blank">
+              <i class="fas fa-play"></i> Video
+            </a>
+            {%- endif -%}
+            {%- if lecture.notes -%}
+            <a href="{{ lecture.notes }}" class="btn-minimal btn-minimal--ghost" target="_blank">
+              <i class="fas fa-sticky-note"></i> Notes
+            </a>
+            {%- endif -%}
           </div>
-          {% endif %}
-        </div>
+        </article>
+        {%- endfor -%}
       </div>
-    </div>
-    {% endif %}
+    </section>
+    {%- endif -%}
 
-    <!-- Course Materials -->
-    <div class="materials-section">
-      <h3 class="mb-4">Course Materials</h3>
-      
-      <!-- Lectures -->
-      {% if page.lectures and page.lectures.size > 0 %}
-      <div class="material-category mb-4">
-        <h4 class="mb-3">📚 Lectures</h4>
-        <div class="materials-grid">
-          {% for lecture in page.lectures %}
-          <div class="material-card">
-            <div class="material-content">
-              <h6 class="mb-1">{{ lecture.title }}</h6>
-              {% if lecture.description %}
-                <p class="mb-2 text-muted">{{ lecture.description }}</p>
-              {% endif %}
-              <div class="material-links">
-                {% if lecture.slides %}
-                  <a href="{{ lecture.slides }}" class="btn btn-sm btn-outline-primary me-2" target="_blank">
-                    <i class="fas fa-file-powerpoint"></i> Slides
-                  </a>
-                {% endif %}
-                {% if lecture.video %}
-                  <a href="{{ lecture.video }}" class="btn btn-sm btn-outline-success me-2" target="_blank">
-                    <i class="fas fa-play"></i> Video
-                  </a>
-                {% endif %}
-                {% if lecture.notes %}
-                  <a href="{{ lecture.notes }}" class="btn btn-sm btn-outline-info" target="_blank">
-                    <i class="fas fa-file-alt"></i> Notes
-                  </a>
-                {% endif %}
-              </div>
+    <!-- Assignments Section -->
+    {%- if page.assignments and page.assignments.size > 0 -%}
+    <section class="content-section fade-in">
+      <div class="section-label">
+        <div class="section-label__icon section-label__icon--green">
+          <i class="fas fa-pencil-ruler"></i>
+        </div>
+        <span class="section-label__text">Assignments</span>
+      </div>
+
+      <div class="teaching-grid teaching-grid--materials">
+        {%- for assignment in page.assignments -%}
+        <article class="material-card material-card--assignment minimal-card">
+          <div class="material-card__content">
+            <h4 class="material-card__title t-title">{{ assignment.title }}</h4>
+            {%- if assignment.description -%}
+            <p class="material-card__desc t-body">{{ assignment.description }}</p>
+            {%- endif -%}
+            {%- if assignment.due_date -%}
+            <div class="material-card__due">
+              <i class="far fa-clock"></i>
+              Due: {{ assignment.due_date }}
             </div>
+            {%- endif -%}
           </div>
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
-
-      <!-- Assignments -->
-      {% if page.assignments and page.assignments.size > 0 %}
-      <div class="material-category mb-4">
-        <h4 class="mb-3">📝 Assignments</h4>
-        <div class="materials-grid">
-          {% for assignment in page.assignments %}
-          <div class="material-card">
-            <div class="material-content">
-              <h6 class="mb-1">{{ assignment.title }}</h6>
-              {% if assignment.description %}
-                <p class="mb-2 text-muted">{{ assignment.description }}</p>
-              {% endif %}
-              {% if assignment.due_date %}
-                <small class="text-warning mb-2 d-block">Due: {{ assignment.due_date }}</small>
-              {% endif %}
-              <div class="material-links">
-                {% if assignment.pdf %}
-                  <a href="{{ assignment.pdf }}" class="btn btn-sm btn-outline-primary me-2" target="_blank">
-                    <i class="fas fa-file-pdf"></i> Assignment
-                  </a>
-                {% endif %}
-                {% if assignment.solution %}
-                  <a href="{{ assignment.solution }}" class="btn btn-sm btn-outline-success" target="_blank">
-                    <i class="fas fa-check"></i> Solution
-                  </a>
-                {% endif %}
-              </div>
-            </div>
+          
+          <div class="material-card__actions">
+            {%- if assignment.pdf -%}
+            <a href="{{ assignment.pdf }}" class="btn-minimal btn-minimal--subtle" target="_blank">
+              <i class="far fa-file-pdf"></i> PDF
+            </a>
+            {%- endif -%}
+            {%- if assignment.solution -%}
+            <a href="{{ assignment.solution }}" class="btn-minimal btn-minimal--ghost" target="_blank">
+              <i class="fas fa-check"></i> Solution
+            </a>
+            {%- endif -%}
           </div>
-          {% endfor %}
-        </div>
+        </article>
+        {%- endfor -%}
       </div>
-      {% endif %}
+    </section>
+    {%- endif -%}
 
-      <!-- Resources -->
-      {% if page.resources and page.resources.size > 0 %}
-      <div class="material-category mb-4">
-        <h4 class="mb-3">📖 Resources</h4>
-        <div class="materials-grid">
-          {% for resource in page.resources %}
-          <div class="material-card">
-            <div class="material-content">
-              <h6 class="mb-1">{{ resource.title }}</h6>
-              {% if resource.description %}
-                <p class="mb-2 text-muted">{{ resource.description }}</p>
-              {% endif %}
-              <div class="material-links">
-                <a href="{{ resource.url }}" class="btn btn-sm btn-outline-info" target="_blank">
-                  <i class="fas fa-external-link-alt"></i> Access
-                </a>
-              </div>
-            </div>
+    <!-- Resources Section -->
+    {%- if page.resources and page.resources.size > 0 -%}
+    <section class="content-section fade-in">
+      <div class="section-label">
+        <div class="section-label__icon section-label__icon--purple">
+          <i class="fas fa-layer-group"></i>
+        </div>
+        <span class="section-label__text">Resources</span>
+      </div>
+
+      <div class="teaching-grid teaching-grid--materials">
+        {%- for resource in page.resources -%}
+        <article class="material-card material-card--resource minimal-card">
+          <div class="material-card__content">
+            <h4 class="material-card__title t-title">{{ resource.title }}</h4>
+            {%- if resource.description -%}
+            <p class="material-card__desc t-body">{{ resource.description }}</p>
+            {%- endif -%}
           </div>
-          {% endfor %}
-        </div>
+          
+          <div class="material-card__actions">
+            <a href="{{ resource.url }}" class="btn-minimal btn-minimal--primary" target="_blank">
+              <i class="fas fa-external-link-alt"></i> Open Resource
+            </a>
+          </div>
+        </article>
+        {%- endfor -%}
       </div>
-      {% endif %}
+    </section>
+    {%- endif -%}
 
-      <!-- Default message if no materials -->
-      {% unless page.lectures or page.assignments or page.resources %}
-      <div class="alert alert-info">
-        <h5>📚 Course materials will be posted here</h5>
-        <p class="mb-0">Check back soon for lecture slides, assignments, and additional resources.</p>
+    <!-- Empty State -->
+    {%- unless page.lectures or page.assignments or page.resources -%}
+    <section class="empty-state fade-in">
+      <div class="empty-state__icon">
+        <i class="fas fa-book-open"></i>
       </div>
-      {% endunless %}
-    </div>
+      <h4 class="empty-state__title t-title">Materials Coming Soon</h4>
+      <p class="empty-state__desc t-body">Lecture slides, assignments, and resources will be posted here throughout the semester.</p>
+    </section>
+    {%- endunless -%}
 
-    <!-- Back to Teaching -->
-    <div class="mt-5">
-      <a href="/teaching/" class="btn btn-secondary">
-        <i class="fas fa-arrow-left"></i> Back to All Courses
+    <!-- Back Navigation -->
+    <nav class="course-nav">
+      <a href="/teaching/" class="btn-minimal btn-minimal--ghost">
+        <i class="fas fa-arrow-left"></i>
+        Back to All Courses
       </a>
-    </div>
+    </nav>
+
   </div>
 </div>
 
 <style>
-.materials-grid {
+/* =============================================================================
+   Course Materials Page - Minimal Styles
+   Scoped to .course-wrapper for modularity
+   ============================================================================= */
+
+.course-wrapper {
+  --transition-duration: 200ms;
+  --transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Accent color variations */
+  --color-blue: var(--global-theme-color);
+  --color-blue-soft: rgba(var(--global-theme-color-rgb), 0.1);
+  --color-green: #10b981;
+  --color-green-soft: rgba(16, 185, 129, 0.1);
+  --color-purple: #8b5cf6;
+  --color-purple-soft: rgba(139, 92, 246, 0.1);
+  --color-amber: #f59e0b;
+  --color-amber-soft: rgba(245, 158, 11, 0.1);
+}
+
+/* Course Header */
+.course-header {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.course-header__desc {
+  max-width: 720px;
+  font-size: 1.125rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.course-header__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Content Sections */
+.content-section {
+  margin-bottom: 3rem;
+}
+
+/* Section Label Color Variants */
+.section-label__icon--blue {
+  background: var(--color-blue-soft);
+  color: var(--color-blue);
+}
+
+.section-label__icon--green {
+  background: var(--color-green-soft);
+  color: var(--color-green);
+}
+
+.section-label__icon--purple {
+  background: var(--color-purple-soft);
+  color: var(--color-purple);
+}
+
+/* Logistics Grid */
+.logistics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
-}
-
-.material-card {
-  background-color: var(--card-bg, #f9f9f9);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
   padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  height: 100%;
+  border-bottom: 1px solid var(--global-divider-color);
 }
 
-.material-content {
-  height: 100%;
+.logistics-item {
   display: flex;
   flex-direction: column;
+  gap: 0.25rem;
 }
 
-.material-links {
-  margin-top: auto;
+.logistics-item__label {
+  opacity: 0.7;
 }
 
-.course-info {
-  border-bottom: 2px solid #e9ecef;
-  padding-bottom: 1rem;
+.logistics-item__value {
+  font-weight: 500;
+  color: var(--global-text-color);
 }
 
-.course-meta .badge {
-  font-size: 0.9em;
+/* Schedule Table */
+.schedule-table-wrapper {
+  overflow-x: auto;
 }
 
-.material-category {
-  border-left: 4px solid #007bff;
-  padding-left: 1rem;
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-/* Dark mode compatibility */
-html[data-theme="dark"] .material-card {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
-  box-shadow: 0 2px 6px rgba(255,255,255,0.05);
+.schedule-table th,
+.schedule-table td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--global-divider-color);
 }
 
-html[data-theme="dark"] .course-info {
-  border-bottom-color: #495057;
+.schedule-table th {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--global-text-color-light);
+  background: transparent;
 }
 
-html[data-theme="dark"] .material-category {
-  border-left-color: #90caf9;
+.schedule-table tr:last-child td {
+  border-bottom: none;
+}
+
+.lecture-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  padding: 0.25rem 0.625rem;
+  background: var(--color-blue-soft);
+  color: var(--color-blue);
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+/* Material Cards */
+.material-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+}
+
+.material-card__content {
+  flex: 1;
+}
+
+.material-card__title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.0625rem;
+}
+
+.material-card__desc {
+  margin: 0 0 1rem 0;
+  font-size: 0.9375rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.material-card__due {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  background: var(--color-amber-soft);
+  color: var(--color-amber);
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.material-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+/* Card Type Indicators */
+.material-card--lecture { border-top: 3px solid var(--color-blue); }
+.material-card--assignment { border-top: 3px solid var(--color-green); }
+.material-card--resource { border-top: 3px solid var(--color-purple); }
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--global-card-bg-color);
+  border-radius: 16px;
+  border: 2px dashed var(--global-divider-color);
+}
+
+.empty-state__icon {
+  font-size: 2.5rem;
+  color: var(--global-text-color-light);
+  opacity: 0.4;
+  margin-bottom: 1rem;
+}
+
+.empty-state__title {
+  margin: 0 0 0.5rem 0;
+}
+
+.empty-state__desc {
+  margin: 0;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+/* Navigation */
+.course-nav {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+/* Animation Delays */
+.content-section:nth-child(2) { animation-delay: 50ms; }
+.content-section:nth-child(3) { animation-delay: 100ms; }
+.content-section:nth-child(4) { animation-delay: 150ms; }
+.content-section:nth-child(5) { animation-delay: 200ms; }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .logistics-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .schedule-table th,
+  .schedule-table td {
+    padding: 0.75rem 1rem;
+  }
+  
+  .material-card__actions {
+    flex-direction: column;
+  }
+  
+  .material-card__actions .btn-minimal {
+    width: 100%;
+    justify-content: center;
+  }
 }
 </style>

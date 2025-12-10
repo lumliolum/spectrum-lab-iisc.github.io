@@ -15,6 +15,7 @@ $max-content-width: {{ site.max_width }};
   "cv",
   "tabs",
   "typograms",
+  "teaching",
   "font-awesome/fontawesome",
   "font-awesome/brands",
   "font-awesome/solid",
@@ -27,9 +28,22 @@ $max-content-width: {{ site.max_width }};
 /* Include mathpazo fonts for MathJax */
 @import "mathpazo-fonts";
 
-* {
-  font-family: "proxima-nova", "Proxima Nova", Arial, Helvetica, sans-serif;
+/* Global Font Stack - Apple-inspired typography */
+/* Exclude icon fonts from global override (Font Awesome, Tabler Icons, Academicons) */
+*:not(.fas):not(.far):not(.fab):not(.fa):not(.fa-solid):not(.fa-regular):not(.fa-brands):not([class^="fa-"]):not([class*=" fa-"]):not(.ti):not([class^="ti-"]):not([class*=" ti-"]):not(.ai):not([class^="ai-"]):not([class*=" ai-"]) {
+  font-family: "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, 
+               -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", 
+               Roboto, "Google Sans", Arial, sans-serif;
 }
+
+/* Ensure Font Awesome icons use correct font */
+.fas, .fa-solid { font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important; }
+.far, .fa-regular { font-family: 'Font Awesome 6 Free' !important; font-weight: 400 !important; }
+.fab, .fa-brands { font-family: 'Font Awesome 6 Brands' !important; font-weight: 400 !important; }
+.fa { font-family: 'Font Awesome 6 Free' !important; }
+
+/* Ensure Academicons (Google Scholar, ORCID, etc.) use correct font */
+.ai, [class^="ai-"], [class*=" ai-"] { font-family: 'Academicons' !important; font-weight: normal !important; }
 
 img.navbar {
   height: 2.5em;

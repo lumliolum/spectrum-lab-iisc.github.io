@@ -13,59 +13,6 @@ layout: default
   </header>
 
   <article>
-    <style>
-    .people .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      align-items: stretch;
-      gap: 1rem;
-    }
-
-    .people .grid-item {
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      flex: 1 1 300px; /* Allow items to grow/shrink with minimum width */
-      max-width: 350px; /* Prevent items from becoming too wide */
-      height: 450px;
-    }
-
-    .people .card {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .people .card-body {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    .people .card-title {
-      margin-bottom: 0.5rem;
-    }
-
-    .people .card-icons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
-      margin: 0.5rem 0;
-    }
-
-    .people .card-text {
-      margin-top: 0.5rem;
-      margin-bottom: 0;
-    }
-    </style>
-
     <div class="people">
       {%- assign categorized_people = site.people | where: "category", page.category -%}
       {%- assign sorted_people = categorized_people | sort: "year" | reverse -%}

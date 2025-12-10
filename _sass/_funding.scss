@@ -1,0 +1,24 @@
+/*******************************************************************************
+ * Funding Section Styles
+ * Swiper carousel for funding logos
+ ******************************************************************************/
+
+.funding {
+  .mySwiper {
+    .swiper-pagination {
+      margin-top: 32px;
+      position: static;
+    }
+  }
+
+  .funding-logo-invert {
+    filter: invert(1);
+  }
+}
+
+// Dark mode - invert logos that need it
+html[data-theme="dark"] .funding {
+  .funding-logo-invert {
+    filter: invert(1);
+  }
+}

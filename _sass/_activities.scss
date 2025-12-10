@@ -1,0 +1,198 @@
+/*******************************************************************************
+ * Activities Page Styles
+ * Talks, committees, and recognition sections
+ ******************************************************************************/
+
+// Talks Delivered
+.talk-list {
+  counter-reset: talk-counter;
+}
+
+.talk-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.talk-title {
+  color: var(--global-theme-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.talk-details em {
+  color: var(--global-text-color-light);
+}
+
+.talk-type {
+  display: inline-block;
+  background: rgba(var(--global-theme-color-rgb), 0.1);
+  color: var(--global-theme-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+// Talks Organized
+.organized-talk-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.organized-talk-item {
+  border-left: 3px solid var(--global-theme-color);
+  padding-left: 1rem;
+  background: var(--global-bg-color);
+}
+
+.organized-talk-title {
+  color: var(--global-theme-color);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.organized-talk-speaker {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+
+  strong {
+    color: var(--global-text-color);
+  }
+
+  em {
+    color: var(--global-text-color-light);
+  }
+}
+
+.organized-talk-date {
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.organized-talk-note {
+  font-style: italic;
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.organized-talk-website a {
+  color: var(--global-theme-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Committees
+.committee-sections {
+  display: grid;
+  gap: 3rem;
+}
+
+.committee-section h2 {
+  color: var(--global-theme-color);
+  border-bottom: 2px solid var(--global-theme-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.committee-items {
+  background: rgba(var(--global-theme-color-rgb), 0.05);
+  border-left: 4px solid var(--global-theme-color);
+  padding: 1.5rem;
+  border-radius: 0 8px 8px 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.committee-title {
+  color: var(--global-theme-color);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.committee-org {
+  color: var(--global-text-color-light);
+  margin-bottom: 0.25rem;
+}
+
+.committee-period {
+  color: var(--global-text-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.committee-note {
+  font-style: italic;
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+// Recognition Section (within activities)
+.recognition-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--global-divider-color);
+
+  h2 {
+    color: var(--global-theme-color);
+    margin-bottom: 1.5rem;
+  }
+}
+
+.recognition-list li {
+  background: rgba(var(--global-theme-color-rgb), 0.1);
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  border-left: 3px solid var(--global-theme-color);
+
+  strong {
+    color: var(--global-theme-color);
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .committee-items {
+    padding: 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border-radius: 0;
+  }
+
+  .committee-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .organized-talk-item {
+    padding-left: 0.75rem;
+  }
+}
+
+// Dark Mode
+html[data-theme="dark"] {
+  .committee-items {
+    background: rgba(var(--global-theme-color-rgb), 0.1);
+  }
+
+  .recognition-list li {
+    background: rgba(var(--global-theme-color-rgb), 0.15);
+  }
+
+  .organized-talk-item {
+    background: var(--global-bg-color);
+  }
+}

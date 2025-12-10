@@ -1,0 +1,141 @@
+/*******************************************************************************
+ * Album Page Styles
+ * Photo gallery with Swiper carousel and modal
+ ******************************************************************************/
+
+.album-container {
+  .album-photo {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  .swiper-slide img {
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .event-section {
+    margin-bottom: 4rem;
+  }
+
+  .event-header {
+    border-bottom: 2px solid var(--global-theme-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .event-title {
+    color: var(--global-theme-color);
+    font-weight: 600;
+  }
+
+  .event-date {
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .event-description {
+    color: var(--global-text-color);
+    font-style: italic;
+    margin-bottom: 0;
+  }
+
+  .album-swiper {
+    margin-top: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    .swiper-pagination {
+      margin-top: 20px;
+      position: static;
+    }
+  }
+
+  .album-caption {
+    background: transparent;
+    color: var(--global-text-color);
+    padding: 1rem 0;
+    text-align: center;
+
+    h5 {
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 0;
+      color: var(--global-text-color);
+    }
+  }
+}
+
+// Modal Styles (shared with recognition)
+.modal-backdrop {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .album-container {
+    .album-photo {
+      height: 300px;
+    }
+
+    .album-caption h5 {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .album-container {
+    .album-photo {
+      height: 250px;
+    }
+
+    .album-caption h5 {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// Dark Mode
+html[data-theme="dark"] {
+  .album-container {
+    .album-swiper {
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .modal-content {
+    background: rgba(33, 37, 41, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  .modal-header {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .modal-title {
+    color: var(--global-text-color);
+  }
+
+  .btn-close {
+    filter: invert(1);
+  }
+}

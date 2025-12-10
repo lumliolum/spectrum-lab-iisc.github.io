@@ -1,0 +1,155 @@
+/*******************************************************************************
+ * Person Page Styles
+ * Individual person profile with accordion activities
+ ******************************************************************************/
+
+// Accordion Styling for Activities
+#activitiesAccordion {
+  .card {
+    margin-bottom: 0.5rem;
+    border: 1px solid #dee2e6;
+  }
+
+  .card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 0;
+  }
+
+  .btn-link {
+    color: #495057;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 1rem 1.25rem;
+
+    &:hover {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    // Chevron animation
+    .fa-chevron-down {
+      transition: transform 0.2s ease;
+    }
+
+    &:not(.collapsed) .fa-chevron-down {
+      transform: rotate(180deg);
+    }
+  }
+
+  .card-body {
+    padding: 1.25rem;
+  }
+}
+
+// Badge Styling
+.badge {
+  font-size: 0.75em;
+}
+
+.badge-primary {
+  background-color: #007bff !important;
+}
+
+.badge-success {
+  background-color: #28a745 !important;
+}
+
+.badge-info {
+  background-color: #17a2b8 !important;
+}
+
+.badge-warning {
+  background-color: #ffc107 !important;
+}
+
+.badge-secondary {
+  background-color: #6c757d !important;
+}
+
+// Dark Mode
+html[data-theme="dark"] {
+  #activitiesAccordion {
+    .card {
+      background-color: #1e1e1e;
+      border-color: #333;
+    }
+
+    .card-header {
+      background-color: #2d2d2d;
+      border-color: #333;
+    }
+
+    .btn-link {
+      color: #e0e0e0;
+
+      &:hover {
+        color: #90caf9;
+      }
+
+      .fa-chevron-down {
+        color: #e0e0e0;
+      }
+    }
+
+    .card-body {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+    }
+  }
+
+  .list-group-item {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-color: #333;
+  }
+
+  .btn-outline-primary {
+    border-color: #90caf9;
+    color: #90caf9;
+
+    &:hover {
+      background-color: #90caf9;
+      color: #000;
+    }
+  }
+
+  .btn-outline-info {
+    border-color: #4dd0e1;
+    color: #4dd0e1;
+
+    &:hover {
+      background-color: #4dd0e1;
+      color: #000;
+    }
+  }
+
+  .btn-outline-dark {
+    border-color: #ccc;
+    color: #ccc;
+
+    &:hover {
+      background-color: #ccc;
+      color: #000;
+    }
+  }
+
+  .btn-outline-success {
+    border-color: #66bb6a;
+    color: #66bb6a;
+
+    &:hover {
+      background-color: #66bb6a;
+      color: #000;
+    }
+  }
+
+  .shadow,
+  .shadow-sm {
+    box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.5) !important;
+  }
+}

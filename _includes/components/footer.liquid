@@ -1,0 +1,58 @@
+{%- comment -%}
+================================================================================
+FOOTER COMPONENT — Site Footer
+================================================================================
+Clean, minimal footer with:
+- Copyright information
+- Optional newsletter signup
+- Territorial acknowledgement
+- Credit/attribution links
+================================================================================
+{%- endcomment -%}
+
+{%- if site.footer_fixed -%}
+  <footer class="site-footer fixed-bottom" role="contentinfo">
+{%- else -%}
+  <footer class="site-footer" role="contentinfo">
+{%- endif -%}
+
+    {%- comment -%} Newsletter (if enabled) {%- endcomment -%}
+    {%- if site.newsletter.enabled and site.footer_fixed == false -%}
+      {% include scripts/newsletter.liquid %}
+    {%- endif -%}
+
+    {%- comment -%} Territorial Acknowledgement (if provided) {%- endcomment -%}
+    {%- if site.territorial_acknowledgement -%}
+      <div class="container territorial-acknowledgement pb-2">
+        {{ site.territorial_acknowledgement }}
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} Main Footer Content {%- endcomment -%}
+    <div class="container footer-content">
+      <div class="footer-text">
+        {%- comment -%} Copyright {%- endcomment -%}
+        <span class="copyright">
+          &copy; {{ site.time | date: '%Y' }}
+          {{ site.first_name }}
+          {%- if site.middle_name %} {{ site.middle_name }}{%- endif -%}
+          {%- if site.last_name %} {{ site.last_name }}{%- endif -%}.
+        </span>
+        
+        {%- comment -%} Footer text / credits {%- endcomment -%}
+        {%- if site.footer_text -%}
+          <span class="credits">{{ site.footer_text }}</span>
+        {%- endif -%}
+        
+        {%- comment -%} Impressum (GDPR compliance) {%- endcomment -%}
+        {%- if site.impressum_path -%}
+          <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
+        {%- endif -%}
+        
+        {%- comment -%} Last updated {%- endcomment -%}
+        {%- if site.last_updated -%}
+          <span class="updated">Last updated: {{ 'now' | date: '%B %d, %Y' }}.</span>
+        {%- endif -%}
+      </div>
+    </div>
+</footer>

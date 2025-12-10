@@ -1,0 +1,49 @@
+{%- comment -%}
+================================================================================
+CORE SCRIPTS — Consolidated Script Loader
+================================================================================
+Loads all JavaScript at the end of <body> for optimal performance.
+Conditional loading based on page requirements.
+================================================================================
+{%- endcomment -%}
+
+{%- comment -%} Essential Libraries {%- endcomment -%}
+{% include scripts/jquery.liquid %}
+{% include scripts/bootstrap.liquid %}
+
+{%- comment -%} Layout & UI {%- endcomment -%}
+{% include scripts/masonry.liquid %}
+{% include scripts/misc.liquid %}
+{% include scripts/badges.liquid %}
+
+{%- comment -%} Visualization Libraries (conditionally loaded) {%- endcomment -%}
+{% include scripts/mermaid.liquid %}
+{% include scripts/chartjs.liquid %}
+{% include scripts/echarts.liquid %}
+{% include scripts/vega.liquid %}
+{% include scripts/leaflet.liquid %}
+
+{%- comment -%} Math & Code {%- endcomment -%}
+{% include scripts/mathjax.liquid %}
+{% include scripts/pseudocode.liquid %}
+{% include scripts/tikzjax.liquid %}
+{% include scripts/typograms.liquid %}
+{% include scripts/diff2html.liquid %}
+
+{%- comment -%} Content Features {%- endcomment -%}
+{% include scripts/imageLayouts.liquid %}
+{% include scripts/jekyll_tabs.liquid %}
+
+{%- comment -%} Navigation & UX {%- endcomment -%}
+{% include scripts/progressBar.liquid %}
+{% include scripts/back_to_top.liquid %}
+{% include scripts/search.liquid %}
+
+{%- comment -%} Modals {%- endcomment -%}
+{% include scripts/wechatModal.liquid %}
+
+{%- comment -%} Analytics (load last) {%- endcomment -%}
+{% include scripts/analytics.liquid %}
+
+{%- comment -%} Swiper for carousels (funding, galleries) {%- endcomment -%}
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

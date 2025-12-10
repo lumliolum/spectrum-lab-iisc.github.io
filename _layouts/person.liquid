@@ -74,169 +74,200 @@ layout: default
 
 
       {% if page.show_activities and page.email == "css@iisc.ac.in" %}
-      <!-- Professional Activities -->
+      <!-- Professional Activities - Compact Design with Nested Year Dropdowns -->
       <div class="card shadow-sm border-0 mt-4">
         <div class="card-body">
           <h5 class="card-title mb-4">Professional Activities</h5>
           
-          <!-- Talks Delivered Dropdown -->
           <div class="accordion" id="activitiesAccordion">
-            <div class="card">
-              <div class="card-header" id="talksDeliveredHeading">
-                <h5 class="mb-0">
-                  <button class="btn btn-link btn-block text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#talksDeliveredCollapse" aria-expanded="false" aria-controls="talksDeliveredCollapse">
-                    <i class="fas fa-microphone me-2"></i>Invited Talks Delivered
-                    <i class="fas fa-chevron-down float-end mt-1"></i>
-                  </button>
-                </h5>
+            
+            <!-- Invited Talks Delivered -->
+            <div class="card border-0 border-bottom">
+              <div class="card-header bg-transparent px-0" id="talksDeliveredHeading">
+                <button class="btn btn-link btn-block text-start w-100 d-flex justify-content-between align-items-center collapsed ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#talksDeliveredCollapse" aria-expanded="false">
+                  <span><i class="fas fa-microphone me-2 text-muted"></i>Invited Talks Delivered <span class="badge bg-secondary ms-2">{{ site.data.activities.talks_delivered.size }}</span></span>
+                  <i class="fas fa-chevron-down"></i>
+                </button>
               </div>
-              <div id="talksDeliveredCollapse" class="collapse" aria-labelledby="talksDeliveredHeading" data-parent="#activitiesAccordion">
-                <div class="card-body">
-                  {% assign talks_delivered = site.data.activities.talks_delivered | slice: 0, 10 %}
-                  {% for talk in talks_delivered %}
-                  <div class="mb-3 p-3 border rounded">
-                    <h6 class="mb-1">{{ talk.title }}</h6>
-                    <p class="text-muted mb-1"><i class="fas fa-map-marker-alt me-1"></i>{{ talk.venue }}</p>
-                    <p class="text-muted mb-1"><i class="fas fa-calendar me-1"></i>{{ talk.date }}</p>
-                    {% if talk.type %}<span class="badge bg-primary me-2">{{ talk.type }}</span>{% endif %}
-                    {% if talk.note %}<small class="text-muted">{{ talk.note }}</small>{% endif %}
+              <div id="talksDeliveredCollapse" class="collapse" data-bs-parent="#activitiesAccordion">
+                <div class="card-body px-0 pt-3">
+                  <div class="accordion nested-accordion" id="talksDeliveredYears">
+                    {% assign talks_by_year = site.data.activities.talks_delivered | group_by_exp: "talk", "talk.date | split: ', ' | last | split: ' ' | last | default: 'Other'" %}
+                    {% for year_group in talks_by_year %}
+                    <div class="year-group">
+                      <button class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#talksDelivered{{ year_group.name | replace: ' ', '' }}" aria-expanded="false">
+                        <span><i class="fas fa-calendar-alt me-2 text-muted"></i>{{ year_group.name }} <span class="badge bg-light text-dark ms-1">{{ year_group.items.size }}</span></span>
+                        <i class="fas fa-chevron-down chevron-sm"></i>
+                      </button>
+                      <div id="talksDelivered{{ year_group.name | replace: ' ', '' }}" class="collapse year-content">
+                        <ul class="list-unstyled activity-list ms-3">
+                          {% for talk in year_group.items %}
+                          <li class="activity-item py-1">
+                            <span class="activity-title">{{ talk.title }}</span>
+                            <span class="activity-meta text-muted d-block small">{{ talk.venue }}{% if talk.type %} · <span class="badge bg-light text-dark">{{ talk.type }}</span>{% endif %}</span>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                    {% endfor %}
                   </div>
-                  {% endfor %}
-                  {% if site.data.activities.talks_delivered.size > 10 %}
-                  <p class="text-muted"><em>Showing recent 10 of {{ site.data.activities.talks_delivered.size }} talks delivered</em></p>
-                  {% endif %}
                 </div>
               </div>
             </div>
 
-            <!-- Talks Organized Dropdown -->
-            <div class="card">
-              <div class="card-header" id="talksOrganizedHeading">
-                <h5 class="mb-0">
-                  <button class="btn btn-link btn-block text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#talksOrganizedCollapse" aria-expanded="false" aria-controls="talksOrganizedCollapse">
-                    <i class="fas fa-users me-2"></i>Invited Talks Organized
-                    <i class="fas fa-chevron-down float-end mt-1"></i>
-                  </button>
-                </h5>
+            <!-- Invited Talks Organized -->
+            <div class="card border-0 border-bottom">
+              <div class="card-header bg-transparent px-0" id="talksOrganizedHeading">
+                <button class="btn btn-link btn-block text-start w-100 d-flex justify-content-between align-items-center collapsed ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#talksOrganizedCollapse" aria-expanded="false">
+                  <span><i class="fas fa-users me-2 text-muted"></i>Invited Talks Organized <span class="badge bg-secondary ms-2">{{ site.data.activities.talks_organized.size }}</span></span>
+                  <i class="fas fa-chevron-down"></i>
+                </button>
               </div>
-              <div id="talksOrganizedCollapse" class="collapse" aria-labelledby="talksOrganizedHeading" data-parent="#activitiesAccordion">
-                <div class="card-body">
-                  {% assign talks_organized = site.data.activities.talks_organized | slice: 0, 10 %}
-                  {% for talk in talks_organized %}
-                  <div class="mb-3 p-3 border rounded">
-                    <h6 class="mb-1">{{ talk.title }}</h6>
-                    <p class="text-muted mb-1"><i class="fas fa-user me-1"></i><strong>{{ talk.speaker }}</strong></p>
-                    <p class="text-muted mb-1"><i class="fas fa-university me-1"></i>{{ talk.speaker_affiliation }}</p>
-                    <p class="text-muted mb-1"><i class="fas fa-calendar me-1"></i>{{ talk.date }}</p>
-                    {% if talk.note %}<small class="text-muted">{{ talk.note }}</small>{% endif %}
-                    {% if talk.website %}<p><a href="{{ talk.website }}" target="_blank"><i class="fas fa-link me-1"></i>More Information</a></p>{% endif %}
+              <div id="talksOrganizedCollapse" class="collapse" data-bs-parent="#activitiesAccordion">
+                <div class="card-body px-0 pt-3">
+                  <div class="accordion nested-accordion" id="talksOrganizedYears">
+                    {% assign organized_by_year = site.data.activities.talks_organized | group_by_exp: "talk", "talk.date | split: ', ' | last | split: ' ' | last | default: 'Other'" %}
+                    {% for year_group in organized_by_year %}
+                    <div class="year-group">
+                      <button class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#talksOrganized{{ year_group.name | replace: ' ', '' }}" aria-expanded="false">
+                        <span><i class="fas fa-calendar-alt me-2 text-muted"></i>{{ year_group.name }} <span class="badge bg-light text-dark ms-1">{{ year_group.items.size }}</span></span>
+                        <i class="fas fa-chevron-down chevron-sm"></i>
+                      </button>
+                      <div id="talksOrganized{{ year_group.name | replace: ' ', '' }}" class="collapse year-content">
+                        <ul class="list-unstyled activity-list ms-3">
+                          {% for talk in year_group.items %}
+                          <li class="activity-item py-1">
+                            <span class="activity-title">{{ talk.title }}</span>
+                            <span class="activity-meta text-muted d-block small">{{ talk.speaker }}, {{ talk.speaker_affiliation }}</span>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                    {% endfor %}
                   </div>
-                  {% endfor %}
-                  {% if site.data.activities.talks_organized.size > 10 %}
-                  <p class="text-muted"><em>Showing recent 10 of {{ site.data.activities.talks_organized.size }} talks organized</em></p>
-                  {% endif %}
                 </div>
               </div>
             </div>
 
-            <!-- Committees & Editorial Boards Dropdown -->
-            <div class="card">
-              <div class="card-header" id="committeesHeading">
-                <h5 class="mb-0">
-                  <button class="btn btn-link btn-block text-start collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#committeesCollapse" aria-expanded="false" aria-controls="committeesCollapse">
-                    <i class="fas fa-clipboard-list me-2"></i>Committees & Editorial Boards
-                    <i class="fas fa-chevron-down float-end mt-1"></i>
-                  </button>
-                </h5>
+            <!-- Committees & Editorial Boards -->
+            <div class="card border-0 border-bottom">
+              <div class="card-header bg-transparent px-0" id="committeesHeading">
+                <button class="btn btn-link btn-block text-start w-100 d-flex justify-content-between align-items-center collapsed ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#committeesCollapse" aria-expanded="false">
+                  <span><i class="fas fa-clipboard-list me-2 text-muted"></i>Committees & Editorial Boards</span>
+                  <i class="fas fa-chevron-down"></i>
+                </button>
               </div>
-              <div id="committeesCollapse" class="collapse" aria-labelledby="committeesHeading" data-parent="#activitiesAccordion">
-                <div class="card-body">
-                  {% if site.data.activities.committees.current_roles %}
-                  <h6>Current Roles</h6>
-                  {% for role in site.data.activities.committees.current_roles %}
-                  <div class="mb-3 p-3 border rounded">
-                    <h6 class="mb-1">{{ role.title }}</h6>
-                    <p class="text-muted mb-1"><i class="fas fa-building me-1"></i>{{ role.organization }}</p>
-                    <span class="badge bg-success me-2">{{ role.type }}</span>
-                    <span class="badge bg-info">{{ role.period }}</span>
-                    {% if role.note %}<p class="mt-2 text-muted"><small>{{ role.note }}</small></p>{% endif %}
-                  </div>
-                  {% endfor %}
-                  {% endif %}
+              <div id="committeesCollapse" class="collapse" data-bs-parent="#activitiesAccordion">
+                <div class="card-body px-0 pt-3">
+                  <div class="accordion nested-accordion" id="committeesSubsections">
+                    
+                    {% if site.data.activities.committees.current_roles %}
+                    <div class="year-group">
+                      <button class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#committeesCurrentRoles" aria-expanded="false">
+                        <span><i class="fas fa-star me-2 text-muted"></i>Current Roles <span class="badge bg-light text-dark ms-1">{{ site.data.activities.committees.current_roles.size }}</span></span>
+                        <i class="fas fa-chevron-down chevron-sm"></i>
+                      </button>
+                      <div id="committeesCurrentRoles" class="collapse year-content">
+                        <ul class="list-unstyled activity-list ms-3">
+                          {% for role in site.data.activities.committees.current_roles %}
+                          <li class="activity-item py-1">
+                            <span class="activity-title">{{ role.title }}</span>
+                            <span class="activity-meta text-muted d-block small">{{ role.organization }} · {{ role.period }}</span>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                    {% endif %}
 
-                  {% if site.data.activities.committees.academic_service %}
-                  <h6 class="mt-4">Academic Service</h6>
-                  {% for service in site.data.activities.committees.academic_service %}
-                  <div class="mb-3 p-3 border rounded">
-                    <h6 class="mb-1">{{ service.title }}</h6>
-                    <p class="text-muted mb-1"><i class="fas fa-building me-1"></i>{{ service.organization }}</p>
-                    <span class="badge bg-primary me-2">{{ service.type }}</span>
-                    <span class="badge bg-secondary">{{ service.period }}</span>
-                    {% if service.note %}<p class="mt-2 text-muted"><small>{{ service.note }}</small></p>{% endif %}
-                  </div>
-                  {% endfor %}
-                  {% endif %}
+                    {% if site.data.activities.committees.editorial_service %}
+                    <div class="year-group">
+                      <button class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#committeesEditorial" aria-expanded="false">
+                        <span><i class="fas fa-pen me-2 text-muted"></i>Editorial Service <span class="badge bg-light text-dark ms-1">{{ site.data.activities.committees.editorial_service.size }}</span></span>
+                        <i class="fas fa-chevron-down chevron-sm"></i>
+                      </button>
+                      <div id="committeesEditorial" class="collapse year-content">
+                        <ul class="list-unstyled activity-list ms-3">
+                          {% for item in site.data.activities.committees.editorial_service %}
+                          <li class="activity-item py-1">
+                            <span class="activity-title">{{ item.title }}</span>
+                            <span class="activity-meta text-muted d-block small">{{ item.organization }} · {{ item.period }}</span>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                    {% endif %}
 
-                  {% if site.data.activities.committees.conference_organization %}
-                  <h6 class="mt-4">Conference Organization</h6>
-                  {% for conf in site.data.activities.committees.conference_organization %}
-                  <div class="mb-3 p-3 border rounded">
-                    <h6 class="mb-1">{{ conf.title }}</h6>
-                    <p class="text-muted mb-1"><i class="fas fa-calendar-alt me-1"></i>{{ conf.organization }} ({{ conf.period }})</p>
-                    {% if conf.location %}<p class="text-muted mb-1"><i class="fas fa-map-marker-alt me-1"></i>{{ conf.location }}</p>{% endif %}
-                    <span class="badge bg-warning text-dark">{{ conf.type }}</span>
-                    {% if conf.note %}<p class="mt-2 text-muted"><small>{{ conf.note }}</small></p>{% endif %}
-                  </div>
-                  {% endfor %}
-                  {% endif %}
+                    {% if site.data.activities.committees.conference_organization %}
+                    <div class="year-group">
+                      <button class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#committeesConference" aria-expanded="false">
+                        <span><i class="fas fa-calendar-alt me-2 text-muted"></i>Conference Leadership <span class="badge bg-light text-dark ms-1">{{ site.data.activities.committees.conference_organization.size }}</span></span>
+                        <i class="fas fa-chevron-down chevron-sm"></i>
+                      </button>
+                      <div id="committeesConference" class="collapse year-content">
+                        <ul class="list-unstyled activity-list ms-3">
+                          {% for item in site.data.activities.committees.conference_organization %}
+                          <li class="activity-item py-1">
+                            <span class="activity-title">{{ item.title }}</span>
+                            <span class="activity-meta text-muted d-block small">{{ item.organization }} · {{ item.period }}{% if item.location %} · {{ item.location }}{% endif %}</span>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                    {% endif %}
 
-                  {% if site.data.activities.committees.editorial_service %}
-                  <h6 class="mt-4">Editorial Service</h6>
-                  {% for editorial in site.data.activities.committees.editorial_service %}
-                  <div class="mb-3 p-3 border rounded">
-                    <h6 class="mb-1">{{ editorial.title }}</h6>
-                    <p class="text-muted mb-1"><i class="fas fa-journal-whills me-1"></i>{{ editorial.organization }}</p>
-                    <span class="badge bg-info me-2">{{ editorial.type }}</span>
-                    <span class="badge bg-secondary">{{ editorial.period }}</span>
-                    {% if editorial.note %}<p class="mt-2 text-muted"><small>{{ editorial.note }}</small></p>{% endif %}
+                    {% if site.data.activities.committees.academic_service %}
+                    <div class="year-group">
+                      <button class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#committeesAcademic" aria-expanded="false">
+                        <span><i class="fas fa-graduation-cap me-2 text-muted"></i>Academic Service <span class="badge bg-light text-dark ms-1">{{ site.data.activities.committees.academic_service.size }}</span></span>
+                        <i class="fas fa-chevron-down chevron-sm"></i>
+                      </button>
+                      <div id="committeesAcademic" class="collapse year-content">
+                        <ul class="list-unstyled activity-list ms-3">
+                          {% for item in site.data.activities.committees.academic_service %}
+                          <li class="activity-item py-1">
+                            <span class="activity-title">{{ item.title }}</span>
+                            <span class="activity-meta text-muted d-block small">{{ item.organization }} · {{ item.period }}</span>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                    {% endif %}
+
                   </div>
-                  {% endfor %}
-                  {% endif %}
                 </div>
               </div>
             </div>
 
             {% if page.show_visiting_positions and page.visiting_positions %}
-            <!-- Visiting Positions Dropdown -->
-            <div class="card">
-              <div class="card-header" id="visitingPositionsHeading">
-                <h5 class="mb-0">
-                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#visitingPositionsCollapse" aria-expanded="false" aria-controls="visitingPositionsCollapse">
-                    <i class="fas fa-globe mr-2"></i> Visiting Positions
-                    <i class="fas fa-chevron-down float-right mt-1"></i>
-                  </button>
-                </h5>
+            <!-- Visiting Positions -->
+            <div class="card border-0">
+              <div class="card-header bg-transparent px-0" id="visitingPositionsHeading">
+                <button class="btn btn-link btn-block text-start w-100 d-flex justify-content-between align-items-center collapsed ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#visitingPositionsCollapse" aria-expanded="false">
+                  <span><i class="fas fa-globe me-2 text-muted"></i>Visiting Positions <span class="badge bg-secondary ms-2">{{ page.visiting_positions.size }}</span></span>
+                  <i class="fas fa-chevron-down"></i>
+                </button>
               </div>
-              <div id="visitingPositionsCollapse" class="collapse" aria-labelledby="visitingPositionsHeading" data-parent="#activitiesAccordion">
-                <div class="card-body">
-                  {% for position in page.visiting_positions %}
-                  <div class="mb-3 p-3 border rounded">
-                    <h6 class="mb-1">{{ position.institution }}</h6>
-                    <p class="text-muted mb-1"><i class="fas fa-calendar mr-1"></i>{{ position.dates }}</p>
-                    <p class="text-muted mb-0">
-                      <i class="fas fa-user mr-1"></i>
-                      {% if position.hosts contains "," %}
-                      Hosts: {{ position.hosts }}
-                      {% else %}
-                      Host: {{ position.hosts }}
-                      {% endif %}
-                    </p>
-                  </div>
-                  {% endfor %}
+              <div id="visitingPositionsCollapse" class="collapse" data-bs-parent="#activitiesAccordion">
+                <div class="card-body px-0 pt-3">
+                  <ul class="list-unstyled activity-list">
+                    {% for position in page.visiting_positions %}
+                    <li class="activity-item py-1">
+                      <span class="activity-title">{{ position.institution }}</span>
+                      <span class="activity-meta text-muted d-block small">{{ position.dates }} · Host: {{ position.hosts }}</span>
+                    </li>
+                    {% endfor %}
+                  </ul>
                 </div>
               </div>
             </div>
             {% endif %}
+
           </div>
         </div>
       </div>

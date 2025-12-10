@@ -1,24 +1,78 @@
 /*******************************************************************************
  * Funding Section Styles
- * Swiper carousel for funding logos
+ * Clean minimal carousel for funding logos
  ******************************************************************************/
 
 .funding {
+  padding: 1rem 0;
+
   .mySwiper {
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
     .swiper-pagination {
-      margin-top: 32px;
+      margin-top: 2rem;
       position: static;
+
+      .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background: var(--global-text-color-light);
+        opacity: 0.4;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+
+        &-active {
+          opacity: 1;
+          background: var(--global-theme-color);
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  // Logo styling
+  .funder-logo {
+    max-height: 100px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(0.2);
+    opacity: 0.85;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+
+    &:hover {
+      filter: grayscale(0);
+      opacity: 1;
     }
   }
 
   .funding-logo-invert {
-    filter: invert(1);
+    filter: invert(1) grayscale(0.2);
+
+    &:hover {
+      filter: invert(1) grayscale(0);
+    }
   }
 }
 
-// Dark mode - invert logos that need it
+// Dark mode adjustments
 html[data-theme="dark"] .funding {
+  .funder-logo {
+    opacity: 0.75;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   .funding-logo-invert {
-    filter: invert(1);
+    filter: invert(1) grayscale(0.2);
+
+    &:hover {
+      filter: invert(1) grayscale(0);
+    }
   }
 }

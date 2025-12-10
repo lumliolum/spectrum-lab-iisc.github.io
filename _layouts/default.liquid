@@ -1,90 +1,78 @@
+{%- comment -%}
+================================================================================
+DEFAULT LAYOUT — Standard Page Wrapper
+================================================================================
+The primary layout for most pages. Uses modular components for header/footer.
+================================================================================
+{%- endcomment -%}
 <!doctype html>
-<html lang="{{ site.lang }}">
+<html lang="{{ site.lang | default: 'en' }}">
   <!-- Head -->
   <head>
-    {% if page.redirect %}
-      {% if page.redirect == true %}
-        {% assign redirect = site.baseurl | append: '/' %}
-      {% elsif page.redirect contains '://' %}
-        {% assign redirect = page.redirect %}
-      {% else %}
-        {% assign redirect = page.redirect | relative_url %}
-      {% endif %}
+    {%- comment -%} Handle redirects if specified {%- endcomment -%}
+    {%- if page.redirect -%}
+      {%- if page.redirect == true -%}
+        {%- assign redirect = site.baseurl | append: '/' -%}
+      {%- elsif page.redirect contains '://' -%}
+        {%- assign redirect = page.redirect -%}
+      {%- else -%}
+        {%- assign redirect = page.redirect | relative_url -%}
+      {%- endif -%}
       <meta http-equiv="refresh" content="3; url={{ redirect }}">
-     
-    {% endif %}
-    <link rel="icon" href="{{ '/assets/favicon/favicon_io/favicon.ico' | relative_url }}" type="image/x-icon">
+    {%- endif -%}
+
+    {%- comment -%} Use modular head component {%- endcomment -%}
+    {% include core/head.liquid %}
     
-    <!-- Security Headers (Meta-level for GitHub Pages / Jekyll) -->
-<!-- NOTE: Primary CSP is defined in _includes/metadata.liquid -->
-<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="Permissions-Policy"
-      content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
-     <title>{{ page.title}}</title>
-    {% include head.liquid %}
+    <title>
+      {%- if page.title -%}
+        {{ page.title }} | {{ site.title }}
+      {%- else -%}
+        {{ site.title }}
+      {%- endif -%}
+    </title>
   </head>
 
   <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %}{% unless site.footer_fixed %} sticky-bottom-footer{% endunless %}">
+    
+    {%- comment -%} Skip link for accessibility {%- endcomment -%}
+    <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
 
-  <!-- Add this before </body> -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Header -->
-    {% include header.liquid %}
+    <!-- Header / Navigation -->
+    {% include components/navbar.liquid %}
 
     <!-- Content -->
-    <div class="container mt-5" role="main">
-      {% if page.toc and page.toc.sidebar %}
-        {% if page.toc.sidebar == 'right' %}
+    <main id="main-content" class="container mt-5" role="main">
+      {%- if page.toc and page.toc.sidebar -%}
+        {%- if page.toc.sidebar == 'right' -%}
           <div class="row">
             <!-- main content area -->
             <div class="col-sm-9">{{ content }}</div>
             <!-- sidebar, which will move to the top on a small screen -->
             <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
+              <nav id="toc-sidebar" class="sticky-top" aria-label="Table of contents"></nav>
             </div>
           </div>
-        {% else %}
+        {%- else -%}
           <div class="row">
             <!-- sidebar, which will move to the top on a small screen -->
             <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
+              <nav id="toc-sidebar" class="sticky-top" aria-label="Table of contents"></nav>
             </div>
             <!-- main content area -->
             <div class="col-sm-9">{{ content }}</div>
           </div>
-        {% endif %}
-      {% else %}
+        {%- endif -%}
+      {%- else -%}
         {{ content }}
-      {% endif %}
-    </div>
+      {%- endif -%}
+    </main>
 
     <!-- Footer -->
-    {% include footer.liquid %}
+    {% include components/footer.liquid %}
 
-    <!-- JavaScripts -->
-    {% include scripts/jquery.liquid %}
-    {% include scripts/bootstrap.liquid %}
-    {% include scripts/masonry.liquid %}
-    {% include scripts/mermaid.liquid %}
-    {% include scripts/diff2html.liquid %}
-    {% include scripts/leaflet.liquid %}
-    {% include scripts/chartjs.liquid %}
-    {% include scripts/echarts.liquid %}
-    {% include scripts/vega.liquid %}
-    {% include scripts/tikzjax.liquid %}
-    {% include scripts/typograms.liquid %}
-    {% include scripts/misc.liquid %}
-    {% include scripts/badges.liquid %}
-    {% include scripts/mathjax.liquid %}
-    {% include scripts/pseudocode.liquid %}
-    {% include scripts/analytics.liquid %}
-    {% include scripts/progressBar.liquid %}
-    {% include scripts/wechatModal.liquid %}
-    {% include scripts/imageLayouts.liquid %}
-    {% include scripts/jekyll_tabs.liquid %}
-    {% include scripts/back_to_top.liquid %}
-    {% include scripts/search.liquid %}
+    <!-- Scripts -->
+    {% include core/scripts.liquid %}
   </body>
 </html>

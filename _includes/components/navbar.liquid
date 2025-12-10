@@ -1,0 +1,185 @@
+{%- comment -%}
+================================================================================
+NAVBAR COMPONENT — Site Navigation
+================================================================================
+A clean, Apple-inspired navigation bar.
+- Reads navigation items from _data/navigation.yml
+- Supports dropdown menus
+- Responsive with mobile menu
+- Dark mode toggle integration
+================================================================================
+{%- endcomment -%}
+
+<header class="site-header">
+  <nav id="navbar" class="navbar navbar-light navbar-expand-lg {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation" aria-label="Main navigation">
+    <div class="container-fluid navbar-container">
+      
+      {%- comment -%} ===== LOGO / BRAND ===== {%- endcomment -%}
+      <a class="navbar-brand" href="{{ site.baseurl }}/" aria-label="{{ site.title }} - Home">
+        {%- if site.logo -%}
+          {%- comment -%} Light mode logo {%- endcomment -%}
+          <img 
+            class="navbar-logo spectrum-logo-light" 
+            src="{{ '/assets/img/logo/spectrum/SpectrumLogo Black.png' | relative_url }}" 
+            alt="{{ site.title }}"
+          >
+          {%- comment -%} Dark mode logo {%- endcomment -%}
+          <img 
+            class="navbar-logo spectrum-logo-dark" 
+            src="{{ '/assets/img/logo/spectrum/SpectrumLogo White.png' | relative_url }}" 
+            alt="{{ site.title }}"
+          >
+        {%- else -%}
+          <span class="navbar-title">
+            {%- if site.first_name -%}
+              <span class="font-weight-bold">{{ site.first_name }}</span>
+            {%- endif -%}
+            {{ site.middle_name }}
+            {{ site.last_name }}
+          </span>
+        {%- endif -%}
+      </a>
+
+      {%- comment -%} ===== MOBILE ACTIONS (visible on small screens) ===== {%- endcomment -%}
+      <div class="d-lg-none mobile-nav-actions">
+        {%- if site.enable_navbar_social -%}
+          <div class="navbar-brand social d-inline-block">
+            {% include social.liquid %}
+          </div>
+        {%- endif -%}
+        
+        {%- if site.enable_darkmode -%}
+          {% include components/theme-toggle.liquid mobile=true %}
+        {%- endif -%}
+      </div>
+
+      {%- comment -%} ===== HAMBURGER TOGGLE (mobile) ===== {%- endcomment -%}
+      <button 
+        class="navbar-toggler collapsed" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      {%- comment -%} ===== NAVIGATION MENU ===== {%- endcomment -%}
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto flex-wrap">
+          
+          {%- comment -%} Get About page title {%- endcomment -%}
+          {%- for p in site.pages -%}
+            {%- if p.permalink == '/' -%}
+              {%- assign about_title = p.title -%}
+            {%- endif -%}
+          {%- endfor -%}
+
+          {%- comment -%} Home Link {%- endcomment -%}
+          <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
+            <a class="nav-link" href="{{ '/' | relative_url }}">
+              {{ about_title | default: 'Home' }}
+              {%- if page.permalink == '/' -%}
+                <span class="sr-only">(current)</span>
+              {%- endif -%}
+            </a>
+          </li>
+
+          {%- comment -%} Dynamic Navigation Items {%- endcomment -%}
+          {%- assign sorted_pages = site.pages | sort: 'nav_order' -%}
+          {%- for p in sorted_pages -%}
+            {%- if p.nav and p.autogen == null -%}
+              
+              {%- if p.dropdown -%}
+                {%- comment -%} === DROPDOWN MENU === {%- endcomment -%}
+                {%- assign has_active_child = false -%}
+                {%- for child in p.children -%}
+                  {%- if page.title == child.title -%}
+                    {%- assign has_active_child = true -%}
+                  {%- endif -%}
+                {%- endfor -%}
+                
+                <li class="nav-item dropdown {% if page.title == p.title or has_active_child %}active{% endif %}">
+                  <a 
+                    class="nav-link dropdown-toggle" 
+                    href="#" 
+                    id="navbarDropdown-{{ forloop.index }}" 
+                    role="button" 
+                    data-bs-toggle="dropdown" 
+                    aria-haspopup="true" 
+                    aria-expanded="false"
+                  >
+                    {{ p.title }}
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown-{{ forloop.index }}">
+                    {%- for child in p.children -%}
+                      {%- if child.title == 'divider' -%}
+                        <div class="dropdown-divider"></div>
+                      {%- else -%}
+                        <a 
+                          class="dropdown-item {% if page.title == child.title %}active{% endif %}" 
+                          href="{{ child.permalink | relative_url }}"
+                        >
+                          {{ child.title }}
+                        </a>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </div>
+                </li>
+                
+              {%- else -%}
+                {%- comment -%} === STANDARD NAV ITEM === {%- endcomment -%}
+                {%- assign parent_link = p.permalink | remove: 'index.html' -%}
+                <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
+                  {%- if p.permalink contains '/blog/' -%}
+                    {%- assign nav_url = '/blog/' -%}
+                  {%- else -%}
+                    {%- assign nav_url = p.url -%}
+                  {%- endif -%}
+                  
+                  <a class="nav-link" href="{{ nav_url | relative_url }}">
+                    {{ p.title }}
+                    {%- if page.url contains p.url -%}
+                      <span class="sr-only">(current)</span>
+                    {%- endif -%}
+                  </a>
+                </li>
+              {%- endif -%}
+              
+            {%- endif -%}
+          {%- endfor -%}
+
+          {%- comment -%} ===== SEARCH (if enabled) ===== {%- endcomment -%}
+          {%- if site.search_enabled -%}
+            <li class="nav-item d-none d-lg-block">
+              <button id="search-toggle" class="nav-search-btn" title="Search" onclick="openSearchModal()">
+                <span class="nav-link">
+                  <span class="search-shortcut">ctrl k</span>
+                  <i class="ti ti-search"></i>
+                </span>
+              </button>
+            </li>
+            <li class="nav-item d-lg-none">
+              <button id="mobile-search-toggle" class="nav-search-btn" title="Search" onclick="openSearchModal()">
+                <span class="nav-link"><i class="ti ti-search"></i></span>
+              </button>
+            </li>
+          {%- endif -%}
+
+          {%- comment -%} ===== THEME TOGGLE (desktop) ===== {%- endcomment -%}
+          {%- if site.enable_darkmode -%}
+            <li class="toggle-container d-none d-lg-block">
+              {% include components/theme-toggle.liquid %}
+            </li>
+          {%- endif -%}
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

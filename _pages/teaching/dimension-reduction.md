@@ -1,10 +1,10 @@
 ---
 layout: page
-title: "Dimension Reduction: Theory and Applications to Image Processing"
+title: "Dimension Reduction"
 permalink: /teaching/dimension-reduction/
 description:
 course_id: dr
-nav: true
+nav: false
 schedule:
   dates_time: "Tuesday-Thursday; From 2.30 pm to 4.00 pm"
   classroom: "B308 (December 9, 16, 18, 30) and B306 (December 23), EE Department, IISc"

@@ -529,6 +529,50 @@ $teaching-transitions: (
   }
 }
 
+// Instructor Profile
+.instructor-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  &__photo {
+    flex-shrink: 0;
+    text-align: center;
+    
+    img, figure, picture {
+      max-height: 300px;
+      width: auto;
+      border-radius: map-get($teaching-radius, md);
+      box-shadow: map-get($teaching-shadows, soft);
+    }
+    
+    figure {
+      margin: 0;
+    }
+  }
+  
+  &__name {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--global-text-color);
+  }
+  
+  &__bio {
+    flex: 1;
+    line-height: 1.7;
+    color: var(--global-text-color);
+    text-align: justify;
+  }
+}
+
 // Schedule table
 .schedule-table-wrapper {
   overflow-x: auto;

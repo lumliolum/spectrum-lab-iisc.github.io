@@ -19,12 +19,14 @@
 - title: "Dimension Reduction: Theory and Applications to Image Processing"
   description: "This course introduces the theory and applications of dimension reduction techniques, with a focus on image processing applications."
   instructor: "Prof. S. Lakshmivarahan"
+  instructor_bio: "After completing his PhD from the Indian Institute of Science in 1973, S. Lakshmivarahan held faculty and post-doctoral positions at the IIT-Madras, Brown and Yale Universities through 1978. In the Fall of 1978, he joined the School of Computer Science, University of Oklahoma (OU) where he held the position of George Lynn Cross Research Professor since 1995. His research interests are in Applied Mathematics and Computation and includes Data Mining and Analytics, Data Assimilation, Computational Finance, Parallel Computation and Learning Algorithms. He is an author/coauthor of six books in these areas. He was elected as a Fellow of the IEEE in 1993 and a Fellow of ACM in 1995. He has held short-term visiting positions in Japan, China, Taiwan, Thailand, India, Germany, England, Mexico, Brazil, Canada, and USA. Since July 2019, he holds the position of George Lynn Cross Research Professor Emeritus at the School of Computer Science, OU."
   teaching_assistants: ["Parth Gupte", "Pramath Haritz"]
   semester: "Dec. 2025"
   permalink: "/teaching/dimension-reduction/"
   course_id: "dr"
   type: "Short Course"
-
+  hosts : ["Prof. C. S. Seelamantula" , 'Prof. P. S. Sastry']
+  instructor_photo : "assets/img/people/instructors/lakshmivarahan.png"
 # - title: "Machine Learning"
 #   description: "Introduction to machine learning algorithms, pattern recognition, and statistical learning theory"
 #   instructor: "Prof. Chandra Sekhar Seelamantula"

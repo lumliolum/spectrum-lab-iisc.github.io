@@ -1235,6 +1235,20 @@ footer.sticky-bottom {
 
       .title {
         font-weight: bolder;
+
+        // Clickable publication title when article_page is set
+        .publication-title-link {
+          color: var(--global-text-color);
+          text-decoration: none;
+          border-bottom: 2px solid transparent;
+          transition: all 0.2s ease;
+
+          &:hover {
+            color: var(--global-theme-color);
+            border-bottom-color: var(--global-theme-color);
+            text-decoration: none;
+          }
+        }
       }
 
       .author {
@@ -1279,6 +1293,22 @@ footer.sticky-bottom {
             // color: var(--global-theme-color);
             background-color: var(--global-theme-color);
             border-color: var(--global-theme-color);
+          }
+        }
+        // Article button - highlighted for research articles
+        a.article-btn {
+          background-color: var(--global-theme-color);
+          border-color: var(--global-theme-color);
+          color: white;
+
+          i {
+            margin-right: 0.25rem;
+          }
+
+          &:hover {
+            background-color: var(--global-hover-color);
+            border-color: var(--global-hover-color);
+            color: white;
           }
         }
         a.award.btn {

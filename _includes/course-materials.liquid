@@ -29,6 +29,13 @@
         </span>
         {%- endif -%}
         
+        {%- if course_data.hosts and course_data.hosts.size > 0 -%}
+        <span class="pill pill--muted">
+          <i class="fas fa-home"></i>
+          Hosts: {{ course_data.hosts | join: ", " }}
+        </span>
+        {%- endif -%}
+        
         {%- if course_data.teaching_assistants and course_data.teaching_assistants.size > 0 -%}
         <span class="pill pill--muted">
           <i class="fas fa-users"></i>
@@ -37,6 +44,36 @@
         {%- endif -%}
       </div>
     </header>
+
+    <!-- Instructor Bio Section -->
+    {%- if course_data.instructor_bio or course_data.instructor_photo -%}
+    <section class="content-section fade-in">
+      <div class="section-label">
+        <div class="section-label__icon">
+          <i class="fas fa-chalkboard-teacher"></i>
+        </div>
+        <span class="section-label__text">About the Instructor</span>
+      </div>
+
+      <div class="minimal-card minimal-card--elevated">
+        <div class="instructor-profile">
+          {%- if course_data.instructor_photo -%}
+          <div class="instructor-profile__photo">
+            {% include figure.liquid path=course_data.instructor_photo alt=course_data.instructor class="img-fluid rounded shadow" %}
+            {%- if course_data.instructor -%}
+            <h4 class="instructor-profile__name">{{ course_data.instructor }}</h4>
+            {%- endif -%}
+          </div>
+          {%- endif -%}
+          {%- if course_data.instructor_bio -%}
+          <div class="instructor-profile__bio t-body">
+            {{ course_data.instructor_bio }}
+          </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </section>
+    {%- endif -%}
 
     <!-- Schedule Section -->
     {%- if page.schedule -%}

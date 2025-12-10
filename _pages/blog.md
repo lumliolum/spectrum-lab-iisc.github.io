@@ -2,7 +2,7 @@
 layout: default
 permalink: /blog/
 title: Research
-nav: true
+nav: false
 nav_order: 2
 pagination:
   enabled: true

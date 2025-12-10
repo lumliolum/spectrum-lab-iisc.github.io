@@ -140,9 +140,9 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Research Highlights # blog_name will be displayed in your blog page
-blog_description:
-permalink: /blog/:year/:title/
+# blog_name: Research Highlights # blog_name will be displayed in your blog page
+# blog_description:
+# permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
 # Pagination
@@ -204,6 +204,9 @@ collections:
       layout: post
     output: true
     permalink: /news/:path/
+  articles:
+    output: true
+    permalink: /articles/:path/
   people:
     output: true
     permalink: /people/:path/
@@ -223,7 +226,6 @@ collections:
 
 # Performance optimizations
 incremental: false  # Set to true for development, false for production
-lsi: false  # Latent Semantic Indexing for related posts
 profile: false  # Show build time profiling
 safe: false  # Allow custom plugins
 parallel_jobs: 4  # Number of parallel processing jobs

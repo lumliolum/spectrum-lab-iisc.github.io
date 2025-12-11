@@ -1,67 +1,68 @@
 ---
 layout: distill
 title: "Neuromorphic Unlimited Sampling"
-description: "Unlimited sampling via neuromorphic event-driven cameras."
-date: 2025-07-12
+description: "Acquiring high-dynamic range signals with minimal oversampling."
+date: 2024-04-18
 last_updated: 2025-07-12
 post_author: Abijith J. Kamath
 authors:
   - name: Abijith J. Kamath
-    url: "https://kamathabijithj.github.io"
+    url: "https://kamath-abhijith.github.io"
     affiliations:
       name: Indian Institute of Science
-paper_url: https://ieeexplore.ieee.org/document/10888893
-doi: 10.1109/ICASSP49660.2025.10888893
+paper_url: https://ieeexplore.ieee.org/document/10447840
+doi: 10.1109/ICASSP48485.2024.10447840
 bibliography: 2024-04-18-nus.bib
-thumbnail: assets/img/research-highlights/nus/nus-banner.jpeg
+thumbnail: assets/img/research-highlights/nus/nus-cover.jpeg
+pretty_table: true
 
 toc: true
-related_posts: false
+related_posts: true
 ---
 
 <div class="row justify-content-sm-center">
-    <div class="col-sm-12 mt-3 mt-md-0 blog-ready">
+    <div class="col-sm-12 mt-3 mt-md-0">
         {% include figure.liquid path="assets/img/research-highlights/nus/nus-banner.jpeg" %}
     </div>
 </div>
 
-## Abstract
-
-The unlimited sampling framework enables the reconstruction of bandlimited signals from measurements obtained using a self-resetting analog-to-digital converter (ADC). This ADC, called the modulo ADC, folds the signal modulo a threshold ($\lambda$) before sampling, thus addressing the issue of ADC saturation. On the other hand, event-driven cameras capture the temporal changes in the intensity of each pixel, and have been shown to reach a high dynamic range, thus providing an attractive solution to deal with saturation. In this paper, we explore a connection between neuromorphic sensing and unlimited sampling by showing that a variant of the integrate-and-fire model is equivalent to modulo sampling. This connection allows us to use well-established reconstruction algorithms for modulo sampling to recover signals from event camera measurements. We present the connection via simulated data.
+Unlimited sampling (US) is a computational sensing paradigm for high-dynamic range (HDR) acquisition of signals. The objective is to overcome the limitations in standard analog-to-digital converters (ADCs) where the dynamic range is fixed: signal that lies outside the fixed dynamic range saturates.
 {: .text-justify}
 
-## Introduction
-
-Analog-to-digital converters (ADCs) are ubiquitous in various signal processing systems, including imaging, audio, and communication systems. Since ADCs have a limited range, signals must be appropriately attenuated before digitization to avoid saturation. For example, in digital cameras, automatic gain control is typically applied to avoid saturation. For high-dynamic-range (HDR) imaging applications, this practice is undesirable because attenuating a signal causes a loss of information for all pixel locations, particularly in the darker parts of the scene, even if only a handful of pixels experience saturation. The unlimited sampling framework, first introduced in<d-cite key="bhandari2017unlimited"></d-cite>, addresses this issue by digitizing a folded version of the input signal and reconstructing the original signal from the folded samples.
+Unlimited sampling is an important problem in addressing signal representation in practical systems and has applications in almost all imaging systems. We propose a new technique for unlimited sampling using a neuromorphic encoder. Our system is power efficient, simple to implement in practice, and most importantly, does not require oversampling.
 {: .text-justify}
 
-In image processing, the conventional way of dealing with saturation is via high-dynamic-range (HDR) imaging. In exposure bracketing, the standard approach to HDR imaging, the same scene is captured using multiple exposures, and a composite image is constructed from these images. Recently, event-driven cameras have emerged as an alternative to conventional cameras. Event cameras are bio-inspired sensors where each pixel triggers an event asynchronously whenever the change in the log intensity of that particular pixel crosses a threshold.
+## Computational Modulo Sampling
+
+Computational modulo sampling is a framework for unlimted sampling that uses a self-reset ADC (SR-ADC) as opposed to a standard ADC, where a continuous-time signal $$f(t)$$ is first folded using the continuous-domain modulo operator before acquisition. The idea of computational unlimited sampling was first proposed by [Dr Ayush Bhandari](http://alumni.media.mit.edu/~ayush/usf.html), currently at Imperial College London. The continuous-time modulo operator with parameter $$\lambda$$ is defined as
 {: .text-justify}
 
-Event cameras naturally exhibit high dynamic range (HDR), with each pixel independently sensing the scene's brightness changes, and they can do so at a high rate. The event threshold of an event camera is the smallest change in log intensity needed to trigger an event. The event threshold determines the accuracy and sensitivity of an event camera to small changes in intensity.
-{: .text-justify}
+<div style="text-align: center;">
+$f\mapsto \mathcal{M}_{\lambda}\{f\} = 2\lambda\left[\frac{f}{2\lambda}+\frac{1}{2}\right]-\lambda,$
+<br><br>
+</div>
 
-## Modulo ADC and Unlimited Sampling
-
-The modulo ADC is an architecture that enables an ADC to measure arbitrarily large voltages. Before quantization, a modulo ADC folds voltages outside the dynamic range $[-\lambda, \lambda]$ into the dynamic range. The folding, which is a non-linear operation, is described using the modulo operator (see figure):
+where $$[\cdot]$$ defines the fractional part of the argument. The modulo operator restricts the dynamic range to the interval $$[-\lambda,+\lambda]$$ and enables acquisition of high-dynamic range (in principle, unlimited) acquisition.
 {: .text-justify}
 
 <div class="row justify-content-sm-center">
-    <div class="col-sm-12 mt-3 mt-md-0 blog-ready">
+    <div class="col-sm-6 mt-3 mt-md-0 blog-ready">
         {% include figure.liquid path="assets/img/research-highlights/nus/mod-encoder.png" %}
     </div>
 </div>
+<div class="caption">
+    Fig. 1: What happens in a computational unlimited sampling setup.
+</div>
 
-$$
-y(t) = \mathcal{M}_{\lambda}(f(t)) \triangleq \left(f(t) + \lambda \right) \mod 2\lambda - \lambda.
-$$
-
-The output of a modulo ADC for a bandlimited signal $f$ is a uniformly sampled version of $y(t)$. The unlimited sensing framework is concerned with the recovery of $f$ from samples of $y$. The reconstruction was shown to be possible under certain conditions on the sampling frequency and ADC threshold<d-cite key="bhandari2017unlimited"></d-cite>.
+Reconstruction of the high-dynamic range signal from samples of $$\mathcal{M}_{\lambda}\{f\}$$ requires oversampling as compared to the Nyquist rate of $$f$$. Further, for practical deployment of unlimited sampling, specialised hardware is required. This can indeed be a practical bottleneck! Oversampling is expensive, and adds to the cost of replacing the existing standard ADC with a self-reset ADC. Our solution addresses this problem and is as simple as using a nonlinear filter before acquisition!
 {: .text-justify}
 
-## Neuromorphic Sensing via an Integrate-and-Fire Model
+## The **Neuromorphic Unlimited Sampling** Framework
 
-Neuromorphic sensors are characterized by their response to changes in intensity, as opposed to the response to intensity itself. The event-driven camera is one such neuromorphic sensor. An ideal event camera fires an event whenever the intensity crosses a fixed threshold. The integrate-and-fire model captures this behavior<d-cite key="lichtsteiner2008128"></d-cite>.
+At the heart of our solution is the neuromorphic encoder, which is a bio-inspired acquisition device that has been successfully deployed in making efficient video acquisition systems. For more on neuromorphic video acquisition, check out the work from the [Robotics and Perception Group](https://rpg.ifi.uzh.ch/index.html).
+{: .text-justify}
+
+Neuromorphic encoders are opportunistic devices that record signals as a stream of events that denote a change in the input by a constant. The signal is represented as a sequence of 2-tuples, each constituting the time instant and the polarity of change.
 {: .text-justify}
 
 <div class="row justify-content-sm-center">
@@ -69,49 +70,68 @@ Neuromorphic sensors are characterized by their response to changes in intensity
         {% include figure.liquid path="assets/img/research-highlights/nus/nus-encoder.jpeg" %}
     </div>
 </div>
+<div class="caption">
+    Fig. 2: Schematic of a neuromorphic encoder. The output is a sequence of 2-tuples characterising the time instant and polarity of change in the absolute-value of the signal by the dynamic-range of the ADC <d-cite key="kamath2023neuromorphic"></d-cite>.
+</div>
 
-The integrate-and-fire model is characterized by two operations: an integration of intensity from one event until the next, and a firing of an event and subsequent reset whenever the integral equals a threshold. Mathematically, this can be described as follows:
+Neuromorphic encoders are of practical interest as they do not record any measurements when there is no significant change in the signal. The key observation for unlimited sampling is that the difference signal $$v(t)$$ is a folded version of the input signal $$f(t)$$, and is completely accommodated in the range $$[-\lambda, +\lambda]$$. In essence, the signal $$v(t)$$ is a polarity dependent modulo operator acting on the input signal as
 {: .text-justify}
 
-An event is fired whenever the integral crosses a threshold:
+<div style="text-align: center;">
+$f\mapsto v = \mathcal{F}_\lambda\{f\}.$
+<br><br>
+</div>
 
-$$\int_{t_{k-1}}^{t_{k}} f(s) \, ds = \kappa p_k,$$
-
-where $t_{k-1}$ and $t_k$ are the timestamps of the $(k-1)$-th and $k$-th events respectively, $\kappa$ is the event threshold, and $p_k$ is the event polarity at time $t_k$.
-
-## Neuromorphic Sensing Meets Unlimited Sampling
+The in-built folding in the neuromorphic encoder along with its opportunistic nature makes it a perfect fit for unlimited sampling. 
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-12 mt-3 mt-md-0 blog-ready">
         {% include figure.liquid path="assets/img/research-highlights/nus/nus-schematic.jpeg" %}
     </div>
 </div>
-
-We establish a connection between the integrate-and-fire model and modulo sampling by considering a small modification to the measurement model described above. 
-{: .text-justify}
-
-In this modified model, we assume the input signal to be a bandlimited function. The polarity information and the time stamps of the integrate-and-fire model are first used to generate a piecewise-constant (PC) signal. The PC signal at any time $t$ is essentially the cumulative polarity up to time $t$, multiplied by the threshold $\kappa$. Thus, at any time $t$, the PC signal has a value in $\kappa \mathbb{Z}$. By definition, the value of the PC signal is constant in the interval $(t_k, t_{k+1})$ and is updated at each spike time $t_k$. 
-{: .text-justify}
-
-We call the resulting function the folded function, denoted by $g$ (see figure):
-
-$$ g(t) = f(t) - r(t), $$
-
-where $f$ is the input bandlimited signal and $r(t)$ is the cumulative polarity, which we call the residual function. After the sampling, using a standard uniform sampler, we get a set of samples of $g$.
-{: .text-justify}
-
-Given the samples of the folded function and the threshold $\kappa$, the problem of recovering the input is related to that of unlimited sampling. This is because the residual signal is a piecewise-constant signal and also takes values in $\kappa \mathbb{Z}$. A reconstruction is then possible using the algorithmic framework of the unlimited sampling methodology.
-{: .text-justify}
-
-## Neuromorphic Sensing Unlimited Sampling: Results
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-12 mt-3 mt-md-0 blog-ready">
-        {% include video.liquid path="https://www.youtube.com/embed/fU-qpYIWvjg?si=Aq0KgAu1DRZh3oPD" class="img-fluid rounded z-depth-1" autoplay="true" controls="true" %}
-    </div>
+<div class="caption">
+    Fig. 3: Unlimited sampling using a neuromorphic encoder: The accompanying ADC operates at the Nyquist rate and at full precision. The error incurred due to folding is tracked using the neuromorphic encoder allowing real-time reconstruction.
 </div>
 
-<br>
+Similar to modulo sampling, the error signal $$f(t)-v(t)$$ is a piecewise constant signal with amplitude quantised to multiples of $$\lambda$$. In computational modulo sampling, the error signal is estimated from _oversampled_ measurements of the folded signal using the repeated finite-difference algorithm. In neuromorphic unlimited sampling, the error signal is captured succinctly using the output of the neuromorphic encoder as
+{: .text-justify}
 
-In the video above, we show a toy example demonstrating the validity of the proposed equivalence. To this end, a bandlimited signal is passed through the integrate-and-fire model, and the resulting events are used to construct the folded signal. The folded signal is uniformly sampled, and the samples are used to recover the original signal using an unlimited sampling algorithm. The reconstruction quality is the same as that for samples of a modulo ADC. The video shows the reconstruction for different values of the event threshold $\kappa$.
+<div style="text-align: center;">
+$\eta_f(t) = \sum_m \lambda\mathcal{S}\{p_m\} 1_{[t_m,t_{m+1}]}(t),$
+<br><br>
+</div>
+
+
+where $$\mathcal{S}$$ denotes the cumulative summation operator. Therefore, no oversampling is required! Uniform samples of the folded signal $$v$$ captures the high-dynamic-range information in the input signal, achieving unlimited sampling!
+{: .text-justify}
+
+Additional measurements are made using the neuromorphic encoder opportunistically, i.e., only when the signal goes beyond the dynamic range while consuming much less power than the ADC. We also show that the maximal rate of additional measurements that may be obtained decays with the dynamic range. Our perfect reconstruction strategy only requires addition of a residual signal constructed using the compressed representation of the error signal, which can be achieved in real time.
+{: .text-justify}
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-9 mt-3 mt-md-0 blog-ready">
+        {% include figure.liquid path="assets/img/research-highlights/nus/nus-demo.png" %}
+    </div>
+</div>
+<div class="caption">
+    Fig. 4: Demonstration of neuromorphic sampling and perfect reconstruction.
+</div>
+
+Our patented unlimited sampling hardware using simple and cost-effective components in-house <d-cite key="kulur2024neuromorphic"></d-cite>. The neuromorphic unlimited sampling scheme is such that the neuromorphic encoder can be plugged into an existing acquisition system to achieve unlimited sampling, akin to a prefilter typically used in sampling, and does not require specialised hardware such as the self-reset ADC. In hardware, we demonstrate HDR acquisition and real-time reconstruction of synthetic signals. We show that neuromorphic unlimited sampling operates at the Nyquist rate of the signal, while opportunistically recording compressed measurements. Our demonstration was presented at the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) 2024, in Seoul Korea 2024, in the Show-and-tell Demos <d-cite key="kulur2024modulo"></d-cite>. A detailed theoretical exposition is available in our paper <d-cite key="kamath2024neuromorphic"></d-cite> which was also presented at IEEE ICASSP 2024. The extension of this theory to a larger class of signals including video signals is going to be presented at the IEEE ICASSP 2025 <d-cite key="kamath2025neuromorphic"></d-cite>.
+{: .text-justify}
+
+<!-- Video file not available -->
+<!-- {% include video.liquid path="assets/video/nus-demo.mp4" class="img-fluid rounded z-depth-1" controls=true%} -->
+<!-- <div class="row justify-content-sm-center">
+    <div class="col-sm-12 mt-5 mt-md-0">
+        <div style="text-align: center;">
+            {% include video.liquid path="https://www.youtube.com/embed/JdMvjfvdW38?si=g4B4d4JFXwwqvTs2" class="img-fluid rounded z-depth-1" controls=true width="100%"%}
+        </div>
+    </div>
+</div> -->
+<!-- <div class="caption">
+    Watch our demo on YouTube!
+</div> -->
+
+The hardware contributions to this project are in collaboration with Shreyas, Shreyansh, Satyapreet and Dr Thakur at [NeuRonICS, Department of Electronic Systems Engineering](https://labs.dese.iisc.ac.in/neuronics/), IISc. Bengaluru.
 {: .text-justify}

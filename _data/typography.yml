@@ -1,0 +1,141 @@
+# =============================================================================
+# TYPOGRAPHY & FONTS CONFIGURATION
+# =============================================================================
+# Central control for all typography settings across the site.
+# Edit this file to change fonts site-wide.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Body Text Fonts
+# -----------------------------------------------------------------------------
+body:
+  primary: "Helvetica Neue"
+  fallback: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+  weight:
+    light: 300
+    regular: 400
+    medium: 500
+    bold: 700
+  size:
+    base: "16px"
+    small: "14px"
+    large: "18px"
+
+# -----------------------------------------------------------------------------
+# Heading Fonts  
+# -----------------------------------------------------------------------------
+headings:
+  primary: "Helvetica Neue"
+  fallback: "'Roboto', 'Helvetica Neue', sans-serif"
+  weight:
+    regular: 400
+    medium: 500
+    semibold: 600
+    bold: 700
+
+# -----------------------------------------------------------------------------
+# Monospace / Code Fonts
+# -----------------------------------------------------------------------------
+code:
+  primary: "JetBrains Mono"
+  fallback: "'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace"
+  weight: 400
+  size: "0.9em"
+
+# -----------------------------------------------------------------------------
+# Serif Fonts (for articles, blog posts)
+# -----------------------------------------------------------------------------
+serif:
+  primary: "Helvetica Neue"
+  fallback: "Georgia, 'Times New Roman', serif"
+  weight:
+    light: 300
+    regular: 400
+    medium: 500
+    bold: 700
+
+# -----------------------------------------------------------------------------
+# Math Typography Configuration
+# -----------------------------------------------------------------------------
+math:
+  # Default math engine: "mathjax" or "katex"
+  default_engine: "mathjax"
+  
+  # MathJax Configuration
+  mathjax:
+    version: "3.2.2"
+    # Available fonts: "mathjax-modern", "mathjax-asana", "mathjax-bonum", 
+    #                  "mathjax-dejavu", "mathjax-pagella", "mathjax-schola",
+    #                  "mathjax-termes", "mathjax-stix2", "mathjax-fira", "mathjax-gyre"
+    font: "mathjax-modern"
+    # Output format: "chtml" (CommonHTML) or "svg"
+    output: "chtml"
+    # Enable equation numbering: "ams", "all", or "none"
+    tags: "ams"
+    # Enable $ for inline math (in addition to \( \))
+    inlineMath: true
+    # Enable $$ for display math (in addition to \[ \])
+    displayMath: true
+    # Process \ref and \eqref
+    processRefs: true
+    # Process environments like align, gather, etc.
+    processEnvironments: true
+    
+  # KaTeX Configuration (faster, but fewer features)
+  katex:
+    version: "0.16.9"
+    # Available fonts: "katex-main", "lm" (Latin Modern), "cm" (Computer Modern)
+    font: "katex-main"
+    # Throw errors on unsupported commands
+    throwOnError: false
+    # Error color for invalid LaTeX
+    errorColor: "#cc0000"
+    # Max expansion depth (for macros)
+    maxExpand: 1000
+    # Trust HTML in \text{} and similar
+    trust: false
+
+# -----------------------------------------------------------------------------
+# Icon Fonts
+# -----------------------------------------------------------------------------
+icons:
+  fontawesome:
+    version: "6.4.2"
+    enabled: true
+  academicons:
+    version: "1.9.4"
+    enabled: true
+  tabler:
+    version: "2.30.0"
+    enabled: true
+  material:
+    enabled: true
+
+# -----------------------------------------------------------------------------
+# Font Loading Strategy
+# -----------------------------------------------------------------------------
+loading:
+  # Strategy: "preload", "prefetch", or "normal"
+  strategy: "preload"
+  # Display swap for web fonts
+  display: "swap"
+  # Subset fonts (reduces file size)
+  subset: "latin,latin-ext"
+
+# -----------------------------------------------------------------------------
+# Font Sources (URLs)
+# -----------------------------------------------------------------------------
+sources:
+  google_fonts:
+    enabled: true
+    url: "https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Google+Sans+Text:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@100;300;400;500;700&family=JetBrains+Mono:wght@400;500;600;700&family=Material+Icons&display=swap"
+  
+  adobe_fonts:
+    enabled: true
+    kit_id: "pzd6qvr"
+    url: "https://use.typekit.net/pzd6qvr.css"
+  
+  custom_fonts:
+    enabled: false
+    # Add custom font URLs here
+    urls: []

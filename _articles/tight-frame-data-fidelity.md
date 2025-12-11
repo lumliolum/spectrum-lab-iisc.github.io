@@ -16,15 +16,20 @@ bibliography: 2024-08-06-tight.bib
 thumbnail: assets/img/research-highlights/tight/alt_prox.jpg
 pretty_table: true
 
+# Math rendering configuration
+# Options: mathjax (default), katex, false (to disable)
+math_engine: mathjax
+# MathJax fonts: mathjax-modern (default), mathjax-stix2, mathjax-termes, 
+#                mathjax-pagella, mathjax-gyre, mathjax-fira
+# KaTeX fonts: katex-main (default)
+math_font: mathjax-modern
+enable_math: true
+
 toc: true
 related_posts: false
 ---
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-12 mt-3 mt-md-0 blog-ready">
-        {% include figure.liquid path="assets/img/research-highlights/tight/alt_prox.jpg" %}
-    </div>
-</div>
+{% include figure.liquid path="assets/img/research-highlights/tight/alt_prox.jpg" class="img-fluid rounded" %}
 
 ## The Data-Fidelity Term in Linear Inverse Problems
 

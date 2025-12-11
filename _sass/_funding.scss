@@ -49,12 +49,18 @@
     }
   }
 
+  // Old class - inverts always (kept for backwards compatibility)
   .funding-logo-invert {
     filter: invert(1) grayscale(0.2);
 
     &:hover {
       filter: invert(1) grayscale(0);
     }
+  }
+  
+  // New class - only inverts in dark mode
+  .funding-logo-invert-on-dark {
+    // No filter in light mode
   }
 }
 
@@ -69,6 +75,15 @@ html[data-theme="dark"] .funding {
   }
 
   .funding-logo-invert {
+    filter: invert(1) grayscale(0.2);
+
+    &:hover {
+      filter: invert(1) grayscale(0);
+    }
+  }
+  
+  // Invert only in dark mode
+  .funding-logo-invert-on-dark {
     filter: invert(1) grayscale(0.2);
 
     &:hover {

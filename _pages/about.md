@@ -42,23 +42,27 @@ latest_posts:
       <div class="col-lg-3 col-md-4 text-center">
         <div class="hero-logos">
           <div class="logo-item">
-            {% include figure.liquid 
-              path='assets/img/logo/iisc/IISc_Seal_Master_logo_Black.png' 
-              alt="Indian Institute of Science" 
-              class="logo-img iisc-logo iisc-logo-light"
-            %}
-            {% include figure.liquid 
-              path='assets/img/logo/iisc/IISc_Seal_Master_logo_White.png' 
-              alt="Indian Institute of Science" 
-              class="logo-img iisc-logo iisc-logo-dark"
-            %}
+            <a href="https://iisc.ac.in" target="_blank" rel="noopener noreferrer" title="Indian Institute of Science">
+              {% include figure.liquid 
+                path='assets/img/logo/iisc/IISc_Seal_Master_logo_Black.png' 
+                alt="Indian Institute of Science" 
+                class="logo-img iisc-logo iisc-logo-light"
+              %}
+              {% include figure.liquid 
+                path='assets/img/logo/iisc/IISc_Seal_Master_logo_White.png' 
+                alt="Indian Institute of Science" 
+                class="logo-img iisc-logo iisc-logo-dark"
+              %}
+            </a>
           </div>
           <div class="logo-item">
-            {% include figure.liquid 
-              path='assets/img/logo/iisc/ee_logo.png' 
-              alt="Department of Electrical Engineering" 
-              class="logo-img ee-logo"
-            %}
+            <a href="https://ee.iisc.ac.in" target="_blank" rel="noopener noreferrer" title="Department of Electrical Engineering, IISc">
+              {% include figure.liquid 
+                path='assets/img/logo/iisc/ee_logo.png' 
+                alt="Department of Electrical Engineering" 
+                class="logo-img ee-logo"
+              %}
+            </a>
           </div>
         </div>
       </div>

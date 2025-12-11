@@ -1,0 +1,168 @@
+{%- comment -%}
+  ================================================================================
+  TYPOGRAPHY STYLES
+  ================================================================================
+  Generates CSS custom properties from _data/typography.yml
+  Include this in the head.liquid to apply site-wide typography settings.
+  ================================================================================
+{%- endcomment -%}
+
+{%- assign typo = site.data.typography -%}
+
+<style>
+  :root {
+
+
+    /*
+   ==========================================================================
+   FONT FAMILIES
+   ==========================================================================
+*/
+
+    /* Body Text */
+    --font-body: {{ typo.body.primary | default: "Roboto" }}, 
+    {{ typo.body.fallback | default: "system-ui, sans-serif" }};
+
+    /* Headings */
+    --font-heading: {{ typo.headings.primary | default: "Google Sans" }}, 
+    {{ typo.headings.fallback | default: "'Roboto', sans-serif" }};
+
+    /* Monospace / Code */
+    --font-code: {{ typo.code.primary | default: "JetBrains Mono" }}, 
+    {{ typo.code.fallback | default: "'SF Mono', monospace" }};
+
+    /* Serif (for articles) */
+    --font-serif: {{ typo.serif.primary | default: "Roboto Slab" }}, 
+    {{ typo.serif.fallback | default: "Georgia, serif" }};
+
+
+    /*
+   ==========================================================================
+   FONT WEIGHTS
+   ==========================================================================
+*/
+    --font-weight-light: {{ typo.body.weight.light | default: 300 }};
+    --font-weight-regular: {{ typo.body.weight.regular | default: 400 }};
+    --font-weight-medium: {{ typo.body.weight.medium | default: 500 }};
+    --font-weight-bold: {{ typo.body.weight.bold | default: 700 }};
+
+    /* Heading-specific weights */
+    --font-weight-heading: {{ typo.headings.weight.semibold | default: 600 }};
+
+
+    /*
+   ==========================================================================
+   FONT SIZES
+   ==========================================================================
+*/
+    --font-size-base: {{ typo.body.size.base | default: "16px" }};
+    --font-size-small: {{ typo.body.size.small | default: "14px" }};
+    --font-size-large: {{ typo.body.size.large | default: "18px" }};
+    --font-size-code: {{ typo.code.size | default: "0.9em" }};
+
+    /* Heading Scale */
+    --font-size-h1: 2.25rem;
+    --font-size-h2: 1.75rem;
+    --font-size-h3: 1.375rem;
+    --font-size-h4: 1.125rem;
+    --font-size-h5: 1rem;
+    --font-size-h6: 0.875rem;
+
+
+    /*
+   ==========================================================================
+   LINE HEIGHTS
+   ==========================================================================
+*/
+    --line-height-body: 1.6;
+    --line-height-heading: 1.3;
+    --line-height-code: 1.5;
+
+
+    /*
+   ==========================================================================
+   LETTER SPACING
+   ==========================================================================
+*/
+    --letter-spacing-body: -0.011em;
+    --letter-spacing-heading: -0.02em;
+    --letter-spacing-code: 0;
+  }
+
+  /* Apply typography variables to base elements */
+  body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+    letter-spacing: var(--letter-spacing-body);
+    font-weight: var(--font-weight-regular);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-heading);
+    line-height: var(--line-height-heading);
+    letter-spacing: var(--letter-spacing-heading);
+  }
+
+  h1 {
+    font-size: var(--font-size-h1);
+  }
+  h2 {
+    font-size: var(--font-size-h2);
+  }
+  h3 {
+    font-size: var(--font-size-h3);
+  }
+  h4 {
+    font-size: var(--font-size-h4);
+  }
+  h5 {
+    font-size: var(--font-size-h5);
+  }
+  h6 {
+    font-size: var(--font-size-h6);
+  }
+
+  code,
+  pre,
+  kbd,
+  samp,
+  .monospace {
+    font-family: var(--font-code);
+    font-size: var(--font-size-code);
+    line-height: var(--line-height-code);
+    letter-spacing: var(--letter-spacing-code);
+  }
+
+  /* Article-specific serif styling */
+  .article-content,
+  .post-content,
+  .distill-content {
+    /* Use serif for long-form reading */
+    font-family: var(--font-serif);
+    font-size: var(--font-size-large);
+    line-height: 1.75;
+  }
+
+  .article-content h1,
+  .article-content h2,
+  .article-content h3,
+  .article-content h4,
+  .article-content h5,
+  .article-content h6,
+  .post-content h1,
+  .post-content h2,
+  .post-content h3,
+  .post-content h4,
+  .post-content h5,
+  .post-content h6 {
+    /* Keep sans-serif for headings in articles */
+    font-family: var(--font-heading);
+  }
+</style>

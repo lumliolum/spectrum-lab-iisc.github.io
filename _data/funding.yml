@@ -11,7 +11,7 @@
 - logo: /assets/img/funders/National_Research_Foundation_logo.svg
   url: https://serb.gov.in/
   name: "National Research Foundation"
-  invert : true
+  invert : false
 
 - logo: /assets/img/funders/goi.svg
   url: https://www.education.gov.in/
@@ -21,7 +21,7 @@
 - logo: /assets/img/funders/isro.png
   url: https://www.isro.gov.in/
   name: "Indian Space Research Organisation"
-  invert : true
+  invert : false
 
 - logo: /assets/img/funders/IISc_Master_Seal_Transparent.png
   url: https://www.iisc.ac.in

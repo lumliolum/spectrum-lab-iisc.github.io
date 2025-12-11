@@ -1,19 +1,19 @@
 <div class="funding">
-  <div class="container-md p-4">
+  <div class="container-md">
     <!-- Swiper -->
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         {%- assign sorted_funding = site.data.funding | sort: 'name' %}
         {%- for funder in sorted_funding -%}
-        <div class="swiper-slide d-flex justify-content-center align-items-center">
-          <a href="{{ funder.url }}">
-            {% assign logo_class = "img-fluid mx-auto d-block" %}
-            {% if funder.invert %}
-              {% assign logo_class = logo_class | append: " funding-logo-invert" %}
-            {% endif %}
-            {% include simple-image.liquid path=funder.logo alt=funder.name class=logo_class style="width: 220px; height: 140px; object-fit: contain;" %}
-          </a>
-        </div>
+          <div class="swiper-slide d-flex justify-content-center align-items-center">
+            <a href="{{ funder.url }}">
+              {% assign logo_class = "img-fluid mx-auto d-block" %}
+              {% if funder.invert %}
+                {% assign logo_class = logo_class | append: " funding-logo-invert" %}
+              {% endif %}
+              {% include simple-image.liquid path=funder.logo alt=funder.name class=logo_class style="width: 220px; height: 140px; object-fit: contain;" %}
+            </a>
+          </div>
         {%- endfor %}
       </div>
       <!-- Pagination dots -->

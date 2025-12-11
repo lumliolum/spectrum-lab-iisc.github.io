@@ -1,25 +1,105 @@
-{% if site.enable_math %}
+{%- comment -%}
+  ================================================================================
+  MATH ENGINE LOADER
+  ================================================================================
+  Supports both MathJax and KaTeX with per-page configuration.
+  Uses site.data.typography for defaults, page frontmatter for overrides.
+
+  Page frontmatter options:
+  math_engine: "mathjax" | "katex" | false (to disable)
+  math_font: "mathjax-modern" | "mathjax-stix2" | "katex-main" | etc.
+  ================================================================================
+{%- endcomment -%}
+
+{%- assign typography = site.data.typography.math -%}
+{%- assign default_engine = typography.default_engine | default: "mathjax" -%}
+
+{%- comment -%} Determine which engine to use {%- endcomment -%}
+{%- if page.math_engine == false -%}
+  {%- assign use_math = false -%}
+{%- elsif page.math_engine -%}
+  {%- assign math_engine = page.math_engine -%}
+  {%- assign use_math = true -%}
+{%- elsif site.enable_math -%}
+  {%- assign math_engine = default_engine -%}
+  {%- assign use_math = true -%}
+{%- else -%}
+  {%- assign use_math = false -%}
+{%- endif -%}
+
+{%- comment -%} Determine math font {%- endcomment -%}
+{%- if page.math_font -%}
+  {%- assign math_font = page.math_font -%}
+{%- elsif math_engine == "katex" -%}
+  {%- assign math_font = typography.katex.font | default: "katex-main" -%}
+{%- else -%}
+  {%- assign math_font = typography.mathjax.font | default: "mathjax-modern" -%}
+{%- endif -%}
+
+{% if use_math %}
   {% unless page.pseudocode %}
-    <!-- MathJax -->
-    <script type="text/javascript">
-      window.MathJax = {
-        tex: {
-          tags: 'ams',
-        }
-      };
-    </script>
-    <script
-      defer
-      type="text/javascript"
-      id="MathJax-script"
-      src="{{ site.third_party_libraries.mathjax.url.js }}"
-      integrity="{{ site.third_party_libraries.mathjax.integrity.js }}"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      defer
-      src="{{ site.third_party_libraries.polyfill.url.js }}"
-      crossorigin="anonymous"
-    ></script>
+    {% if math_engine == "katex" %}
+      <!-- KaTeX -->
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@{{ typography.katex.version | default: '0.16.9' }}/dist/katex.min.css"
+        crossorigin="anonymous">
+      <script
+        defer
+        src="https://cdn.jsdelivr.net/npm/katex@{{ typography.katex.version | default: '0.16.9' }}/dist/katex.min.js"
+        crossorigin="anonymous"></script>
+      <script
+        defer
+        src="https://cdn.jsdelivr.net/npm/katex@{{ typography.katex.version | default: '0.16.9' }}/dist/contrib/auto-render.min.js"
+        crossorigin="anonymous"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          renderMathInElement(document.body, {
+            delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+            ],
+            throwOnError: {{ typography.katex.throwOnError | default: false }},
+            errorColor: "{{ typography.katex.errorColor | default: '#cc0000' }}"
+          });
+        });
+      </script>
+    {% else %}
+      <!-- MathJax -->
+      <script type="text/javascript">
+        window.MathJax = {
+          tex: {
+            tags: '{{ typography.mathjax.tags | default: "ams" }}',
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: {{ typography.mathjax.processEnvironments | default: true }},
+            processRefs: {{ typography.mathjax.processRefs | default: true }}
+          },
+          options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+          },
+          chtml: {
+            font: '{{ math_font }}'
+          },
+          svg: {
+            font: '{{ math_font }}'
+          }
+        };
+      </script>
+      <script
+        defer
+        type="text/javascript"
+        id="MathJax-script"
+        src="{{ site.third_party_libraries.mathjax.url.js }}"
+        integrity="{{ site.third_party_libraries.mathjax.integrity.js }}"
+        crossorigin="anonymous"></script>
+      <script
+        defer
+        src="{{ site.third_party_libraries.polyfill.url.js }}"
+        crossorigin="anonymous"></script>
+    {% endif %}
   {% endunless %}
 {% endif %}

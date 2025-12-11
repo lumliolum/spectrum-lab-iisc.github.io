@@ -1,15 +1,14 @@
 <!doctype html>
-<html>
+<html lang="{{ site.lang | default: 'en' }}">
   <head>
-    {% include head.liquid %}
-    {% if site.enable_medium_zoom %}
+    {% include core/head.liquid %}
+      {% if site.enable_medium_zoom %}
       <!-- Medium Zoom JS -->
       <script
         defer
         src="{{ site.third_party_libraries.medium_zoom.url.js }}"
         integrity="{{ site.third_party_libraries.medium_zoom.integrity.js }}"
-        crossorigin="anonymous"
-      ></script>
+        crossorigin="anonymous"></script>
       <script defer src="{{ '/assets/js/zoom.js' | relative_url | bust_file_cache }}"></script>
     {% endif %}
     {% include scripts/jquery.liquid %}
@@ -24,6 +23,13 @@
         {{ page._styles }}
       </style>
     {% endif %}
+    <title>
+      {%- if page.title -%}
+        {{ page.title }} | {{ site.title }}
+      {%- else -%}
+        {{ site.title }}
+      {%- endif -%}
+    </title>
   </head>
 
   <d-front-matter>
@@ -70,7 +76,7 @@
 
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
     <!-- Header -->
-    {% include header.liquid %}
+    {% include components/navbar.liquid %}
 
     <!-- Content -->
     <div class="post distill">
@@ -100,19 +106,15 @@
 
       <d-bibliography src="{{ page.bibliography | prepend: '/assets/bibliography/' | relative_url }}"></d-bibliography>
 
-      {% if site.disqus_shortname and page.disqus_comments %}{% include disqus.liquid %}{% endif %}
+      {% if site.disqus_shortname and page.disqus_comments %}
+        {% include disqus.liquid %}{% endif %}
       {% if site.giscus.repo and page.giscus_comments %}
         {% include giscus.liquid %}
       {% endif %}
-    </div>
+  </div>
 
     <!-- Footer -->
-    {% include footer.liquid %}
-    {% include scripts/bootstrap.liquid %}
-    {% include scripts/analytics.liquid %}
-    {% include scripts/misc.liquid %}
-    {% include scripts/progressBar.liquid %}
-    {% include scripts/back_to_top.liquid %}
-    {% include scripts/search.liquid %}
+    {% include components/footer.liquid %}
+    {% include core/scripts.liquid %}
   </body>
 </html>

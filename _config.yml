@@ -200,8 +200,6 @@ collections:
   books:
     output: false
   news:
-    defaults:
-      layout: post
     output: true
     permalink: /news/:path/
   articles:

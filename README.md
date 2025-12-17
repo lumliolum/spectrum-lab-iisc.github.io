@@ -549,13 +549,6 @@ bundle exec jekyll serve --livereload --port 8080
 - **[jekyll-scholar](https://github.com/inukshuk/jekyll-scholar)** - BibTeX processing
 - **[GitHub Pages](https://pages.github.com/)** - Hosting
 
----
-
-## 📞 Support
-
-For website issues or questions:
-- Create an issue on GitHub
-- Contact: css@iisc.ac.in
 
 ---
 

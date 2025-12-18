@@ -366,8 +366,8 @@ scholar:
 
   replace_strings: true
   join_strings: true
-  sort_by: year,month
-  order: descending,ascending
+  sort_by: none
+  order: ascending
 
   details_dir: bibliography
   details_link: Details

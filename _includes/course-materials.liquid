@@ -63,6 +63,30 @@
             {%- if course_data.instructor -%}
             <h4 class="instructor-profile__name">{{ course_data.instructor }}</h4>
             {%- endif -%}
+            {%- if course_data.instructor_links -%}
+            <div class="instructor-profile__links" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; justify-content: center;">
+              {%- if course_data.instructor_links.homepage -%}
+              <a href="{{ course_data.instructor_links.homepage }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm" title="Homepage">
+                <i class="fas fa-home"></i>
+              </a>
+              {%- endif -%}
+              {%- if course_data.instructor_links.google_scholar -%}
+              <a href="{{ course_data.instructor_links.google_scholar }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm" title="Google Scholar">
+                <i class="ai ai-google-scholar"></i>
+              </a>
+              {%- endif -%}
+              {%- if course_data.instructor_links.dblp -%}
+              <a href="{{ course_data.instructor_links.dblp }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm" title="DBLP">
+                <i class="ai ai-dblp"></i>
+              </a>
+              {%- endif -%}
+              {%- if course_data.instructor_links.linkedin -%}
+              <a href="{{ course_data.instructor_links.linkedin }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              {%- endif -%}
+            </div>
+            {%- endif -%}
           </div>
           {%- endif -%}
           {%- if course_data.instructor_bio -%}

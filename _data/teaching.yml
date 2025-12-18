@@ -27,6 +27,10 @@
   type: "Short Course"
   hosts : ["Prof. C. S. Seelamantula" , 'Prof. P. S. Sastry']
   instructor_photo : "assets/img/people/instructors/lakshmivarahan.png"
+  instructor_links:
+    homepage: "https://www.ou.edu/coe/cs/people/varahan"
+    google_scholar: "https://scholar.google.com/citations?user=SverXLoAAAAJ&hl=en"
+    linkedin: "https://linkedin.com/in/s-lakshmivarahan-11718845"
 # - title: "Machine Learning"
 #   description: "Introduction to machine learning algorithms, pattern recognition, and statistical learning theory"
 #   instructor: "Prof. Chandra Sekhar Seelamantula"

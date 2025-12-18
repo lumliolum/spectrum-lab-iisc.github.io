@@ -2,7 +2,7 @@
 
 Official website for **Spectrum Lab** at the Department of Electrical Engineering, Indian Institute of Science (IISc), Bengaluru.
 
-🌐 **Live Site:** [spectrum-lab-iisc.github.io](https://spectrum-lab-iisc.github.io)
+🌐 **Live Site:** [spectrum.ee.iisc.ac.in](https://spectrum.ee.iisc.ac.in)
 
 ---
 

@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and build artifacts
+Disallow: /assets/js/search/
+Disallow: /_site/
+
+# Crawl-delay for politeness
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://spectrum.ee.iisc.ac.in/sitemap.xml

@@ -10,6 +10,11 @@
     justify-content: flex-start;
     align-items: stretch;
     gap: 1rem;
+
+    @media (max-width: 576px) {
+      gap: 0.75rem;
+      justify-content: center;
+    }
   }
 
   .grid-item {
@@ -19,6 +24,25 @@
     flex: 1 1 300px;
     max-width: 350px;
     height: 450px;
+
+    @media (max-width: 992px) {
+      flex: 1 1 280px;
+      max-width: 320px;
+      height: 420px;
+    }
+
+    @media (max-width: 768px) {
+      flex: 1 1 250px;
+      max-width: 300px;
+      height: 400px;
+    }
+
+    @media (max-width: 576px) {
+      flex: 1 1 100%;
+      max-width: 100%;
+      height: auto;
+      min-height: 320px;
+    }
   }
 
   .card {
@@ -38,10 +62,18 @@
     align-items: center;
     text-align: center;
     padding: 1rem;
+
+    @media (max-width: 576px) {
+      padding: 0.75rem;
+    }
   }
 
   .card-title {
     margin-bottom: 0.5rem;
+
+    @media (max-width: 576px) {
+      font-size: 1.1rem;
+    }
   }
 
   .card-icons {
@@ -50,37 +82,48 @@
     align-items: center;
     gap: 0.5rem;
     margin: 0.5rem 0;
+
+    // Touch-friendly icons on mobile
+    @media (max-width: 576px) {
+      gap: 0.75rem;
+
+      a {
+        padding: 0.25rem;
+      }
+    }
   }
 
   .card-text {
     margin-top: 0.5rem;
     margin-bottom: 0;
+
+    @media (max-width: 576px) {
+      font-size: 0.9rem;
+    }
   }
 
   .card-pronouns {
     font-size: 0.85rem;
     color: var(--global-text-color-light);
-  }
-}
 
-// Responsive adjustments
-@media (max-width: 768px) {
-  .people {
-    .grid-item {
-      flex: 1 1 250px;
-      max-width: 300px;
-      height: 400px;
+    @media (max-width: 576px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  // Card image responsive
+  .card-img-top {
+    @media (max-width: 576px) {
+      max-height: 200px;
+      object-fit: cover;
     }
   }
 }
 
-@media (max-width: 576px) {
-  .people {
-    .grid-item {
-      flex: 1 1 100%;
-      max-width: 100%;
-      height: auto;
-      min-height: 350px;
-    }
+// Category headers
+.people h2.category {
+  @media (max-width: 576px) {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
   }
 }

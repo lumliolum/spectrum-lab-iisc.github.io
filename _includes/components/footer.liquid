@@ -11,7 +11,7 @@ Clean, minimal footer with:
 {%- endcomment -%}
 
 {%- if site.footer_fixed -%}
-  <footer class="site-footer fixed-bottom" role="contentinfo">
+  <footer class="site-footer fixed-bottom footer-popup" role="contentinfo">
 {%- else -%}
   <footer class="site-footer" role="contentinfo">
 {%- endif -%}
@@ -56,3 +56,40 @@ Clean, minimal footer with:
       </div>
     </div>
 </footer>
+
+{%- if site.footer_fixed -%}
+<script>
+(function() {
+  const footer = document.querySelector('.footer-popup');
+  if (!footer) return;
+  
+  let ticking = false;
+  
+  function checkScroll() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight;
+    const docHeight = document.documentElement.scrollHeight;
+    
+    // Show footer when near bottom (within 100px)
+    const nearBottom = (scrollTop + windowHeight) >= (docHeight - 100);
+    
+    if (nearBottom) {
+      footer.classList.add('footer-visible');
+    } else {
+      footer.classList.remove('footer-visible');
+    }
+    ticking = false;
+  }
+  
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(checkScroll);
+      ticking = true;
+    }
+  }, { passive: true });
+  
+  // Initial check
+  checkScroll();
+})();
+</script>
+{%- endif -%}

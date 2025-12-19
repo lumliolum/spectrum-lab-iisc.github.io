@@ -6,17 +6,29 @@
 .funding {
   padding: 1rem 0;
 
+  @media (max-width: 576px) {
+    padding: 0.5rem 0;
+  }
+
   .mySwiper {
     .swiper-slide {
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 1rem;
+
+      @media (max-width: 576px) {
+        padding: 0.5rem;
+      }
     }
 
     .swiper-pagination {
       margin-top: 2rem;
       position: static;
+
+      @media (max-width: 576px) {
+        margin-top: 1rem;
+      }
 
       .swiper-pagination-bullet {
         width: 8px;
@@ -24,6 +36,11 @@
         background: var(--global-text-color-light);
         opacity: 0.4;
         transition: opacity 0.2s ease, transform 0.2s ease;
+
+        @media (max-width: 576px) {
+          width: 6px;
+          height: 6px;
+        }
 
         &-active {
           opacity: 1;
@@ -42,6 +59,14 @@
     filter: grayscale(0.2);
     opacity: 0.85;
     transition: filter 0.3s ease, opacity 0.3s ease;
+
+    @media (max-width: 768px) {
+      max-height: 80px;
+    }
+
+    @media (max-width: 576px) {
+      max-height: 60px;
+    }
 
     &:hover {
       filter: grayscale(0);

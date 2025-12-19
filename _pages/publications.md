@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const display = document.getElementById('current-year-display');
 
   function updateButtons() {
-    prevButton.disabled = currentIndex === 0;
-    nextButton.disabled = currentIndex === years.length - 1;
+    prevButton.disabled = currentIndex === years.length - 1;
+    nextButton.disabled = currentIndex === 0;
   }
 
   function showYear(index) {
@@ -70,15 +70,15 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   prevButton.addEventListener('click', function() {
-    if (currentIndex > 0) {
-      currentIndex--;
+    if (currentIndex < years.length - 1) {
+      currentIndex++;
       showYear(currentIndex);
     }
   });
 
   nextButton.addEventListener('click', function() {
-    if (currentIndex < years.length - 1) {
-      currentIndex++;
+    if (currentIndex > 0) {
+      currentIndex--;
       showYear(currentIndex);
     }
   });

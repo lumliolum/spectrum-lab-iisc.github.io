@@ -15,11 +15,24 @@ body {
   h6 {
     scroll-margin-top: 66px;
   }
+
+  // Mobile: reduce scroll margin for smaller nav
+  @media (max-width: 576px) {
+    padding-bottom: 50px;
+
+    h1, h2, h3, h4, h5, h6 {
+      scroll-margin-top: 56px;
+    }
+  }
 }
 
 body.fixed-top-nav {
   // Add some padding for the nav-bar.
   padding-top: 56px;
+
+  @media (max-width: 576px) {
+    padding-top: 50px;
+  }
 }
 
 body.sticky-bottom-footer {
@@ -29,9 +42,156 @@ body.sticky-bottom-footer {
 
 .container {
   max-width: $max-content-width;
+
+  // Mobile padding
+  @media (max-width: 576px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
-// TODO: redefine content layout.
+// =============================================================================
+// RESPONSIVE TYPOGRAPHY
+// =============================================================================
+
+@media (max-width: 768px) {
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  h4 { font-size: 1.1rem; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.35rem; }
+  h3 { font-size: 1.15rem; }
+}
+
+// =============================================================================
+// FIXED FOOTER - POPUP ON SCROLL
+// =============================================================================
+
+/* Fixed, transparent footer styles - popup on scroll to bottom */
+.site-footer.fixed-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1030; // above page content but below modals
+  background: transparent;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 0.5rem 0;
+
+  @media (max-width: 576px) {
+    padding: 0.35rem 0;
+  }
+}
+
+// Footer popup - hidden by default, slides up when at bottom
+.site-footer.footer-popup {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 300ms ease, opacity 300ms ease;
+  pointer-events: none;
+
+  &.footer-visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.site-footer.fixed-bottom .footer-content {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 576px) {
+    padding: 0.15rem 0.5rem;
+  }
+}
+
+.site-footer .footer-text {
+  color: var(--global-footer-text-color, var(--global-text-color));
+  font-size: 0.9rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.7rem;
+  }
+
+  a {
+    color: var(--global-theme-color);
+    text-decoration: none;
+    transition: color 150ms ease;
+
+    &:hover {
+      color: var(--global-hover-color);
+      text-decoration: underline;
+    }
+  }
+}
+
+// Light theme: subtle translucent white
+html[data-theme="light"] .site-footer.fixed-bottom {
+  background: rgba(255, 255, 255, 0.85);
+  border-top-color: rgba(0, 0, 0, 0.08);
+
+  .footer-text {
+    color: #333;
+
+    a {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+// Dark theme: subtle translucent dark
+html[data-theme="dark"] .site-footer.fixed-bottom {
+  background: rgba(28, 28, 29, 0.88);
+  border-top-color: rgba(255, 255, 255, 0.1);
+
+  .footer-text {
+    color: #e8e8e8;
+
+    a {
+      color: #ff8f4f; // brighter orange for better contrast on dark
+    }
+  }
+}
+
+// =============================================================================
+// MOBILE UTILITIES
+// =============================================================================
+
+// Prevent horizontal overflow
+html {
+  overflow-x: hidden;
+}
+
+// Main content area responsive
+main.container {
+  @media (max-width: 576px) {
+    margin-top: 1.5rem !important;
+  }
+}
+
+// Row gutters on mobile
+.row {
+  @media (max-width: 576px) {
+    --bs-gutter-x: 0.75rem;
+  }
+}
 
 /******************************************************************************
  * Publications

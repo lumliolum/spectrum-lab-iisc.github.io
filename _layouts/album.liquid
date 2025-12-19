@@ -2,6 +2,14 @@
 layout: default
 ---
 
+<!-- Page Header with H1 for SEO -->
+<header class="post-header">
+  <h1 class="post-title">{{ page.title }}</h1>
+  {% if page.description %}
+    <p class="post-description">{{ page.description }}</p>
+  {% endif %}
+</header>
+
 <!-- Page content (from markdown) -->
 {{ content }}
 
@@ -26,7 +34,8 @@ layout: default
           <div class="swiper-wrapper">
             {% for photo in sorted_photos %}
               <div class="swiper-slide d-flex justify-content-center align-items-center">
-                {% include responsive-image.liquid path=photo.image alt=photo.caption class="album-photo" data-caption=photo.caption %}
+                {% assign photo_alt = photo.caption | default: event.event | default: "Spectrum Lab photo" %}
+                {% include responsive-image.liquid path=photo.image alt=photo_alt class="album-photo" data-caption=photo.caption %}
               </div>
             {% endfor %}
           </div>

@@ -66,6 +66,12 @@
       {% endif %}
       {% if include.alt %}
         alt="{{ include.alt }}"
+      {% elsif include.caption %}
+        alt="{{ include.caption | strip_html | truncate: 125 }}"
+      {% elsif include.title %}
+        alt="{{ include.title }}"
+      {% else %}
+        alt="Image"
       {% endif %}
       {% if include.title %}
         title="{{ include.title }}"

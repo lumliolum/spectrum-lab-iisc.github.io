@@ -229,3 +229,95 @@ html[data-theme="dark"] .opportunities {
     color: #a1a1a6;
   }
 }
+
+// =============================================================================
+// Responsive — Mobile optimizations
+// =============================================================================
+
+@media (max-width: 768px) {
+  .opportunities {
+    .card {
+      border-radius: 10px;
+    }
+
+    .card-header {
+      padding: 1rem 1.25rem;
+    }
+
+    .card-body {
+      padding: 1.25rem;
+    }
+
+    .alert {
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+    }
+
+    .lead {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .opportunities {
+    .card {
+      border-radius: 8px;
+
+      &:hover {
+        transform: none; // Disable hover transform on touch devices
+      }
+    }
+
+    .card-header {
+      padding: 0.875rem 1rem;
+
+      .card-title {
+        font-size: 1.1rem;
+      }
+    }
+
+    .card-body {
+      padding: 1rem;
+
+      p, li {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+    }
+
+    .alert {
+      padding: 0.875rem 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+
+      ul {
+        padding-left: 1.25rem;
+        margin-bottom: 0;
+
+        li {
+          margin-bottom: 0.35rem;
+        }
+      }
+    }
+
+    .lead {
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.45;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+    }
+
+    h4 {
+      font-size: 1.05rem;
+    }
+  }
+}

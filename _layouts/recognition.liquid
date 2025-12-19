@@ -2,6 +2,14 @@
 layout: default
 ---
 
+<!-- Page Header with H1 for SEO -->
+<header class="post-header">
+  <h1 class="post-title">{{ page.title }}</h1>
+  {% if page.description %}
+    <p class="post-description">{{ page.description }}</p>
+  {% endif %}
+</header>
+
 <!-- Page content (from markdown) -->
 {{ content }}
 

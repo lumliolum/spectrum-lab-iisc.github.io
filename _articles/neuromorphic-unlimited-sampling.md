@@ -25,7 +25,7 @@ toc: true
 related_posts: true
 ---
 
-{% include figure.liquid path="assets/img/research-highlights/nus/nus-banner.jpeg" class="img-fluid rounded" width="auto" max-width="100%" %}
+{% include figure.liquid path="assets/img/research-highlights/nus/nus-banner.jpeg" alt="Neuromorphic Unlimited Sampling banner showing high-dynamic range signal acquisition" class="img-fluid rounded" width="auto" max-width="100%" %}
 
 Unlimited sampling (US) is a computational sensing paradigm for high-dynamic range (HDR) acquisition of signals. The objective is to overcome the limitations in standard analog-to-digital converters (ADCs) where the dynamic range is fixed: signal that lies outside the fixed dynamic range saturates.
 {: .text-justify}

@@ -29,7 +29,7 @@ toc: true
 related_posts: false
 ---
 
-{% include figure.liquid path="assets/img/research-highlights/tight/alt_prox.jpg" class="img-fluid rounded" %}
+{% include figure.liquid path="assets/img/research-highlights/tight/alt_prox.jpg" alt="Alternative proximal operators for solving linear inverse problems" class="img-fluid rounded" %}
 
 ## The Data-Fidelity Term in Linear Inverse Problems
 

@@ -72,7 +72,7 @@ latest_posts:
 
 <div class="row mt-4">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path='assets/img/album/random-collection/18.jpg' title="ICASSP 2025" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path='assets/img/album/random-collection/18.jpg' alt="Spectrum Lab members at ICASSP 2025 in Hyderabad, India" title="ICASSP 2025" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -92,7 +92,7 @@ latest_posts:
             <a href="{{ css_profile.url | relative_url }}">
               {%- include figure.liquid
                 path=css_profile.img
-                alt="Portrait"
+                alt="Prof. Chandra Sekhar Seelamantula, Lab Director"
                 class="img-fluid rounded-circle z-depth-1 mb-3 profile-image"
               -%}
             </a>
@@ -124,13 +124,13 @@ latest_posts:
       <div class="col-md-8">
         <div class="biography-content">
           <div class="biography-text">
-            <p style="text-align: justify;">
+            <p>
               Chandra Sekhar Seelamantula is a <strong>Professor</strong> in the Department of Electrical Engineering at the Indian Institute of Science (IISc), Bangalore. He received his Bachelor of Engineering degree with <em>Prof. K. K. Nair Gold Medal</em> from Osmania University in 1999 and Ph.D. from IISc in 2005.
             </p>
-            <p style="text-align: justify;">
+            <p>
               After completing postdoctoral research at EPFL, Switzerland (2006–2009), he joined IISc as faculty in 2009 and now leads the <strong>Spectrum Lab</strong>. His research interests include signal processing, machine learning, Generative AI, computational imaging, and AI for Healthcare.
             </p>
-            <p style="text-align: justify; margin-bottom: 1rem;">
+            <p>
               He has served in various editorial roles including Senior Area Editor for IEEE Signal Processing Letters and Associate Editor for IEEE Transactions on Image Processing. He is a recipient of multiple awards including the Grand Challenges Exploration Award from Gates Foundation and the Qualcomm Innovation Fellowship.
             </p>
             <p class="read-more-link">

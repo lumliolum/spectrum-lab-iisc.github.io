@@ -13,18 +13,17 @@ schedule:
 
 lectures:
 
-  - title: "Lecture 1: Introduction"
-    slides: "/assets/teaching/dimension-reduction/Dimension Reduction (Lecture-1).pdf"
+  - title: "Introduction"
+    notes: "/assets/teaching/dimension-reduction/Module_1.pdf"
     description:
     
-  - title: "Lecture 2: SVD"
-    slides: "/assets/teaching/dimension-reduction/Module_1_2.pdf"
+  - title: "PCA"
+    notes: "/assets/teaching/dimension-reduction/PCA.pdf"
     description:
     
-  # - title: "Digital Filters"
-  #   description: "FIR and IIR filter design, frequency response analysis"
-  #   slides: "/assets/teaching/dsp/lecture3_slides.pdf"
-  #   notes: "/assets/teaching/dsp/lecture3_notes.pdf"
+  - title: "Time-Series (Optional)"
+    notes: "/assets/teaching/dimension-reduction/time-series-ananlysis.pdf"
+    description:
 
 assignments:
 #  - title: "Assignment 1"

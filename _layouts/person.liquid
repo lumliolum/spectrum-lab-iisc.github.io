@@ -275,13 +275,12 @@ layout: default
     </div>
   </div>
 
-  {% unless page.email == "css@iisc.ac.in" %}
+  {% unless page.email == "css@iisc.ac.in" or page.category == "Administrator" %}
   <div class="publications">
     <h3 class="mt-5 mb-3">Publications</h3>
     {% capture debug_query %}@*[emails~={{ page.email }}]{% endcapture %}
 
     {% bibliography --query {{debug_query}} %}
   </div>
+  {% endunless %}
 </div>
-
-{% endunless %}

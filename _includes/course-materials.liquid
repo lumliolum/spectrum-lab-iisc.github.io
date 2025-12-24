@@ -99,6 +99,47 @@
     </section>
     {%- endif -%}
 
+    <!-- News Bulletin Section -->
+    {%- if page.news and page.news.size > 0 -%}
+    <section class="content-section fade-in">
+      <div class="section-label">
+        <div class="section-label__icon section-label__icon--red">
+          <i class="fas fa-bullhorn"></i>
+        </div>
+        <span class="section-label__text">News Bulletin</span>
+      </div>
+
+      <div class="minimal-card minimal-card--elevated">
+        <div class="schedule-table-wrapper">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th style="width: 20%;">Date</th>
+                <th style="width: 25%;">Title</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for item in page.news -%}
+              <tr>
+                <td>{{ item.date }}</td>
+                <td>
+                  {%- if item.link -%}
+                  <a href="{{ item.link }}" target="_blank">{{ item.title }} <i class="fas fa-external-link-alt fa-xs"></i></a>
+                  {%- else -%}
+                  {{ item.title }}
+                  {%- endif -%}
+                </td>
+                <td>{{ item.description | markdownify }}</td>
+              </tr>
+              {%- endfor -%}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    {%- endif -%}
+
     <!-- Schedule Section -->
     {%- if page.schedule -%}
     <section class="content-section fade-in">
@@ -130,6 +171,13 @@
           <div class="logistics-item">
             <span class="logistics-item__label t-overline">Duration</span>
             <span class="logistics-item__value t-body">{{ page.schedule.duration }}</span>
+          </div>
+          {%- endif -%}
+
+          {%- if page.schedule.meeting_link -%}
+          <div class="logistics-item">
+            <span class="logistics-item__label t-overline">Meeting Link</span>
+            <span class="logistics-item__value t-body"><a href="{{ page.schedule.meeting_link }}" target="_blank">Join Class</a></span>
           </div>
           {%- endif -%}
         </div>

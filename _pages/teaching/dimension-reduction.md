@@ -10,6 +10,15 @@ schedule:
   dates_time: "Tuesday-Thursday; From 2.30 pm to 4.00 pm"
   classroom: "B308 (December 9, 16, 18, 30) and B306 (December 23), EE Department, IISc"
   duration: "December 9-30, 2025"
+  meeting_link: "https://teams.microsoft.com/meet/49654374010289?p=Azc1Wid8SwnG6iwAtZ"
+  
+news:
+  - title: "Christmas Break"
+    date: "December 25, 2025"
+    description: "There will be no class on December 25, 2025."
+  - title: "Dataset for experimentation"
+    date: "December 9, 2025"
+    description: "The dataset used for experimentation is available at this [link](https://www.kaggle.com/datasets/mariaherrerot/messidor2preprocess)"
 
 lectures:
 

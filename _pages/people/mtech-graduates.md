@@ -1,21 +1,21 @@
 ---
 layout: default
-title: M.Tech Research Graduates
-permalink: /people/mtech-research-graduates/
-category: M.Tech Research Graduates
-description: M.Tech (Research) graduates from the Spectrum Lab
+title: M.Tech Graduates
+permalink: /people/mtech-graduates/
+category: M.Tech Graduates
+description: M.Tech graduates from the Spectrum Lab
 nav: false
 ---
 
 <div class="post">
   <header class="post-header">
-    <h1 class="post-title">M.Tech Research Graduates</h1>
-    <h2 class="post-description">M.Tech (Research) graduates from the Spectrum Lab</h2>
+    <h1 class="post-title">M.Tech Graduates</h1>
+    <h2 class="post-description">M.Tech graduates from the Spectrum Lab</h2>
   </header>
 
   <article>
     <div class="people">
-      {%- assign categorized_people = site.people | where: "category", "M.Tech Research Graduates" -%}
+      {%- assign categorized_people = site.people | where: "category", "M.Tech Graduates" -%}
       {%- assign sorted_people = categorized_people | sort: "year" | reverse -%}
       {%- assign years = sorted_people | map: "year" | uniq -%}
       

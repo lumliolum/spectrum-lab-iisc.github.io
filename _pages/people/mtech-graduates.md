@@ -17,14 +17,10 @@ nav: false
     <div class="people">
       {%- assign categorized_people = site.people | where: "category", "M.Tech Graduates" -%}
       {%- assign sorted_people = categorized_people | sort: "year" | reverse -%}
-      {%- assign years = sorted_people | map: "year" | uniq -%}
       
-      {%- for year in years -%}
-        <h2 class="year-heading" style="text-align: right; margin-top: 2rem;">{{ year }}</h2>
-        <hr>
-        <div class="grid">
-          {%- for person in sorted_people -%}
-            {%- if person.show and person.year == year -%}
+      <div class="grid">
+        {%- for person in sorted_people -%}
+          {%- if person.show -%}
               <div class="grid-item">
                 {%- if person.redirect -%}
                   <a href="{{ person.redirect }}">
@@ -74,14 +70,13 @@ nav: false
                         </a>
                       {% endif %}
                     </div>
-                    <div class="card-body"></div>
-                  </div>
-                </a>
-              </div>
-            {%- endif -%}
-          {%- endfor %}
-        </div>
-      {%- endfor -%}
+                  <div class="card-body"></div>
+                </div>
+              </a>
+            </div>
+          {%- endif -%}
+        {%- endfor %}
+      </div>
     </div>
   </article>
 </div>

@@ -1,39 +1,41 @@
 {% comment %}
-Responsive image include that uses Jekyll-generated WebP images
-Usage: {% include responsive-image.liquid path="assets/img/example.jpg" alt="Description" class="img-fluid" %}
+  Responsive image include that uses Jekyll-generated WebP images
+  Usage: {% include responsive-image.liquid path="assets/img/example.jpg" alt="Description" class="img-fluid" %}
 {% endcomment %}
 
 {% assign image_path = include.path %}
 {% assign image_alt = include.alt | default: "Spectrum Lab image" %}
-{% assign image_class = include.class | default: "img-fluid" %}
-{% assign image_style = include.style | default: "" %}
+{% assign image_class = include.class | default: "img-fluid" %}{% assign image_style = include.style | default: "" %}
 
 {% comment %} Extract filename without extension {% endcomment %}
 {% assign path_parts = image_path | split: "/" %}
 {% assign filename = path_parts.last %}
-{% assign name_parts = filename | split: "." %}
-{% assign name_only = name_parts.first %}
+{% assign name_parts = filename | split: "." %}{% assign name_only = name_parts.first %}
 
 {% comment %} Build path without filename {% endcomment %}
 {% assign path_without_file = image_path | remove: filename %}
 
 {% comment %} Generate picture element with responsive sources {% endcomment %}
 <picture>
-  {% comment %} WebP sources for modern browsers {% endcomment %}
-  <source 
+    {% comment %} WebP sources for modern browsers {% endcomment %}
+  <source
     srcset="{{ path_without_file | relative_url }}{{ name_only }}-480.webp 480w,
             {{ path_without_file | relative_url }}{{ name_only }}-800.webp 800w,
             {{ path_without_file | relative_url }}{{ name_only }}-1400.webp 1400w"
     sizes="(max-width: 480px) 480px, (max-width: 800px) 800px, 1400px"
     type="image/webp">
-  
-  {% comment %} Use WebP as default src to prevent double loading - fallback handled by onerror {% endcomment %}
-  <img 
+
+    {% comment %} Use WebP as default src to prevent double loading - fallback handled by onerror {% endcomment %}
+  <img
     src="{{ path_without_file | relative_url }}{{ name_only }}-800.webp"
     alt="{{ image_alt }}"
     class="{{ image_class }}"
-    {% if image_style != "" %}style="{{ image_style }}"{% endif %}
-    {% if include.data-caption %}data-caption="{{ include.data-caption }}"{% endif %}
+    {% if image_style != "" %}
+    style="{{ image_style }}"
+    {% endif %}
+    {% if include.data-caption %}
+    data-caption="{{ include.data-caption }}"
+    {% endif %}
     loading="lazy"
     onerror="this.onerror=null; this.src='{{ image_path | relative_url }}';">
 </picture>

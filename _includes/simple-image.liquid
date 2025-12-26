@@ -1,23 +1,24 @@
 {% comment %}
-Simple image include that uses optimized WebP when available
-Usage: {% include simple-image.liquid path="assets/img/example.jpg" alt="Description" class="img-fluid" %}
-For SVG files, use direct path as SVG doesn't need optimization
+  Simple image include that uses optimized WebP when available
+  Usage: {% include simple-image.liquid path="assets/img/example.jpg" alt="Description" class="img-fluid" %}
+  For SVG files, use direct path as SVG doesn't need optimization
 {% endcomment %}
 
 {% assign image_path = include.path %}
 {% assign image_alt = include.alt | default: "Spectrum Lab image" %}
-{% assign image_class = include.class | default: "img-fluid" %}
-{% assign image_style = include.style | default: "" %}
+{% assign image_class = include.class | default: "img-fluid" %}{% assign image_style = include.style | default: "" %}
 
 {% comment %} Check if SVG - serve directly without optimization {% endcomment %}
 {% assign is_svg = image_path | downcase | split: "." | last %}
 
 {% if is_svg == "svg" %}
-  <img 
-    src="{{ image_path | relative_url }}" 
+  <img
+    src="{{ image_path | relative_url }}"
     alt="{{ image_alt }}"
     class="{{ image_class }}"
-    {% if image_style != "" %}style="{{ image_style }}"{% endif %}
+    {% if image_style != "" %}
+    style="{{ image_style }}"
+    {% endif %}
     loading="lazy">
 {% else %}
   {% comment %} Extract filename without extension for WebP lookup {% endcomment %}
@@ -26,19 +27,21 @@ For SVG files, use direct path as SVG doesn't need optimization
   {% assign name_parts = filename | split: "." %}
   {% assign name_only = name_parts.first %}
   {% assign path_without_file = image_path | remove: filename %}
-  
-  <picture>
-    {% comment %} Try optimized WebP version (800px is a good default size) {% endcomment %}
-    <source 
-      srcset="{{ path_without_file | relative_url }}{{ name_only }}-800.webp"
-      type="image/webp">
-    {% comment %} Use WebP as default src to prevent double loading {% endcomment %}
-    <img 
-      src="{{ path_without_file | relative_url }}{{ name_only }}-800.webp" 
+
+    <picture>
+      {% comment %} Try optimized WebP version (800px is a good default size) {% endcomment %}
+    <source srcset="{{ path_without_file | relative_url }}{{ name_only }}-800.webp" type="image/webp">
+      {% comment %} Use WebP as default src to prevent double loading {% endcomment %}
+    <img
+      src="{{ path_without_file | relative_url }}{{ name_only }}-800.webp"
       alt="{{ image_alt }}"
       class="{{ image_class }}"
-      {% if image_style != "" %}style="{{ image_style }}"{% endif %}
-      {% if include.data-caption %}data-caption="{{ include.data-caption }}"{% endif %}
+      {% if image_style != "" %}
+      style="{{ image_style }}"
+      {% endif %}
+      {% if include.data-caption %}
+      data-caption="{{ include.data-caption }}"
+      {% endif %}
       loading="lazy"
       onerror="this.onerror=null; this.src='{{ image_path | relative_url }}';">
   </picture>

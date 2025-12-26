@@ -72,7 +72,6 @@
 
 
 {% capture author_name %}{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{% endcapture %}
-
 {%- comment -%}
   Note: <title> tag is handled by individual layouts (default.liquid, distill.liquid)
   to avoid duplicate title tags. Do not add <title> here.
@@ -102,7 +101,7 @@
   {% endif %}
   <meta property="og:locale" content="{{ site.lang }}">
 
-  <!-- Twitter card -->
+    <!-- Twitter card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
@@ -261,20 +260,19 @@
 
   <script type="application/ld+json">
     {
-        "author":
-        {
-            "@type": "Person",
-            "name": "{{ author_name }}"
-        },
-        "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
-        "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
-        "description": "{% if page.description %}{{ page.description }}{% else if site.description %}{{ site.description }}{% endif %}",
-        "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
-        {% if sameaslinks != blank %}
+      "author": {
+        "@type": "Person",
+        "name": "{{ author_name }}"
+      },
+      "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
+      "@type": "{% if is_blog_post %} BlogPosting{% else %}WebSite{% endif %}",
+      "description": "{% if page.description %} {{ page.description }}{% else if site.description %}{{ site.description }}{% endif %}",
+      "headline": "{% if page.title %} {{ page.title }}{% else %}{{ site.title }}{% endif %}",
+      {% if sameaslinks != blank %}
         "sameAs": {{ sameaslinks }},
         {% endif %}
         "name": "{{ author_name }}",
         "@context": "https://schema.org"
-    }
+      }
   </script>
 {% endif %}

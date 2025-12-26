@@ -7,26 +7,25 @@ nav: true
 nav_order: 8
 dropdown: true
 children:
-  - title: All People
-    permalink: /people/
-  - title: divider
   - title: PhD Students
     permalink: /people/phd-students/
-  - title: Project Associates
-    permalink: /people/project-associates/
   - title: M.Tech Students
     permalink: /people/mtech-students/
   - title: M.Tech Research Students
     permalink: /people/mtech-research/
+  - title: divider
   - title: PhD Graduates
     permalink: /people/phd-graduates/
   - title: M.Tech Graduates
     permalink: /people/mtech-graduates/
   - title: M.Tech Research Graduates
     permalink: /people/mtech-research-graduates/
+  - title: divider
+  - title: Project Associates
+    permalink: /people/project-associates/
   - title: Administrator
     permalink: /people/administrator/
-display_categories: [Administrator, PhD Students, Project Associates, M.Tech Students, M.Tech Research Students, PhD Graduates, M.Tech Graduates, M.Tech Research Graduates]
+display_categories: [PhD Students, M.Tech Students, M.Tech Research Students, PhD Graduates, M.Tech Graduates, M.Tech Research Graduates, Project Associates, Administrator]
 horizontal: true
 ---
 

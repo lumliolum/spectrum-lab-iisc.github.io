@@ -7,8 +7,7 @@ layout: default
   <h1 class="post-title">{{ page.title }}</h1>
   {% if page.description %}
     <p class="post-description">{{ page.description }}</p>
-  {% endif %}
-</header>
+  {% endif %}</header>
 
 <!-- Page content (from markdown) -->
 {{ content }}
@@ -16,7 +15,7 @@ layout: default
 <!-- Album display -->
 <div class="album-container">
   {% assign sorted_events = site.data.album | sort: "date" | reverse %}
-  
+
   {% for event in sorted_events %}
     <div class="event-section">
       <div class="event-header">
@@ -24,11 +23,11 @@ layout: default
 
         <p class="event-description">{{ event.description }}</p>
       </div>
-      
+
       {% if event.photos.size > 0 %}
         {% assign sorted_photos = event.photos | sort: "order" %}
         {% assign swiper_id = event.folder | slugify %}
-        
+
         <!-- Swiper -->
         <div class="swiper album-swiper" id="swiper-{{ swiper_id }}">
           <div class="swiper-wrapper">
@@ -42,7 +41,7 @@ layout: default
           <!-- Pagination dots -->
           <div class="swiper-pagination"></div>
         </div>
-        
+
         <!-- Caption below swiper -->
         <div class="album-caption">
           <h5 id="caption-{{ swiper_id }}">{{ sorted_photos.first.caption }}</h5>
@@ -55,7 +54,7 @@ layout: default
       {% endif %}
     </div>
   {% endfor %}
-  
+
   {% if site.data.album.size == 0 %}
     <div class="text-center py-5">
       <div class="alert alert-secondary">
@@ -68,15 +67,30 @@ layout: default
 </div>
 
 <!-- Optional: Add modal for full-size image viewing -->
-<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="imageModal"
+  tabindex="-1"
+  aria-labelledby="imageModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="imageModalLabel">Photo</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" data-mdb-dismiss="modal" aria-label="Close" id="albumModalCloseBtn"></button>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          data-mdb-dismiss="modal"
+          aria-label="Close"
+          id="albumModalCloseBtn"></button>
       </div>
       <div class="modal-body text-center">
-        <img id="modalImage" src="" class="img-fluid" alt="">
+        <img
+          id="modalImage"
+          src=""
+          class="img-fluid"
+          alt="">
         <p id="modalCaption" class="mt-2 text-muted"></p>
       </div>
     </div>
@@ -84,8 +98,8 @@ layout: default
 </div>
 
 <script>
-// Add click handlers for swiper image modal functionality
-document.addEventListener('DOMContentLoaded', function() {
+  // Add click handlers for swiper image modal functionality
+  document.addEventListener('DOMContentLoaded', function() {
   const albumPhotos = document.querySelectorAll('.album-photo');
   const modal = new bootstrap.Modal(document.getElementById('imageModal'));
   const modalImage = document.getElementById('modalImage');
@@ -175,5 +189,5 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-});
+  });
 </script>

@@ -11,48 +11,30 @@ layout: default
       <p class="text-muted mb-2 text-center">{{ page.description }}</p>
 
       {% if page.email %}
-        <p>
-          <i class="bi bi-envelope-fill me-2"></i>
-          <a href="mailto:{{ page.email }}">{{ page.email }}</a>
-        </p>
+      <p><i class="bi bi-envelope-fill me-2"></i><a href="mailto:{{ page.email }}">{{ page.email }}</a></p>
       {% endif %}
 
       <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
         {% if page.orcid_id %}
-          <a
-            href="https://orcid.org/{{ page.orcid_id }}"
-            target="_blank"
-            class="btn btn-sm btn-outline-dark">ORCID</a>
+        <a href="https://orcid.org/{{ page.orcid_id }}" target="_blank" class="btn btn-sm btn-outline-dark">ORCID</a>
         {% endif %}
         {% if page.scholar_userid %}
-          <a
-            href="https://scholar.google.com/citations?user={{ page.scholar_userid }}"
-            target="_blank"
-            class="btn btn-sm btn-outline-primary">Google Scholar</a>
+        <a href="https://scholar.google.com/citations?user={{ page.scholar_userid }}" target="_blank"
+          class="btn btn-sm btn-outline-primary">Google Scholar</a>
         {% endif %}
         {% if page.linkedin_username %}
-          <a
-            href="https://linkedin.com/in/{{ page.linkedin_username }}"
-            target="_blank"
-            class="btn btn-sm btn-outline-info">LinkedIn</a>
+        <a href="https://linkedin.com/in/{{ page.linkedin_username }}" target="_blank"
+          class="btn btn-sm btn-outline-info">LinkedIn</a>
         {% endif %}
         {% if page.github %}
-          <a
-            href="https://github.com/{{ page.github }}"
-            target="_blank"
-            class="btn btn-sm btn-outline-dark">GitHub</a>
+        <a href="https://github.com/{{ page.github }}" target="_blank" class="btn btn-sm btn-outline-dark">GitHub</a>
         {% endif %}
         {% if page.twitter_username %}
-          <a
-            href="https://twitter.com/{{ page.twitter_username }}"
-            target="_blank"
-            class="btn btn-sm btn-outline-primary">Twitter</a>
+        <a href="https://twitter.com/{{ page.twitter_username }}" target="_blank"
+          class="btn btn-sm btn-outline-primary">Twitter</a>
         {% endif %}
         {% if page.website %}
-          <a
-            href="{{ page.website }}"
-            target="_blank"
-            class="btn btn-sm btn-outline-success">Personal Website</a>
+        <a href="{{ page.website }}" target="_blank" class="btn btn-sm btn-outline-success">Personal Website</a>
         {% endif %}
       </div>
     </div>
@@ -63,339 +45,242 @@ layout: default
         <div class="card-body">
           <h5 class="card-title">Biography</h5>
           {% if page.biography_paragraphs %}
-            {% for paragraph in page.biography_paragraphs %}
-              <p class="card-text">{{ paragraph }}</p>
-            {% endfor %}
+          {% for paragraph in page.biography_paragraphs %}
+          <p class="card-text">{{ paragraph }}</p>
+          {% endfor %}
           {% else %}
-            {{ content }}
+          {{ content }}
           {% endif %}
 
           {% if page.show_academic_roles and page.academic_roles %}
-            <h6 class="mt-4">Academic and Editorial Roles</h6>
-            <ul>
-              {% for role in page.academic_roles %}
-                <li>{{ role }}</li>
-              {% endfor %}
-            </ul>
+          <h6 class="mt-4">Academic and Editorial Roles</h6>
+          <ul>
+            {% for role in page.academic_roles %}
+            <li>{{ role }}</li>
+            {% endfor %}
+          </ul>
           {% endif %}
 
           {% if page.show_awards and page.awards %}
-            <h6 class="mt-4">Awards</h6>
-            <ul>
-              {% for award in page.awards %}
-                <li>{{ award }}</li>
-              {% endfor %}
-            </ul>
+          <h6 class="mt-4">Awards</h6>
+          <ul>
+            {% for award in page.awards %}
+            <li>{{ award }}</li>
+            {% endfor %}
+          </ul>
           {% endif %}
         </div>
       </div>
 
 
       {% if page.show_activities and page.email == "css@iisc.ac.in" %}
-        <!-- Professional Activities - Compact Design with Nested Year Dropdowns -->
-        <div class="card shadow-sm border-0 mt-4">
-          <div class="card-body">
-            <h5 class="card-title mb-4">Professional Activities</h5>
-
-            <div class="accordion" id="activitiesAccordion">
-
-              <!-- Invited Talks Delivered -->
-              <div class="card border-0 border-bottom">
-                <div class="card-header bg-transparent px-0" id="talksDeliveredHeading">
-                  <button
-                    class="btn btn-link btn-block text-start w-100 d-flex justify-content-between align-items-center collapsed ps-0"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#talksDeliveredCollapse"
-                    aria-expanded="false">
-                    <span>
-                      <i class="fas fa-microphone me-2 text-muted"></i>Invited Talks Delivered
-                      <span class="badge bg-secondary ms-2">{{ site.data.activities.talks_delivered.size }}</span>
-                    </span>
-                    <i class="fas fa-chevron-down"></i>
-                  </button>
-                </div>
-                <div
-                  id="talksDeliveredCollapse"
-                  class="collapse"
-                  data-bs-parent="#activitiesAccordion">
-                  <div class="card-body px-0 pt-3">
-                    <div class="accordion nested-accordion" id="talksDeliveredYears">
-                      {% assign talks_by_year = site.data.activities.talks_delivered | group_by_exp: "talk", "talk.date | split: ', ' | last | split: ' ' | last | default: 'Other'" %}
-                      {% for year_group in talks_by_year %}
-                        <div class="year-group">
-                          <button
-                            class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#talksDelivered{{ year_group.name | replace: ' ', '' }}"
-                            aria-expanded="false">
-                            <span>
-                              <i class="fas fa-calendar-alt me-2 text-muted"></i>
-                              {{ year_group.name }}
-                              <span class="badge bg-light text-dark ms-1">{{ year_group.items.size }}</span>
-                            </span>
-                            <i class="fas fa-chevron-down chevron-sm"></i>
-                          </button>
-                          <div id="talksDelivered{{ year_group.name | replace: ' ', '' }}" class="collapse year-content">
-                            <ul class="list-unstyled activity-list ms-3">
-                              {% for talk in year_group.items %}
-                                <li class="activity-item py-1">
-                                  <span class="activity-title">{{ talk.title }}</span>
-                                  <span class="activity-meta text-muted d-block small">{{ talk.venue }}{% if talk.type %}
-                                      ·
-                                      <span class="badge bg-light text-dark">{{ talk.type }}</span>
-                                    {% endif %}
-                                  </span>
-                                </li>
-                              {% endfor %}
-                            </ul>
-                          </div>
-                        </div>
-                      {% endfor %}
-                    </div>
-                  </div>
-                </div>
+      <!-- Professional Activities - Compact Design with Nested Year Dropdowns -->
+      <div class="card shadow-sm border-0 mt-4">
+        <div class="card-body">
+          <h5 class="card-title mb-4">Professional Activities</h5>
+          
+          <div class="accordion" id="activitiesAccordion">
+            
+            <!-- Invited Talks Delivered -->
+            <div class="card border-0 border-bottom">
+              <div class="card-header bg-transparent px-0" id="talksDeliveredHeading">
+                <button class="btn btn-link btn-block text-start w-100 d-flex justify-content-between align-items-center collapsed ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#talksDeliveredCollapse" aria-expanded="false">
+                  <span><i class="fas fa-microphone me-2 text-muted"></i>Invited Talks Delivered <span class="badge bg-secondary ms-2">{{ site.data.activities.talks_delivered.size }}</span></span>
+                  <i class="fas fa-chevron-down"></i>
+                </button>
               </div>
-
-              <!-- Invited Talks Organized -->
-              <div class="card border-0 border-bottom">
-                <div class="card-header bg-transparent px-0" id="talksOrganizedHeading">
-                  <button
-                    class="btn btn-link btn-block text-start w-100 d-flex justify-content-between align-items-center collapsed ps-0"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#talksOrganizedCollapse"
-                    aria-expanded="false">
-                    <span>
-                      <i class="fas fa-users me-2 text-muted"></i>Invited Talks Organized
-                      <span class="badge bg-secondary ms-2">{{ site.data.activities.talks_organized.size }}</span>
-                    </span>
-                    <i class="fas fa-chevron-down"></i>
-                  </button>
-                </div>
-                <div
-                  id="talksOrganizedCollapse"
-                  class="collapse"
-                  data-bs-parent="#activitiesAccordion">
-                  <div class="card-body px-0 pt-3">
-                    <div class="accordion nested-accordion" id="talksOrganizedYears">
-                      {% assign organized_by_year = site.data.activities.talks_organized | group_by_exp: "talk", "talk.date | split: ', ' | last | split: ' ' | last | default: 'Other'" %}
-                      {% for year_group in organized_by_year %}
-                        <div class="year-group">
-                          <button
-                            class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#talksOrganized{{ year_group.name | replace: ' ', '' }}"
-                            aria-expanded="false">
-                            <span>
-                              <i class="fas fa-calendar-alt me-2 text-muted"></i>
-                              {{ year_group.name }}
-                              <span class="badge bg-light text-dark ms-1">{{ year_group.items.size }}</span>
-                            </span>
-                            <i class="fas fa-chevron-down chevron-sm"></i>
-                          </button>
-                          <div id="talksOrganized{{ year_group.name | replace: ' ', '' }}" class="collapse year-content">
-                            <ul class="list-unstyled activity-list ms-3">
-                              {% for talk in year_group.items %}
-                                <li class="activity-item py-1">
-                                  <span class="activity-title">{{ talk.title }}</span>
-                                  <span class="activity-meta text-muted d-block small">{{ talk.speaker }}, {{ talk.speaker_affiliation }}</span>
-                                </li>
-                              {% endfor %}
-                            </ul>
-                          </div>
-                        </div>
-                      {% endfor %}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Committees & Editorial Boards -->
-              <div class="card border-0 border-bottom">
-                <div class="card-header bg-transparent px-0" id="committeesHeading">
-                  <button
-                    class="btn btn-link btn-block text-start w-100 d-flex justify-content-between align-items-center collapsed ps-0"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#committeesCollapse"
-                    aria-expanded="false">
-                    <span>
-                      <i class="fas fa-clipboard-list me-2 text-muted"></i>Committees & Editorial Boards</span>
-                    <i class="fas fa-chevron-down"></i>
-                  </button>
-                </div>
-                <div
-                  id="committeesCollapse"
-                  class="collapse"
-                  data-bs-parent="#activitiesAccordion">
-                  <div class="card-body px-0 pt-3">
-                    <div class="accordion nested-accordion" id="committeesSubsections">
-
-                      {% if site.data.activities.committees.current_roles %}
-                        <div class="year-group">
-                          <button
-                            class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#committeesCurrentRoles"
-                            aria-expanded="false">
-                            <span>
-                              <i class="fas fa-star me-2 text-muted"></i>Current Roles
-                              <span class="badge bg-light text-dark ms-1">{{ site.data.activities.committees.current_roles.size }}</span>
-                            </span>
-                            <i class="fas fa-chevron-down chevron-sm"></i>
-                          </button>
-                          <div id="committeesCurrentRoles" class="collapse year-content">
-                            <ul class="list-unstyled activity-list ms-3">
-                              {% for role in site.data.activities.committees.current_roles %}
-                                <li class="activity-item py-1">
-                                  <span class="activity-title">{{ role.title }}</span>
-                                  <span class="activity-meta text-muted d-block small">{{ role.organization }} · {{ role.period }}</span>
-                                </li>
-                              {% endfor %}
-                            </ul>
-                          </div>
-                        </div>
-                      {% endif %}
-
-                      {% if site.data.activities.committees.editorial_service %}
-                        <div class="year-group">
-                          <button
-                            class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#committeesEditorial"
-                            aria-expanded="false">
-                            <span>
-                              <i class="fas fa-pen me-2 text-muted"></i>Editorial Service
-                              <span class="badge bg-light text-dark ms-1">{{ site.data.activities.committees.editorial_service.size }}</span>
-                            </span>
-                            <i class="fas fa-chevron-down chevron-sm"></i>
-                          </button>
-                          <div id="committeesEditorial" class="collapse year-content">
-                            <ul class="list-unstyled activity-list ms-3">
-                              {% for item in site.data.activities.committees.editorial_service %}
-                                <li class="activity-item py-1">
-                                  <span class="activity-title">{{ item.title }}</span>
-                                  <span class="activity-meta text-muted d-block small">{{ item.organization }} · {{ item.period }}</span>
-                                </li>
-                              {% endfor %}
-                            </ul>
-                          </div>
-                        </div>
-                      {% endif %}
-
-                      {% if site.data.activities.committees.conference_organization %}
-                        <div class="year-group">
-                          <button
-                            class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#committeesConference"
-                            aria-expanded="false">
-                            <span>
-                              <i class="fas fa-calendar-alt me-2 text-muted"></i>Conference Leadership
-                              <span class="badge bg-light text-dark ms-1">{{ site.data.activities.committees.conference_organization.size }}</span>
-                            </span>
-                            <i class="fas fa-chevron-down chevron-sm"></i>
-                          </button>
-                          <div id="committeesConference" class="collapse year-content">
-                            <ul class="list-unstyled activity-list ms-3">
-                              {% for item in site.data.activities.committees.conference_organization %}
-                                <li class="activity-item py-1">
-                                  <span class="activity-title">{{ item.title }}</span>
-                                  <span class="activity-meta text-muted d-block small">{{ item.organization }} · {{ item.period }}{% if item.location %}
-                                      · {{ item.location }}{% endif %}
-                                  </span>
-                                </li>
-                              {% endfor %}
-                            </ul>
-                          </div>
-                        </div>
-                      {% endif %}
-
-                      {% if site.data.activities.committees.academic_service %}
-                        <div class="year-group">
-                          <button
-                            class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#committeesAcademic"
-                            aria-expanded="false">
-                            <span>
-                              <i class="fas fa-graduation-cap me-2 text-muted"></i>Academic Service
-                              <span class="badge bg-light text-dark ms-1">{{ site.data.activities.committees.academic_service.size }}</span>
-                            </span>
-                            <i class="fas fa-chevron-down chevron-sm"></i>
-                          </button>
-                          <div id="committeesAcademic" class="collapse year-content">
-                            <ul class="list-unstyled activity-list ms-3">
-                              {% for item in site.data.activities.committees.academic_service %}
-                                <li class="activity-item py-1">
-                                  <span class="activity-title">{{ item.title }}</span>
-                                  <span class="activity-meta text-muted d-block small">{{ item.organization }} · {{ item.period }}</span>
-                                </li>
-                              {% endfor %}
-                            </ul>
-                          </div>
-                        </div>
-                      {% endif %}
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {% if page.show_visiting_positions and page.visiting_positions %}
-                <!-- Visiting Positions -->
-                <div class="card border-0">
-                  <div class="card-header bg-transparent px-0" id="visitingPositionsHeading">
-                    <button
-                      class="btn btn-link btn-block text-start w-100 d-flex justify-content-between align-items-center collapsed ps-0"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#visitingPositionsCollapse"
-                      aria-expanded="false">
-                      <span>
-                        <i class="fas fa-globe me-2 text-muted"></i>Visiting Positions
-                        <span class="badge bg-secondary ms-2">{{ page.visiting_positions.size }}</span>
-                      </span>
-                      <i class="fas fa-chevron-down"></i>
-                    </button>
-                  </div>
-                  <div
-                    id="visitingPositionsCollapse"
-                    class="collapse"
-                    data-bs-parent="#activitiesAccordion">
-                    <div class="card-body px-0 pt-3">
-                      <ul class="list-unstyled activity-list">
-                        {% for position in page.visiting_positions %}
+              <div id="talksDeliveredCollapse" class="collapse" data-bs-parent="#activitiesAccordion">
+                <div class="card-body px-0 pt-3">
+                  <div class="accordion nested-accordion" id="talksDeliveredYears">
+                    {% assign talks_by_year = site.data.activities.talks_delivered | group_by_exp: "talk", "talk.date | split: ', ' | last | split: ' ' | last | default: 'Other'" %}
+                    {% for year_group in talks_by_year %}
+                    <div class="year-group">
+                      <button class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#talksDelivered{{ year_group.name | replace: ' ', '' }}" aria-expanded="false">
+                        <span><i class="fas fa-calendar-alt me-2 text-muted"></i>{{ year_group.name }} <span class="badge bg-light text-dark ms-1">{{ year_group.items.size }}</span></span>
+                        <i class="fas fa-chevron-down chevron-sm"></i>
+                      </button>
+                      <div id="talksDelivered{{ year_group.name | replace: ' ', '' }}" class="collapse year-content">
+                        <ul class="list-unstyled activity-list ms-3">
+                          {% for talk in year_group.items %}
                           <li class="activity-item py-1">
-                            <span class="activity-title">{{ position.institution }}</span>
-                            <span class="activity-meta text-muted d-block small">{{ position.dates }} · Host: {{ position.hosts }}</span>
+                            <span class="activity-title">{{ talk.title }}</span>
+                            <span class="activity-meta text-muted d-block small">{{ talk.venue }}{% if talk.type %} · <span class="badge bg-light text-dark">{{ talk.type }}</span>{% endif %}</span>
                           </li>
-                        {% endfor %}
-                      </ul>
+                          {% endfor %}
+                        </ul>
+                      </div>
                     </div>
+                    {% endfor %}
                   </div>
                 </div>
-              {% endif %}
-
+              </div>
             </div>
+
+            <!-- Invited Talks Organized -->
+            <div class="card border-0 border-bottom">
+              <div class="card-header bg-transparent px-0" id="talksOrganizedHeading">
+                <button class="btn btn-link btn-block text-start w-100 d-flex justify-content-between align-items-center collapsed ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#talksOrganizedCollapse" aria-expanded="false">
+                  <span><i class="fas fa-users me-2 text-muted"></i>Invited Talks Organized <span class="badge bg-secondary ms-2">{{ site.data.activities.talks_organized.size }}</span></span>
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+              <div id="talksOrganizedCollapse" class="collapse" data-bs-parent="#activitiesAccordion">
+                <div class="card-body px-0 pt-3">
+                  <div class="accordion nested-accordion" id="talksOrganizedYears">
+                    {% assign organized_by_year = site.data.activities.talks_organized | group_by_exp: "talk", "talk.date | split: ', ' | last | split: ' ' | last | default: 'Other'" %}
+                    {% for year_group in organized_by_year %}
+                    <div class="year-group">
+                      <button class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#talksOrganized{{ year_group.name | replace: ' ', '' }}" aria-expanded="false">
+                        <span><i class="fas fa-calendar-alt me-2 text-muted"></i>{{ year_group.name }} <span class="badge bg-light text-dark ms-1">{{ year_group.items.size }}</span></span>
+                        <i class="fas fa-chevron-down chevron-sm"></i>
+                      </button>
+                      <div id="talksOrganized{{ year_group.name | replace: ' ', '' }}" class="collapse year-content">
+                        <ul class="list-unstyled activity-list ms-3">
+                          {% for talk in year_group.items %}
+                          <li class="activity-item py-1">
+                            <span class="activity-title">{{ talk.title }}</span>
+                            <span class="activity-meta text-muted d-block small">{{ talk.speaker }}, {{ talk.speaker_affiliation }}</span>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Committees & Editorial Boards -->
+            <div class="card border-0 border-bottom">
+              <div class="card-header bg-transparent px-0" id="committeesHeading">
+                <button class="btn btn-link btn-block text-start w-100 d-flex justify-content-between align-items-center collapsed ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#committeesCollapse" aria-expanded="false">
+                  <span><i class="fas fa-clipboard-list me-2 text-muted"></i>Committees & Editorial Boards</span>
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+              <div id="committeesCollapse" class="collapse" data-bs-parent="#activitiesAccordion">
+                <div class="card-body px-0 pt-3">
+                  <div class="accordion nested-accordion" id="committeesSubsections">
+                    
+                    {% if site.data.activities.committees.current_roles %}
+                    <div class="year-group">
+                      <button class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#committeesCurrentRoles" aria-expanded="false">
+                        <span><i class="fas fa-star me-2 text-muted"></i>Current Roles <span class="badge bg-light text-dark ms-1">{{ site.data.activities.committees.current_roles.size }}</span></span>
+                        <i class="fas fa-chevron-down chevron-sm"></i>
+                      </button>
+                      <div id="committeesCurrentRoles" class="collapse year-content">
+                        <ul class="list-unstyled activity-list ms-3">
+                          {% for role in site.data.activities.committees.current_roles %}
+                          <li class="activity-item py-1">
+                            <span class="activity-title">{{ role.title }}</span>
+                            <span class="activity-meta text-muted d-block small">{{ role.organization }} · {{ role.period }}</span>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                    {% endif %}
+
+                    {% if site.data.activities.committees.editorial_service %}
+                    <div class="year-group">
+                      <button class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#committeesEditorial" aria-expanded="false">
+                        <span><i class="fas fa-pen me-2 text-muted"></i>Editorial Service <span class="badge bg-light text-dark ms-1">{{ site.data.activities.committees.editorial_service.size }}</span></span>
+                        <i class="fas fa-chevron-down chevron-sm"></i>
+                      </button>
+                      <div id="committeesEditorial" class="collapse year-content">
+                        <ul class="list-unstyled activity-list ms-3">
+                          {% for item in site.data.activities.committees.editorial_service %}
+                          <li class="activity-item py-1">
+                            <span class="activity-title">{{ item.title }}</span>
+                            <span class="activity-meta text-muted d-block small">{{ item.organization }} · {{ item.period }}</span>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                    {% endif %}
+
+                    {% if site.data.activities.committees.conference_organization %}
+                    <div class="year-group">
+                      <button class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#committeesConference" aria-expanded="false">
+                        <span><i class="fas fa-calendar-alt me-2 text-muted"></i>Conference Leadership <span class="badge bg-light text-dark ms-1">{{ site.data.activities.committees.conference_organization.size }}</span></span>
+                        <i class="fas fa-chevron-down chevron-sm"></i>
+                      </button>
+                      <div id="committeesConference" class="collapse year-content">
+                        <ul class="list-unstyled activity-list ms-3">
+                          {% for item in site.data.activities.committees.conference_organization %}
+                          <li class="activity-item py-1">
+                            <span class="activity-title">{{ item.title }}</span>
+                            <span class="activity-meta text-muted d-block small">{{ item.organization }} · {{ item.period }}{% if item.location %} · {{ item.location }}{% endif %}</span>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                    {% endif %}
+
+                    {% if site.data.activities.committees.academic_service %}
+                    <div class="year-group">
+                      <button class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#committeesAcademic" aria-expanded="false">
+                        <span><i class="fas fa-graduation-cap me-2 text-muted"></i>Academic Service <span class="badge bg-light text-dark ms-1">{{ site.data.activities.committees.academic_service.size }}</span></span>
+                        <i class="fas fa-chevron-down chevron-sm"></i>
+                      </button>
+                      <div id="committeesAcademic" class="collapse year-content">
+                        <ul class="list-unstyled activity-list ms-3">
+                          {% for item in site.data.activities.committees.academic_service %}
+                          <li class="activity-item py-1">
+                            <span class="activity-title">{{ item.title }}</span>
+                            <span class="activity-meta text-muted d-block small">{{ item.organization }} · {{ item.period }}</span>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    </div>
+                    {% endif %}
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {% if page.show_visiting_positions and page.visiting_positions %}
+            <!-- Visiting Positions -->
+            <div class="card border-0">
+              <div class="card-header bg-transparent px-0" id="visitingPositionsHeading">
+                <button class="btn btn-link btn-block text-start w-100 d-flex justify-content-between align-items-center collapsed ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#visitingPositionsCollapse" aria-expanded="false">
+                  <span><i class="fas fa-globe me-2 text-muted"></i>Visiting Positions <span class="badge bg-secondary ms-2">{{ page.visiting_positions.size }}</span></span>
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+              <div id="visitingPositionsCollapse" class="collapse" data-bs-parent="#activitiesAccordion">
+                <div class="card-body px-0 pt-3">
+                  <ul class="list-unstyled activity-list">
+                    {% for position in page.visiting_positions %}
+                    <li class="activity-item py-1">
+                      <span class="activity-title">{{ position.institution }}</span>
+                      <span class="activity-meta text-muted d-block small">{{ position.dates }} · Host: {{ position.hosts }}</span>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+
           </div>
         </div>
+      </div>
       {% endif %}
     </div>
   </div>
 
   {% unless page.email == "css@iisc.ac.in" or page.category == "Administrator" %}
-    <div class="publications">
-      <h3 class="mt-5 mb-3">Publications</h3>
-      {% capture debug_query %}@*[emails~={{ page.email }}]{% endcapture %}
-      {% bibliography --query {{debug_query}} %}
-    </div>
+  <div class="publications">
+    <h3 class="mt-5 mb-3">Publications</h3>
+    {% capture debug_query %}@*[emails~={{ page.email }}]{% endcapture %}
+
+    {% bibliography --query {{debug_query}} %}
+  </div>
   {% endunless %}
 </div>

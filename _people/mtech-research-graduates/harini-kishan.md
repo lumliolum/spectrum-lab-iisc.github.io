@@ -6,9 +6,10 @@ lastname: Kishan
 description: M.Tech Research Graduate
 img: assets/img/people/alumni/harini-kishan.jpg
 website: 
-linkedin_username: 
+linkedin_username: harinikishan
 github_username:
 category: M.Tech Research Graduates
+current_position: Apple
 show: true
 year: 2013
 ---

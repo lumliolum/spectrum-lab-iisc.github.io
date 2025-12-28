@@ -10,21 +10,16 @@ Official website for **Spectrum Lab** at the Department of Electrical Engineerin
 
 - [Quick Start](#-quick-start)
 - [Project Structure](#-project-structure)
-- [How to Update Each Component](#-how-to-update-each-component)
+- [How to Update Content](#-how-to-update-content)
   - [People / Team Members](#1-people--team-members)
   - [Publications](#2-publications)
   - [News & Announcements](#3-news--announcements)
-  - [Teaching / Courses](#4-teaching--courses)
-  - [Recognition & Awards](#5-recognition--awards)
-  - [Funding / Sponsors](#6-funding--sponsors)
-  - [Professional Activities](#7-professional-activities-lab-director)
-  - [Projects](#8-projects)
-  - [Photo Album](#9-photo-album)
-- [Adding Images](#-adding-images)
-- [Dark Mode Support](#-dark-mode-support)
-- [Development](#-development)
+  - [Projects](#4-projects)
+  - [Data Files (Funding, Awards, Teaching)](#5-data-files)
+- [Image Optimization (CRITICAL)](#-image-optimization-critical)
+- [Styling & Dark Mode](#-styling--dark-mode)
+- [Configuration](#-configuration)
 - [Deployment](#-deployment)
-- [Troubleshooting](#-troubleshooting)
 
 ---
 
@@ -33,7 +28,7 @@ Official website for **Spectrum Lab** at the Department of Electrical Engineerin
 ### Prerequisites
 - Ruby 3.x
 - Bundler (`gem install bundler`)
-- ImageMagick (for image processing)
+- ImageMagick (Required for image optimization)
 
 ### Local Development
 
@@ -51,7 +46,7 @@ JEKYLL_ENV=development bundle exec jekyll serve --livereload --port 8080
 # Access at: http://localhost:8080
 ```
 
-### Using Docker (Alternative)
+### Using Docker
 
 ```bash
 docker-compose up --build
@@ -68,54 +63,38 @@ spectrum-lab-iisc.github.io/
 │   └── papers.bib          # All publications go here
 ├── _data/                  # YAML data files
 │   ├── activities.yml      # Lab Director's professional activities
+│   ├── emails.yml          # Email aliases for bibliography
 │   ├── funding.yml         # Funding sources/sponsors
 │   ├── recognition.yml     # Awards and recognition
 │   ├── teaching.yml        # Course listings
-│   └── album.yaml          # Photo album categories
+│   └── ...
 ├── _includes/              # Reusable HTML/Liquid components
+│   ├── responsive-image.liquid  # ⭐ MAIN IMAGE INCLUDE
+│   └── ...
 ├── _layouts/               # Page templates
-├── _news/                  # News announcements (markdown files)
-├── _pages/                 # Static pages
+├── _news/                  # News announcements
+├── _pages/                 # Static pages (about, etc.)
 ├── _people/                # Team member profiles
-│   ├── lab-director/       # Lab director profile
-│   ├── phd-students/       # Current PhD students
-│   ├── phd-graduates/      # PhD alumni
-│   ├── mtech-students/     # Current MTech students
-│   ├── mtech-research/     # MTech Research students
-│   ├── project-associates/ # Project staff
-│   └── person_template.md  # Template for new profiles
+│   ├── current/            # Active members (phd, mtech, etc.)
+│   └── alumni/             # Former members
 ├── _projects/              # Research project pages
 ├── _sass/                  # SCSS stylesheets
 ├── assets/
-│   └── img/                # All images
-│       ├── people/         # Profile photos (organized by category)
-│       ├── funders/        # Sponsor/funder logos
-│       ├── recognition/    # Award photos
-│       ├── album/          # Photo gallery images
-│       └── logo/           # Lab logos
+│   └── img/                # All images (people, projects, etc.)
 └── _config.yml             # Site configuration
 ```
 
 ---
 
-## 📝 How to Update Each Component
+## 📝 How to Update Content
 
 ### 1. People / Team Members
 
 **Location:** `_people/`
 
 **Structure:**
-- `current/` - Active lab members
-  - `lab-director/`
-  - `phd-students/`
-  - `mtech-students/`
-  - `mtech-research/`
-  - `project-associates/`
-  - `administrator/`
-- `alumni/` - Former members
-  - `phd-graduates/`
-  - `mtech-graduates/`
-  - `mtech-research-graduates/`
+- `current/` - Active lab members (subfolders: `phd-students`, `mtech-students`, etc.)
+- `alumni/` - Former members (subfolders: `phd-graduates`, etc.)
 
 #### Adding a New Person
 
@@ -125,48 +104,14 @@ spectrum-lab-iisc.github.io/
    ```
 
 2. **Add their photo:**
-   - Save photo to `assets/img/people/[category]/filename.jpg`
-   - Recommended: Square aspect ratio, at least 400x400px
+   - Save to `assets/img/people/[category]/filename.jpg`
+   - **Requirement:** Square aspect ratio, min 400x400px.
 
 3. **Edit the markdown file:**
-
-```yaml
----
-layout: person
-title: John Doe
-firstname: John
-lastname: Doe
-description: PhD Student
-img: assets/img/people/phd-students/john-doe.jpg
-email: johndoe@iisc.ac.in
-scholar_userid: XXXXXXXX        # Google Scholar ID (optional)
-linkedin_username: johndoe      # LinkedIn username (optional)
-github: johndoe                 # GitHub username (optional)
-orcid_id: 0000-0000-0000-0000   # ORCID ID (optional)
-category: PhD Student
-show: true                      # Set to false to hide
-
-biography_paragraphs:
-  - "First paragraph of biography..."
-  - "Second paragraph..."
-
-# Optional sections
-show_awards: true
-awards:
-  - "Award 1, Year"
-  - "Award 2, Year"
----
-```
-
-#### Removing or Hiding a Person
-
-- **To hide temporarily:** Set `show: false` in the front matter
-- **To remove:** Delete the markdown file (and optionally the photo)
+   Update `title`, `firstname`, `lastname`, `img` path, and `category`.
 
 #### Moving to Alumni
-
-Move the file from `current/[category]/` to `alumni/[category-graduates]/` folder.
-Example: Move from `_people/current/phd-students/` to `_people/alumni/phd-graduates/`.
+Move the file from `current/[category]/` to `alumni/[category-graduates]/`.
 
 ---
 
@@ -174,36 +119,22 @@ Example: Move from `_people/current/phd-students/` to `_people/alumni/phd-gradua
 
 **Location:** `_bibliography/papers.bib`
 
-#### Adding a New Publication
+1. **Add BibTeX entry:**
+   ```bibtex
+   @article{key2025,
+     author = {Author, A. and Seelamantula, C. S.},
+     title = {Paper Title},
+     year = {2025},
+     preview = {thumbnail.png},  # Optional: Image in assets/img/publication_preview/
+     emails = {alias1, css},     # Use aliases from _data/emails.yml
+     bibtex_show = {true},
+     selected = {true}           # Show on homepage
+   }
+   ```
 
-Add a BibTeX entry to `papers.bib`:
-
-```bibtex
-@article{author2025title,
-  author      = {Author, A. and Author, B. and Seelamantula, C. S.},
-  title       = {Paper Title Here},
-  journal     = {IEEE Transactions on Signal Processing},
-  year        = {2025},
-  abbr        = {IEEE TSP 25},              # Short abbreviation shown on site
-  url         = {https://link-to-paper},
-  doi         = {10.1109/TSP.2025.XXXXX},
-  bibtex_show = {true},                     # Show BibTeX button
-  selected    = {true},                     # Feature on homepage
-  code        = {https://github.com/...},   # Code repository (optional)
-  pdf         = {paper.pdf},                # PDF in assets/pdf/ (optional)
-  emails      = {alias}                     # Links to author's page (use alias from _data/emails.yml)
-}
-```
-
-**Key fields:**
-| Field | Purpose |
-|-------|---------|
-| `abbr` | Short label (e.g., "ICASSP 25") |
-| `selected` | `true` to show on homepage |
-| `bibtex_show` | `true` to show copy BibTeX button |
-| `emails` | Comma-separated email aliases (from `_data/emails.yml`) to link authors |
-| `code` | GitHub/code repository URL |
-| `pdf` | PDF filename in `assets/pdf/` |
+2. **Manage Authors:**
+   - Use **aliases** in the `emails` field to link authors to their profile pages.
+   - Define new aliases in `_data/emails.yml`.
 
 ---
 
@@ -211,348 +142,100 @@ Add a BibTeX entry to `papers.bib`:
 
 **Location:** `_news/`
 
-#### Adding News
-
-Create a new markdown file with date prefix:
-
-```bash
-# Filename format: YYYY-MM-DD-short-title.md
-touch _news/2025-01-15-new-paper.md
-```
-
-**Content:**
+Create a file `YYYY-MM-DD-title.md`:
 
 ```yaml
 ---
 layout: post
-title: Paper Accepted at ICASSP 2025
+title: "News Title"
 date: 2025-01-15
-inline: true                    # true = one-line, false = full post
-related_posts: false
+inline: true   # true = one-line announcement, false = full blog post
 ---
-
-Our paper on [topic] was accepted at ICASSP 2025! 🎉
-```
-
-**Inline vs Full Post:**
-- `inline: true` - Shows as a single line on the news page
-- `inline: false` - Creates a full blog post with its own page
-
----
-
-### 4. Teaching / Courses
-
-**Location:** `_data/teaching.yml`
-
-#### Adding a Course
-
-```yaml
-- title: "E9 213 Time-Frequency Analysis"
-  description: "Course description here..."
-  instructor: "Prof. Chandra Sekhar Seelamantula"
-  teaching_assistants: ["TA Name 1", "TA Name 2"]
-  semester: "Aug. 2025"
-  permalink: "/teaching/e9-213-time-frequency-analysis/"
-  course_id: "e9-213"
-  type: "Regular Course"           # or "Short Course"
-```
-
-**For Short Courses (with external instructor):**
-
-```yaml
-- title: "Special Topic Course"
-  description: "Course description..."
-  instructor: "Prof. External Name"
-  instructor_bio: "Brief bio of the instructor..."
-  instructor_photo: "assets/img/people/instructors/name.jpg"
-  hosts: ["Prof. C. S. Seelamantula", "Prof. Another Host"]
-  teaching_assistants: ["TA 1", "TA 2"]
-  semester: "Dec. 2025"
-  permalink: "/teaching/special-topic/"
-  course_id: "st"
-  type: "Short Course"
+Announcement text here...
 ```
 
 ---
 
-### 5. Recognition & Awards
-
-**Location:** `_data/recognition.yml`
-
-#### Adding an Award
-
-```yaml
-- name: "Student Name"
-  award: "Award Title"
-  year: "2025"
-  category: "Award"
-  image: "assets/img/recognition/award-photo.jpg"   # Optional
-```
-
-**Image location:** `assets/img/recognition/`
-
----
-
-### 6. Funding / Sponsors
-
-**Location:** `_data/funding.yml`
-
-#### Adding a Funder
-
-```yaml
-- logo: /assets/img/funders/organization-logo.png
-  url: https://organization-website.com
-  name: "Organization Name"
-  invert: false                 # true if logo needs color inversion in dark mode
-```
-
-**Logo requirements:**
-- Location: `assets/img/funders/`
-- Format: PNG, SVG, or JPG
-- Recommended: Transparent background PNG
-
-**Dark mode handling:**
-- Set `invert: true` for dark logos that need to be inverted in dark mode
-- Logos automatically display in a grayscale carousel with color on hover
-
----
-
-### 7. Professional Activities (Lab Director)
-
-**Location:** `_data/activities.yml`
-
-This file contains the Lab Director's professional activities shown on their profile page.
-
-#### Structure:
-
-```yaml
-# Invited talks delivered
-talks_delivered:
-  - title: "Talk Title"
-    venue: "Conference/Institution Name"
-    date: "Month Day, Year"
-    type: "Keynote"              # Workshop, Conference, Tutorial, etc.
-    note: "Additional info"      # Optional
-
-# Invited talks organized
-talks_organized:
-  - title: "Talk Title"
-    speaker: "Speaker Name"
-    speaker_affiliation: "Speaker's Institution"
-    date: "Month Day, Year"
-    note: "Additional info"      # Optional
-
-# Committee memberships
-committees:
-  current_roles:
-    - title: "Role Title"
-      organization: "Organization"
-      period: "2023-Present"
-      type: "Committee"
-  
-  editorial_service:
-    - title: "Associate Editor"
-      organization: "Journal Name"
-      period: "2020-2024"
-      type: "Editorial"
-  
-  conference_organization:
-    - title: "General Chair"
-      organization: "Conference Name"
-      period: "2025"
-      location: "City, Country"
-      type: "Conference Leadership"
-  
-  academic_service:
-    - title: "Committee Member"
-      organization: "Institution"
-      period: "2022-2023"
-      type: "Academic Administration"
-```
-
----
-
-### 8. Projects
+### 4. Projects
 
 **Location:** `_projects/`
 
-#### Adding a Project
-
-Create a markdown file (e.g., `_projects/project-name.md`):
+Create a markdown file (e.g., `project-name.md`):
 
 ```yaml
 ---
 layout: page
 title: Project Title
-description: Brief description for the card
-img: assets/img/projects/project-image.jpg
-importance: 1                    # Lower = appears first
-category: work                   # Category for filtering
-related_publications: true       # Show related papers
+description: Short description
+img: assets/img/projects/image.jpg
+importance: 1
+category: work
 ---
-
-Full project description in Markdown...
-
-## Overview
-
-Project details here...
-
-## Results
-
-Include images:
-{% include figure.liquid path="assets/img/projects/result.jpg" title="Result" class="img-fluid rounded" %}
+Full project description...
 ```
 
 ---
 
-### 9. Photo Album
+### 5. Data Files
 
-**Location:** 
-- Data: `_data/album.yaml`
-- Images: `assets/img/album/[category]/`
-
-#### Adding Album Categories
-
-Edit `_data/album.yaml`:
-
-```yaml
-- title: "Lab Events"
-  folder: "lab-events"           # Matches folder in assets/img/album/
-  description: "Photos from lab events and celebrations"
-```
-
-#### Adding Photos
-
-1. Create folder: `assets/img/album/[folder-name]/`
-2. Add images numbered sequentially: `1.jpg`, `2.jpg`, etc.
+| File | Purpose |
+|------|---------|
+| `_data/funding.yml` | Sponsors shown in the homepage carousel. |
+| `_data/recognition.yml` | Awards and honors list. |
+| `_data/teaching.yml` | Courses taught by the lab director. |
+| `_data/activities.yml` | Professional activities (talks, committees). |
+| `_data/album.yaml` | Categories for the photo album. |
 
 ---
 
-## 🖼️ Adding Images
+## 🖼️ Image Optimization (CRITICAL)
 
-### Image Locations
+The site uses **ImageMagick** to automatically generate optimized WebP images.
 
-| Type | Location |
-|------|----------|
-| Profile photos | `assets/img/people/[category]/` |
-| Funder logos | `assets/img/funders/` |
-| Award photos | `assets/img/recognition/` |
-| Album photos | `assets/img/album/[category]/` |
-| Project images | `assets/img/projects/` |
-| Research highlights | `assets/img/research-highlights/` |
-| Logos | `assets/img/logo/` |
+**❌ NEVER use raw HTML `<img>` tags.**
 
-### Image Guidelines
+**✅ ALWAYS use the provided Liquid includes:**
 
-- **Profile photos:** Square aspect ratio, minimum 400x400px
-- **Logos:** PNG with transparent background preferred
-- **General images:** JPG or PNG, reasonable file size (< 500KB)
-- **Supported formats:** JPG, PNG, WebP, SVG
+1.  **Standard Image (Responsive):**
+    ```liquid
+    {% include responsive-image.liquid path="assets/img/photo.jpg" alt="Alt text" class="img-fluid" %}
+    ```
 
-### Automatic Processing
+2.  **Figure with Caption:**
+    ```liquid
+    {% include figure.liquid path="assets/img/photo.jpg" title="Caption" class="img-fluid" %}
+    ```
 
-The site uses ImageMagick to automatically generate responsive image sizes (480px, 800px, 1400px widths) during build.
+3.  **Simple/Small Image (Logos):**
+    ```liquid
+    {% include simple-image.liquid path="assets/img/logo.png" alt="Logo" %}
+    ```
 
----
-
-## 🌙 Dark Mode Support
-
-The site supports automatic dark/light mode switching. When adding content:
-
-1. **Logos with dark backgrounds:** Set `invert: true` in `funding.yml`
-2. **Custom images:** Use CSS variables for colors that need to adapt
-3. **Bootstrap classes:** The site overrides `.bg-light`, `.text-dark`, etc. for dark mode
+**Note:** New images are processed during the build. Ensure ImageMagick is installed locally.
 
 ---
 
-## 🛠️ Development
+## 🎨 Styling & Dark Mode
 
-### File Formatting
-
-Format Liquid/HTML/Markdown files:
-
-```bash
-npx prettier --plugin=@shopify/prettier-plugin-liquid --write "**/*.{liquid,md,html}"
-```
-
-### Building for Production
-
-```bash
-JEKYLL_ENV=production bundle exec jekyll build
-```
-
-The built site will be in `_site/`.
-
-### Key Configuration
-
-Main configuration is in `_config.yml`:
-
-```yaml
-title: Spectrum Lab
-email: css@iisc.ac.in
-url: "https://spectrum-lab-iisc.github.io"
-```
+- **SCSS Location:** `_sass/`
+- **Dark Mode:** The site supports automatic dark mode.
+  - Use CSS variables (`var(--global-bg-color)`) instead of hardcoded colors.
+  - For logos in `funding.yml`, set `invert: true` if they need to be inverted in dark mode.
 
 ---
 
-## 🚢 Deployment
+## ⚙️ Configuration
 
-The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch.
-
-### Manual Deployment Steps
-
-1. Make changes locally
-2. Test with local server
-3. Commit and push to `main`
-4. GitHub Actions builds and deploys automatically
-5. Changes appear at https://spectrum-lab-iisc.github.io within minutes
+- **Main Config:** `_config.yml` (Site title, URL, analytics, etc.)
+- **Typography:** `_data/typography.yml` (Font families, sizes, math engine settings).
 
 ---
 
-## 🔧 Troubleshooting
+## ship: Deployment
 
-### Common Issues
-
-**Build fails with SCSS error:**
-- Check for syntax errors in `_sass/` files
-- Ensure all variables are defined
-
-**Images not showing:**
-- Verify file path matches exactly (case-sensitive)
-- Check file exists in the correct location
-- For responsive images, ensure ImageMagick is installed
-
-**Person not appearing:**
-- Ensure `show: true` in front matter
-- Check file is in correct category folder
-- Verify YAML syntax is correct
-
-**Publications not showing:**
-- Validate BibTeX syntax
-- Ensure required fields are present
-- Check for special characters that need escaping
-
-### Validating Changes
-
-```bash
-# Build and check for errors
-bundle exec jekyll build --verbose
-
-# Serve and check console for errors
-bundle exec jekyll serve --livereload --port 8080
-```
-
----
-
-## 📚 Technology Stack
-
-- **[Jekyll](https://jekyllrb.com/)** - Static site generator
-- **[al-folio](https://github.com/alshedivat/al-folio)** - Academic theme (customized)
-- **[Bootstrap 5](https://getbootstrap.com/)** - CSS framework
-- **[ImageMagick](https://imagemagick.org/)** - Image processing
-- **[jekyll-scholar](https://github.com/inukshuk/jekyll-scholar)** - BibTeX processing
-- **[GitHub Pages](https://pages.github.com/)** - Hosting
-
+The site is hosted on **GitHub Pages**.
+- **Automatic:** Pushing to `main` triggers a GitHub Action to build and deploy.
+- **Manual Check:** Always run `JEKYLL_ENV=production bundle exec jekyll build` locally before pushing to catch errors.
 
 ---
 

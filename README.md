@@ -102,23 +102,26 @@ spectrum-lab-iisc.github.io/
 
 ### 1. People / Team Members
 
-**Location:** `_people/[category]/`
+**Location:** `_people/`
 
-**Categories (folders):**
-- `lab-director/` - Lab director profile
-- `phd-students/` - Current PhD students
-- `phd-graduates/` - PhD alumni
-- `mtech-students/` - Current MTech students
-- `mtech-research/` - MTech Research students
-- `mtech-research-graduates/` - MTech Research alumni
-- `project-associates/` - Project staff
-- `administrator/` - Administrative staff
+**Structure:**
+- `current/` - Active lab members
+  - `lab-director/`
+  - `phd-students/`
+  - `mtech-students/`
+  - `mtech-research/`
+  - `project-associates/`
+  - `administrator/`
+- `alumni/` - Former members
+  - `phd-graduates/`
+  - `mtech-graduates/`
+  - `mtech-research-graduates/`
 
 #### Adding a New Person
 
 1. **Copy the template:**
    ```bash
-   cp _people/person_template.md _people/phd-students/firstname-lastname.md
+   cp _people/person_template.md _people/current/phd-students/firstname-lastname.md
    ```
 
 2. **Add their photo:**
@@ -162,7 +165,8 @@ awards:
 
 #### Moving to Alumni
 
-Move the file from `phd-students/` to `phd-graduates/` folder.
+Move the file from `current/[category]/` to `alumni/[category-graduates]/` folder.
+Example: Move from `_people/current/phd-students/` to `_people/alumni/phd-graduates/`.
 
 ---
 

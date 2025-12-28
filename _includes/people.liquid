@@ -1,7 +1,7 @@
 <!-- _includes/persons.html -->
 <div class="grid-item">
-  {% if person.redirect -%}
-    <a href="{{ person.redirect }}">
+  {% if person.website -%}
+    <a href="{{ person.website }}">
   {%- else -%}
     <a href="{{ person.url | relative_url }}">
   {%- endif %}
@@ -31,9 +31,11 @@
       {%- endif -%}
       <div class="card-icons">
         {%- if person.email -%}
+          {%- unless person.email contains 'placeholder.com' -%}
           <a href="mailto:{{ person.email | encode_email }}" title="e-mail">
             <i class="icon me-1 p-0 fas fa-envelope"></i>
           </a>
+          {%- endunless -%}
         {% endif %}
         {%- if person.orcid_id -%}
           <a href="https://orcid.org/{{ person.orcid_id }}" title="ORCID">

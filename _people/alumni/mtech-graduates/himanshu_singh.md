@@ -7,4 +7,5 @@ description: M.Tech AI
 category: M.Tech Graduates
 show: true
 year: 2021
+email: himanshu.singh@placeholder.com
 ---

@@ -7,4 +7,5 @@ description: ME SP
 category: M.Tech Graduates
 show: true
 year: 2013
+email: ramakrishna.reddy@placeholder.com
 ---

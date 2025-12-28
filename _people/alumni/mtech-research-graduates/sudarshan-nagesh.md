@@ -13,4 +13,5 @@ category: M.Tech Research Graduates
 current_position: Research Specialist, Northwestern University
 show: true
 year: 2014
+email: sudarshan.nagesh@placeholder.com
 ---

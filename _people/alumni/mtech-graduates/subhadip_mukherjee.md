@@ -11,5 +11,6 @@ category: M.Tech Graduates
 current_position: IIT Kharagpur
 show: true
 year: 2012
-redirect: https://sites.google.com/view/subhadip-mukherjee/home
+website: https://sites.google.com/view/subhadip-mukherjee/home
+email: subhadip.mukherjee@placeholder.com
 ---

@@ -12,4 +12,5 @@ category: M.Tech Graduates
 current_position: Microsoft
 show: true
 year: 2013
+email: pavan.manoj@placeholder.com
 ---

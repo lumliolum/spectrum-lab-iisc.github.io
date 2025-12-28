@@ -36,14 +36,20 @@ show: true                      # Whether to show this person on the site
 
 ### Contact Information (Optional)
 ```yaml
-email: [email@iisc.ac.in]       # Email address
+email: [email@iisc.ac.in]       # Email address (must match _data/emails.yml for bibliography linking)
 orcid_id: [ORCID ID]           # ORCID identifier
 linkedin_username: [username]   # LinkedIn username
 github: [username]              # GitHub username
 scholar_userid: [Google Scholar ID]  # Google Scholar user ID
 twitter_username: [handle]      # Twitter handle
-website: [URL]                  # Personal website URL
+website: [URL]                  # Personal website URL (displayed on profile)
+redirect: [URL]                 # External URL to redirect to when card is clicked (overrides internal profile)
 ```
+
+### Email Aliases
+For the bibliography to correctly link to the person's profile, their email must be mapped to an alias in `_data/emails.yml`.
+- If the person has a real email, add it to `_data/emails.yml`.
+- If they don't, use a placeholder (e.g., `firstname.lastname@placeholder.com`) in both the profile and `_data/emails.yml`.
 
 ### Biography Content
 ```yaml

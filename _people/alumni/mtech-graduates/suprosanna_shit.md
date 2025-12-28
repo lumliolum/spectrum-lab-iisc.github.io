@@ -13,4 +13,5 @@ category: M.Tech Graduates
 current_position: University of Zurich / ETH AI Center
 show: true
 year: 2017
+email: suprosanna.shit@placeholder.com
 ---

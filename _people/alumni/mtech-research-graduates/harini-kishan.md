@@ -12,4 +12,5 @@ category: M.Tech Research Graduates
 current_position: Apple
 show: true
 year: 2013
+email: harini.kishan@placeholder.com
 ---

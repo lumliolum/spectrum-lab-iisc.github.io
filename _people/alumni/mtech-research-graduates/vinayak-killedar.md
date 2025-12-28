@@ -13,4 +13,5 @@ category: M.Tech Research Graduates
 current_position: Freelance (Germany)
 show: true
 year: 2023
+email: vinayak.killedar@placeholder.com
 ---

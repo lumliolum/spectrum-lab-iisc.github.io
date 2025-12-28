@@ -94,7 +94,8 @@ _data/             # YAML data files
   ├── teaching.yml     # Course information
   ├── activities.yml   # Professional activities (Lab Director)
   ├── album.yaml       # Photo album events
-  └── coauthors.yml    # Co-author highlighting
+  ├── coauthors.yml    # Co-author highlighting
+  └── emails.yml       # Email aliases for bibliography (centralized)
 
 _layouts/          # Page layouts
   ├── default.liquid   # Base layout (includes head, navbar, footer)
@@ -148,6 +149,9 @@ _sass/             # SCSS stylesheets
 1. Add BibTeX entry to `_bibliography/papers.bib`
 2. Include `preview` field for thumbnail: `preview = {thumbnail.png}`
 3. Preview images go in `assets/img/publication_preview/`
+4. Use email **aliases** (not full emails) in the `emails` field. Aliases are defined in `_data/emails.yml`.
+   - Example: `emails = {css, abijithj}` instead of `emails = {css@iisc.ac.in, abijithj@iisc.ac.in}`
+   - If a new author's email is needed, add the alias to `_data/emails.yml` first
 
 ### Add News
 Create file in `_news/` with front-matter:

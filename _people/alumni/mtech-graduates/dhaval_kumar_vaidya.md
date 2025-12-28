@@ -7,4 +7,5 @@ description: ME SSA — sponsored by DRDO, Bengaluru
 category: M.Tech Graduates
 show: true
 year: 2018
+email: dhaval kumar.vaidya@placeholder.com
 ---

@@ -21,7 +21,9 @@ layout: default
       <p class="text-muted mb-2 text-center">{{ page.description }}</p>
 
       {% if page.email %}
+      {% unless page.email contains 'placeholder.com' %}
       <p><i class="bi bi-envelope-fill me-2"></i><a href="mailto:{{ page.email }}">{{ page.email }}</a></p>
+      {% endunless %}
       {% endif %}
 
       <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
@@ -288,7 +290,21 @@ layout: default
   {% unless page.email == "css@iisc.ac.in" or page.category == "Administrator" %}
   <div class="publications">
     <h3 class="mt-5 mb-3">Publications</h3>
-    {% capture debug_query %}@*[emails~={{ page.email }}]{% endcapture %}
+    
+    {% comment %} Resolve email alias for bibliography query {% endcomment %}
+    {% assign person_alias = nil %}
+    {% for email_entry in site.data.emails %}
+      {% if email_entry[1] == page.email %}
+        {% assign person_alias = email_entry[0] %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    
+    {% unless person_alias %}
+      {% assign person_alias = page.email | split: '@' | first %}
+    {% endunless %}
+    
+    {% capture debug_query %}@*[emails~={{ person_alias }}]{% endcapture %}
 
     {% bibliography --query {{debug_query}} %}
   </div>

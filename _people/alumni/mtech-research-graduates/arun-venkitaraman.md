@@ -13,4 +13,5 @@ category: M.Tech Research Graduates
 current_position: Senior Research Scientist, Sony AI
 show: true
 year: 2014
+email: arun.venkitaraman@placeholder.com
 ---

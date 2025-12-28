@@ -12,4 +12,5 @@ category: M.Tech Graduates
 current_position: Principal Engineer, SanDisk
 show: true
 year: 2018
+email: abhilash.sainathan@placeholder.com
 ---

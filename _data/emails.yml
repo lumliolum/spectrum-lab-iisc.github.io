@@ -1,0 +1,67 @@
+# Centralized email aliases for bibliography
+# Use these short aliases in papers.bib instead of full email addresses
+# This allows changing an email in one place if it ever changes
+
+# Lab Director
+css: css@iisc.ac.in
+
+# Current Lab Members
+abijithj: abijithj@iisc.ac.in
+ashishverma2: ashishverma2@iisc.ac.in
+ayushjha: ayushjha@iisc.ac.in
+nishanths: nishanths@iisc.ac.in
+nygelgeorge: nygelgeorge@iisc.ac.in
+pakash: pakash@iisc.ac.in
+
+# Alumni - PhD Graduates
+ajay_shenoy: basty ajay.shenoy@placeholder.com
+aniruddha: aniruddha@ee.iisc.ernet.in
+dhruv_jawali: dhruv.jawali@placeholder.com
+harish: harish.jr@gmail.com
+jishnu_sadasivan: jishnu.sadasivan@placeholder.com
+jitendrakumar_dhiman: jitendra kumar.dhiman@placeholder.com
+nareddyreddy: nareddyreddy@iisc.ac.in
+praveenkumar_pokala: praveen kumar.pokala@placeholder.com
+ravi_shenoy: ravi.shenoy@placeholder.com
+satishmulleti: satishmulleti@ee.iitb.ac.in
+siddarth: siddarth.asokan@microsoft.com
+smukherjee: smukherjee@ece.iitkgp.ac.in
+sunil_rudresh: sunil.rudresh@placeholder.com
+
+# Alumni - MTech Graduates
+abhilash_sainathan: abhilash.sainathan@placeholder.com
+abhishekbs: abhishekbs@iisc.ac.in
+adityakumar_pediredla: aditya kumar.pediredla@placeholder.com
+akshara_soman: akshara.soman@placeholder.com
+anindita_de: anindita.de@placeholder.com
+anjanykumar_sekuboyina: anjany kumar.sekuboyina@placeholder.com
+anshul_shivhare: anshul.shivhare@placeholder.com
+aritra_bhowmik: aritra.bhowmik@placeholder.com
+arun_m: arun.m@placeholder.com
+ashutosh_gupta: ashutosh.gupta@placeholder.com
+balakishore_panisetti: balakishore.panisetti@placeholder.com
+bhanuprasad_b: bhanuprasad.b.@placeholder.com
+debabrata_mahapatra: debabrata.mahapatra@placeholder.com
+deepak_r: deepak.r@placeholder.com
+dhavalkumar_vaidya: dhaval kumar.vaidya@placeholder.com
+harishwarreddy_kasireddy: harishwar reddy.kasireddy@placeholder.com
+hemanth_kongara: hemanth.kongara@placeholder.com
+himanshu_singh: himanshu.singh@placeholder.com
+kishore_subramanian: kishore.subramanian@placeholder.com
+mnagarjuna_reddy: m. nagarjuna.reddy@placeholder.com
+pavan_manoj: pavan.manoj@placeholder.com
+ramakrishna_reddy: ramakrishna.reddy@placeholder.com
+rupam_basu: rupam.basu@placeholder.com
+subhadeep_khan: subhadeep.khan@placeholder.com
+subhadip_mukherjee: subhadip.mukherjee@placeholder.com
+suprosanna_shit: suprosanna.shit@placeholder.com
+
+# Alumni - MTech Research Graduates
+arun_venkitaraman: arun.venkitaraman@placeholder.com
+haricharan_aragonda: haricharan.aragonda@placeholder.com
+harini_kishan: harini.kishan@placeholder.com
+manimadhoolika_bulusu: mani madhoolika.bulusu@placeholder.com
+sreeram_menon: sreeram.menon@placeholder.com
+sudarshan_nagesh: sudarshan.nagesh@placeholder.com
+sunderram_krishnan: sunder ram.krishnan@placeholder.com
+vinayak_killedar: vinayak.killedar@placeholder.com

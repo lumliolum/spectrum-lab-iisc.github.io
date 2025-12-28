@@ -187,7 +187,7 @@ Add a BibTeX entry to `papers.bib`:
   selected    = {true},                     # Feature on homepage
   code        = {https://github.com/...},   # Code repository (optional)
   pdf         = {paper.pdf},                # PDF in assets/pdf/ (optional)
-  emails      = {author@iisc.ac.in}         # Links to author's page
+  emails      = {alias}                     # Links to author's page (use alias from _data/emails.yml)
 }
 ```
 
@@ -197,7 +197,7 @@ Add a BibTeX entry to `papers.bib`:
 | `abbr` | Short label (e.g., "ICASSP 25") |
 | `selected` | `true` to show on homepage |
 | `bibtex_show` | `true` to show copy BibTeX button |
-| `emails` | Comma-separated emails to link authors |
+| `emails` | Comma-separated email aliases (from `_data/emails.yml`) to link authors |
 | `code` | GitHub/code repository URL |
 | `pdf` | PDF filename in `assets/pdf/` |
 

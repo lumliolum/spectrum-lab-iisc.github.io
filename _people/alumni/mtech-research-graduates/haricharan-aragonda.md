@@ -12,4 +12,5 @@ category: M.Tech Research Graduates
 current_position: LightMetrics
 show: true
 year: 2013
+email: haricharan.aragonda@placeholder.com
 ---

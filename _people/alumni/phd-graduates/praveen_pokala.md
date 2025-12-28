@@ -11,4 +11,5 @@ category: PhD Graduates
 current_position: JP Morgan Chase
 show: true
 year: 2022
+email: praveen kumar.pokala@placeholder.com
 ---

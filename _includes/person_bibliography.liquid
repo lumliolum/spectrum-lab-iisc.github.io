@@ -1,22 +1,41 @@
 {% comment %}
-  Filter publications by email address for person pages
+  Filter publications by email alias for person pages
   Usage: {% include person_bibliography.liquid email=page.email %}
+  
+  The papers.bib file uses email aliases (e.g., "css", "abijithj") instead of full emails.
+  This template resolves the person's email to their alias using _data/emails.yml
 {% endcomment %}
 
 {% assign person_email = include.email %}
 
+{% comment %} Look up the alias for this email from _data/emails.yml {% endcomment %}
+{% assign person_alias = nil %}
+{% for email_entry in site.data.emails %}
+  {% if email_entry[1] == person_email %}
+    {% assign person_alias = email_entry[0] %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} Fallback: extract alias from email if not found in mapping {% endcomment %}
+{% unless person_alias %}
+  {% assign person_alias = person_email | split: '@' | first %}
+{% endunless %}
+
 {% if person_email %}
   <div class="person-publications">
+    {% unless person_email contains 'placeholder.com' %}
     <p class="text-muted mb-3"><small>Showing publications for: {{ person_email }}</small></p>
+    {% endunless %}
     
-    {% comment %} For now, show all publications and let JavaScript handle filtering {% endcomment %}
-    {% comment %} We'll add client-side filtering based on email {% endcomment %}
+    {% comment %} Show all publications and let JavaScript handle filtering based on alias {% endcomment %}
     <ol class="bibliography" id="person-bibliography">
     {% bibliography %}
     </ol>
     
     <script>
     document.addEventListener('DOMContentLoaded', function() {
+      const personAlias = '{{ person_alias }}';
       const personEmail = '{{ person_email }}';
       const bibliographyList = document.getElementById('person-bibliography');
       const allItems = bibliographyList.querySelectorAll('li');
@@ -25,8 +44,10 @@
       allItems.forEach(function(item) {
         const itemText = item.innerHTML.toLowerCase();
         
-        // Check if this publication contains the person's email
-        if (itemText.includes(personEmail.toLowerCase())) {
+        // Check if this publication contains the person's alias or full email
+        // Using word boundary matching to avoid partial matches
+        const aliasPattern = new RegExp('\\b' + personAlias.toLowerCase() + '\\b');
+        if (aliasPattern.test(itemText) || itemText.includes(personEmail.toLowerCase())) {
           item.style.display = 'list-item';
           visibleCount++;
         } else {
@@ -45,92 +66,6 @@
     });
     </script>
   </div>
-  
-  {% comment %} If no results, try alternative patterns {% endcomment %}
-  <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
-      const publicationsDiv = document.getElementById('person-publications');
-      const filteredBibDiv = publicationsDiv.querySelector('.filtered-bibliography');
-      
-      // If no publications found with the direct query, try JavaScript filtering
-      if (filteredBibDiv && filteredBibDiv.children.length === 0) {
-        // Hide empty filtered div
-        filteredBibDiv.style.display = 'none';
-        
-        // Create a new div for JavaScript-filtered results
-        const jsFilteredDiv = document.createElement('div');
-        jsFilteredDiv.className = 'js-filtered-bibliography';
-        
-        // Get all bibliography entries from the global bibliography (if loaded)
-        const personEmail = '{{ person_email }}';
-        
-        // Try to fetch and filter bibliography data
-        fetch('{{ site.baseurl }}/assets/bibliography/papers.json')
-          .then(response => response.json())
-          .then(data => {
-            const matchingPubs = data.filter(pub => 
-              pub.emails && pub.emails.includes(personEmail)
-            );
-            
-            if (matchingPubs.length > 0) {
-              // Render matching publications
-              matchingPubs.forEach(pub => {
-                const pubElement = createPublicationElement(pub);
-                jsFilteredDiv.appendChild(pubElement);
-              });
-              publicationsDiv.appendChild(jsFilteredDiv);
-            } else {
-              jsFilteredDiv.innerHTML = '<p class="text-muted">No publications found for this author.</p>';
-              publicationsDiv.appendChild(jsFilteredDiv);
-            }
-          })
-          .catch(error => {
-            console.log('Could not load bibliography data:', error);
-            jsFilteredDiv.innerHTML = '<p class="text-muted">Publications will be loaded separately.</p>';
-            publicationsDiv.appendChild(jsFilteredDiv);
-          });
-      }
-    });
-    
-    function createPublicationElement(pub) {
-      const li = document.createElement('li');
-      li.className = 'publication-item';
-      
-      let html = '<div class="publication-content">';
-      
-      // Authors
-      if (pub.author) {
-        html += `<span class="publication-authors">${pub.author}</span>. `;
-      }
-      
-      // Title
-      if (pub.title) {
-        html += `<strong>${pub.title}</strong>. `;
-      }
-      
-      // Journal/Venue
-      if (pub.journal) {
-        html += `<em>${pub.journal}</em>`;
-      } else if (pub.booktitle) {
-        html += `<em>${pub.booktitle}</em>`;
-      }
-      
-      // Year
-      if (pub.year) {
-        html += `, ${pub.year}`;
-      }
-      
-      // DOI/URL
-      if (pub.url) {
-        html += ` <a href="${pub.url}" target="_blank">[Link]</a>`;
-      }
-      
-      html += '</div>';
-      li.innerHTML = html;
-      
-      return li;
-    }
-  </script>
   
 {% else %}
   <p class="text-muted">No email address specified for filtering publications.</p>

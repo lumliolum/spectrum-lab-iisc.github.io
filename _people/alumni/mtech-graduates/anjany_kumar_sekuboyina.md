@@ -12,4 +12,5 @@ category: M.Tech Graduates
 current_position: Postdoc, University of Zurich
 show: true
 year: 2013
+email: anjany kumar.sekuboyina@placeholder.com
 ---

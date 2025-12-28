@@ -14,6 +14,94 @@ $person-radius: 0.5rem;
 $person-transition: 200ms ease;
 
 // =============================================================================
+// INITIALS AVATAR — Google-style avatar with initials fallback
+// =============================================================================
+
+.initials-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  font-size: 4rem;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  user-select: none;
+  margin: 0 auto;
+
+  // Color palette inspired by Google/Material Design
+  &[data-color="0"] {
+    background: linear-gradient(135deg, #ea4335 0%, #d33426 100%);
+  }
+
+  // Red
+  &[data-color="1"] {
+    background: linear-gradient(135deg, #4285f4 0%, #3367d6 100%);
+  }
+
+  // Blue
+  &[data-color="2"] {
+    background: linear-gradient(135deg, #34a853 0%, #2e7d32 100%);
+  }
+
+  // Green
+  &[data-color="3"] {
+    background: linear-gradient(135deg, #fbbc05 0%, #f9a825 100%);
+  }
+
+  // Yellow
+  &[data-color="4"] {
+    background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+  }
+
+  // Purple
+  &[data-color="5"] {
+    background: linear-gradient(135deg, #00acc1 0%, #0097a7 100%);
+  }
+
+  // Cyan
+  &[data-color="6"] {
+    background: linear-gradient(135deg, #ff7043 0%, #e64a19 100%);
+  }
+
+  // Deep Orange
+  &[data-color="7"] {
+    background: linear-gradient(135deg, #5c6bc0 0%, #3f51b5 100%);
+  }
+
+  // Indigo
+
+  // Card avatar - matches responsive image sizing
+  &.avatar-card {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    aspect-ratio: 1;
+    font-size: 4rem;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Smaller version for other uses
+  &.avatar-sm {
+    width: 120px;
+    height: 120px;
+    font-size: 2.5rem;
+  }
+
+  // Extra small for compact layouts
+  &.avatar-xs {
+    width: 80px;
+    height: 80px;
+    font-size: 1.75rem;
+  }
+}
+
+// =============================================================================
 // ACCORDION — Clean collapsible sections
 // =============================================================================
 

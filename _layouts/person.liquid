@@ -6,7 +6,17 @@ layout: default
   <div class="row">
     <!-- Left column: Image and Contact Info -->
     <div class="col-md-4 text-center">
-      {% include responsive-image.liquid path=page.img alt=page.firstname class="img-fluid rounded shadow mb-3" style="max-height: 300px;" %}
+      {% if page.img and page.img != "" %}
+        {% include responsive-image.liquid path=page.img alt=page.firstname class="img-fluid rounded shadow mb-3" style="max-height: 300px;" %}
+      {% else %}
+        {%- assign first_initial = page.firstname | slice: 0 | upcase -%}
+        {%- assign last_initial = page.lastname | slice: 0 | upcase -%}
+        {%- assign name_sum = page.firstname.size | plus: page.lastname.size -%}
+        {%- assign color_index = name_sum | modulo: 8 -%}
+        <div class="initials-avatar shadow mb-3" data-color="{{ color_index }}">
+          {{ first_initial }}{{ last_initial }}
+        </div>
+      {% endif %}
       <h1 class="mt-3">{{ page.firstname }} {{ page.lastname }}</h1>
       <p class="text-muted mb-2 text-center">{{ page.description }}</p>
 

@@ -54,6 +54,14 @@ horizontal: true
                       alt="Portrait"
                       class="img-fluid rounded-circle z-depth-0"
                     -%}
+                  {%- else %}
+                    {%- assign first_initial = person.firstname | slice: 0 | upcase -%}
+                    {%- assign last_initial = person.lastname | slice: 0 | upcase -%}
+                    {%- assign name_sum = person.firstname.size | plus: person.lastname.size -%}
+                    {%- assign color_index = name_sum | modulo: 8 -%}
+                    <div class="initials-avatar avatar-card img-fluid rounded-circle z-depth-0" data-color="{{ color_index }}">
+                      {{ first_initial }}{{ last_initial }}
+                    </div>
                   {%- endif %}
                   <h2 class="card-title text-capitalize">
                     {{ person.firstname }} {{ person.lastname }}

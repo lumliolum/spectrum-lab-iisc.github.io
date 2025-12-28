@@ -141,9 +141,18 @@ visiting_positions: []
 ```
 _people/
 ├── person_template.md     # Template for new profiles
-├── css.md                 # Example profile using the template
 ├── TEMPLATE_README.md     # This documentation
-└── [other-person].md      # Other person profiles
+├── current/               # Current lab members
+│   ├── lab-director/
+│   ├── administrator/
+│   ├── phd-students/
+│   ├── mtech-students/
+│   ├── mtech-research/
+│   └── project-associates/
+└── alumni/                # Graduated members
+    ├── phd-graduates/
+    ├── mtech-graduates/
+    └── mtech-research-graduates/
 
 _layouts/
 └── person.liquid          # Layout file that renders all profiles

@@ -76,13 +76,17 @@ docker-compose up --build
 
 ```
 _people/           # Person profiles (one .md file per person)
-  ├── lab-director/
-  ├── phd-students/
-  ├── mtech-students/
-  ├── mtech-research/
-  ├── project-associates/
-  ├── phd-graduates/
-  └── mtech-research-graduates/
+  ├── current/           # Current lab members
+  │   ├── lab-director/
+  │   ├── administrator/
+  │   ├── phd-students/
+  │   ├── mtech-students/
+  │   ├── mtech-research/
+  │   └── project-associates/
+  └── alumni/            # Graduated members
+      ├── phd-graduates/
+      ├── mtech-graduates/
+      └── mtech-research-graduates/
 
 _data/             # YAML data files
   ├── funding.yml      # Funding sources (carousel on homepage)

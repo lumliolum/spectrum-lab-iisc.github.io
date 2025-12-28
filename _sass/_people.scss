@@ -127,3 +127,18 @@
     margin-bottom: 1rem;
   }
 }
+
+// Dark mode - transparent card backgrounds
+html[data-theme="dark"] {
+  .people {
+    .card {
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+    }
+
+    .grid-item {
+      background-color: transparent;
+    }
+  }
+}

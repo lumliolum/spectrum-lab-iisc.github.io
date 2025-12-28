@@ -4,7 +4,12 @@ title: Anjany Kumar Sekuboyina
 firstname: Anjany Kumar
 lastname: Sekuboyina
 description: ME SSA
+img: 
+website: https://mml.ikim.nrw/authors/anjany-sekuboyina/
+linkedin_username: 
+github_username:
 category: M.Tech Graduates
+current_position: Postdoc, University of Zurich
 show: true
 year: 2013
 ---

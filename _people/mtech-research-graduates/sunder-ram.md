@@ -4,7 +4,7 @@ title: Sunder Ram Krishnan
 firstname: Sunder Ram
 lastname: Krishnan
 description: M.Tech Research Graduate
-img: assets/img/people/alumni/sunder-ram.jpg
+img: assets/img/people/alumni/mtech-research/sunder-ram.jpg
 website: https://www.amrita.edu/faculty/sunder-ram-krishnan/
 linkedin_username: 
 github_username:

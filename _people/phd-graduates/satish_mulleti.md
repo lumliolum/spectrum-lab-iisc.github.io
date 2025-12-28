@@ -4,7 +4,7 @@ title: Satish Mulleti
 firstname: Satish
 lastname: Mulleti
 description: PhD 
-img: assets/img/people/alumni/satish-mulleti.jpg
+img: assets/img/people/alumni/phd/satish-mulleti.jpg
 linkedin_username: 
 github_username:
 category: PhD Graduates

@@ -4,7 +4,7 @@ title: Vinayak Killedar
 firstname: Vinayak
 lastname: Killedar
 description: M.Tech Research Graduate
-img: assets/img/people/alumni/vinayak-killedar.jpg
+img: assets/img/people/alumni/mtech-research/vinayak-killedar.jpg
 website: 
 linkedin_username: vinayak-killedar-58087453
 github_username:

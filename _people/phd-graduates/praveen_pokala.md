@@ -4,7 +4,7 @@ title: Praveen Kumar Pokala
 firstname: Praveen Kumar
 lastname: Pokala
 description: PhD 
-img: assets/img/people/alumni/praveen-pokala.jpg
+img: assets/img/people/alumni/phd/praveen-pokala.jpg
 linkedin_username: 
 github_username:
 category: PhD Graduates

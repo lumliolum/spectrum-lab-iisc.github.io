@@ -4,7 +4,7 @@ title: Sunil Rudresh
 firstname: Sunil
 lastname: Rudresh
 description: PhD 
-img: assets/img/people/alumni/sunil-rudresh.png
+img: assets/img/people/alumni/phd/sunil-rudresh.png
 linkedin_username: 
 github_username:
 category: PhD Graduates

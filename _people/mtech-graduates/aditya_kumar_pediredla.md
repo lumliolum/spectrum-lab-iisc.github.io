@@ -4,7 +4,13 @@ title: Aditya Kumar Pediredla
 firstname: Aditya Kumar
 lastname: Pediredla
 description: M.Tech
+img: assets/img/people/alumni/mtech/aditya-pediredla.jpg
+website: https://web.cs.dartmouth.edu/people/adithya-k-pediredla
+linkedin_username: 
+github_username:
+scholar_userid: ey6n20kAAAAJ
 category: M.Tech Graduates
+current_position: Assistant Professor, Dartmouth College
 show: true
 year: 2011
 ---

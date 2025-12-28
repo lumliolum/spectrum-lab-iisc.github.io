@@ -4,7 +4,13 @@ title: Suprosanna Shit
 firstname: Suprosanna
 lastname: Shit
 description: ME SP
+img: assets/img/people/alumni/mtech/suprosanna-shit.jpg
+website: 
+linkedin_username: 
+github_username:
+scholar_userid: WhAMNrcAAAAJ
 category: M.Tech Graduates
+current_position: University of Zurich / ETH AI Center
 show: true
 year: 2017
 ---

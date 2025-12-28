@@ -12,5 +12,5 @@ current_position: IIT Kharagpur
 show: true
 year: 2012
 website: https://sites.google.com/view/subhadip-mukherjee/home
-email: subhadip.mukherjee@placeholder.com
+email: smukherjee@ece.iitkgp.ac.in
 ---

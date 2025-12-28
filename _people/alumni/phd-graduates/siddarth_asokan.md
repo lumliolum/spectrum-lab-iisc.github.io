@@ -5,7 +5,8 @@ firstname: Siddarth
 lastname: Asokan
 description: PhD 
 img: assets/img/people/alumni/phd/sid.png
-redirect: https://www.siddarthasokan.com/
+website: https://www.siddarthasokan.com/
+scholar_userid: tM4SYUQAAAAJ
 linkedin_username: siddarth-asokan/
 github_username: darthsid95
 current_position: Microsoft Research

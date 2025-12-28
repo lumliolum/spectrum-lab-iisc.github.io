@@ -5,10 +5,12 @@ firstname: Harish Kumar
 lastname: J. R.
 description: PhD 
 img: assets/img/people/alumni/phd/harish-kumar.jpg
+email: harish.jr@gmail.com
+scholar_userid: 6tpDcKIAAAAJ
 linkedin_username: 
 github_username:
 category: PhD Graduates
-current_position: BITS Pilani
+current_position: Associate Professor, BITS Pilani
 show: true
 year: 2021
 ---

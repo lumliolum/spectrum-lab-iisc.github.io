@@ -75,8 +75,8 @@ spectrum-lab-iisc.github.io/
 ├── _news/                  # News announcements
 ├── _pages/                 # Static pages (about, etc.)
 ├── _people/                # Team member profiles
-│   ├── current/            # Active members (phd, mtech, etc.)
-│   └── alumni/             # Former members
+│   ├── current/            # Active members (subfolders: phd-students, mtech-students/2026/, etc.)
+│   └── alumni/             # Former members (subfolders: phd-graduates/2024/, etc.)
 ├── _projects/              # Research project pages
 ├── _sass/                  # SCSS stylesheets
 ├── assets/
@@ -93,8 +93,8 @@ spectrum-lab-iisc.github.io/
 **Location:** `_people/`
 
 **Structure:**
-- `current/` - Active lab members (subfolders: `phd-students`, `mtech-students`, etc.)
-- `alumni/` - Former members (subfolders: `phd-graduates`, etc.)
+- `current/` - Active lab members (subfolders: `phd-students`, `mtech-students/2026/`, etc.)
+- `alumni/` - Former members (subfolders: `phd-graduates/2024/`, etc.)
 
 #### Adding a New Person
 
@@ -108,10 +108,10 @@ spectrum-lab-iisc.github.io/
    - **Requirement:** Square aspect ratio, min 400x400px.
 
 3. **Edit the markdown file:**
-   Update `title`, `firstname`, `lastname`, `img` path, and `category`.
+   Update `title`, `firstname`, `lastname`, `img` path, `category`, and `year`.
 
 #### Moving to Alumni
-Move the file from `current/[category]/` to `alumni/[category-graduates]/`.
+Move the file from `current/[category]/` to `alumni/[category-graduates]/[year]/`.
 
 ---
 

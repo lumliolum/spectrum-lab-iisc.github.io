@@ -31,6 +31,7 @@ lastname: [Last Name]           # Last name only
 description: [Position/Title]   # Job title/position
 img: assets/img/people/[category]/[filename.jpg]  # Path to profile photo
 category: [Category]            # Lab Director/Faculty/Postdoc/PhD Student/etc.
+year: [YYYY]                    # Year of graduation (for alumni) or cohort year (for students)
 show: true                      # Whether to show this person on the site
 ```
 
@@ -152,12 +153,12 @@ _people/
 │   ├── lab-director/
 │   ├── administrator/
 │   ├── phd-students/
-│   ├── mtech-students/
+│   ├── mtech-students/    # Grouped by cohort year (e.g., 2026/)
 │   ├── mtech-research/
 │   └── project-associates/
-└── alumni/                # Graduated members
-    ├── phd-graduates/
-    ├── mtech-graduates/
+└── alumni/                # Graduated members (Grouped by year)
+    ├── phd-graduates/     # e.g., 2024/
+    ├── mtech-graduates/   # e.g., 2023/
     └── mtech-research-graduates/
 
 _layouts/

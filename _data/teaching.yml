@@ -26,7 +26,7 @@
   course_id: "dr"
   type: "Short Course"
   hosts : ["Prof. C. S. Seelamantula" , 'Prof. P. S. Sastry']
-  instructor_photo : "assets/img/people/instructors/lakshmivarahan.png"
+  instructor_photo : "assets/img/people/current/instructors/lakshmivarahan.png"
   instructor_links:
     homepage: "https://www.ou.edu/coe/cs/people/varahan"
     google_scholar: "https://scholar.google.com/citations?user=SverXLoAAAAJ&hl=en"

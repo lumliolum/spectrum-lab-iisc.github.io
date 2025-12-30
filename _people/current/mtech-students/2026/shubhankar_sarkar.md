@@ -7,7 +7,7 @@ description: MTech Signal Processing
 img: assets/img/people/current/mtech/2026/shubhankar.jpg
 website: 
 linkedin_username: shubhankar-sarkar-25a501211
-github_username: Subham-567a
+github_username: Subham-567
 email: sshubhankar@iisc.ac.in
 category: M.Tech Students
 year: 2026

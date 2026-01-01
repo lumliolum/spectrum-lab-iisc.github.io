@@ -39,6 +39,10 @@ lectures:
     notes: "/assets/teaching/dimension-reduction/time-series-ananlysis.pdf"
     description:
 
+  - title: "Additional Notes"
+    notes: "/assets/teaching/dimension-reduction/additional-notes.pdf"
+    description:
+
 assignments:
 #  - title: "Assignment 1"
 #     description: "Problems on sampling theorem, aliasing effects, and reconstruction"
@@ -71,10 +75,19 @@ resources:
 
  - title: " M. Heidari, S. Lakshmivarahan, S. Mirniaharikandehei, G. Danala, Sai Kiran R. Maryada, and Bin Zheng (2021) 'Applying a Random Projection Algorithm to Optimize Machine Learning Model for Breast Lesion Classification,' inIEEE Transactions on Biomedical Engineering, Vol 68, 2764-2775"
    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8310536/"
+
+ - title: 'Heidari, Morteza, et al. "Applying a Random Projection Algorithm to Generate Optimal Feature Vector and Improve Performance of Machine Learning Model for Breast Lesion Classification."'
+   url: "/assets/teaching/dimension-reduction/1.pdf"
+ 
+ - title: 'Mirniaharikandehei, Seyedehnafiseh, et al. "Applying a random projection algorithm to optimize machine learning model for predicting peritoneal metastasis in gastric cancer patients using CT images." Computer methods and programs in biomedicine 200 (2021): 105937.'
+   url: "/assets/teaching/dimension-reduction/2.pdf"
+
+ - title: 'Heidari, Morteza, et al. "Applying a random projection algorithm to optimize machine learning model for breast lesion classification." IEEE Transactions on Biomedical Engineering 68.9 (2021): 2764-2775.'
+   url: "/assets/teaching/dimension-reduction/3.pdf"
  #   url: "https://www.amazon.in/Time-Frequency-Analysis-Applications-Prentice-Hall/dp/0135945321"
 
  # - title: "A Wavelet Tour of Signal Processing: The Sparse Way, by Stephane Mallat"
- #   url: "http://dl.icdst.org/pdfs/files3/64cb10c8a275e5aad045094c29c036e2.pdf"
+ #   url: "http://dl.icdst.org/pdfs/files3/64cb10c8a275e5aad045094 c29c036e2.pdf"
 
  # - title: "MATLAB Signal Processing Toolbox"
  #   description: "Documentation and examples for MATLAB DSP functions."

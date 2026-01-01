@@ -4,7 +4,7 @@ title: Subhadip Mukherjee
 firstname: Subhadip
 lastname: Mukherjee
 description: M.Tech 
-img: assets/img/people/alumni/phd/subhadip-mukherjee.jpg
+img: assets/img/people/alumni/phd/2018/subhadip-mukherjee.jpg
 linkedin_username: 
 github_username:
 category: M.Tech Graduates

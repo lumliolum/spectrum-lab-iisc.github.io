@@ -58,7 +58,7 @@ layout: default
           <h5 class="card-title">Biography</h5>
           {% if page.biography_paragraphs %}
           {% for paragraph in page.biography_paragraphs %}
-          <p class="card-text">{{ paragraph }}</p>
+          <p class="card-text" style="text-align: justify;">{{ paragraph }}</p>
           {% endfor %}
           {% else %}
           {{ content }}

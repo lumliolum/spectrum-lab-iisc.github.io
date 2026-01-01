@@ -105,6 +105,14 @@ $person-transition: 200ms ease;
 // ACCORDION — Clean collapsible sections
 // =============================================================================
 
+// Biography card text styling
+.card-body {
+  .card-text {
+    text-align: justify;
+    line-height: 1.7;
+  }
+}
+
 #activitiesAccordion {
   .card {
     margin-bottom: $person-spacing-sm;

@@ -3,12 +3,12 @@ layout: person
 title: Nikunj Bhagat
 firstname: Nikunj
 lastname: Bhagat
-description: Project Associate/Research Associate
-img: assets/img/people/alumni/project-associates/nikunj_bhagat.jpg
+description: Post Doc
+img: assets/img/people/alumni/post-doc/2023/nikunj_bhagat.jpg
 email: nbhagat08@gmail.com
 scholar_userid: qsW-vs8AAAAJ
 website: https://home.iitk.ac.in/~nbhagat/
-category: Project Associates
+category: Post Doc
 current_position: Assistant Professor, IIT Kanpur
 show: true
 year: 2023

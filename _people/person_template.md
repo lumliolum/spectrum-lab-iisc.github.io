@@ -34,6 +34,10 @@ awards:
   - "[List awards, honors, fellowships, etc.]"
   - "[Add more items as needed]"
 
+# Badges - emoji badges shown next to name on cards and profile (optional)
+# Example: ["🏅"] for Gold Medal, ["🎖️"] for fellowship
+badges: []
+
 # Visiting Positions (optional section)
 show_visiting_positions: false
 visiting_positions:

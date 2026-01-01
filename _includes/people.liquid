@@ -22,8 +22,13 @@
         </div>
       {%- endif %}
       <h2 class="card-title text-capitalize">
-        {{ person.firstname }} {{ person.lastname }}
+        {{ person.firstname }} {{ person.lastname }}{% if person.badges %} <span class="person-badges">{% for badge in person.badges %}{{ badge }}{% endfor %}</span>{% endif %}
       </h2>
+      {%- if person.current_position -%}
+        <h3 class="card-text mt-1 mb-2" style="font-size: 0.9rem; color: #666;">
+          {{ person.current_position }}
+        </h3>
+      {%- endif -%}
       {%- if person.pronouns -%}
         <h3 class="card-title card-pronouns mb-2">
           {{ person.pronouns }}

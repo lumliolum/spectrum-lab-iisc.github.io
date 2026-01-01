@@ -21,11 +21,17 @@ children:
   - title: M.Tech Research Graduates
     permalink: /people/mtech-research-graduates/
   - title: divider
+  - title: Research Associates
+    permalink: /people/research-associates/
   - title: Project Associates
     permalink: /people/project-associates/
+  - title: divider
+  - title: Post Doc
+    permalink: /people/post-doc/
+  - title: divider
   - title: Administrator
     permalink: /people/administrator/
-display_categories: [PhD Students, M.Tech Students, M.Tech Research Students, PhD Graduates, M.Tech Graduates, M.Tech Research Graduates, Project Associates, Administrator]
+display_categories: [PhD Students, M.Tech Students, M.Tech Research Students, PhD Graduates, M.Tech Graduates, M.Tech Research Graduates, Research Associates, Post Doc, Project Associates, Administrator]
 horizontal: true
 ---
 
@@ -40,85 +46,7 @@ horizontal: true
       <div class="grid">
         {%- for person in sorted_people -%}
           {%- if person.show -%}
-            <!-- Custom alumni display with current_position -->
-            <div class="grid-item">
-              {%- if person.redirect -%}
-                <a href="{{ person.redirect }}">
-              {%- else -%}
-                <a href="{{ person.url | relative_url }}">
-              {%- endif %}
-                <div class="card hoverable">
-                  {%- if person.img %}
-                    {%- include responsive-image.liquid
-                      path=person.img
-                      alt="Portrait"
-                      class="img-fluid rounded-circle z-depth-0"
-                    -%}
-                  {%- else %}
-                    {%- assign first_initial = person.firstname | slice: 0 | upcase -%}
-                    {%- assign last_initial = person.lastname | slice: 0 | upcase -%}
-                    {%- assign name_sum = person.firstname.size | plus: person.lastname.size -%}
-                    {%- assign color_index = name_sum | modulo: 8 -%}
-                    <div class="initials-avatar avatar-card img-fluid rounded-circle z-depth-0" data-color="{{ color_index }}">
-                      {{ first_initial }}{{ last_initial }}
-                    </div>
-                  {%- endif %}
-                  <h2 class="card-title text-capitalize">
-                    {{ person.firstname }} {{ person.lastname }}
-                  </h2>
-                  {%- if person.current_position -%}
-                    <h3 class="card-text mt-1 mb-2" style="font-size: 0.9rem; color: #666;">
-                      {{ person.current_position }}
-                    </h3>
-                  {%- endif -%}
-                  {%- if person.pronouns -%}
-                    <h3 class="card-title card-pronouns mb-2">
-                      {{ person.pronouns }}
-                    </h3>
-                  {%- endif -%}
-                  <div class="card-icons">
-                    {%- if person.email -%}
-                      <a href="mailto:{{ person.email | encode_email }}" title="e-mail">
-                        <i class="icon me-1 p-0 fas fa-envelope"></i>
-                      </a>
-                    {% endif %}
-                    {%- if person.orcid_id -%}
-                      <a href="https://orcid.org/{{ person.orcid_id }}" title="ORCID">
-                        <i class="icon me-1 p-0 ai ai-orcid"></i>
-                      </a>
-                    {% endif %}
-                    {%- if person.scholar_userid -%}
-                      <a href="https://scholar.google.com/citations?user={{ person.scholar_userid }}" title="Google Scholar">
-                        <i class="icon me-1 p-0 ai ai-google-scholar"></i>
-                      </a>
-                    {% endif %}
-                    {%- if person.github_username -%}
-                      <a href="https://github.com/{{ person.github_username }}" title="GitHub">
-                        <i class="icon me-1 p-0 fab fa-github"></i>
-                      </a>
-                    {% endif %}
-                    {%- if person.linkedin_username -%}
-                      <a href="https://www.linkedin.com/in/{{ person.linkedin_username }}" title="LinkedIn">
-                        <i class="icon me-1 p-0 fab fa-linkedin"></i>
-                      </a>
-                    {% endif %}
-                    {%- if person.twitter_username -%}
-                      <a href="https://twitter.com/{{ person.twitter_username }}" title="Twitter">
-                        <i class="icon me-1 p-0 fab fa-twitter"></i>
-                      </a>
-                    {% endif %}
-                    {%- if person.website -%}
-                      <a href="{{ person.website }}" title="Website">
-                        <i class="icon me-1 p-0 fas fa-globe"></i>
-                      </a>
-                    {% endif %}
-                  </div>
-                  <div class="card-body">
-                    <!-- <h3 class="card-text mt-1">{{ person.description }}</h3> -->
-                  </div>
-                </div>
-              </a>
-            </div>
+            {% include people.liquid person=person %}
           {%- endif -%}
         {%- endfor %}
       </div>

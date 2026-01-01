@@ -139,8 +139,42 @@ $person-transition: 200ms ease;
 .card-body {
   .card-text {
     text-align: justify;
-    line-height: 1.7;
   }
+
+  // Biography paragraphs - compact styling
+  p.card-text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    text-align: justify !important;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Biography section specific styling (in right column)
+.col-md-8>.card {
+  .card-body {
+    text-align: left;
+
+    .card-title {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p.card-text {
+      text-align: justify !important;
+    }
+  }
+}
+
+// Biography card title
+.card-title {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 #activitiesAccordion {

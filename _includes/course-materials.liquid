@@ -12,7 +12,13 @@
 
     <!-- Course Header -->
     <header class="course-header fade-in">
-      <p class="course-header__desc t-body">{{ course_data.description }}</p>
+      {%- if page.description or course_data.description -%}
+      <div class="course-syllabus minimal-card minimal-card--elevated" style="margin-bottom: 1.5rem;">
+        <p class="course-header__desc t-body" style="margin: 0; line-height: 1.7; color: var(--global-text-color);">
+          {{ page.description | default: course_data.description }}
+        </p>
+      </div>
+      {%- endif -%}
       
       <div class="course-header__meta cluster cluster--sm">
         {%- if course_data.instructor -%}
@@ -36,10 +42,11 @@
         </span>
         {%- endif -%}
         
-        {%- if course_data.teaching_assistants and course_data.teaching_assistants.size > 0 -%}
+        {%- assign tas = page.teaching_assistants | default: course_data.teaching_assistants -%}
+        {%- if tas and tas.size > 0 -%}
         <span class="pill pill--muted">
           <i class="fas fa-users"></i>
-          TAs: {{ course_data.teaching_assistants | join: ", " }}
+          TAs: {{ tas | join: ", " }}
         </span>
         {%- endif -%}
       </div>
@@ -99,47 +106,6 @@
     </section>
     {%- endif -%}
 
-    <!-- News Bulletin Section -->
-    {%- if page.news and page.news.size > 0 -%}
-    <section class="content-section fade-in">
-      <div class="section-label">
-        <div class="section-label__icon section-label__icon--red">
-          <i class="fas fa-bullhorn"></i>
-        </div>
-        <span class="section-label__text">News Bulletin</span>
-      </div>
-
-      <div class="minimal-card minimal-card--elevated">
-        <div class="schedule-table-wrapper">
-          <table class="schedule-table">
-            <thead>
-              <tr>
-                <th style="width: 20%;">Date</th>
-                <th style="width: 25%;">Title</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              {%- for item in page.news -%}
-              <tr>
-                <td>{{ item.date }}</td>
-                <td>
-                  {%- if item.link -%}
-                  <a href="{{ item.link }}" target="_blank">{{ item.title }} <i class="fas fa-external-link-alt fa-xs"></i></a>
-                  {%- else -%}
-                  {{ item.title }}
-                  {%- endif -%}
-                </td>
-                <td>{{ item.description | markdownify }}</td>
-              </tr>
-              {%- endfor -%}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-    {%- endif -%}
-
     <!-- Schedule Section -->
     {%- if page.schedule -%}
     <section class="content-section fade-in">
@@ -174,16 +140,121 @@
           </div>
           {%- endif -%}
 
-          {%- if page.schedule.meeting_link -%}
+          {%- if page.schedule.meeting_link and page.schedule.meeting_link != "" -%}
           <div class="logistics-item">
             <span class="logistics-item__label t-overline">Meeting Link</span>
             <span class="logistics-item__value t-body"><a href="{{ page.schedule.meeting_link }}" target="_blank">Join Class</a></span>
           </div>
           {%- endif -%}
         </div>
+      </div>
+    </section>
+    {%- endif -%}
 
+    <!-- News/Announcements Section -->
+    {%- if page.news and page.news.size > 0 -%}
+    <section class="content-section fade-in">
+      <div class="section-label">
+        <div class="section-label__icon section-label__icon--red">
+          <i class="fas fa-bullhorn"></i>
+        </div>
+        {%- if page.type == "Short Course" -%}
+        <span class="section-label__text">Announcements</span>
+        {%- else -%}
+        <span class="section-label__text">News Bulletin</span>
+        {%- endif -%}
+      </div>
+
+      <div class="minimal-card minimal-card--elevated">
+        <div class="schedule-table-wrapper">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th style="width: 20%;">Date</th>
+                <th style="width: 25%;">Title</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for item in page.news -%}
+              <tr>
+                <td>{{ item.date }}</td>
+                <td>
+                  {%- if item.link -%}
+                  <a href="{{ item.link }}" target="_blank">{{ item.title }} <i class="fas fa-external-link-alt fa-xs"></i></a>
+                  {%- else -%}
+                  {{ item.title }}
+                  {%- endif -%}
+                </td>
+                <td>{{ item.description | markdownify }}</td>
+              </tr>
+              {%- endfor -%}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    {%- endif -%}
+
+    <!-- Modules Section -->
+    {%- if page.modules and page.modules.size > 0 -%}
+    <section class="content-section fade-in">
+      <div class="section-label">
+        <div class="section-label__icon section-label__icon--blue">
+          <i class="fas fa-cubes"></i>
+        </div>
+        <span class="section-label__text">Course Modules</span>
+      </div>
+
+      <div class="teaching-grid teaching-grid--materials">
+        {%- for mod in page.modules -%}
+        <article class="material-card material-card--lecture minimal-card">
+          <div class="material-card__content">
+            <h4 class="material-card__title t-title">{{ mod.title }}</h4>
+            {%- if mod.description -%}
+            <p class="material-card__desc t-body">{{ mod.description }}</p>
+            {%- endif -%}
+            {%- if mod.lectures -%}
+            <p class="material-card__meta t-overline"><i class="fas fa-chalkboard"></i> {{ mod.lectures }}</p>
+            {%- endif -%}
+            {%- if mod.status -%}
+            <span class="pill {% if mod.status == 'Completed' %}pill--success{% elsif mod.status == 'In Progress' %}pill--accent{% else %}pill--muted{% endif %}">
+              {{ mod.status }}
+            </span>
+            {%- endif -%}
+          </div>
+          
+          <div class="material-card__actions">
+            {%- if mod.link and mod.status != 'Upcoming' -%}
+            <a href="{{ mod.link | relative_url }}" class="btn-minimal btn-minimal--primary">
+              <i class="fas fa-arrow-right"></i>
+              <span>View Module</span>
+            </a>
+            {%- elsif mod.status == 'Upcoming' -%}
+            <span class="btn-minimal btn-minimal--disabled" style="opacity: 0.5; cursor: not-allowed;">
+              <i class="fas fa-clock"></i>
+              <span>Coming Soon</span>
+            </span>
+            {%- endif -%}
+          </div>
+        </article>
+        {%- endfor -%}
+      </div>
+    </section>
+    {%- endif -%}
+
+    <!-- Schedule Table Details (if any) -->
+    {%- if page.schedule_details -%}
+    <section class="content-section fade-in">
+      <div class="section-label">
+        <div class="section-label__icon">
+          <i class="fas fa-list-ol"></i>
+        </div>
+        <span class="section-label__text">Class Schedule</span>
+      </div>
+
+      <div class="minimal-card minimal-card--elevated">
         <!-- Schedule Table -->
-        {%- if page.schedule_details -%}
         <div class="schedule-table-wrapper">
           <table class="schedule-table">
             <thead>
@@ -204,7 +275,6 @@
             </tbody>
           </table>
         </div>
-        {%- endif -%}
       </div>
     </section>
     {%- endif -%}
@@ -326,17 +396,6 @@
       </div>
     </section>
     {%- endif -%}
-
-    <!-- Empty State -->
-    {%- unless page.lectures or page.assignments or page.resources -%}
-    <section class="empty-state fade-in">
-      <div class="empty-state__icon">
-        <i class="fas fa-book-open"></i>
-      </div>
-      <h4 class="empty-state__title t-title">Materials Coming Soon</h4>
-      <p class="empty-state__desc t-body">Lecture slides, assignments, and resources will be posted here throughout the semester.</p>
-    </section>
-    {%- endunless -%}
 
     <!-- Back Navigation -->
     <nav class="course-nav">

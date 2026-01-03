@@ -1,11 +1,13 @@
 ---
 layout: page
-title: "Dimension Reduction"
+title: "Module I: Dimension Reduction"
 permalink: /teaching/dimension-reduction/
-description:
+description: "This module provides a comprehensive framework for analyzing complex data by combining linear algebra with statistical theory. It covers Spectral Decomposition and Singular Value Decomposition (SVD), covariance and geometric projections onto different subspaces. The core focus is Principal Component Analysis (PCA), a method to simplify large datasets by identifying dominant patterns that explain the most variation, with applications in image processing."
 course_id: dr
 type: "Short Course"
 nav: false
+parent_course: "/teaching/mathematics-bigdata-analytics/"
+teaching_assistants: ["Parth Gupte", "Pramath Haritz"]
 schedule:
   dates_time: "Tuesday-Thursday; From 2.30 pm to 4.00 pm"
   classroom: "B308 (December 9, 16, 18, 23, 30 and January 1), EE Department, IISc"

@@ -2070,6 +2070,25 @@ html[data-theme="dark"] .blog-ready {
     &:first-child {
       padding-top: 0;
     }
+
+    // Announcement items from announcements.yml
+    &--announcement {
+      background: linear-gradient(90deg, rgba(var(--global-theme-color-rgb), 0.08), transparent);
+      margin: 0 calc(-1 * $spacing-md);
+      padding-left: $spacing-md;
+      padding-right: $spacing-md;
+      border-radius: $radius-sm;
+      border-bottom-color: rgba(var(--global-theme-color-rgb), 0.2);
+
+      .news-title {
+        color: var(--global-theme-color);
+        font-weight: 600;
+
+        &:hover {
+          color: var(--global-theme-color-dark);
+        }
+      }
+    }
   }
 
   .news-date {

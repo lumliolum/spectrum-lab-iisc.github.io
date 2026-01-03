@@ -1,0 +1,15 @@
+# Announcement Carousel Configuration
+# Set enabled: true to show the carousel on the homepage
+# Add items to display announcements
+# Set show_in_news: true to also display in the news section
+
+enabled: true
+
+items:
+  - title: "Module II: Concentration of Probability Measures begins"
+    date: "January 6, 2026"
+    posted_date: 2026-01-03
+    badge: "Short Course"
+    icon: "fas fa-chalkboard-teacher"
+    link: "/teaching/mathematics-bigdata-analytics/"
+    show_in_news: true

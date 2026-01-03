@@ -15,6 +15,24 @@
       {% endif %}
       
       <ul class="news-items">
+        {%- comment -%} Show announcements from announcements.yml that have show_in_news: true {%- endcomment -%}
+        {% if site.data.announcements.enabled and site.data.announcements.items %}
+          {% for item in site.data.announcements.items %}
+            {% if item.show_in_news %}
+              <li class="news-item news-item--announcement">
+                <span class="news-date">{{ item.posted_date | date: '%b %d, %Y' }}</span>
+                <span class="news-content">
+                  {% if item.link %}
+                    <a class="news-title" href="{{ item.link | relative_url }}">{{ item.title }}</a>
+                  {% else %}
+                    {{ item.title }}
+                  {% endif %}
+                </span>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        
         {% for item in news limit: news_limit %}
           <li class="news-item">
             <span class="news-date">{{ item.date | date: '%b %d, %Y' }}</span>

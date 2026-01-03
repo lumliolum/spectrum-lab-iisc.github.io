@@ -11,7 +11,7 @@ layout: default
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <h2 class="post-description">{{ page.description }}</h2>
+    {% unless page.course_id %}<h2 class="post-description">{{ page.description }}</h2>{% endunless %}
   </header>
 
   <article>

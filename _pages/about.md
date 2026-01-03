@@ -72,11 +72,11 @@ latest_posts:
 
 <div class="row mt-4">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path='assets/img/album/random-collection/18.jpg' alt="Spectrum Lab members at ICASSP 2025 in Hyderabad, India" title="ICASSP 2025" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path='assets/img/album/random-collection/specturm_in_front_main_building.jpg' alt="Spectrum Lab members" %}
     </div>
 </div>
 <div class="caption">
-    Spectrum Lab, past and present, at <a href="https://2025.ieeeicassp.org/">ICASSP 2025</a>, in Hyderabad, India.
+    Spectrum Lab, 2024.
 </div>
 
 <!-- Custom Lab Director Section with Side-by-Side Layout -->

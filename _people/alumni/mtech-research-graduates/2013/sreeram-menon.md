@@ -12,4 +12,5 @@ category: M.Tech Research Graduates
 show: true
 year: 2013
 email: sreeram.menon@placeholder.com
+alias: sreeram_menon
 ---

@@ -8,6 +8,7 @@ website:
 linkedin_username:
 github_username:
 email: saisuchithm@iisc.ac.in
+alias: saisuchithm
 category: M.Tech Students
 show: true
 year: 2026

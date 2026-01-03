@@ -6,6 +6,7 @@ lastname: Bipinchandra
 description: ME SSA — sponsored by DRDO, Bengaluru
 img: assets/img/people/alumni/mtech/2018/dhaval_kumar_vaidya.png
 email: dhavalvaidya@hotmail.com
+alias: dhaval_vaidya
 category: M.Tech Graduates
 current_position: Scientist
 show: true

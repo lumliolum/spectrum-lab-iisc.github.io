@@ -5,6 +5,7 @@ firstname: Shivashish
 lastname: Naithani
 description: M.Tech AI
 email: shivam.naithani@gmail.com
+alias: shivam_naithani
 category: M.Tech Graduates
 current_position: MTS (Applied ML), Cerebras
 show: true

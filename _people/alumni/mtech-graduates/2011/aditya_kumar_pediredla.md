@@ -14,4 +14,5 @@ current_position: Assistant Professor, Dartmouth College
 show: true
 year: 2011
 email: aditya kumar.pediredla@placeholder.com
+alias: adityakumar_pediredla
 ---

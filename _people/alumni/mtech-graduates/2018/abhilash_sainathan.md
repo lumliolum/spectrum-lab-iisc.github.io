@@ -9,6 +9,7 @@ website:
 linkedin_username: abhilash-sainathan-27273272
 github_username:
 email: abhilash.sainathan@gmail.com
+alias: abhilash_sainathan
 category: M.Tech Graduates
 current_position: Principal Engineer, Technology Development Engineering, SanDisk
 show: true

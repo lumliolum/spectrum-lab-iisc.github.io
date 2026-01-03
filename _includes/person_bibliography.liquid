@@ -1,28 +1,20 @@
 {% comment %}
-  Filter publications by email alias for person pages
-  Usage: {% include person_bibliography.liquid email=page.email %}
+  Filter publications by alias for person pages
+  Usage: {% include person_bibliography.liquid alias=page.alias email=page.email %}
   
-  The papers.bib file uses email aliases (e.g., "css", "abijithj") instead of full emails.
-  This template resolves the person's email to their alias using _data/emails.yml
+  The papers.bib file uses aliases (e.g., "css", "abijithj") in the emails field.
+  This template uses the alias directly from the person's profile.
 {% endcomment %}
 
+{% assign person_alias = include.alias %}
 {% assign person_email = include.email %}
 
-{% comment %} Look up the alias for this email from _data/emails.yml {% endcomment %}
-{% assign person_alias = nil %}
-{% for email_entry in site.data.emails %}
-  {% if email_entry[1] == person_email %}
-    {% assign person_alias = email_entry[0] %}
-    {% break %}
-  {% endif %}
-{% endfor %}
-
-{% comment %} Fallback: extract alias from email if not found in mapping {% endcomment %}
+{% comment %} Fallback: extract alias from email if no alias provided {% endcomment %}
 {% unless person_alias %}
   {% assign person_alias = person_email | split: '@' | first %}
 {% endunless %}
 
-{% if person_email %}
+{% if person_alias %}
   <div class="person-publications">
     {% unless person_email contains 'placeholder.com' %}
     <p class="text-muted mb-3"><small>Showing publications for: {{ person_email }}</small></p>
@@ -68,5 +60,5 @@
   </div>
   
 {% else %}
-  <p class="text-muted">No email address specified for filtering publications.</p>
+  <p class="text-muted">No alias or email specified for filtering publications.</p>
 {% endif %}

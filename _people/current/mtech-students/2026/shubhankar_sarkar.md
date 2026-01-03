@@ -9,6 +9,7 @@ website:
 linkedin_username: shubhankar-sarkar-25a501211
 github_username: Subham-567
 email: sshubhankar@iisc.ac.in
+alias: sshubhankar
 category: M.Tech Students
 year: 2026
 show: true

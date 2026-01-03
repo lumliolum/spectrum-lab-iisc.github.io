@@ -11,7 +11,9 @@ linkedin_username: siddarth-asokan/
 github_username: darthsid95
 current_position: Microsoft Research
 email: siddarth.asokan@microsoft.com
+alias: siddarth
 category: PhD Graduates
 show: true
 year: 2023
+badges: ["🏅"]
 ---

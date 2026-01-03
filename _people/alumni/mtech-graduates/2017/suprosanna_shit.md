@@ -14,4 +14,5 @@ current_position: University of Zurich / ETH AI Center
 show: true
 year: 2017
 email: suprosanna.shit@placeholder.com
+alias: suprosanna_shit
 ---

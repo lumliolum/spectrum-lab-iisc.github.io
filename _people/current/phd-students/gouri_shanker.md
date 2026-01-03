@@ -9,6 +9,7 @@ website: https://www.linkedin.com/in/gourishankerjk/
 linkedin_username: gourishankerjk
 github_username: gourishankerjk
 email: gourishanker@iisc.ac.in
+alias: gourishanker
 category:  PhD Students
 show: true
 ---

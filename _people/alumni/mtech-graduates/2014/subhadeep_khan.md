@@ -13,4 +13,5 @@ current_position: Principal Data Scientist
 show: true
 year: 2014
 email: subhadeep.khan@placeholder.com
+alias: subhadeep_khan
 ---

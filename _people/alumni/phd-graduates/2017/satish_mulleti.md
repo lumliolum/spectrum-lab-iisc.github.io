@@ -6,6 +6,7 @@ lastname: Mulleti
 description: PhD
 img: assets/img/people/alumni/phd/2017/satish-mulleti.jpg
 email: mulleti.satish@gmail.com
+alias: satishmulleti
 scholar_userid: DUpWNNwAAAAJ
 linkedin_username:
 github_username:

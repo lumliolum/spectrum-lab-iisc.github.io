@@ -6,6 +6,7 @@ lastname: Bhagat
 description: Post Doc
 img: assets/img/people/alumni/post-doc/2023/nikunj_bhagat.jpg
 email: nbhagat08@gmail.com
+alias: nikunj_bhagat
 scholar_userid: qsW-vs8AAAAJ
 website: https://home.iitk.ac.in/~nbhagat/
 category: Post Doc

@@ -14,4 +14,5 @@ current_position: PhD Student, University of Amsterdam
 show: true
 year: 2017
 email: aritra.bhowmik@placeholder.com
+alias: aritra_bhowmik
 ---

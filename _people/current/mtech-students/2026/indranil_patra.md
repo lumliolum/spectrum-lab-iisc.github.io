@@ -9,6 +9,7 @@ website: https://indranilpatra.vercel.app/
 linkedin_username: indranilpatra
 github_username: simplyrin2
 email: indranilp@iisc.ac.in
+alias: indranilp
 category: M.Tech Students
 year: 2026
 show: true

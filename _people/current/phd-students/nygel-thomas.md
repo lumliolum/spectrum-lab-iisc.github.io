@@ -9,6 +9,7 @@ website: https://www.linkedin.com/in/nygel-thomas/
 linkedin_username: nygel-thomas
 github_username: nygelakany
 email: nygelgeorge@iisc.ac.in
+alias: nygelgeorge
 category:  PhD Students
 show: true
 biography_paragraphs:

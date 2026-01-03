@@ -5,6 +5,7 @@ firstname: Abhay
 lastname: Patidar
 description: M.Tech CSA
 email: patidarabhayn1@gmail.com
+alias: abhay_patidar
 linkedin_username: patidarabhayn1
 category: M.Tech Graduates
 current_position: Applied Scientist, Amazon

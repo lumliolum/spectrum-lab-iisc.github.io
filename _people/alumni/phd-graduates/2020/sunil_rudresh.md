@@ -12,4 +12,5 @@ current_position: Walmart Global Tech India
 show: true
 year: 2020
 email: sunil.rudresh@placeholder.com
+alias: sunil_rudresh
 ---

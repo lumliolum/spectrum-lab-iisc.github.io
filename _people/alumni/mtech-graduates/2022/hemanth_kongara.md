@@ -6,6 +6,7 @@ lastname: Kongara
 description: M.Tech AI
 img: assets/img/people/alumni/mtech/2022/hemanth_kongara.jpg
 email: hemanthkongara35@gmail.com
+alias: hemanth_kongara
 scholar_userid: t9PSL5UAAAAJ
 linkedin_username: hemanth-kongara-a750201b2
 website: https://hemanthkongara.com

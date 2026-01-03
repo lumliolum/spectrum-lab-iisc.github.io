@@ -9,6 +9,7 @@ website: https://www.linkedin.com/in/abhishek-bhandiwad
 linkedin_username: abhishek-bhandiwad
 github_username: AbhishekSB23
 email: abhishekbs@iisc.ac.in
+alias: abhishekbs
 category:  PhD Students
 show: true
 ---

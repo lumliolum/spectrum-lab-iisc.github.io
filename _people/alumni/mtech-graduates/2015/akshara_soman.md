@@ -12,4 +12,5 @@ current_position: AI Developer Relations Engineer, Sieve (San Francisco)
 show: true
 year: 2015
 email: akshara.soman@placeholder.com
+alias: akshara_soman
 ---

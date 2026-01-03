@@ -13,4 +13,5 @@ current_position: Apple
 show: true
 year: 2013
 email: harini.kishan@placeholder.com
+alias: harini_kishan
 ---

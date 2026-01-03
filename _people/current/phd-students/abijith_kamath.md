@@ -9,6 +9,7 @@ website: https://kamathabijithj.github.io
 linkedin_username: abijith-kamath-556870111
 github_username: kamathabijithj
 email: abijithj@iisc.ac.in
+alias: abijithj
 category: PhD Students
 scholar_userid: yPXzUJMAAAAJ
 show: true

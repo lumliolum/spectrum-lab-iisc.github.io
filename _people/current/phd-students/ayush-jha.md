@@ -9,6 +9,7 @@ website:
 linkedin_username: ayush-jha-80ab8389
 github_username: 
 email: ayushjha@iisc.ac.in
+alias: ayushjha
 category:  PhD Students
 show: true
 ---

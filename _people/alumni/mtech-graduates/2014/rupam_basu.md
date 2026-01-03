@@ -13,4 +13,5 @@ current_position: Microsoft
 show: true
 year: 2014
 email: rupam.basu@placeholder.com
+alias: rupam_basu
 ---

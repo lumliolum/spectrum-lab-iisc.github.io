@@ -13,4 +13,5 @@ show: true
 year: 2012
 website: https://sites.google.com/view/subhadip-mukherjee/home
 email: smukherjee@ece.iitkgp.ac.in
+alias: smukherjee
 ---

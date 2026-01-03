@@ -10,6 +10,7 @@ orcid_id:
 linkedin_username: https://www.linkedin.com/in/dhanasekaran-b-9685a8285/
 github: 
 email: bdhanasekaran777@gmail.com
+alias: bdhanasekaran777
 scholar_userid: 
 twitter_username:
 category: Project Associates

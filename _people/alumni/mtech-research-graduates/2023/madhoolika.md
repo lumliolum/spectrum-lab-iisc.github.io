@@ -12,4 +12,5 @@ category: M.Tech Research Graduates
 show: true
 year: 2023
 email: mani madhoolika.bulusu@placeholder.com
+alias: manimadhoolika_bulusu
 ---

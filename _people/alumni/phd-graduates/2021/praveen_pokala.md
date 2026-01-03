@@ -6,6 +6,7 @@ lastname: Pokala
 description: PhD
 img: assets/img/people/alumni/phd/2021/praveen-pokala.jpg
 email: praveenkumar.pokala@gmail.com
+alias: praveenkumar_pokala
 scholar_userid: tgz2F38AAAAJ
 linkedin_username: praveen-kumar-pokala-phd-73509014
 github_username:

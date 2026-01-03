@@ -10,6 +10,7 @@ orcid_id:
 linkedin_username:
 github: 
 email: surajs@iisc.ac.in
+alias: surajs
 scholar_userid:
 twitter_username: 
 website: 

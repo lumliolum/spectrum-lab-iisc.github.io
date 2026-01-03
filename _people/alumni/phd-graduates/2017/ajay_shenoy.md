@@ -12,4 +12,5 @@ category: PhD Graduates
 show: true
 year: 2017
 email: basty ajay.shenoy@placeholder.com
+alias: ajay_shenoy
 ---

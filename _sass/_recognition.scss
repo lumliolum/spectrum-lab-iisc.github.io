@@ -62,7 +62,7 @@
     flex-grow: 1;
     text-align: left;
 
-    > *:last-child {
+    >*:last-child {
       margin-bottom: 0;
     }
 
@@ -132,6 +132,35 @@
 
     @media (max-width: 576px) {
       margin-bottom: 1rem;
+    }
+  }
+
+  // Recognition Swiper (for multiple images)
+  .recognition-swiper {
+    width: 100%;
+    position: relative;
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-pagination {
+      position: static;
+      margin-top: 0.75rem;
+      text-align: center;
+    }
+
+    .swiper-pagination-bullet {
+      background: var(--global-text-color-light);
+      opacity: 0.5;
+      margin: 0 4px;
+
+      &-active {
+        background: var(--global-theme-color);
+        opacity: 1;
+      }
     }
   }
 
@@ -246,6 +275,7 @@
 // Responsive (legacy - keeping for backwards compatibility)
 @media (max-width: 992px) {
   .recognition-container {
+
     .recognition-card,
     .recognition-card-no-image {
       margin-bottom: 1rem;

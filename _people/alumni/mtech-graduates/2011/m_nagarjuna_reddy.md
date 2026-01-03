@@ -10,4 +10,5 @@ current_position: Indian Railways
 show: true
 year: 2011
 email: m. nagarjuna.reddy@placeholder.com
+alias: mnagarjuna_reddy
 ---

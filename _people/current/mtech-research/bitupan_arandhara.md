@@ -9,6 +9,7 @@ website:
 linkedin_username: bitupan-arandhara
 github_username: Bitupan132
 email: bitupana@iisc.ac.in
+alias: bitupana
 category: M.Tech Research Students
 show: true
 ---

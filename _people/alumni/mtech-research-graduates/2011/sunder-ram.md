@@ -14,4 +14,5 @@ current_position: Assistant Professor, Amrita Vishwa Vidyapeetham
 show: true
 year: 2011
 email: sunder ram.krishnan@placeholder.com
+alias: sunderram_krishnan
 ---

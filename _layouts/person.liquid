@@ -94,7 +94,6 @@ layout: default
         </div>
       </div>
 
-
       {% if page.show_activities and page.email == "css@iisc.ac.in" %}
       <!-- Professional Activities - Compact Design with Nested Year Dropdowns -->
       <div class="card shadow-sm border-0 mt-4">
@@ -298,25 +297,58 @@ layout: default
   </div>
 
   {% unless page.email == "css@iisc.ac.in" or page.category == "Administrator" %}
-  <div class="publications">
-    <h3 class="mt-5 mb-3">Publications</h3>
-    
-    {% comment %} Resolve email alias for bibliography query {% endcomment %}
-    {% assign person_alias = nil %}
-    {% for email_entry in site.data.emails %}
-      {% if email_entry[1] == page.email %}
-        {% assign person_alias = email_entry[0] %}
+  
+  {% comment %} Get person's alias from page.alias or fallback to email prefix {% endcomment %}
+  {% if page.alias %}
+    {% assign person_alias = page.alias %}
+  {% else %}
+    {% assign person_alias = page.email | split: '@' | first %}
+  {% endif %}
+  
+  {% comment %} Collect awards from recognition.yml where aliases contains this person's alias {% endcomment %}
+  {% assign person_awards = "" | split: "" %}
+  {% for item in site.data.recognition %}
+    {% assign aliases_array = item.aliases | split: ", " %}
+    {% for alias in aliases_array %}
+      {% assign alias_stripped = alias | strip %}
+      {% if alias_stripped == person_alias %}
+        {% assign person_awards = person_awards | push: item %}
         {% break %}
       {% endif %}
     {% endfor %}
-    
-    {% unless person_alias %}
-      {% assign person_alias = page.email | split: '@' | first %}
-    {% endunless %}
-    
-    {% capture debug_query %}@*[emails~={{ person_alias }}]{% endcapture %}
+  {% endfor %}
+  
+  {% if person_awards.size > 0 %}
+  <!-- Awards Section -->
+  <div class="collapsible-section mt-5">
+    <h3 class="section-header d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#awardsContent" aria-expanded="true" aria-controls="awardsContent">
+      <span>Awards</span>
+      <i class="fas fa-chevron-down collapse-icon"></i>
+    </h3>
+    <div id="awardsContent" class="collapse show">
+      <ul class="awards-list mt-3">
+        {% for award in person_awards %}
+        <li class="award-item">
+          <i class="fas fa-award text-warning me-2"></i>
+          {{ award.award }}{% if award.year %} <span class="text-muted">({{ award.year }})</span>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endif %}
 
-    {% bibliography --query {{debug_query}} %}
+  <!-- Publications Section -->
+  <div class="collapsible-section mt-5">
+    <h3 class="section-header d-flex justify-content-between align-items-center" data-bs-toggle="collapse" data-bs-target="#publicationsContent" aria-expanded="true" aria-controls="publicationsContent">
+      <span>Publications</span>
+      <i class="fas fa-chevron-down collapse-icon"></i>
+    </h3>
+    <div id="publicationsContent" class="collapse show publications">
+      {% capture debug_query %}@*[emails~={{ person_alias }}]{% endcapture %}
+
+      {% bibliography --query {{debug_query}} %}
+    </div>
   </div>
   {% endunless %}
 </div>

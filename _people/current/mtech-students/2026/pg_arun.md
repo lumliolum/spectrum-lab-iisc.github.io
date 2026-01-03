@@ -9,6 +9,7 @@ website:
 linkedin_username:
 github_username:
 email: arunpg@iisc.ac.in
+alias: arunpg
 category: M.Tech Students
 show: true
 year: 2026

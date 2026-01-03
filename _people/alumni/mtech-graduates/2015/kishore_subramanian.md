@@ -9,6 +9,7 @@ website:
 linkedin_username: kishoresubramanianb
 github_username:
 email: subramanian.kishore@gmail.com
+alias: kishore_subramanian
 category: M.Tech Graduates
 current_position: Senior Data Scientist, Tricog Health India Pvt Ltd
 show: true

@@ -6,6 +6,7 @@ lastname: Kasireddy
 description: M.Tech AI
 img: assets/img/people/alumni/mtech/2022/harishwar_reddy_kasireddy.jpg
 email: harishwarreddy98@gmail.com
+alias: harishwarreddy_kasireddy
 scholar_userid: xxf8Lo4AAAAJ
 linkedin_username: khreddy
 category: M.Tech Graduates

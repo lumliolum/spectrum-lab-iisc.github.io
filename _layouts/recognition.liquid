@@ -59,16 +59,28 @@ layout: default
         <h2 class="year-header">{{ year }}</h2>
         <hr>
         <div class="recognition-grid">
-          {% assign sorted_items = year_items | sort: "name" %}
+        {% assign sorted_items = year_items | sort: "name" %}
           {% for item in sorted_items %}
-            {% if item.image %}
-              <div class="card recognition-card h-100">
+            <div class="card recognition-card h-100">
+              {% if item.images %}
+                <!-- Multiple images - use swiper -->
+                {% assign swiper_id = item.name | slugify | append: '-' | append: forloop.index %}
+                <div class="swiper recognition-swiper" id="swiper-{{ swiper_id }}">
+                  <div class="swiper-wrapper">
+                    {% for img in item.images %}
+                    <div class="swiper-slide">
+                      {% include responsive-image.liquid path=img.path class="card-img-top recognition-photo" alt=img.caption %}
+                    </div>
+                    {% endfor %}
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              {% elsif item.image %}
+                <!-- Single image -->
                 <div class="position-relative overflow-hidden">
                   {% include responsive-image.liquid path=item.image class="card-img-top recognition-photo" alt=item.name %}
                 </div>
-            {% else %}
-              <div class="card recognition-card recognition-card-no-image">
-            {% endif %}
+              {% endif %}
               <div class="card-body d-flex flex-column">
                 {% if item.url %}
                   <h6 class="card-title mb-1 text-primary">
@@ -208,6 +220,25 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.key === 'Escape' && document.getElementById('imageModal').classList.contains('show')) {
       modal.hide();
     }
+  });
+
+  // Initialize recognition swipers
+  const recognitionSwipers = document.querySelectorAll('.recognition-swiper');
+  recognitionSwipers.forEach(function(swiperEl) {
+    new Swiper(swiperEl, {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      speed: 800,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: swiperEl.querySelector('.swiper-pagination'),
+        clickable: true,
+      },
+    });
   });
 });
 </script>

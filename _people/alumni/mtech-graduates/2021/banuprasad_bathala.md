@@ -5,6 +5,7 @@ firstname: BanuPrasad
 lastname: Bathala
 description: M.Tech AI
 email: bathalaban@gmail.com
+alias: banuprasad_bathala
 category: M.Tech Graduates
 current_position: Lead Engineer at Qualcomm
 show: true

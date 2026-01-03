@@ -1,17 +1,26 @@
-# $uc-red-color: #002e99 !default;
-# $uc-gold-color: #ffcd00 !default;
-# $uc-light-orange-color: #ffa300 !default;
-# $uc-dark-orange-color: #ff671f !default;
-# $uc-rubine-color: #ed0a72 !default;
-# $uc-berry-color: #9c0534 !default;
+# Venues configuration for publication display
+# Each venue has a URL and color for styling
 
+# =========================================
+# Top-tier Computer Vision Conferences
+# =========================================
 "CVPR":
   url: https://openaccess.thecvf.com/menu
   color: "#ffcd00"
+"ICCV":
+  url: https://iccv.thecvf.com
+  color: "#002e99"
+
+# =========================================
+# Top-tier Machine Learning Conferences
+# =========================================
 "NeurIPS":
   url: https://proceedings.neurips.cc
   color: "#002e99"
 "NeurIPS Workshops":
+  url: https://proceedings.neurips.cc
+  color: "#9c0534"
+"NeurIPS-W":
   url: https://proceedings.neurips.cc
   color: "#9c0534"
 "ICLR":
@@ -29,18 +38,456 @@
 "AAAI":
   url: https://www.aaai.org/Library/AAAI/aaai-library.php
   color: "#002e99"
-"MICCAI":
-  url: http://www.miccai.org
-  color: "#002e99"
-"TMLR":
-  url: https://jmlr.org/tmlr/
-  color: "#002e99"
 "CANAI":
   url: https://www.caiac.ca/en/conferences/
   color: "#002e99"
 "CPAL Spotlight":
   url: https://cpal.cc
   color: "#9c0534"
+
+# =========================================
+# Signal Processing Conferences
+# =========================================
+"ICASSP 25":
+  url: https://2025.ieeeicassp.org
+  color: "#002e99"
+"ICASSP 24":
+  url: https://2024.ieeeicassp.org
+  color: "#002e99"
+"ICASSP 23":
+  url: https://2023.ieeeicassp.org
+  color: "#002e99"
+"ICASSP 22":
+  url: https://2022.ieeeicassp.org
+  color: "#002e99"
+"ICASSP 21":
+  url: https://2021.ieeeicassp.org
+  color: "#002e99"
+"ICASSP 20":
+  url: https://2020.ieeeicassp.org
+  color: "#002e99"
+"ICASSP 19":
+  url: https://2019.ieeeicassp.org
+  color: "#002e99"
+"ICASSP 18":
+  url: https://2018.ieeeicassp.org
+  color: "#002e99"
+"ICASSP":
+  url: https://signalprocessingsociety.org/publications-resources/ieeeacm-transactions-audio-speech-and-language-processing
+  color: "#002e99"
+
+"SPCOM 24":
+  url: https://ece.iisc.ac.in/spcom2024/
+  color: "#002e99"
+"SPCOM 20":
+  url: https://ece.iisc.ac.in/~spcom/2020/
+  color: "#002e99"
+"SPCOM":
+  url: https://ece.iisc.ac.in/~spcom/
+  color: "#002e99"
+
+"INTERSPEECH 19":
+  url: https://www.interspeech2019.org
+  color: "#002e99"
+"INTERSPEECH 18":
+  url: https://www.isca-speech.org/archive/Interspeech_2018/
+  color: "#002e99"
+"INTERSPEECH 17":
+  url: https://www.isca-speech.org/archive/Interspeech_2017/
+  color: "#002e99"
+"INTERSPEECH":
+  url: https://www.isca-speech.org/archive/
+  color: "#002e99"
+
+# =========================================
+# Image Processing Conferences
+# =========================================
+"IEEE ICIP 25":
+  url: https://2025.ieeeicip.org
+  color: "#002e99"
+"ICIP 22":
+  url: https://2022.ieeeicip.org
+  color: "#002e99"
+"ICIP 20":
+  url: https://2020.ieeeicip.org
+  color: "#002e99"
+"ICIP 19":
+  url: https://2019.ieeeicip.org
+  color: "#002e99"
+"ICIP 18":
+  url: https://2018.ieeeicip.org
+  color: "#002e99"
+"ICIP 17":
+  url: https://2017.ieeeicip.org
+  color: "#002e99"
+"ICIP":
+  url: https://signalprocessingsociety.org/publications-resources/icip
+  color: "#002e99"
+
+"ICVGIP 24":
+  url: https://icvgip.in
+  color: "#002e99"
+"ICVGIP":
+  url: https://icvgip.in
+  color: "#002e99"
+
+# =========================================
+# Biomedical Imaging Conferences
+# =========================================
+"MICCAI":
+  url: http://www.miccai.org
+  color: "#002e99"
+"MICCAI-UWDR 25":
+  url: http://www.miccai.org
+  color: "#9c0534"
+
+"MIDL-SP 25":
+  url: https://midl.io
+  color: "#9c0534"
+"MIDL":
+  url: https://midl.io
+  color: "#002e99"
+
+"ISBI 20":
+  url: https://biomedicalimaging.org/2020/
+  color: "#002e99"
+"ISBI 19":
+  url: https://biomedicalimaging.org/2019/
+  color: "#002e99"
+"ISBI 17":
+  url: https://biomedicalimaging.org/2017/
+  color: "#002e99"
+"ISBI":
+  url: https://biomedicalimaging.org
+  color: "#002e99"
+
+"EMBC 19":
+  url: https://embc.embs.org/2019/
+  color: "#002e99"
+"EMBC":
+  url: https://embs.org
+  color: "#002e99"
+
+# =========================================
+# Graphics Conferences
+# =========================================
+"SIGGRAPH Asia 25":
+  url: https://asia.siggraph.org/2025/
+  color: "#ffcd00"
+"SIGGRAPH Asia":
+  url: https://asia.siggraph.org
+  color: "#ffcd00"
+"SIGGRAPH":
+  url: https://siggraph.org
+  color: "#ffcd00"
+
+# =========================================
+# IEEE Transactions & Journals
+# =========================================
+"IEEE TSP 25":
+  url: https://signalprocessingsociety.org/publications-resources/ieee-transactions-signal-processing
+  color: "#002e99"
+"IEEE TSP 21":
+  url: https://signalprocessingsociety.org/publications-resources/ieee-transactions-signal-processing
+  color: "#002e99"
+"IEEE TSP 18":
+  url: https://signalprocessingsociety.org/publications-resources/ieee-transactions-signal-processing
+  color: "#002e99"
+"IEEE TSP 17":
+  url: https://signalprocessingsociety.org/publications-resources/ieee-transactions-signal-processing
+  color: "#002e99"
+"IEEE TSP":
+  url: https://signalprocessingsociety.org/publications-resources/ieee-transactions-signal-processing
+  color: "#002e99"
+
+"IEEE TCI 23":
+  url: https://signalprocessingsociety.org/publications-resources/ieee-transactions-computational-imaging
+  color: "#002e99"
+"IEEE TCI":
+  url: https://signalprocessingsociety.org/publications-resources/ieee-transactions-computational-imaging
+  color: "#002e99"
+
+"IEEE T-PAMI 21":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34
+  color: "#002e99"
+"IEEE T-PAMI":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34
+  color: "#002e99"
+
+"IEEE SPL 20":
+  url: https://signalprocessingsociety.org/publications-resources/ieee-signal-processing-letters
+  color: "#002e99"
+"IEEE SPL 18":
+  url: https://signalprocessingsociety.org/publications-resources/ieee-signal-processing-letters
+  color: "#002e99"
+"IEEE SPL 17":
+  url: https://signalprocessingsociety.org/publications-resources/ieee-signal-processing-letters
+  color: "#002e99"
+"IEEE SPL":
+  url: https://signalprocessingsociety.org/publications-resources/ieee-signal-processing-letters
+  color: "#002e99"
+
+"IEEE/ACM TASLP 18":
+  url: https://signalprocessingsociety.org/publications-resources/ieeeacm-transactions-audio-speech-and-language-processing
+  color: "#002e99"
+"IEEE/ACM TASLP":
+  url: https://signalprocessingsociety.org/publications-resources/ieeeacm-transactions-audio-speech-and-language-processing
+  color: "#002e99"
+
+# =========================================
+# SIAM Journals
+# =========================================
+"SIIMS 25":
+  url: https://epubs.siam.org/journal/sjisbi
+  color: "#002e99"
+"SIIMS 24":
+  url: https://epubs.siam.org/journal/sjisbi
+  color: "#002e99"
+"SIIMS":
+  url: https://epubs.siam.org/journal/sjisbi
+  color: "#002e99"
+
+# =========================================
+# Machine Learning Journals
+# =========================================
+"TMLR":
+  url: https://jmlr.org/tmlr/
+  color: "#002e99"
+"JMLR 23":
+  url: https://jmlr.org
+  color: "#002e99"
+"JMLR":
+  url: https://jmlr.org
+  color: "#002e99"
+
+# =========================================
+# Nature Portfolio Journals
+# =========================================
+"Nat. Nanotechnol. 23":
+  url: https://www.nature.com/nnano/
+  color: "#d6001c"
+"Nat. Nanotechnol.":
+  url: https://www.nature.com/nnano/
+  color: "#d6001c"
+
+"Sci. Data 23":
+  url: https://www.nature.com/sdata/
+  color: "#d6001c"
+"Sci. Data":
+  url: https://www.nature.com/sdata/
+  color: "#d6001c"
+
+"Sci. Rep. 19":
+  url: https://www.nature.com/srep/
+  color: "#d6001c"
+"Sci. Rep. 17":
+  url: https://www.nature.com/srep/
+  color: "#d6001c"
+"Sci. Rep.":
+  url: https://www.nature.com/srep/
+  color: "#d6001c"
+
+# =========================================
+# Medical & Health Journals
+# =========================================
+"Ultrasonics 20":
+  url: https://www.sciencedirect.com/journal/ultrasonics
+  color: "#002e99"
+"Ultrasonics":
+  url: https://www.sciencedirect.com/journal/ultrasonics
+  color: "#002e99"
+
+"Diagnostics 23":
+  url: https://www.mdpi.com/journal/diagnostics
+  color: "#002e99"
+"Diagnostics":
+  url: https://www.mdpi.com/journal/diagnostics
+  color: "#002e99"
+
+"J. Neurophysiol. 18":
+  url: https://journals.physiology.org/journal/jn
+  color: "#002e99"
+"J. Neurophysiol.":
+  url: https://journals.physiology.org/journal/jn
+  color: "#002e99"
+
+"PLoS ONE 20":
+  url: https://journals.plos.org/plosone/
+  color: "#002e99"
+"PLoS ONE":
+  url: https://journals.plos.org/plosone/
+  color: "#002e99"
+
+# =========================================
+# Speech & Audio Journals
+# =========================================
+"Speech Commun. 20":
+  url: https://www.sciencedirect.com/journal/speech-communication
+  color: "#002e99"
+"Speech Commun.":
+  url: https://www.sciencedirect.com/journal/speech-communication
+  color: "#002e99"
+
+# =========================================
+# Signal Processing Journals
+# =========================================
+"Signal Process. 16":
+  url: https://www.sciencedirect.com/journal/signal-processing
+  color: "#002e99"
+"Signal Process.":
+  url: https://www.sciencedirect.com/journal/signal-processing
+  color: "#002e99"
+
+"IJWMIP 22":
+  url: https://www.worldscientific.com/worldscinet/ijwmip
+  color: "#002e99"
+"IJWMIP":
+  url: https://www.worldscientific.com/worldscinet/ijwmip
+  color: "#002e99"
+
+"APSIPA Trans. Signal Inf. Process. 20":
+  url: https://www.cambridge.org/core/journals/apsipa-transactions-on-signal-and-information-processing
+  color: "#002e99"
+"APSIPA Trans. Signal Inf. Process.":
+  url: https://www.cambridge.org/core/journals/apsipa-transactions-on-signal-and-information-processing
+  color: "#002e99"
+
+# =========================================
+# Geoscience & Seismology Journals
+# =========================================
+"BSSA 22":
+  url: https://pubs.geoscienceworld.org/ssa/bssa
+  color: "#002e99"
+"BSSA":
+  url: https://pubs.geoscienceworld.org/ssa/bssa
+  color: "#002e99"
+
+# =========================================
+# Other Specialized Journals
+# =========================================
+"SLAS Technol. 17":
+  url: https://www.sciencedirect.com/journal/slas-technology
+  color: "#002e99"
+"SLAS Technol.":
+  url: https://www.sciencedirect.com/journal/slas-technology
+  color: "#002e99"
+
+"ISSS J. Micro Smart Syst. 22":
+  url: https://www.springer.com/journal/41683
+  color: "#002e99"
+"ISSS J. Micro Smart Syst.":
+  url: https://www.springer.com/journal/41683
+  color: "#002e99"
+
+"Innov. Comput. Sci. J. 16":
+  url: https://www.inass.org/
+  color: "#002e99"
+"Innov. Comput. Sci. J.":
+  url: https://www.inass.org/
+  color: "#002e99"
+
+# =========================================
+# Workshop Tracks
+# =========================================
+"DLDE-II 22":
+  url: https://dl-de.github.io
+  color: "#9c0534"
+"NeurIPS-W 22":
+  url: https://proceedings.neurips.cc
+  color: "#9c0534"
+"NeurIPS-W 17":
+  url: https://proceedings.neurips.cc
+  color: "#9c0534"
+
+# =========================================
+# Other IEEE Conferences
+# =========================================
+"GlobalSIP 18":
+  url: https://2018.ieeeglobalsip.org
+  color: "#002e99"
+"GlobalSIP":
+  url: https://ieeeglobalsip.org
+  color: "#002e99"
+
+"APSIPA ASC 18":
+  url: https://www.apsipa.org/asc/
+  color: "#002e99"
+"APSIPA ASC":
+  url: https://www.apsipa.org/asc/
+  color: "#002e99"
+
+"TENCON 17":
+  url: https://www.ieee.org/conferences/index.html
+  color: "#002e99"
+"TENCON":
+  url: https://www.ieee.org/conferences/index.html
+  color: "#002e99"
+
+"APPEEC 17":
+  url: https://ieee-pes.org/
+  color: "#002e99"
+"APPEEC":
+  url: https://ieee-pes.org/
+  color: "#002e99"
+
+"IUS 19":
+  url: https://ieee-ius.org
+  color: "#002e99"
+"IUS":
+  url: https://ieee-ius.org
+  color: "#002e99"
+
+"AGU 21":
+  url: https://www.agu.org/Fall-Meeting
+  color: "#002e99"
+"AGU":
+  url: https://www.agu.org/Fall-Meeting
+  color: "#002e99"
+
+# =========================================
+# Symposiums & Conferences
+# =========================================
+"ISCS 25":
+  url: https://www.ieee.org
+  color: "#002e99"
+"ISCS":
+  url: https://www.ieee.org
+  color: "#002e99"
+
+# =========================================
+# arXiv Preprints
+# =========================================
 "arXiv preprint":
   url: https://arxiv.org
+  color: "#d6001c"
+"arXiv 23":
+  url: https://arxiv.org
+  color: "#d6001c"
+"arXiv 21":
+  url: https://arxiv.org
+  color: "#d6001c"
+"arXiv 20":
+  url: https://arxiv.org
+  color: "#d6001c"
+"arXiv 19":
+  url: https://arxiv.org
+  color: "#d6001c"
+"arXiv 18":
+  url: https://arxiv.org
+  color: "#d6001c"
+"arXiv 17":
+  url: https://arxiv.org
+  color: "#d6001c"
+"arXiv":
+  url: https://arxiv.org
+  color: "#d6001c"
+
+# =========================================
+# bioRxiv Preprints
+# =========================================
+"bioRxiv 20":
+  url: https://www.biorxiv.org
+  color: "#d6001c"
+"bioRxiv":
+  url: https://www.biorxiv.org
   color: "#d6001c"

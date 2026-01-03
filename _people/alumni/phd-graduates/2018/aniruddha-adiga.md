@@ -6,6 +6,7 @@ lastname: Adiga
 description: PhD
 img: assets/img/people/alumni/phd/2018/aniruddha-adiga.jpg
 email: aniruddha@virginia.edu
+alias: aniruddha
 scholar_userid: _JSHvgwAAAAJ
 linkedin_username: aniruddha-adiga
 github_username:

@@ -6,6 +6,7 @@ lastname: J. R.
 description: PhD 
 img: assets/img/people/alumni/phd/2021/harish-kumar.jpg
 email: harish.jr@gmail.com
+alias: harish
 scholar_userid: 6tpDcKIAAAAJ
 linkedin_username: 
 github_username:

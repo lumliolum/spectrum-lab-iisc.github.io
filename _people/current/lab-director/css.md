@@ -10,6 +10,7 @@ orcid_id:
 linkedin_username: 
 github: 
 email: css@iisc.ac.in
+alias: css
 scholar_userid: 1g1i1B4AAAAJ
 twitter_username:
 website:

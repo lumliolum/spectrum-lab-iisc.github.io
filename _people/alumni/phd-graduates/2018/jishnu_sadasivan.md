@@ -6,6 +6,7 @@ lastname: Sadasivan
 description: PhD
 img: assets/img/people/alumni/phd/2018/jishnu-sadasivan.png
 email: jishnuns@gmail.com
+alias: jishnuns
 linkedin_username:
 github_username:
 category: PhD Graduates

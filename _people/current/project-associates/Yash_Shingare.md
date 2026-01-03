@@ -10,6 +10,7 @@ orcid_id:
 linkedin_username: yashshingare24
 github: modlescave
 email: yashsandips@iisc.ac.in
+alias: yashsandips
 category: Project Associate
 show: true
 ---

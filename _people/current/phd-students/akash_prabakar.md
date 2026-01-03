@@ -9,6 +9,7 @@ website: https://www.linkedin.com/in/akash-prabakar/
 linkedin_username: akash-prabakar
 github_username: AkashPrabakar
 email: pakash@iisc.ac.in
+alias: pakash
 category:  PhD Students
 show: true
 ---

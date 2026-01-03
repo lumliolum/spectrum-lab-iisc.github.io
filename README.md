@@ -40,6 +40,9 @@ cd spectrum-lab-iisc.github.io
 # Install dependencies
 bundle install
 
+# Ensure all person profiles have required fields (optional, auto-fills missing email/alias)
+python3 scripts/ensure_person_fields.py
+
 # Start local server with live reload
 JEKYLL_ENV=development bundle exec jekyll serve --livereload --port 8080
 
@@ -63,9 +66,8 @@ spectrum-lab-iisc.github.io/
 │   └── papers.bib          # All publications go here
 ├── _data/                  # YAML data files
 │   ├── activities.yml      # Lab Director's professional activities
-│   ├── emails.yml          # Email aliases for bibliography
 │   ├── funding.yml         # Funding sources/sponsors
-│   ├── recognition.yml     # Awards and recognition
+│   ├── recognition.yml     # Awards and recognition (uses aliases)
 │   ├── teaching.yml        # Course listings
 │   └── ...
 ├── _includes/              # Reusable HTML/Liquid components
@@ -108,10 +110,22 @@ spectrum-lab-iisc.github.io/
    - **Requirement:** Square aspect ratio, min 400x400px.
 
 3. **Edit the markdown file:**
-   Update `title`, `firstname`, `lastname`, `img` path, `category`, and `year`.
+   Update `title`, `firstname`, `lastname`, `img` path, `category`, `year`, and importantly:
 
-#### Moving to Alumni
-Move the file from `current/[category]/` to `alumni/[category-graduates]/[year]/`.
+   **`alias`** - Used for linking to publications and awards:
+   ```yaml
+   alias: siddarth  # Must match aliases in papers.bib and recognition.yml
+   ```
+
+#### Key Fields
+
+| Field | Description |
+|-------|-------------|
+| `alias` | **Unique identifier** for bibliography and recognition lookups |
+| `email` | Contact email (also used in emails.yml) |
+| `category` | "PhD Graduates", "MTech Graduates", etc. |
+| `year` | Graduation year |
+
 
 ---
 
@@ -126,7 +140,7 @@ Move the file from `current/[category]/` to `alumni/[category-graduates]/[year]/
      title = {Paper Title},
      year = {2025},
      preview = {thumbnail.png},  # Optional: Image in assets/img/publication_preview/
-     emails = {alias1, css},     # Use aliases from _data/emails.yml
+     emails = {alias1, css},     # Use aliases from person profiles
      bibtex_show = {true},
      selected = {true}           # Show on homepage
    }
@@ -134,7 +148,7 @@ Move the file from `current/[category]/` to `alumni/[category-graduates]/[year]/
 
 2. **Manage Authors:**
    - Use **aliases** in the `emails` field to link authors to their profile pages.
-   - Define new aliases in `_data/emails.yml`.
+   - Aliases are defined in individual person markdown files (e.g., `alias: siddarth`).
 
 ---
 
@@ -181,10 +195,67 @@ Full project description...
 | File | Purpose |
 |------|---------|
 | `_data/funding.yml` | Sponsors shown in the homepage carousel. |
-| `_data/recognition.yml` | Awards and honors list. |
+| `_data/recognition.yml` | Awards and honors (linked via person aliases). |
 | `_data/teaching.yml` | Courses taught by the lab director. |
 | `_data/activities.yml` | Professional activities (talks, committees). |
 | `_data/album.yaml` | Categories for the photo album. |
+
+---
+
+### 6. Recognition / Awards
+
+**Location:** `_data/recognition.yml`
+
+Awards are centrally managed and automatically displayed on person profile pages via their `alias` field.
+
+#### Adding a New Award
+
+```yaml
+- award: "Award Name"
+  year: "2024"
+  category: "Award"
+  aliases: "siddarth, nishanths"  # Comma-separated aliases from person profiles
+  image: "assets/img/recognition/folder/image.jpg"
+```
+
+#### Key Fields
+
+| Field | Description |
+|-------|-------------|
+| `award` | Name of the award |
+| `year` | Year(s) received (can be comma-separated: "2019, 2021, 2022") |
+| `aliases` | **Comma-separated aliases** matching `alias` field in person profiles |
+| `image` | Path to award image (optional) |
+| `images` | Array of images with captions for carousel (optional) |
+| `co_inventors` | For joint awards with external collaborators |
+
+#### How It Works
+
+1. **Aliases** are defined in each person's markdown file:
+   ```yaml
+   alias: siddarth  # In the person's profile
+   ```
+
+2. **Awards reference aliases**:
+   ```yaml
+   - award: "Qualcomm Innovation Fellowship"
+     aliases: "nishanths, nareddyreddy"  # Both people get this award
+   ```
+
+3. **Person profiles automatically show awards:**
+   - The layout matches person's alias → recognition entries
+   - No need to edit individual markdown files
+
+#### Image Organization
+
+Images are organized by person in `assets/img/recognition/`:
+```
+assets/img/recognition/
+├── siddarth/          # All Siddarth's award images
+├── qualcomm/          # Group awards (Qualcomm fellowships)
+├── css/               # Lab Director's awards
+└── ...
+```
 
 ---
 

@@ -5,6 +5,7 @@ firstname: Anshul
 lastname: Shivhare
 description: M.Tech AI
 email: shivhareanshul78@gmail.com
+alias: anshul_shivhare
 scholar_userid: g8Dd-EIAAAAJ
 linkedin_username: anshul-s-1481a9178
 website: https://medium.com/@anshulshivhare22

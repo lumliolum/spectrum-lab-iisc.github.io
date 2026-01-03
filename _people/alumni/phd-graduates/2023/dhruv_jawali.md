@@ -12,4 +12,5 @@ current_position: Google DeepMind
 show: true
 year: 2023
 email: dhruv.jawali@placeholder.com
+alias: dhruv_jawali
 ---

@@ -8,4 +8,5 @@ category: M.Tech Graduates
 show: true
 year: 2013
 email: arun.m@placeholder.com
+alias: arun_m
 ---

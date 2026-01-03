@@ -14,4 +14,5 @@ current_position: Research Scientist, Adobe Research
 show: true
 year: 2016
 email: debabrata.mahapatra@placeholder.com
+alias: debabrata_mahapatra
 ---

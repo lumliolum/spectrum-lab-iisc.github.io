@@ -6,6 +6,7 @@ lastname: Venkat
 description: M.Tech SP
 img: assets/img/people/alumni/mtech/2024/gayathri_venkat.jpg
 email: gayathrivenkat64@gmail.com
+alias: gayathri_venkat
 linkedin_username: gayathri-venkat-7b1958150
 category: M.Tech Graduates
 current_position: Software Designer, MathWorks

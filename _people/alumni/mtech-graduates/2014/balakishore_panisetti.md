@@ -8,4 +8,5 @@ category: M.Tech Graduates
 show: true
 year: 2014
 email: balakishore.panisetti@placeholder.com
+alias: balakishore_panisetti
 ---

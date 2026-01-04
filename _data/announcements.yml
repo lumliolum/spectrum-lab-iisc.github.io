@@ -1,0 +1,125 @@
+# Announcement Carousel Configuration
+# Set enabled: true to show the carousel on the homepage
+# Add items to display announcements
+# Set show_in_news: true to also display in the news section
+
+enabled: true
+
+items:
+  - title: "Module II: Concentration of Probability Measures begins"
+    date: "January 6, 2026"
+    posted_date: 2026-01-03
+    badge: "Short Course"
+    icon: "fas fa-chalkboard-teacher"
+    link: "/teaching/mathematics-bigdata-analytics/"
+    show_in_news: true
+
+  # Upcoming/Past Events - Not yet announced
+  - title: "On nuances of electronic voting"
+    speaker: "Prof. Subhashis Banerjee, Ashoka University"
+    date: "November 19, 2025"
+    posted_date: 2025-11-01
+    badge: "Talk"
+    icon: "fas fa-microphone"
+    show_in_news: false
+
+  - title: "Forecasting Epidemics: From Ensembles to Graph Neural Networks"
+    speaker: "Dr. Aniruddha Adiga, University of Virginia"
+    date: "July 30, 2025"
+    posted_date: 2025-07-15
+    badge: "Talk"
+    icon: "fas fa-microphone"
+    show_in_news: false
+
+  - title: "Model-Based Deep Learning For Sensor Selection"
+    speaker: "Dr. Satish Mulleti, IIT Bombay"
+    date: "May 22, 2025"
+    posted_date: 2025-05-10
+    badge: "Talk"
+    icon: "fas fa-microphone"
+    show_in_news: false
+
+  - title: "Phase Retrieval: computational imaging in the machine learning era"
+    speaker: "Jonathan Dong, EPFL, Switzerland"
+    date: "April 21, 2025"
+    posted_date: 2025-04-10
+    badge: "Talk"
+    icon: "fas fa-microphone"
+    show_in_news: false
+
+  - title: "Things you should know before submitting your next paper"
+    speaker: "Prof. Alessandro Foi, Tampere University, Finland"
+    date: "April 17, 2025"
+    posted_date: 2025-04-10
+    badge: "Talk"
+    icon: "fas fa-microphone"
+    show_in_news: false
+
+  - title: "Noise in imaging: focus on correlation and nonlinearity"
+    speaker: "Prof. Alessandro Foi, Tampere University, Finland"
+    date: "April 16, 2025"
+    posted_date: 2025-04-10
+    badge: "Talk"
+    icon: "fas fa-microphone"
+    show_in_news: false
+
+  - title: "The four generations of single-neuron models"
+    speaker: "Prof. Rishikesh Narayanan, IISc"
+    date: "February 17, 2025"
+    posted_date: 2025-02-10
+    badge: "Talk"
+    icon: "fas fa-microphone"
+    show_in_news: false
+
+  - title: "PhD Thesis Defense: Nareddy Kartheek Kumar Reddy"
+    date: "February 13, 2025"
+    posted_date: 2025-02-01
+    badge: "PhD Defense"
+    icon: "fas fa-graduation-cap"
+    show_in_news: false
+
+  - title: "Wearable Sensor Signal Processing for Health Applications"
+    speaker: "Prof. Gaurav Sharma, University of Rochester"
+    date: "January 24, 2025"
+    posted_date: 2025-01-15
+    badge: "Lecture"
+    icon: "fas fa-chalkboard-teacher"
+    show_in_news: false
+
+  - title: "Human Perception and Image Analysis"
+    speaker: "Prof. T. Pappas & Prof. G. Sharma"
+    date: "January 20-25, 2025"
+    posted_date: 2025-01-10
+    badge: "SPARC Course"
+    icon: "fas fa-chalkboard-teacher"
+    show_in_news: false
+
+  - title: "Artificial Intelligence for Eyecare"
+    date: "January 17, 2025"
+    posted_date: 2025-01-05
+    badge: "Symposium"
+    icon: "fas fa-eye"
+    show_in_news: false
+
+  - title: "Randomized Linear Algebra - An Introduction"
+    speaker: "Prof. S. Lakshmivarahan, University of Oklahoma"
+    date: "January 10 & 13, 2025"
+    posted_date: 2025-01-05
+    badge: "Seminar"
+    icon: "fas fa-chalkboard-teacher"
+    show_in_news: false
+
+  - title: "MR Image Super-Resolution"
+    speaker: "Prof. Chandra Sekhar Seelamantula, IISc"
+    date: "October 10, 2024"
+    posted_date: 2024-10-01
+    badge: "Talk"
+    icon: "fas fa-microphone"
+    show_in_news: false
+
+  - title: "PhD Thesis Colloquium: Nareddy Kartheek Kumar Reddy"
+    date: "June 24, 2024"
+    posted_date: 2024-06-15
+    badge: "PhD Colloquium"
+    icon: "fas fa-graduation-cap"
+    show_in_news: false

@@ -10,6 +10,7 @@ The script expects `people.xlsx` at the repo root and photos in `people_photos/`
 It writes markdown files to `_people/current/<category>/` and copies photos to
 `assets/img/people/<category>/`.
 """
+from __future__ import annotations
 import os
 import re
 import shutil

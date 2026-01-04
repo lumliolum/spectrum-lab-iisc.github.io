@@ -4,16 +4,15 @@
     <div
       class="news-list"
       {% if include.limit and page.announcements.scrollable and news_size > 3 %}
-        style="max-height: 400px; overflow-y: auto;"
-      {% endif %}
-    >
+      style="max-height: 400px; overflow-y: auto;"
+      {% endif %}>
       {% assign news = site.news | sort: "date" | reverse %}
       {% if include.limit and page.announcements.limit %}
         {% assign news_limit = page.announcements.limit %}
       {% else %}
         {% assign news_limit = news_size %}
       {% endif %}
-      
+
       <ul class="news-items">
         {% for item in news limit: news_limit %}
           <li class="news-item{% if item.announce %} news-item--announcement{% endif %}">
@@ -37,14 +36,15 @@
               </div>
               {% if item.speaker %}
                 <div class="news-speaker">
-                  <i class="fas fa-user-tie"></i> {{ item.speaker }}
+                  <i class="fas fa-user-tie"></i>
+                  {{ item.speaker }}
                 </div>
               {% endif %}
             </div>
           </li>
         {% endfor %}
       </ul>
-      
+
       {% if include.limit and page.announcements.scrollable and news_size > 3 %}
         <div class="news-more">
           <a href="{{ '/news/' | relative_url }}">View all news →</a>

@@ -2,6 +2,7 @@
 """
 Match downloaded photos to new alumni profiles, make them square, and update markdown files.
 """
+from __future__ import annotations
 import os
 import re
 import subprocess

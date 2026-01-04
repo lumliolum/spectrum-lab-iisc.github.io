@@ -8,206 +8,234 @@ layout: default
       <span class="event-badge event-badge--{{ page.badge | downcase | replace: ' ', '-' }}">{{ page.badge }}</span>
     {% endif %}
     <h1 class="event-title">{{ page.title }}</h1>
-    
+
     <div class="event-meta">
       <div class="event-meta-item">
         <i class="fas fa-calendar-alt"></i>
         <span>{{ page.date | date: '%B %d, %Y' }}</span>
       </div>
       {% if page.time %}
-      <div class="event-meta-item">
-        <i class="fas fa-clock"></i>
-        <span>{{ page.time }}</span>
-      </div>
+        <div class="event-meta-item">
+          <i class="fas fa-clock"></i>
+          <span>{{ page.time }}</span>
+        </div>
       {% endif %}
       {% if page.venue %}
-      <div class="event-meta-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <span>{{ page.venue }}</span>
-      </div>
+        <div class="event-meta-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>{{ page.venue }}</span>
+        </div>
       {% endif %}
     </div>
   </header>
 
   {% if page.speaker %}
-  <section class="event-section">
-    <h2><i class="fas fa-user-tie"></i> Speaker</h2>
-    <div class="event-speaker">
-      <strong>{{ page.speaker }}</strong>
-      {% if page.speaker_affiliation %}
-        <br><span class="speaker-affiliation">{{ page.speaker_affiliation }}</span>
-      {% endif %}
-    </div>
-  </section>
+    <section class="event-section">
+      <h2>
+        <i class="fas fa-user-tie"></i>
+        Speaker</h2>
+      <div class="event-speaker">
+        <strong>{{ page.speaker }}</strong>
+        {% if page.speaker_affiliation %}
+          <br><span class="speaker-affiliation">{{ page.speaker_affiliation }}</span>
+        {% endif %}
+      </div>
+    </section>
   {% endif %}
 
   {% if page.speakers %}
-  <section class="event-section">
-    <h2><i class="fas fa-users"></i> Speakers</h2>
-    <ul class="event-speakers-list">
-      {% for spk in page.speakers %}
-        <li>{{ spk }}</li>
-      {% endfor %}
-    </ul>
-  </section>
+    <section class="event-section">
+      <h2>
+        <i class="fas fa-users"></i>
+        Speakers</h2>
+      <ul class="event-speakers-list">
+        {% for spk in page.speakers %}
+          <li>{{ spk }}</li>
+        {% endfor %}
+      </ul>
+    </section>
   {% endif %}
 
   {% if page.host or page.hosts %}
-  <section class="event-section">
-    <h2><i class="fas fa-user-friends"></i> Host{% if page.hosts %}s{% endif %}</h2>
-    <p>{{ page.host }}{{ page.hosts }}</p>
-  </section>
+    <section class="event-section">
+      <h2>
+        <i class="fas fa-user-friends"></i>
+        Host{% if page.hosts %}s{% endif %}
+      </h2>
+      <p>{{ page.host }}{{ page.hosts }}</p>
+    </section>
   {% endif %}
 
   {% if page.abstract %}
-  <section class="event-section">
-    <h2><i class="fas fa-file-alt"></i> Abstract</h2>
-    <div class="event-abstract">
-      {{ page.abstract | markdownify }}
-    </div>
-  </section>
+    <section class="event-section">
+      <h2>
+        <i class="fas fa-file-alt"></i>
+        Abstract</h2>
+      <div class="event-abstract">
+        {{ page.abstract | markdownify }}
+      </div>
+    </section>
   {% endif %}
 
   {% if page.content != blank %}
-  <section class="event-section">
-    <div class="event-content">
-      {{ content }}
-    </div>
-  </section>
+    <section class="event-section">
+      <div class="event-content">
+        {{ content }}
+      </div>
+    </section>
   {% endif %}
 
   {% if page.registration_link %}
-  <section class="event-section">
-    <a href="{{ page.registration_link }}" class="btn btn-primary" target="_blank">
-      <i class="fas fa-user-plus"></i> Register
-    </a>
-  </section>
+    <section class="event-section">
+      <a
+        href="{{ page.registration_link }}"
+        class="btn btn-primary"
+        target="_blank">
+        <i class="fas fa-user-plus"></i>
+        Register
+      </a>
+    </section>
   {% endif %}
 </div>
 
 <style>
-.event-page {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.event-header {
-  margin-bottom: 2rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--global-divider-color);
-}
-
-.event-badge {
-  display: inline-block;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  background: var(--global-theme-color);
-  color: white;
-  margin-bottom: 0.75rem;
-}
-
-.event-badge--talk { background: #6366f1; }
-.event-badge--seminar { background: #8b5cf6; }
-.event-badge--lecture { background: #0ea5e9; }
-.event-badge--symposium { background: #f59e0b; }
-.event-badge--sparc-course { background: #10b981; }
-.event-badge--phd-defense, .event-badge--phd-colloquium { background: #ec4899; }
-.event-badge--short-course { background: #14b8a6; }
-
-.event-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--global-text-color);
-}
-
-.event-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-
-.event-meta-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--global-text-color-light);
-  font-size: 0.95rem;
-}
-
-.event-meta-item i {
-  color: var(--global-theme-color);
-}
-
-.event-section {
-  margin-bottom: 2rem;
-}
-
-.event-section h2 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--global-text-color);
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.event-section h2 i {
-  color: var(--global-theme-color);
-  font-size: 0.9rem;
-}
-
-.event-speaker {
-  padding: 1rem;
-  background: var(--global-bg-color-secondary, rgba(0,0,0,0.02));
-  border-radius: 8px;
-  border-left: 3px solid var(--global-theme-color);
-}
-
-.speaker-affiliation {
-  color: var(--global-text-color-light);
-  font-size: 0.9rem;
-}
-
-.event-speakers-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.event-speakers-list li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--global-divider-color);
-}
-
-.event-speakers-list li:last-child {
-  border-bottom: none;
-}
-
-.event-abstract {
-  padding: 1.5rem;
-  background: var(--global-bg-color-secondary, rgba(0,0,0,0.02));
-  border-radius: 8px;
-  line-height: 1.7;
-}
-
-.event-content {
-  line-height: 1.7;
-}
-
-@media (max-width: 576px) {
-  .event-meta {
-    flex-direction: column;
-    gap: 0.75rem;
+  .event-page {
+    max-width: 800px;
+    margin: 0 auto;
   }
-  
+
+  .event-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  .event-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    background: var(--global-theme-color);
+    color: white;
+    margin-bottom: 0.75rem;
+  }
+
+  .event-badge--talk {
+    background: #6366f1;
+  }
+  .event-badge--seminar {
+    background: #8b5cf6;
+  }
+  .event-badge--lecture {
+    background: #0ea5e9;
+  }
+  .event-badge--symposium {
+    background: #f59e0b;
+  }
+  .event-badge--sparc-course {
+    background: #10b981;
+  }
+  .event-badge--phd-defense,
+  .event-badge--phd-colloquium {
+    background: #ec4899;
+  }
+  .event-badge--short-course {
+    background: #14b8a6;
+  }
+
   .event-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--global-text-color);
   }
-}
+
+  .event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .event-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--global-text-color-light);
+    font-size: 0.95rem;
+  }
+
+  .event-meta-item i {
+    color: var(--global-theme-color);
+  }
+
+  .event-section {
+    margin-bottom: 2rem;
+  }
+
+  .event-section h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--global-text-color);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .event-section h2 i {
+    color: var(--global-theme-color);
+    font-size: 0.9rem;
+  }
+
+  .event-speaker {
+    padding: 1rem;
+    background: var(--global-bg-color-secondary, rgba(0, 0, 0, 0.02));
+    border-radius: 8px;
+    border-left: 3px solid var(--global-theme-color);
+  }
+
+  .speaker-affiliation {
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+  }
+
+  .event-speakers-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .event-speakers-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  .event-speakers-list li:last-child {
+    border-bottom: none;
+  }
+
+  .event-abstract {
+    padding: 1.5rem;
+    background: var(--global-bg-color-secondary, rgba(0, 0, 0, 0.02));
+    border-radius: 8px;
+    line-height: 1.7;
+  }
+
+  .event-content {
+    line-height: 1.7;
+  }
+
+  @media (max-width: 576px) {
+    .event-meta {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .event-title {
+      font-size: 1.5rem;
+    }
+  }
 </style>

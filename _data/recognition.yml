@@ -44,7 +44,7 @@
 - award: "Two Qualcomm Innovation Fellowships"
   year: "2023"
   category: "Award"
-  aliases: "nishanths, nareddyreddy"
+  aliases: "siddarth, nishanths, nareddyreddy"
   image: "assets/img/recognition/qualcomm/qualcomm-2023.jpeg"
 
 - award: "Prime Minister's Research Fellowship"
@@ -59,6 +59,18 @@
   aliases: "nareddyreddy"
   image: "assets/img/recognition/kartheek/kartheek-reddy.jpg"
 
+- award: "Qualcomm Innovation Fellowship"
+  year: "2021"
+  category: "Award"
+  aliases: "siddarth"
+  image: "assets/img/recognition/siddarth/QIF21.JPG"
+
+- award: "Qualcomm Innovation Fellowship"
+  year: "2022"
+  category: "Award"
+  aliases: "siddarth"
+  image: "assets/img/recognition/siddarth/QIF22.JPG"
+
 - award: "Prime Minister's Research Fellowship"
   year: "2019"
   category: "Award"
@@ -72,12 +84,12 @@
   image: "assets/img/recognition/abijith/Abijith.jpg"
 
 - award: "Robert Bosch Centre for Cyberphysical Systems PhD Fellowship"
-  year: "2019, 2021, 2022, 2023"
+  year: "2020, 2021"
   category: "Award"
   aliases: "siddarth"
   image: "assets/img/recognition/siddarth/sid.png"
 
-- award: "Microsoft India PhD Fellowship"
+- award: "Microsoft Research India PhD Fellowship"
   year: "2018"
   category: "Award"
   aliases: "siddarth"

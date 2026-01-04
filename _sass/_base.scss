@@ -2061,7 +2061,7 @@ html[data-theme="dark"] .blog-ready {
     gap: $spacing-lg;
     padding: $spacing-md 0;
     border-bottom: 1px solid var(--global-divider-color);
-    align-items: baseline;
+    align-items: flex-start;
 
     &:last-child {
       border-bottom: none;
@@ -2071,7 +2071,7 @@ html[data-theme="dark"] .blog-ready {
       padding-top: 0;
     }
 
-    // Announcement items from announcements.yml
+    // Announcement items
     &--announcement {
       background: linear-gradient(90deg, rgba(var(--global-theme-color-rgb), 0.08), transparent);
       margin: 0 calc(-1 * $spacing-md);
@@ -2091,19 +2091,77 @@ html[data-theme="dark"] .blog-ready {
     }
   }
 
-  .news-date {
+  .news-meta {
     flex-shrink: 0;
-    min-width: 100px;
+    min-width: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+
+  .news-date {
     font-size: 0.8rem;
     color: var(--global-text-color-light);
     text-transform: uppercase;
     letter-spacing: 0.03em;
   }
 
-  .news-content {
+  .news-badge {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    background: var(--global-theme-color);
+    color: white;
+    width: fit-content;
+
+    &--talk {
+      background: #6366f1;
+    }
+    &--seminar {
+      background: #8b5cf6;
+    }
+    &--lecture {
+      background: #0ea5e9;
+    }
+    &--symposium {
+      background: #f59e0b;
+    }
+    &--sparc-course {
+      background: #10b981;
+    }
+    &--phd-defense, &--phd-colloquium {
+      background: #ec4899;
+    }
+    &--short-course {
+      background: #14b8a6;
+    }
+  }
+
+  .news-body {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+
+  .news-content {
     font-size: 0.95rem;
     line-height: 1.5;
+  }
+
+  .news-speaker {
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+    font-style: italic;
+
+    i {
+      margin-right: 0.25rem;
+      color: var(--global-theme-color);
+    }
   }
 
   .news-title {
@@ -2146,7 +2204,14 @@ html[data-theme="dark"] .blog-ready {
   .news {
     .news-item {
       flex-direction: column;
-      gap: $spacing-xs;
+      gap: $spacing-sm;
+    }
+
+    .news-meta {
+      min-width: auto;
+      flex-direction: row;
+      align-items: center;
+      gap: $spacing-sm;
     }
 
     .news-date {

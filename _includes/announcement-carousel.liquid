@@ -2,19 +2,19 @@
   Announcement Carousel/Banner
   
   Displays important announcements on the homepage as a carousel/banner.
-  Configurable via _data/announcements.yml
+  Reads from news items with announce: true
 {%- endcomment -%}
 
-{%- assign announcements = site.data.announcements -%}
+{%- assign announcements = site.news | where: "announce", true | sort: "date" | reverse -%}
 
-{%- if announcements and announcements.enabled and announcements.items.size > 0 -%}
+{%- if announcements.size > 0 -%}
 <div class="announcement-carousel-wrapper">
   <div class="announcement-carousel">
     <div class="swiper announcement-swiper">
       <div class="swiper-wrapper">
-        {%- for item in announcements.items -%}
+        {%- for item in announcements -%}
         <div class="swiper-slide">
-          <a href="{{ item.link | relative_url }}" class="announcement-item">
+          <a href="{% if item.link %}{{ item.link | relative_url }}{% else %}{{ item.url | relative_url }}{% endif %}" class="announcement-item">
             <div class="announcement-content">
               {%- if item.icon -%}
               <div class="announcement-icon">
@@ -26,9 +26,10 @@
                 <span class="announcement-badge">{{ item.badge }}</span>
                 {%- endif -%}
                 <span class="announcement-title">{{ item.title }}</span>
-                {%- if item.date -%}
-                <span class="announcement-date">{{ item.date }}</span>
+                {%- if item.speaker -%}
+                <span class="announcement-speaker">{{ item.speaker }}</span>
                 {%- endif -%}
+                <span class="announcement-date">{{ item.date | date: "%B %d, %Y" }}</span>
               </div>
               <div class="announcement-arrow">
                 <i class="fas fa-arrow-right"></i>
@@ -38,7 +39,7 @@
         </div>
         {%- endfor -%}
       </div>
-      {%- if announcements.items.size > 1 -%}
+      {%- if announcements.size > 1 -%}
       <div class="swiper-pagination announcement-pagination"></div>
       {%- endif -%}
     </div>
@@ -118,6 +119,13 @@
   font-size: 0.85rem;
   opacity: 0.9;
   color: rgba(255, 255, 255, 0.9);
+}
+
+.announcement-speaker {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
 }
 
 .announcement-arrow {

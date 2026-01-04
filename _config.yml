@@ -202,6 +202,9 @@ collections:
   news:
     output: true
     permalink: /news/:path/
+  talks:
+    output: true
+    permalink: /talks/:path/
   articles:
     output: true
     permalink: /articles/:path/

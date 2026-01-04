@@ -13,15 +13,28 @@ children:
     permalink: /talks/organized/
 ---
 
-# Talks
-
-This section showcases the invited talks and presentations by Prof. Chandra Sekhar Seelamantula at various premier academic and professional forums worldwide.
-
-## Overview
-
-- **Talks Invited**: Presentations at conferences, workshops, and institutions where Prof. Seelamantula was invited to speak
-- **Talks Delivered**: Invited talks organized by the Spectrum Lab team, hosting distinguished speakers
-
----
-
-Use the dropdown menu above to explore the talk categories.
+<div class="talks-landing">
+  <div class="talks-intro">
+    <p>Explore invited talks and presentations by Prof. Chandra Sekhar Seelamantula and the Spectrum Lab team.</p>
+  </div>
+  
+  <div class="talks-categories">
+    <a href="/talks/organized/" class="talk-category-card">
+      <div class="card-icon">
+        <i class="fas fa-users"></i>
+      </div>
+      <h2>Talks Organized</h2>
+      <p>Invited talks hosted by Spectrum Lab featuring distinguished speakers from academia and industry</p>
+      <span class="card-action">View Talks <i class="fas fa-arrow-right"></i></span>
+    </a>
+    
+    <a href="/talks/delivered/" class="talk-category-card">
+      <div class="card-icon">
+        <i class="fas fa-microphone-alt"></i>
+      </div>
+      <h2>Talks Delivered</h2>
+      <p>Presentations by Prof. Seelamantula at conferences, workshops, and institutions worldwide</p>
+      <span class="card-action">View Talks <i class="fas fa-arrow-right"></i></span>
+    </a>
+  </div>
+</div>

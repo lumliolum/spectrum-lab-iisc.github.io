@@ -25,6 +25,8 @@ children:
     permalink: /people/research-associates/
   - title: Project Associates
     permalink: /people/project-associates/
+  - title: Interns
+    permalink: /people/interns/
   - title: divider
   - title: Post Doc
     permalink: /people/post-doc/

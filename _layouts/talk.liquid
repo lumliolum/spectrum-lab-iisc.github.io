@@ -1,0 +1,178 @@
+---
+layout: default
+---
+
+<div class="talk-page">
+  <header class="talk-header">
+    {% if page.badge %}
+      <span class="talk-badge talk-badge--{{ page.badge | downcase | replace: ' ', '-' }}">{{ page.badge }}</span>
+    {% elsif page.type %}
+      <span class="talk-badge talk-badge--{{ page.type | downcase | replace: ' ', '-' }}">{{ page.type }}</span>
+    {% endif %}
+    <h1 class="talk-title">{{ page.title }}</h1>
+    
+    <div class="talk-meta">
+      <div class="talk-meta-item">
+        <i class="fas fa-calendar-alt"></i>
+        <span>{{ page.date | date: '%B %d, %Y' }}</span>
+      </div>
+      {% if page.time %}
+      <div class="talk-meta-item">
+        <i class="fas fa-clock"></i>
+        <span>{{ page.time }}</span>
+      </div>
+      {% endif %}
+      {% if page.venue %}
+      <div class="talk-meta-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>{{ page.venue }}</span>
+      </div>
+      {% endif %}
+    </div>
+
+    {% if page.keywords %}
+    <div class="talk-keywords">
+      {% for keyword in page.keywords %}
+        <span class="talk-keyword">{{ keyword }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  {% if page.speaker %}
+  <section class="talk-section">
+    <h2><i class="fas fa-user-tie"></i> Speaker</h2>
+    <div class="talk-speaker-card">
+      <strong>{{ page.speaker }}</strong>
+      {% if page.speaker_affiliation %}
+        <br><span class="speaker-affiliation">{{ page.speaker_affiliation }}</span>
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.candidate %}
+  <section class="talk-section">
+    <h2><i class="fas fa-user-graduate"></i> Candidate</h2>
+    <div class="talk-speaker-card">
+      <strong>{{ page.candidate }}</strong>
+      {% if page.supervisor %}
+        <br><span class="speaker-affiliation">Supervisor: {{ page.supervisor }}</span>
+      {% endif %}
+      {% if page.examiner %}
+        <br><span class="speaker-affiliation">Examiner: {{ page.examiner }}</span>
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.speakers %}
+  <section class="talk-section">
+    <h2><i class="fas fa-users"></i> Speakers</h2>
+    <ul class="talk-speakers-list">
+      {% for spk in page.speakers %}
+        <li>{{ spk }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if page.instructors %}
+  <section class="talk-section">
+    <h2><i class="fas fa-chalkboard-teacher"></i> Instructors</h2>
+    <ul class="talk-speakers-list">
+      {% for inst in page.instructors %}
+        <li>{{ inst }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if page.host or page.hosts or page.co_host %}
+  <section class="talk-section">
+    <h2><i class="fas fa-user-friends"></i> Host{% if page.hosts or page.co_host %}s{% endif %}</h2>
+    <p>
+      {% if page.host %}{{ page.host }}{% endif %}
+      {% if page.hosts %}{{ page.hosts }}{% endif %}
+      {% if page.co_host %}<br>Co-host: {{ page.co_host }}{% endif %}
+    </p>
+  </section>
+  {% endif %}
+
+  {% if page.abstract %}
+  <section class="talk-section">
+    <h2><i class="fas fa-file-alt"></i> Abstract</h2>
+    <div class="talk-abstract">
+      {{ page.abstract | markdownify }}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.course_description %}
+  <section class="talk-section">
+    <h2><i class="fas fa-book-open"></i> Course Description</h2>
+    <div class="talk-abstract">
+      {{ page.course_description | markdownify }}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.course_goals %}
+  <section class="talk-section">
+    <h2><i class="fas fa-bullseye"></i> Course Goals</h2>
+    <div class="talk-abstract">
+      {{ page.course_goals | markdownify }}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.speaker_bio %}
+  <section class="talk-section">
+    <h2><i class="fas fa-info-circle"></i> About the Speaker</h2>
+    <div class="talk-bio">
+      {{ page.speaker_bio | markdownify }}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.candidate_bio %}
+  <section class="talk-section">
+    <h2><i class="fas fa-info-circle"></i> About the Candidate</h2>
+    <div class="talk-bio">
+      {{ page.candidate_bio | markdownify }}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.references %}
+  <section class="talk-section">
+    <h2><i class="fas fa-book"></i> References</h2>
+    <div class="talk-references">
+      {{ page.references | markdownify }}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.content != blank %}
+  <section class="talk-section">
+    <div class="talk-content">
+      {{ content }}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.registration_link %}
+  <section class="talk-section">
+    <a href="{{ page.registration_link }}" class="btn btn-primary" target="_blank">
+      <i class="fas fa-user-plus"></i> Register
+    </a>
+  </section>
+  {% endif %}
+
+  <footer class="talk-footer">
+    <a href="/talks/organized/" class="btn btn-outline-primary"><i class="fas fa-arrow-left"></i> Back to Talks Organized</a>
+    {% if page.category == "delivered" %}
+    <a href="/talks/delivered/" class="btn btn-outline-primary"><i class="fas fa-arrow-left"></i> Back to Talks Delivered</a>
+    {% endif %}
+  </footer>
+</div>

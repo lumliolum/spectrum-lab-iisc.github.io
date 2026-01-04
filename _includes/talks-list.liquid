@@ -1,0 +1,63 @@
+{%- comment -%}
+  Talks list include
+  Usage: {% include talks-list.liquid category="organized" %}
+  Parameters:
+    - category: "organized" or "delivered"
+{%- endcomment -%}
+
+{%- assign talk_category = include.category | default: "organized" -%}
+
+<div class="talks-list-page">
+  {%- assign talks = site.talks | where: "category", talk_category | sort: "date" | reverse -%}
+  {%- assign talks_by_year = talks | group_by_exp: "talk", "talk.date | date: '%Y'" -%}
+  
+  {%- for year_group in talks_by_year -%}
+  <section class="talks-year-section">
+    <h2 class="year-header">{{ year_group.name }}</h2>
+    <div class="talks-grid">
+      {%- for talk in year_group.items -%}
+      <article class="talk-card">
+        <div class="talk-card-header">
+          {%- if talk.type -%}
+          <span class="talk-type-badge talk-type-badge--{{ talk.type | downcase | replace: ' ', '-' }}">{{ talk.type }}</span>
+          {%- endif -%}
+          <time class="talk-date">{{ talk.date | date: "%B %d, %Y" }}</time>
+        </div>
+        <h3 class="talk-card-title">
+          <a href="{{ talk.url | relative_url }}">{{ talk.title }}</a>
+        </h3>
+        {%- if talk.speaker -%}
+        <div class="talk-speaker">
+          <i class="fas fa-user-tie"></i>
+          <span>{{ talk.speaker }}</span>
+          {%- if talk.speaker_affiliation -%}
+          <span class="speaker-affiliation">{{ talk.speaker_affiliation }}</span>
+          {%- endif -%}
+        </div>
+        {%- elsif talk.candidate -%}
+        <div class="talk-speaker">
+          <i class="fas fa-user-graduate"></i>
+          <span>{{ talk.candidate }}</span>
+        </div>
+        {%- elsif talk.host -%}
+        <div class="talk-host">
+          <i class="fas fa-user-friends"></i>
+          <span>Host: {{ talk.host }}</span>
+        </div>
+        {%- endif -%}
+        {%- if talk.keywords -%}
+        <div class="talk-keywords">
+          {%- for keyword in talk.keywords limit: 4 -%}
+          <span class="keyword-tag">{{ keyword }}</span>
+          {%- endfor -%}
+        </div>
+        {%- endif -%}
+        <div class="talk-card-footer">
+          <span class="talk-venue"><i class="fas fa-map-marker-alt"></i> {{ talk.venue | truncate: 40 }}</span>
+        </div>
+      </article>
+      {%- endfor -%}
+    </div>
+  </section>
+  {%- endfor -%}
+</div>

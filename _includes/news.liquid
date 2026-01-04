@@ -7,7 +7,7 @@
         style="max-height: 400px; overflow-y: auto;"
       {% endif %}
     >
-      {% assign news = site.news | reverse %}
+      {% assign news = site.news | sort: "date" | reverse %}
       {% if include.limit and page.announcements.limit %}
         {% assign news_limit = page.announcements.limit %}
       {% else %}
@@ -15,41 +15,39 @@
       {% endif %}
       
       <ul class="news-items">
-        {%- comment -%} Show announcements from announcements.yml that have show_in_news: true {%- endcomment -%}
-        {% if site.data.announcements.enabled and site.data.announcements.items %}
-          {% for item in site.data.announcements.items %}
-            {% if item.show_in_news %}
-              <li class="news-item news-item--announcement">
-                <span class="news-date">{{ item.posted_date | date: '%b %d, %Y' }}</span>
-                <span class="news-content">
+        {% for item in news limit: news_limit %}
+          <li class="news-item{% if item.announce %} news-item--announcement{% endif %}">
+            <div class="news-meta">
+              <span class="news-date">{{ item.date | date: '%b %d, %Y' }}</span>
+              {% if item.badge %}
+                <span class="news-badge news-badge--{{ item.badge | downcase | replace: ' ', '-' }}">{{ item.badge }}</span>
+              {% endif %}
+            </div>
+            <div class="news-body">
+              <div class="news-content">
+                {% if item.inline %}
+                  {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                {% else %}
                   {% if item.link %}
                     <a class="news-title" href="{{ item.link | relative_url }}">{{ item.title }}</a>
                   {% else %}
-                    {{ item.title }}
+                    <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
                   {% endif %}
-                </span>
-              </li>
-            {% endif %}
-          {% endfor %}
-        {% endif %}
-        
-        {% for item in news limit: news_limit %}
-          <li class="news-item">
-            <span class="news-date">{{ item.date | date: '%b %d, %Y' }}</span>
-            <span class="news-content">
-              {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-              {% else %}
-                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {% endif %}
+              </div>
+              {% if item.speaker %}
+                <div class="news-speaker">
+                  <i class="fas fa-user-tie"></i> {{ item.speaker }}
+                </div>
               {% endif %}
-            </span>
+            </div>
           </li>
         {% endfor %}
       </ul>
       
       {% if include.limit and page.announcements.scrollable and news_size > 3 %}
         <div class="news-more">
-          <a href="{{ '/news/' | relative_url }}">View all announcements →</a>
+          <a href="{{ '/news/' | relative_url }}">View all news →</a>
         </div>
       {% endif %}
     </div>

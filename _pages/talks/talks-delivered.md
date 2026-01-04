@@ -1,8 +1,9 @@
 ---
-layout: activities
+layout: page
 permalink: /talks/delivered/
 title: Talks Delivered
-description: A selected list of invited talks delivered at various premier forums
+description: Research talks delivered by Prof. Seelamantula and lab members
 nav: false
-activity_type: talks_delivered
 ---
+
+{% include talks-list.liquid category="delivered" %}

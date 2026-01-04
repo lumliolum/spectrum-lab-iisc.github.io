@@ -1,4 +1,38 @@
 ---
+aithal:
+- firstname:
+  - P.Shishir
+  - P.
+  url: "/people/alumni/interns/2023/p-shishir-aithal/"
+singampalli:
+- firstname:
+  - Asrith
+  - A.
+  url: "/people/alumni/interns/2025/asrith-singampalli/"
+thummalapalli:
+- firstname:
+  - Krishiv
+  - K.
+  url: "/people/alumni/interns/2025/krishiv-thummalapalli/"
+nilesh kolanbe:
+- firstname:
+  - Soham
+  - S.
+  url: "/people/alumni/interns/2025/soham-nilesh-kolanbe/"
+shetty:
+- firstname:
+  - Vidhyotha
+  - V.
+  url: "/people/alumni/interns/2025/vidhyotha-shetty/"
+- firstname:
+  - Nishanth
+  - N.
+  url: "/people/current/phd-students/nishanth_shetty/"
+kumar pediredla:
+- firstname:
+  - Adithya
+  - A.
+  url: "/people/alumni/mtech-graduates/2011/adithya-kumar-pediredla/"
 pediredla:
 - firstname:
   - Aditya Kumar
@@ -114,6 +148,11 @@ bipinchandra:
   - V.D.
   - V.
   url: "/people/alumni/mtech-graduates/2018/dhaval_kumar_vaidya/"
+dhavalkumar bipinchandra:
+- firstname:
+  - Vaidya
+  - V.
+  url: "/people/alumni/mtech-graduates/2018/vaidya-dhavalkumar-bipinchandra/"
 bathala:
 - firstname:
   - BanuPrasad
@@ -165,18 +204,21 @@ patidar:
   - Abhay
   - A.
   url: "/people/alumni/mtech-graduates/2025/abhay_patidar/"
+dubey:
+- firstname:
+  - Harshit
+  - H.
+  url: "/people/alumni/mtech-graduates/2025/harshit-dubey/"
+mani kanta krishna kumar:
+- firstname:
+  - Kolavennu
+  - K.
+  url: "/people/alumni/mtech-graduates/2025/kolavennu-mani-kanta-krishna-kumar/"
 naithani:
 - firstname:
   - Shivashish
   - S.
   url: "/people/alumni/mtech-graduates/2025/shivashish_naithani/"
-krishnan:
-- firstname:
-  - Sunder Ram
-  - S. R.
-  - S.R.
-  - S.
-  url: "/people/alumni/mtech-research-graduates/2011/sunder-ram/"
 kishan:
 - firstname:
   - Harini
@@ -187,6 +229,11 @@ menon:
   - Sreeram
   - S.
   url: "/people/alumni/mtech-research-graduates/2013/sreeram-menon/"
+ram krishnan:
+- firstname:
+  - Sunder
+  - S.
+  url: "/people/alumni/mtech-research-graduates/2013/sunder-ram-krishnan/"
 venkitaraman:
 - firstname:
   - Arun
@@ -259,13 +306,16 @@ dhiman:
   - J.K.
   - J.
   url: "/people/alumni/phd-graduates/2021/jitendra_dhiman/"
-pokala:
+kumar pokala:
 - firstname:
-  - Praveen Kumar
-  - P. K.
-  - P.K.
+  - Praveen
   - P.
-  url: "/people/alumni/phd-graduates/2021/praveen_pokala/"
+  url: "/people/alumni/phd-graduates/2021/praveen-kumar-pokala/"
+s:
+- firstname:
+  - Arthi
+  - A.
+  url: "/people/alumni/phd-graduates/2023/arthi-s/"
 jawali:
 - firstname:
   - Dhruv
@@ -278,11 +328,9 @@ asokan:
   url: "/people/alumni/phd-graduates/2023/siddarth_asokan/"
 nareddy:
 - firstname:
-  - Kartheek Kumar Reddy
-  - K. K. R.
-  - K.K.R.
+  - Kartheek
   - K.
-  url: "/people/alumni/phd-graduates/2024/kartheek_reddy/"
+  url: "/people/alumni/phd-graduates/2024/kartheek-nareddy/"
 bhagat:
 - firstname:
   - Nikunj
@@ -393,11 +441,6 @@ shanker:
   - Gouri
   - G.
   url: "/people/current/phd-students/gouri_shanker/"
-shetty:
-- firstname:
-  - Nishanth
-  - N.
-  url: "/people/current/phd-students/nishanth_shetty/"
 thomas:
 - firstname:
   - Nygel George
@@ -405,6 +448,11 @@ thomas:
   - N.G.
   - N.
   url: "/people/current/phd-students/nygel-thomas/"
+shingare:
+- firstname:
+  - Yash
+  - Y.
+  url: "/people/current/project-associates/Yash_Shingare/"
 balasubramanian:
 - firstname:
   - Dhanasekaran
@@ -425,8 +473,3 @@ haritz:
   - Pramath
   - P.
   url: "/people/current/project-associates/pramath_haritz/"
-shingare:
-- firstname:
-  - Yash
-  - Y.
-  url: "/people/current/project-associates/yash_shingare/"

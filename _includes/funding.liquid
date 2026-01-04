@@ -3,7 +3,7 @@
     <!-- Swiper -->
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        {%- assign sorted_funding = site.data.funding | sort: 'name' %}
+        {%- assign sorted_funding = site.data.funding.funders | sort: 'name' %}
         {%- for funder in sorted_funding -%}
           <div class="swiper-slide d-flex justify-content-center align-items-center">
             <a href="{{ funder.url }}">

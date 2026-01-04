@@ -1,0 +1,2312 @@
+CHANDRA SEKHAR SEELAMANTULA
+     Department of Electrical Engineering
+               Indian Institute of Science
+
+                     Bangalore - 560012
+                               Chandra Sekhar Seelamantula
+
+
+Name of the faculty member: Chandra Sekhar Seelamantula
+Designation: Professor
+Department: Electrical Engineering
+
+Date of birth: August 5, 1976
+Nationality: Indian
+Languages: RWS: Telugu, Hindi, English, Kannada; S: Tamil
+(R: read; W: write; S: speak)
+
+
+1. Education
+
+
+          Degree                   University/Institution                 Class obtained/Distinction
+
+                            Osmania University College of        First rank holder and recipient of The
+
+B.E. (1995-1999)            Engineering, Department of           Outstanding Student award,
+                            Electronics and Communication        Prof. K. K. Nair Gold Medal, and Best Thesis
+                            Engineering (ECE), Hyderabad         Award
+                            Indian Institute of Science,
+Ph.D. (1999-2005)           Bangalore, Department of Electrical PhD Fellowship from IBM India Research Lab
+                            Communication Engineering (ECE)
+
+
+2. Professional Career
+
+        From                   To                                      Designation
+     June 1, 2020         May 31, 2024          Chair, GATE-JAM Office, IISc; Organizing Chair (GATE 2024)
+
+ September 27, 2020           date                   Professor, Department of Electrical Engineering
+ September 27, 2014 September 26, 2020          Associate Professor, Department of Electrical Engineering
+
+    July 20, 2009     September 26, 2014        Assistant Professor, Department of Electrical Engineering
+      July 2012             July 2021                    Adjunct Faculty, Centre for Neuroscience
+
+                                                  Postdoctoral fellow, Biomedical Imaging Group, Ecole
+     April 1, 2006        July 15, 2009             polytechnique fédérale de Lausanne, Switzerland
+
+   October 1, 2005       March 15, 2006       Technology Consultant, M/s. Esqube Communication Solutions
+                                                   Private Limited, Bangalore (an IISc startup company)
+
+1. Honors and Professional Recognition
+
+
+Awards
+  1. Outstanding Editorial Board Member Award, IEEE Transactions on Image Processing, 2022.
+
+  2. Recipient of Grand Challenges Exploration — India (Round 5) research award funded by Bill and Melinda
+     Gates Foundation and Biotechnology Industrial Research Assistance Council (BIRAC), Government of India,
+     for the project entitled, “AI for Wireless Capsule Endoscopy.”
+  3. Qualcomm Innovation Fellowship awards — 9 awards since 2019, co-recipient with PhD students.
+
+  4. Digital Health Prize at the National Bio-Entrepreneurship Competition 2018 organized by Biotechnology
+     Industrial Research Assistance Council (BIRAC) and Centre for Cellular and Molecular Platforms (C-CAMP)
+     under the auspices of the Department of Biotechnology (DBT).
+  5. Top 10% Best Paper Award at IEEE International Conference on Image Processing 2014.
+
+  6. Prof. Priti Shankar Teaching Award, 2013, conferred by the Indian Institute of Science, Bangalore.
+
+Professional Recognition
+
+  7. Elected to IEEE Bio-imaging and Signal Processing Technical Committee in June 2025.
+  8. Elected to Steering Committee, IEEE International Symposium on Biomedical Imaging (ISBI) in June 2025,
+     serving as IEEE Signal Processing Society (SPS) Liaison.
+  9. Elected to IEEE Technical Committee on Computational Imaging, 2020 onward (serving second term).
+
+                                                                                                             2
+  10. Member, Awards Board, IEEE Technical Committee on Computational Imaging (serving second term).
+
+  11. Senior Member, IEEE since October 2012.
+  12. Expert member of Department of Biotechnology (DBT) and Technology Development Board (TDB) panels
+      for evaluating proposals and on-site visits, reviewer and PAC-EECE member, Science and Engineering
+
+      Research Board.
+
+Editorial Roles
+  13. Editorial Board Member, Nature Scientiﬁc Data, 2024 onward.
+
+  14. Senior Area Editor, IEEE Transactions on Image Processing, March 2022 onward.
+  15. Associate Editor, IEEE Transactions on Image Processing, March 2018 to March 2020.
+  16. Senior Area Editor, IEEE Signal Processing Letters, May 2017 to May 2021 (served two terms).
+
+  17. Associate Editor, IEEE Signal Processing Letters (2013-2017; served two terms).
+  18. Associate Editor, Society for Photonics and Industrial Electronics (SPIE) Journal of Electronic Imaging
+      (2014-2018; served two terms).
+
+
+Professional Service
+  19. Organizing Chair, GATE 2024; Chair, GATE-JAM Office (2022-2024),Vice-Chair (2020-2022).
+  20. Tutorials Co-Chair, IEEE International Symposium on Biomedical Imaging (ISBI) 2020.
+
+  21. General Chair, International Conference on Signal Processing and Communications (SPCOM) 2020.
+  22. Organizing Committee, IEEE International Conference on Acoustics, Speech, and Signal Processing
+      (ICASSP) 2025, April 6-11, 2025, Hyderabad. This was the ﬁrst-ever ICASSP held in India and also the
+
+      Golden Jubilee edition. and I am a part of the committee that bid for hosting ICASSP in India and also part
+      of the Organizing Committee.
+  23. Publicity Chair and Organizing Committee member, Interspeech 2018, a premier international conference
+      in the area of speech processing held under the auspices of International Speech Communication
+
+      Association (ISCA). I was a part of the committee that bid for Interspeech 2018 in India. Interspeech was
+      held in India for the ﬁrst time ever in 2018.
+  24. Chair, IEEE Signal Processing Society Bangalore Chapter (2018-2021); Vice-Chair (2014-2018) and
+      Treasurer (2010-2013).
+
+  25. Session Chair at several editions of Interspeech, IEEE International Symposium on Biomedical Imaging
+      (ISBI), IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), IEEE
+      International Conference on Image Processing (ICIP), Sampling Theory and Applications (SampTA), etc.
+
+  26. Affiliate member, IEEE Signal Processing Theory and Methods Technical Committee, IEEE Bio-imaging and
+      Signal Processing Technical Committee.
+  27. Organizing Committee member of the Brain, Computation, and Learning (BCL) Workshop series at IISc,
+      starting from 2017, then in 2018, 2019, and again in 2023. Member of the Brain, Computation, and Data
+
+      (BCD) Group at IISc.
+  28. Anchor advisor for Giftolexia, a C-CAMP start-up company under Karnataka Start-up Advancement
+      Program (K-SAP BIO 50), and Scientiﬁc Advisor for Infyuva, (a former PhD’s startup), on AI Based
+
+      Healthcare Diagnostics, at Manipal University Technology Business Incubator (MUTBI).
+
+
+2. Research Expertise and Selected Publications in the Past Five Years
+
+My research expertise lies in Computational Imaging, Generative AI, and Artiﬁcial Intelligence/Machine Learning
+with primary focus on Healthcare applications and emphasis on explainability and interpretability. Over the past
+decade, our research has focused on advancing the state of the art and breaking fundamental limits in these
+areas, as demonstrated by the publication record. My major strength is in encapsulating and formulating real-
+
+world problems arising in various contexts in the ﬁelds of biomedical imaging, neuroscience, neuroimaging,
+speech processing, computer vision, etc. and developing practically viable strategies and computationally
+efficient algorithms supported on a strong and sound mathematical formulation. This core competency has
+enabled me to seamlessly navigate across various application areas. As evidenced by the publications in
+premier venues, we have developed original formalisms and techniques in diverse problem settings.
+
+The following is a selected list of international peer-reviewed publications in the past ﬁve years. Each
+
+publication is accompanied by a brief description of the contribution and the impact of the publication.
+
+
+
+                                                                                                               3
+1. M. Bakshi and C. S. Seelamantula, “EfficientNet-B1 based diabetic retinoapthy detection from ultra-wideﬁeld
+    fundus images,” Proceedings of Medical Image Computing and Computer-Assisted Intervention (MICCAI)
+    Challenge on Ultra-wideﬁeld Fundus Imaging for Diabetic Retinopaty, Lecture Notes in Computer Science,
+    Springer, pp. 135-143, October 2024.
+    — We address the MICCAI challenge of optimizing the performance of a detector for diabetic retinopathy (DR)
+
+    from ultra-wideﬁeld fundus images, focusing on balancing model accuracy and latency. This MICCAI
+    challenge prioritized “area under the receiver operating characteristic curve” (AUROC) and central
+    processing unit (CPU) time for the detection problem. We proposed EfficientNet-B1 for solving this problem
+    and it gave a high AUROC value of 0.9055 on the UWF4DR test dataset while maintaining a minimal forward
+    pass time.
+
+
+2. Kartheek K. Nareddy, A. J. Kamath, and C. S. Seelamantula, “Tight-frame-like analysis-sparse recovery using
+    nontight sensing matrices,” vol. 17, iss. 3, SIAM Journal on Imaging Sciences, 2024. (IF: 2.1)
+    — Random Gaussian sensing matrices satisfy the restricted isometry property, which is crucial for solving
+    the sparse recovery problem using convex optimization techniques. However,  tight-frame sensing
+    matrices result in minimum mean-squared-error recovery given oracle knowledge of the support of the
+
+    sparse vector. If the sensing matrix is not tight, could one achieve the recovery performance assured by a
+    tight frame by suitably designing the recovery strategy?  This paper presents the theory and algorithms for
+    performing successful sparse recovery using nontight sensing matrices.
+
+3. R. Mangalwedhekar, N. Singh N., C. S. Thakur, C. S. Seelamantula, M. Jose, D. Nair, (2022), “Achieving
+    nanoscale precision using Neuromorphic localization microscopy,” Nature Nanotechnology. (IF: 40.523)
+
+    — In this breakthrough invention, we showed how nanoscale ﬂuorescent objects can be imaged below the
+    diffraction limit with a precision below 20 nm. This is the ﬁrst successful attempt that combines
+    neuromorphic detection with computational deep learning approaches for localization and tracking with
+    nanoscale precision and millisecond temporal resolution.
+
+4. S. Asokan and C. S. Seelamantula, "Euler-Lagrange analysis of generative adversarial networks," Journal of
+
+    Machine Learning Research (JMLR), vol. 24, pp. 1-100, 2023. (IF: 5.177)
+    — In this mammoth 100-page publication, we rigorously investigated the functioning of generative
+    adversarial networks from a variational standpoint and addressed the optimality of the discriminator. We
+    established for the ﬁrst time that the optimal discriminator solves the Poisson partial differential equation
+    (PDE), and solved the PDE in very high-dimensional spaces (typically, a million dimensions) using Fourier
+    representations.
+
+
+5. S. Asokan and C. S. Seelamantula, “Spider GAN — Leveraging friendly neighbors to accelerate GAN training,”
+    Proceedings of IEEE Computer Vision and Pattern Recognition (CVPR), 2023. (h5-index: 389; IF: 23.46)
+    — In this paper, we introduced a new generative model that transforms one dataset to another using a GAN
+    instead of starting with random Gaussian noise. We also introduced a new distance metric to quantify
+    proximity between datasets. The proposed generative model achieves accelerated convergence by an order
+
+    of magnitude and produces state-of-the-art performance scores.
+
+6. S. Mache, P. K. Pokala, K. Rajendran, and C. S. Seelamantula, "Introducing nonuniform sparse proximal
+    averaging network for seismic reﬂectivity inversion," IEEE Transactions on Computational Imaging, vol. 9,
+    pp. 475-489, May 2023. (IF: 4.99)
+    — This publication is the ﬁrst-of-its-kind successful attempt at using a sparsity driven, deep learning
+
+    approach for computationally solving the inverse problem of seismic reﬂectivity imaging. Performance
+    validation on Marmousi2 simulated model and 3-D real ﬁeld measurements from the Penobscot 3D survey
+    off the coast of Nova Scotia, Canada show that the proposed approaches give superior accuracy with 600x
+    faster inference than the state-of-the-art optimization algorithms, making it ideal for real-time seismic
+    signal processing.
+
+
+7. J. R. Harish Kumar, C. S. Seelamantula, J. H. Gagan, Y. S. Kamath, N. I. R. Kuzhuppilly, U. Vivekanand, P. Gupta,
+    and S. Patil, “Cháksu: A Glaucoma-speciﬁc fundus image database,” Nature Scientiﬁc Data. (IF: 8.9)
+    — This paper is part of a large-scale translational effort in the context of “AI for Eyecare.” To make glaucoma
+    diagnostics accurate and customized to the Indian population, we created an Indian ethnicity color fundus
+    imaging database named Chákṣu comprising 1345 images acquired using three commercially available
+
+    devices. Chákṣu is the largest Indian-ethnicity-speciﬁc fundus image database with expert annotations and
+    would aid in the development of AI based glaucoma diagnostics.
+
+
+
+
+                                                                                                                4
+8. S. Mache, A. Chatterjee, K. Rajendran, and C. S. Seelamantula, “Hilbert-Huang transform and energy rate
+   functions for earthquake source characterization — A study from the Japan Trench,” Bulletin of the
+   Seismological Society of America, vol. 112 (6), pp. 2847–2858, 2022. (IF: 3.14)
+   — In this collaborative effort with leading earthscience researchers, we deployed powerful signal
+   processing tools to analyze earthquake energy release duration and frequency content. We introduced a
+
+   new, computationally efficient measure namely the “energy rate function” to quantify energy release. Based
+   on real data from six earthquakes, we showed a strong correlation between the proposed measure to the
+   benchmark moment rate function and source time function.
+
+9. P. K. Pokala, R. V. Hemadri, and C. S. Seelamantula, “Iteratively reweighted minimax-concave penalty
+   minimization for accurate low-rank plus sparse matrix decomposition,” IEEE Transactions on Pattern
+
+   Analysis and Machine Intelligence (PAMI), 2021, doi: 10.1109/TPAMI.2021.3122259. (IF: 24.314)
+   — In this high-impact publication, we introduced a new nonconvex penalty, namely the minimax concave
+   penalty for performing low-rank and sparse matrix decomposition. We presented computationally efficient
+   algorithms with provable convergence guarantees and demonstrated applications to important computer
+   vision problems.
+
+
+10.J. Sadasivan, J. K. Dhiman, and C. S. Seelamantula, “Musical noise suppression using a low-rank and sparse
+   matrix decomposition approach,” Speech Communication, vol. 125, pp. 41-52, 2020. (IF: 2.723)
+   — This paper demonstrates how the problem of musical noise suppression in speech enhancement
+   techniques can be effectively solved using a low-rank and sparse matrix decomposition technique. This
+   research is an incredible illustration of the cross-fertilization of ideas between image processing and
+
+   speech processing.
+
+11.S. Asokan and C. S. Seelamantula, “Teaching a GAN what not to learn,” Proceedings of Neural Information
+   Processing Systems (NeurIPS), 2020. (h5 index: 309)
+   — This paper builds a generative model based on what the famous Persian poet Rumi once said, “The art of
+   knowing is knowing what to ignore.” A GAN is trained not only on positive samples that it must model, but
+
+   also on negative samples that it must avoid. We showed that this new formulation of the generative model
+   accelerates the learning capability of the GAN.
+
+12.A. R. Mangalore, C. S. Seelamantula, and C. S. Thakur, "Neuromorphic fringe projection proﬁlometry," IEEE
+   Signal Processing Letters, vol. 27, pp. 1510-1514, 2020. (IF: 3.201)
+   — This is the ﬁrst paper to demonstrate fringe projection proﬁlometry using a neuromorphic vision sensor.
+   The sensors are asynchronous and event-driven and produce sparse measurements. In this paper, we
+
+   showed how accurate 3-D reconstruction may be performed using neuromorphic measurements.
+
+13.S. K. Shastri, S. Rudresh, R. Anand, S. Nagesh, C. S. Seelamantula, and A. K. Thittai, "Axial super-resolution in
+   ultrasound imaging with application to non-destructive evaluation," vol. 108, no. 106183, Ultrasonics,
+   December 2020. (IF: 4.062)
+   — In this paper, we presented a systematic approach for achieving axial super-resolution in ultrasound
+
+   imaging. We established the equivalence between ultrasound image reconstruction and sub-Nyquist
+   sampling and presented an efficient model-based method for achieving super-resolution reconstruction
+   three-fold below the theoretical resolution limit.
+
+14.A. Mahurkar and C. S. Seelamantula, "Minkowski-algebra-based super-sparse array design for
+   superresolution ultrasound imaging," IEEE Signal Processing Letters, vol. 27, pp. 1060-1064, 2020. (IF:
+
+   3.201)
+   —    This paper demonstrates how two sparse subarrays could be used for performing computationally
+   efficient convolutional beamforming without compromising on the beampattern and lateral resolution. The
+   tools from abstract Minkowski algebra are leveraged for design of the subarray. The technique offers a
+   signiﬁcant reduction in the number of array elements.
+
+
+15.S. Mukherjee and C. S. Seelamantula, "Quantization-aware phase retrieval," Special issue on Mathematical
+   Optics, Imaging, and Applications, International Journal of Wavelets, Multiresolution, and Information
+   Processing (Invited paper), 2020. (IF: 1.276)
+   — In this invited paper to a special issue, we addressed for the ﬁrst time the problem of reconstructing a
+   signal from the magnitude measurements alone, subject to the realistic constraint of quantization. We
+
+   developed a quantization-aware phase retrieval formalism and an efficient reconstruction algorithm for
+   signal reconstruction that gives about 5 to 6 dB higher reconstruction accuracy than the benchmark
+   techniques.
+
+
+                                                                                                              5
+16.J. R. Harish Kumar, C. S. Seelamantula, A. Mohan, R. Shetty, T. J. M. Berendschot, and C. A. B. Webers,
+    "Automatic analysis of normative retinal oximetry images," PLoS ONE, May 2020. (IF: 3.752)
+    — In this paper, we presented an automatic technique for the measurement of oxygen saturation in retinal
+    arterioles and venules using dual-wavelength retinal oximetry images. The technique is based on
+    segmenting an optic-disc-centered ring-shaped region of interest and subsequent analysis of the oxygen
+
+    saturation levels. The results exhibit high consistency with manual annotations across the dataset indicating
+    that the automated technique is an accurate alternative to the manual procedure.
+
+17.J. Sadasivan, S. Mukherjee, and C. S. Seelamantula, "Signal denoising using the minimum-probability-of-
+    error criterion," vol. 9, e3, APSIPA Transactions on Signal and Information Processing, Jan. 2020. (IF: 4.00)
+    — We considered signal denoising via transform-domain shrinkage based on a novel risk criterion called the
+
+    minimum probability of error (MPE), which measures the probability that the estimated parameter lies
+    outside an ε-neighborhood of the true value. The denoising performance of MPE turns out to be better than
+    that obtained using the minimum MSE-based approaches formulated within  Stein's unbiased risk
+    estimation (SURE) framework, especially in the low signal-to-noise ratio (SNR) regime.
+
+18.J. R. Harish Kumar, C. S. Seelamantula, Y. S. Kamath, and R. Jampala, "Rim-to-disc ratio outperforms cup-to-
+
+    disc ratio for glaucoma prescreening," Nature Scientiﬁc Reports, 9:7099, 2019. (IF: 4.997)
+    — In this trendsetting paper, we presented a novel and fully automated fundus image processing technique
+    for glaucoma prescreening based on the rim-to-disc ratio (RDR). We showed the inadequacy of using the
+    cup-to-disc ratio (CDR), which was a de facto metric up until this publication. The technique accurately
+    segments the optic disc and optic cup and then computes the RDR based on which it is possible to
+
+    differentiate a normal fundus from a moderate, or severely glaucomatous classes following the disc-
+    damage-likelihood scale (DDLS). This is the ﬁrst engineering attempt at using RDR and DDLS to perform
+    glaucoma severity assessment.
+
+19.J. Sadasivan, C. S. Seelamantula, N. R. Muraka, "Speech enhancement using a risk estimation approach,” vol.
+    116, pp. 12-29, Speech Communication, January 2020. (IF: 2.723)
+
+    — In this paper, we developed a risk estimation framework for speech enhancement, wherein we optimize
+    an unbiased estimate of the risk instead of the actual risk. Among the risk estimation-based techniques, the
+    quality of the denoised speech is higher and is quantiﬁed in terms of speech quality and subjective listening
+    scores for perceptual risk-based estimation techniques than the standard mean-square error techniques.
+
+20.H. Sundar, T. V. Sreenivas, and C. S. Seelamantula, “TDOA-based multiple source localization without
+    association ambiguity,” IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol. 26, no. 11,
+
+    pp. 1976-1990, November 2018. (IF: 4.364)
+    — Multiple source localization using time-differences of arrival (TDOAs) is challenging because of the
+    ambiguity involved in associating the TDOAs computed across microphone pairs to the sources. We showed
+    that the association ambiguity of the TDOAs can be effectively resolved using the inverse delay interval
+    region (IDIR), introduced in this paper. We showed that the direction-of-arrival error is within 2 degrees and
+
+    the spatial localization error is less than 30 cm for a speaker.
+
+21.B. A. Shenoy, S. Mulleti, and C. S. Seelamantula, “On 2-D Hilbert integral equations, generalized minimum-
+    phase signals, and phase retrieval,” IEEE Transactions on Signal Processing, vol. 66, no. 14, pp. 3906-3917,
+    July 15, 2018. (IF: 5.028)
+    — One-dimensional (1-D) causal signals admit Hilbert integral relations between the real and imaginary
+
+    parts of their Fourier spectra. For 1-D minimum-phase signals, the log-magnitude and phase spectra also
+    admit such Hilbert relations. Such results were not available in 2-D. In this paper, we extend these results to
+    2-D signals. We ﬁrst established the Hilbert integral equations for 2-D ﬁrst-quadrant signals. and partial
+    Hilbert transform relations between the real and imaginary parts of the spectrum. 
+
+22.S. Mukherjee and C. S. Seelamantula, “Phase retrieval from binary measurements,” IEEE Signal Processing
+
+    Letters, pp. 348-352, vol. 25, no. 3, March 2018. (IF: 3.201)
+    — We considered the novel problem of signal reconstruction from quadratic measurements that are binary
+    encoded. This publication is the ﬁrst to consider the effect of quantization in the context of phase retrieval.
+    Binary measurements are fast to acquire and inexpensive in terms of hardware. For signal reconstruction,
+    we employed a consistency criterion and developed a projected gradient-descent scheme with high
+
+    accuracy reconstruction.
+
+23.S. Rudresh, S. Nagesh, and C. S. Seelamantula, “Asymmetric pulse modeling for FRI sampling,” vol. 66, no. 8,
+    pp. 2027-2040, IEEE Transactions on Signal Processing, 2018. (IF: 5.028)
+
+
+                                                                                                                6
+   — We showed that among the class of unitary operators that are linear and invariant to translation and
+
+   scale, the fractional Hilbert (FrH) operator is unique for parametrically modeling pulse asymmetry. We
+   demonstrate how this key result could be used for sampling a pulse train with variable asymmetry. These
+   signals cannot be accommodated in the Shannon sampling framework and therefore, we develop an
+   alternative and high-performant sampling scheme.
+
+24.K. S. Chandran, C. S. Seelamantula, and S. Ray, “Duration analysis using matching pursuit algorithm reveals
+   longer bouts of gamma rhythm,” vol. 119, pp. 808-821, Journal of Neurophysiology, 2018. (IF: 2.714)
+
+   — Gamma oscillations (30–80 Hz) have been hypothesized to provide a temporal reference frame for
+   coordination of spiking activity. Several studies showed that gamma occurs in very short bursts. We
+   disproved those claims and provided a robust estimate of the duration. The median duration of gamma is
+   greater than 300 ms, much longer than previous estimates — this is a seminal ﬁnding in neuroscience.
+
+25.A. Bhowmik, S. Shit, and C. S. Seelamantula, “Training-free, single-image super-resolution using a dynamic
+   convolutional network,” IEEE Signal Processing Letters, vol. 25, no. 1, pp. 85-89, Jan. 2018. Featured in the
+
+   Top 10 popular articles of the journal for three consecutive months. (IF: 3.201)
+   — Our method relies on constructing a dynamic convolutional network (DCN) to learn the relation between
+   the consecutive scales of Gaussian and Laplacian pyramids, which is used to predict the detail at a ﬁner
+   scale, thus leading to super-resolution. The proposed DCN approach results in about 0.8 and 0.3 dB gain in
+   peak signal-to-noise ratio for 2× and 3× super-resolution, respectively.
+
+
+
+5. Glimpses of Translational Research Contributions
+
+- Co-founder, etherX.ai, an IISc startup (incubation in process),
+  together with Prof. Chetan Thakur from ESE, IISc. The objective
+
+  of this startup is to develop AI powered imaging solutions for
+  deployment on the edge. Our ﬁrst product in the portfolio is
+  SUSHRUT — a portable, handheld ultrasound imaging device
+  developed completely inhouse by our joint PhD student.
+
+- Scientiﬁc Advisor, Infyuva Tech Solutions Private Limited,
+  originally incubated in Manipal Universal Technology Business
+
+  Incubator (MUTBI), Manipal. This is the startup of my former
+  PhD student, Dr. Harish Kumar J.R., who is now a faculty
+  member at BITS Bangalore.
+
+- Six trial licenses of the Nayana glaucoma prescreening app
+  (TRL-8) developed by us were issued to Remidio Innovative
+  Solutions, a Bangalore based startup company, through
+  Intellectual Property office of IISc. The Nayana app was
+
+  demonstrated at the TechExpo organized at Indian Institute of
+  Technology (IIT) Delhi on August 4, 2019, under the auspices of
+  the IMPRINT India program.
+
+- A handheld fundus imaging device (TRL-7) was demonstrated
+  at the S20 summit held in IISc on February 25, 2023, as part of
+  the DeepTech Showcase. Honorable Minister of Finance Nirmala
+
+  Sitharaman was present at the DeepTech Showcase.
+
+- Scientiﬁc Advisor for Giftolexia, a C-CAMP Bangalore incubated
+  startup, which was selected by World Economic Forum to join
+  the TechPioneers Class of 2023.
+
+- Technology transfer to Carl Zeiss India (Bangalore) Private
+  Limited — on explainable AI based classiﬁcation system for
+
+  detection of retinal pathologies, and volumetric computation of
+  retinal ﬂuid accumulation (TRL-6).
+
+- Technology transfer to Boeing Data Analytics Division
+  (Bangalore) — on explainable AI based foreign object debris
+  detection (TRL-6).
+
+                                                                                                              7
+- Technology transfer to Centre for Development of Advanced
+  Computing (CDAC) Trivandrum on novel interpolation strategies
+  in the context of sofware deﬁned radio (TRL-7).
+
+- Showcased Glaucoma Pre-screening App at the National Bio-
+
+  Entrepreneurship Competition (NBEC) 2018 and won the Digital
+  Health Prize (picture on the right). NBEC is organized by Centre
+  for Cellular and Molecular Platforms (C-CAMP) jointly with
+  Department of Biotechnology’s Biotechnology Industrial
+  Research Assistance Council (BIRAC) Regional
+  Entrepreneurship Centre (BREC).
+
+- Creation of Chákṣu — an Indian ethnicity speciﬁc database for glaucoma diagnostics. This is the ﬁrst-of-its-
+  kind effort in the country where a large gold standard database speciﬁc to Indian population and glaucoma
+
+  disease has been created with the images annotated by ﬁve expert ophthalmologists.
+-
+  Spectrum Lab YouTube channel: Video demonstrations of our healthcare product portfolio.
+
+      -   ChákṣuAI: Last-Mile Vision Care Powered by AI
+      -   Lung segmentation in X-ray and CT images for Covid-19 diagnostics
+      -   Nayana: Glaucoma prescreening App for an Android phone (TRL-8)
+
+      -   Nayana: Glaucoma prescreening App for the iPhone (TRL-8)
+      -   Automated segmentation for Wireless Capsule Endoscopy
+      -
+          Spectrum Lab’s iCare platform
+      -   Automated Segmentation in Wireless Capsule Endoscopy
+      -   Artery/vein classiﬁcation from single wavelength retinal fundus images
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                         Artifacts suppressed
+
+
+
+
+
+
+
+
+                                                                                                              8
+6. Guidance of Students
+
+
+     Degree             Status                                        Distinctions
+Ph.D.            Awarded: 14           Two Ph.D.s received Prof. D. J. Badkas Medal for outstanding PhD thesis.
+
+                 In progress: 9        One of the medalists, Dr. Satish Mulleti, is an Assistant Professor at IIT
+                                       Bombay.
+                                       Another Ph.D. (Dr. Siddarth Asokan) received Prof. Satish Dhawan Award
+
+                                       and Institution of Engineers (India) award for outstanding doctoral
+                                       dissertation.
+                                       Two former Ph.D.s are running startups: Dr. Ravi Shenoy: Lightmetrics
+                                       and Dr. Harish Kumar: Infyuva
+
+                                       SPCOM Doctoral Dissertation Award - 1 (Recipient, Dr. Subhadip
+                                       Mukherjee is presently an Assistant Professor at IIT Kharagpur).
+                                       One Ph.D. (Dr. Aniruddha Adiga) is a Research Assistant Professor at the
+
+                                       Biocomplexity Institute,Virginia Tech. USA.
+                                       One Ph.D. (Dr. Harish Kumar JR) is an Associate Professor at BITS Pilani,
+                                       Bangalore Campus.
+                                       The other Ph.D.s are well settled in the corporate sector.
+
+                                       Ph.D. students received the following fellowships during their PhD:
+                                       Deity Visvesvaraya fellowship - 1
+                                       Prime Minister’s Research Fellows - 3
+
+                                       Qualcomm Innovation Fellowships - 9
+                                       Tata Consultancy Ph.D. Fellowship - 1
+                                       Microsoft Research Fellowship - 1
+                                       Robert Bosch Ph.D. Fellowship - 1
+
+Masters by       Awarded: 9            Two M.Tech.(Research) students won The Alfred Hay Medal for
+Research                               outstanding MTech(Res) thesis.
+
+ Master of       Awarded: 40+          Two students received Prof. N. R. Khambati Memorial Award, one of
+ Technology      In progress: 6        whom is an Assistant Professor at Dartmouth College.
+                                       Two students received Prof. I. S. N. Murthy Medal, one of whom
+
+                                       continued for a Ph.D. and became an Assistant Professor at IIT
+                                       Kharagpur.
+
+ Postdocs        No. advised: 6        Several of them are working as Data Scientists in leading corporate
+                                       organizations across the world.
+
+
+
+7. Funded Projects
+
+
+7.1 Sponsored research projects
+
+                                                      Total
+Sl.                            Funding         PI/    grant              Sanction
+No.   Title                    agency          Co-PI (in       Duration  date       Other investigators
+                                                      lakhs)
+
+      Exploring the dynamics Council for
+      of acoustic landscape in Scientiﬁc and                                        Prof. Rohini Balakrishnan
+                                                               2010 to   15 May
+1     ﬁeld cricket choruses    Industrial      Co-PI 21        2014      2013       (Centre for Ecological
+      using microphone         Research                                             Sciences, IISc)
+      arrays
+
+
+
+
+
+
+
+
+
+                                                                                                                9
+                                                   Total
+Sl.                          Funding        PI/    grant              Sanction
+No.  Title                   agency         Co-PI (in       Duration  date      Other investigators
+
+                                                   lakhs)
+                                                                                Prof. Hema Murthy (IITM),
+
+                                                                                Prof. S. R. M. Prasanna
+                                                                                (IITG), Prof. K. S. Rao
+     Development of text-to- Department                                         (IITKGP), Prof. K. Prahallad
+     speech synthesis        of Information                 2012 to   26 Dec.   (IIITH), Dr. A. K. Sao (IIT
+2                                           Co-PI 89
+     systems for Indian      Technology                     2017      2011      Mandi), A. Saha (CDAC
+     languages - Phase II                                                       Kolkata), Dr.V. K. Bhadran
+                                                                                (CDAC Trivandrum), B. C.
+
+                                                                                Singh (CDAC Mumbai), Dr. H.
+                                                                                Patil (DAIICT, Gandhinagar)
+                                                                                Prof.V. Ravindranath (CNS),
+                             Department            1300
+                             of Science            (My                          Prof. A. Murthy (CNS), Prof.
+     Interdisciplinary centre                               2010 to   16 Mar.   S. Mani (CNS), Prof. G.
+3    in neuroscience         and            Co-PI share     2014      2010      Rangarajan (MA), Prof. C.V.
+                             Technology            was 25
+                                                   lakhs)                       Madhavan (CSA), Prof. D. N.
+                                                                                Dutt (ECE)
+
+     Robust and efficient    Indian Space
+                             Research
+     signal processing       Organization
+4    techniques for          (ISRO) - IISc  PI     13       2012 to   29 Feb.   -
+     multicomponent FM                                      2015      2012
+     signal parameter        Space
+                             Technology
+     estimation              Cell
+
+     Voice-activated camera
+5    steering                XII Plan Grant PI     6        2014 to   10 Mar.   -
+     (Demo-1, Demo-2)                                       2016      2014
+
+                             Defense
+                             Research and
+     Sparsity based                                                             Dr. P. Murali Krishna (Naval
+     reconstruction in high- Development                    2014 to   1         Physical and
+6                            Organization   PI     25
+     frequency SONAR         (DRDO) - IISc                  2018      Jan.2014 Oceanographic Laboratory,
+     imaging                                                                    Cochin)
+                             joint research
+                             programme
+                             ISRO-IISc
+                                                                                Mr. Manish Saxena, ISRO
+7    Development of a 3-D    Space          PI     15       2015 to   8 Apr.    Space Applications Centre,
+     Riesz scanner           Technology                     2018      2015
+                             Cell                                               Ahmedabad
+
+                             Robert Bosch
+     Masters project grants  Centre for
+8    in signal processing    Cyberphysical PI      6        2016 to   1 Sept.   -
+     and machine learning                                   2017      2016
+     (4 projects)            Systems at
+                             IISc
+
+     Sub-Nyquist sampling    Science and
+     — Challenges,
+9    fundamental limits,     Engineering    PI     34       2016 to   30 Sept.  -
+                             Research                       2018      2016
+     algorithms and          Board
+     applications
+
+
+
+
+
+                                                                                                          10
+                                                   Total
+Sl.                          Funding        PI/    grant              Sanction
+No.  Title                   agency         Co-PI (in       Duration  date       Other investigators
+
+                                                   lakhs)
+                             Ministry of
+
+                             Human
+     A low-cost, portable,   Resource
+     super-resolution        Development                    2016 to   29 Nov.
+10   ultrasound scanner**    and Ministry   PI     82       2020      2016       -
+
+     (IMPRINT Project)       of Health and
+                             Family
+                             Welfare
+
+                             Ministry of
+                             Human
+     An automated and        Resource                                            Dr. Yogish Kamath,
+
+11   efficient glaucoma      Development    PI     61       2017 to   27 Feb.    Kasturba Medical College,
+     prescreening system**   and Indian                     2019      2017       Manipal, Karnataka
+     (IMPRINT Project)       Council for
+
+                             Medical
+                             Research
+
+                             ISRO-IISc
+     Satellite image         Space                          2017 to   28 March
+12   denoising in hardware   Technology     PI     16       2020      2017       Dr. GN Rathna, EE, IISc
+                             Cell
+
+     Satellite image         ISRO-IISc                                           Dr. Debajyoti Dhar and Mr.
+     denoising and           Space                          2018 to   30 Oct.    Ashutosh Gupta (ISRO,
+13                                          PI     18
+     deconvolution in        Technology                     2020      2018       Space Applications Centre
+     multiplicative noise    Cell                                                Ahmedabad)
+     Three-dimensional
+                             Pratiksha
+14   reconstruction using a  Trust          PI     5        2018 to   27 Jul.    Dr. Chetan Singh Thakur
+     neuromorphic event-                                    2019      2018       (DESE, IISc)
+     based camera            Initiative
+
+     In pursuit of a         Pratiksha
+15   neuromorphic sampling Trust            Co-PI 10        2019 to   23 Mar.    Dr. Chetan Singh Thakur
+     theory                  Initiative                     2020      2019       (DESE, IISc)
+
+                                                                                 Prasanta Ghosh (EE), Kunal
+                                                                                 Chaudhury (EE), Muthuvel
+
+                                                                                 Arigovindan (EE), Soma
+                             Institute of                                        Biswas (EE), Rajiv
+                             Eminence                                            Soundararajan (ECE),
+     Development of a high-
+16   speed neuromorphic      (IoE) funding  PI     155      2019 to   22 Aug.    Chetan Thakur (DESE), R.V.
+                             of the Indian                  2021      2019       Babu (CDS), Ramsharan
+     imaging system          Institute of                                        Rangarajan (ME), Aloke
+                             Science                                             Kumar (ME), Deepak Nair
+
+                                                                                 (CNS), Sundarrajan Asokan
+                                                                                 (IAP), Gopalkrishna Hegde
+                                                                                 (CeNSE) all from IISc
+
+                             Robert Bosch
+     Theoretical analysis of Centre for                     2019 to   7 Sept.
+17   generative adversarial                 PI     2                             -
+     networks (GANs)         Cyberphysical                  2020      2019
+                             Systems, IISc
+
+
+
+
+
+                                                                                                           11
+                                                  Total
+Sl.                          Funding        PI/   grant              Sanction
+No.  Title                   agency         Co-PI (in      Duration  date      Other investigators
+
+                                                  lakhs)
+                             Science and
+
+                             Engineering
+                             Research                                          Mr. Harish Kumar J.R. from
+     iCare — Artiﬁcial       Board --                                          Manipal Institute of
+18   intelligence powered    Teachers       Co-PI 18       2019 to   19 Nov.   Technology, Manipal; Also
+                                                           2022      2019
+     solutions for eyecare   Associateship                                     QIP PhD candidate in the
+                             for Research                                      lab
+                             Excellence
+
+                             (SERB-TARE)
+                             Science and
+                             Engineering
+
+                             Research
+                             Board
+                             scheme for
+
+19   Adaptive low-rank       Mathematical   PI    6        2020 to   10 Feb.   -
+     sparse decomposition    and                           2023      2020
+                             Theoretical
+
+                             Sciences
+                             Research
+                             (SERB-
+                             MATRICS)
+
+
+
+
+
+                             Science and
+     A robust, non-convex    Engineering
+     optimization framework  Research                      2021 to   31 Mar.   Prof. Prasanta Kumar
+20   for analysis and                       PI    23
+     synthesis sparse        Board — Core                  2024      2021      Ghosh (EE, IISc)
+                             Research
+     models                  Grant
+
+
+
+
+
+     Seismic source
+     characterization using
+     state-of-the-art signal Ministry of                   2023 to   26 May    Prof. Surendra Nadh
+20                           Earth          PI    7                            Somala (Civil Engineering,
+     processing and          Sciences                      2025      2023      IIT Hyderabad)
+     machine learning
+     techniques
+
+                             Bill & Melinda
+     AI powered diagnostics  Gates                         2020 to   October,  -
+21   for wireless capsule                   PI    2
+     endoscopy               Foundation &                  2022      2020
+                             DBT-BIRAC
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                         12
+                                                    Total
+Sl.                           Funding        PI/    grant              Sanction
+No.  Title                    agency         Co-PI (in       Duration  date      Other investigators
+
+                                                    lakhs)
+     Enhancing
+
+     effectiveness and        Ministry of                                        Prof. Gaurav Sharma (U.
+     accessibility of
+23   ophthalmological         Education      PI     74.04    2024-20 May         Rochester, USA) and Prof.
+     image analysis through   (SPARC                         27        2024      Thrasos Pappas
+                              program)                                           (Northwestern U., USA)
+     modern machine
+     learning
+
+                              ISRO-IISc                                          Prof. Chetan Singh Thakur
+     Neuromorphic             Space                          2025-20 April
+24   processing for radar     Technology     PI     22.25    27        2025      (ESE, IISc), Mr. Ayush Jha
+                              Cell                                               (ISRO, Ahmedabad)
+
+                              Anusandhan
+     A million frames per     National
+                                                             2025-20 March       Prof. Prasanta Kumar
+25   second computational     Research       PI     64.70    28        2025      Ghosh (EE, IISc)
+     neuromorphic imager      Foundation
+                              (ANRF)
+
+** IMPRINT is a highly competitive funding program launched by the Ministry of Human Resource Development.
+About 2,500 proposals were received from all over India and about 10% were selected for funding, 5% with
+partial funding, and 5% with full funding. Two of our proposals received full funding.
+
+
+7.2 International collaborative projects
+
+                                      PI/Co-     Total
+                                      PI/Co-   grant (in  Duration   Sanction
+      Title        Funding agency    iInvesti    Rs.       (years)     date          Other investigators
+                                      gator    crores)
+
+                 Indo-Mexico Joint
+Use of seismic   Research
+microtremors
+in engineering   Programme,                                                    Prof. Kusala Rajendran
+                 Ministry of                                                   (Centre for Earth Sciences,
+seismology:      Science and                                         7 March   IISc), Prof. Francisco Jose
+Approaches       Technology,         Co-PI    0.19       2017-2020   2017      Chavez Garcia, U. National
+used in Mexico
+and India to     International                                                 Autonoma de Mexico (UNAM),
+                 Bilateral                                                     Mexico City
+reduce the       Cooperation
+seismic risk
+                 Division
+PRAIMA —         Indo-Austria Joint
+                                                                               Dr. Bettina Heise, Johannes
+Phase retrieval Research                                             11 June   Kepler University, Linz,
+for advanced     Personnel           Co-PI    0.06       2018-2021
+imaging          Exchange                                            2019      Austria, and RECENDT, Linz,
+applications     Programme                                                     Austria
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                           13
+7.3 Collaborative projects with the industry
+
+                                                    Total grant (in Duration
+Title                Funding agency PI/Co-PI/                                       Other investigators
+                                                    Rs. lakhs)      (years)
+
+
+Centre for           Carl Zeiss India
+
+Excellence in AI for Pvt. Ltd. (CSR   PI            150             2024 to 2027     -
+Eyecare              Grant)
+
+
+
+A novel super-                                                                      Dr. Chetan Singh Thakur
+                                                                                    (ESE, IISc) and Mr. Shabbir
+sparse-array-        Semiconductor                                                  Amjhera Wala (Texas
+based super-
+resolution           Research         PI            27              2020-2023       Instruments, Bangalore).
+                     Corporation                                                    Texas Instruments
+ultrasound imaging                                                                  Bangalore is our industry
+system
+                                                                                    partner.
+
+7.4 Consulting projects with the industry
+
+                                                                Total grant
+                                      Funding          PI/                                        Other
+ Title                                agency           Co-PI    (in Rs.        Duration (years)   investigators
+                                                                lakhs)
+
+ Separation of biosignals acquired    Hewlett
+                                                                               August 2013 to
+ by sensors in medical                Packard (HP)     PI       7              July 2014          -
+ applications                         Labs, USA
+
+ Detection and quantiﬁcation of                                                                   Prof. R.
+ surface irregularities and foreign   The Boeing                               June 2022 to       Venkatesh
+                                                       Co-PI    30K USD
+ debris using advanced artiﬁcial      Company                                  June 2023          Babu (CDS,
+ intelligence (AI) approach                                                                       IISc)
+
+ Development of monolithic and
+ specialized neural network
+
+ architecture for optical             Carl Zeiss
+ coherence tomography (OCT)           Bangalore                                June 2021 to
+ image classiﬁcation and design       Private          PI       38             June 2023          -
+
+ of an explainable artiﬁcial          Limited
+ intelligence (AI) system through
+ indicative visualization
+
+                                                                                                  Prof. R.
+
+                                                                                                  Venkatesh
+                                                                                                  Babu (CDS,
+ Anomaly detection inside aircraft    The Boeing       Co-PI    20K USD        July to            IISc) and
+ fuel tanks                           Company                                  December 2024
+                                                                                                  Prof. Suresh
+                                                                                                  Sundaram
+                                                                                                  (AE, IISc)
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                               14
+7.5 Highlights of industry interaction
+1. As part of the IMPRINT India Initiative, we developed new image processing algorithms and software for fully
+   automated glaucoma analysis and detection, which is critical in prescreening applications. The parameters
+
+   used for prescreening are more clinically pertinent and different from the conventionally deployed cup-to-
+   disc ratio metric and offer a signiﬁcantly superior performance. Our software is readily deployable on
+   Android and iOS devices. Validations have been conducted independently as well as jointly with fundus-on-
+
+   phone device manufacturers such as Remidio, Forus, and Bosch. Six trial licenses have been granted to M/s.
+   Remidio Innovative Solutions Private Limited, Bangalore through the IISc Intellectual Property and
+   Technology Licensing office. In collaboration with the Department of Ophthalmology, Kasturba Medical
+   College Hospital, Manipal, Karnataka, we have also created an Indian ethnicity speciﬁc glaucoma database.
+
+   This is the ﬁrst-of-its-kind gold standard glaucoma database in the Indian setting, collected from 650
+   patients and ﬁve expert doctors provided ground-truth annotations.
+2. Our project with HP labs, USA was on the use of inertial sensors for acquiring biosignals in medical
+
+   applications. The objective was to perform signal separation and extract speciﬁc parameters for performing
+   classiﬁcation. We also developed algorithms for fall detection using inertial sensor data. The problem of fall
+   detection is important in a hospital scenario and home-care for the lonely and elderly.
+
+3. Our project with Texas Instruments (TI), Bangalore is focused on developing sparse array approaches for
+   performing super-resolved ultrasound imaging. The hardware platform for executing the project and
+   technical support is provided by TI. We developed computationally efficient algorithms keeping the hardware
+   constraints in mind. Dr. Chetan Thakur and team (ESE, IISc) developed the hardware. The project is for a
+
+   duration of three years and is funded by the Semiconductor Research Corporation, which is a world-class
+   technology research consortium.
+4. Our project with The Boeing Company, USA is focused on developing a benchmark database and associated
+
+   AI algorithms for foreign object detection and surface irregularity identiﬁcation, particularly for mission-
+   critical applications. The foreign objects may be found in highly vulnerable areas such as the fuel tank of an
+   airplane where it is not always feasible for a human to enter into for examination. We created a benchmark
+   dataset that can be used for validation of various AI algorithms and also developed a suite of explainable AI
+
+   algorithms for foreign object detection.
+5. Our project with Carl Zeiss Bangalore Privated Limited is aimed at developing a state-of-the-art AI engine
+   both for classiﬁcation of various retinal pathologies from optical-coherence tomography images. The deep
+
+   learning models also provide a means of assessing and visualizing what parts of the image gave rise to the
+   desired classiﬁcation outcome and determining whether those are also clinically relevant. The techniques
+   developed also led to accurate computation of the retinal ﬂuid volume. This translational research project
+
+   involves working closely with doctors and incorporating their feedback to reﬁne the machine learning
+   models, thereby improving their reliability and deployability.
+
+8. Teaching
+
+E9-222: Signal Processing in Practice (introduced in 2022; lab course offered jointly with 10 other faculty
+members)
+E9-213: Time-Frequency Analysis (every year since 2010)
+
+E9-241: Digital Image Processing (2010 to 2020)
+E9-282: Neural Signal Processing (2014 to 2020; jointly with Prof. Supratim Ray, Centre for Neuroscience, IISc)
+Received consistently high ratings and teaching feedback from students, which also led to the Prof. Priti
+
+Shankar Teaching Award by IISc.
+
+
+
+9. Educational/Short-Term Courses Organized
+Workshop                            Sponsoring agency      Duration        Target group            Funding
+
+Learning Sparse Representations     National                               Research students in
+for Signal Processing               Mathematics            February        Signal Processing and ~ 5 lakhs
+                                                           20-22, 2015
+(Lead organizer)                    Initiative                             Machine Learning
+
+
+
+
+
+                                                                                                              15
+Workshop                           Sponsoring agency     Duration        Target group           Funding
+
+First workshop on Brain,                                                 Researchers in
+Computation and Learning                                 January 9-13,
+(Organizing Committee member       Pratiksha Trust       2017            Machine Learning and ~ 30 lakhs
+and speaker)                                                             Neuroscience
+
+Short-term course on Digital
+Signal Processing and              NXP                   February 27 to
+                                   Semiconductors,                       NXP engineers          ~4 lakhs
+Applications                       Bangalore             March 3, 2017
+(Organizer and speaker)
+
+                                   International Speech
+Winter School on Speech and        Communication
+Audio Processing (WiSSAP)          Association, Defense  January 26-29, Signal Processing       ~ 5 lakhs
+(Organizing Committee member)      R&D Organization,     2017            Researchers
+
+                                   Adobe, Mathworks
+Second workshop on Brain,                                                Researchers in
+                                                         January 8-12,
+Computation, and Learning          Pratiksha Trust       2018            Machine Learning and ~ 20 lakhs
+(Organizing Committee member)                                            Neuroscience
+Third workshop on Brain,                                                 Researchers in
+                                                         June 24-29,
+Computation, and Learning          Pratiksha Trust       2019            Machine Learning and ~ 20 lakhs
+(Organizing Committee member)                                            Neuroscience
+
+IEEE SPS Winter School on                                                Students and
+Biomedical Signal and Image
+Processing                         IEEE Signal           November        researchers in         ~ 3 lakhs
+                                   Processing Society    12-14, 2019     Biomedical Signal/
+(Organizing Committee member                                             Image Processing
+and speaker)
+                                                                         Researchers in
+Sixth Workshop on Brain,
+Computation, and Learning          Pratiksha Trust       January 9-13,   Machine Learning,      ~25 lakhs
+                                                         2023            Translational
+(Organizing Committee member)                                            Neuroscience
+
+                                                                         Students and
+Winter School on Speech and        Indian Speech         December        researchers in the
+Audio Processing (WiSSAP)          Communication         18-21, 2023     areas of music         ~ 15 lakhs
+(Organizing Committee member)      Association
+                                                                         information retrieval
+
+
+10. Leadership and Service Roles at the Institute
+   1. June 1, 2023 to May 31, 2024: Organizing Chair, GATE-2024. Leading a national-level GATE committee
+      comprising 24 Professors from IISc and IITs. We brought in major reforms in the system and also
+
+      introduced a new GATE test paper on Data Science and Artiﬁcial Intelligence.
+   2. June 1, 2022 to May 31, 2024: Chair, GATE-JAM Office, IISc.
+   3. June 1, 2020 to May 31, 2022: Vice-Chair, Graduate Aptitude Test in Engineering (GATE) and Joint
+      Admission test for Masters (JAM). GATE and JAM are nation-wide entrance examinations organized jointly
+
+      by Indian Institute of Science and Indian Institutes of Technology (IITs) and are taken by about a million
+      candidates every year.
+   4. Convener, Program Curriculum Committee of the Master of Technology in Signal Processing (M.Tech.(SP))
+
+      program, Division of Electrical, Electronics, and Computer Sciences (EECS), IISc, since August 1, 2022. We
+      revamped the course curriculum and resurrected the M.Tech.(SP) program.
+   5. Convener, Program Curriculum Committee of the Master of Technology in Artiﬁcial Intelligence (M.Tech.
+
+      (AI)) program, newly introduced by the Division of Electrical, Electronics, and Computer Sciences (EECS),
+      IISc. (August 1, 2020 to July 31, 2022); Formerly member of the committee (August 1, 2018-July 31,
+      2020).
+   6. With the help of the M.Tech.(AI) PCC, and under the leadership of Dean (EECS), IISc, I set up state-of-the-
+
+       art the AI labs in four departments of the Division of EECS. The labs are used by several faculty members
+       for conducting tutorials and workshops that have a programming component.
+
+
+                                                                                                           16
+   7. Member of the committee that drafted the Faculty Handbook of the Indian Institute of Science.
+
+   8. Coordinator,Visual Analytics Thematic Cluster at IISc, 2017 to 2022.
+   9. Member, Board of Studies, Undergraduate Program at IISc (Bachelor of Science (Research)) since May
+       2015 to 2022.
+
+   10.Member, Electrical Engineering Department Curriculum Committee (August 2018 onward).
+   11.Chairman of the committee for recruiting lab instructors for the undergraduate program at IISc (2017).
+   12.Senate nominee for about 25 comprehensive examinations and general tests in IISc.
+
+   13.Convener, EECS Divisional Retreat for Strategic Planning, December 2016.
+   14.Team Lead for conducting GATE, JAM, and KVPY national-level entrance exams in various states in India.
+   15.Member of the Evaluation Committee for Technical Staff Promotion, 2016.
+   16.Mooted the idea of a DST-FIST proposal and was a member of the departmental committee that drafted
+
+       the proposal on “Smart Energy Systems Infrastructure.” The proposal was successful and received INR
+       6.49 crores of funding spread over the duration 29.09.2016 to 28.09.2021.
+
+
+11. Membership of Professional Bodies
+   1. Executive President and founding member of Indian Speech Communication Association (IndSCA)
+      (founded 2019)
+
+   2. Senior member, The Institute of Electrical and Electronics Engineers (IEEE)
+   3. Member, IEEE Signal Processing Society, USA
+   4. Member, Indian Unit for Pattern Recognition and Artiﬁcial Intelligence (An affiliate of International
+      Association for Pattern Recognition)
+
+   5. Member of the Association of Computing Machinery (ACM)
+   6. Member of The Optical Society of America, The Optical Society of India
+   7. Member of International Speech Communication Association
+
+   8. Life member, The Institution of Electronics and Telecommunication Engineers (IETE), New Delhi
+
+12. Distinguished Visitors Hosted
+
+Sl.
+No.   Name of the visitor              University                                      Duration
+
+1     Alessandro Foi                   Tempere University, Finland                     April 18-22, 2025
+
+2     Thrasos Pappas                   Northwestern University, USA                    January 14-31, 2025
+
+                                                                                       August 4-11, 2024
+3     Gaurav Sharma                    University of Rochester, USA
+                                                                                       January 14-31, 2025
+4     Ayush Bhandari                   Imperial College, London, UK                    July 7-8, 2024
+
+
+5     Ashok Veeraraghavan              Rice University, USA                            June 27, 2024
+
+6     Ayush Bhandari                   Imperial College, London, UK                    June 1-2, 2022
+
+7     Yonina Eldar                     Weizmann Institute of Science, Israel           December 18, 2019
+
+8     Gaurav Sharma                    University of Rochester, USA                    September 10, 2019
+
+9     Achuta Kadambi                   Washington University, USA                      June 14, 2019
+
+10    Vivek Goyal                      Boston University                               December 3, 2018
+
+
+11    Mathews Jacob                    Iowa State University                           July 16-19, 2018
+
+12    Mohammad Emtiyaz Khan            RIKEN, Japan                                    November 2, 2018
+
+13    Mathew Magimai-Doss              Idiap & Ecole polytechnique fédérale de         April 3, 2018
+                                       Lausanne
+
+14    Kumar Vijay Mishra               United States Army Research Labs                December 20, 2017
+
+15    Yoram Bresler                    University of Illinois at Urbana-Champaign      October 17, 2016
+
+
+                                                                                                           17
+Sl.
+No.   Name of the visitor              University                                     Duration
+
+16    Israel Cohen                     Technion, Israel                               January 8-11, 2016
+
+17    Akihiko (Ken) Sugiyama           NEC Japan                                      December 14, 2015
+
+18    Michael Elad                     Technion, Israel                               February 20-22, 2015
+
+
+19    Justin Romberg                   Georgia Tech., USA                             February 20-22, 2015
+
+20    Roger Moore                      University of Sheffield, UK                    December 15, 2014
+
+
+13. Selected Invited Talks
+
+Sl.  Title of the talk                 Event                                         Duration
+No.
+
+     Generalized weighted lp           Symposium on Phase Retrieval, Joint Annual
+                                       Conference of the German Mathematical         September 27 to
+1    minimization for accurate         Society and the Austrian Mathematical Society, October 1, 2021.
+     interferometric phase estimation
+                                       University of Passau, Germany
+                                       Asilomar Conference on Signals, Systems and October 31-November
+2    Neuromorphic Sampling
+                                       Computers                                     3, 2021
+                                       Sampling Theory and Its Applications, IIT
+3    Time-encoded sampling                                                           January 24-29, 2021
+                                       Indore
+                                       Keynote talk, IEEE SPS Winter School on
+4    Healthcare in the age of AI                                                     November 12-14, 2019
+                                       Biomedical Signal and Image Processing
+                                       Winter School on Speech and Audio
+5    Deep learning for sparse coding                                                 January 27-29, 2019
+                                       Processing (WiSSAP) 2019
+                                       Special session on Deep Learning at
+     Unrolled iterative algorithms for
+6    sparse coding                     International Conference on Signal Processing July 16-19, 2018
+                                       and Communications (SPCOM), IISc
+                                       Special session on Speech Processing at the
+     There’s more to a spectrogram
+7    than meets the eye                International Conference on Signal Processing July 16-19, 2018
+                                       and Communications (SPCOM), IISc
+
+                                       Twenty Years of Biomedical Imaging and
+8    The BIG bang                      Splines (TYBIS), Ecole polytechnique fédérale March 23, 2018
+                                       de Lausanne
+
+     ESOLA: Epoch-synchronous          Winter School in Speech and Audio
+9    overlap-add for speech            Processing (WiSSAP), Indian Institute of      January 19-22, 2018
+     applications                      Technology Guwahati
+
+                                       Tutorial at the Osmania University College of
+10   Sub-Nyquist sampling              Engineering Centenary Conference, Hyderabad   December 29-30, 2017
+
+     Deep learning meets sparse        Brain, Computation, and Learning workshop,
+11   coding                            IISc, funded by Pratiksha Trust               January 9-12, 2017
+
+                                       Keynote talk, IEEE Israel Section International
+     The Riesz transform -- A new      Conference on the Science of Electrical
+12   tool for spectro-temporal                                                       November 16-18, 2016
+     analysis of speech signals        Engineering (ICSEE), Symposium on Speech
+                                       and Audio Processing, held in Eilat, Israel
+
+13   What can signal processing do     Johannes Kepler University (Zentrum fur       June 28, 2016
+     for coherent imaging?             Oberﬂachen und Nanoanalytik), Linz, Austria
+
+
+
+
+
+                                                                                                           18
+Sl.
+No.   Title of the talk                 Event                                          Duration
+
+                                        Volkswagen Stiftung MOIMA Symposium on
+      Phase retrieval in shift-invariantMathematical Optics, Image Modelling, and
+14    spaces and application to optical Algorithms, at Schloss Herrenhausen,           June 20-23, 2016
+      imaging
+                                        Hannover, Germany
+      Exact phase retrieval in principal Department of Electrical Engineering, Indian
+15                                                                                     May 12, 2016
+      shift-invariant spaces            Institute of Technology Bombay, Mumbai
+                                        Tutorial at Twenty Second National Conference
+      Sub-Nyquist sampling -- Recent
+16    advances and applications         on Communications (NCC), Indian Institute of   March 4, 2016
+                                        Technology Guwahati
+
+                                        Workshop on Text-to-Speech synthesis,
+17    Speech prosody modiﬁcation        Dhirubhai Ambani Institute of Information and June 16-19, 2014
+                                        Communication Technology, Gandhinagar
+
+                                        Visualization and Data Analytics Seminar,
+18    Active shapes                     Department of Computer Science, University     May 21, 2014
+                                        of Vienna, Austria
+
+
+
+
+14. Full List of Publications
+
+Peer-Reviewed International Journal publications
+
+1. M. Bakshi and C. S. Seelamantula, “EfficientNet-B1 based diabetic retinoapthy detection from ultra-wideﬁeld
+    fundus images,” Proceedings of Medical Image Computing and Computer-Assisted Intervention (MICCAI)
+    Challenge on Ultra-wideﬁeld Fundus Imaging for Diabetic Retinopaty, Lecture Notes in Computer Science,
+    Springer, pp. 135-143, October 2024.
+
+2. Kartheek K. Nareddy, A. J. Kamath, and C. S. Seelamantula, “Tight-Frame-Like Analysis-Sparse Recovery
+    Using Nontight Sensing Matrices,” vol. 17, iss. 3, SIAM Journal on Imaging Sciences, 2024. (IF: 2.1)
+3. Mangalwedhekar R., Singh N., Thakur C.S., Seelamantula C.S., Jose M., Nair D., (2022), “Achieving nanoscale
+
+    precision using Neuromorphic localization microscopy,” Nature Nanotechnology. (IF: 40.523)
+4. S. Asokan and C. S. Seelamantula, "Euler-Lagrange analysis of generative adversarial networks," Journal of
+    Machine Learning Research (JMLR), vol. 24, pp. 1-100, 2023. (IF: 5.177)
+
+5. S. Asokan and C. S. Seelamantula, “Spider GAN — Leveraging friendly neighbors to accelerate GAN training,”
+    Proceedings of IEEE Computer Vision and Pattern Recognition (CVPR), 2023. (h5-index: 389; IF: 23.46)
+6. S. Mache, P. K. Pokala, K. Rajendran, and C. S. Seelamantula, "Introducing nonuniform sparse proximal
+    averaging network for seismic reﬂectivity inversion," IEEE Transactions on Computational Imaging, vol. 9,
+
+    pp. 475-489, May 2023. (IF: 4.99)
+7. J. R. Harish Kumar, C. S. Seelamantula, J. H. Gagan, Y. S. Kamath, N. I. R. Kuzhuppilly, U. Vivekanand, P. Gupta,
+    and S. Patil, “Cháksu: A Glaucoma-speciﬁc fundus image database,” Nature Scientiﬁc Data. (IF: 11.2)
+
+8. S. Mache, A. Chatterjee, K. Rajendran, and C. S. Seelamantula, “Hilbert-Huang transform and energy rate
+    functions for earthquake source characterization — A study from the Japan Trench,” Bulletin of the
+    Seismological Society of America, vol. 112 (6), pp. 2847–2858, 2022. (IF: 3.14)
+
+9. P. K. Pokala, R. V. Hemadri, and C. S. Seelamantula, “Iteratively reweighted minimax-concave penalty
+    minimization for accurate low-rank plus sparse matrix decomposition,” IEEE Transactions on Pattern
+    Analysis and Machine Intelligence (PAMI), 2021, doi: 10.1109/TPAMI.2021.3122259. (IF: 24.314)
+10. J. Sadasivan, J. K. Dhiman, and C. S. Seelamantula, “Musical noise suppression using a low-rank and sparse
+
+    matrix decomposition approach,” Speech Communication, vol. 125, pp. 41-52, 2020. (IF: 2.723).
+11. A. R. Mangalore, C. S. Seelamantula, and C. S. Thakur, "Neuromorphic fringe projection proﬁlometry," IEEE
+    Signal Processing Letters, vol. 27, pp. 1510-1514, 2020. (IF: 3.201)
+
+12. S. K. Shastri, S. Rudresh, R. Anand, S. Nagesh, C. S. Seelamantula, and A. K. Thittai, "Axial super-resolution in
+    ultrasound imaging with application to non-destructive evaluation," vol. 108, no. 106183, Elsevier
+    Ultrasonics, December 2020.
+
+
+
+
+                                                                                                             19
+13. A. Mahurkar and C. S. Seelamantula, "Minkowski-algebra-based super-sparse array design for
+
+    superresolution ultrasound imaging," IEEE Signal Processing Letters, vol. 27, pp. 1060-1064, 2020. (IF:
+    3.201)
+14. S. Mukherjee and C. S. Seelamantula, "Quantization-aware phase retrieval," Special issue on Mathematical
+
+    Optics, Imaging, and Applications, International Journal of Wavelets, Multiresolution, and         Information
+    Processing (Invited paper), 2020. (IF: 1.276)
+15. J. R. Harish Kumar, C. S. Seelamantula, A. Mohan, R. Shetty, T. J. M. Berendschot, and C. A. B. Webers,
+
+    "Automatic analysis of normative retinal oximetry images," PLoS ONE, May 2020. 
+16. J. Sadasivan, S. Mukherjee, and C. S. Seelamantula, "Signal denoising using the minimum-probability-of-
+    error criterion," vol. 9, e3, APSIPA Transactions on Signal and Information Processing, January 2020.
+17. J. R. Harish Kumar, C. S. Seelamantula, Y. S. Kamath, and R. Jampala, "Rim-to-disc ratio outperforms cup-to-
+
+    disc ratio for glaucoma prescreening," Nature Scientiﬁc Reports, 9:7099, 2019.
+18. J. Sadasivan, C. S. Seelamantula, N. R. Muraka, "Speech enhancement using a risk estimation approach," vol.
+    116, pp. 12-29, Speech Communication, January 2020.
+
+19. H. Sundar, T. V. Sreenivas, and C. S. Seelamantula, “TDOA-based multiple source localization without
+    association ambiguity,” IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol. 26, no. 11,
+    pp. 1976-1990, November 2018.
+
+20. B. A. Shenoy, S. Mulleti, and C. S. Seelamantula, “On 2-D Hilbert integral equations, generalized minimum-
+    phase signals, and phase retrieval,” IEEE Transactions on Signal Processing, vol. 66, no. 14, pp. 3906-3917,
+    July 15, 2018.
+21. S. Mukherjee and C. S. Seelamantula, “Phase retrieval from binary measurements,” IEEE Signal Processing
+
+    Letters, pp. 348-352, vol. 25, no. 3, March 2018.
+22. S. Rudresh, S. Nagesh, and C. S. Seelamantula, “Asymmetric pulse modeling for FRI sampling,” vol. 66, no. 8,
+    pp. 2027-2040, IEEE Transactions on Signal Processing, 2018.
+
+23. K. S. Chandran, C. S. Seelamantula, and S. Ray, “Duration analysis using matching pursuit algorithm reveals
+    longer bouts of gamma rhythm,” vol. 119, pp. 808-821, Journal of Neurophysiology, 2018.
+24. A. Bhowmik, S. Shit, and C. S. Seelamantula, “Training-free, single-image super-resolution using a dynamic
+    convolutional network,” IEEE Signal Processing Letters, vol. 25, no. 1, pp. 85-89, Jan. 2018. This article
+
+    featured in the Top 10 popular articles of IEEE Signal Processing Letters for three consecutive month.
+25. S. Mulleti, A. Singh, V. Brahmkhatri, K. Chandra, T. Raza, S. P. Mukherjee, C. S. Seelamantula, and H. S. Atreya,
+    “Super-resolved nuclear magnetic resonance spectroscopy,” Article No. 9651, Nature Scientiﬁc Reports,
+
+    2017.
+26. S. Mulleti and C. S. Seelamantula, “Paley-Wiener characterization of kernels for ﬁnite-rate-of-innovation
+    sampling,” IEEE Transactions on Signal Processing, vol. 65, no. 22, pp. 5860-5872, 2017.
+
+27. S. Rudresh and C. S Seelamantula, “Finite-rate-of-innovation-based super-resolution radar imaging,” IEEE
+    Transactions on Signal Processing, vol. 65, no. 19, pp. 5021-5033, 2017.
+28. A. Chaturvedi, S. K. Nagaraj, S. S. Gorthi, and C. S. Seelamantula, “An efficient microscale technique for
+    determining the erythrocyte sedimentation rate,” Journal of the Society for Laboratory Automation and
+
+    Screening (SLAS) Technology, vol. 22, no. 5, pp. 565-572, 2017.
+29. A. S. Murthy, C. S. Seelamantula, and T. V. Sreenivas, “Optimum short-time polynomial regression for signal
+    analysis,” Sadhana Journal of the Indian Academy of Sciences, vol. 41, no. 11, pp. 1245-1260, Nov. 2016.
+
+30. S. Mulleti, B. A. Shenoy, and C. S. Seelamantula, “FRI sampling on structured nonuniform grids — Application
+    to super-resolved optical imaging,” IEEE Transactions on Signal Processing, vol. 64, no. 15, pp. 3841-3853,
+    2016.
+
+31. K. Upadhya, C. S. Seelamantula, and K. V. S. Hari, “A risk minimization framework for channel estimation in
+    OFDM systems,” Signal Processing (Elsevier), pp. 78-87, vol. 128, 2016.
+32. B. A. Shenoy, S. Mulleti, and C. S. Seelamantula, “Exact phase retrieval in principal shift-invariant spaces,”
+    IEEE Transactions on Signal Processing, vol. 64, no. 2, pp. 406-416, 2016. This article featured on the cover-
+
+    page of the IEEE Transactions on Signal Processing January/February 2016 issue.
+33. S. Mulleti and C. S. Seelamantula, “Ellipse ﬁtting using the ﬁnite-rate-of-innovation sampling principle,” IEEE
+    Transactions on Image Processing, vol. 25, no. 3, pp. 1451-1464, 2016.
+
+34. S. Mukherjee, R. Basu, and C. S. Seelamantula, “L1-K-SVD: A robust dictionary learning algorithm with
+    simultaneous update,” Signal Processing (Elsevier), vol. 123, pp. 42-52, 2016.
+35. R. Shenoy and C. S. Seelamantula, “A zero-crossing rate property of power complementary analysis
+
+    ﬁlterbank outputs,” IEEE Signal Processing Letters, vol. 22, no. 12, pp. 2354-2358, 2015.
+
+
+                                                                                                                 20
+36. H. Kishan and C. S. Seelamantula, “Patch-based and multiresolution optimum bilateral ﬁlters for denoising
+
+    images corrupted by Gaussian noise,” SPIE Journal of Electronic Imaging, vol. 24(5), pp. 053021-1 —
+    053021-15, Sept./Oct. 2015.
+37. M. Venkatesh, K. Mohan, and C. S. Seelamantula, “Directional bilateral ﬁlters for smoothing ﬂuorescence
+
+    microscopy images,” Invited article, American Institute of Physics (AIP) Advances Special Issue on
+    Emerging Topics in Fluorescence Microscopy and Imaging, vol. 5, 084805-1 — 084805-17, 2015.
+38. H. Aragonda and C. S. Seelamantula, “Demodulation of narrowband speech spectrograms using the Riesz
+
+    transform,” IEEE Transactions on Audio, Speech, and Language Processing, vol. 23, no. 11, pp. 1824, 2015.
+39. B. A. Shenoy and C. S. Seelamantula, “Exact phase retrieval for a class of 2-D parametric signals,” IEEE
+    Transactions on Signal Processing, vol. 63, no. 1, pp. 90-103, 2015.
+40. R. R. Shenoy and C. S. Seelamantula, “Spectral zero-crossings — Localization properties and applications,”
+
+    IEEE Transactions on Signal Processing, vol. 63, no. 12, pp. 3177-3190, 2015.
+41. C. S. Seelamantula and S. Mulleti, “Super-resolution reconstruction in frequency-domain optical-coherence
+    tomography,” IEEE Transactions on Signal Processing, vol. 62, no. 19, pp. 5020-5029, 2014.
+
+42. S. Mukherjee and C. S. Seelamantula, “Fienup algorithm with sparsity constraints: Application to frequency-
+     domain optical-coherence tomography,” IEEE Transactions on Signal Processing, vol. 62, no. 18, pp.
+     4659-4672, 2014.
+
+43. C. S. Seelamantula and R. R. Shenoy, “A contraction mapping approach for robust estimation of lagged
+     autocorrelation,” vol. 21, no. 9, pp. 1054-1058, IEEE Signal Processing Letters, 2014.
+44. A. Venkitaraman and C. S. Seelamantula, “Binaural signal processing motivated generalized analytic signal
+     construction and AM-FM demodulation,” IEEE Transactions on Audio, Speech, and Language Processing,
+
+     vol. 22, no. 6, pp. 1023-1036, 2014.
+45. S. R. Krishnan, C. S. Seelamantula, and P. Chakravarti, “Spatially adaptive kernel regression using risk
+     minimization,” vol. 21, no. 4, pp. 445-448, IEEE Signal Processing Letters.
+
+37. S. Agnihotri, P. V. D. S. Sundeep, C. S. Seelamantula, and R. Balakrishnan, “Quantifying vocal mimicry in the
+     Greater Racket-tailed Drongo: A comparison of automated methods and human assessment,” Public
+     Library of Sciences One (PLoS 1) Biology, vol. 9, no. 3, e89540, March 2014.
+38. A. Venkitaraman, A. Adiga, and C. S. Seelamantula, “Auditory motivated Gammatone wavelet transform,”
+
+     Signal Processing journal (Elsevier), vol. 94, pp. 608-619, January 2014.
+39. A. Venkitaraman and C. S. Seelamantula, “Fractional Hilbert transform extensions and associated analytic
+     signal construction,” Signal Processing journal (Elsevier), vol. 94, pp. 359-372, January 2014.
+
+40. T. Lasser and C. S. Seelamantula, “Extended-focus optical-coherence microscopy — Structural and
+     functional imaging, from tissue to cell,” Invited article, November 15, 2013, Biophotonics magazine.
+41. A. Venkitaraman and C. S. Seelamantula, “On computing the amplitude, phase, and frequency modulations
+
+     using a vector interpretation of the analytic signal,” IEEE Signal Processing Letters, vol. 20, no. 12, pp.
+     1187-1190, December 2013. This article also featured in the top 25 popular articles of IEEE Signal
+     Processing Letters.
+42. A. Venkitaraman and C. S. Seelamantula, “Temporal envelope ﬁt of transient audio signals,” IEEE Signal
+
+     Processing Letters, vol. 20, no. 12, pp. 1191-1194, December 2013.
+43. C. S. Seelamantula and T. Lasser, “Hilbert transform relations in frequency-domain optical-coherence
+     tomographic imaging,” Invited article, vol. 93, no. 1, pp. 139-148, January-March 2013, Journal of the Indian
+
+     Institute of Science, Special issue on Imaging and Microscopy.
+44. R. R. Shenoy and C. S. Seelamantula, “Spectral-envelope—group-delay models for transients,” Journal of
+     Acoustical Society of America, vol. 33, issue 5, pp. 2788-2802, 2013.
+
+45. S. R. Krishnan, M. M. Doss, and C. S. Seelamantula, “A Savitzky-Golay ﬁltering perspective of dynamic
+     feature computation,” IEEE Signal Processing Letters, vol. 20, no. 3, pp. 281-284, 2013.
+46. S. R. Krishnan and C. S. Seelamantula, “On the selection of optimum Savitzky-Golay ﬁlters,” vol. 61, issue 2,
+     pp. 380-391, IEEE Transactions on Signal Processing, 2013.
+
+47. S. R. Krishnan and C. S. Seelamantula, “SURE-optimal bandwidth selection in nonparametric regression,”
+     vol. 11, no. 2-3, pp. 133-163, Special issue on Sampling Theory and Applications, Sampling Theory in
+     Signal and Image Processing journal, 2012.
+
+48. S. Mukherjee and C. S. Seelamantula, “A non-iterative phase retrieval algorithm for minimum-phase
+     signals using the annihilating ﬁlter,” vol. 11, no. 2-3, pp. 165-193, Special issue on Sampling Theory and
+     Applications, Sampling Theory in Signal and Image Processing journal, 2012.
+
+49. R. Nayak and C. S. Seelamantula, “Optimal sparsifying bases for frequency-domain optical-coherence
+     tomography,” Optics Letters, vol. 37, issue 23, pp. 4907-4909, 2012.
+
+                                                                                                                21
+50. C. S. Seelamantula, N. Pavillon, C. Depeursinge, and M. Unser, “Local demodulation of holograms using the
+
+     Riesz transform with application to microscopy,” Journal of Optical Society of America (A), vol. 29, issue 10,
+     pp. 2118-2129, 2012.
+51. A. Venkitaraman and C. S. Seelamantula, “A technique to compute smooth amplitude, phase, and frequency
+
+     modulations from the analytic signal,” IEEE Signal Processing Letters, vol. 19, no. 10, pp. 623-626, October
+     2012.
+52. S. R. Krishnan, C. S. Seelamantula, A. Bouwens, M. Leutenegger, and T. Lasser, “A zero-crossing approach to
+
+     high-resolution reconstruction in frequency-domain optical-coherence tomography,” Journal of Optical
+     Society of America (A), vol. 29, issue 10, pp. 2080-2091, 2012.
+53. H. Sundar, C. S. Seelamantula, and T. V. Sreenivas, “A mixture model approach for formant tracking and the
+     robustness of Student's-t distribution,” IEEE Transactions on Audio, Speech, and Language Processing, vol.
+
+     20, no. 10, pp. 2626-2636, 2012.
+54. R. Delgado-Gonzalo, P. Thévenaz, C. S. Seelamantula, and M. Unser, “Snakes with an ellipse-reproducing
+     property,” IEEE Transactions on Image Processing, vol. 21, no. 3, pp. 1258-1271, March 2012.
+
+55. C. S. Seelamantula, N. Pavillon, C. Depeursinge, and M. Unser, “Exact complex wave reconstruction in digital
+     holography,” Journal of the Optical Society of America A, vol. 28, no. 6, pp. 983-992, June 2011. This article
+     also featured in the Editor-in-Chief’s choice and was selected for additional publication in the virtual
+
+     journal for biomedical optics (VJBO). This article featured among the most downloaded articles in
+     Holography of the Optical Society of America publishing.
+56. T. Binzoni, C. S. Seelamantula, and D. Van De Ville, “A fast time-domain algorithm for the assessment of
+     tissue blood ﬂow in laser-Doppler ﬂowmetry,” Physics in Medicine and Biology, vol. 55, pp. N383-N394,
+
+     June 2010.
+57. N. Ducros, A. Da Silva, J-M. Dinten, C. S. Seelamantula, M. Unser, and F. Peyrin, “A time-domain wavelet-
+     based approach for ﬂuorescence diffuse optical tomography,” Medical Physics, vol. 37, no. 6, pp. 2890-2900,
+
+     June 2010.
+58. C. S. Seelamantula and M. Unser, “Performance analysis of reconstruction techniques for frequency-
+     domain optical-coherence tomography,” IEEE Transactions on Signal Processing, vol. 58, no. 3, pp.
+     1947-1951, March 2010.
+
+59. N. Pavillon, C. S. Seelamantula, J. Kühn, M. Unser, and C. Depeursinge, “Suppression of the zero-order term
+     in off-axis digital holography through nonlinear ﬁltering,” Special issue on Digital Holography, Applied
+     Optics, 48, pp. H186-H195, December 2009. This article also featured in the Editor-in-Chief’s choice and
+
+     was selected for additional publication in The Virtual Journal for Biomedical Optics, vol. 5, issue no. 1,
+     January 5, 2010.
+60. S. Nair, R. Balakrishnan, C. S. Seelamantula, and R. Sukumar, “Vocalizations of wild Asian elephants
+
+     (Elephas maximus): Structural classiﬁcation and social context,” Journal of Acoustic Society of America,
+     vol. 126, no. 5, pp. 2768-2778, Nov. 2009.
+61. C. S. Seelamantula and T. V. Sreenivas, “Blocking artifacts in speech/audio — Dynamic auditory perception
+     and time-frequency ﬁltering,” Signal processing, vol. 89, no. 4, pp. 523-531, April 2009.
+
+62. C. S. Seelamantula and M. Unser, “A generalized sampling method for ﬁnite-rate-of-innovation-signal
+     reconstruction,” IEEE Signal Processing Letters, vol. 15, pp. 813-816, 2008.
+63. C. S. Seelamantula, A. H. Bachmann, M. L. Villiger, R. A. Leitgeb, and M. Unser, “Exact and efficient signal
+
+     reconstruction in frequency-domain optical-coherence tomography,” Journal of the Optical Society of
+     America (A), vol. 25, no. 7, pp. 1762-1771, July 2008. This article has also been selected for publication
+     (Editor-in-Chief’s choice) in The Virtual Journal for Biomedical Optics, vol. 3, no. 8, August 18, 2008.
+
+64. R. A. Leitgeb, R. Michaely, T. Lasser, and S. Chandra Sekhar, “Complex-ambiguity-free Fourier-domain
+     optical-coherence tomography through transverse scanning,” Optics Letters, vol. 32, no. 23, pp. 3453-3455,
+     December 2007. This article has also been selected for publication (Editor-in-Chief’s choice) in The Virtual
+     Journal for Biomedical Optics, vol. 3, no. 1, January 29, 2008.
+
+65. S. Chandra Sekhar and T. V. Sreenivas, “Signal-to-noise-ratio estimation based on higher-order moments,”
+     Signal Processing, vol. 86, no. 4, pp. 716-732, 2006.
+66. S. Chandra Sekhar and T. V. Sreenivas, “Auditory motivated level-crossing approach to instantaneous
+
+     frequency estimation,” IEEE Transactions on Signal Processing, vol. 53, no. 4, pp. 1450-1562, April 2005.
+67. S. Chandra Sekhar and T. V. Sreenivas, “Effect of interpolation in the implementation of polynomial Wigner-
+     Ville distribution for instantaneous frequency estimation,” Signal Processing, vol. 84, issue 1, pp. 107-116,
+
+     January 2004.
+
+
+                                                                                                                22
+68. S. Chandra Sekhar and T. V. Sreenivas, “Adaptive window zero-crossing-based instantaneous frequency
+
+     estimation,” EURASIP Journal of Applied Signal Processing, Special Issue on Non-linear Signal and Image
+     Processing, vol. 12, pp. 1791-1806, 2004.
+69. S. Chandra Sekhar and T. V. Sreenivas, “Adaptive spectrogram Vs. adaptive pseudo Wigner-Ville distribution
+
+     for instantaneous frequency estimation,” Signal Processing, vol. 83, issue 7, pp. 1529-1543, July 2003.
+
+
+
+Book chapter
+1.C. S. Seelamantula, “OperA: Operator based annihilation for ﬁnite-rate-of-innovation signal sampling and
+  reconstruction,” Recent Advances in Sampling Theory and Applications, Springer, 2016.
+
+
+Peer-reviewed premier international conference publications
+1. A. Verma, V. Boominathan, A. Veeraraghavan, C.S. Seelamantula, “Diffusion Model Based Image
+    Reconstruction in Lensless Imaging,” Special Session on Computational Imaging, Proceedings of IEEE
+
+    International Conference on Acoustics, Speech, and Signal Processing, 2025.
+2. N. K. K. Reddy, I. Perumal, and C. S. Seelamantula, “Some Intriguing Observations on the Learnt Matrices in
+    Deep Unfolded Networks,” Proceedings of IEEE International Conference on Acoustics, Speech, and Signal
+
+    Processing, 2025.
+3. N. Shetty and C. S. Seelamantula, “Monte Carlo Score Matching for Image Generation,” Proceedings of IEEE
+    International Conference on Acoustics, Speech, and Signal Processing, 2025.
+4. A. Kamath and C. S. Seelamantula, “Neuromorphic Unlimited Sampling for High-Dynamic-Range Video
+
+    Acquisition,” Proceedings of IEEE International Conference on Acoustics, Speech, and Signal Processing,
+    2025.
+5. S. Kulur, D. Balasubramanian, A. J. Kamath, and C. S. Seelamantula, “Neuromorphic unlimited sampling —
+
+    Beyond bandlimited signals,” Show & Tell demo, IEEE International Conference on Acoustics, Speech, and
+    Signal Processing, 2025.
+6. S. Yadav, K. S. Akash, A. J. Kamath, C. S. Seelamantula, and C. S. Thakur, “Neuromorphic radar for gesture
+    recognition,” Show & Tell demo, IEEE International Conference on Acoustics, Speech, and Signal Processing,
+
+    2025.
+7. N. Shetty, M. Bandla, S. Asokan, and C. S. Seelamantula, “MILD: Momentum Imbued Langevin Dynamics for
+    Faster Sampling,” Proceedings of IEEE International Conference on Acoustics, Speech, and Signal
+
+    Processing, 2024.
+8. A. S. Bhandiwad, A. J. Kamath, and C. S. Seelamantula, “Variational analysis of adversarial regularization for
+    solving inverse problems,” Proceedings of IEEE International Conference on Acoustics, Speech, and Signal
+
+    Processing, 2024.
+9. A. J. Kamath and C. S. Seelamantula, “Neuromorphic sensing meets unlimited sampling,” Proceedings of
+    IEEE International Conference on Acoustics, Speech, and Signal Processing, 2024.
+10. A. J. Kamath, N. K. K. Reddy, and C. S. Seelamantula, “Method of alternating proximations for solving linear
+
+    inverse problems,” Proceedings of International Conference on Signal Processing and Communications
+    (SPCOM), 2024.
+11. S. Asokan, N. Shetty, and C. S. Seelamantula, “f-GANs Settle Scores!” NeurIPS 2023 Workshop on Diffusion
+
+    Models, 2023.
+12. S. Asokan and C. S. Seelamantula, “Spider GAN — Leveraging friendly neighbors to accelerate GAN training,”
+    Proceedings of IEEE Computer Vision and Pattern Recognition (CVPR), 2023.
+
+13. P. K. Pokala, S. Chemudupati, and C. S. Seelamantula, "Generalized fast iteratively reweighted soft-
+    thresholding algorithm for sparse coding under tight frames in the complex domain," Proceedings of IEEE
+    International Conference on Image Processing (ICIP), 2020.
+14. S. Srinath, S. Rudresh, C. S. Seelamantula, G. Hareesh, P. Murali Krishna, "Nyquist pulses for sub-Nyquist
+
+    sampling — Application to underwater imaging," Proceedings of IEEE International Conference on Image
+    Processing (ICIP), 2020.
+15. P. K. Pokala and C. S. Seelamantula, "Project improved FISTA and application to image
+
+    deblurring," Proceedings of IEEE International Conference on Image Processing (ICIP), 2020.
+16. D. Jawali, P. K. Pokala, and C. S. Seelamantula, "CORNET: Composite regularized neural network for
+    convolutional sparse coding,"  Proceedings of IEEE International Conference on Image Processing (ICIP),
+
+    2020.
+
+
+                                                                                                              23
+17. S. Chemudupati, P. K. Pokala, and C. S. Seelamantula, "Non-convex optimization for sparse interferometric
+
+    phase estimation," Proceedings of IEEE International Conference on Image Processing (ICIP), 2020.
+18. V. Kishore, S. Mukherjee, and C. S. Seelamantula, “PhaseSense — Signal reconstruction from phase-only
+    measurements via quadratic programming," Proceedings of International Conference on Signal Processing
+
+    and Communications (SPCOM), Bangalore, July 20-23, 2020.
+19. P. K. Pokala and C. S. Seelamantula, "Accelerated weighted l1 minimization for MRI reconstruction under
+    tight frames in Complex-Domain," Proceedings of International Conference on Signal Processing and
+
+    Communications (SPCOM), Bangalore, July 20-23, 2020.
+20. V. Kishore and C. S. Seelamantula, "Wirtinger ﬂow algorithms for phase retrieval from binary
+    measurements," Proceedings of IEEE International Conference on Acoustics, Speech, and Signal Processing
+    (ICASSP), 2020.
+
+21. S. Asokan and C. S. Seelamantula, “Teaching a GAN what not to learn,” Proceedings of Neural Information
+    Processing Systems (NeurIPS), 2020.
+22. P. K. Pokala, P. K. Uttam, and C. S. Seelamantula, "ConFirmNet: Convolutional FirmNet and application to
+
+    image denoising and inpainting," Proceedings of IEEE International Conference on Acoustics, Speech, and
+    Signal Processing (ICASSP), 2020. (Invited paper to a special session on “Learning Based Inversion.”)
+23. P. Kulkarni, J. Sadasivan, A. Adiga, and C. S. Seelamantula, "Epoch extraction from a speech signal using
+
+    gammatone wavelets in a scattering network," Proceedings of IEEE International Conference on Acoustics,
+    Speech, and Signal Processing (ICASSP), 2020.
+24. S. Rudresh, A. J. Kamath, and C. S. Seelamantula, "A time-based sampling framework for ﬁnite-rate-of-
+    innovation signals," Proceedings of IEEE International Conference on Acoustics, Speech, and Signal
+
+    Processing (ICASSP), 2020.
+25. P. K. Pokala, S. Chemudupati, and C. S. Seelamantula, "Adaptive weighted minimax-concave penalty based
+    dictionary learning for brain magnetic resonance images," Proceedings of IEEE International Symposium on
+
+    Biomedical Imaging (ISBI), 2020.
+26. P. Kevin Raj, A. Manjunath, J.R. Harish Kumar, and C. S. Seelamantula, "Automatic classiﬁcation of artery-
+    vein from a single wavelength fundus image," Proceedings of IEEE International Symposium on Biomedical
+    Imaging (ISBI), 2020.
+
+27. S. Paul, H. D. Gundabattula, C. S. Seelamantula, V. R. Mujeeb, and A. S. Prasad, "Fully automated semantic
+    segmentation of wireless capsule endoscopy abnormalities," Proceedings of IEEE International Symposium
+    on Biomedical Imaging (ISBI), 2020.
+
+28. P. Kevin Raj, J. R. Harish Kumar, S. Jois, S. Harsha, and C. S. Seelamantula, "A structure tensor based Voronoi
+    decomposition technique for optic cup segmentation,"  Proceedings of IEEE International Conference on
+    Image Processing (ICIP), September 22-25, 2019, Taipei, Taiwan.
+
+29. D. Mohan, J. R. Harish Kumar, and C. S. Seelamantula, "Optic disc segmentation using cascaded
+    multiresolution convolutional neural networks," Proceedings of IEEE International Conference on Image
+    Processing (ICIP), September 22-25, 2019, Taipei, Taiwan.
+30. S. K. Shastri, A. Ramkumar, S. Rudresh, S. Nagesh, A. K. Thittai, D. Mazumder, and C. S. Seelamantula, "Axial
+
+    super-resolution in ultrasound imaging," Proceedings of IEEE International Ultrasonics Symposium, October
+    6-9, 2019, Glasgow, Scotland.
+31. P. K. Pokala, A. G. Mahurkar, and C. S. Seelamantula, "FirmNet: A sparsity ampliﬁed deep network deep
+
+    network for solving linear inverse problems," Proceedings of IEEE International Conference on Acoustics,
+    Speech, and Signal Processing, 2019.
+32. A. G. Mahurkar, P. K. Pokala, C. S. Thakur, and C. S. Seelamantula, "SAMIR: Sparsity ampliﬁed iteratively-
+
+    reweighted beamforming for high-resolution ultrasound imaging,"  Proceedings of IEEE International
+    Conference on Acoustics, Speech, and Signal Processing, 2019.
+33. J. K. Dhiman and C. S. Seelamantula, "A spectro-temporal technique for estimating aperiodicity and voiced/
+    unvoiced decision boundaries of speech signals,"  Proceedings of IEEE International Conference on
+
+    Acoustics, Speech, and Signal Processing, 2019.
+34. D. Jawali, A. Kumar, and C. S. Seelamantula, "A learning approach for wavelet design," Proceedings of IEEE
+    International Conference on Acoustics, Speech, and Signal Processing, 2019.
+
+35. S. Dey, K. Tahiliani, J. R. Harish Kumar, A. K. Pediredla, and C. S. Seelamantula, "Automatic segmentation of
+    optic disc using affine snakes in gradient vector ﬁeld," Proceedings of IEEE International Conference on
+    Acoustics, Speech, and Signal Processing, 2019.
+
+
+
+
+                                                                                                               24
+36. J. R. Harish Kumar, K. Teotia, P. K. Raj, J. Andrade, K. V. Rajagopal, and C. S. Seelamantula, "Automatic
+
+    segmentation of common carotid in longitudinal mode ultrasound images using active oblongs,"
+    Proceedings of IEEE International Conference on Acoustics, Speech, and Signal Processing, 2019.
+37. A. Kamath, S. Rudresh, and C. S. Seelamantula, "FRI modeling of Fourier descriptors," Proceedings of IEEE
+
+    International Conference on Acoustics, Speech, and Signal Processing, 2019.
+38. A. G. Mahurkar, P. Pokala, and C. S. Seelamantula, "Iteratively reweighted beamforming for high-resolution
+    ultrasound imaging," Proceedings of IEEE International Symposium on Biomedical Imaging 2019, April 8-11,
+
+    2019,Venice, Italy.
+39. V. Sadasivan and C. S. Seelamantula, "High-accuracy patch-level classiﬁcation of wireless capsule
+    endoscopy images using a convolutional neural network," Proceedings of IEEE International Symposium on
+    Biomedical Imaging 2019, April 8-11, 2019,Venice, Italy.
+
+40. A. Sainathan and C. S. Seelamantula, "Phase retrieval — A deconvolution perspective," Proceedings of Asia-
+    Paciﬁc Signal and Information Processing Association Annual Summit and Conference (APSIPA - ASC),
+    November 12-15, 2018, Honolulu. Invited paper.
+
+41. H. Sridhar, J. R. Harish Kumar, S. Jois, and C. S. Seelamantula, “An unconstrained ellipse ﬁtting technique
+    and application to optic cup segmentation,” Proceedings of 2018 IEEE GlobalSIP Advanced Bio-Signal
+    Processing and Machine Learning for Medical Cyber-Physical Systems.
+
+42. J. Sadasivan, S. Mukherjee, and C. S. Seelamantula, “Speech enhancement using the minimum-probability-
+    of-error criterion,” Proceedings of Interspeech 2018, September 2-6, 2018.
+43. J. Dhiman, N. Sharma, and C. S. Seelamantula, “Multicomponent 2-D AM-FM modeling of speech
+    spectrograms,” Proceedings of Interspeech 2018, September 2-6, 2018.
+
+44. A. Sainathan, S. Rudresh, and C. S. Seelamantula, “An optimization framework for reconstruction of speech
+    from a phase-encoded speech spectrogram,” Proceedings of Interspeech 2018, September 2-6, 2018.
+45. S. Mukherjee and C. S. Seelamantula, “Phase retrieval from binary measurements,” IEEE Signal Processing
+
+    Letters publication selected for presentation at IEEE International Conference on Image Processing (ICIP),
+    October 7-10, 2018.
+46. A. De and C. S. Seelamantula, “Design of sampling kernels and sampling rates for two-dimensional ﬁnite-
+    rate-of-innovation signals,” Proceedings of IEEE International Conference on Image Processing (ICIP) 2018,
+
+    October 7-10, 2018.
+47. D. Mohan, J. R. Harish Kumar, and C. S. Seelamantula, “High-performance optic disc segmentation using
+    convolutional neural networks,” Proceedings of IEEE International Conference on Image Processing (ICIP)
+
+    2018, October 7-10, 2018.
+48. J. R. Harish Kumar, C. S. Seelamantula, J. Andrade, and K. V. Rajagopal, “Automatic segmentation of lumen
+    intima layer in transverse mode ultrasound images,” Proceedings of IEEE International Conference on
+
+    Image Processing (ICIP) 2018, October 7-10, 2018.
+49. S. Mukherjee, A. K. Sekuboyina, and C. S. Seelamantula, “Binary compressive sensing and super-resolution
+    with an unknown threshold,”  Proceedings of International Conference on Signal Processing and
+    Communications (SPCOM) 2018, July 16-19, 2018.
+
+50. S. Mukherjee and C. S. Seelamantula, “A singular-value relaxation technique for learning sparsifying
+    transforms,” Proceedings of International Conference on Signal Processing and Communications (SPCOM)
+    2018, July 16-19, 2018.
+
+51. S. Mulleti, A. Singh, H. S. Atreya, and C. S. Seelamantula, “High-resolution nuclear magnetic resonance
+    spectroscopy using the autocorrelation method,” Focus on Microscopy 2018, March 25-28, 2018, Singapore.
+52. B. A. Shenoy and C. S. Seelamantula, “Homomorphic deconvolution for quantitative phase
+
+    microscopy,” Focus on Microscopy 2018, March 25-28, 2018, Singapore.
+53. A. Bhowmik, A. Adiga, C. S. Seelamantula, F. Hauser, J. Jacak, and B. Heise, “Localization microscopy using
+    deep neural networks,” Focus on Microscopy 2018, March 25-28, 2018, Singapore.
+54. S. Mukherjee and C. S. Seelamantula, “Sparse phase retrieval algorithms for frequency-domain optical-
+
+    coherence tomography,” Focus on Microscopy 2018, March 25-28, 2018, Singapore.
+55. S. Mulleti, B. Heise, G. Hannesschlaeger, and C. S. Seelamantula, “High-resolution frequency-domain optical-
+    coherence tomography from low-resolution acquisition,” Focus on Microscopy 2018, March 25-28, 2018,
+
+    Singapore.
+56. S. Rudresh, A. Adiga, B. A. Shenoy, and C. S. Seelamantula, “Wavelet based reconstruction for unlimited
+    sampling,” Proceedings of IEEE International Conference on Acoustics, Speech, and Signal Processing
+
+    (ICASSP) 2018, April 15-20, 2018, Calgary, Alberta, Canada.
+
+
+                                                                                                              25
+57. S. Mukherjee, S. Shit, and C. S. Seelamantula, “PhaseSplit: A variable splitting framework for phase
+
+    retrieval,”  Proceedings of IEEE International Conference on Acoustics, Speech, and Signal Processing
+    (ICASSP) 2018, April 15-20, 2018, Calgary, Alberta, Canada.
+58. A. Bhowmik, A. Adiga, C. S. Seelamantula, F. Hauser, J. Jacak and B. Heise, “Bayesian deep deconvolutional
+
+    neural networks,” NIPS 2017 Workshop on Bayesian Deep Learning, December 9, 2017, Long Beach
+    Convention Center, Long Beach, US.
+59. S. Mukherjee, D. Mahapatra, and C. S. Seelamantula, “Deep neural networks for sparse coding and
+
+    dictionary learning,”  NIPS 2017 Workshop on Bayesian Deep Learning, December 9, 2017, Long Beach
+    Convention Center, Long Beach, US.
+60. J. R. Harish Kumar, S. Harsha, Y. Kamath, R. Jampala, and C. S. Seelamantula, “Automatic optic cup
+    segmentation using Kasa's circle ﬁtting technique,” Proceedings of IEEE Region 10 Conference (TENCON),
+
+    2017.
+61. J. K. Dhiman, N. Adiga, and C. S. Seelamantula, “A spectro-temporal demodulation technique for pitch
+    estimation,” Proceedings of Interspeech 2017, August 20-24, 2017, Stockholm, Sweden.
+
+62. K. Vijayan, J. K. Dhiman, and C. S. Seelamantula, “Time-frequency coherence for periodic-aperiodic
+    decomposition of speech signals,” Proceedings of Interspeech 2017, August 20-24, 2017, Stockholm,
+    Sweden.
+
+63. J. R. Harish Kumar, R. Adhikari, Y. Kamath, R. Jampala, and C. S. Seelamantula, “Automatic delineation of
+    macular regions based on a locally deﬁned contrast function,” Proceedings of IEEE International Conference
+    on Image Processing (ICIP) 2017, Beijing, China, September 17-20, 2017.
+64. S. Mukherjee and C. S. Seelamantula, “Learning transforms with a speciﬁed condition number,” Proceedings
+
+    of Signal Processing with Adaptive Sparse Structured Representations (SPARS), 2017, June 5-8, 2017,
+    Lisbon, Portugal.
+65. S. T. Devarakota, A. K. Sekuboyina, and C. S. Seelamantula, “A convolutional neural network approach for
+
+    abnormality detection in wireless capsule endoscopy,” Proceedings of IEEE International Symposium on
+    Biomedical Imaging (ISBI) 2017, Melbourne, Australia, April 18-21, 2017.
+66. A. Gupta, S. V. Gubbi, C. S. Seelamantula, “How much can a Gaussian smoother denoise?”  ACM Proceedings
+    of the Tenth Indian Conference on Computer Vision, Graphics, and Image Processing 2016, Guwahati,
+
+    December 18-22, 2016.
+67. A. Gupta, K. Subramanian, C. S. Seelamantula, “A distribution-independent risk estimator for image
+    denoising,” ACM Proceedings of the Tenth Indian Conference on Computer Vision, Graphics, and Image
+
+    Processing 2016, Guwahati, December 18-22, 2016.
+68. K. S. Chandran, C. S. Seelamantula, S. Ray, “Duration analysis of the Gamma rhythm — Too short to be a
+    reference!,” Bernstein Conference, Berlin, September 21-23, 2016.
+
+69. C. S. Seelamantula, “Phase-encoded speech spectrograms,”  Proceedings of Interspeech, San Francisco,
+    United States, September 8-12, 2016.
+70. J. Sadasivan and C. S. Seelamantula, “A novel risk-estimation-theoretic framework for speech enhancement
+    in nonstationary and non-Gaussian noise conditions,” Proceedings of Interspeech, San Francisco, United
+
+    States, September 8-12, 2016.
+71. H. Sundar, G. D. Manavalan, T. V. Sreenivas and C. S. Seelamantula, “Reverberation-robust one-bit TDOA
+    based moving source localization for automatic camera steering,” Proceedings of Interspeech, San
+
+    Francisco, United States, September 8-12, 2016.
+72. B. C. Aravind, S. K. Nagaraj, C. S. Seelamantula, S. S. Gorthi, “Active-disc-based Kalman ﬁlter technique for
+    tracking of blood cells in microﬂuidic channels,” Proceedings of IEEE International Conference on Image
+
+    Processing (ICIP), September 25-28, Phoenix, Arizona, 2016.
+73. J. R. Harish Kumar, C. S. Seelamantula, N. S. Narayan, and P. Marziliano, “Automatic segmentation of
+    common carotid artery in transverse mode,” Proceedings of IEEE International Conference on Image
+    Processing (ICIP), September 25-28, Phoenix, Arizona, 2016.
+
+74. S. Mukherjee and C. S. Seelamantula, “Convergence analysis of smoothed LASSO,”  Proceedings of National
+    Conference on Communications (NCC) 2016, IIT Guwahati, March 4-6, 2016.
+75. A. K. Sekuboyina and C. S. Seelamantula, “An efficient formulation and parameter selection for multiple
+
+    image super-resolution,”  Proceedings of National Conference on Communications (NCC) 2016, IIT Guwahati,
+    March 4-6, 2016.
+76. S. Mulleti and C. S. Seelamantula, “Sampling and reconstruction of time-limited signals using sum-of-sincs
+
+    kernel,” Proceedings of National Conference on Communications (NCC) 2016, IIT Guwahati, March 4-6, 2016.
+
+
+                                                                                                              26
+77. P. Narayanamurthy, G. Sreedevi, and C. S. Seelamantula, “Efficient resampling of speech/audio signals,”
+
+    Proceedings of National Conference on Communications (NCC) 2016, IIT Guwahati, March 4-6, 2016.
+78. J. Sadasivan, S. Mukherjee, and C. S. Seelamantula, “Joint dictionary training for bandwidth extension of
+    speech signals,” Proceedings of IEEE International Conference on Acoustics, Speech, and Signal Processing,
+
+    Shanghai, China, March 20-25, 2016.
+79. J. Sadasivan and C. S. Seelamantula, “An unbiased risk estimator for Gaussian mixture noise distributions
+    — Application to speech denoising,” Proceedings of IEEE International Conference on Acoustics, Speech, and
+
+    Signal Processing, Shanghai, China, March 20-25, 2016.
+80. S. Mukherjee and C. S. Seelamantula, “A divide-and-conquer dictionary learning algorithm and its
+    performance analysis,” Proceedings of IEEE International Conference on Acoustics, Speech, and Signal
+    Processing, Shanghai, China, March 20-25, 2016.
+
+81. J. R. Harish Kumar, A. K. Pediredla, and C. S. Seelamantula, “Active discs for automated optic disc
+    segmentation,” Proceedings of IEEE GlobalSIP, Orlando, Florida, December 14-16, 2015. 
+82. P. Kurpad and C. S. Seelamantula, “Dictionary-learning-based post-ﬁlter for HMM-based speech synthesis,”
+
+    Proceedings of IEEE Region 10 Conference (TENCON), Macau, November 1-4, 2015.
+83. C. S. Seelamantula and T. Blu, “Image denoising in multiplicative noise,” Proceedings of IEEE International
+    Conference on Image Processing (ICIP), Quebec City, Canada, September 27-30, 2015.
+
+84. S. Mukherjee and C. S. Seelamantula, “Smoothing does not improve the convergence rate of LASSO,”
+    Proceedings of SPARS 2015.
+85. A. Adiga, S. Mulleti, S. Prasad, and C. S. Seelamantula, “Two-dimensional FRI signal reconstruction using
+    blind deconvolution,”  11th International Conference on Sampling Theory and Applications (SampTA),
+
+    Washington, United States, May 25-29, 2015.
+86. S. Nagesh and C. S. Seelamantula, “An FRI model for asymmetric pulse trains and characterization of
+    ventricular hypertrophy condition,” Invited paper to a special session on Sampling Signals with Finite Rate
+
+    of Innovation in Biomedical Applications, 11th International Conference on Sampling Theory and
+    Applications (SampTA), Washington, United States, May 25-29, 2015.
+87. S. Nagesh and C. S. Seelamantula, “FRI sampling and reconstruction of asymmetric pulses,” Proceedings of
+    the 40th IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), Brisbane,
+
+    April 19-24, 2015.
+88. M. Venkatesh and C. S. Seelamantula, “Directional bilateral ﬁlters,”  Proceedings of the 40th IEEE
+    International Conference on Acoustics, Speech, and Signal Processing (ICASSP), Brisbane, April 19-24,
+
+    2015.
+89. S. Mulleti and C. S. Seelamantula, “Periodic nonuniform sampling for FRI signals,” Proceedings of the 40th
+    IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), Brisbane, April 19-24,
+
+    2015.
+90. C. S. Seelamantula, B. A. Shenoy, S. Coquoz, and T. Lasser, “Exact reconstruction in quantitative phase
+    microscopy,”  Proceedings of the 21st IEEE International Conference on Image Processing (ICIP), Paris,
+    October 27-30, 2014.
+
+91. S. Srinivas, A. Adiga, and C. S. Seelamantula, “Controlled blurring for improving image reconstruction
+    quality in ﬂutter-shutter acquisition,”  Proceedings of the 21st IEEE International Conference on Image
+    Processing (ICIP), Paris, October 27-30, 2014.
+
+92. S. Mulleti, S. Nagesh, R. Langoju, A. Patil, and C. S. Seelamantula, “Ultrasound image reconstruction using
+    the ﬁnite-rate-of-innovation principle,”  Proceedings of the 21st IEEE International Conference on Image
+    Processing (ICIP), Paris, October 27-30, 2014. Top 10% ICIP Paper Award.
+
+93. S. Menon and C. S. Seelamantula, “Robust Savitzky-Golay ﬁlters,” Proceedings of the 19th International
+    Workshop on Digital Signal Processing, Hong Kong, August 20-23, 2014.
+94. B. Panisetti, T. Blu, and C. S. Seelamantula, “An unbiased risk estimator for multiplicative noise --
+    Application to 1-D signal denoising,”  Proceedings of the 19th International Workshop on Digital Signal
+
+    Processing, Hong Kong, August 20-23, 2014.
+95. S. Mukherjee and C. S. Seelamantula, “A split-and-merge dictionary learning algorithm for sparse
+    representation - Application to image denoising,” Proceedings of the 19th International Workshop on Digital
+
+    Signal Processing, Hong Kong, August 20-23, 2014.
+96. A. Adiga and C. S. Seelamantula, “An alternating lp-l2 projections algorithm (ALPA) for speech modeling
+    using sparsity constraints,” Proceedings of the 19th International Workshop on Digital Signal Processing,
+
+    Hong Kong, August 20-23, 2014.
+
+
+                                                                                                               27
+97. S. R. Krishnan and C. S. Seelamantula, “Optimum parameter selection in sparse reconstruction of
+
+    frequency-domain optical-coherence tomography signals,” Proceedings of the 19th International Workshop
+    on Digital Signal Processing, Hong Kong, during August 20-23, 2014.
+98. S. Mulleti and C. S. Seelamantula, “Ellipse ﬁtting using ﬁnite-rate-of-innovation principles,” Proceedings of
+
+    IEEE International Conference on Acoustics, Speech, and Signal Processing, Florence, Italy, May 4-9, 2014.
+99. J. Sadasivan, S. Mukherjee, and C. S. Seelamantula, “An optimum shrinkage estimator based on minimum
+     probability of error criterion and application to signal denoising,”  Proceedings of IEEE International
+
+     Conference on Acoustics, Speech, and Signal Processing, Florence, Italy, May 4-9, 2014.
+100.S. Nagesh, S. Mulleti, and C. S. Seelamantula, “On the role of the Hilbert transform in boosting the
+     performance of the annihilating ﬁlter,” Proceedings of IEEE International Conference on Acoustics, Speech,
+     and Signal Processing, Florence, Italy, May 4-9, 2014.
+
+101.R. R. Shenoy and C. S. Seelamantula, “Frequency-domain linear prediction using temporal analysis,”
+     Proceedings of IEEE International Conference on Acoustics, Speech, and Signal Processing, Florence, Italy,
+     May 4-9, 2014.
+
+102.S. Gurugopinath, C. R. Murthy, and C. S. Seelamantula, “Zero-crossings based spectrum sensing under
+     noise uncertainties,” Proceedings of National Conference on Communications 2014, IIT Kanpur, February 28
+     - March 2, 2014.
+
+103.A. Adiga, M. Magimai-Doss, C. S. Seelamantula, “Gammatone wavelet cepstral coefficients for robust
+     speech recognition,” Proceedings of IEEE Region 10 Conference (TENCON), Xi’an, China, October 22-25,
+     2013.
+104.B. Vishwanath and C. S. Seelamantula, “Cell tracking using particle ﬁlters and level sets,” Proceedings of
+
+     IEEE Region 10 Conference (TENCON), Xi’an, China, October 22-25, 2013.
+105.S. V. Menon and C. S. Seelamantula, “SURE-optimal two-dimensional Savitzky-Golay ﬁlters for image
+     denoising,” Proceedings of IEEE International Conference on Image Processing (ICIP), Melbourne,
+
+     September 15-18, 2013.
+106.B. A. Shenoy, S. Mukherjee, and C. S. Seelamantula, “Phase retrieval for a class of 2-D signals characterized
+     by ﬁrst-order difference equations,” Proceedings of IEEE International Conference on Image Processing
+     (ICIP), Melbourne, September 15-18, 2013.
+
+107.A. Jose, S. R. Krishnan, and C. S. Seelamantula, “Ridge detection using Savitzky-Golay ﬁltering and
+     steerable second-order Gaussian derivatives,” Proceedings of IEEE International Conference on Image
+     Processing (ICIP), Melbourne, September 15-18, 2013.
+
+108.J. K. Mogali, N. Nallapareddy, C. S. Seelamantula, and M. Unser, “A shape-template based two-stage corpus
+     callosum segmentation technique for sagittal plane T1-weighted brain magnetic resonance images,”
+     Proceedings of IEEE International Conference on Image Processing, Melbourne, September 15-18, 2013.
+
+109.S. Mulleti, B. A. Shenoy, and C. S. Seelamantula, “Sparse signal recovery in shift-invariant spaces,”
+     Proceedings of Workshop on Signal Processing with Adaptive Sparse Structured Representations (SPARS),
+     Lausanne, Switzerland, July 8-11, 2013.
+110.S. Mukherjee and C. S. Seelamantula, “Fixed-point algorithms for sparse-signal phase retrieval,”
+
+     Proceedings of Workshop on Signal Processing with Adaptive Sparse Structured Representations (SPARS),
+     Lausanne, Switzerland, July 8-11, 2013.
+111.A. Jose and C. S. Seelamantula, “Bilateral edge detectors,” Proceedings of IEEE International Conference on
+
+     Acoustics, Speech and Signal Processing (ICASSP),Vancouver, May 26-31, 2013.
+112.H. Aragonda and C. S. Seelamantula, “Riesz-transform-based demodulation of narrowband speech
+     spectrograms,” Proceedings of the IEEE International Conference on Acoustics, Speech and Signal
+
+     Processing (ICASSP),Vancouver, May 26-31, 2013.
+113.S. Ghose, S. Hampali, and C. S. Seelamantula, “Estimation of linearly frequency modulated chirp signal
+     parameters using instantaneous autocorrelation,” IET Radar Conference, Xi'an, China, April 14-16, 2013.
+114.S. Mulleti, B. Ajay Shenoy, and C. S. Seelamantula, “A multichannel sampling method for 2-D ﬁnite-rate-of-
+
+     innovation signals,” Proceedings of IEEE International Conference on Electronics, Computing, and
+     Communication Technologies (CONECCT), Bangalore, January 17-19, 2013.
+115.S. R. Krishnan and C. S. Seelamantula, “A generalized Stein's estimation approach for speech enhancement
+
+     based on perceptual criteria,” Proceedings of Workshop on Statistical and Perceptual Audition (SAPA) —
+     Speech Communication with Adaptive Learning (SCALE), Portland, September 7-8, 2012.
+116.R. S. Hegadi, A. K. Pediredla, and C. S. Seelamantula, “Bilateral smoothing of gradient vector ﬂow ﬁeld and
+
+     application to image segmentation,” Proceedings of IEEE International Conference on Image Processing
+     (ICIP) 2012, Orlando, September 30 - October 3, 2012.
+
+                                                                                                              28
+117.H. Kishan and C. S. Seelamantula, “Optimal parameter selection for bilateral ﬁlter using Poisson unbiased
+
+     risk estimate,” Proceedings of the IEEE International Conference on Image Processing (ICIP) 2012, Orlando,
+     September 30 - October 3, 2012.
+118.C. S. Seelamantula, “Some new results on signal reconstruction from Fourier transform magnitude
+
+     spectrum,” Proceedings of International Conference on Signal Processing and Communications (SPCOM)
+     2012, July 22-25, 2012.
+119.N. R. Muraka and C. S. Seelamantula, “A risk-estimation-based formulation for speech enhancement and its
+
+     relation to Wiener ﬁltering,”  Proceedings of International       Conference on Signal Processing and
+     Communications (SPCOM) 2012, July 22-25, 2012.
+120.R. R. Shenoy and C. S. Seelamantula, “Spectral zero-crossings: Localization properties and application to
+     epoch extraction in speech signals,” Proceedings of International Conference on Signal Processing and
+
+     Communications (SPCOM) 2012, July 22-25, 2012.
+121.H. Kishan and  C. S. Seelamantula, “SURE-fast bilateral ﬁlters,” Proceedings of IEEE International
+     Conference on Acoustics, Speech, and Signal Processing (ICASSP) 2012, March 25-30, Kyoto, Japan.
+
+122.A. K. Pediredla and  C. S. Seelamantula, “A uniﬁed approach for optimization of snakuscules and
+     ovuscules,”  Proceedings of IEEE International Conference on  Acoustics, Speech, and Signal Processing
+     (ICASSP) 2012, March 25-30, Kyoto, Japan.
+
+123.S. Mukherjee and C. S. Seelamantula, “An iterative algorithm for phase retrieval with sparsity constraints:
+     Application to frequency-domain optical-coherence tomography,”  Proceedings of the IEEE International
+     Conference on Acoustics, Speech, and Signal Processing (ICASSP) 2012, March 25-30, Kyoto, Japan.
+124.R. R. Shenoy and C. S. Seelamantula, “Spectral zero-crossings alone enable reliable estimation of inter-
+
+     aural time delay,” Proc. 45th Audio Engineering Society conference (Theme: Applications of time-frequency
+     processing in audio), Helsinki, Finland, March 1-4, 2012.
+125.A. K. Pediredla and C. S. Seelamantula, “Active-contour-based automatic image quantitation techniques for
+
+     Western Blot Analysis,” Proceedings of the Seventh IEEE International Symposium on Image and Signal
+     Processing and Analysis, Croatia, September 4-6, 2011.
+113.A. K. Pediredla and C. S. Seelamantula, “A Huber-loss-driven clustering technique and its application to
+     robust cell detection,” Proceedings of the Seventh IEEE International Symposium on Image and Signal
+
+     Processing and Analysis, Croatia, September 4-6, 2011.
+114.N. R. Muraka and C. S. Seelamantula, “A risk-estimation-based comparison of mean-square error and
+     Itakura-Saito distortion measures for speech enhancement,” Proceedings of Interspeech, Florence, Italy,
+
+     August 27-31, 2011.
+115.H. Aragonda and C. S. Seelamantula, “Quadrature approximation properties of the spiral-phase quadrature
+     transform,” Proceedings of IEEE International Conference on Acoustics, Speech, and Signal Processing
+
+     (ICASSP) 2011, May 22-27, Prague, Czech Republic.
+116.R. R. Shenoy and C. S. Seelamantula, “Spectral-envelope group-delay models for transient
+     signals,”  Proceedings of IEEE International Conference on Acoustics, Speech, and Signal Processing
+     (ICASSP) 2011, May 22-27, Prague, Czech Republic.
+
+117.C. S. Seelamantula, “A ﬁnite-rate-of-innovation signal sampling perspective of the source-ﬁlter model of
+     speech production,” Proceedings of the Eighth International Workshop on Sampling Theory and
+     Applications (SampTA) 2011, May 2-6, 2011, Singapore.
+
+118.V. Ramakrishnan, K. Shetty, Pawan Kumar G, and C. S. Seelamantula, “Efficient post-processing techniques
+     for speech enhancement,” Proceedings of National Conference on Communications (NCC), Bangalore, India,
+     January 28-30, 2011.
+
+119.R. R. Shenoy and C. S. Seelamantula, “Epoch estimation in speech signals using spectral zero-crossing
+     rate,” Proceedings of Centenary Conference, Department of Electrical Engineering, December 15-17, 2011.
+120.A. Adiga, A. Venkitaraman, and C. S. Seelamantula, “Auditory-motivated Gammatone wavelet transform,”
+     Proceedings of Centenary Conference, Department of Electrical Engineering, December 15-17, 2011.
+
+121.A. Venkitaraman and C. S. Seelamantula, “Temporal envelope ﬁt using gamma distribution functions,”
+     Proceedings of Centenary Conference, Department of Electrical Engineering, December 15-17, 2011.
+122.S. Harshavardhan, C. S. Seelamantula, and T. V. Sreenivas, “A multimodal density function estimation
+
+     approach to formant tracking,” pp. 2410-2413, Proceedings of Interspeech, Makuhari, Japan, September
+     27-30, 2010.
+123.C. S. Seelamantula, “A sub-Nyquist sampling method for computing the level-crossings of an analog signal:
+
+     Theory and applications,” pp. 1-5, Proceedings of The Eighth International Conference on Signal Processing
+     and Communications (SPCOM), Bangalore, July 18-21, 2010.
+
+                                                                                                              29
+124.N. Pavillon, C. S. Seelamantula, M. Unser, and C. Depeursinge, “Artifact-free reconstruction from off-axis
+
+     digital holograms through nonlinear ﬁltering,” Proceedings of SPIE Photonics Europe 2010 (SPIE-PE'10),
+     Brussels, Belgium, April 12-16, 2010.
+125.A. K. Pediredla and C. S. Seelamantula, “A novel clustering technique robust to outliers,” IBM-Collaborative
+
+     Academia Research Exchange (I-CARE) 2010 Workshop, IBM, Bangalore, October 22, 2010.
+126.N. Pavillon, C. S. Seelamantula, M. Unser, and C. Depeursinge, “A nonlinear technique for automatic twin-
+     image and zero-order term suppression in digital holographic microscopy,” Proceedings of the Sixth
+
+     International Workshop on Advanced Optical Metrology, pp. 160-163, Springer, Stuttgart, September 8-11,
+     2009.
+127.N. Pavillon, C. S. Seelamantula, C. Depeursinge, and M. Unser, “A new nonlinear technique for automatic
+     elimination of twin image and zero-order image in digital holography,” FRINGE 2009, Frascati, Italy,
+
+     November 30 - December 4, 2009.
+128.C. S. Seelamantula, F. Aguet, S. Romain, P. Thévenaz, and M. Unser, “Parametric B-spline snakes on distance
+     maps: Ap plication to segmentation of histology images,” Proceedings of European Signal Processing
+
+     Conference (EUSIPCO), August 25-29, 2008.
+129.S. Chandra Sekhar, R. Michaely, R. A. Leitgeb, and M. Unser, “Theoretical analysis of complex-conjugate-
+     ambiguity suppression in frequency-domain optical-coherence tomography,” Proceedings of IEEE
+
+     International Symposium on Biomedical Imaging (ISBI), May 14-17, 2008, pp. 396-399.
+130.J.-C. Baritaux, S. Chandra Sekhar, and M. Unser, “A spline-based forward model for optical diffuse
+     tomography,” Proceedings of IEEE International Symposium on Biomedical Imaging (ISBI), May 14-17, 2008,
+     pp. 384-387.
+
+131.S. Chandra Sekhar and M. Unser, “Performance analysis of the cepstral technique for frequency-domain
+     optical-coherence tomography,” Proceedings of IEEE International Conference on Acoustics, Speech, and
+     Signal Processing (ICASSP), 2008, March 31 - April 4, pp. 557-560.
+
+132.A. S. Murthy, S. Chandra Sekhar, and T. V. Sreenivas, “Robust and high-resolution voiced/unvoiced
+     classiﬁcation in noisy speech using a signal smoothness criterion,” Proceedings of Interspeech, 2007.
+133.S. Chandra Sekhar, R. A. Leitgeb, A. H. Bachmann, and M. Unser, “Logarithmic transformation technique for
+     exact signal recovery in frequency-domain optical coherence tomography,” Proceedings of SPIE European
+
+     Conference on Biomedical Optics (ECBO), 2007.
+134.S. Chandra Sekhar, H. Nazkani, T. Blu and M. Unser, “A new technique for high-resolution frequency domain
+     optical coherence tomography,” Proceedings of IEEE International Conference on Acoustics, Speech, and
+
+     Signal Processing (ICASSP), 2007, April 15-20, vol. I, pp. 425-428.
+135.S . Chandra Sekhar, R. A. Leitgeb, M. L. Villiger, A. H. Bachmann, T. Blu and M. Unser, “Non-iterative exact
+     signal recovery in frequency-domain optical-coherence tomography,” Proceedings of IEEE International
+
+     Symposium on Biomedical Imaging (ISBI), 2007, April 12-15, pp. 808-811.
+136.T. G. Thomas and S. Chandra Sekhar, “Perception studies on the attributes of synthetic clear speech for the
+     hard of hearing,” Proceedings of IEEE International Symposium on Signal Processing and Applications
+     (ISSPA), February 12-15, 2007, pp. 1-4.
+
+137.S. Chandra Sekhar, S. Pilli, C. Lakshmikanth, and T. V. Sreenivas, “Novel auditory motivated subband
+     temporal envelope based fundamental frequency estimation algorithm,” Proceedings of European Signal
+     Processing Conference (EUSIPCO), September 4-8, 2006.
+
+138.S. Chandra Sekhar and T. V. Sreenivas, “Novel approach to AM-FM decomposition with applications to
+     speech and music analysis,” Proceedings of IEEE International Conference on Acoustics, Speech, and Signal
+     Processing (ICASSP), 2004, vol. II, pp. 753-756.
+
+139.S. Chandra Sekhar, “A contraction mapping technique for instantaneous frequency estimation,” IEEE India
+     Conference, 2004.
+140.S. Chandra Sekhar and T. V. Sreenivas, “Instantaneous frequency estimation using level-crossing
+     information,” Proceedings of IEEE International Conference on Acoustics, Speech, and Signal Processing
+
+     (ICASSP), 2003, vol.VI, pp. 141-144.
+141.S. Chandra Sekhar and T. V. Sreenivas, “Polynomial instantaneous frequency estimation using level-
+     crossing information,” IEEE-EURASIP Nonlinear Signal and Image Processing Workshop, 2003.
+
+142.J. K. Gupta, S. Chandra Sekhar and T. V. Sreenivas, “Performance analysis of AM-FM estimators,”
+     Proceedings of IEEE Region 10 conference, October 2003, pp. 954-958.
+143.S. Chandra Sekhar and T. V. Sreenivas, “Polynomial instantaneous frequency estimation using zero-
+
+     crossing information,” Proceedings of National Conference on Communications, IIT Madras, 2003.
+
+
+                                                                                                              30
+144.S. Chandra Sekhar and T. V. Sreenivas, “Zero-crossing approach to tracking instantaneous frequency,”
+
+     Proceedings of IEEE-EURASIP Workshop on Nonlinear Signal and Image Processing (NSIP), 2001.
+145.S. Chandra Sekhar, “Improved robustness of zero-crossing based frequency estimation,” Proceedings of
+     IEEE Bangalore Chapter Conference, 2001.
+
+
+
+
+Patents
+
+  Sl.                                                                                     Status (ﬁled/    International/
+                 Details of patent                         Patent File No.                                    National/
+ No.                                                                                        accepted)       Commercial
+
+       S. Anand, S. Kulur, A. J. Kamath, S.
+       Yadav, C. S. Thakur, C. S.
+                                              Indian patent application no.:             Filed on March    National
+  1    Seelamantula, “A method for            202441018543                               11, 2025.
+       unlimited sampling using
+       neuromorphic sensors”
+
+       C. S. Seelamantula, S. Paul, D. R.
+       Megalmani, A. Dhupia, S. K. S.
+  2    Mantrala, “A method of classifying     Indian patent application no.:             Filed on May 8,   National
+                                              202541044663                               2025.
+       abnormalities in endoscopic data
+       and a system thereof”
+
+       C. S. Thakur, C. S. Seelamantula, A.
+       Krishna, S. Rudresh,V. Shaw, H. R.     Indian patent application no.:
+       Sabbella, “System and method for       201841044116, ﬁled on November 22,
+  3    providing and designing unlimited      2018. Response to FER ﬁled on May 25,      Filed.            National
+
+       dynamic range analogue-to-digital      2023.
+       conversion”
+
+       C. S. Seelamantula and                                                            Granted on
+  4    T.V. Sreenivas, “A suite of novel audio Indian Patent No. 298255                  June 29, 2018     National
+       coding algorithms.”
+
+                                              Indian patent TEMP/E1/18223/2017CHE, Filed
+       C. S. Seelamantula and Harish          ﬁled on May 23, 2017.                      (Indian: May 23,
+       Kumar J. R., “Automated fundus                                                                      National and
+  5    image processing techniques for        International patent application number:   2017;             International
+       glaucoma prescreening."                PCT/IB2018/053030 ﬁled on May 2,           International:
+                                              2018.                                      May 2, 2018)
+
+       C. S. Seelamantula, S. Nagesh,
+       S. Mulleti, S. Rudresh, D. Mazumder,                                              Granted on
+  6    R. M.Vasu, “Low-rate super-            Indian patent 6178/CHE/2015ﬁled on         February 28,      National
+                                              November 17, 2015.
+       resolution ultrasound imaging                                                     2023
+       system.”
+
+       C. S. Seelamantula, S. Rudresh, and    Indian patent, 4276/CHE/2014, ﬁled on
+  7    A.Vasisht, “Method and system for      02/09/2014; PCT/IB2015/056661 ﬁled         Filed             National and
+       epoch based modiﬁcation of speech      on September 2, 2015. Response to FER                        PCT
+       signals.”                              ﬁled in June 2019.
+
+       C. S. Seelamantula and
+       H. Aragonda, “System and method        5424/CHE/2014, ﬁled on November 5,
+
+  8    for estimating spectro-temporal        2014. Response to FER ﬁled in February     Filed             National
+       envelope and harmonics of a speech     2019.
+       signal.”
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                          31
+15. Referees
+
+ Sl.    Name and Designation                              Contact Details
+
+ No.
+
+        Professor Martin Vetterli                         EPFL IC IINFCOM LCAV
+
+        Former President, Swiss Federal Institute of      Station 14, CH-1015 Lausanne, Switzerland
+        Technology Lausanne (EPFL)                        Phone: +41 21 693 13 38; +41 21 693 56 98
+        Former President of the National Research         Email: martin.vetterli@epﬂ.ch
+
+ 1      Council of the Swiss National Science Foundation Website: https://people.epﬂ.ch/martin.vetterli?
+        Professor, School of Computer and                 lang=en
+        Communication Sciences
+        Ecole Polytechnique Fédérale de Lausanne
+
+        (EPFL)
+
+
+        Professor Alessandro Foi                          Tampere University, P.O. Box. 553, FI-33014,
+        Editor-in-Chief, IEEE Transactions on Image       Tampere, Finland
+
+        Processing                                        Korkeakoulunkatu 1, 33720, Tampere, Finland
+ 2      Unit of Computing Sciences, Faculty of            Email: alessandro.foi@tuni.ﬁ
+        Information Technology and Communication          Website: https://webpages.tuni.ﬁ/foi/
+        Sciences, Tampere University
+
+
+
+        Professor Hynek Hermansky                         Hackerman 226, 3400 North Charles Street,
+        Director of Centre for Language and Speech        Baltimore, Maryland 21218-2680, USA
+        Processing                                        Email: hynek@jhu.edu
+ 3
+        Julian S. Smith Professor, Department of          Website: https://www.clsp.jhu.edu/faculty/hynek-
+        Electrical and Computer Engineering, Whiting      hermansky/
+        School of Engineering, Johns Hopkins University
+
+        Professor Subhasis Chaudhuri                      IIT Bombay, Powai, Mumbai 400 076, India
+        Professor of Electrical Engineering               Email: sc@ee.iitb.ac.in, director@iitb.ac.in
+
+        Former Director, Indian Institute of Technology   Website: https://www.ee.iitb.ac.in/~sc/main/
+        Bombay                                            main.html
+ 4
+
+        Chairman, Governing Board,
+        Bombay Stock Exchange
+
+
+
+        Professor Michael Unser (Postdoctoral advisor)    Tel: +41 21 693 11 85
+
+        Director, Biomedical Imaging Group                EPFL/STI/IEM/LIB
+        Academic Director, EPFL Centre for Imaging        BM 4.134 (Bâtiment BM)
+ 5      Swiss Federal Institute of Technology, Lausanne   Station 17, CH-1015, Lausanne VD, Switzerland
+
+        (EPFL)                                            Email: michael.unser@epﬂ.ch
+                                                          Website: http://bigwww.epﬂ.ch/unser/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                            32

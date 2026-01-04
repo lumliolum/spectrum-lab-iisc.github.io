@@ -1,7 +1,7 @@
 ---
 layout: person
 title: Abijith J. Kamath
-firstname: Abijith
+firstname: Abijith Jagannath
 lastname: Kamath
 description: PhD Student
 img: assets/img/people/current/phd/Abijith.jpg

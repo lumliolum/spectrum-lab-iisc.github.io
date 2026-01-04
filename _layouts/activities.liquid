@@ -16,11 +16,9 @@ layout: default
     {% if page.activity_type == "talks_delivered" %}
       
       <div class="talks-delivered-content">
-        <p>The following is a selected list of invited talks that Prof. Chandra Sekhar Seelamantula has delivered at various premier forums.</p>
-        <hr>
         
         <div class="talk-list">
-          {% for talk in site.data.activities.talks_delivered %}
+          {% for talk in site.data.talks.talks_delivered %}
             <div class="talk-item">
               <h3 class="talk-title">{{ forloop.index }}. {{ talk.title }}</h3>
               <div class="talk-details">
@@ -37,11 +35,8 @@ layout: default
     {% elsif page.activity_type == "talks_organized" %}
       
       <div class="talks-organized-content">
-        <p>This page lists the invited talks that have been organized by Prof. Chandra Sekhar Seelamantula and the Spectrum Lab team, bringing distinguished speakers to share their expertise with the academic community.</p>
-        <hr>
-        
         <div class="organized-talk-list">
-          {% for talk in site.data.activities.talks_organized %}
+          {% for talk in site.data.talks.talks_organized %}
             <div class="organized-talk-item">
               <h3 class="organized-talk-title">{{ forloop.index }}. {{ talk.title }}</h3>
               <div class="organized-talk-speaker">

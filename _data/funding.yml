@@ -1,29 +1,177 @@
-- logo: /assets/img/funders/Qualcomm.jpg
-  url: https://www.qualcomm.com
-  name: "Qualcomm"
-  invert : false
+funders:
+  - logo: /assets/img/funders/Qualcomm.jpg
+    url: https://www.qualcomm.com
+    name: "Qualcomm"
+    invert : false
 
-- logo: /assets/img/funders/Zeiss.jpg
-  url: 
-  name: "Zeiss"
-  invert : false
+  - logo: /assets/img/funders/Zeiss.jpg
+    url: 
+    name: "Zeiss"
+    invert : false
 
-- logo: /assets/img/funders/National_Research_Foundation_logo.svg
-  url: https://serb.gov.in/
-  name: "National Research Foundation"
-  invert : false
+  - logo: /assets/img/funders/National_Research_Foundation_logo.svg
+    url: https://serb.gov.in/
+    name: "National Research Foundation"
+    invert : false
 
-- logo: /assets/img/funders/goi.svg
-  url: https://www.education.gov.in/
-  name: "Ministry of Education"
-  invert : false
+  - logo: /assets/img/funders/goi.svg
+    url: https://www.education.gov.in/
+    name: "Ministry of Education"
+    invert : false
 
-- logo: /assets/img/funders/isro.png
-  url: https://www.isro.gov.in/
-  name: "Indian Space Research Organisation"
-  invert : false
+  - logo: /assets/img/funders/isro.png
+    url: https://www.isro.gov.in/
+    name: "Indian Space Research Organisation"
+    invert : false
 
-- logo: /assets/img/funders/IISc_Master_Seal_Transparent.png
-  url: https://www.iisc.ac.in
-  name: "Indian Institute of Science"
-  invert : false
+  - logo: /assets/img/funders/IISc_Master_Seal_Transparent.png
+    url: https://www.iisc.ac.in
+    name: "Indian Institute of Science"
+    invert : false
+
+projects:
+  - title: "Seismic source characterization using state-of-the-art signal processing and machine learning techniques"
+    agency: "Ministry of Earth Sciences"
+    role: "PI"
+    amount: "7 Lakhs"
+    duration: "2023 - 2025"
+    investigators: "Prof. Surendra Nadh Somala (IIT Hyderabad)"
+
+  - title: "A robust, non-convex optimization framework for analysis and synthesis sparse models"
+    agency: "SERB — Core Research Grant"
+    role: "PI"
+    amount: "23 Lakhs"
+    duration: "2021 - 2024"
+    investigators: "Prof. Prasanta Kumar Ghosh (EE, IISc)"
+
+  - title: "Adaptive low-rank sparse decomposition"
+    agency: "SERB-MATRICS"
+    role: "PI"
+    amount: "6 Lakhs"
+    duration: "2020 - 2023"
+
+  - title: "AI powered diagnostics for wireless capsule endoscopy"
+    agency: "Bill & Melinda Gates Foundation & DBT-BIRAC"
+    role: "PI"
+    amount: "2 Lakhs"
+    duration: "2020 - 2022"
+
+  - title: "iCare — Artificial intelligence powered solutions for eyecare (SERB-TARE)"
+    agency: "SERB"
+    role: "Co-PI"
+    amount: "18 Lakhs"
+    duration: "2019 - 2022"
+    investigators: "Mr. Harish Kumar J.R. (MIT, Manipal)"
+
+  - title: "Development of a high-speed neuromorphic imaging system"
+    agency: "Institute of Eminence (IoE), IISc"
+    role: "PI"
+    amount: "155 Lakhs"
+    duration: "2019 - 2021"
+    investigators: "Prof. Prasanta Ghosh, Prof. Kunal Chaudhury, et al."
+
+  - title: "In pursuit of a neuromorphic sampling theory"
+    agency: "Pratiksha Trust"
+    role: "Co-PI"
+    amount: "10 Lakhs"
+    duration: "2019 - 2020"
+    investigators: "Dr. Chetan Singh Thakur (DESE, IISc)"
+
+  - title: "Theoretical analysis of generative adversarial networks (GANs)"
+    agency: "Robert Bosch Centre for Cyberphysical Systems, IISc"
+    role: "PI"
+    amount: "2 Lakhs"
+    duration: "2019 - 2020"
+
+  - title: "Satellite image denoising and deconvolution in multiplicative noise"
+    agency: "ISRO-IISc Space Technology Cell"
+    role: "PI"
+    amount: "18 Lakhs"
+    duration: "2018 - 2020"
+    investigators: "Dr. Debajyoti Dhar, Mr. Ashutosh Gupta (SAC, Ahmedabad)"
+
+  - title: "Three-dimensional reconstruction using a neuromorphic event-based camera"
+    agency: "Pratiksha Trust"
+    role: "PI"
+    amount: "5 Lakhs"
+    duration: "2018 - 2019"
+    investigators: "Dr. Chetan Singh Thakur (DESE, IISc)"
+
+  - title: "Satellite image denoising in hardware"
+    agency: "ISRO-IISc Space Technology Cell"
+    role: "PI"
+    amount: "16 Lakhs"
+    duration: "2017 - 2020"
+    investigators: "Dr. GN Rathna (EE, IISc)"
+
+  - title: "An automated and efficient glaucoma prescreening system (IMPRINT Project)"
+    agency: "MHRD and ICMR"
+    role: "PI"
+    amount: "61 Lakhs"
+    duration: "2017 - 2019"
+    investigators: "Dr. Yogish Kamath (KMC, Manipal)"
+
+  - title: "A low-cost, portable, super-resolution ultrasound scanner (IMPRINT Project)"
+    agency: "MHRD and Ministry of Health and Family Welfare"
+    role: "PI"
+    amount: "82 Lakhs"
+    duration: "2016 - 2020"
+
+  - title: "Sub-Nyquist sampling — Challenges, fundamental limits, algorithms and applications"
+    agency: "Science and Engineering Research Board (SERB)"
+    role: "PI"
+    amount: "34 Lakhs"
+    duration: "2016 - 2018"
+
+  - title: "Masters project grants in signal processing and machine learning"
+    agency: "Robert Bosch Centre for Cyberphysical Systems at IISc"
+    role: "PI"
+    amount: "6 Lakhs"
+    duration: "2016 - 2017"
+
+  - title: "Development of a 3-D Riesz scanner"
+    agency: "ISRO-IISc Space Technology Cell"
+    role: "PI"
+    amount: "15 Lakhs"
+    duration: "2015 - 2018"
+    investigators: "Mr. Manish Saxena (SAC, Ahmedabad)"
+
+  - title: "Sparsity based reconstruction in high-frequency SONAR imaging"
+    agency: "Defense Research and Development Organization (DRDO) - IISc joint research programme"
+    role: "PI"
+    amount: "25 Lakhs"
+    duration: "2014 - 2018"
+    investigators: "Dr. P. Murali Krishna (NPOL, Cochin)"
+
+  - title: "Voice-activated camera steering (Demo-1, Demo-2)"
+    agency: "XII Plan Grant"
+    role: "PI"
+    amount: "6 Lakhs"
+    duration: "2014 - 2016"
+
+  - title: "Development of text-to-speech synthesis systems for Indian languages - Phase II"
+    agency: "Department of Information Technology"
+    role: "Co-PI"
+    amount: "89 Lakhs"
+    duration: "2012 - 2017"
+    investigators: "Prof. Hema Murthy (IITM), Prof. S. R. M. Prasanna (IITG), et al."
+
+  - title: "Robust and efficient signal processing techniques for multicomponent FM signal parameter estimation"
+    agency: "Indian Space Research Organization (ISRO) - IISc Space Technology Cell"
+    role: "PI"
+    amount: "13 Lakhs"
+    duration: "2012 - 2015"
+
+  - title: "Exploring the dynamics of acoustic landscape in field cricket choruses using microphone arrays"
+    agency: "Council for Scientific and Industrial Research (CSIR)"
+    role: "Co-PI"
+    amount: "21 Lakhs"
+    duration: "2010 - 2014"
+    investigators: "Prof. Rohini Balakrishnan (CES, IISc)"
+
+  - title: "Interdisciplinary centre in neuroscience and Technology"
+    agency: "Department of Science and Technology"
+    role: "Co-PI"
+    amount: "1300 Lakhs (Share: 25 Lakhs)"
+    duration: "2010 - 2014"
+    investigators: "Prof. V. Ravindranath, Prof. A. Murthy, et al."

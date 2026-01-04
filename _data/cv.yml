@@ -2,96 +2,116 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Chandra Sekhar Seelamantula
+    - name: Designation
+      value: Professor, Department of Electrical Engineering, IISc
     - name: Date of Birth
-      value: 14th March 1879
+      value: August 5, 1976
     - name: Languages
-      value: English, German
+      value: Telugu, Hindi, English, Kannada, Tamil
 
 - title: Education
   type: time_table
   contents:
     - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+      institution: Indian Institute of Science, Bangalore
+      year: 1999 - 2005
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - Department of Electrical Communication Engineering (ECE)
+        - PhD Fellowship from IBM India Research Lab
+    - title: Bachelor of Engineering (B.E.)
+      institution: Osmania University College of Engineering, Hyderabad
+      year: 1995 - 1999
       description:
-        - Description 1.
-        - Description 2.
+        - Department of Electronics and Communication Engineering (ECE)
+        - First rank holder
+        - Recipient of The Outstanding Student award, Prof. K. K. Nair Gold Medal, and Best Thesis Award
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Professor
+      institution: Department of Electrical Engineering, IISc
+      year: Sept 2020 - Present
+    - title: Chair, GATE-JAM Office
+      institution: IISc
+      year: June 2020 - May 2024
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+        - Organizing Chair (GATE 2024)
+    - title: Associate Professor
+      institution: Department of Electrical Engineering, IISc
+      year: Sept 2014 - Sept 2020
+    - title: Assistant Professor
+      institution: Department of Electrical Engineering, IISc
+      year: July 2009 - Sept 2014
+    - title: Adjunct Faculty
+      institution: Centre for Neuroscience, IISc
+      year: July 2012 - July 2021
+    - title: Postdoctoral Fellow
+      institution: Biomedical Imaging Group, Ecole polytechnique fédérale de Lausanne (EPFL), Switzerland
+      year: April 2006 - July 2009
+    - title: Technology Consultant
+      institution: M/s. Esqube Communication Solutions Pvt. Ltd., Bangalore
+      year: Oct 2005 - March 2006
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
+- title: Research Expertise
+  type: list
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - Computational Imaging
+    - Generative AI
+    - Artificial Intelligence/Machine Learning for Healthcare
+    - Biomedical Imaging
+    - Signal Processing
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2022
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - Outstanding Editorial Board Member Award, IEEE Transactions on Image Processing
+    - year: 2019-2025
       items:
-        - Max Planck Medal
+        - Qualcomm Innovation Fellowship awards (9 awards, co-recipient with PhD students)
+    - year: 2020
+      items:
+        - Grand Challenges Exploration — India (Round 5) research award (Gates Foundation & BIRAC)
+    - year: 2018
+      items:
+        - Digital Health Prize, National Bio-Entrepreneurship Competition (NBEC)
+    - year: 2014
+      items:
+        - Top 10% Best Paper Award, IEEE International Conference on Image Processing
+    - year: 2013
+      items:
+        - Prof. Priti Shankar Teaching Award, IISc
 
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
+- title: Professional Recognition
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - Elected to IEEE Bio-imaging and Signal Processing Technical Committee (June 2025)
+    - Steering Committee, IEEE International Symposium on Biomedical Imaging (ISBI) (June 2025)
+    - IEEE Technical Committee on Computational Imaging (2020 onward)
+    - Senior Member, IEEE (since Oct 2012)
+    - Expert member, DBT and TDB panels
+
+- title: Editorial Roles
+  type: time_table
+  contents:
+    - title: Editorial Board Member
+      institution: Nature Scientific Data
+      year: 2024 - Present
+    - title: Senior Area Editor
+      institution: IEEE Transactions on Image Processing
+      year: March 2022 - Present
+    - title: Associate Editor
+      institution: IEEE Transactions on Image Processing
+      year: March 2018 - March 2020
+    - title: Senior Area Editor
+      institution: IEEE Signal Processing Letters
+      year: May 2017 - May 2021
+    - title: Associate Editor
+      institution: IEEE Signal Processing Letters
+      year: 2013 - 2017
+    - title: Associate Editor
+      institution: SPIE Journal of Electronic Imaging
+      year: 2014 - 2018

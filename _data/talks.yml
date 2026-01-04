@@ -1,0 +1,189 @@
+# Talks Data - Prof. Chandra Sekhar Seelamantula
+# Separated from activities for better organization
+
+talks_delivered:
+  - title: "Sparsity driven super-resolution ultrasound imaging"
+    venue: "Axis Bank Medical Image Computing Workshop, IISc"
+    date: "February 24-25, 2023"
+    type: "Workshop"
+
+  - title: "Neuromorphic Sampling"
+    venue: "Asilomar Conference on Signals, Systems, and Computing, 2021"
+    date: "October 31- November 3, 2021"
+    type: "Conference"
+    note: "Virtual"
+
+  - title: "Generalized weighted lp minimization for accurate interferometric phase estimation"
+    venue: "DMV-OMG Annual Conference (Clifford Analysis and Phase Retrieval in Imaging)"
+    date: "September 27 - October 1, 2021"
+    type: "Conference"
+    note: "Virtual"
+
+  - title: "Healthcare in the age of AI"
+    venue: "IEEE SPS Winter School on Biomedical Signal and Image Processing"
+    date: "November 12-14, 2019"
+    type: "Keynote"
+
+  - title: "Deep learning for sparse coding"
+    venue: "Winter School on Speech and Audio Processing (WiSSAP) 2019"
+    date: "January 27-29, 2019"
+    type: "Winter School"
+
+  - title: "Unrolled iterative algorithms for sparse coding"
+    venue: "International Conference on Signal Processing and Communications (SPCOM), IISc"
+    date: "July 16-19, 2018"
+    type: "Special Session"
+    note: "Special session on Deep Learning"
+
+  - title: "There's more to a spectrogram than meets the eye"
+    venue: "International Conference on Signal Processing and Communications (SPCOM), IISc"
+    date: "July 16-19, 2018"
+    type: "Special Session"
+    note: "Special session on Speech Processing"
+
+  - title: "The BIG bang. Twenty Years of Biomedical Imaging and Splines (TYBIS)"
+    venue: "École polytechnique fédérale de Lausanne"
+    date: "March 23, 2018"
+    type: "Invited Talk"
+
+  - title: "ESOLA: Epoch-synchronous overlap-add for speech applications"
+    venue: "Winter School in Speech and Audio Processing (WiSSAP), Indian Institute of Technology Guwahati"
+    date: "January 19-22, 2018"
+    type: "Winter School"
+
+  - title: "Sub-Nyquist sampling"
+    venue: "Osmania University College of Engineering Centenary Conference, Hyderabad"
+    date: "December 29-30, 2017"
+    type: "Tutorial"
+
+  - title: "Deep learning meets sparse coding"
+    venue: "Brain, Computation, and Learning workshop, IISc, funded by Pratiksha Trust"
+    date: "January 9-12, 2017"
+    type: "Workshop"
+
+  - title: "The Riesz transform -- A new tool for spectro-temporal analysis of speech signals"
+    venue: "IEEE Israel Section International Conference on the Science of Electrical Engineering (ICSEE), Symposium on Speech and Audio Processing, held in Eilat, Israel"
+    date: "November 16-18, 2016"
+    type: "Keynote"
+
+  - title: "What can signal processing do for coherent imaging?"
+    venue: "Johannes Kepler University (Zentrum für Oberflächen und Nanoanalytik), Linz, Austria"
+    date: "June 28, 2016"
+    type: "Invited Talk"
+
+  - title: "Phase retrieval in shift-invariant spaces and application to optical imaging"
+    venue: "Volkswagen Stiftung MOIMA Symposium on Mathematical Optics, Image Modelling, and Algorithms, at Schloss Herrenhausen, Hannover, Germany"
+    date: "June 20-25, 2016"
+    type: "Symposium"
+
+  - title: "Exact phase retrieval in principal shift-invariant spaces"
+    venue: "Department of Electrical Engineering, Indian Institute of Technology Bombay, Mumbai"
+    date: "May 12, 2016"
+    type: "Invited Talk"
+
+  - title: "Sub-Nyquist sampling -- Recent advances and applications"
+    venue: "Twenty Second National Conference on Communications (NCC), Indian Institute of Technology Guwahati"
+    date: "March 4, 2016"
+    type: "Tutorial"
+
+  - title: "Speech prosody modification"
+    venue: "Workshop on Text-to-Speech synthesis, Dhirubhai Ambani Institute of Information and Communication Technology, Gandhinagar"
+    date: "June 16-19, 2014"
+    type: "Workshop"
+
+  - title: "Active shapes, Visualization and Data Analytics Seminar"
+    venue: "Department of Computer Science, University of Vienna, Austria"
+    date: "May 21, 2014"
+    type: "Seminar"
+
+talks_organized:
+  - title: "An Introduction to Neuromorphic Computing with Intel Loihi"
+    speaker: "Ashish Rao Mangalore"
+    speaker_affiliation: "Doctoral resident at Intel Labs, Munich, Germany"
+    date: "February 20, 2023"
+
+  - title: "Proper Definition of Dirichlet Conditions and Convergence of Fourier Representations"
+    speaker: "Prof. Anubha Gupta"
+    speaker_affiliation: "Indraprastha Institute of Information Technology (IIIT) Delhi"
+    date: "January 11, 2023"
+
+  - title: "Advances in imaging and segmentation of thalamic nuclei with applications"
+    speaker: "Prof. Manoj Saranathan"
+    speaker_affiliation: "Professor of Radiology at UMass Chan Medical School in Worcester, Massachusetts"
+    date: "January 2, 2023"
+
+  - title: "Digital Acquisition via Modulo Folding: Revisiting the Legacy of Shannon-Nyquist, Prony, Schoenberg, Pisarenko and Radon"
+    speaker: "Dr. Ayush Bhandari"
+    speaker_affiliation: "Imperial College, London"
+    date: "June 1, 2022"
+
+  - title: "From compressed sensing to deep learning: tasks, structures, and models"
+    speaker: "Prof. Yonina Eldar"
+    speaker_affiliation: "Weizmann Institute of Science, Israel"
+    date: "December 18, 2019"
+
+  - title: "Probing New Frontiers In Computational Photography and Displays"
+    speaker: "Kshitij Marwah"
+    speaker_affiliation: "Camera Culture MIT Media Lab"
+    date: "August 31, 2012"
+
+  - title: "There is more to a picture than meets the eye -- Recent advances in image forensics"
+    speaker: "N. Memon"
+    speaker_affiliation: "IEEE Distinguished Lecture"
+    date: "August 21, 2012"
+    note: "The talk was jointly organized by the IEEE Signal Processing Society, Bangalore chapter, IEEE Bangalore section, and the Department of Electrical Engineering, IISc."
+
+  - title: "Regularized auto-associative neural networks for speaker recognition"
+    speaker: "Sri Sivaram Garimella"
+    speaker_affiliation: "Johns Hopkins University, Baltimore"
+    date: "August 3, 2012"
+    note: "Co-sponsored by IEEE Signal Processing Society, Bangalore chapter."
+
+  - title: "Compressed sensing and related topics: Theory and applications"
+    speaker: "Angshul Majumdar"
+    speaker_affiliation: "Department of Electrical and Computer Engineering, University of British Columbia, Canada"
+    date: "April 27, 2012"
+    note: "Co-sponsored by IEEE Signal Processing Society, Bangalore chapter."
+
+  - title: "Analysis and processing of continuous data streams in industrial applications"
+    speaker: "Lakshminarayan Choudur"
+    speaker_affiliation: "Principal Research Scientist from the Hewlett Packard Laboratories, California, USA"
+    date: "April 10, 2012"
+    note: "Co-sponsored by IEEE Signal Processing Society, Bangalore chapter."
+
+  - title: "HIVIPS - Opportunities at Hitachi Labs"
+    speaker: "A. Ito and K. Yanai"
+    speaker_affiliation: "Hitachi India Labs, Bangalore"
+    date: "March 19, 2012"
+
+  - title: "Accelerating dynamic imaging by exploiting sparsity and low-rank structure"
+    speaker: "Mathews Jacob"
+    speaker_affiliation: "Department of Biomedical Engineering, University of Rochester, U. S. A"
+    date: "August 31, 2010"
+    note: "Co-sponsored by IEEE Signal Processing Society, Bangalore chapter."
+
+  - title: "Auditory motivated features for robust speech recognition"
+    speaker: "Saikat Chatterjee"
+    speaker_affiliation: "Royal Institute of Technology (KTH), Sweden"
+    date: "February 2, 2010"
+
+  - title: "Virtual surround"
+    speaker: "Ravi Shenoy"
+    speaker_affiliation: "Research engineer at Nokia R&D Labs, Bangalore"
+    date: "January 27, 2010"
+
+  - title: "Web-scale processing"
+    speaker: "Malcolm Slaney"
+    speaker_affiliation: "Yahoo! U. S. A."
+    date: "January 20, 2010"
+
+  - title: "Acoustic inverse problems"
+    speaker: "Rakesh"
+    speaker_affiliation: "Department of Mathematics, U. Delaware, U. S. A."
+    date: "October 28, 2009"
+
+  - title: "Coherent imaging - from tissue to molecule"
+    speaker: "Theo Lasser"
+    speaker_affiliation: "Director of Biomedical Optics Laboratory, École polytechnique fédérale de Lausanne, Switzerland"
+    date: "September 14, 2009"
+    website: "http://lob.epfl.ch/"

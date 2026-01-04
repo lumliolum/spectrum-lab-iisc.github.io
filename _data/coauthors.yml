@@ -1,27 +1,432 @@
-"mohammed":
-  - firstname: ["Mohd", "Adnan", "A."]
-    url: /labmembers/
-"adnan":
-  - firstname: ["Mohd", "Mohammed", "M."]
-    url: /labmembers/
-"lasby":
-  - firstname: ["Mike", "Michael", "M."]
-    url: /labmembers/
-"mohammadshahi":
-  - firstname: ["Aida", "A."]
-    url: /labmembers/
-"jain":
-  - firstname: ["Rohan", "R."]
-    url: /labmembers/
-"feng":
-  - firstname: ["Yufan", "Y."]
-    url: /labmembers/
-"pote":
-  - firstname: ["Tejas", "T."]
-    url: /labmembers/
-"ganaie":
-  - firstname: ["Muhammad Athar", "Muhammad", "Athar", "A."]
-    url: /labmembers/
-"uyuk":
-  - firstname: ["Cem", "C."]
-    url: /labmembers/
+---
+pediredla:
+- firstname:
+  - Aditya Kumar
+  - A. K.
+  - A.K.
+  - A.
+  url: "/people/alumni/mtech-graduates/2011/aditya_kumar_pediredla/"
+reddy:
+- firstname:
+  - M. Nagarjuna
+  - M. N.
+  - M.N.
+  - M.
+  url: "/people/alumni/mtech-graduates/2011/m_nagarjuna_reddy/"
+- firstname:
+  - Ramakrishna
+  - R.
+  url: "/people/alumni/mtech-graduates/2013/ramakrishna_reddy/"
+mukherjee:
+- firstname:
+  - Subhadip
+  - S.
+  url: "/people/alumni/mtech-graduates/2012/subhadip_mukherjee/"
+- firstname:
+  - Subhadip
+  - S.
+  url: "/people/alumni/phd-graduates/2018/subhadip_mukherjee/"
+sekuboyina:
+- firstname:
+  - Anjany Kumar
+  - A. K.
+  - A.K.
+  - A.
+  url: "/people/alumni/mtech-graduates/2013/anjany_kumar_sekuboyina/"
+m:
+- firstname:
+  - Arun
+  - A.
+  url: "/people/alumni/mtech-graduates/2013/arun_m/"
+- firstname:
+  - Manjula
+  - M.
+  url: "/people/current/administrator/manjula/"
+manoj:
+- firstname:
+  - Pavan
+  - P.
+  url: "/people/alumni/mtech-graduates/2013/pavan_manoj/"
+panisetti:
+- firstname:
+  - Balakishore
+  - B.
+  url: "/people/alumni/mtech-graduates/2014/balakishore_panisetti/"
+basu:
+- firstname:
+  - Rupam
+  - R.
+  url: "/people/alumni/mtech-graduates/2014/rupam_basu/"
+khan:
+- firstname:
+  - Subhadeep
+  - S.
+  url: "/people/alumni/mtech-graduates/2014/subhadeep_khan/"
+soman:
+- firstname:
+  - Akshara
+  - A.
+  url: "/people/alumni/mtech-graduates/2015/akshara_soman/"
+subramanian:
+- firstname:
+  - Kishore
+  - K.
+  url: "/people/alumni/mtech-graduates/2015/kishore_subramanian/"
+de:
+- firstname:
+  - Anindita
+  - A.
+  url: "/people/alumni/mtech-graduates/2016/anindita_de/"
+gupta:
+- firstname:
+  - Ashutosh
+  - A.
+  url: "/people/alumni/mtech-graduates/2016/ashutosh_gupta/"
+mahapatra:
+- firstname:
+  - Debabrata
+  - D.
+  url: "/people/alumni/mtech-graduates/2016/debabrata_mahapatra/"
+bhowmik:
+- firstname:
+  - Aritra
+  - A.
+  url: "/people/alumni/mtech-graduates/2017/aritra_bhowmik/"
+r:
+- firstname:
+  - Deepak
+  - D.
+  url: "/people/alumni/mtech-graduates/2017/deepak_r/"
+shit:
+- firstname:
+  - Suprosanna
+  - S.
+  url: "/people/alumni/mtech-graduates/2017/suprosanna_shit/"
+sainathan:
+- firstname:
+  - Abhilash
+  - A.
+  url: "/people/alumni/mtech-graduates/2018/abhilash_sainathan/"
+bipinchandra:
+- firstname:
+  - Vaidya Dhavalkumar
+  - V. D.
+  - V.D.
+  - V.
+  url: "/people/alumni/mtech-graduates/2018/dhaval_kumar_vaidya/"
+bathala:
+- firstname:
+  - BanuPrasad
+  - B.
+  url: "/people/alumni/mtech-graduates/2021/banuprasad_bathala/"
+b.:
+- firstname:
+  - Bhanuprasad
+  - B.
+  url: "/people/alumni/mtech-graduates/2021/bhanuprasad_b/"
+singh:
+- firstname:
+  - Himanshu
+  - H.
+  url: "/people/alumni/mtech-graduates/2021/himanshu_singh/"
+- firstname:
+  - Rohit
+  - R.
+  url: "/people/current/mtech-students/2026/rohit_singh/"
+shivhare:
+- firstname:
+  - Anshul
+  - A.
+  url: "/people/alumni/mtech-graduates/2022/anshul_shivhare/"
+kasireddy:
+- firstname:
+  - Harishwar Reddy
+  - H. R.
+  - H.R.
+  - H.
+  url: "/people/alumni/mtech-graduates/2022/harishwar_reddy_kasireddy/"
+kongara:
+- firstname:
+  - Hemanth
+  - H.
+  url: "/people/alumni/mtech-graduates/2022/hemanth_kongara/"
+s. b.:
+- firstname:
+  - Abhishek
+  - A.
+  url: "/people/alumni/mtech-graduates/2023/abhishek_sb/"
+venkat:
+- firstname:
+  - Gayathri
+  - G.
+  url: "/people/alumni/mtech-graduates/2024/gayathri_venkat/"
+patidar:
+- firstname:
+  - Abhay
+  - A.
+  url: "/people/alumni/mtech-graduates/2025/abhay_patidar/"
+naithani:
+- firstname:
+  - Shivashish
+  - S.
+  url: "/people/alumni/mtech-graduates/2025/shivashish_naithani/"
+krishnan:
+- firstname:
+  - Sunder Ram
+  - S. R.
+  - S.R.
+  - S.
+  url: "/people/alumni/mtech-research-graduates/2011/sunder-ram/"
+kishan:
+- firstname:
+  - Harini
+  - H.
+  url: "/people/alumni/mtech-research-graduates/2013/harini-kishan/"
+menon:
+- firstname:
+  - Sreeram
+  - S.
+  url: "/people/alumni/mtech-research-graduates/2013/sreeram-menon/"
+venkitaraman:
+- firstname:
+  - Arun
+  - A.
+  url: "/people/alumni/mtech-research-graduates/2014/arun-venkitaraman/"
+aragonda:
+- firstname:
+  - Haricharan
+  - H.
+  url: "/people/alumni/mtech-research-graduates/2014/haricharan-aragonda/"
+nagesh:
+- firstname:
+  - Sudarshan
+  - S.
+  url: "/people/alumni/mtech-research-graduates/2014/sudarshan-nagesh/"
+bulusu:
+- firstname:
+  - Mani Madhoolika
+  - M. M.
+  - M.M.
+  - M.
+  url: "/people/alumni/mtech-research-graduates/2023/madhoolika/"
+killedar:
+- firstname:
+  - Vinayak
+  - V.
+  url: "/people/alumni/mtech-research-graduates/2023/vinayak-killedar/"
+shenoy:
+- firstname:
+  - Ravi
+  - R.
+  url: "/people/alumni/phd-graduates/2015/ravi_shenoy/"
+- firstname:
+  - Basty Ajay
+  - B. A.
+  - B.A.
+  - B.
+  url: "/people/alumni/phd-graduates/2017/ajay_shenoy/"
+mulleti:
+- firstname:
+  - Satish
+  - S.
+  url: "/people/alumni/phd-graduates/2017/satish_mulleti/"
+adiga:
+- firstname:
+  - Aniruddha
+  - A.
+  url: "/people/alumni/phd-graduates/2018/aniruddha-adiga/"
+sadasivan:
+- firstname:
+  - Jishnu
+  - J.
+  url: "/people/alumni/phd-graduates/2018/jishnu_sadasivan/"
+rudresh:
+- firstname:
+  - Sunil
+  - S.
+  url: "/people/alumni/phd-graduates/2020/sunil_rudresh/"
+j. r.:
+- firstname:
+  - Harish Kumar
+  - H. K.
+  - H.K.
+  - H.
+  url: "/people/alumni/phd-graduates/2021/harish_kumar/"
+dhiman:
+- firstname:
+  - Jitendra Kumar
+  - J. K.
+  - J.K.
+  - J.
+  url: "/people/alumni/phd-graduates/2021/jitendra_dhiman/"
+pokala:
+- firstname:
+  - Praveen Kumar
+  - P. K.
+  - P.K.
+  - P.
+  url: "/people/alumni/phd-graduates/2021/praveen_pokala/"
+jawali:
+- firstname:
+  - Dhruv
+  - D.
+  url: "/people/alumni/phd-graduates/2023/dhruv_jawali/"
+asokan:
+- firstname:
+  - Siddarth
+  - S.
+  url: "/people/alumni/phd-graduates/2023/siddarth_asokan/"
+nareddy:
+- firstname:
+  - Kartheek Kumar Reddy
+  - K. K. R.
+  - K.K.R.
+  - K.
+  url: "/people/alumni/phd-graduates/2024/kartheek_reddy/"
+bhagat:
+- firstname:
+  - Nikunj
+  - N.
+  url: "/people/alumni/post-doc/2023/nikunj_bhagat/"
+v:
+- firstname:
+  - Krishnagiri
+  - K.
+  url: "/people/alumni/research-associates/2023/krishnagiri_v/"
+seelamantula:
+- firstname:
+  - Chandra Sekhar
+  - C. S.
+  - C.S.
+  - C.
+  url: "/people/current/lab-director/css/"
+arandhara:
+- firstname:
+  - Bitupan
+  - B.
+  url: "/people/current/mtech-research/bitupan_arandhara/"
+manish:
+- firstname:
+  - Vydha
+  - V.
+  url: "/people/current/mtech-students/2026/Vydha_Manish/"
+haldar:
+- firstname:
+  - Dwaipayan
+  - D.
+  url: "/people/current/mtech-students/2026/dwaipayan_haldar/"
+patra:
+- firstname:
+  - Indranil
+  - I.
+  url: "/people/current/mtech-students/2026/indranil_patra/"
+madhav:
+- firstname:
+  - Arun
+  - A.
+  url: "/people/current/mtech-students/2026/pg_arun/"
+kumar:
+- firstname:
+  - Pritam
+  - P.
+  url: "/people/current/mtech-students/2026/pritam_kumar/"
+k r:
+- firstname:
+  - Ram Rathan
+  - R. R.
+  - R.R.
+  - R.
+  url: "/people/current/mtech-students/2026/ram-rathan/"
+mahajan:
+- firstname:
+  - Suchith
+  - S.
+  url: "/people/current/mtech-students/2026/saisuchith_mahajan/"
+sarkar:
+- firstname:
+  - Shubhankar
+  - S.
+  url: "/people/current/mtech-students/2026/shubhankar_sarkar/"
+praneeth:
+- firstname:
+  - Suraj Sai
+  - S. S.
+  - S.S.
+  - S.
+  url: "/people/current/mtech-students/2026/surajsai_praneeth/"
+bhandiwad:
+- firstname:
+  - Abhishek Shreekanth
+  - A. S.
+  - A.S.
+  - A.
+  url: "/people/current/phd-students/abhishek_sb/"
+kamath:
+- firstname:
+  - Abijith Jagannath
+  - A. J.
+  - A.J.
+  - A.
+  url: "/people/current/phd-students/abijith_kamath/"
+jain:
+- firstname:
+  - Adarsh
+  - A.
+  url: "/people/current/phd-students/adarsh-jain/"
+prabakar:
+- firstname:
+  - Akash
+  - A.
+  url: "/people/current/phd-students/akash_prabakar/"
+verma:
+- firstname:
+  - Ashish
+  - A.
+  url: "/people/current/phd-students/ashish_verma/"
+jha:
+- firstname:
+  - Ayush
+  - A.
+  url: "/people/current/phd-students/ayush-jha/"
+shanker:
+- firstname:
+  - Gouri
+  - G.
+  url: "/people/current/phd-students/gouri_shanker/"
+shetty:
+- firstname:
+  - Nishanth
+  - N.
+  url: "/people/current/phd-students/nishanth_shetty/"
+thomas:
+- firstname:
+  - Nygel George
+  - N. G.
+  - N.G.
+  - N.
+  url: "/people/current/phd-students/nygel-thomas/"
+balasubramanian:
+- firstname:
+  - Dhanasekaran
+  - D.
+  url: "/people/current/project-associates/dhanasekaran_balasubramanian/"
+prasath j.:
+- firstname:
+  - Madhava
+  - M.
+  url: "/people/current/project-associates/madhava_prasath/"
+gupte:
+- firstname:
+  - Parth
+  - P.
+  url: "/people/current/project-associates/parth_gupte/"
+haritz:
+- firstname:
+  - Pramath
+  - P.
+  url: "/people/current/project-associates/pramath_haritz/"
+shingare:
+- firstname:
+  - Yash
+  - Y.
+  url: "/people/current/project-associates/yash_shingare/"

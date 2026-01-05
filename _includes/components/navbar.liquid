@@ -14,6 +14,21 @@ A clean, Apple-inspired navigation bar.
   <nav id="navbar" class="navbar navbar-light navbar-expand-lg {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation" aria-label="Main navigation">
     <div class="container-fluid navbar-container">
       
+      {%- comment -%} ===== HAMBURGER TOGGLE (mobile - LEFT SIDE) ===== {%- endcomment -%}
+      <button 
+        class="navbar-toggler collapsed d-lg-none" 
+        type="button" 
+        id="navbar-drawer-toggle"
+        aria-controls="navbarNav" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
       {%- comment -%} ===== LOGO / BRAND ===== {%- endcomment -%}
       <a class="navbar-brand" href="{{ site.baseurl }}/" aria-label="{{ site.title }} - Home">
         {%- if site.logo -%}
@@ -37,7 +52,7 @@ A clean, Apple-inspired navigation bar.
         {%- if site.enable_navbar_social -%}
           <div class="navbar-brand social d-inline-block">
             {% include social.liquid %}
-          </div>
+          </div> 
         {%- endif -%}
         
         {%- if site.enable_darkmode -%}
@@ -45,24 +60,8 @@ A clean, Apple-inspired navigation bar.
         {%- endif -%}
       </div>
 
-      {%- comment -%} ===== HAMBURGER TOGGLE (mobile) ===== {%- endcomment -%}
-      <button 
-        class="navbar-toggler collapsed" 
-        type="button" 
-        data-bs-toggle="collapse" 
-        data-bs-target="#navbarNav" 
-        aria-controls="navbarNav" 
-        aria-expanded="false" 
-        aria-label="Toggle navigation"
-      >
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar top-bar"></span>
-        <span class="icon-bar middle-bar"></span>
-        <span class="icon-bar bottom-bar"></span>
-      </button>
-
       {%- comment -%} ===== NAVIGATION MENU ===== {%- endcomment -%}
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto flex-wrap">
           
           {%- comment -%} Get About page title {%- endcomment -%}

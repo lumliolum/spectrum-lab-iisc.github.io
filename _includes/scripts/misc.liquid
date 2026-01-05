@@ -181,28 +181,170 @@
     
     // Always show navbar when mobile menu is open  
     $(document).ready(function() {
-      $('#navbarNav').on('show.bs.collapse', function() {
-        navbar.classList.remove('navbar-hidden');
-        if (progressBar) {
-          progressBar.classList.remove('progress-hidden');
-          progressBar.style.transform = '';
-          progressBar.style.opacity = '';
-        }
-        if (progressContainer) {
-          progressContainer.classList.remove('progress-hidden');
-          progressContainer.style.transform = '';
-          progressContainer.style.opacity = '';
-        }
-      });
-      
-      // Prevent hiding while mobile menu is open
-      $('#navbarNav').on('shown.bs.collapse', function() {
-        navbar.classList.add('navbar-menu-open');
-      });
-      
-      $('#navbarNav').on('hidden.bs.collapse', function() {
-        navbar.classList.remove('navbar-menu-open');
-      });
+      // Watch for drawer open/close
+      const navbarCollapse = document.getElementById('navbarNav');
+      if (navbarCollapse) {
+        const observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.attributeName === 'class') {
+              if (navbarCollapse.classList.contains('drawer-open')) {
+                navbar.classList.add('navbar-menu-open');
+                navbar.classList.remove('navbar-hidden');
+              } else {
+                navbar.classList.remove('navbar-menu-open');
+              }
+            }
+          });
+        });
+        observer.observe(navbarCollapse, { attributes: true });
+      }
     });
   });
+</script>
+
+<!-- Mobile Drawer Navigation (Google Sites-style) -->
+<script type="text/javascript">
+  (function() {
+    // Wait for DOM ready
+    function initDrawer() {
+      const navbarCollapse = document.getElementById('navbarNav');
+      const navbarToggler = document.getElementById('navbar-drawer-toggle');
+      
+      if (!navbarCollapse || !navbarToggler) {
+        console.log('Drawer: Missing elements', { navbarCollapse, navbarToggler });
+        return;
+      }
+      
+      // Prevent multiple initializations
+      if (navbarCollapse.dataset.drawerInitialized === 'true') {
+        console.log('Drawer: Already initialized, skipping');
+        return;
+      }
+      navbarCollapse.dataset.drawerInitialized = 'true';
+      
+      console.log('Drawer: Initializing');
+      
+      // Create overlay element if not exists
+      let overlay = document.getElementById('drawer-overlay');
+      if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.id = 'drawer-overlay';
+        overlay.className = 'navbar-drawer-overlay';
+        document.body.appendChild(overlay);
+        console.log('Drawer: Created overlay');
+      }
+      
+      // Create close button for drawer if not exists
+      let closeBtn = navbarCollapse.querySelector('.drawer-close-btn');
+      if (!closeBtn) {
+        closeBtn = document.createElement('button');
+        closeBtn.className = 'drawer-close-btn';
+        closeBtn.setAttribute('aria-label', 'Close navigation menu');
+        closeBtn.innerHTML = '<i class="ti ti-x"></i>';
+        navbarCollapse.insertBefore(closeBtn, navbarCollapse.firstChild);
+        console.log('Drawer: Created close button');
+      }
+      
+      // Open drawer function
+      function openDrawer() {
+        console.log('Drawer: Opening');
+        navbarCollapse.classList.add('drawer-open');
+        overlay.classList.add('show');
+        navbarToggler.classList.remove('collapsed');
+        navbarToggler.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('drawer-is-open');
+      }
+      
+      // Close drawer function
+      function closeDrawer() {
+        console.log('Drawer: Closing');
+        navbarCollapse.classList.remove('drawer-open');
+        overlay.classList.remove('show');
+        navbarToggler.classList.add('collapsed');
+        navbarToggler.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('drawer-is-open');
+      }
+      
+      // Toggle drawer on hamburger click
+      navbarToggler.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Drawer: Toggler clicked');
+        if (navbarCollapse.classList.contains('drawer-open')) {
+          closeDrawer();
+        } else {
+          openDrawer();
+        }
+      });
+      
+      // Close drawer when clicking overlay
+      overlay.addEventListener('click', function(e) {
+        console.log('Drawer: Overlay clicked');
+        closeDrawer();
+      });
+      
+      // Close drawer when clicking close button
+      closeBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('Drawer: Close button clicked');
+        closeDrawer();
+      });
+      
+      // Close drawer when pressing Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navbarCollapse.classList.contains('drawer-open')) {
+          closeDrawer();
+        }
+      });
+      
+      // Handle nav link clicks - allow navigation, then close
+      navbarCollapse.querySelectorAll('a.nav-link:not(.dropdown-toggle), a.dropdown-item').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          // Let the default action happen (navigation)
+          // Close the drawer after a brief moment
+          setTimeout(closeDrawer, 50);
+        });
+      });
+      
+      // Handle dropdown toggle clicks in drawer - toggle submenu
+      navbarCollapse.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
+        toggle.addEventListener('click', function(e) {
+          if (window.innerWidth < 992) {
+            e.preventDefault();
+            e.stopPropagation();
+            const dropdown = this.closest('.dropdown');
+            if (dropdown) {
+              const isOpen = dropdown.classList.contains('show');
+              // Close all other dropdowns first
+              navbarCollapse.querySelectorAll('.dropdown.show').forEach(function(d) {
+                d.classList.remove('show');
+                d.querySelector('.dropdown-menu').style.display = 'none';
+              });
+              // Toggle this one
+              if (!isOpen) {
+                dropdown.classList.add('show');
+                dropdown.querySelector('.dropdown-menu').style.display = 'block';
+              }
+            }
+          }
+        });
+      });
+      
+      // Close drawer on window resize to desktop
+      window.addEventListener('resize', function() {
+        if (window.innerWidth >= 992 && navbarCollapse.classList.contains('drawer-open')) {
+          closeDrawer();
+        }
+      });
+      
+      console.log('Drawer: Initialization complete');
+    }
+    
+    // Run on DOMContentLoaded
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initDrawer);
+    } else {
+      initDrawer();
+    }
+  })();
 </script>

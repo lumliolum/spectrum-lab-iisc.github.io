@@ -13,6 +13,7 @@
   --global-theme-color-rgb: 0, 46, 153;
   --global-hover-color: #{$uc-red-color};
   --global-hover-text-color: #{$white-color};
+  --global-hover-bg-color: rgba(0, 0, 0, 0.05);
   --global-footer-bg-color: #{$grey-color-dark};
   --global-footer-text-color: #{$grey-color-light};
   --global-footer-link-color: #{$white-color};
@@ -98,6 +99,7 @@ html[data-theme="dark"] {
   --global-theme-color-rgb: 255, 103, 31;
   --global-hover-color: #{$uc-dark-orange-color};
   --global-hover-text-color: #{$white-color};
+  --global-hover-bg-color: rgba(255, 255, 255, 0.08);
   --global-footer-bg-color: #{$grey-color-light};
   --global-footer-text-color: #{$grey-color-dark};
   --global-footer-link-color: #{$black-color};

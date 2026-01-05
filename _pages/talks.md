@@ -2,7 +2,7 @@
 layout: page
 permalink: /talks/
 title: Talks
-description: Invited talks delivered and organized by Prof. Chandra Sekhar Seelamantula
+# description: Invited talks delivered and organized by Prof. Chandra Sekhar Seelamantula
 nav: true
 nav_order: 5
 dropdown: true
@@ -33,7 +33,7 @@ children:
         <i class="fas fa-microphone-alt"></i>
       </div>
       <h2>Talks Delivered</h2>
-      <p>Presentations by Prof. Seelamantula at conferences, workshops, and institutions worldwide</p>
+      <p>Presentations by Prof. Seelamantula and Team at conferences, workshops, and institutions worldwide</p>
       <span class="card-action">View Talks <i class="fas fa-arrow-right"></i></span>
     </a>
   </div>

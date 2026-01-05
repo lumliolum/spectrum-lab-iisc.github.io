@@ -116,3 +116,11 @@
     - image: /assets/img/album/eye-care/11.jpg
       caption: "We have an MoU with Carl Zeiss to set up a lab on AI for Eye Care at IISc."
       order: 10
+
+- event: An AI for Eye.
+  folder: around-the-css
+  description: "Around the Indian Institute of Science campus"
+  photos:
+    - image: assets/img/recognition/css/calicut_ai_eye.png
+      caption: "Prof. Chandra Sekhar Seelamantula, “An AI for an Eye,” International Conference on Artificial Intelligence for Healthcare (AIHC) 2025, National Institute of Technology (NIT) Calicut, Kerala"
+      order: 1

@@ -4,6 +4,8 @@ title: SplineSplat Accepted at SIGGRAPH Asia 2025
 slug: splinesplat-siggraph-asia-2025
 date: 2025-10-07
 inline: true
+badge: "Paper Accepted"
+icon: "fas fa-trophy"
 related_posts: false
 ---
 

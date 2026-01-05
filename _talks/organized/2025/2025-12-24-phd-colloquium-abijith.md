@@ -43,14 +43,3 @@ abstract: |
 candidate_bio: |
   Abijith Jagannath Kamath received the B.Tech. degree from the Department of Electrical and Electronics Engineering, National Institute of Technology Karnataka, Surathkal, India, in 2019. He is currently working towards the Ph.D. degree at the Department of Electrical Engineering (EE), Indian Institute of Science (IISc). In 2019, he worked as Project Associate at the Spectrum Lab, EE, IISc. His research interests include sampling theories, optimisation, and machine learning for computational sensing and imaging. He is a recipient of the Prime Minister's Research Fellowship from 2020 to 2024, the Outstanding Teaching Assistant Award from EE, IISc, in 2024, and the Qualcomm Innovation Fellowship India, in 2025.
 ---
-
-**Impact of the research:**
-
-This thesis develops a unified computational sensing framework centered on neuromorphic acquisition. The neuromorphic sampling paradigm offers several key advantages over conventional Shannon–Nyquist sampling:
-
-- **Super-resolution imaging**: Demonstrated 2.5× improvement beyond conventional resolution limits in ultrasound imaging for nondestructive evaluation
-- **Sampling efficiency**: Nearly ten-fold reduction in sampling requirements for ultrasound imaging; radar imaging with only 10% of conventional measurements
-- **High dynamic range**: New paradigm for HDR acquisition that trades dynamic range for opportunistic sampling
-- **Deep learning integration**: DeepFRI framework achieves state-of-the-art performance in noisy settings while retaining perfect reconstruction guarantees
-
-The proposed techniques have applications across multiple imaging modalities including ultrasound, radar, and event cameras, establishing new sensing paradigms that overcome fundamental limits of conventional imaging systems.

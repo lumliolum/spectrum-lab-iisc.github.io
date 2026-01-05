@@ -7,15 +7,19 @@ related_posts: false
 announce: false
 badge: "PhD Defense"
 icon: "fas fa-graduation-cap"
+link: "/talks/organized/2025/2025-02-13-phd-defense-kartheek/"
 time: "3:30 PM"
 venue: "Online (Microsoft Teams)"
 host: "Prof. Chandra Sekhar Seelamantula"
+candidate: "Mr. Nareddy Kartheek Kumar Reddy"
+supervisor: "Prof. Chandra Sekhar Seelamantula"
+examiner: "Prof. Subhasis Chaudhuri, IIT Bombay"
 abstract: |
-  Title: Tight Frames, Non-convex Regularizers, and Quantized Neural Networks for Solving Linear Inverse Problems
-  
-  Candidate: Mr. Nareddy Kartheek Kumar Reddy
-  
-  Research Supervisor: Prof. Chandra Sekhar Seelamantula
-  
-  External Examiner: Prof. Subhasis Chaudhuri, IIT Bombay
+  The recovery of a signal/image from compressed measurements involves formulating an optimization problem and solving it using an efficient algorithm. The optimization objective involves data fidelity, which is responsible for ensuring conformity of the reconstructed signal to the measurement, and a regularization term to enforce desired priors on the signal. More recently, the optimization based solvers have been replaced by deep neural networks.
+
+  This thesis considers three aspects of inverse problems in computational imaging: (i) Choice of data-fidelity term for compressed-sensing image recovery; (ii) Non-convex regularizers in the context of linear inverse problems; and (iii) Explainable deep-unfolded networks and the effect of quantization of model parameters.
+candidate_bio: |
+  Nareddy Kartheek Kumar Reddy is the 13th PhD student to graduate from the Spectrum Lab, Department of Electrical Engineering at the Indian Institute of Science (IISc). He received a Bachelor of Technology (Honors) degree from Indian Institute of Technology Kharagpur in 2016. Subsequently, he worked as a Senior Engineer at Honeywell Technology Solutions from 2016 to 2018, where he focused on developing device drivers for SD card and NAND Flash devices which went into production in Honeywell's flagship weather radar RDR7000.
+
+  Kartheek joined IISc as a Masters student in Signal Processing, and subsequently upgraded to PhD after receiving the prestigious Prime Minister's Research Fellowship in 2019. He is twice recipient of the Qualcomm Innovation Fellowship, once in 2020 & again in 2023.
 ---

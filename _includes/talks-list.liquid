@@ -24,7 +24,9 @@
               <time class="talk-date">{{ talk.date | date: "%B %d, %Y" }}</time>
             </div>
             <h3 class="talk-card-title">
-              <a href="{{ talk.url | relative_url }}">{{ talk.title }}</a>
+              <a href="{{ talk.url | relative_url }}">
+                {{ talk.title }}
+              </a>
             </h3>
             {%- if talk.speaker -%}
               <div class="talk-speaker">
@@ -56,6 +58,7 @@
               <span class="talk-venue">
                 <i class="fas fa-map-marker-alt"></i>
                 {{ talk.venue | truncate: 40 }}</span>
+              <i class="fas fa-arrow-right talk-arrow-icon"></i>
             </div>
           </article>
         {%- endfor -%}

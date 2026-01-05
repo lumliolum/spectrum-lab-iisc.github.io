@@ -15,7 +15,7 @@
 .talks-intro {
   text-align: center;
   margin-bottom: 3rem;
-  
+
   p {
     font-size: 1.1rem;
     color: var(--global-text-color-light);
@@ -29,7 +29,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -47,27 +47,27 @@
   border-radius: 16px;
   text-decoration: none;
   transition: all 0.3s ease;
-  
+
   &:hover {
     border-color: var(--global-theme-color);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
     transform: translateY(-4px);
-    
+
     .card-icon {
       background: var(--global-theme-color);
       color: white;
       transform: scale(1.1);
     }
-    
+
     .card-action {
       color: var(--global-theme-color);
-      
+
       i {
         transform: translateX(4px);
       }
     }
   }
-  
+
   .card-icon {
     width: 80px;
     height: 80px;
@@ -78,24 +78,24 @@
     justify-content: center;
     margin-bottom: 1.5rem;
     transition: all 0.3s ease;
-    
+
     i {
       font-size: 2rem;
       color: var(--global-theme-color);
     }
   }
-  
+
   &:hover .card-icon i {
     color: white;
   }
-  
+
   h2 {
     font-size: 1.4rem;
     font-weight: 700;
     color: var(--global-text-color);
     margin-bottom: 0.75rem;
   }
-  
+
   p {
     font-size: 0.95rem;
     color: var(--global-text-color-light);
@@ -103,7 +103,7 @@
     margin-bottom: 1.5rem;
     flex-grow: 1;
   }
-  
+
   .card-action {
     font-size: 0.9rem;
     font-weight: 600;
@@ -112,7 +112,7 @@
     align-items: center;
     gap: 0.5rem;
     transition: all 0.3s ease;
-    
+
     i {
       transition: transform 0.3s ease;
     }
@@ -159,6 +159,7 @@
   transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   &:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -183,6 +184,16 @@
     color: var(--global-text-color);
     text-decoration: none;
 
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
     &:hover {
       color: var(--global-theme-color);
     }
@@ -193,6 +204,22 @@
   margin-top: auto;
   padding-top: 0.75rem;
   border-top: 1px solid var(--global-divider-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.talk-arrow-icon {
+  font-size: 0.9em;
+  color: var(--global-theme-color);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.talk-card:hover .talk-arrow-icon {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 // -----------------------------------------------------------------------------
@@ -208,20 +235,61 @@
   color: white;
   background: var(--global-theme-color);
 
-  &--talk { background: #6366f1; }
-  &--seminar { background: #8b5cf6; }
-  &--lecture { background: #0ea5e9; }
-  &--symposium { background: #f59e0b; }
-  &--sparc-course { background: #10b981; }
-  &--phd-thesis-defense { background: #ec4899; }
-  &--phd-thesis-colloquium { background: #f472b6; }
-  &--workshop { background: #14b8a6; }
-  &--tutorial { background: #06b6d4; }
-  &--keynote { background: #ef4444; }
-  &--conference { background: #8b5cf6; }
-  &--winter-school { background: #10b981; }
-  &--special-session { background: #f472b6; }
-  &--invited-talk { background: #6366f1; }
+  &--talk {
+    background: #6366f1;
+  }
+
+  &--seminar {
+    background: #8b5cf6;
+  }
+
+  &--lecture {
+    background: #0ea5e9;
+  }
+
+  &--symposium {
+    background: #f59e0b;
+  }
+
+  &--sparc-course {
+    background: #10b981;
+  }
+
+  &--phd-thesis-defense {
+    background: #ec4899;
+  }
+
+  &--phd-thesis-colloquium {
+    background: #f472b6;
+  }
+
+  &--workshop {
+    background: #14b8a6;
+  }
+
+  &--tutorial {
+    background: #06b6d4;
+  }
+
+  &--keynote {
+    background: #ef4444;
+  }
+
+  &--conference {
+    background: #8b5cf6;
+  }
+
+  &--winter-school {
+    background: #10b981;
+  }
+
+  &--special-session {
+    background: #f472b6;
+  }
+
+  &--invited-talk {
+    background: #6366f1;
+  }
 }
 
 .talk-date {
@@ -374,19 +442,48 @@
   color: white;
   margin-bottom: 0.75rem;
 
-  &--talk { background: #6366f1; }
-  &--seminar { background: #8b5cf6; }
-  &--lecture { background: #0ea5e9; }
-  &--symposium { background: #f59e0b; }
+  &--talk {
+    background: #6366f1;
+  }
+
+  &--seminar {
+    background: #8b5cf6;
+  }
+
+  &--lecture {
+    background: #0ea5e9;
+  }
+
+  &--symposium {
+    background: #f59e0b;
+  }
+
   &--sparc-course,
-  &--course { background: #10b981; }
+  &--course {
+    background: #10b981;
+  }
+
   &--phd-defense,
-  &--phd-thesis-defense { background: #ec4899; }
+  &--phd-thesis-defense {
+    background: #ec4899;
+  }
+
   &--phd-colloquium,
-  &--phd-thesis-colloquium { background: #f472b6; }
-  &--workshop { background: #14b8a6; }
-  &--tutorial { background: #06b6d4; }
-  &--keynote { background: #ef4444; }
+  &--phd-thesis-colloquium {
+    background: #f472b6;
+  }
+
+  &--workshop {
+    background: #14b8a6;
+  }
+
+  &--tutorial {
+    background: #06b6d4;
+  }
+
+  &--keynote {
+    background: #ef4444;
+  }
 }
 
 .talk-title {

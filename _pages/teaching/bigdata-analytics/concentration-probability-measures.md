@@ -20,7 +20,13 @@ news:
     description: "First lecture of Module II: Concentration of Probability Measures."
 
 lectures:
-
+  - title: "Measure Concentration"
+    notes: "/assets/teaching/concentration-probability/MeasureConcentration.pdf"
+    description:
+    
+  - title: "Central Limit Theorem and Tailbounds"
+    notes: "/assets/teaching/concentration-probability/CLT-Tailbounds.pdf"
+    description:
 assignments:
 
 resources:

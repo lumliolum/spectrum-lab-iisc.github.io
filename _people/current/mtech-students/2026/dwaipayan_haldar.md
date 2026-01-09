@@ -10,7 +10,6 @@ linkedin_username: dwaipayan-haldar
 github: dwaipayanhaldar
 email: dwaipayanh@iisc.ac.in
 alias: dwaipayanh
-website: https://dwaipayanhaldar.github.io
 category: M.Tech Students
 year: 2026
 show: true

@@ -13,7 +13,6 @@ email: css@iisc.ac.in
 alias: css
 scholar_userid: 1g1i1B4AAAAJ
 twitter_username:
-website:
 category: Lab Director
 # cv_pdf: assets/cv/CSSCV.pdf
 show: true

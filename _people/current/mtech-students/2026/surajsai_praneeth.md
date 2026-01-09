@@ -13,7 +13,6 @@ email: surajs@iisc.ac.in
 alias: surajs
 scholar_userid:
 twitter_username: 
-website: 
 category: M.Tech Students
 year: 2026
 show: true

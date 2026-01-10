@@ -4,7 +4,7 @@ title: Mani Madhoolika Bulusu
 firstname: Mani Madhoolika
 lastname: Bulusu
 description: M.Tech Research Graduate
-img: assets/img/people/alumni/mtech-research/2023/madhoolika.png
+img: assets/img/people/alumni/mtech-research-graduates/2023/madhoolika.png
 website: 
 linkedin_username: 
 github_username:

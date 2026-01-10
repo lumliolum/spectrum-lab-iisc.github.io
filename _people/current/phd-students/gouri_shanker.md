@@ -4,7 +4,7 @@ title: Gouri Shanker
 firstname: Gouri
 lastname: Shanker
 description:  PhD Student
-img: assets/img/people/current/phd/gourishanker.png
+img: assets/img/people/current/phd-students/gourishanker.png
 website: https://www.linkedin.com/in/gourishankerjk/
 linkedin_username: gourishankerjk
 github_username: gourishankerjk

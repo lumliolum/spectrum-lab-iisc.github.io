@@ -4,7 +4,7 @@ title: Praveen Kumar Pokala
 firstname: Praveen
 lastname: Kumar Pokala
 description: Vice President, JP Morgan Chase & Co.
-img: assets/img/people/alumni/phd/2021/praveen-kumar-pokala.jpg
+img: assets/img/people/alumni/phd-graduates/2021/praveen-kumar-pokala.jpg
 website: www.linkedin.com/in/praveen-kumar-pokala-phd-73509014
 email: praveenkumar.pokala@gmail.com
 alias: praveenkumar_pokala

@@ -4,7 +4,7 @@ title: Indranil Patra
 firstname: Indranil
 lastname: Patra
 description: MTech Signal Processing
-img: assets/img/people/current/mtech/2026/indranil.jpg
+img: assets/img/people/current/mtech-students/indranil.jpg
 website: https://indranilpatra.vercel.app/
 linkedin_username: indranilpatra
 github_username: simplyrin2

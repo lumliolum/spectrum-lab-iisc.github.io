@@ -4,7 +4,7 @@ title: Vaidya Dhavalkumar Bipinchandra
 firstname: Vaidya
 lastname: Dhavalkumar Bipinchandra
 description: Scientist
-img: assets/img/people/alumni/mtech/2018/vaidya-dhavalkumar-bipinchandra.jpg
+img: assets/img/people/alumni/mtech-graduates/2018/vaidya-dhavalkumar-bipinchandra.jpg
 website: nan
 email: dhavalvaidya@hotmail.com
 alias: vaidya_dhavalkumar_bipinchandra

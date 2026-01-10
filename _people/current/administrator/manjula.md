@@ -4,7 +4,7 @@ title: Manjula M
 firstname: Manjula
 lastname: M
 description: Administrator
-img: assets/img/people/current/lab_director/manjula.jpg
+img: assets/img/people/current/administrator/manjula.jpg
 website: /contactus/
 linkedin_username:
 github_username:

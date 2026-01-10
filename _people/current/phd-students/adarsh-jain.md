@@ -4,7 +4,7 @@ title: Adarsh Jain
 firstname: Adarsh
 lastname: Jain
 description:  PhD Student
-img: assets/img/people/current/phd/Adarsh.jpeg
+img: assets/img/people/current/phd-students/Adarsh.jpeg
 website: https://adarshjcreation.github.io
 linkedin_username: www.linkedin.com/in/adarsh-jain-6548a3320
 github_username: adarshjcreation

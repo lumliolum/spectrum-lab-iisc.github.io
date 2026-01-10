@@ -4,7 +4,7 @@ title: Dhruv Jawali
 firstname: Dhruv
 lastname: Jawali
 description: PhD 
-img: assets/img/people/alumni/phd/2023/dhruv-jawali.jpg
+img: assets/img/people/alumni/phd-graduates/2023/dhruv-jawali.jpg
 linkedin_username: 
 github_username:
 category: PhD Graduates

@@ -5,7 +5,7 @@ firstname: Aditya Kumar
 lastname: Pediredla
 description: M.Tech
 website: https://web.cs.dartmouth.edu/people/adithya-k-pediredla
-img: assets/img/people/alumni/mtech/2011/adithya-k-pediredla.jpg
+img: assets/img/people/alumni/mtech-graduates/2011/adithya-k-pediredla.jpg
 email: adithya.k.pediredla@gmail.com
 scholar_userid: ey6n20kAAAAJ 
 category: M.Tech Graduates

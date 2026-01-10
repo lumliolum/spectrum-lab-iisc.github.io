@@ -4,7 +4,7 @@ title: Abhilash Sainathan
 firstname: Abhilash
 lastname: Sainathan
 description: ME SP
-img: assets/img/people/alumni/mtech/2018/abhilash_sainathan.jpg
+img: assets/img/people/alumni/mtech-graduates/2018/abhilash_sainathan.jpg
 website:
 linkedin_username: abhilash-sainathan-27273272
 github_username:

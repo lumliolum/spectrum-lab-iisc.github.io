@@ -4,7 +4,7 @@ title: Abijith J. Kamath
 firstname: Abijith Jagannath
 lastname: Kamath
 description: PhD Student
-img: assets/img/people/current/phd/Abijith.jpg
+img: assets/img/people/current/phd-students/Abijith.jpg
 website: https://kamathabijithj.github.io
 linkedin_username: abijith-kamath-556870111
 github_username: kamathabijithj

@@ -4,7 +4,7 @@ title: Jitendra Kumar Dhiman
 firstname: Jitendra Kumar
 lastname: Dhiman
 description: PhD 
-img: assets/img/people/alumni/phd/2021/jitendra-dhiman.png
+img: assets/img/people/alumni/phd-graduates/2021/jitendra-dhiman.png
 linkedin_username: 
 github_username:
 category: PhD Graduates

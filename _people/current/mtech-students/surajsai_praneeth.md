@@ -4,7 +4,7 @@ title: Suraj Sai Praneeth
 firstname: Suraj Sai
 lastname: Praneeth
 description: MTech CSA
-img: assets/img/people/current/mtech/2026/surajsai_praneeth.jpg
+img: assets/img/people/current/mtech-students/surajsai_praneeth.jpg
 website:
 orcid_id: 
 linkedin_username:

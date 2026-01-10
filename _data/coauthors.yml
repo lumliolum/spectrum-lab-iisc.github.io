@@ -154,7 +154,7 @@ singh:
 - firstname:
   - Rohit
   - R.
-  url: "/people/current/mtech-students/2026/rohit_singh/"
+  url: "/people/current/mtech-students/rohit_singh/"
 shivhare:
 - firstname:
   - Anshul
@@ -335,51 +335,51 @@ manish:
 - firstname:
   - Vydha
   - V.
-  url: "/people/current/mtech-students/2026/Vydha_Manish/"
+  url: "/people/current/mtech-students/Vydha_Manish/"
 haldar:
 - firstname:
   - Dwaipayan
   - D.
-  url: "/people/current/mtech-students/2026/dwaipayan_haldar/"
+  url: "/people/current/mtech-students/dwaipayan_haldar/"
 patra:
 - firstname:
   - Indranil
   - I.
-  url: "/people/current/mtech-students/2026/indranil_patra/"
+  url: "/people/current/mtech-students/indranil_patra/"
 madhav:
 - firstname:
   - Arun
   - A.
-  url: "/people/current/mtech-students/2026/pg_arun/"
+  url: "/people/current/mtech-students/pg_arun/"
 kumar:
 - firstname:
   - Pritam
   - P.
-  url: "/people/current/mtech-students/2026/pritam_kumar/"
+  url: "/people/current/mtech-students/pritam_kumar/"
 k r:
 - firstname:
   - Ram Rathan
   - R. R.
   - R.R.
   - R.
-  url: "/people/current/mtech-students/2026/ram-rathan/"
+  url: "/people/current/mtech-students/ram-rathan/"
 mahajan:
 - firstname:
   - Suchith
   - S.
-  url: "/people/current/mtech-students/2026/saisuchith_mahajan/"
+  url: "/people/current/mtech-students/saisuchith_mahajan/"
 sarkar:
 - firstname:
   - Shubhankar
   - S.
-  url: "/people/current/mtech-students/2026/shubhankar_sarkar/"
+  url: "/people/current/mtech-students/shubhankar_sarkar/"
 praneeth:
 - firstname:
   - Suraj Sai
   - S. S.
   - S.S.
   - S.
-  url: "/people/current/mtech-students/2026/surajsai_praneeth/"
+  url: "/people/current/mtech-students/surajsai_praneeth/"
 bhandiwad:
 - firstname:
   - Abhishek Shreekanth
@@ -390,7 +390,6 @@ bhandiwad:
 kamath:
 - firstname:
   - Abijith Jagannath
-  - Abijith J.
   - A. J.
   - A.J.
   - A.

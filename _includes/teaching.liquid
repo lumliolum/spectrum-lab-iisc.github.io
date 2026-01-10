@@ -5,7 +5,7 @@
   Uses the modular _teaching.scss design system.
 {%- endcomment -%}
 
-{%- assign all_courses = site.data.teaching -%}
+{%- assign all_courses = site.data.teaching.courses -%}
 {%- assign grouped_courses = all_courses | group_by: "type" -%}
 
 <div class="teaching-wrapper">

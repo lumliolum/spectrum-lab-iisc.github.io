@@ -4,7 +4,7 @@ title: Deepak R
 firstname: Deepak
 lastname: R
 description: ME SSA
-img: assets/img/people/alumni/mtech/2017/deepak_r.png
+img: assets/img/people/alumni/mtech-graduates/2017/deepak_r.png
 category: M.Tech Graduates
 show: true
 year: 2017

@@ -4,7 +4,7 @@ title: Shubhankar Sarkar
 firstname: Shubhankar
 lastname: Sarkar
 description: MTech Signal Processing
-img: assets/img/people/current/mtech/2026/shubhankar.jpg
+img: assets/img/people/current/mtech-students/shubhankar.jpg
 website:
 linkedin_username: shubhankar-sarkar-25a501211
 github_username: Subham-567

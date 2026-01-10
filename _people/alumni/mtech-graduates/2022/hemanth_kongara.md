@@ -4,7 +4,7 @@ title: Hemanth Kongara
 firstname: Hemanth
 lastname: Kongara
 description: M.Tech AI
-img: assets/img/people/alumni/mtech/2022/hemanth_kongara.jpg
+img: assets/img/people/alumni/mtech-graduates/2022/hemanth_kongara.jpg
 email: hemanthkongara35@gmail.com
 alias: hemanth_kongara
 scholar_userid: t9PSL5UAAAAJ

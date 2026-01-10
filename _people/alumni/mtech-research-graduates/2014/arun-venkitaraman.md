@@ -4,7 +4,7 @@ title: Arun Venkitaraman
 firstname: Arun
 lastname: Venkitaraman
 description: M.Tech Research Graduate
-img: assets/img/people/alumni/mtech-research/2014/arun-venkitaraman.jpg
+img: assets/img/people/alumni/mtech-research-graduates/2014/arun-venkitaraman.jpg
 website: 
 linkedin_username: arun-venkitaraman
 github_username:

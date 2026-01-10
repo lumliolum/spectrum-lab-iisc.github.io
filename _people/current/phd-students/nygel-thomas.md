@@ -4,7 +4,7 @@ title: Nygel George Thomas
 firstname: Nygel George
 lastname: Thomas
 description:  PhD Student
-img: assets/img/people/current/phd/Nygel.jpeg
+img: assets/img/people/current/phd-students/Nygel.jpeg
 website: https://www.linkedin.com/in/nygel-thomas/
 linkedin_username: nygel-thomas
 github_username: nygelakany

@@ -4,7 +4,7 @@ title: Harish Kumar J. R.
 firstname: Harish Kumar
 lastname: J. R.
 description: PhD 
-img: assets/img/people/alumni/phd/2021/harish-kumar.jpg
+img: assets/img/people/alumni/phd-graduates/2021/harish-kumar.jpg
 email: harish.jr@gmail.com
 alias: harish
 scholar_userid: 6tpDcKIAAAAJ

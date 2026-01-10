@@ -4,7 +4,7 @@ title: Satish Mulleti
 firstname: Satish
 lastname: Mulleti
 description: PhD
-img: assets/img/people/alumni/phd/2017/satish-mulleti.jpg
+img: assets/img/people/alumni/phd-graduates/2017/satish-mulleti.jpg
 email: mulleti.satish@gmail.com
 alias: satishmulleti
 scholar_userid: DUpWNNwAAAAJ

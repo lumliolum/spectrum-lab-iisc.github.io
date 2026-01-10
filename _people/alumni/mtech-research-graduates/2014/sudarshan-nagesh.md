@@ -4,7 +4,7 @@ title: Sudarshan Nagesh
 firstname: Sudarshan
 lastname: Nagesh
 description: M.Tech Research Graduate
-img: assets/img/people/alumni/mtech-research/2014/sudarshan-nagesh.jpg
+img: assets/img/people/alumni/mtech-research-graduates/2014/sudarshan-nagesh.jpg
 website: 
 linkedin_username: 
 github_username:

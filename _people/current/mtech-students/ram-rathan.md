@@ -4,7 +4,7 @@ title: Ram Rathan K R
 firstname: Ram Rathan
 lastname: K R
 description: MTech (SP)
-img: assets/img/people/current/mtech/2026/ram-rathan.jpg
+img: assets/img/people/current/mtech-students/ram-rathan.jpg
 website:
 linkedin_username: ram-rathan-k-r-iisc
 email: ramrathan.iisc@gmail.com

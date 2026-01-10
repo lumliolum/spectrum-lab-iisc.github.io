@@ -4,7 +4,7 @@ title: "Ravi Shenoy"
 firstname: Ravi
 lastname: Shenoy
 current_position: CTO at LightMetrics Technologies Pvt. Ltd.
-img: assets/img/people/alumni/phd/2015/ravi-shenoy.jpg
+img: assets/img/people/alumni/phd-graduates/2015/ravi-shenoy.jpg
 email: rashenoy@gmail.com
 alias: ravi_shenoy
 category: PhD Graduates

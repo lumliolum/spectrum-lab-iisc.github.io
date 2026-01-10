@@ -4,7 +4,7 @@ title: Anjany Kumar Sekuboyina
 firstname: Anjany Kumar
 lastname: Sekuboyina
 description: ME SSA
-img: assets/img/people/alumni/mtech/2013/anjany_kumar_sekuboyina.png 
+img: assets/img/people/alumni/mtech-graduates/2013/anjany_kumar_sekuboyina.png 
 website: https://mml.ikim.nrw/authors/anjany-sekuboyina/
 linkedin_username: 
 github_username:

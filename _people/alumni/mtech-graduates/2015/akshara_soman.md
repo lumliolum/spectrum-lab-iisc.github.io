@@ -4,7 +4,7 @@ title: Akshara Soman
 firstname: Akshara
 lastname: Soman
 description: ME SSA
-img: assets/img/people/alumni/mtech/2015/akshara_soman.png 
+img: assets/img/people/alumni/mtech-graduates/2015/akshara_soman.png 
 website: 
 linkedin_username: akshara-soman
 category: M.Tech Graduates

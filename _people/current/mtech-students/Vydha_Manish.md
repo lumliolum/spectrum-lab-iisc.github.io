@@ -4,7 +4,7 @@ title: Vydha Manish
 firstname: Vydha
 lastname: Manish
 description: MTech Signal Processing
-img: assets/img/people/current/mtech/2026/Vydha_Manish.jpg
+img: assets/img/people/current/mtech-students/Vydha_Manish.jpg
 website: https://www.linkedin.com/in/vydha-manish/
 linkedin_username: vydha-manish
 email: vydhamanish@iisc.ac.in

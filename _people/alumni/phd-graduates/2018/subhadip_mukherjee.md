@@ -4,7 +4,7 @@ title: Subhadip Mukherjee
 firstname: Subhadip
 lastname: Mukherjee
 description: PhD
-img: assets/img/people/alumni/phd/2018/subhadip-mukherjee.jpg
+img: assets/img/people/alumni/phd-graduates/2018/subhadip-mukherjee.jpg
 email: smukherjee@ece.iitkgp.ac.in
 alias: smukherjee
 scholar_userid: a4UlE_MAAAAJ

@@ -4,7 +4,7 @@ title: Haricharan Aragonda
 firstname: Haricharan
 lastname: Aragonda
 description: M.Tech Research Graduate
-img: assets/img/people/alumni/mtech-research/2014/haricharan-aragonda.jpg
+img: assets/img/people/alumni/mtech-research-graduates/2014/haricharan-aragonda.jpg
 email: haricharan.a@gmail.com
 alias: haricharan_aragonda
 website:

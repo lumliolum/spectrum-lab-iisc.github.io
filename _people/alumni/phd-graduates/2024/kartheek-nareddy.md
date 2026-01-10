@@ -9,7 +9,7 @@ email: kartheekkumar65@gmail.com
 alias: nareddyreddy
 scholar_userid: nan
 category: PhD Graduates
-img: assets/img/people/alumni/phd/2024/kartheek-nareddy.jpg
+img: assets/img/people/alumni/phd-graduates/2024/kartheek-nareddy.jpg
 show: true
 year: 2024
 

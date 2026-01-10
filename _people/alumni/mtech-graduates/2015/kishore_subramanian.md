@@ -4,7 +4,7 @@ title: Kishore Subramanian
 firstname: Kishore
 lastname: Subramanian
 description: ME SP
-img: assets/img/people/alumni/mtech/2015/kishore_subramanian.jpg
+img: assets/img/people/alumni/mtech-graduates/2015/kishore_subramanian.jpg
 website:
 linkedin_username: kishoresubramanianb
 github_username:

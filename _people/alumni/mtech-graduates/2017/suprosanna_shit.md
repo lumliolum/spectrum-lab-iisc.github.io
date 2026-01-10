@@ -4,7 +4,7 @@ title: Suprosanna Shit
 firstname: Suprosanna
 lastname: Shit
 description: ME SP
-img: assets/img/people/alumni/mtech/2017/suprosanna-shit.jpg
+img: assets/img/people/alumni/mtech-graduates/2017/suprosanna-shit.jpg
 website: 
 linkedin_username: 
 github_username:

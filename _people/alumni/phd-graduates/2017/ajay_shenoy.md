@@ -4,7 +4,7 @@ title: Basty Ajay Shenoy
 firstname: Basty Ajay
 lastname: Shenoy
 description: PhD 
-img: assets/img/people/alumni/phd/2017/ajay-shenoy.jpg
+img: assets/img/people/alumni/phd-graduates/2017/ajay-shenoy.jpg
 website: https://ajayshenoy.github.io/genai_intro
 linkedin_username: 
 github_username:

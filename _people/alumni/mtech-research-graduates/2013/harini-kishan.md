@@ -4,7 +4,7 @@ title: Harini Kishan
 firstname: Harini
 lastname: Kishan
 description: M.Tech Research Graduate
-img: assets/img/people/alumni/mtech-research/2013/harini-kishan.jpg
+img: assets/img/people/alumni/mtech-research-graduates/2013/harini-kishan.jpg
 website: 
 linkedin_username: harinikishan
 github_username:

@@ -4,7 +4,7 @@ title: Akash Prabakar
 firstname: Akash
 lastname: Prabakar
 description:  PhD Student
-img: assets/img/people/current/phd/AkashPrabakar.jpg
+img: assets/img/people/current/phd-students/AkashPrabakar.jpg
 website: https://www.linkedin.com/in/akash-prabakar/
 linkedin_username: akash-prabakar
 github_username: AkashPrabakar

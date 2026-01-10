@@ -4,7 +4,7 @@ title: Ashutosh Gupta
 firstname: Ashutosh
 lastname: Gupta
 description: ME SSA — sponsored by ISRO, Space Applications Centre
-img: assets/img/people/alumni/mtech/2016/ashutosh_gupta.jpg
+img: assets/img/people/alumni/mtech-graduates/2016/ashutosh_gupta.jpg
 scholar_userid: GNekfLwAAAAJ
 email: gupta.ashutosh.88@gmail.com
 alias: ashutosh_gupta

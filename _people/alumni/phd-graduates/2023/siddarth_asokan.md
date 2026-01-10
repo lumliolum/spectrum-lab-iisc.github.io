@@ -4,7 +4,7 @@ title: Siddarth Asokan
 firstname: Siddarth
 lastname: Asokan
 description: PhD 
-img: assets/img/people/alumni/phd/2023/sid.png
+img: assets/img/people/alumni/phd-graduates/2023/sid.png
 website: https://www.siddarthasokan.com/
 scholar_userid: tM4SYUQAAAAJ
 linkedin_username: siddarth-asokan/

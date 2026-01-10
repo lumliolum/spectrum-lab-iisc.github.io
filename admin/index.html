@@ -5,9 +5,478 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager</title>
-    <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js" type="module"></script>
+
+    <!-- 1. PREVENT AUTO-INIT -->
+    <script>
+        window.CMS_MANUAL_INIT = true;
+    </script>
+
+    <!-- 2. LOAD SVELTIA CMS -->
+    <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
 </head>
 
-<body></body>
+<body>
+    <!-- 3. CONFIGURATION -->
+    <script>
+        // --- Shared Field Definitions ---
+        const commonPersonFields = [
+            { label: "Layout", name: "layout", widget: "hidden", default: "person" },
+            { label: "Title", name: "title", widget: "string" },
+            { label: "First Name", name: "firstname", widget: "string" },
+            { label: "Last Name", name: "lastname", widget: "string" },
+            { label: "Description", name: "description", widget: "string" },
+            { label: "Image", name: "img", widget: "image", required: false },
+            { label: "Website", name: "website", widget: "string", required: false },
+            { label: "ORCID ID", name: "orcid_id", widget: "string", required: false },
+            { label: "LinkedIn", name: "linkedin_username", widget: "string", required: false },
+            { label: "GitHub", name: "github_username", widget: "string", required: false },
+            { label: "Email", name: "email", widget: "string", required: false },
+            { label: "Scholar User ID", name: "scholar_userid", widget: "string", required: false },
+            { label: "Twitter", name: "twitter_username", widget: "string", required: false },
+            { label: "Badges", name: "badges", widget: "list", required: false },
+            { label: "Show", name: "show", widget: "boolean", default: true },
+            { label: "Biography Paragraphs", name: "biography_paragraphs", widget: "list", required: false },
+            { label: "Show Academic Roles", name: "show_academic_roles", widget: "boolean", default: false },
+            { label: "Academic Roles", name: "academic_roles", widget: "list", required: false },
+            { label: "Show Awards", name: "show_awards", widget: "boolean", default: false },
+            { label: "Awards", name: "awards", widget: "list", required: false },
+            { label: "Show Visiting Positions", name: "show_visiting_positions", widget: "boolean", default: false },
+            { label: "Visiting Positions", name: "visiting_positions", widget: "list", required: false, fields: [{ label: "Institution", name: "institution", widget: "string" }, { label: "Dates", name: "dates", widget: "string" }, { label: "Hosts", name: "hosts", widget: "string" }] },
+            { label: "Show Activities", name: "show_activities", widget: "boolean", default: false }
+        ];
+
+        const commonAlumniFields = [
+            ...commonPersonFields,
+            { label: "Year", name: "year", widget: "number" }
+        ];
+
+        const commonTalkFields = [
+            { label: "Layout", name: "layout", widget: "hidden", default: "talk" },
+            { label: "Title", name: "title", widget: "string" },
+            { label: "Date", name: "date", widget: "datetime" },
+            { label: "Time", name: "time", widget: "string", required: false },
+            { label: "Venue", name: "venue", widget: "string", required: false },
+            { label: "Keywords", name: "keywords", widget: "list", required: false },
+            { label: "Abstract", name: "abstract", widget: "text", required: false },
+        ];
+
+        // --- Main Configuration ---
+        const config = {
+            load_config_file: false,
+            backend: {
+                name: "github",
+                repo: "spectrum-lab-iisc/spectrum-lab-iisc.github.io",
+                branch: "main",
+                base_url: "https://sveltia-cms-auth.vercel.app"
+            },
+            media_folder: "assets/img",
+            public_folder: "/assets/img",
+
+            // NOTE: 'collections_groups' is NOT a standard property in Sveltia/Decap.
+            // I have removed it to prevent confusion.
+            // Instead, we rely on 'icon' property to visually group items.
+
+            collections: [
+                // --- GENERAL ---
+                {
+                    name: "news",
+                    label: "News",
+                    icon: "newspaper", // Material Symbol Name
+                    folder: "_news",
+                    create: true,
+                    nested: { depth: 2 },
+                    path: "{{year}}/{{slug}}",
+                    fields: [
+                        { label: "Layout", name: "layout", widget: "hidden", default: "post" },
+                        { label: "Title", name: "title", widget: "string" },
+                        { label: "Date", name: "date", widget: "datetime" },
+                        { label: "Inline", name: "inline", widget: "boolean", default: false, required: false },
+                        { label: "Related Posts", name: "related_posts", widget: "boolean", default: false, required: false },
+                        { label: "Announce", name: "announce", widget: "boolean", default: false, required: false },
+                        { label: "Badge", name: "badge", widget: "string", required: false },
+                        { label: "Icon", name: "icon", widget: "string", required: false },
+                        { label: "Link", name: "link", widget: "string", required: false },
+                        { label: "Venue", name: "venue", widget: "string", required: false },
+                        { label: "Host", name: "host", widget: "string", required: false },
+                        { label: "Body", name: "body", widget: "markdown" }
+                    ]
+                },
+
+                // --- PEOPLE (Icon: group) ---
+                {
+                    name: "lab_director",
+                    label: "People: Lab Director",
+                    icon: "group",
+                    folder: "_people/current/lab-director",
+                    media_folder: "/assets/img/people/current/lab-director",
+                    create: true,
+                    fields: [
+                        ...commonPersonFields,
+                        { label: "Category", name: "category", widget: "hidden", default: "Lab Director" },
+                        { label: "GitHub", name: "github", widget: "string", required: false }
+                    ]
+                },
+                {
+                    name: "phd_students",
+                    label: "People: PhD Students",
+                    icon: "group",
+                    folder: "_people/current/phd-students",
+                    media_folder: "/assets/img/people/current/phd-students",
+                    create: true,
+                    fields: [
+                        ...commonPersonFields,
+                        { label: "Category", name: "category", widget: "hidden", default: "PhD Students" }
+                    ]
+                },
+                {
+                    name: "mtech_students",
+                    label: "People: MTech Students",
+                    icon: "group",
+                    folder: "_people/current/mtech-students",
+                    media_folder: "/assets/img/people/current/mtech-students",
+                    create: true,
+                    fields: [
+                        ...commonPersonFields,
+                        { label: "Category", name: "category", widget: "hidden", default: "M.Tech Students" },
+                        { label: "Year", name: "year", widget: "number" }
+                    ]
+                },
+                {
+                    name: "mtech_research",
+                    label: "People: MTech (Research)",
+                    icon: "group",
+                    folder: "_people/current/mtech-research",
+                    media_folder: "/assets/img/people/current/mtech-research",
+                    create: true,
+                    fields: [
+                        ...commonPersonFields,
+                        { label: "Category", name: "category", widget: "hidden", default: "M.Tech (Research) Students" }
+                    ]
+                },
+                {
+                    name: "project_associates",
+                    label: "People: Project Associates",
+                    icon: "group",
+                    folder: "_people/current/project-associates",
+                    media_folder: "/assets/img/people/current/project-associates",
+                    create: true,
+                    fields: [
+                        ...commonPersonFields,
+                        { label: "Category", name: "category", widget: "hidden", default: "Project Associates" }
+                    ]
+                },
+                {
+                    name: "administrator",
+                    label: "People: Administrator",
+                    icon: "group",
+                    folder: "_people/current/administrator",
+                    media_folder: "/assets/img/people/current/administrator",
+                    create: true,
+                    fields: [
+                        ...commonPersonFields,
+                        { label: "Category", name: "category", widget: "hidden", default: "Administrator" }
+                    ]
+                },
+
+                // --- ALUMNI (Icon: school) ---
+                {
+                    name: "phd_graduates",
+                    label: "Alumni: PhD Graduates",
+                    icon: "school",
+                    folder: "_people/alumni/phd-graduates",
+                    media_folder: "/assets/img/people/alumni/phd-graduates/{{year}}",
+                    create: true,
+                    path: "{{year}}/{{slug}}",
+                    fields: [
+                        ...commonAlumniFields,
+                        { label: "Category", name: "category", widget: "hidden", default: "PhD Graduates" }
+                    ]
+                },
+                {
+                    name: "mtech_graduates",
+                    label: "Alumni: MTech Graduates",
+                    icon: "school",
+                    folder: "_people/alumni/mtech-graduates",
+                    media_folder: "/assets/img/people/alumni/mtech-graduates/{{year}}",
+                    create: true,
+                    path: "{{year}}/{{slug}}",
+                    fields: [
+                        ...commonAlumniFields,
+                        { label: "Category", name: "category", widget: "hidden", default: "M.Tech Graduates" }
+                    ]
+                },
+                {
+                    name: "mtech_research_graduates",
+                    label: "Alumni: MTech (Research) Graduates",
+                    icon: "school",
+                    folder: "_people/alumni/mtech-research-graduates",
+                    media_folder: "/assets/img/people/alumni/mtech-research-graduates/{{year}}",
+                    create: true,
+                    path: "{{year}}/{{slug}}",
+                    fields: [
+                        ...commonAlumniFields,
+                        { label: "Category", name: "category", widget: "hidden", default: "M.Tech (Research) Graduates" }
+                    ]
+                },
+                {
+                    name: "interns",
+                    label: "Alumni: Interns",
+                    icon: "school",
+                    folder: "_people/alumni/interns",
+                    media_folder: "/assets/img/people/alumni/interns/{{year}}",
+                    create: true,
+                    path: "{{year}}/{{slug}}",
+                    fields: [
+                        ...commonAlumniFields,
+                        { label: "Category", name: "category", widget: "hidden", default: "Interns" },
+
+                    ]
+                },
+                {
+                    name: "post_doc",
+                    label: "Alumni: Post Docs",
+                    icon: "school",
+                    folder: "_people/alumni/post-doc",
+                    media_folder: "/assets/img/people/alumni/post-doc/{{year}}",
+                    create: true,
+                    path: "{{year}}/{{slug}}",
+                    fields: [
+                        ...commonAlumniFields,
+                        { label: "Category", name: "category", widget: "hidden", default: "Post Docs" }
+                    ]
+                },
+                {
+                    name: "research_associates",
+                    label: "Alumni: Research Associates",
+                    icon: "school",
+                    folder: "_people/alumni/research-associates",
+                    media_folder: "/assets/img/people/alumni/research-associates/{{year}}",
+                    create: true,
+                    path: "{{year}}/{{slug}}",
+                    fields: [
+                        ...commonAlumniFields,
+                        { label: "Category", name: "category", widget: "hidden", default: "Research Associates" }
+                    ]
+                },
+
+                // --- TALKS (Icon: mic) ---
+                {
+                    name: "talks_delivered",
+                    label: "Talks: Delivered",
+                    icon: "mic",
+                    folder: "_talks/delivered",
+                    create: true,
+                    path: "{{year}}/{{slug}}",
+                    fields: [
+                        ...commonTalkFields,
+                        { label: "Type", name: "type", widget: "string", default: "Talk" },
+                        { label: "Category", name: "category", widget: "hidden", default: "delivered" },
+                        { label: "Speaker", name: "speaker", widget: "string", required: false },
+                        { label: "Speaker Affiliation", name: "speaker_affiliation", widget: "string", required: false },
+                        { label: "Host", name: "host", widget: "string", required: false },
+                        { label: "Speaker Bio", name: "speaker_bio", widget: "text", required: false }
+                    ]
+                },
+                {
+                    name: "talks_organized",
+                    label: "Talks: Organized",
+                    icon: "mic",
+                    folder: "_talks/organized",
+                    create: true,
+                    path: "{{year}}/{{slug}}",
+                    fields: [
+                        ...commonTalkFields,
+                        { label: "Type", name: "type", widget: "string", default: "PhD Thesis Colloquium" },
+                        { label: "Category", name: "category", widget: "hidden", default: "organized" },
+                        { label: "Candidate", name: "candidate", widget: "string", required: false },
+                        { label: "Supervisor", name: "supervisor", widget: "string", required: false },
+                        { label: "Candidate Bio", name: "candidate_bio", widget: "text", required: false }
+                    ]
+                },
+
+
+
+                // --- FUNDING (Icon: attach_money) ---
+                {
+                    name: "funding",
+                    label: "Funding",
+                    icon: "attach_money",
+                    files: [
+                        {
+                            name: "funders",
+                            label: "Edit Funders & Projects",
+                            file: "_data/funding.yml",
+                            media_folder: "/assets/img/funders",
+                            fields: [
+                                {
+                                    label: "Funders",
+                                    name: "funders",
+                                    widget: "list",
+                                    fields: [
+                                        { label: "Name", name: "name", widget: "string" },
+                                        { label: "Logo", name: "logo", widget: "image" },
+                                        { label: "URL", name: "url", widget: "string", required: false },
+                                        { label: "Invert", name: "invert", widget: "boolean", default: false }
+                                    ]
+                                },
+                                {
+                                    label: "Projects",
+                                    name: "projects",
+                                    widget: "list",
+                                    fields: [
+                                        { label: "Title", name: "title", widget: "string" },
+                                        { label: "Agency", name: "agency", widget: "string" },
+                                        { label: "Role", name: "role", widget: "select", options: ["PI", "Co-PI"], default: "PI" },
+                                        { label: "Amount", name: "amount", widget: "string" },
+                                        { label: "Duration", name: "duration", widget: "string" },
+                                        { label: "Investigators", name: "investigators", widget: "string", required: false }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+
+                // --- RECOGNITION (Icon: emoji_events) ---
+                {
+                    name: "recognition",
+                    label: "Recognition",
+                    icon: "emoji_events",
+                    files: [
+                        {
+                            name: "awards",
+                            label: "Edit Awards",
+                            file: "_data/recognition.yml",
+                            media_folder: "/assets/img/recognition",
+                            fields: [
+                                {
+                                    label: "Awards",
+                                    name: "awards",
+                                    widget: "list",
+                                    fields: [
+                                        { label: "Award Name", name: "award", widget: "string" },
+                                        { label: "Year", name: "year", widget: "string", required: false },
+                                        { label: "Category", name: "category", widget: "select", options: ["Award", "Recognition"], default: "Award" },
+                                        { label: "Recipients", name: "recipients", widget: "string", hint: "Comma-separated list of names" },
+                                        { label: "Image", name: "image", widget: "image", required: false },
+                                        { label: "Images", name: "images", widget: "list", required: false, fields: [{ label: "Path", name: "path", widget: "image" }, { label: "Caption", name: "caption", widget: "string" }] },
+                                        { label: "Co-inventors", name: "co_inventors", widget: "string", required: false }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+
+                // --- GALLERY (Icon: photo_library) ---
+                {
+                    name: "gallery",
+                    label: "Gallery",
+                    icon: "photo_library",
+                    files: [
+                        {
+                            name: "album",
+                            label: "Edit Photo Albums",
+                            file: "_data/album.yaml",
+                            media_folder: "/assets/img/album",
+                            fields: [
+                                {
+                                    label: "Albums",
+                                    name: "albums",
+                                    widget: "list",
+                                    fields: [
+                                        { label: "Event", name: "event", widget: "string", required: false },
+                                        { label: "Folder", name: "folder", widget: "string", required: false },
+                                        { label: "Description", name: "description", widget: "string", required: false },
+                                        {
+                                            label: "Photos",
+                                            name: "photos",
+                                            widget: "list",
+                                            fields: [
+                                                { label: "Image", name: "image", widget: "image" },
+                                                { label: "Caption", name: "caption", widget: "string", required: false },
+                                                { label: "Order", name: "order", widget: "number", required: false }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                                // --- COURSES (Icon: book) ---
+                {
+                    name: "courses",
+                    label: "Courses",
+                    icon: "book",
+                    files: [
+                        {
+                            name: "course_list",
+                            label: "Edit Course List",
+                            file: "_data/teaching.yml",
+                            media_folder: "/assets/img/teaching/instructors",
+                            fields: [
+                                {
+                                    label: "Courses",
+                                    name: "courses",
+                                    widget: "list",
+                                    fields: [
+                                        { label: "Title", name: "title", widget: "string" },
+                                        { label: "Description", name: "description", widget: "text" },
+                                        { label: "Instructor", name: "instructor", widget: "string" },
+                                        { label: "Instructor Bio", name: "instructor_bio", widget: "text", required: false },
+                                        { label: "Instructor Photo", name: "instructor_photo", widget: "image", required: false, media_folder: "/assets/img/teaching/instructors" },
+                                        { label: "Teaching Assistants", name: "teaching_assistants", widget: "list", required: false },
+                                        { label: "Hosts", name: "hosts", widget: "list", required: false },
+                                        { label: "Semester", name: "semester", widget: "string" },
+                                        { label: "Permalink", name: "permalink", widget: "string" },
+                                        { label: "Course ID", name: "course_id", widget: "string" },
+                                        { label: "Type", name: "type", widget: "select", options: ["Regular Course", "Short Course"], default: "Regular Course" },
+                                        { label: "Instructor Links", name: "instructor_links", widget: "object", required: false, fields: [{ label: "Homepage", name: "homepage", widget: "string", required: false }, { label: "Google Scholar", name: "google_scholar", widget: "string", required: false }, { label: "LinkedIn", name: "linkedin", widget: "string", required: false }] }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                // Course Pages
+                {
+                    name: "course_pages",
+                    label: "Course Pages",
+                    icon: "book",
+                    folder: "_pages/teaching",
+                    media_folder: "/assets/teaching/{{course_id}}",
+                    create: true,
+                    nested: { depth: 2 },
+                    fields: [
+                        { label: "Layout", name: "layout", widget: "hidden", default: "page" },
+                        { label: "Title", name: "title", widget: "string" },
+                        { label: "Permalink", name: "permalink", widget: "string" },
+                        { label: "Description", name: "description", widget: "string", required: false },
+                        { label: "Type", name: "type", widget: "select", options: ["Regular Course", "Short Course"], default: "Regular Course" },
+                        { label: "Course ID", name: "course_id", widget: "string" },
+                        { label: "Nav", name: "nav", widget: "boolean", default: false },
+                        { label: "Parent Course", name: "parent_course", widget: "string", required: false },
+                        { label: "Schedule", name: "schedule", widget: "object", required: false, fields: [{ label: "Dates & Time", name: "dates_time", widget: "string" }, { label: "Classroom", name: "classroom", widget: "string" }, { label: "Duration", name: "duration", widget: "string" }, { label: "Meeting Link", name: "meeting_link", widget: "string", required: false }] },
+                        { label: "News", name: "news", widget: "list", required: false, fields: [{ label: "Title", name: "title", widget: "string" }, { label: "Date", name: "date", widget: "string" }, { label: "Description", name: "description", widget: "string" }] },
+                        { label: "Modules", name: "modules", widget: "list", required: false, fields: [{ label: "Title", name: "title", widget: "string" }, { label: "Description", name: "description", widget: "text" }, { label: "Lectures", name: "lectures", widget: "string" }, { label: "Status", name: "status", widget: "select", options: ["Upcoming", "In Progress", "Completed"], default: "Upcoming" }, { label: "Link", name: "link", widget: "string" }] },
+                        { label: "Lectures", name: "lectures", widget: "list", required: false, fields: [{ label: "Title", name: "title", widget: "string" }, { label: "Slides", name: "slides", widget: "file", required: false, media_folder: "/assets/teaching/{{course_id}}" }, { label: "Description", name: "description", widget: "string", required: false }, { label: "Video", name: "video", widget: "string", required: false }, { label: "Notes", name: "notes", widget: "file", required: false, media_folder: "/assets/teaching/{{course_id}}" }] },
+                        { label: "Assignments", name: "assignments", widget: "list", required: false, fields: [{ label: "Title", name: "title", widget: "string" }, { label: "Description", name: "description", widget: "string", required: false }, { label: "PDF", name: "pdf", widget: "file", required: false, media_folder: "/assets/teaching/{{course_id}}" }, { label: "Solution", name: "solution", widget: "file", required: false, media_folder: "/assets/teaching/{{course_id}}" }, { label: "Due Date", name: "due_date", widget: "string", required: false }] },
+                        { label: "Resources", name: "resources", widget: "list", required: false, fields: [{ label: "Title", name: "title", widget: "string" }, { label: "URL", name: "url", widget: "string", required: false }, { label: "Description", name: "description", widget: "string", required: false }] },
+                        { label: "Body", name: "body", widget: "markdown", required: false }
+                    ]
+                }
+            ]
+        };
+
+        const CMS_APP = window.SveltiaCMS || window.CMS;
+        if (CMS_APP) {
+            CMS_APP.init({ config });
+            console.log('Sveltia CMS Initialized Manually');
+        } else {
+            console.error('Sveltia CMS global object not found. Ensure the UMD script is loaded.');
+        }
+    </script>
+</body>
 
 </html>

@@ -14,7 +14,7 @@ host: "Prof. Chandra Sekhar Seelamantula"
 abstract: |
   Title: Neuromorphic Sampling — Reconstruction Techniques and Imaging Applications
   
-  Candidate: Mr. Abijith Jagannath Kamath
+  Candidate: Abijith Jagannath Kamath
   
   Research Supervisor: Prof. Chandra Sekhar Seelamantula
 ---

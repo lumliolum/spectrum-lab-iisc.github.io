@@ -35,7 +35,7 @@ layout: default
         <i class="fas fa-user-tie"></i>
         Speaker</h2>
       <div class="event-speaker">
-        <strong>{{ page.speaker }}</strong>
+        <strong>{{ page.speaker | link_coauthors }}</strong>
         {% if page.speaker_affiliation %}
           <br><span class="speaker-affiliation">{{ page.speaker_affiliation }}</span>
         {% endif %}
@@ -50,7 +50,7 @@ layout: default
         Speakers</h2>
       <ul class="event-speakers-list">
         {% for spk in page.speakers %}
-          <li>{{ spk }}</li>
+          <li>{{ spk | link_coauthors }}</li>
         {% endfor %}
       </ul>
     </section>
@@ -62,7 +62,7 @@ layout: default
         <i class="fas fa-user-friends"></i>
         Host{% if page.hosts %}s{% endif %}
       </h2>
-      <p>{{ page.host }}{{ page.hosts }}</p>
+      <p>{{ page.host | link_coauthors }}{{ page.hosts | link_coauthors }}</p>
     </section>
   {% endif %}
 
@@ -72,7 +72,7 @@ layout: default
         <i class="fas fa-file-alt"></i>
         Abstract</h2>
       <div class="event-abstract">
-        {{ page.abstract | markdownify }}
+        {{ page.abstract | markdownify | link_coauthors }}
       </div>
     </section>
   {% endif %}
@@ -80,7 +80,7 @@ layout: default
   {% if page.content != blank %}
     <section class="event-section">
       <div class="event-content">
-        {{ content }}
+        {{ content | link_coauthors }}
       </div>
     </section>
   {% endif %}

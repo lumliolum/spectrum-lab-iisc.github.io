@@ -2,7 +2,7 @@
   <div class="container-md">
     <h3 class="mb-4">Awards</h3>
     <div class="awards-grid">
-      {%- assign awards = site.data.recognition | where: "category", "Award" -%}
+      {%- assign awards = site.data.recognition.awards | where: "category", "Award" -%}
       {%- assign sorted_awards = awards | sort: "year" | reverse -%}
       {%- for award in sorted_awards -%}
       <div class="award-card">
@@ -14,9 +14,9 @@
           {% else %}
             <h6 class="mb-1 text-primary">{{ award.name }}</h6>
           {% endif %}
-          <p class="mb-1">{{ award.award }}</p>
+          <p class="mb-1">{{ award.award | link_coauthors }}</p>
           {% if award.co_inventors %}
-            <small class="text-muted">Co-inventors: {{ award.co_inventors }}</small>
+            <small class="text-muted">Co-inventors: {{ award.co_inventors | link_coauthors }}</small>
           {% endif %}
           {% if award.image %}
           <div class="award-image">

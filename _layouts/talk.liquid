@@ -45,7 +45,7 @@ layout: default
         <i class="fas fa-user-tie"></i>
         Speaker</h2>
       <div class="talk-speaker-card">
-        <strong>{{ page.speaker }}</strong>
+        <strong>{{ page.speaker | link_coauthors }}</strong>
         {% if page.speaker_affiliation %}
           <br><span class="speaker-affiliation">{{ page.speaker_affiliation }}</span>
         {% endif %}
@@ -59,12 +59,12 @@ layout: default
         <i class="fas fa-user-graduate"></i>
         Candidate</h2>
       <div class="talk-speaker-card">
-        <strong>{{ page.candidate }}</strong>
+        <strong>{{ page.candidate | link_coauthors }}</strong>
         {% if page.supervisor %}
-          <br><span class="speaker-affiliation">Supervisor: {{ page.supervisor }}</span>
+          <br><span class="speaker-affiliation">Supervisor: {{ page.supervisor | link_coauthors }}</span>
         {% endif %}
         {% if page.examiner %}
-          <br><span class="speaker-affiliation">Examiner: {{ page.examiner }}</span>
+          <br><span class="speaker-affiliation">Examiner: {{ page.examiner | link_coauthors }}</span>
         {% endif %}
       </div>
     </section>
@@ -77,7 +77,7 @@ layout: default
         Speakers</h2>
       <ul class="talk-speakers-list">
         {% for spk in page.speakers %}
-          <li>{{ spk }}</li>
+          <li>{{ spk | link_coauthors }}</li>
         {% endfor %}
       </ul>
     </section>
@@ -90,7 +90,7 @@ layout: default
         Instructors</h2>
       <ul class="talk-speakers-list">
         {% for inst in page.instructors %}
-          <li>{{ inst }}</li>
+          <li>{{ inst | link_coauthors }}</li>
         {% endfor %}
       </ul>
     </section>
@@ -104,10 +104,10 @@ layout: default
       </h2>
       <p>
         {% if page.host %}
-          {{ page.host }}{% endif %}
+          {{ page.host | link_coauthors }}{% endif %}
         {% if page.hosts %}
-          {{ page.hosts }}{% endif %}
-        {% if page.co_host %}<br>Co-host: {{ page.co_host }}{% endif %}
+          {{ page.hosts | link_coauthors }}{% endif %}
+        {% if page.co_host %}<br>Co-host: {{ page.co_host | link_coauthors }}{% endif %}
       </p>
     </section>
   {% endif %}
@@ -118,7 +118,7 @@ layout: default
         <i class="fas fa-file-alt"></i>
         Abstract</h2>
       <div class="talk-abstract">
-        {{ page.abstract | markdownify }}
+        {{ page.abstract | markdownify | link_coauthors }}
       </div>
     </section>
   {% endif %}
@@ -129,7 +129,7 @@ layout: default
         <i class="fas fa-book-open"></i>
         Course Description</h2>
       <div class="talk-abstract">
-        {{ page.course_description | markdownify }}
+        {{ page.course_description | markdownify | link_coauthors }}
       </div>
     </section>
   {% endif %}
@@ -140,7 +140,7 @@ layout: default
         <i class="fas fa-bullseye"></i>
         Course Goals</h2>
       <div class="talk-abstract">
-        {{ page.course_goals | markdownify }}
+        {{ page.course_goals | markdownify | link_coauthors }}
       </div>
     </section>
   {% endif %}
@@ -151,7 +151,7 @@ layout: default
         <i class="fas fa-info-circle"></i>
         About the Speaker</h2>
       <div class="talk-bio">
-        {{ page.speaker_bio | markdownify }}
+        {{ page.speaker_bio | markdownify | link_coauthors }}
       </div>
     </section>
   {% endif %}
@@ -162,7 +162,7 @@ layout: default
         <i class="fas fa-info-circle"></i>
         About the Candidate</h2>
       <div class="talk-bio">
-        {{ page.candidate_bio | markdownify }}
+        {{ page.candidate_bio | markdownify | link_coauthors }}
       </div>
     </section>
   {% endif %}
@@ -173,7 +173,7 @@ layout: default
         <i class="fas fa-book"></i>
         References</h2>
       <div class="talk-references">
-        {{ page.references | markdownify }}
+        {{ page.references | markdownify | link_coauthors }}
       </div>
     </section>
   {% endif %}
@@ -181,7 +181,7 @@ layout: default
   {% if page.content != blank %}
     <section class="talk-section">
       <div class="talk-content">
-        {{ content }}
+        {{ content | link_coauthors }}
       </div>
     </section>
   {% endif %}

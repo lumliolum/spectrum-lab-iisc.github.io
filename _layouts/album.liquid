@@ -33,8 +33,10 @@ layout: default
           <div class="swiper-wrapper">
             {% for photo in sorted_photos %}
               <div class="swiper-slide d-flex justify-content-center align-items-center">
+                {% assign photo_caption = photo.caption | link_coauthors %}
+                {% assign photo_caption_escaped = photo_caption | escape %}
                 {% assign photo_alt = photo.caption | default: event.event | default: "Spectrum Lab photo" %}
-                {% include responsive-image.liquid path=photo.image alt=photo_alt class="album-photo" data-caption=photo.caption %}
+                {% include responsive-image.liquid path=photo.image alt=photo_alt class="album-photo" data-caption=photo_caption_escaped %}
               </div>
             {% endfor %}
           </div>
@@ -44,7 +46,7 @@ layout: default
 
         <!-- Caption below swiper -->
         <div class="album-caption">
-          <h5 id="caption-{{ swiper_id }}">{{ sorted_photos.first.caption }}</h5>
+          <h5 id="caption-{{ swiper_id }}">{{ sorted_photos.first.caption | link_coauthors }}</h5>
         </div>
       {% else %}
         <div class="alert alert-info">
@@ -116,7 +118,7 @@ layout: default
       // Get caption from data attribute or alt text
       const captionText = this.getAttribute('data-caption') || this.alt;
       
-      modalCaption.textContent = captionText;
+      modalCaption.innerHTML = captionText;
       
       // Show modal and enhance backdrop
       modal.show();
@@ -183,7 +185,7 @@ layout: default
           const captionElement = document.getElementById('caption-' + swiperId);
           
           if (captionElement && caption) {
-            captionElement.textContent = caption;
+            captionElement.innerHTML = caption;
           }
         }
       }

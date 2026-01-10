@@ -73,10 +73,10 @@ layout: default
           <h5 class="card-title">Biography</h5>
           {% if page.biography_paragraphs %}
           {% for paragraph in page.biography_paragraphs %}
-          <p class="card-text">{{ paragraph }}</p>
+          <p class="card-text">{{ paragraph | link_coauthors }}</p>
           {% endfor %}
           {% else %}
-          {{ content }}
+          {{ content | link_coauthors }}
           {% endif %}
 
           {% if page.show_academic_roles and page.academic_roles %}
@@ -242,7 +242,7 @@ layout: default
   
   {% comment %} Collect awards from recognition.yml where aliases contains this person's alias {% endcomment %}
   {% assign person_awards = "" | split: "" %}
-  {% for item in site.data.recognition %}
+  {% for item in site.data.recognition.awards %}
     {% assign aliases_array = item.aliases | split: ", " %}
     {% for alias in aliases_array %}
       {% assign alias_stripped = alias | strip %}

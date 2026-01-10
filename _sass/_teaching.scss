@@ -15,8 +15,8 @@
 // Design Tokens
 // =============================================================================
 
-$teaching-font-stack: "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, 
-                      -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+$teaching-font-stack: "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica,
+  -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 
 $teaching-spacing: (
   xs: 0.25rem,
@@ -59,21 +59,29 @@ $teaching-transitions: (
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--global-text-color);
-  
+
   // Preserve icon fonts with correct weights
-  .fas, .fa-solid {
+  .fas,
+  .fa-solid {
     font-family: "Font Awesome 6 Free" !important;
     font-weight: 900 !important;
   }
-  .far, .fa-regular {
+
+  .far,
+  .fa-regular {
     font-family: "Font Awesome 6 Free" !important;
     font-weight: 400 !important;
   }
-  .fab, .fa-brands {
+
+  .fab,
+  .fa-brands {
     font-family: "Font Awesome 6 Brands" !important;
     font-weight: 400 !important;
   }
-  .fa, [class^="fa-"], [class*=" fa-"] {
+
+  .fa,
+  [class^="fa-"],
+  [class*=" fa-"] {
     font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
   }
 }
@@ -88,7 +96,7 @@ $teaching-transitions: (
   letter-spacing: -0.025em;
   line-height: 1.2;
   color: var(--global-text-color);
-  
+
   @media (min-width: 768px) {
     font-size: 2.5rem;
   }
@@ -132,7 +140,7 @@ $teaching-transitions: (
   align-items: center;
   gap: map-get($teaching-spacing, sm);
   margin-bottom: map-get($teaching-spacing, lg);
-  
+
   &__icon {
     width: 32px;
     height: 32px;
@@ -144,7 +152,7 @@ $teaching-transitions: (
     color: var(--global-theme-color);
     font-size: 0.875rem;
   }
-  
+
   &__text {
     font-size: 1.125rem;
     font-weight: 600;
@@ -163,24 +171,24 @@ $teaching-transitions: (
   border: 1px solid var(--global-divider-color);
   padding: map-get($teaching-spacing, xl);
   transition: map-get($teaching-transitions, normal);
-  
+
   &:hover {
     box-shadow: map-get($teaching-shadows, medium);
     border-color: transparent;
   }
-  
+
   &--interactive {
     cursor: pointer;
-    
+
     &:hover {
       transform: translateY(-2px);
     }
-    
+
     &:active {
       transform: translateY(0);
     }
   }
-  
+
   &--elevated {
     box-shadow: map-get($teaching-shadows, soft);
     border: none;
@@ -194,18 +202,19 @@ $teaching-transitions: (
 .teaching-grid {
   display: grid;
   gap: map-get($teaching-spacing, lg);
-  
+
   &--courses {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    
+    justify-content: start;
+
     @media (min-width: 1200px) {
       grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     }
   }
-  
+
   &--materials {
     grid-template-columns: 1fr;
-    
+
     @media (min-width: 640px) {
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     }
@@ -225,19 +234,19 @@ $teaching-transitions: (
   font-size: 0.8125rem;
   font-weight: 500;
   transition: map-get($teaching-transitions, fast);
-  
+
   &--muted {
     background: var(--global-bg-color);
     color: var(--global-text-color);
     border: 1px solid var(--global-divider-color);
   }
-  
+
   &--accent {
     background: var(--color-blue-soft, rgba(0, 102, 204, 0.12));
     color: var(--color-blue, #0066cc);
     font-weight: 600;
   }
-  
+
   &--success {
     background: var(--color-green-soft, rgba(5, 150, 105, 0.12));
     color: var(--color-green, #059669);
@@ -262,41 +271,41 @@ $teaching-transitions: (
   transition: map-get($teaching-transitions, fast);
   cursor: pointer;
   border: none;
-  
+
   &--ghost {
     background: transparent;
     color: var(--global-text-color-light);
     border: 1px solid var(--global-divider-color);
-    
+
     &:hover {
       background: var(--global-bg-color);
       color: var(--global-text-color);
       border-color: var(--global-text-color-light);
     }
   }
-  
+
   &--primary {
     background: var(--global-theme-color);
     color: #ffffff !important;
-    
+
     span {
       color: #ffffff !important;
     }
-    
+
     &:hover {
       filter: brightness(1.1);
       color: #ffffff !important;
-      
+
       span {
         color: #ffffff !important;
       }
     }
   }
-  
+
   &--subtle {
     background: rgba(var(--global-theme-color-rgb), 0.1);
     color: var(--global-theme-color);
-    
+
     &:hover {
       background: rgba(var(--global-theme-color-rgb), 0.15);
       color: var(--global-theme-color);
@@ -317,6 +326,7 @@ $teaching-transitions: (
     opacity: 0;
     transform: translateY(8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -332,21 +342,40 @@ $teaching-transitions: (
 .stack {
   display: flex;
   flex-direction: column;
-  
-  &--xs { gap: map-get($teaching-spacing, xs); }
-  &--sm { gap: map-get($teaching-spacing, sm); }
-  &--md { gap: map-get($teaching-spacing, md); }
-  &--lg { gap: map-get($teaching-spacing, lg); }
+
+  &--xs {
+    gap: map-get($teaching-spacing, xs);
+  }
+
+  &--sm {
+    gap: map-get($teaching-spacing, sm);
+  }
+
+  &--md {
+    gap: map-get($teaching-spacing, md);
+  }
+
+  &--lg {
+    gap: map-get($teaching-spacing, lg);
+  }
 }
 
 .cluster {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  
-  &--xs { gap: map-get($teaching-spacing, xs); }
-  &--sm { gap: map-get($teaching-spacing, sm); }
-  &--md { gap: map-get($teaching-spacing, md); }
+
+  &--xs {
+    gap: map-get($teaching-spacing, xs);
+  }
+
+  &--sm {
+    gap: map-get($teaching-spacing, sm);
+  }
+
+  &--md {
+    gap: map-get($teaching-spacing, md);
+  }
 }
 
 // =============================================================================
@@ -429,7 +458,7 @@ $teaching-transitions: (
   }
 }
 
-.course-card-link:hover {
+.course-card:hover {
   .course-card__title {
     color: var(--global-theme-color);
   }
@@ -440,6 +469,12 @@ $teaching-transitions: (
     background: var(--global-theme-color);
     color: white;
   }
+}
+
+// Ensure coauthor links are clickable above the stretched link
+.coauthor-link {
+  position: relative;
+  z-index: 2;
 }
 
 .meta-row {
@@ -457,9 +492,17 @@ $teaching-transitions: (
 }
 
 // Animation delays for stagger effect
-.course-section:nth-child(1) { animation-delay: 0ms; }
-.course-section:nth-child(2) { animation-delay: 100ms; }
-.course-section:nth-child(3) { animation-delay: 200ms; }
+.course-section:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.course-section:nth-child(2) {
+  animation-delay: 100ms;
+}
+
+.course-section:nth-child(3) {
+  animation-delay: 200ms;
+}
 
 // =============================================================================
 // Course Materials Page
@@ -468,7 +511,7 @@ $teaching-transitions: (
 .course-wrapper {
   --transition-duration: 200ms;
   --transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   // Accent color variations - improved contrast
   --color-blue: #0066cc;
   --color-blue-soft: rgba(0, 102, 204, 0.12);
@@ -534,7 +577,7 @@ html[data-theme="dark"] .course-wrapper {
     background: var(--color-purple-soft);
     color: var(--color-purple);
   }
-  
+
   &--red {
     background: var(--color-red-soft);
     color: var(--color-red);
@@ -571,28 +614,30 @@ html[data-theme="dark"] .course-wrapper {
   flex-direction: column;
   gap: 1.5rem;
   padding: 1.5rem;
-  
+
   @media (min-width: 768px) {
     flex-direction: row;
     align-items: flex-start;
   }
-  
+
   &__photo {
     flex-shrink: 0;
     text-align: center;
-    
-    img, figure, picture {
+
+    img,
+    figure,
+    picture {
       max-height: 300px;
       width: auto;
       border-radius: map-get($teaching-radius, md);
       box-shadow: map-get($teaching-shadows, soft);
     }
-    
+
     figure {
       margin: 0;
     }
   }
-  
+
   &__name {
     margin-top: 0.75rem;
     margin-bottom: 0;
@@ -600,7 +645,7 @@ html[data-theme="dark"] .course-wrapper {
     font-weight: 600;
     color: var(--global-text-color);
   }
-  
+
   &__bio {
     flex: 1;
     line-height: 1.7;
@@ -698,9 +743,17 @@ html[data-theme="dark"] .course-wrapper {
   }
 
   // Type indicators
-  &--lecture { border-top: 3px solid var(--color-blue); }
-  &--assignment { border-top: 3px solid var(--color-green); }
-  &--resource { border-top: 3px solid var(--color-purple); }
+  &--lecture {
+    border-top: 3px solid var(--color-blue);
+  }
+
+  &--assignment {
+    border-top: 3px solid var(--color-green);
+  }
+
+  &--resource {
+    border-top: 3px solid var(--color-purple);
+  }
 }
 
 // Empty state
@@ -737,10 +790,21 @@ html[data-theme="dark"] .course-wrapper {
 }
 
 // Animation delays
-.content-section:nth-child(2) { animation-delay: 50ms; }
-.content-section:nth-child(3) { animation-delay: 100ms; }
-.content-section:nth-child(4) { animation-delay: 150ms; }
-.content-section:nth-child(5) { animation-delay: 200ms; }
+.content-section:nth-child(2) {
+  animation-delay: 50ms;
+}
+
+.content-section:nth-child(3) {
+  animation-delay: 100ms;
+}
+
+.content-section:nth-child(4) {
+  animation-delay: 150ms;
+}
+
+.content-section:nth-child(5) {
+  animation-delay: 200ms;
+}
 
 // =============================================================================
 // Responsive — Mobile optimizations
@@ -879,7 +943,8 @@ html[data-theme="dark"] .course-wrapper {
   .schedule-table {
     font-size: 0.85rem;
 
-    th, td {
+    th,
+    td {
       padding: 0.6rem 0.75rem;
     }
   }

@@ -4,7 +4,7 @@ title: Aniruddha Adiga
 firstname: Aniruddha
 lastname: Adiga
 description: PhD
-img: assets/img/people/alumni/phd/2018/aniruddha-adiga.jpg
+img: assets/img/people/alumni/phd/2018/aniruddha-adiga.png
 email: aniruddha@virginia.edu
 alias: aniruddha
 scholar_userid: _JSHvgwAAAAJ

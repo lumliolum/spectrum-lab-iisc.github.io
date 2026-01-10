@@ -4,7 +4,7 @@ title: Jishnu Sadasivan
 firstname: Jishnu
 lastname: Sadasivan
 description: PhD
-img: assets/img/people/alumni/phd/2018/jishnu-sadasivan.png
+img: assets/img/people/alumni/phd/2018/jishnu-sadasivan.jpg
 email: jishnuns@gmail.com
 alias: jishnuns
 linkedin_username:

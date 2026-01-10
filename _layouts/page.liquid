@@ -15,7 +15,7 @@ layout: default
   </header>
 
   <article>
-    {{ content }}
+    {{ content | link_coauthors }}
   </article>
 
   {% if page.related_publications %}

@@ -25,7 +25,7 @@
             <div class="news-body">
               <div class="news-content">
                 {% if item.inline %}
-                  {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                  {{ item.content | remove: '<p>' | remove: '</p>' | emojify | link_coauthors }}
                 {% else %}
                   {% if item.link %}
                     <a class="news-title" href="{{ item.link | relative_url }}">{{ item.title }}</a>

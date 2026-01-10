@@ -38,15 +38,19 @@
       <div class="teaching-grid teaching-grid--courses">
         {%- for course in group.items -%}
         
-        {%- if course.permalink -%}
-        <a href="{{ course.permalink }}" class="course-card-link">
-        {%- endif -%}
+        {%- comment -%} Removed outer anchor to avoid nested links issue with auto-linking {%- endcomment -%}
         
           <article class="course-card minimal-card minimal-card--interactive">
             
             <!-- Card Header -->
             <header class="course-card__header">
-              <h3 class="course-card__title t-title">{{ course.title }}</h3>
+              <h3 class="course-card__title t-title">
+                {%- if course.permalink -%}
+                <a href="{{ course.permalink }}" class="text-reset stretched-link">{{ course.title }}</a>
+                {%- else -%}
+                {{ course.title }}
+                {%- endif -%}
+              </h3>
               {%- if course.semester -%}
               <span class="pill pill--muted">{{ course.semester }}</span>
               {%- endif -%}
@@ -81,9 +85,7 @@
 
           </article>
         
-        {%- if course.permalink -%}
-        </a>
-        {%- endif -%}
+        {%- comment -%} End removed outer anchor {%- endcomment -%}
 
         {%- endfor -%}
       </div>

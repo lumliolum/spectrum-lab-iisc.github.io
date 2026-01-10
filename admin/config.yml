@@ -1,0 +1,526 @@
+backend:
+  name: github
+  repo: spectrum-lab-iisc/spectrum-lab-iisc.github.io
+  branch: main
+
+media_folder: "assets/img"
+public_folder: "/assets/img"
+
+collections_groups:
+  - name: people
+    label: Current People
+    collapsed: false
+  - name: alumni
+    label: Alumni
+    collapsed: true
+  - name: talks
+    label: Talks
+    collapsed: true
+  - name: data
+    label: Data
+    collapsed: true
+
+collections:
+  - name: "lab_director"
+    label: "People - Lab Director"
+    folder: "_people/current/lab-director"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "person" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "First Name", name: "firstname", widget: "string" }
+      - { label: "Last Name", name: "lastname", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Category", name: "category", widget: "hidden", default: "Lab Director" }
+      - { label: "Image", name: "img", widget: "image", required: false }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "ORCID ID", name: "orcid_id", widget: "string", required: false }
+      - { label: "LinkedIn", name: "linkedin_username", widget: "string", required: false }
+      - { label: "GitHub", name: "github", widget: "string", required: false }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "Scholar User ID", name: "scholar_userid", widget: "string", required: false }
+      - { label: "Twitter", name: "twitter_username", widget: "string", required: false }
+      - { label: "Show", name: "show", widget: "boolean", default: true }
+      - { label: "Biography Paragraphs", name: "biography_paragraphs", widget: "list", required: false }
+      - { label: "Show Academic Roles", name: "show_academic_roles", widget: "boolean", default: false }
+      - { label: "Academic Roles", name: "academic_roles", widget: "list", required: false }
+      - { label: "Show Awards", name: "show_awards", widget: "boolean", default: false }
+      - { label: "Awards", name: "awards", widget: "list", required: false }
+      - { label: "Show Visiting Positions", name: "show_visiting_positions", widget: "boolean", default: false }
+      - { label: "Visiting Positions", name: "visiting_positions", widget: "list", required: false, fields: [{label: "Institution", name: "institution", widget: "string"}, {label: "Dates", name: "dates", widget: "string"}, {label: "Hosts", name: "hosts", widget: "string"}] }
+      - { label: "Show Activities", name: "show_activities", widget: "boolean", default: false }
+
+  - name: "phd_students"
+    label: "People - PhD Students"
+    group: people
+    folder: "_people/current/phd-students"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "person" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "First Name", name: "firstname", widget: "string" }
+      - { label: "Last Name", name: "lastname", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Category", name: "category", widget: "hidden", default: "PhD Students" }
+      - { label: "Image", name: "img", widget: "image", required: false }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "ORCID ID", name: "orcid_id", widget: "string", required: false }
+      - { label: "LinkedIn", name: "linkedin_username", widget: "string", required: false }
+      - { label: "GitHub", name: "github_username", widget: "string", required: false }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "Scholar User ID", name: "scholar_userid", widget: "string", required: false }
+      - { label: "Twitter", name: "twitter_username", widget: "string", required: false }
+      - { label: "Show", name: "show", widget: "boolean", default: true }
+      - { label: "Biography Paragraphs", name: "biography_paragraphs", widget: "list", required: false }
+      - { label: "Show Academic Roles", name: "show_academic_roles", widget: "boolean", default: false }
+      - { label: "Academic Roles", name: "academic_roles", widget: "list", required: false }
+      - { label: "Show Awards", name: "show_awards", widget: "boolean", default: false }
+      - { label: "Awards", name: "awards", widget: "list", required: false }
+      - { label: "Show Visiting Positions", name: "show_visiting_positions", widget: "boolean", default: false }
+      - { label: "Visiting Positions", name: "visiting_positions", widget: "list", required: false, fields: [{label: "Institution", name: "institution", widget: "string"}, {label: "Dates", name: "dates", widget: "string"}, {label: "Hosts", name: "hosts", widget: "string"}] }
+      - { label: "Show Activities", name: "show_activities", widget: "boolean", default: false }
+
+  - name: "mtech_students"
+    label: "People - MTech Students"
+    group: people
+    folder: "_people/current/mtech-students"
+    create: true
+    path: "{{year}}/{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "person" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "First Name", name: "firstname", widget: "string" }
+      - { label: "Last Name", name: "lastname", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Category", name: "category", widget: "hidden", default: "M.Tech Students" }
+      - { label: "Year", name: "year", widget: "number" }
+      - { label: "Image", name: "img", widget: "image", required: false }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "ORCID ID", name: "orcid_id", widget: "string", required: false }
+      - { label: "LinkedIn", name: "linkedin_username", widget: "string", required: false }
+      - { label: "GitHub", name: "github_username", widget: "string", required: false }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "Scholar User ID", name: "scholar_userid", widget: "string", required: false }
+      - { label: "Twitter", name: "twitter_username", widget: "string", required: false }
+      - { label: "Show", name: "show", widget: "boolean", default: true }
+      - { label: "Biography Paragraphs", name: "biography_paragraphs", widget: "list", required: false }
+      - { label: "Show Academic Roles", name: "show_academic_roles", widget: "boolean", default: false }
+      - { label: "Academic Roles", name: "academic_roles", widget: "list", required: false }
+      - { label: "Show Awards", name: "show_awards", widget: "boolean", default: false }
+      - { label: "Awards", name: "awards", widget: "list", required: false }
+      - { label: "Show Visiting Positions", name: "show_visiting_positions", widget: "boolean", default: false }
+      - { label: "Visiting Positions", name: "visiting_positions", widget: "list", required: false, fields: [{label: "Institution", name: "institution", widget: "string"}, {label: "Dates", name: "dates", widget: "string"}, {label: "Hosts", name: "hosts", widget: "string"}] }
+      - { label: "Show Activities", name: "show_activities", widget: "boolean", default: false }
+
+  - name: "mtech_research"
+    label: "People - MTech (Research)"
+    group: people
+    folder: "_people/current/mtech-research"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "person" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "First Name", name: "firstname", widget: "string" }
+      - { label: "Last Name", name: "lastname", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Category", name: "category", widget: "hidden", default: "M.Tech (Research) Students" }
+      - { label: "Image", name: "img", widget: "image", required: false }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "ORCID ID", name: "orcid_id", widget: "string", required: false }
+      - { label: "LinkedIn", name: "linkedin_username", widget: "string", required: false }
+      - { label: "GitHub", name: "github_username", widget: "string", required: false }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "Scholar User ID", name: "scholar_userid", widget: "string", required: false }
+      - { label: "Twitter", name: "twitter_username", widget: "string", required: false }
+      - { label: "Show", name: "show", widget: "boolean", default: true }
+      - { label: "Biography Paragraphs", name: "biography_paragraphs", widget: "list", required: false }
+      - { label: "Show Academic Roles", name: "show_academic_roles", widget: "boolean", default: false }
+      - { label: "Academic Roles", name: "academic_roles", widget: "list", required: false }
+      - { label: "Show Awards", name: "show_awards", widget: "boolean", default: false }
+      - { label: "Awards", name: "awards", widget: "list", required: false }
+      - { label: "Show Visiting Positions", name: "show_visiting_positions", widget: "boolean", default: false }
+      - { label: "Visiting Positions", name: "visiting_positions", widget: "list", required: false, fields: [{label: "Institution", name: "institution", widget: "string"}, {label: "Dates", name: "dates", widget: "string"}, {label: "Hosts", name: "hosts", widget: "string"}] }
+      - { label: "Show Activities", name: "show_activities", widget: "boolean", default: false }
+
+  - name: "project_associates"
+    label: "People - Project Associates"
+    group: people
+    folder: "_people/current/project-associates"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "person" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "First Name", name: "firstname", widget: "string" }
+      - { label: "Last Name", name: "lastname", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Category", name: "category", widget: "hidden", default: "Project Associates" }
+      - { label: "Image", name: "img", widget: "image", required: false }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "ORCID ID", name: "orcid_id", widget: "string", required: false }
+      - { label: "LinkedIn", name: "linkedin_username", widget: "string", required: false }
+      - { label: "GitHub", name: "github_username", widget: "string", required: false }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "Scholar User ID", name: "scholar_userid", widget: "string", required: false }
+      - { label: "Twitter", name: "twitter_username", widget: "string", required: false }
+      - { label: "Show", name: "show", widget: "boolean", default: true }
+      - { label: "Biography Paragraphs", name: "biography_paragraphs", widget: "list", required: false }
+      - { label: "Show Academic Roles", name: "show_academic_roles", widget: "boolean", default: false }
+      - { label: "Academic Roles", name: "academic_roles", widget: "list", required: false }
+      - { label: "Show Awards", name: "show_awards", widget: "boolean", default: false }
+      - { label: "Awards", name: "awards", widget: "list", required: false }
+      - { label: "Show Visiting Positions", name: "show_visiting_positions", widget: "boolean", default: false }
+      - { label: "Visiting Positions", name: "visiting_positions", widget: "list", required: false, fields: [{label: "Institution", name: "institution", widget: "string"}, {label: "Dates", name: "dates", widget: "string"}, {label: "Hosts", name: "hosts", widget: "string"}] }
+      - { label: "Show Activities", name: "show_activities", widget: "boolean", default: false }
+
+  - name: "phd_graduates"
+    label: "Alumni - PhD Graduates"
+    group: alumni
+    folder: "_people/alumni/phd-graduates"
+    create: true
+    path: "{{year}}/{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "person" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "First Name", name: "firstname", widget: "string" }
+      - { label: "Last Name", name: "lastname", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Category", name: "category", widget: "hidden", default: "PhD Graduates" }
+      - { label: "Year", name: "year", widget: "number" }
+      - { label: "Image", name: "img", widget: "image", required: false }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "ORCID ID", name: "orcid_id", widget: "string", required: false }
+      - { label: "LinkedIn", name: "linkedin_username", widget: "string", required: false }
+      - { label: "GitHub", name: "github_username", widget: "string", required: false }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "Scholar User ID", name: "scholar_userid", widget: "string", required: false }
+      - { label: "Twitter", name: "twitter_username", widget: "string", required: false }
+      - { label: "Show", name: "show", widget: "boolean", default: true }
+      - { label: "Biography Paragraphs", name: "biography_paragraphs", widget: "list", required: false }
+      - { label: "Show Academic Roles", name: "show_academic_roles", widget: "boolean", default: false }
+      - { label: "Academic Roles", name: "academic_roles", widget: "list", required: false }
+      - { label: "Show Awards", name: "show_awards", widget: "boolean", default: false }
+      - { label: "Awards", name: "awards", widget: "list", required: false }
+      - { label: "Show Visiting Positions", name: "show_visiting_positions", widget: "boolean", default: false }
+      - { label: "Visiting Positions", name: "visiting_positions", widget: "list", required: false, fields: [{label: "Institution", name: "institution", widget: "string"}, {label: "Dates", name: "dates", widget: "string"}, {label: "Hosts", name: "hosts", widget: "string"}] }
+      - { label: "Show Activities", name: "show_activities", widget: "boolean", default: false }
+
+  - name: "mtech_graduates"
+    label: "Alumni - MTech Graduates"
+    group: alumni
+    folder: "_people/alumni/mtech-graduates"
+    create: true
+    path: "{{year}}/{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "person" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "First Name", name: "firstname", widget: "string" }
+      - { label: "Last Name", name: "lastname", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Category", name: "category", widget: "hidden", default: "M.Tech Graduates" }
+      - { label: "Year", name: "year", widget: "number" }
+      - { label: "Image", name: "img", widget: "image", required: false }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "ORCID ID", name: "orcid_id", widget: "string", required: false }
+      - { label: "LinkedIn", name: "linkedin_username", widget: "string", required: false }
+      - { label: "GitHub", name: "github_username", widget: "string", required: false }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "Scholar User ID", name: "scholar_userid", widget: "string", required: false }
+      - { label: "Twitter", name: "twitter_username", widget: "string", required: false }
+      - { label: "Show", name: "show", widget: "boolean", default: true }
+      - { label: "Biography Paragraphs", name: "biography_paragraphs", widget: "list", required: false }
+      - { label: "Show Academic Roles", name: "show_academic_roles", widget: "boolean", default: false }
+      - { label: "Academic Roles", name: "academic_roles", widget: "list", required: false }
+      - { label: "Show Awards", name: "show_awards", widget: "boolean", default: false }
+      - { label: "Awards", name: "awards", widget: "list", required: false }
+      - { label: "Show Visiting Positions", name: "show_visiting_positions", widget: "boolean", default: false }
+      - { label: "Visiting Positions", name: "visiting_positions", widget: "list", required: false, fields: [{label: "Institution", name: "institution", widget: "string"}, {label: "Dates", name: "dates", widget: "string"}, {label: "Hosts", name: "hosts", widget: "string"}] }
+      - { label: "Show Activities", name: "show_activities", widget: "boolean", default: false }
+
+  - name: "mtech_research_graduates"
+    label: "Alumni - MTech (Research) Graduates"
+    group: alumni
+    folder: "_people/alumni/mtech-research-graduates"
+    create: true
+    path: "{{year}}/{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "person" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "First Name", name: "firstname", widget: "string" }
+      - { label: "Last Name", name: "lastname", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Category", name: "category", widget: "hidden", default: "M.Tech (Research) Graduates" }
+      - { label: "Year", name: "year", widget: "number" }
+      - { label: "Image", name: "img", widget: "image", required: false }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "ORCID ID", name: "orcid_id", widget: "string", required: false }
+      - { label: "LinkedIn", name: "linkedin_username", widget: "string", required: false }
+      - { label: "GitHub", name: "github_username", widget: "string", required: false }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "Scholar User ID", name: "scholar_userid", widget: "string", required: false }
+      - { label: "Twitter", name: "twitter_username", widget: "string", required: false }
+      - { label: "Show", name: "show", widget: "boolean", default: true }
+      - { label: "Biography Paragraphs", name: "biography_paragraphs", widget: "list", required: false }
+      - { label: "Show Academic Roles", name: "show_academic_roles", widget: "boolean", default: false }
+      - { label: "Academic Roles", name: "academic_roles", widget: "list", required: false }
+      - { label: "Show Awards", name: "show_awards", widget: "boolean", default: false }
+      - { label: "Awards", name: "awards", widget: "list", required: false }
+      - { label: "Show Visiting Positions", name: "show_visiting_positions", widget: "boolean", default: false }
+      - { label: "Visiting Positions", name: "visiting_positions", widget: "list", required: false, fields: [{label: "Institution", name: "institution", widget: "string"}, {label: "Dates", name: "dates", widget: "string"}, {label: "Hosts", name: "hosts", widget: "string"}] }
+      - { label: "Show Activities", name: "show_activities", widget: "boolean", default: false }
+
+  - name: "interns"
+    label: "Alumni - Interns"
+    group: alumni
+    folder: "_people/alumni/interns"
+    create: true
+    path: "{{year}}/{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "person" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "First Name", name: "firstname", widget: "string" }
+      - { label: "Last Name", name: "lastname", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Category", name: "category", widget: "hidden", default: "Interns" }
+      - { label: "Year", name: "year", widget: "number" }
+      - { label: "Image", name: "img", widget: "image", required: false }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "ORCID ID", name: "orcid_id", widget: "string", required: false }
+      - { label: "LinkedIn", name: "linkedin_username", widget: "string", required: false }
+      - { label: "GitHub", name: "github_username", widget: "string", required: false }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "Scholar User ID", name: "scholar_userid", widget: "string", required: false }
+      - { label: "Twitter", name: "twitter_username", widget: "string", required: false }
+      - { label: "Show", name: "show", widget: "boolean", default: true }
+      - { label: "Biography Paragraphs", name: "biography_paragraphs", widget: "list", required: false }
+      - { label: "Show Academic Roles", name: "show_academic_roles", widget: "boolean", default: false }
+      - { label: "Academic Roles", name: "academic_roles", widget: "list", required: false }
+      - { label: "Show Awards", name: "show_awards", widget: "boolean", default: false }
+      - { label: "Awards", name: "awards", widget: "list", required: false }
+      - { label: "Badges", name: "badges", widget: "list", required: false }
+      - { label: "Show Visiting Positions", name: "show_visiting_positions", widget: "boolean", default: false }
+      - { label: "Visiting Positions", name: "visiting_positions", widget: "list", required: false, fields: [{label: "Institution", name: "institution", widget: "string"}, {label: "Dates", name: "dates", widget: "string"}, {label: "Hosts", name: "hosts", widget: "string"}] }
+      - { label: "Show Activities", name: "show_activities", widget: "boolean", default: false }
+
+  - name: "post_doc"
+    label: "Alumni - Post Docs"
+    group: alumni
+    folder: "_people/alumni/post-doc"
+    create: true
+    path: "{{year}}/{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "person" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "First Name", name: "firstname", widget: "string" }
+      - { label: "Last Name", name: "lastname", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Category", name: "category", widget: "hidden", default: "Post Docs" }
+      - { label: "Year", name: "year", widget: "number" }
+      - { label: "Image", name: "img", widget: "image", required: false }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "ORCID ID", name: "orcid_id", widget: "string", required: false }
+      - { label: "LinkedIn", name: "linkedin_username", widget: "string", required: false }
+      - { label: "GitHub", name: "github_username", widget: "string", required: false }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "Scholar User ID", name: "scholar_userid", widget: "string", required: false }
+      - { label: "Twitter", name: "twitter_username", widget: "string", required: false }
+      - { label: "Show", name: "show", widget: "boolean", default: true }
+      - { label: "Biography Paragraphs", name: "biography_paragraphs", widget: "list", required: false }
+      - { label: "Show Academic Roles", name: "show_academic_roles", widget: "boolean", default: false }
+      - { label: "Academic Roles", name: "academic_roles", widget: "list", required: false }
+      - { label: "Show Awards", name: "show_awards", widget: "boolean", default: false }
+      - { label: "Awards", name: "awards", widget: "list", required: false }
+      - { label: "Show Visiting Positions", name: "show_visiting_positions", widget: "boolean", default: false }
+      - { label: "Visiting Positions", name: "visiting_positions", widget: "list", required: false, fields: [{label: "Institution", name: "institution", widget: "string"}, {label: "Dates", name: "dates", widget: "string"}, {label: "Hosts", name: "hosts", widget: "string"}] }
+      - { label: "Show Activities", name: "show_activities", widget: "boolean", default: false }
+
+  - name: "research_associates"
+    label: "Alumni - Research Associates"
+    group: alumni
+    folder: "_people/alumni/research-associates"
+    create: true
+    path: "{{year}}/{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "person" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "First Name", name: "firstname", widget: "string" }
+      - { label: "Last Name", name: "lastname", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Category", name: "category", widget: "hidden", default: "Research Associates" }
+      - { label: "Year", name: "year", widget: "number" }
+      - { label: "Image", name: "img", widget: "image", required: false }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "ORCID ID", name: "orcid_id", widget: "string", required: false }
+      - { label: "LinkedIn", name: "linkedin_username", widget: "string", required: false }
+      - { label: "GitHub", name: "github_username", widget: "string", required: false }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "Scholar User ID", name: "scholar_userid", widget: "string", required: false }
+      - { label: "Twitter", name: "twitter_username", widget: "string", required: false }
+      - { label: "Show", name: "show", widget: "boolean", default: true }
+      - { label: "Biography Paragraphs", name: "biography_paragraphs", widget: "list", required: false }
+      - { label: "Show Academic Roles", name: "show_academic_roles", widget: "boolean", default: false }
+      - { label: "Academic Roles", name: "academic_roles", widget: "list", required: false }
+      - { label: "Show Awards", name: "show_awards", widget: "boolean", default: false }
+      - { label: "Awards", name: "awards", widget: "list", required: false }
+      - { label: "Show Visiting Positions", name: "show_visiting_positions", widget: "boolean", default: false }
+      - { label: "Visiting Positions", name: "visiting_positions", widget: "list", required: false, fields: [{label: "Institution", name: "institution", widget: "string"}, {label: "Dates", name: "dates", widget: "string"}, {label: "Hosts", name: "hosts", widget: "string"}] }
+      - { label: "Show Activities", name: "show_activities", widget: "boolean", default: false }
+
+  - name: "administrator"
+    label: "People - Administrator"
+    folder: "_people/current/administrator"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "person" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "First Name", name: "firstname", widget: "string" }
+      - { label: "Last Name", name: "lastname", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Category", name: "category", widget: "hidden", default: "Administrator" }
+      - { label: "Image", name: "img", widget: "image", required: false }
+      - { label: "Website", name: "website", widget: "string", required: false }
+      - { label: "ORCID ID", name: "orcid_id", widget: "string", required: false }
+      - { label: "LinkedIn", name: "linkedin_username", widget: "string", required: false }
+      - { label: "GitHub", name: "github_username", widget: "string", required: false }
+      - { label: "Email", name: "email", widget: "string", required: false }
+      - { label: "Scholar User ID", name: "scholar_userid", widget: "string", required: false }
+      - { label: "Twitter", name: "twitter_username", widget: "string", required: false }
+      - { label: "Show", name: "show", widget: "boolean", default: true }
+      - { label: "Biography Paragraphs", name: "biography_paragraphs", widget: "list", required: false }
+      - { label: "Show Academic Roles", name: "show_academic_roles", widget: "boolean", default: false }
+      - { label: "Academic Roles", name: "academic_roles", widget: "list", required: false }
+      - { label: "Show Awards", name: "show_awards", widget: "boolean", default: false }
+      - { label: "Awards", name: "awards", widget: "list", required: false }
+      - { label: "Show Visiting Positions", name: "show_visiting_positions", widget: "boolean", default: false }
+      - { label: "Visiting Positions", name: "visiting_positions", widget: "list", required: false, fields: [{label: "Institution", name: "institution", widget: "string"}, {label: "Dates", name: "dates", widget: "string"}, {label: "Hosts", name: "hosts", widget: "string"}] }
+      - { label: "Show Activities", name: "show_activities", widget: "boolean", default: false }
+
+  - name: "news"
+    label: "News"
+    folder: "_news"
+    create: true
+    nested: { depth: 2 }
+    path: "{{year}}/{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Inline", name: "inline", widget: "boolean", default: false, required: false }
+      - { label: "Related Posts", name: "related_posts", widget: "boolean", default: false, required: false }
+      - { label: "Announce", name: "announce", widget: "boolean", default: false, required: false }
+      - { label: "Badge", name: "badge", widget: "string", required: false }
+      - { label: "Icon", name: "icon", widget: "string", required: false }
+      - { label: "Link", name: "link", widget: "string", required: false }
+      - { label: "Venue", name: "venue", widget: "string", required: false }
+      - { label: "Host", name: "host", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "talks_delivered"
+    label: "Talks - Delivered"
+    group: talks
+    folder: "_talks/delivered"
+    create: true
+    path: "{{year}}/{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "talk" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Time", name: "time", widget: "string", required: false }
+      - { label: "Venue", name: "venue", widget: "string", required: false }
+      - { label: "Type", name: "type", widget: "string", default: "Talk" }
+      - { label: "Category", name: "category", widget: "hidden", default: "delivered" }
+      - { label: "Speaker", name: "speaker", widget: "string", required: false }
+      - { label: "Speaker Affiliation", name: "speaker_affiliation", widget: "string", required: false }
+      - { label: "Host", name: "host", widget: "string", required: false }
+      - { label: "Keywords", name: "keywords", widget: "list", required: false }
+      - { label: "Abstract", name: "abstract", widget: "text", required: false }
+      - { label: "Speaker Bio", name: "speaker_bio", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  - name: "talks_organized"
+    label: "Talks - Organized"
+    group: talks
+    folder: "_talks/organized"
+    create: true
+    path: "{{year}}/{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "talk" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Time", name: "time", widget: "string", required: false }
+      - { label: "Venue", name: "venue", widget: "string", required: false }
+      - { label: "Type", name: "type", widget: "string", default: "PhD Thesis Colloquium" }
+      - { label: "Category", name: "category", widget: "hidden", default: "organized" }
+      - { label: "Candidate", name: "candidate", widget: "string", required: false }
+      - { label: "Supervisor", name: "supervisor", widget: "string", required: false }
+      - { label: "Keywords", name: "keywords", widget: "list", required: false }
+      - { label: "Abstract", name: "abstract", widget: "text", required: false }
+      - { label: "Candidate Bio", name: "candidate_bio", widget: "text", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  - name: "data"
+    label: "Data"
+    group: data
+    files:
+      - name: "funding"
+        label: "Funding"
+        file: "_data/funding.yml"
+        fields:
+          - label: "Funders"
+            name: "funders"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image" }
+              - { label: "URL", name: "url", widget: "string", required: false }
+              - { label: "Invert", name: "invert", widget: "boolean", default: false }
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Agency", name: "agency", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Amount", name: "amount", widget: "string" }
+              - { label: "Duration", name: "duration", widget: "string" }
+              - { label: "Investigators", name: "investigators", widget: "string", required: false }
+      - name: "recognition"
+        label: "Recognition"
+        file: "_data/recognition.yml"
+        fields:
+          - label: "Awards"
+            name: "awards"
+            widget: "list"
+            fields:
+              - { label: "Award Name", name: "award", widget: "string" }
+              - { label: "Year", name: "year", widget: "string", required: false }
+              - { label: "Category", name: "category", widget: "select", options: ["Award", "Recognition"], default: "Award" }
+              - { label: "Recipients", name: "recipients", widget: "string", hint: "Comma-separated list of names" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Images", name: "images", widget: "list", required: false, fields: [{label: "Path", name: "path", widget: "image"}, {label: "Caption", name: "caption", widget: "string"}] }
+              - { label: "Co-inventors", name: "co_inventors", widget: "string", required: false }
+
+      
+   
+  - name: "course_pages"
+    label: "Course Pages"
+    group: data
+    folder: "_pages/teaching"
+    create: true
+    nested: { depth: 2 }
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Type", name: "type", widget: "select", options: ["Regular Course", "Short Course"], default: "Regular Course" }
+      - { label: "Course ID", name: "course_id", widget: "string" }
+      - { label: "Nav", name: "nav", widget: "boolean", default: false }
+      - { label: "Parent Course", name: "parent_course", widget: "string", required: false }
+      - { label: "Schedule", name: "schedule", widget: "object", required: false, fields: [{label: "Dates & Time", name: "dates_time", widget: "string"}, {label: "Classroom", name: "classroom", widget: "string"}, {label: "Duration", name: "duration", widget: "string"}, {label: "Meeting Link", name: "meeting_link", widget: "string", required: false}] }
+      - { label: "News", name: "news", widget: "list", required: false, fields: [{label: "Title", name: "title", widget: "string"}, {label: "Date", name: "date", widget: "string"}, {label: "Description", name: "description", widget: "string"}] }
+      - { label: "Modules", name: "modules", widget: "list", required: false, fields: [{label: "Title", name: "title", widget: "string"}, {label: "Description", name: "description", widget: "text"}, {label: "Lectures", name: "lectures", widget: "string"}, {label: "Status", name: "status", widget: "select", options: ["Upcoming", "In Progress", "Completed"]}, {label: "Link", name: "link", widget: "string"}] }
+      - { label: "Lectures", name: "lectures", widget: "list", required: false, fields: [{label: "Title", name: "title", widget: "string"}, {label: "Slides", name: "slides", widget: "file", required: false}, {label: "Description", name: "description", widget: "string", required: false}, {label: "Video", name: "video", widget: "string", required: false}, {label: "Notes", name: "notes", widget: "file", required: false}] }
+      - { label: "Assignments", name: "assignments", widget: "list", required: false, fields: [{label: "Title", name: "title", widget: "string"}, {label: "Description", name: "description", widget: "string", required: false}, {label: "PDF", name: "pdf", widget: "file", required: false}, {label: "Solution", name: "solution", widget: "file", required: false}, {label: "Due Date", name: "due_date", widget: "string", required: false}] }
+      - { label: "Resources", name: "resources", widget: "list", required: false, fields: [{label: "Title", name: "title", widget: "string"}, {label: "URL", name: "url", widget: "string", required: false}, {label: "Description", name: "description", widget: "string", required: false}] }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+

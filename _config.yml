@@ -294,6 +294,7 @@ exclude:
 keep_files:
   - CNAME
   - .nojekyll
+  - assets/img
 
 # Plug-ins
 plugins:
@@ -304,7 +305,6 @@ plugins:
   - jekyll-imagemagick
   - jekyll-jupyter-notebook
   - jekyll-link-attributes
-  - jekyll-minifier
   - jekyll-paginate-v2
   - jekyll-regex-replace
   - jekyll/scholar
@@ -324,14 +324,7 @@ defaults:
 sass:
   style: compressed
 
-# -----------------------------------------------------------------------------
-# Jekyll Minifier
-# -----------------------------------------------------------------------------
 
-jekyll-minifier:
-  exclude: ["robots.txt", "assets/js/search/*.js", "assets/libs/**/*"]
-  uglifier_args:
-    harmony: true
 
 # -----------------------------------------------------------------------------
 # Jekyll Archives

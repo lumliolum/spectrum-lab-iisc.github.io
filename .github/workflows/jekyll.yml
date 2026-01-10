@@ -59,7 +59,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y --no-install-recommends imagemagick libmagickwand-dev python3-pip
-          pip3 install --upgrade --user jupyter nbconvert
+          pip3 install -r requirements.txt
 
       # Cache Jekyll build artifacts
       - name: Cache Jekyll build
@@ -69,10 +69,18 @@ jobs:
             .jekyll-cache
             .jekyll-metadata
             vendor
-            _site
           key: ${{ runner.os }}-jekyll-${{ hashFiles('_config.yml', 'Gemfile.lock') }}
           restore-keys: |
             ${{ runner.os }}-jekyll-
+
+      # Cache Generated Images
+      - name: Cache Generated Images
+        uses: actions/cache@v4
+        with:
+          path: _site/assets/img
+          key: ${{ runner.os }}-generated-images-${{ hashFiles('assets/img/**/*', '_config.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-generated-images-
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -83,6 +91,11 @@ jobs:
           bundle exec jekyll build --destination ./_site --incremental --profile
         env:
           JEKYLL_ENV: production
+
+      - name: Minify
+        run: |
+          curl -L https://github.com/tdewolff/minify/releases/download/v2.20.19/minify_linux_amd64.tar.gz | tar -xz
+          ./minify -r -o _site/ _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

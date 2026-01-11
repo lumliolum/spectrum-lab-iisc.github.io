@@ -15,26 +15,26 @@
 
       <ul class="news-items">
         {% for item in news limit: news_limit %}
-          <li class="news-item{% if item.announce %} news-item--announcement{% endif %}">
+          <li class="news-item{% if item.announce != blank %} news-item--announcement{% endif %}">
             <div class="news-meta">
               <span class="news-date">{{ item.date | date: '%b %d, %Y' }}</span>
-              {% if item.badge %}
+              {% if item.badge != blank %}
                 <span class="news-badge news-badge--{{ item.badge | downcase | replace: ' ', '-' }}">{{ item.badge }}</span>
               {% endif %}
             </div>
             <div class="news-body">
               <div class="news-content">
-                {% if item.inline %}
+                {% if item.inline != blank %}
                   {{ item.content | remove: '<p>' | remove: '</p>' | emojify | link_coauthors }}
                 {% else %}
-                  {% if item.link %}
+                  {% if item.link != blank %}
                     <a class="news-title" href="{{ item.link | relative_url }}">{{ item.title }}</a>
                   {% else %}
                     <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
                   {% endif %}
                 {% endif %}
               </div>
-              {% if item.speaker %}
+              {% if item.speaker != blank %}
                 <div class="news-speaker">
                   <i class="fas fa-user-tie"></i>
                   {{ item.speaker }}

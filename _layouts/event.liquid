@@ -4,7 +4,7 @@ layout: default
 
 <div class="event-page">
   <header class="event-header">
-    {% if page.badge %}
+    {% if page.badge != blank %}
       <span class="event-badge event-badge--{{ page.badge | downcase | replace: ' ', '-' }}">{{ page.badge }}</span>
     {% endif %}
     <h1 class="event-title">{{ page.title }}</h1>
@@ -14,13 +14,13 @@ layout: default
         <i class="fas fa-calendar-alt"></i>
         <span>{{ page.date | date: '%B %d, %Y' }}</span>
       </div>
-      {% if page.time %}
+      {% if page.time != blank %}
         <div class="event-meta-item">
           <i class="fas fa-clock"></i>
           <span>{{ page.time }}</span>
         </div>
       {% endif %}
-      {% if page.venue %}
+      {% if page.venue != blank %}
         <div class="event-meta-item">
           <i class="fas fa-map-marker-alt"></i>
           <span>{{ page.venue }}</span>
@@ -29,21 +29,21 @@ layout: default
     </div>
   </header>
 
-  {% if page.speaker %}
+  {% if page.speaker != blank %}
     <section class="event-section">
       <h2>
         <i class="fas fa-user-tie"></i>
         Speaker</h2>
       <div class="event-speaker">
         <strong>{{ page.speaker | link_coauthors }}</strong>
-        {% if page.speaker_affiliation %}
+        {% if page.speaker_affiliation != blank %}
           <br><span class="speaker-affiliation">{{ page.speaker_affiliation }}</span>
         {% endif %}
       </div>
     </section>
   {% endif %}
 
-  {% if page.speakers %}
+  {% if page.speakers != blank %}
     <section class="event-section">
       <h2>
         <i class="fas fa-users"></i>
@@ -56,17 +56,17 @@ layout: default
     </section>
   {% endif %}
 
-  {% if page.host or page.hosts %}
+  {% if page.host != blank or page.hosts != blank %}
     <section class="event-section">
       <h2>
         <i class="fas fa-user-friends"></i>
-        Host{% if page.hosts %}s{% endif %}
+        Host{% if page.hosts != blank %}s{% endif %}
       </h2>
       <p>{{ page.host | link_coauthors }}{{ page.hosts | link_coauthors }}</p>
     </section>
   {% endif %}
 
-  {% if page.abstract %}
+  {% if page.abstract != blank %}
     <section class="event-section">
       <h2>
         <i class="fas fa-file-alt"></i>
@@ -85,7 +85,7 @@ layout: default
     </section>
   {% endif %}
 
-  {% if page.registration_link %}
+  {% if page.registration_link != blank %}
     <section class="event-section">
       <a
         href="{{ page.registration_link }}"

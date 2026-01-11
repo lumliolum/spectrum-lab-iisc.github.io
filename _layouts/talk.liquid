@@ -4,9 +4,9 @@ layout: default
 
 <div class="talk-page">
   <header class="talk-header">
-    {% if page.badge %}
+    {% if page.badge != blank %}
       <span class="talk-badge talk-badge--{{ page.badge | downcase | replace: ' ', '-' }}">{{ page.badge }}</span>
-    {% elsif page.type %}
+    {% elsif page.type != blank %}
       <span class="talk-badge talk-badge--{{ page.type | downcase | replace: ' ', '-' }}">{{ page.type }}</span>
     {% endif %}
     <h1 class="talk-title">{{ page.title }}</h1>
@@ -16,21 +16,35 @@ layout: default
         <i class="fas fa-calendar-alt"></i>
         <span>{{ page.date | date: '%B %d, %Y' }}</span>
       </div>
-      {% if page.time %}
+      {% if page.time != blank %}
         <div class="talk-meta-item">
           <i class="fas fa-clock"></i>
           <span>{{ page.time }}</span>
         </div>
       {% endif %}
-      {% if page.venue %}
+      {% if page.venue != blank %}
         <div class="talk-meta-item">
           <i class="fas fa-map-marker-alt"></i>
-          <span>{{ page.venue }}</span>
+          {% if page.venue_link != blank %}
+            <a href="{{ page.venue_link }}" target="_blank" rel="noopener noreferrer">{{ page.venue }}</a>
+          {% else %}
+            <span>{{ page.venue }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+      {% if page.collaboration != blank %}
+        <div class="talk-meta-item">
+          <i class="fas fa-handshake"></i>
+          {% if page.collaboration_link != blank %}
+            <a href="{{ page.collaboration_link }}" target="_blank" rel="noopener noreferrer">{{ page.collaboration }}</a>
+          {% else %}
+            <span>{{ page.collaboration }}</span>
+          {% endif %}
         </div>
       {% endif %}
     </div>
 
-    {% if page.keywords %}
+    {% if page.keywords != blank %}
       <div class="talk-keywords">
         {% for keyword in page.keywords %}
           <span class="talk-keyword">{{ keyword }}</span>
@@ -39,38 +53,38 @@ layout: default
     {% endif %}
   </header>
 
-  {% if page.speaker %}
+  {% if page.speaker != blank %}
     <section class="talk-section">
       <h2>
         <i class="fas fa-user-tie"></i>
         Speaker</h2>
       <div class="talk-speaker-card">
         <strong>{{ page.speaker | link_coauthors }}</strong>
-        {% if page.speaker_affiliation %}
+        {% if page.speaker_affiliation != blank %}
           <br><span class="speaker-affiliation">{{ page.speaker_affiliation }}</span>
         {% endif %}
       </div>
     </section>
   {% endif %}
 
-  {% if page.candidate %}
+  {% if page.candidate != blank %}
     <section class="talk-section">
       <h2>
         <i class="fas fa-user-graduate"></i>
         Candidate</h2>
       <div class="talk-speaker-card">
         <strong>{{ page.candidate | link_coauthors }}</strong>
-        {% if page.supervisor %}
+        {% if page.supervisor != blank %}
           <br><span class="speaker-affiliation">Supervisor: {{ page.supervisor | link_coauthors }}</span>
         {% endif %}
-        {% if page.examiner %}
+        {% if page.examiner != blank %}
           <br><span class="speaker-affiliation">Examiner: {{ page.examiner | link_coauthors }}</span>
         {% endif %}
       </div>
     </section>
   {% endif %}
 
-  {% if page.speakers %}
+  {% if page.speakers != blank %}
     <section class="talk-section">
       <h2>
         <i class="fas fa-users"></i>
@@ -83,7 +97,7 @@ layout: default
     </section>
   {% endif %}
 
-  {% if page.instructors %}
+  {% if page.instructors != blank %}
     <section class="talk-section">
       <h2>
         <i class="fas fa-chalkboard-teacher"></i>
@@ -96,23 +110,23 @@ layout: default
     </section>
   {% endif %}
 
-  {% if page.host or page.hosts or page.co_host %}
+  {% if page.host != blank or page.hosts != blank or page.co_host != blank %}
     <section class="talk-section">
       <h2>
         <i class="fas fa-user-friends"></i>
-        Host{% if page.hosts or page.co_host %}s{% endif %}
+        Host{% if page.hosts != blank or page.co_host != blank %}s{% endif %}
       </h2>
       <p>
-        {% if page.host %}
+        {% if page.host != blank %}
           {{ page.host | link_coauthors }}{% endif %}
-        {% if page.hosts %}
+        {% if page.hosts != blank %}
           {{ page.hosts | link_coauthors }}{% endif %}
-        {% if page.co_host %}<br>Co-host: {{ page.co_host | link_coauthors }}{% endif %}
+        {% if page.co_host != blank %}<br>Co-host: {{ page.co_host | link_coauthors }}{% endif %}
       </p>
     </section>
   {% endif %}
 
-  {% if page.abstract %}
+  {% if page.abstract != blank %}
     <section class="talk-section">
       <h2>
         <i class="fas fa-file-alt"></i>
@@ -123,7 +137,7 @@ layout: default
     </section>
   {% endif %}
 
-  {% if page.course_description %}
+  {% if page.course_description != blank %}
     <section class="talk-section">
       <h2>
         <i class="fas fa-book-open"></i>
@@ -134,7 +148,7 @@ layout: default
     </section>
   {% endif %}
 
-  {% if page.course_goals %}
+  {% if page.course_goals != blank %}
     <section class="talk-section">
       <h2>
         <i class="fas fa-bullseye"></i>
@@ -145,7 +159,7 @@ layout: default
     </section>
   {% endif %}
 
-  {% if page.speaker_bio %}
+  {% if page.speaker_bio != blank %}
     <section class="talk-section">
       <h2>
         <i class="fas fa-info-circle"></i>
@@ -156,7 +170,7 @@ layout: default
     </section>
   {% endif %}
 
-  {% if page.candidate_bio %}
+  {% if page.candidate_bio != blank %}
     <section class="talk-section">
       <h2>
         <i class="fas fa-info-circle"></i>
@@ -167,7 +181,7 @@ layout: default
     </section>
   {% endif %}
 
-  {% if page.references %}
+  {% if page.references != blank %}
     <section class="talk-section">
       <h2>
         <i class="fas fa-book"></i>
@@ -186,7 +200,7 @@ layout: default
     </section>
   {% endif %}
 
-  {% if page.registration_link %}
+  {% if page.registration_link != blank %}
     <section class="talk-section">
       <a
         href="{{ page.registration_link }}"

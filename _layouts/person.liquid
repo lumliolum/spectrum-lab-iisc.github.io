@@ -6,7 +6,7 @@ layout: default
   <div class="row">
     <!-- Left column: Image and Contact Info -->
     <div class="col-md-4 text-center">
-      {% if page.img and page.img != "" %}
+      {% if page.img != blank %}
         {% include responsive-image.liquid path=page.img alt=page.firstname class="img-fluid rounded shadow mb-3" style="max-height: 300px;" %}
       {% else %}
         {%- assign first_initial = page.firstname | slice: 0 | upcase -%}
@@ -18,47 +18,47 @@ layout: default
         </div>
       {% endif %}
       <h1 class="mt-3">{{ page.firstname }} {{ page.lastname }}</h1>
-      <p class="text-muted mb-2 text-center">{{ page.description }}{% if page.badges %} <span class="person-badges">{% for badge in page.badges %}{{ badge }}{% endfor %}</span>{% endif %}</p>
+      <p class="text-muted mb-2 text-center">{{ page.description }}{% if page.badges != blank %} <span class="person-badges">{% for badge in page.badges %}{{ badge }}{% endfor %}</span>{% endif %}</p>
 
       <div class="d-flex flex-wrap justify-content-center gap-3 mt-3 social-icons">
-        {% if page.email %}
+        {% if page.email != blank %}
         {% unless page.email contains 'placeholder.com' %}
         <a href="mailto:{{ page.email }}" title="Email" class="social-icon">
           <i class="fas fa-envelope fa-lg"></i>
         </a>
         {% endunless %}
         {% endif %}
-        {% if page.orcid_id %}
+        {% if page.orcid_id != blank %}
         <a href="https://orcid.org/{{ page.orcid_id }}" target="_blank" title="ORCID" class="social-icon">
           <i class="ai ai-orcid ai-lg"></i>
         </a>
         {% endif %}
-        {% if page.scholar_userid %}
+        {% if page.scholar_userid != blank %}
         <a href="https://scholar.google.com/citations?user={{ page.scholar_userid }}" target="_blank" title="Google Scholar" class="social-icon">
           <i class="ai ai-google-scholar ai-lg"></i>
         </a>
         {% endif %}
-        {% if page.linkedin_username %}
+        {% if page.linkedin_username != blank %}
         <a href="https://linkedin.com/in/{{ page.linkedin_username }}" target="_blank" title="LinkedIn" class="social-icon">
           <i class="fab fa-linkedin fa-lg"></i>
         </a>
         {% endif %}
-        {% if page.github %}
+        {% if page.github != blank %}
         <a href="https://github.com/{{ page.github }}" target="_blank" title="GitHub" class="social-icon">
           <i class="fab fa-github fa-lg"></i>
         </a>
         {% endif %}
-        {% if page.twitter_username %}
+        {% if page.twitter_username != blank %}
         <a href="https://twitter.com/{{ page.twitter_username }}" target="_blank" title="Twitter" class="social-icon">
           <i class="fab fa-twitter fa-lg"></i>
         </a>
         {% endif %}
-        {% if page.website %}
+        {% if page.website != blank %}
         <a href="{{ page.website }}" target="_blank" title="Personal Website" class="social-icon">
           <i class="fas fa-globe fa-lg"></i>
         </a>
         {% endif %}
-        {% if page.cv_pdf %}
+        {% if page.cv_pdf != blank %}
         <a href="{{ page.cv_pdf | relative_url }}" target="_blank" title="CV" class="social-icon">
           <i class="fas fa-file-pdf fa-lg"></i>
         </a>
@@ -71,7 +71,7 @@ layout: default
       <div class="card shadow-sm border-0 mb-4">
         <div class="card-body">
           <h5 class="card-title">Biography</h5>
-          {% if page.biography_paragraphs %}
+          {% if page.biography_paragraphs != blank %}
           {% for paragraph in page.biography_paragraphs %}
           <p class="card-text">{{ paragraph | link_coauthors }}</p>
           {% endfor %}
@@ -265,7 +265,7 @@ layout: default
         {% for award in person_awards %}
         <li class="award-item">
           <i class="fas fa-award text-warning me-2"></i>
-          {{ award.award }}{% if award.year %} <span class="text-muted">({{ award.year }})</span>{% endif %}
+          {{ award.award }}{% if award.year != blank %} <span class="text-muted">({{ award.year }})</span>{% endif %}
         </li>
         {% endfor %}
       </ul>

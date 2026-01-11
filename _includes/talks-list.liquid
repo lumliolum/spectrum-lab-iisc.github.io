@@ -18,7 +18,7 @@
         {%- for talk in year_group.items -%}
           <article class="talk-card">
             <div class="talk-card-header">
-              {%- if talk.type -%}
+              {%- if talk.type != blank -%}
                 <span class="talk-type-badge talk-type-badge--{{ talk.type | downcase | replace: ' ', '-' }}">{{ talk.type }}</span>
               {%- endif -%}
               <time class="talk-date">{{ talk.date | date: "%B %d, %Y" }}</time>
@@ -28,38 +28,45 @@
                 {{ talk.title }}
               </a>
             </h3>
-            {%- if talk.speaker -%}
+            {%- if talk.speaker != blank -%}
               <div class="talk-speaker">
                 <i class="fas fa-user-tie"></i>
                 <span>{{ talk.speaker }}</span>
-                {%- if talk.speaker_affiliation -%}
+                {%- if talk.speaker_affiliation != blank -%}
                   <span class="speaker-affiliation">{{ talk.speaker_affiliation }}</span>
                 {%- endif -%}
               </div>
-            {%- elsif talk.candidate -%}
+            {%- elsif talk.candidate != blank -%}
               <div class="talk-speaker">
                 <i class="fas fa-user-graduate"></i>
                 <span>{{ talk.candidate }}</span>
               </div>
-            {%- elsif talk.host -%}
+            {%- elsif talk.host != blank -%}
               <div class="talk-host">
                 <i class="fas fa-user-friends"></i>
                 <span>Host: {{ talk.host }}</span>
               </div>
             {%- endif -%}
-            {%- if talk.keywords -%}
+            {%- if talk.keywords != blank -%}
               <div class="talk-keywords">
                 {%- for keyword in talk.keywords limit: 4 -%}
                   <span class="keyword-tag">{{ keyword }}</span>
                 {%- endfor -%}
               </div>
             {%- endif -%}
+            {%- if talk.venue != blank -%}
             <div class="talk-card-footer">
               <span class="talk-venue">
                 <i class="fas fa-map-marker-alt"></i>
-                {{ talk.venue | truncate: 40 }}</span>
+                {%- if talk.venue_link != blank -%}
+                  <a href="{{ talk.venue_link }}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">{{ talk.venue | truncate: 40 }}</a>
+                {%- else -%}
+                  {{ talk.venue | truncate: 40 }}
+                {%- endif -%}
+              </span>
               <i class="fas fa-arrow-right talk-arrow-icon"></i>
             </div>
+            {%- endif -%}
           </article>
         {%- endfor -%}
       </div>

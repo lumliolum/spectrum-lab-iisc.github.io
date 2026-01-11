@@ -7,7 +7,7 @@
       {%- for award in sorted_awards -%}
       <div class="award-card">
         <div class="award-content">
-          {% if award.url %}
+          {% if award.url != blank %}
             <h6 class="mb-1 text-primary">
               <a href="{{ award.url }}" target="_blank" rel="noopener noreferrer">{{ award.name }}</a>
             </h6>
@@ -15,16 +15,16 @@
             <h6 class="mb-1 text-primary">{{ award.name }}</h6>
           {% endif %}
           <p class="mb-1">{{ award.award | link_coauthors }}</p>
-          {% if award.co_inventors %}
+          {% if award.co_inventors != blank %}
             <small class="text-muted">Co-inventors: {{ award.co_inventors | link_coauthors }}</small>
           {% endif %}
-          {% if award.image %}
+          {% if award.image != blank %}
           <div class="award-image">
             {% include responsive-image.liquid path=award.image alt=award.name class="img-fluid" %}
           </div>
           {% endif %}
         </div>
-        {% if award.year %}
+        {% if award.year != blank %}
         <div class="award-year">
           <small class="text-muted">{{ award.year }}</small>
         </div>

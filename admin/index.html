@@ -56,6 +56,9 @@
             { label: "Date", name: "date", widget: "datetime" },
             { label: "Time", name: "time", widget: "string", required: false },
             { label: "Venue", name: "venue", widget: "string", required: false },
+            { label: "Venue Link", name: "venue_link", widget: "string", required: false, hint: "URL to venue website or map" },
+            { label: "Collaboration", name: "collaboration", widget: "string", required: false, hint: "Name of collaborating organization" },
+            { label: "Collaboration Link", name: "collaboration_link", widget: "string", required: false, hint: "URL to collaborator website" },
             { label: "Keywords", name: "keywords", widget: "list", required: false },
             { label: "Abstract", name: "abstract", widget: "text", required: false },
         ];
@@ -85,7 +88,8 @@
                     folder: "_news",
                     create: true,
                     nested: { depth: 2 },
-                    path: "{{year}}/{{slug}}",
+                    slug: "{{slug}}",
+                    path: "{{fields.date | date('YYYY')}}/{{slug}}",
                     fields: [
                         { label: "Layout", name: "layout", widget: "hidden", default: "post" },
                         { label: "Title", name: "title", widget: "string" },
@@ -184,9 +188,10 @@
                     label: "Alumni: PhD Graduates",
                     icon: "school",
                     folder: "_people/alumni/phd-graduates",
-                    media_folder: "/assets/img/people/alumni/phd-graduates/{{year}}",
+                    media_folder: "/assets/img/people/alumni/phd-graduates",
                     create: true,
-                    path: "{{year}}/{{slug}}",
+                    slug: "{{slug}}",
+                    path: "{{fields.year}}/{{slug}}",
                     fields: [
                         ...commonAlumniFields,
                         { label: "Category", name: "category", widget: "hidden", default: "PhD Graduates" }
@@ -197,9 +202,10 @@
                     label: "Alumni: MTech Graduates",
                     icon: "school",
                     folder: "_people/alumni/mtech-graduates",
-                    media_folder: "/assets/img/people/alumni/mtech-graduates/{{year}}",
+                    media_folder: "/assets/img/people/alumni/mtech-graduates",
                     create: true,
-                    path: "{{year}}/{{slug}}",
+                    slug: "{{slug}}",
+                    path: "{{fields.year}}/{{slug}}",
                     fields: [
                         ...commonAlumniFields,
                         { label: "Category", name: "category", widget: "hidden", default: "M.Tech Graduates" }
@@ -210,9 +216,10 @@
                     label: "Alumni: MTech (Research) Graduates",
                     icon: "school",
                     folder: "_people/alumni/mtech-research-graduates",
-                    media_folder: "/assets/img/people/alumni/mtech-research-graduates/{{year}}",
+                    media_folder: "/assets/img/people/alumni/mtech-research-graduates",
                     create: true,
-                    path: "{{year}}/{{slug}}",
+                    slug: "{{slug}}",
+                    path: "{{fields.year}}/{{slug}}",
                     fields: [
                         ...commonAlumniFields,
                         { label: "Category", name: "category", widget: "hidden", default: "M.Tech (Research) Graduates" }
@@ -223,9 +230,10 @@
                     label: "Alumni: Interns",
                     icon: "school",
                     folder: "_people/alumni/interns",
-                    media_folder: "/assets/img/people/alumni/interns/{{year}}",
+                    media_folder: "/assets/img/people/alumni/interns",
                     create: true,
-                    path: "{{year}}/{{slug}}",
+                    slug: "{{slug}}",
+                    path: "{{fields.year}}/{{slug}}",
                     fields: [
                         ...commonAlumniFields,
                         { label: "Category", name: "category", widget: "hidden", default: "Interns" },
@@ -237,9 +245,10 @@
                     label: "Alumni: Post Docs",
                     icon: "school",
                     folder: "_people/alumni/post-doc",
-                    media_folder: "/assets/img/people/alumni/post-doc/{{year}}",
+                    media_folder: "/assets/img/people/alumni/post-doc",
                     create: true,
-                    path: "{{year}}/{{slug}}",
+                    slug: "{{slug}}",
+                    path: "{{fields.year}}/{{slug}}",
                     fields: [
                         ...commonAlumniFields,
                         { label: "Category", name: "category", widget: "hidden", default: "Post Docs" }
@@ -250,9 +259,10 @@
                     label: "Alumni: Research Associates",
                     icon: "school",
                     folder: "_people/alumni/research-associates",
-                    media_folder: "/assets/img/people/alumni/research-associates/{{year}}",
+                    media_folder: "/assets/img/people/alumni/research-associates",
                     create: true,
-                    path: "{{year}}/{{slug}}",
+                    slug: "{{slug}}",
+                    path: "{{fields.year}}/{{slug}}",
                     fields: [
                         ...commonAlumniFields,
                         { label: "Category", name: "category", widget: "hidden", default: "Research Associates" }
@@ -266,7 +276,8 @@
                     icon: "mic",
                     folder: "_talks/delivered",
                     create: true,
-                    path: "{{year}}/{{slug}}",
+                    slug: "{{slug}}",
+                    path: "{{fields.date | date('YYYY')}}/{{slug}}",
                     fields: [
                         ...commonTalkFields,
                         { label: "Type", name: "type", widget: "string", default: "Talk" },
@@ -283,7 +294,8 @@
                     icon: "mic",
                     folder: "_talks/organized",
                     create: true,
-                    path: "{{year}}/{{slug}}",
+                    slug: "{{slug}}",
+                    path: "{{fields.date | date('YYYY')}}/{{slug}}",
                     fields: [
                         ...commonTalkFields,
                         { label: "Type", name: "type", widget: "string", default: "PhD Thesis Colloquium" },
@@ -404,7 +416,7 @@
                         }
                     ]
                 },
-                                // --- COURSES (Icon: book) ---
+                // --- COURSES (Icon: book) ---
                 {
                     name: "courses",
                     label: "Courses",

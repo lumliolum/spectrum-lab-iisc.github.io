@@ -54,7 +54,7 @@ socials_in_search: true
 bib_search: true
 
 # Dimensions
-max_width: 930px
+max_width: 1024px
 
 # TODO: add layout settings (single page vs. multi-page)
 
@@ -217,9 +217,6 @@ collections:
   alumni:
     output: true
     permalink: /alumni/:path/
-  projects:
-    output: false
-    permalink: /projects/:path/
   teaching:
     output: true
     permalink: /teaching/:path/
@@ -381,7 +378,7 @@ scholar:
 enable_publication_badges:
   altmetric: false # Altmetric badge (Customization options: https://badge-docs.altmetric.com/index.html)
   dimensions: false # Dimensions badge (Customization options: https://badge.dimensions.ai/)
-  google_scholar: false # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
+  google_scholar: true # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
   inspirehep: false # Inspire HEP badge (https://help.inspirehep.net/knowledge-base/citation-metrics/)
 
 # Filter out certain bibtex entry keywords used internally from the bib output

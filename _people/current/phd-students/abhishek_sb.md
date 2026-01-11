@@ -12,8 +12,6 @@ github_username: AbhishekSB23
 email: abhishekbs@iisc.ac.in
 scholar_userid: ''
 twitter_username: ''
-badges:
-  - 🏅
 show: true
 category: PhD Students
 alias: abhishekbs

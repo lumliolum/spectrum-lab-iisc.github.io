@@ -3,16 +3,13 @@ name: Jekyll Deploy
 on:
   push:
     branches:
-      - main  # Deploy from main branch
+      - main
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -28,18 +25,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Needed for incremental builds
+          fetch-depth: 0
 
-      # Cache system dependencies
-      - name: Cache system packages
-        uses: actions/cache@v4
-        with:
-          path: /var/cache/apt
-          key: ${{ runner.os }}-apt-${{ hashFiles('.github/workflows/jekyll.yml') }}
-          restore-keys: |
-            ${{ runner.os }}-apt-
+      # [!code highlight] New Step: Restores original git timestamps so ImageMagick knows which files are actually new
+      - name: Restore Timestamps
+        uses: chetan/git-restore-mtime-action@v2
 
-      # Cache Python dependencies
       - name: Cache pip
         uses: actions/cache@v4
         with:
@@ -54,14 +45,9 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: true
 
-      # Install system dependencies with optimizations
-      - name: 📦 Install system dependencies (ImageMagick + Jupyter)
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends imagemagick libmagickwand-dev python3-pip
-          pip3 install -r requirements.txt
+      - name: 📦 Install Python dependencies
+        run: pip3 install -r requirements.txt
 
-      # Cache Jekyll build artifacts
       - name: Cache Jekyll build
         uses: actions/cache@v4
         with:
@@ -69,18 +55,24 @@ jobs:
             .jekyll-cache
             .jekyll-metadata
             vendor
-          key: ${{ runner.os }}-jekyll-${{ hashFiles('_config.yml', 'Gemfile.lock') }}
+            # Ensure we cache the destination if using incremental to save generated assets
+            _site
+          # Updated key: Includes assets/img so the cache updates when images change
+          key: ${{ runner.os }}-jekyll-${{ hashFiles('_config.yml', 'Gemfile.lock', 'assets/**') }}
           restore-keys: |
             ${{ runner.os }}-jekyll-
 
-      # Cache Generated Images
-      - name: Cache Generated Images
+      - name: Cache Minify Tool
+        id: cache-minify
         uses: actions/cache@v4
         with:
-          path: _site/assets/img
-          key: ${{ runner.os }}-generated-images-${{ hashFiles('assets/img/**/*', '_config.yml') }}
-          restore-keys: |
-            ${{ runner.os }}-generated-images-
+          path: ./minify
+          key: minify-v2.20.19
+
+      - name: Install Minify
+        if: steps.cache-minify.outputs.cache-hit != 'true'
+        run: |
+          curl -L https://github.com/tdewolff/minify/releases/download/v2.20.19/minify_linux_amd64.tar.gz | tar -xz minify
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -88,21 +80,18 @@ jobs:
       - name: Build Jekyll site
         run: |
           export JEKYLL_ENV=production
-          bundle exec jekyll build --destination ./_site --incremental --profile
+          bundle exec jekyll build --destination ./_site --incremental
         env:
           JEKYLL_ENV: production
 
       - name: Minify
-        run: |
-          curl -L https://github.com/tdewolff/minify/releases/download/v2.20.19/minify_linux_amd64.tar.gz | tar -xz
-          ./minify -r -o _site/ _site/
+        run: ./minify -r -o _site/ _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages

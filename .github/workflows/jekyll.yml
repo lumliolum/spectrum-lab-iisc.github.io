@@ -45,8 +45,11 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: true
 
-      - name: 📦 Install Python dependencies
-        run: pip3 install -r requirements.txt
+      - name: 📦 Install system dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends imagemagick libmagickwand-dev
+          pip3 install -r requirements.txt
 
       - name: Cache Jekyll build
         uses: actions/cache@v4
@@ -58,7 +61,7 @@ jobs:
             # Ensure we cache the destination if using incremental to save generated assets
             _site
           # Updated key: Includes assets/img so the cache updates when images change
-          key: ${{ runner.os }}-jekyll-${{ hashFiles('_config.yml', 'Gemfile.lock', 'assets/**') }}
+          key: ${{ runner.os }}-jekyll-${{ hashFiles('_config.yml', 'Gemfile.lock', 'assets/img/**/*') }}
           restore-keys: |
             ${{ runner.os }}-jekyll-
 

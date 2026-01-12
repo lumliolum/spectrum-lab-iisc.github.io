@@ -1,4 +1,3 @@
-# .github/workflows/cleanup-caches.yml
 name: Cleanup old caches
 
 on:
@@ -7,56 +6,61 @@ on:
   workflow_dispatch:
 
 permissions:
-  actions: write    # required to delete caches
+  actions: write
   contents: read
 
 jobs:
   cleanup:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
-      - name: Install GitHub CLI
-        run: |
-          type -p gh >/dev/null || {
-            curl -fsSL https://github.com/cli/cli/releases/download/v2.50.0/gh_2.50.0_linux_amd64.tar.gz -o gh.tar.gz
-            tar -xzf gh.tar.gz
-            sudo cp gh_2.50.0_linux_amd64/bin/gh /usr/local/bin/gh
-          }
-
-      - name: Authenticate gh
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh auth setup-git && gh auth status || gh auth login --with-token <<< "$GITHUB_TOKEN"
-
       - name: Delete caches older than 7 days
         env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
           set -euo pipefail
+          
           # Compute cutoff timestamp for 7 days ago in ISO-8601 UTC
           CUTOFF_TS="$(date -u -d '7 days ago' +%Y-%m-%dT%H:%M:%SZ)"
+          echo "Cutoff timestamp: $CUTOFF_TS"
 
           page=1
-          deleted=0
           while true; do
-            resp="$(gh api "/repos/$REPO/actions/caches?per_page=100&page=$page")"
-            caches="$(echo "$resp" | jq '.actions_caches')"
+            # Fetch list of caches
+            # We use per_page=100 to minimize API calls
+            response="$(gh api "/repos/$REPO/actions/caches?per_page=100&page=$page")"
+            
+            # Extract the array of caches
+            caches="$(echo "$response" | jq -c '.actions_caches')"
             length="$(echo "$caches" | jq 'length')"
-            [ "$length" -eq 0 ] && break
 
+            # Break if no caches returned
+            if [ "$length" -eq 0 ]; then
+              echo "No more caches to process."
+              break
+            fi
+
+            # Filter caches older than cutoff and loop through them
+            # We extract the ID which is safer to use for deletion than the Key (avoids URL encoding issues)
             echo "$caches" | jq -c --arg cutoff "$CUTOFF_TS" '.[] | select(.last_accessed_at < $cutoff)' | while read -r cache; do
+              ID="$(echo "$cache" | jq -r '.id')"
               KEY="$(echo "$cache" | jq -r '.key')"
-              VERSION="$(echo "$cache" | jq -r '.version')"
-              LAST="$(echo "$cache" | jq -r '.last_accessed_at')"
               SIZE="$(echo "$cache" | jq -r '.size_in_bytes')"
+              LAST="$(echo "$cache" | jq -r '.last_accessed_at')"
 
-              echo "Deleting cache key=$KEY version=$VERSION size=${SIZE}B last_accessed=$LAST"
-              if gh api -X DELETE "/repos/$REPO/actions/caches?key=$KEY&version=$VERSION"; then
-                echo "Deleted $KEY@$VERSION"
+              echo "Deleting cache: ID=$ID | Size=${SIZE}B | Key=$KEY | Last Accessed=$LAST"
+              
+              # Delete by ID
+              if gh api -X DELETE "/repos/$REPO/actions/caches/$ID"; then
+                echo "✓ Deleted cache $ID"
               else
-                echo "Failed to delete $KEY@$VERSION"
+                echo "✗ Failed to delete cache $ID"
               fi
             done
 

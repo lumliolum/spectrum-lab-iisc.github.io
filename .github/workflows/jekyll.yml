@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -83,7 +84,7 @@ jobs:
       - name: Build Jekyll site
         run: |
           export JEKYLL_ENV=production
-          bundle exec jekyll build --destination ./_site --incremental
+          bundle exec jekyll build --destination ./_site
         env:
           JEKYLL_ENV: production
 

@@ -1,0 +1,10 @@
+# Video Gallery
+# Each video entry has: title, description, date, url, category, speaker, thumbnail (optional)
+
+videos:
+  - title: "Spider GANs: Leveraging Friendly Neighbors to Accelerate GAN Training"
+    description: "Video presentation accompanying the CVPR 2023 paper on Spider GANs - a novel approach to accelerate GAN training by leveraging friendly neighbors."
+    date: 2023-06-18
+    url: "https://youtu.be/EDrGSguQMBU"
+    category: "Conferences"
+    speaker: "Siddarth Asokan"

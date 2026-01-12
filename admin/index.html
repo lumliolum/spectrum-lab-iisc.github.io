@@ -53,8 +53,8 @@
         const commonTalkFields = [
             { label: "Layout", name: "layout", widget: "hidden", default: "talk" },
             { label: "Title", name: "title", widget: "string" },
-            { label: "Date", name: "date", widget: "datetime" },
-            { label: "Time", name: "time", widget: "string", required: false },
+            { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false },
+            { label: "Time", name: "time", widget: "string", required: false, hint: "e.g., 2:30 PM or 14:30-16:00" },
             { label: "Venue", name: "venue", widget: "string", required: false },
             { label: "Venue Link", name: "venue_link", widget: "string", required: false, hint: "URL to venue website or map" },
             { label: "Collaboration", name: "collaboration", widget: "string", required: false, hint: "Name of collaborating organization" },
@@ -280,7 +280,7 @@
                     path: "{{fields.date | date('YYYY')}}/{{slug}}",
                     fields: [
                         ...commonTalkFields,
-                        { label: "Type", name: "type", widget: "string", default: "Talk" },
+                        { label: "Type", name: "type", widget: "select", options: ["Talk", "Conference Talk", "Keynote", "Invited Talk", "Plenary Talk", "Tutorial", "Workshop", "Seminar", "Guest Lecture", "Panel Discussion", "Webinar", "Other"], default: "Talk" },
                         { label: "Category", name: "category", widget: "hidden", default: "delivered" },
                         { label: "Speaker", name: "speaker", widget: "string", required: false },
                         { label: "Speaker Affiliation", name: "speaker_affiliation", widget: "string", required: false },
@@ -298,7 +298,7 @@
                     path: "{{fields.date | date('YYYY')}}/{{slug}}",
                     fields: [
                         ...commonTalkFields,
-                        { label: "Type", name: "type", widget: "string", default: "PhD Thesis Colloquium" },
+                        { label: "Type", name: "type", widget: "select", options: ["PhD Thesis Colloquium", "PhD Thesis Defense", "MSc Thesis Defense", "MTech Thesis Defense", "Comprehensive Exam", "Research Seminar", "Lab Meeting", "Journal Club", "Guest Seminar", "Other"], default: "PhD Thesis Colloquium" },
                         { label: "Category", name: "category", widget: "hidden", default: "organized" },
                         { label: "Candidate", name: "candidate", widget: "string", required: false },
                         { label: "Supervisor", name: "supervisor", widget: "string", required: false },
@@ -390,7 +390,7 @@
                             name: "album",
                             label: "Edit Photo Albums",
                             file: "_data/album.yaml",
-                            media_folder: "/assets/img/album",
+                            media_folder: "/assets/img/gallery/album",
                             fields: [
                                 {
                                     label: "Albums",
@@ -410,6 +410,28 @@
                                                 { label: "Order", name: "order", widget: "number", required: false }
                                             ]
                                         }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            name: "videos",
+                            label: "Edit Videos",
+                            file: "_data/videos.yml",
+                            media_folder: "/assets/img/gallery/video-thumbnails",
+                            fields: [
+                                {
+                                    label: "Videos",
+                                    name: "videos",
+                                    widget: "list",
+                                    fields: [
+                                        { label: "Title", name: "title", widget: "string" },
+                                        { label: "Speaker", name: "speaker", widget: "string", required: false },
+                                        { label: "Description", name: "description", widget: "text", required: false },
+                                        { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false },
+                                        { label: "Video URL", name: "url", widget: "string", hint: "YouTube, Vimeo, or other video URL" },
+                                        { label: "Category", name: "category", widget: "select", options: ["Research Talks", "Tutorials", "Lab Activities", "Conferences", "Workshops", "Other"], default: "Research Talks" },
+                                        { label: "Custom Thumbnail", name: "thumbnail", widget: "image", required: false, hint: "Optional - auto-extracted from YouTube if not provided" }
                                     ]
                                 }
                             ]

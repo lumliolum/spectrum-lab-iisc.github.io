@@ -468,6 +468,67 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Desktop dropdown - centered and stylish
+@media (min-width: 992px) {
+  .navbar .nav-item.dropdown {
+    position: relative;
+
+    .dropdown-menu {
+      // Center under parent
+      left: 50% !important;
+      right: auto !important;
+      transform: translateX(-50%) translateY(10px);
+
+      // Modern styling
+      min-width: 180px;
+      padding: 0.5rem 0;
+      margin-top: 0.5rem;
+      background: var(--global-bg-color);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--global-divider-color);
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15),
+        0 2px 10px rgba(0, 0, 0, 0.08);
+
+      // Animation
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+
+      // Dropdown items
+      .dropdown-item {
+        padding: 0.6rem 1.25rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--global-text-color);
+        text-align: center;
+        transition: all 0.15s ease;
+        border-radius: 0;
+
+        &:hover {
+          background: rgba(var(--global-theme-color-rgb, 33, 150, 243), 0.1);
+          color: var(--global-theme-color);
+        }
+
+        &.active {
+          background: var(--global-theme-color);
+          color: white;
+        }
+      }
+    }
+
+    // Show dropdown on hover/focus
+    &:hover .dropdown-menu,
+    &.show .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+}
+
+// Base dropdown menu styling
 .navbar .dropdown-menu {
   background-color: var(--global-bg-color);
   border: 1px solid var(--global-divider-color);

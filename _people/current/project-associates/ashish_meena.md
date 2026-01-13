@@ -4,7 +4,7 @@ title: Ashish Kumar Meena
 firstname: Ashish Kumar
 lastname: Meena
 description: Project Associate
-img: assets/img/people/current/project-associates/yash-shingare.jpg
+img: assets/img/people/current/project-associates/ashish_meena.jpg
 website:
 orcid_id: 
 linkedin_username: ashish-kumar-meena-83a0041ba

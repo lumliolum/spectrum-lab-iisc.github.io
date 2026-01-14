@@ -176,9 +176,10 @@
               </tr>
             </thead>
             <tbody>
-              {%- for item in page.news -%}
+              {%- assign sorted_news = page.news | sort: "date" | reverse -%}
+              {%- for item in sorted_news -%}
               <tr>
-                <td>{{ item.date }}</td>
+                <td>{{ item.date | date: "%B %-d, %Y" }}</td>
                 <td>
                   {%- if item.link -%}
                   <a href="{{ item.link }}" target="_blank">{{ item.title }} <i class="fas fa-external-link-alt fa-xs"></i></a>
@@ -305,12 +306,12 @@
               <i class="fas fa-desktop"></i> Slides
             </a>
             {%- endif -%}
-            {%- if lecture.video -%}
+            {%- if lecture.video and lecture.video != blank -%}
             <a href="{{ lecture.video }}" class="btn-minimal btn-minimal--ghost" target="_blank">
               <i class="fas fa-play"></i> Video
             </a>
             {%- endif -%}
-            {%- if lecture.notes -%}
+            {%- if lecture.notes and lecture.notes != blank -%}
             <a href="{{ lecture.notes }}" class="btn-minimal btn-minimal--ghost" target="_blank">
               <i class="fas fa-sticky-note"></i> Notes
             </a>
@@ -343,7 +344,7 @@
             {%- if assignment.due_date -%}
             <div class="material-card__due">
               <i class="far fa-clock"></i>
-              Due: {{ assignment.due_date }}
+              Due: {{ assignment.due_date | date: "%B %-d, %Y" }}
             </div>
             {%- endif -%}
           </div>

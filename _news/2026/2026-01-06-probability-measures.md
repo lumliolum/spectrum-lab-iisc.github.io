@@ -4,7 +4,7 @@ title: 'Module II: Concentration of Probability Measures'
 date: 2026-01-06
 inline: false
 related_posts: false
-announce: true
+announce: false
 badge: Short Course
 icon: fas fa-chalkboard-teacher
 link: /teaching/mathematics-bigdata-analytics/

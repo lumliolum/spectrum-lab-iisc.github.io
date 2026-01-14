@@ -14,13 +14,13 @@ schedule:
   meeting_link: ''
 news:
   - title: Module II Begins
-    date: January 6, 2026
+    date: 2026-01-06
     description: 'First lecture of Module II: Concentration of Probability Measures.'
   - title: Lecture Cancelled
-    date: January 15, 2026
+    date: 2026-01-15
     description: Next lecture in on 20th.
   - title: Module II is Completed
-    date: January 13, 2026
+    date: 2026-01-13
     description: Module II is Completed. Module IV will be covered first followed by Module III
 lectures:
   - title: Measure Concentration

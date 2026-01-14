@@ -16,15 +16,15 @@ schedule:
   
 news:
   - title: "Dataset for experimentation"
-    date: "December 9, 2025"
+    date: "2025-12-09"
     description: "The dataset used for experimentation is available at this [link](https://www.kaggle.com/datasets/mariaherrerot/messidor2preprocess)"
 
   - title: "Christmas Break"
-    date: "December 25, 2025"
+    date: "2025-12-25"
     description: "There will be no class on December 25, 2025."
 
   - title: "Extra Class Added"
-    date: "December 29, 2025"
+    date: "2025-12-29"
     description: "There will be an extra class on January 1, 2026."
 
 lectures:

@@ -19,6 +19,9 @@ news:
   - title: Module II Begins
     date: 2026-01-06
     description: 'Module II: Concentration of Probability Measures begins on January 6, 2026.'
+  - title: Module II Ends
+    date: 2026-01-13
+    description: 'Module II: Concentration of Probability Measures has been completed'
 modules:
   - title: 'Module I: Dimension Reduction'
     description: Theory and Applications to Image Processing. Covers Spectral Decomposition, SVD, covariance, geometric projections, and Principal Component Analysis (PCA) with applications in image processing.

@@ -15,7 +15,11 @@ layout: default
   <article>
     <div class="people">
       {%- assign categorized_people = site.people | where: "category", page.category -%}
-      {%- assign sorted_people = categorized_people | sort: "year" | reverse -%}
+      {%- if page.category contains "Graduates" or page.category contains "Post Doc" or page.category contains "Interns" or page.category contains "Research Associates" or page.category contains "Project Associates" -%}
+        {%- assign sorted_people = categorized_people | sort: "year" | reverse -%}
+      {%- else -%}
+        {%- assign sorted_people = categorized_people | sort: "title" -%}
+      {%- endif -%}
       
       <div class="grid">
         {%- for person in sorted_people -%}

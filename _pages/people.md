@@ -43,7 +43,11 @@ horizontal: true
   {%- for category in page.display_categories %}
       <!-- <h2 class="category">{{ category }}</h2> -->
       {%- assign categorized_people = site.people | where: "category", category -%}
-      {%- assign sorted_people = categorized_people | sort: "year" | reverse %}
+      {%- if category contains "Graduates" or category contains "Post Doc" or category contains "Interns" or category contains "Research Associates" or category contains "Project Associates" -%}
+        {%- assign sorted_people = categorized_people | sort: "year" | reverse -%}
+      {%- else -%}
+        {%- assign sorted_people = categorized_people | sort: "title" -%}
+      {%- endif -%}
       <h2 style="text-align: right;">{{ category }}</h2>    <hr>
       <div class="grid">
         {%- for person in sorted_people -%}

@@ -11,5 +11,6 @@ github_username: gourishankerjk
 email: gourishanker@iisc.ac.in
 alias: gourishanker
 category:  PhD Students
+biography_paragraphs : "Gouri Shanker is a PhD student working on generative modeling and inverse problems, with a focus on optimization-based methods and the theoretical foundations of machine learning. His research interests include flow matching models, energy-based formulations, constrained optimization."
 show: true
 ---

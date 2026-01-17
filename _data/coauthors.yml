@@ -151,10 +151,6 @@ singh:
   - Himanshu
   - H.
   url: "/people/alumni/mtech-graduates/2021/himanshu_singh/"
-- firstname:
-  - Rohit
-  - R.
-  url: "/people/current/mtech-students/rohit_singh/"
 shivhare:
 - firstname:
   - Anshul
@@ -339,6 +335,11 @@ arandhara:
   - Bitupan
   - B.
   url: "/people/current/mtech-research/bitupan_arandhara/"
+agrawal:
+- firstname:
+  - Vedant
+  - V.
+  url: "/people/current/mtech-students/Vedant_Agrawal/"
 manish:
 - firstname:
   - Vydha
@@ -390,7 +391,7 @@ praneeth:
   url: "/people/current/mtech-students/surajsai_praneeth/"
 bhandiwad:
 - firstname:
-  - Abhishek Shreekanth
+  - Abhishek Shreekant
   - A. S.
   - A.S.
   - A.

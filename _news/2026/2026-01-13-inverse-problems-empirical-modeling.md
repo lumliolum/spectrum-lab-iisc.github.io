@@ -1,7 +1,8 @@
 ---
 layout: event
 title: 'Module IV: Inverse Problems in Empirical Modeling'
-date: 2026-01-20
+date: 2026-01-13
+event_date: 2026-01-20
 inline: false
 related_posts: false
 announce: true

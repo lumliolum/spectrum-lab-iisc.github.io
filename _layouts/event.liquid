@@ -12,8 +12,18 @@ layout: default
     <div class="event-meta">
       <div class="event-meta-item">
         <i class="fas fa-calendar-alt"></i>
-        <span>{{ page.date | date: '%B %d, %Y' }}</span>
+        {% if page.event_date != blank %}
+          <span>{{ page.event_date | date: '%B %d, %Y' }}</span>
+        {% else %}
+          <span>{{ page.date | date: '%B %d, %Y' }}</span>
+        {% endif %}
       </div>
+      {% if page.event_date != blank %}
+      <div class="event-meta-item event-posted-date">
+        <i class="fas fa-clock"></i>
+        <span>Posted: {{ page.date | date: '%B %d, %Y' }}</span>
+      </div>
+      {% endif %}
       {% if page.time != blank %}
         <div class="event-meta-item">
           <i class="fas fa-clock"></i>

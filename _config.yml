@@ -13,7 +13,7 @@ territorial_acknowledgement:
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/calgaryml/calgaryml.github.io">customized theme</a> based on <a href="https://github.com/alshedivat/al-folio">al-folio</a>.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: IISc, Indian Institute of Science, Bengaluru, Spectrum Lab, Chandra Sekhar Seelamantula, signal processing, image processing, computational imaging, machine learning, deep learning, sampling theory, bio-imaging, medical imaging, AI healthcare, spline theory, finite rate of innovation, denoising, reconstruction, PhD opportunities IISc
+keywords: IISc, Indian Institute of Science, Bengaluru, Spectrum Lab, Chandra Sekhar Seelamantula, signal processing, image processing, computational imaging, machine learning, deep learning, sampling theory, bio-imaging, medical imaging, AI healthcare, spline theory, finite rate of innovation, denoising, reconstruction, PhD opportunities IISc, generative modeling, flow matching, diffusion, Chaksu AI, TAANU, neuromorphic, radar
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 # icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 logo: assets/img/logo/spectrum/SpectrumLogo.png # the logo image used in the navbar and footer (alternatively, provide an emoji)

@@ -28,7 +28,7 @@
                     {%- if item.speaker -%}
                       <span class="announcement-speaker">{{ item.speaker }}</span>
                     {%- endif -%}
-                    <span class="announcement-date">{{ item.date | date: "%B %d, %Y" }}</span>
+                    <span class="announcement-date">{% if item.event_date != blank %}{{ item.event_date | date: "%B %d, %Y" }}{% else %}{{ item.date | date: "%B %d, %Y" }}{% endif %}</span>
                   </div>
                   <div class="announcement-arrow">
                     <i class="fas fa-arrow-right"></i>

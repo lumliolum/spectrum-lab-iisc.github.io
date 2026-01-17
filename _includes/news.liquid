@@ -17,7 +17,7 @@
         {% for item in news limit: news_limit %}
           <li class="news-item{% if item.announce != blank %} news-item--announcement{% endif %}">
             <div class="news-meta">
-              <span class="news-date">{{ item.date | date: '%b %d, %Y' }}</span>
+              <span class="news-date">{% if item.event_date != blank %}{{ item.event_date | date: '%b %d, %Y' }}{% else %}{{ item.date | date: '%b %d, %Y' }}{% endif %}</span>
               {% if item.badge != blank %}
                 <span class="news-badge news-badge--{{ item.badge | downcase | replace: ' ', '-' }}">{{ item.badge }}</span>
               {% endif %}

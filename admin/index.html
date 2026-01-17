@@ -93,7 +93,8 @@
                     fields: [
                         { label: "Layout", name: "layout", widget: "hidden", default: "post" },
                         { label: "Title", name: "title", widget: "string" },
-                        { label: "Date", name: "date", widget: "datetime" },
+                        { label: "Posted Date", name: "date", widget: "datetime", hint: "Date when news was published" },
+                        { label: "Event Date", name: "event_date", widget: "datetime", required: false, hint: "Date when the event occurs (optional, for events/talks)" },
                         { label: "Inline", name: "inline", widget: "boolean", default: false, required: false },
                         { label: "Related Posts", name: "related_posts", widget: "boolean", default: false, required: false },
                         { label: "Announce", name: "announce", widget: "boolean", default: false, required: false },

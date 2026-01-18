@@ -6,6 +6,7 @@ lastname: Haldar
 description: M.Tech (Signal Processing) 2025
 img: assets/img/people/alumni/mtech-graduates/2025/oindrila_haldar.jpg
 linkedin_username: oindrila-haldar-b95320173
+github_username: Oindrila-Haldar
 email: oindrilahaldar2000@gmail.com
 alias: oindrila_haldar
 current_position: Engineer, Qualcomm

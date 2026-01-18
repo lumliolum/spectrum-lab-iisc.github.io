@@ -5,11 +5,11 @@ firstname: Harshit
 lastname: Dubey
 description: MM Engineer at Qualcomm
 img: assets/img/people/alumni/mtech-graduates/2025/harshit-dubey.jpg
-website: nan
+linkedin_username: harshit-dubey-2000eight20
 email: darshitd2000@gmail.com
 alias: harshit_dubey
-scholar_userid: nan
 category: M.Tech Graduates
+current_position: MM Engineer, Qualcomm
 show: true
 year: 2025
 

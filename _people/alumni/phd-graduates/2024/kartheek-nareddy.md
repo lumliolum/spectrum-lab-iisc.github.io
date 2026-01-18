@@ -3,13 +3,13 @@ layout: person
 title: Kartheek Nareddy
 firstname: Kartheek
 lastname: Nareddy
-description: Research Scoentist
-website: nan
+description: Research Scientist
+linkedin_username: kartheek-nareddy
 email: kartheekkumar65@gmail.com
 alias: nareddyreddy
-scholar_userid: nan
 category: PhD Graduates
 img: assets/img/people/alumni/phd-graduates/2024/kartheek-nareddy.jpg
+current_position: Research Scientist
 show: true
 year: 2024
 

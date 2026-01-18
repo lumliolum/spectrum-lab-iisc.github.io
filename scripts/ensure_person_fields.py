@@ -66,8 +66,8 @@ def generate_placeholder_email(firstname: str, lastname: str) -> str:
     last = re.sub(r'[^a-z]', '', lastname.lower()) if lastname else ""
     
     if last:
-        return f"{first}{last[0]}@iisc.ac.in"
-    return f"{first}@iisc.ac.in"
+        return f"{first}{last[0]}@placeholder.iisc.ac.in"
+    return f"{first}@placeholder.iisc.ac.in"
 
 
 def extract_frontmatter_field(content: str, field: str) -> str:

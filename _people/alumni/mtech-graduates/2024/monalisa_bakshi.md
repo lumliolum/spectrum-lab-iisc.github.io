@@ -13,4 +13,5 @@ category: M.Tech Graduates
 biography_paragraphs: "Monalisa completed her B.Tech. in Electronics and Communication Engineering from Future Institute of Engineering and Management, West Bengal, in 2022. The same year, she joined IISc to pursue M.Tech. in Signal Processing. During her M.Tech., she was awarded the Wells Fargo Women’s Fellowship. She is currently working at Mercedes-Benz."
 show: true
 year: 2024
+fellowship: Wells Fargo Women's Fellowship
 ---

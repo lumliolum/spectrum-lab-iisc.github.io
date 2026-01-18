@@ -34,6 +34,8 @@ external_cdns:
   - "ajax.googleapis.com"
   - "api.github.com"
   - "github.com"
+  - "use.typekit.net"
+  - "p.typekit.net"
   
 # Resource Types that should allow cross-origin access
 allowed_resources:

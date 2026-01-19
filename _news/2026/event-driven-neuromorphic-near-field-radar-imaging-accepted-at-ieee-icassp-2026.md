@@ -6,7 +6,7 @@ event_date: ''
 inline: true
 related_posts: false
 announce: false
-badge: ''
+badge: Paper Accepted
 icon: ''
 link: ''
 venue: ''

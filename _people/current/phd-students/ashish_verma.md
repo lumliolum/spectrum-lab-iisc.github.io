@@ -11,4 +11,6 @@ email: ashishverma2@iisc.ac.in
 alias: ashishverma2
 category:  PhD Students
 show: true
+biography_paragraphs:
+  - "<div style='text-align: justify;'>My background is in optics, and my current work focuses on computational imaging.</div>"
 ---

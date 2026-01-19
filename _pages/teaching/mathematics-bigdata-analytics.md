@@ -41,7 +41,7 @@ modules:
   - title: 'Module IV: Inverse Problems in Empirical Modeling'
     description: Solving linear/nonlinear, over/under determined inverse problems using matrix decomposition (LU, Cholesky, QR, SVD) and optimization methods (Gradient, Conjugate gradient, Quasi-Newton).
     lectures: 4-5 Lectures
-    status: Upcoming
+    status: In Progress
     link: /teaching/inverse-problems/
 ---
 {% include course-materials.liquid %}

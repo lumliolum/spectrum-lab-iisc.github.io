@@ -4,6 +4,7 @@ title: Ashish Verma
 firstname: Ashish
 lastname: Verma
 description: PhD Student
+img: assets/img/people/current/phd-students/Ashish.jpg
 website: 
 linkedin_username: 
 github_username: 

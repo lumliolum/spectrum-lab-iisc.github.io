@@ -15,5 +15,5 @@ scholar_userid: h_svAhQAAAAJ
 show: true
 fellowship: INSPIRE Scholaship 2020-2025 (Bachlors and Masters) 
 biography_paragraphs:
-  - "<div style='text-align: justify;'>Parth Gupte received Bachelor of Science (Major Mathematics) and Master of Science Dual Degree from the Indian Institute of Science Education and Research, Pune, in 2025. He has been a part of Spectrum Lab as a Project Associate starting August 2025.</div>"
+  - "<div style='text-align: justify;'>Parth Gupte received Bachelor of Science (Major Mathematics) and Master of Science Dual Degree from the Indian Institute of Science Education and Research, Pune, in 2025. He has been a part of Spectrum Lab as a Project Associate starting August 2025. His research interests are Generative modelling, Flow Matching, and its applications to retinal domain data.</div>"
 ---

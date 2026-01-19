@@ -4,7 +4,7 @@ title: Dwaipayan Haldar
 firstname: Dwaipayan
 lastname: Haldar
 description: MTech (SP)
-img: assets/img/people/current/mtech-students/dwaipayan_haldar.jpg
+img: assets/img/people/current/mtech-students/dwaipayan_haldar.png
 website: https://dwaipayanhaldar.github.io
 linkedin_username: dwaipayan-haldar 
 github: dwaipayanhaldar

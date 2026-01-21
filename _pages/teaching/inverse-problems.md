@@ -13,7 +13,42 @@ schedule:
   duration: 4-5 Lectures
   meeting_link: ''
 news: null
-lectures: null
+lectures:
+  - title: 'Static Linear Inverse Problem : Well posed problems'
+    slides: /assets/teaching/ip/Module-3.1Static, Linear inverse problem_Oct-23.pptx
+    description: ''
+    video: ''
+    notes: ''
+  - title: 'Static Linear Inverse Problem : ill- posed problems'
+    slides: /assets/teaching/ip/Module-3.2 Static, Linear inverse problem_Oct-23.pptx
+    description: ''
+    video: ''
+    notes: ''
+  - title: Geometric view of least sqaures
+    slides: /assets/teaching/ip/Module-3.3 A Gemoetric view of least squares_Oct-23.pptx
+    description: ''
+    video: ''
+    notes: ''
+  - title: Deterministic Static Non Linear
+    slides: /assets/teaching/ip/Module-3.4 Deterministic, static, nonlinear_Oct-23.pptx
+    description: ''
+    video: ''
+    notes: ''
+  - title: Least Square Problem
+    slides: /assets/teaching/ip/Module-3.5 online-sequential-recursive_Oct-23.pptx
+    description: ''
+    video: ''
+    notes: ''
+  - title: Example of Static Inverse Problem
+    slides: /assets/teaching/ip/Module-3.6 Eamples of static inverse problems_Oct-23.pptx
+    description: ''
+    video: ''
+    notes: ''
+  - title: Variance Bias Tradeoff
+    slides: /assets/teaching/ip/Module-3.7-Variance-BiasTradeoff.pdf
+    description: ''
+    video: ''
+    notes: ''
 assignments: null
 resources:
   - title: 'J. M. Lewis, S. Lakshmivarahan and S. K. Dhall (2006) Dynamic Data Assimilation: a least squares approach, Cambridge University Press, Encyclopedia in Mathematics and its Applications, Vol 104'
@@ -42,4 +77,5 @@ resources:
     description: ''
 teaching_assistants: []
 ---
+
 {% include course-materials.liquid %}

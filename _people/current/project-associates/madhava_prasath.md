@@ -15,5 +15,5 @@ scholar_userid: HKCIMjkAAAAJ
 show: true
 
 biography_paragraphs:
- -"<div style='text-align: justify;'> J. Madhava Prasath is a B.Tech student in Artificial Intelligence and Machine Learning, currently serving as a Project Intern at SpectrumLab EE, IISc. He is currently working on diffusion models, and his hobbies include game development using the Godot engine</div>"
+- "<div style='text-align: justify;'> J. Madhava Prasath is a B.Tech student in Artificial Intelligence and Machine Learning, currently serving as a Project Intern at SpectrumLab EE, IISc. He is currently working on diffusion models, and his hobbies include game development using the Godot engine</div>"
 ---

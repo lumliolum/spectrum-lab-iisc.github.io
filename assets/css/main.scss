@@ -1,0 +1,98 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Dimensions
+$max-content-width: {{ site.max_width }};
+
+@import
+  "variables",
+  "themes",
+  "layout",
+  "base",
+  "distill",
+  "cv",
+  "tabs",
+  "typograms",
+  "font-awesome/fontawesome",
+  "font-awesome/brands",
+  "font-awesome/solid",
+  "font-awesome/regular",
+  "tabler-icons/tabler-icons.scss",
+  "tabler-icons/tabler-icons-filled.scss",
+  "tabler-icons/tabler-icons-outline.scss"
+;
+
+* {
+font-family: "proxima-nova", "Proxima Nova", Arial, Helvetica, sans-serif;
+};
+
+img.navbar {
+  height: 2.5em;
+  outline: none;
+  border: none; 
+};
+
+img.title {
+  height: 1em;
+  outline: none;
+  border: none; 
+};
+
+svg.ucalgary-outline-color {
+  font-weight: 800;
+}
+
+text.ucalgary-outline-color {
+  fill            : #{$uc-red-color};
+  stroke          : #{$uc-gold-color};
+  stroke-width    : 2px;
+  stroke-linejoin : round;
+}
+
+.territorial-acknowledgement {
+  background-color: var(--global-background-highlight-color);
+  color: var(--global-fg-color);
+  text-align: justify;
+  border-color: var(--global-background-color);
+  border-width: 2pt;
+}
+
+.card {
+  box-shadow: none;
+  background-color: var(--global-bg-color);
+  img {
+    width: 100%;
+  }
+  .card-title {
+    text-align: center;
+    color: var(--global-text-color)
+  }
+  .card-icons {
+    text-align: center;
+    color: var(--global-text-color);
+    a {
+      i::before {
+        color: var(--global-text-color);
+        transition-property: all 0.2s ease-in-out;
+      }
+      &:hover {
+        i::before {
+          color: var(--global-theme-color);
+        }
+      }
+    }
+  }
+  .card-text {
+    text-align: center;
+    font-size: larger
+  }
+  .card-pronouns {
+    text-align: center;
+    font-size: larger;
+  }
+  .icon {
+    font-size: larger;
+  }
+}

@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
 
       # [!code highlight] New Step: Restores original git timestamps so ImageMagick knows which files are actually new
       - name: Restore Timestamps

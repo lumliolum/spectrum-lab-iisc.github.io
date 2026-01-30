@@ -49,6 +49,36 @@ lectures:
     description: ''
     video: ''
     notes: ''
+  - title: Matrix Decomposition Methods
+    slides: /assets/teaching/ip/Module-4.2 Matrix Decomposition Methods_Nov-06.pdf
+    description: ''
+    video: ''
+    notes: ''
+  - title: Minimization Algorithm
+    slides: /assets/teaching/ip/Module-4.3 Minimization algorithm_Nov-06.pdf
+    description: ''
+    video: ''
+    notes: ''
+  - title: Statistical Estimation
+    slides: /assets/teaching/ip/Module-6.1 Statistical Estimation_Nov-06.pdf
+    description: ''
+    video: ''
+    notes: /assets/teaching/ip/Module-6.2 Statistical Least Squares_Nov-06.pdf
+  - title: Max Likelihood Method
+    slides: /assets/teaching/ip/Module-6.3 Max Likelihood Method_Nov-06.pdf
+    description: ''
+    video: ''
+    notes: ''
+  - title: Bayesian Estimation
+    slides: /assets/teaching/ip/Module-6.4 Bayesian Estimation_Nov-06.pdf
+    description: ''
+    video: ''
+    notes: ''
+  - title: From Gauss to Kalma Sequential linear Minimum Variance Estimation
+    slides: /assets/teaching/ip/Module-6.5 From Gauss to Kalma squential Linear Minimum Variance Estimation_Nov-06.pdf
+    description: ''
+    video: ''
+    notes: ''
 assignments: null
 resources:
   - title: 'J. M. Lewis, S. Lakshmivarahan and S. K. Dhall (2006) Dynamic Data Assimilation: a least squares approach, Cambridge University Press, Encyclopedia in Mathematics and its Applications, Vol 104'

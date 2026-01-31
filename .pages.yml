@@ -334,6 +334,7 @@ content:
     filename: "{year}/{fields.date|date('YYYY-MM-DD')}-{slug}"
     view:
       layout: list
+      hideDirs: all
       primary: title
       fields: [title, date, type, venue]
       sort: [date, title]
@@ -372,6 +373,7 @@ content:
     filename: "{year}/{fields.date|date('YYYY-MM-DD')}-{slug}"
     view:
       layout: list
+      hideDirs: all
       primary: title
       fields: [title, date, type, candidate]
       sort: [date, title]

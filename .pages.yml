@@ -346,18 +346,9 @@ content:
       - name: type
         label: Type
         type: select
-        options:
-          - { value: Talk, label: Talk }
-          - { value: Conference Talk, label: Conference Talk }
-          - { value: Keynote, label: Keynote }
-          - { value: Invited Talk, label: Invited Talk }
-          - { value: Plenary Talk, label: Plenary Talk }
-          - { value: Tutorial, label: Tutorial }
-          - { value: Workshop, label: Workshop }
-          - { value: Seminar, label: Seminar }
-          - { value: Guest Lecture, label: Guest Lecture }
-          - { value: Webinar, label: Webinar }
         default: Talk
+        options:
+          values: [Talk, Conference Talk, Keynote, Invited Talk, Plenary Talk, Tutorial, Workshop, Seminar, Guest Lecture, Webinar]
       - { name: category, type: string, hidden: true, default: delivered }
       - { name: speaker, label: Speaker, type: string }
       - { name: speaker_affiliation, label: Speaker Affiliation, type: string }
@@ -383,17 +374,9 @@ content:
       - name: type
         label: Type
         type: select
-        options:
-          - { value: PhD Thesis Colloquium, label: PhD Thesis Colloquium }
-          - { value: PhD Thesis Defense, label: PhD Thesis Defense }
-          - { value: MSc Thesis Defense, label: MSc Thesis Defense }
-          - { value: MTech Thesis Defense, label: MTech Thesis Defense }
-          - { value: Comprehensive Exam, label: Comprehensive Exam }
-          - { value: Research Seminar, label: Research Seminar }
-          - { value: Lab Meeting, label: Lab Meeting }
-          - { value: Journal Club, label: Journal Club }
-          - { value: Guest Seminar, label: Guest Seminar }
         default: PhD Thesis Colloquium
+        options:
+          values: [PhD Thesis Colloquium, PhD Thesis Defense, MSc Thesis Defense, MTech Thesis Defense, Comprehensive Exam, Research Seminar, Lab Meeting, Journal Club, Guest Seminar]
       - { name: category, type: string, hidden: true, default: organized }
       - { name: candidate, label: Candidate, type: string }
       - { name: supervisor, label: Supervisor, type: string }
@@ -427,8 +410,9 @@ content:
           - name: role
             label: Role
             type: select
-            options: [PI, Co-PI]
             default: PI
+            options:
+              values: [PI, Co-PI]
           - { name: amount, label: Amount, type: string }
           - { name: duration, label: Duration, type: string }
           - { name: investigators, label: Investigators, type: string }
@@ -449,8 +433,9 @@ content:
           - name: category
             label: Category
             type: select
-            options: [Award, Recognition]
             default: Award
+            options:
+              values: [Award, Recognition]
           - { name: recipients, label: Recipients, type: string, description: "Comma-separated list" }
           - { name: image, label: Image, type: image }
           - { name: co_inventors, label: Co-inventors, type: string }
@@ -497,8 +482,9 @@ content:
           - name: category
             label: Category
             type: select
-            options: [Research Talks, Tutorials, Lab Activities, Conferences, Workshops, Other]
             default: Research Talks
+            options:
+              values: [Research Talks, Tutorials, Lab Activities, Conferences, Workshops, Other]
           - { name: thumbnail, label: Thumbnail, type: image }
 
   - name: courses
@@ -525,5 +511,6 @@ content:
           - name: type
             label: Type
             type: select
-            options: [Regular Course, Short Course]
             default: Regular Course
+            options:
+              values: [Regular Course, Short Course]

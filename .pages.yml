@@ -1,0 +1,529 @@
+# PagesCMS Configuration for Spectrum Lab Website
+# https://pagescms.org/docs/configuration
+
+# =============================================================================
+# MEDIA CONFIGURATION
+# =============================================================================
+media:
+  input: assets/img
+  output: /assets/img
+
+# =============================================================================
+# CONTENT COLLECTIONS
+# =============================================================================
+content:
+  # ---------------------------------------------------------------------------
+  # NEWS
+  # ---------------------------------------------------------------------------
+  - name: news
+    label: News
+    type: collection
+    path: _news
+    filename: "{year}/{fields.title}"
+    format: yaml-frontmatter
+    subfolders: true
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+        default: post
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Posted Date
+        type: date
+        required: true
+      - name: event_date
+        label: Event Date
+        type: date
+        description: Date when the event occurs (optional)
+      - name: inline
+        label: Inline
+        type: boolean
+        default: false
+      - name: related_posts
+        label: Related Posts
+        type: boolean
+        default: false
+      - name: announce
+        label: Announce
+        type: boolean
+        default: false
+      - name: badge
+        label: Badge
+        type: string
+      - name: icon
+        label: Icon
+        type: string
+      - name: link
+        label: Link
+        type: string
+      - name: venue
+        label: Venue
+        type: string
+      - name: host
+        label: Host
+        type: string
+      - name: body
+        label: Body
+        type: rich-text
+
+  # ---------------------------------------------------------------------------
+  # PEOPLE - CURRENT
+  # ---------------------------------------------------------------------------
+  - name: lab_director
+    label: "People: Lab Director"
+    type: collection
+    path: _people/current/lab-director
+    format: yaml-frontmatter
+    fields:
+      - { name: layout, type: string, hidden: true, default: person }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: firstname, label: First Name, type: string, required: true }
+      - { name: lastname, label: Last Name, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: img, label: Image, type: image }
+      - { name: category, type: string, hidden: true, default: "Lab Director" }
+      - { name: website, label: Website, type: string }
+      - { name: orcid_id, label: ORCID ID, type: string }
+      - { name: linkedin_username, label: LinkedIn, type: string }
+      - { name: github_username, label: GitHub, type: string }
+      - { name: email, label: Email, type: string }
+      - { name: scholar_userid, label: Google Scholar ID, type: string }
+      - { name: twitter_username, label: Twitter, type: string }
+      - { name: badges, label: Badges, type: string, list: true }
+      - { name: show, label: Show, type: boolean, default: true }
+      - { name: biography_paragraphs, label: Biography, type: text, list: true }
+
+  - name: phd_students
+    label: "People: PhD Students"
+    type: collection
+    path: _people/current/phd-students
+    format: yaml-frontmatter
+    fields:
+      - { name: layout, type: string, hidden: true, default: person }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: firstname, label: First Name, type: string, required: true }
+      - { name: lastname, label: Last Name, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: img, label: Image, type: image }
+      - { name: category, type: string, hidden: true, default: "PhD Students" }
+      - { name: website, label: Website, type: string }
+      - { name: orcid_id, label: ORCID ID, type: string }
+      - { name: linkedin_username, label: LinkedIn, type: string }
+      - { name: github_username, label: GitHub, type: string }
+      - { name: email, label: Email, type: string }
+      - { name: scholar_userid, label: Google Scholar ID, type: string }
+      - { name: badges, label: Badges, type: string, list: true }
+      - { name: show, label: Show, type: boolean, default: true }
+      - { name: biography_paragraphs, label: Biography, type: text, list: true }
+
+  - name: mtech_students
+    label: "People: MTech Students"
+    type: collection
+    path: _people/current/mtech-students
+    format: yaml-frontmatter
+    fields:
+      - { name: layout, type: string, hidden: true, default: person }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: firstname, label: First Name, type: string, required: true }
+      - { name: lastname, label: Last Name, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: img, label: Image, type: image }
+      - { name: category, type: string, hidden: true, default: "M.Tech Students" }
+      - { name: year, label: Year, type: number }
+      - { name: website, label: Website, type: string }
+      - { name: linkedin_username, label: LinkedIn, type: string }
+      - { name: github_username, label: GitHub, type: string }
+      - { name: email, label: Email, type: string }
+      - { name: show, label: Show, type: boolean, default: true }
+
+  - name: mtech_research
+    label: "People: MTech (Research)"
+    type: collection
+    path: _people/current/mtech-research
+    format: yaml-frontmatter
+    fields:
+      - { name: layout, type: string, hidden: true, default: person }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: firstname, label: First Name, type: string, required: true }
+      - { name: lastname, label: Last Name, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: img, label: Image, type: image }
+      - { name: category, type: string, hidden: true, default: "M.Tech (Research) Students" }
+      - { name: website, label: Website, type: string }
+      - { name: linkedin_username, label: LinkedIn, type: string }
+      - { name: github_username, label: GitHub, type: string }
+      - { name: email, label: Email, type: string }
+      - { name: show, label: Show, type: boolean, default: true }
+
+  - name: project_associates
+    label: "People: Project Associates"
+    type: collection
+    path: _people/current/project-associates
+    format: yaml-frontmatter
+    fields:
+      - { name: layout, type: string, hidden: true, default: person }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: firstname, label: First Name, type: string, required: true }
+      - { name: lastname, label: Last Name, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: img, label: Image, type: image }
+      - { name: category, type: string, hidden: true, default: "Project Associates" }
+      - { name: website, label: Website, type: string }
+      - { name: linkedin_username, label: LinkedIn, type: string }
+      - { name: github_username, label: GitHub, type: string }
+      - { name: email, label: Email, type: string }
+      - { name: show, label: Show, type: boolean, default: true }
+
+  - name: administrator
+    label: "People: Administrator"
+    type: collection
+    path: _people/current/administrator
+    format: yaml-frontmatter
+    fields:
+      - { name: layout, type: string, hidden: true, default: person }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: firstname, label: First Name, type: string, required: true }
+      - { name: lastname, label: Last Name, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: img, label: Image, type: image }
+      - { name: category, type: string, hidden: true, default: "Administrator" }
+      - { name: email, label: Email, type: string }
+      - { name: show, label: Show, type: boolean, default: true }
+
+  # ---------------------------------------------------------------------------
+  # ALUMNI
+  # ---------------------------------------------------------------------------
+  - name: phd_graduates
+    label: "Alumni: PhD Graduates"
+    type: collection
+    path: _people/alumni/phd-graduates
+    format: yaml-frontmatter
+    subfolders: true
+    filename: "{fields.year}/{fields.title}"
+    fields:
+      - { name: layout, type: string, hidden: true, default: person }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: firstname, label: First Name, type: string, required: true }
+      - { name: lastname, label: Last Name, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: img, label: Image, type: image }
+      - { name: category, type: string, hidden: true, default: "PhD Graduates" }
+      - { name: year, label: Graduation Year, type: number, required: true }
+      - { name: website, label: Website, type: string }
+      - { name: orcid_id, label: ORCID ID, type: string }
+      - { name: linkedin_username, label: LinkedIn, type: string }
+      - { name: github_username, label: GitHub, type: string }
+      - { name: email, label: Email, type: string }
+      - { name: scholar_userid, label: Google Scholar ID, type: string }
+      - { name: show, label: Show, type: boolean, default: true }
+      - { name: biography_paragraphs, label: Biography, type: text, list: true }
+
+  - name: mtech_graduates
+    label: "Alumni: MTech Graduates"
+    type: collection
+    path: _people/alumni/mtech-graduates
+    format: yaml-frontmatter
+    subfolders: true
+    filename: "{fields.year}/{fields.title}"
+    fields:
+      - { name: layout, type: string, hidden: true, default: person }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: firstname, label: First Name, type: string, required: true }
+      - { name: lastname, label: Last Name, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: img, label: Image, type: image }
+      - { name: category, type: string, hidden: true, default: "M.Tech Graduates" }
+      - { name: year, label: Graduation Year, type: number, required: true }
+      - { name: website, label: Website, type: string }
+      - { name: linkedin_username, label: LinkedIn, type: string }
+      - { name: github_username, label: GitHub, type: string }
+      - { name: email, label: Email, type: string }
+      - { name: show, label: Show, type: boolean, default: true }
+
+  - name: mtech_research_graduates
+    label: "Alumni: MTech (Research) Graduates"
+    type: collection
+    path: _people/alumni/mtech-research-graduates
+    format: yaml-frontmatter
+    subfolders: true
+    filename: "{fields.year}/{fields.title}"
+    fields:
+      - { name: layout, type: string, hidden: true, default: person }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: firstname, label: First Name, type: string, required: true }
+      - { name: lastname, label: Last Name, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: img, label: Image, type: image }
+      - { name: category, type: string, hidden: true, default: "M.Tech (Research) Graduates" }
+      - { name: year, label: Graduation Year, type: number, required: true }
+      - { name: website, label: Website, type: string }
+      - { name: linkedin_username, label: LinkedIn, type: string }
+      - { name: github_username, label: GitHub, type: string }
+      - { name: show, label: Show, type: boolean, default: true }
+
+  - name: interns
+    label: "Alumni: Interns"
+    type: collection
+    path: _people/alumni/interns
+    format: yaml-frontmatter
+    subfolders: true
+    filename: "{fields.year}/{fields.title}"
+    fields:
+      - { name: layout, type: string, hidden: true, default: person }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: firstname, label: First Name, type: string, required: true }
+      - { name: lastname, label: Last Name, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: img, label: Image, type: image }
+      - { name: category, type: string, hidden: true, default: "Interns" }
+      - { name: year, label: Year, type: number, required: true }
+      - { name: show, label: Show, type: boolean, default: true }
+
+  - name: post_doc
+    label: "Alumni: Post Docs"
+    type: collection
+    path: _people/alumni/post-doc
+    format: yaml-frontmatter
+    subfolders: true
+    filename: "{fields.year}/{fields.title}"
+    fields:
+      - { name: layout, type: string, hidden: true, default: person }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: firstname, label: First Name, type: string, required: true }
+      - { name: lastname, label: Last Name, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: img, label: Image, type: image }
+      - { name: category, type: string, hidden: true, default: "Post Docs" }
+      - { name: year, label: Year, type: number, required: true }
+      - { name: website, label: Website, type: string }
+      - { name: scholar_userid, label: Google Scholar ID, type: string }
+      - { name: show, label: Show, type: boolean, default: true }
+
+  - name: research_associates
+    label: "Alumni: Research Associates"
+    type: collection
+    path: _people/alumni/research-associates
+    format: yaml-frontmatter
+    subfolders: true
+    filename: "{fields.year}/{fields.title}"
+    fields:
+      - { name: layout, type: string, hidden: true, default: person }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: firstname, label: First Name, type: string, required: true }
+      - { name: lastname, label: Last Name, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: img, label: Image, type: image }
+      - { name: category, type: string, hidden: true, default: "Research Associates" }
+      - { name: year, label: Year, type: number, required: true }
+      - { name: website, label: Website, type: string }
+      - { name: show, label: Show, type: boolean, default: true }
+
+  # ---------------------------------------------------------------------------
+  # TALKS
+  # ---------------------------------------------------------------------------
+  - name: talks_delivered
+    label: "Talks: Delivered"
+    type: collection
+    path: _talks/delivered
+    format: yaml-frontmatter
+    subfolders: true
+    filename: "{year}/{fields.title}"
+    fields:
+      - { name: layout, type: string, hidden: true, default: talk }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: time, label: Time, type: string, description: "e.g., 2:30 PM or 14:30-16:00" }
+      - { name: venue, label: Venue, type: string }
+      - { name: venue_link, label: Venue Link, type: string }
+      - { name: collaboration, label: Collaboration, type: string }
+      - { name: collaboration_link, label: Collaboration Link, type: string }
+      - { name: keywords, label: Keywords, type: string, list: true }
+      - { name: abstract, label: Abstract, type: text }
+      - name: type
+        label: Type
+        type: select
+        options:
+          - { value: Talk, label: Talk }
+          - { value: Conference Talk, label: Conference Talk }
+          - { value: Keynote, label: Keynote }
+          - { value: Invited Talk, label: Invited Talk }
+          - { value: Plenary Talk, label: Plenary Talk }
+          - { value: Tutorial, label: Tutorial }
+          - { value: Workshop, label: Workshop }
+          - { value: Seminar, label: Seminar }
+          - { value: Guest Lecture, label: Guest Lecture }
+          - { value: Webinar, label: Webinar }
+        default: Talk
+      - { name: category, type: string, hidden: true, default: delivered }
+      - { name: speaker, label: Speaker, type: string }
+      - { name: speaker_affiliation, label: Speaker Affiliation, type: string }
+      - { name: host, label: Host, type: string }
+      - { name: speaker_bio, label: Speaker Bio, type: text }
+
+  - name: talks_organized
+    label: "Talks: Organized"
+    type: collection
+    path: _talks/organized
+    format: yaml-frontmatter
+    subfolders: true
+    filename: "{year}/{fields.title}"
+    fields:
+      - { name: layout, type: string, hidden: true, default: talk }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: date, label: Date, type: date, required: true }
+      - { name: time, label: Time, type: string }
+      - { name: venue, label: Venue, type: string }
+      - { name: venue_link, label: Venue Link, type: string }
+      - { name: keywords, label: Keywords, type: string, list: true }
+      - { name: abstract, label: Abstract, type: text }
+      - name: type
+        label: Type
+        type: select
+        options:
+          - { value: PhD Thesis Colloquium, label: PhD Thesis Colloquium }
+          - { value: PhD Thesis Defense, label: PhD Thesis Defense }
+          - { value: MSc Thesis Defense, label: MSc Thesis Defense }
+          - { value: MTech Thesis Defense, label: MTech Thesis Defense }
+          - { value: Comprehensive Exam, label: Comprehensive Exam }
+          - { value: Research Seminar, label: Research Seminar }
+          - { value: Lab Meeting, label: Lab Meeting }
+          - { value: Journal Club, label: Journal Club }
+          - { value: Guest Seminar, label: Guest Seminar }
+        default: PhD Thesis Colloquium
+      - { name: category, type: string, hidden: true, default: organized }
+      - { name: candidate, label: Candidate, type: string }
+      - { name: supervisor, label: Supervisor, type: string }
+      - { name: candidate_bio, label: Candidate Bio, type: text }
+
+  # ---------------------------------------------------------------------------
+  # DATA FILES
+  # ---------------------------------------------------------------------------
+  - name: funding
+    label: Funding
+    type: file
+    path: _data/funding.yml
+    format: yaml
+    fields:
+      - name: funders
+        label: Funders
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string, required: true }
+          - { name: logo, label: Logo, type: image }
+          - { name: url, label: URL, type: string }
+          - { name: invert, label: Invert Logo, type: boolean, default: false }
+      - name: projects
+        label: Projects
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string, required: true }
+          - { name: agency, label: Agency, type: string, required: true }
+          - name: role
+            label: Role
+            type: select
+            options: [PI, Co-PI]
+            default: PI
+          - { name: amount, label: Amount, type: string }
+          - { name: duration, label: Duration, type: string }
+          - { name: investigators, label: Investigators, type: string }
+
+  - name: recognition
+    label: Recognition
+    type: file
+    path: _data/recognition.yml
+    format: yaml
+    fields:
+      - name: awards
+        label: Awards
+        type: object
+        list: true
+        fields:
+          - { name: award, label: Award Name, type: string, required: true }
+          - { name: year, label: Year, type: string }
+          - name: category
+            label: Category
+            type: select
+            options: [Award, Recognition]
+            default: Award
+          - { name: recipients, label: Recipients, type: string, description: "Comma-separated list" }
+          - { name: image, label: Image, type: image }
+          - { name: co_inventors, label: Co-inventors, type: string }
+
+  - name: albums
+    label: Photo Albums
+    type: file
+    path: _data/album.yaml
+    format: yaml
+    fields:
+      - name: albums
+        label: Albums
+        type: object
+        list: true
+        fields:
+          - { name: event, label: Event Name, type: string }
+          - { name: folder, label: Folder, type: string }
+          - { name: description, label: Description, type: string }
+          - name: photos
+            label: Photos
+            type: object
+            list: true
+            fields:
+              - { name: image, label: Image, type: image }
+              - { name: caption, label: Caption, type: string }
+              - { name: order, label: Order, type: number }
+
+  - name: videos
+    label: Videos
+    type: file
+    path: _data/videos.yml
+    format: yaml
+    fields:
+      - name: videos
+        label: Videos
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string, required: true }
+          - { name: speaker, label: Speaker, type: string }
+          - { name: description, label: Description, type: text }
+          - { name: date, label: Date, type: date }
+          - { name: url, label: Video URL, type: string, required: true }
+          - name: category
+            label: Category
+            type: select
+            options: [Research Talks, Tutorials, Lab Activities, Conferences, Workshops, Other]
+            default: Research Talks
+          - { name: thumbnail, label: Thumbnail, type: image }
+
+  - name: courses
+    label: Courses
+    type: file
+    path: _data/teaching.yml
+    format: yaml
+    fields:
+      - name: courses
+        label: Courses
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string, required: true }
+          - { name: description, label: Description, type: text }
+          - { name: instructor, label: Instructor, type: string }
+          - { name: instructor_bio, label: Instructor Bio, type: text }
+          - { name: instructor_photo, label: Instructor Photo, type: image }
+          - { name: teaching_assistants, label: Teaching Assistants, type: string, list: true }
+          - { name: hosts, label: Hosts, type: string, list: true }
+          - { name: semester, label: Semester, type: string }
+          - { name: permalink, label: Permalink, type: string }
+          - { name: course_id, label: Course ID, type: string }
+          - name: type
+            label: Type
+            type: select
+            options: [Regular Course, Short Course]
+            default: Regular Course

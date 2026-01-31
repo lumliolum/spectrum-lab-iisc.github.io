@@ -19,9 +19,18 @@ content:
     label: News
     type: collection
     path: _news
-    filename: "{year}/{fields.title}"
+    filename: "{year}/{fields.date|date('YYYY-MM-DD')}-{slug}"
     format: yaml-frontmatter
     subfolders: true
+    view:
+      layout: list
+      hideDirs: all
+      primary: title
+      fields: [title, date, badge]
+      sort: [date]
+      default:
+        sort: date
+        order: desc
     fields:
       - name: layout
         type: string
@@ -203,7 +212,16 @@ content:
     path: _people/alumni/phd-graduates
     format: yaml-frontmatter
     subfolders: true
-    filename: "{fields.year}/{fields.title}"
+    filename: "{fields.year}/{slug}"
+    view:
+      layout: list
+      hideDirs: all
+      primary: title
+      fields: [title, year, category]
+      sort: [year, title]
+      default:
+        sort: year
+        order: desc
     fields:
       - { name: layout, type: string, hidden: true, default: person }
       - { name: title, label: Title, type: string, required: true }
@@ -228,7 +246,16 @@ content:
     path: _people/alumni/mtech-graduates
     format: yaml-frontmatter
     subfolders: true
-    filename: "{fields.year}/{fields.title}"
+    filename: "{fields.year}/{slug}"
+    view:
+      layout: list
+      hideDirs: all
+      primary: title
+      fields: [title, year]
+      sort: [year, title]
+      default:
+        sort: year
+        order: desc
     fields:
       - { name: layout, type: string, hidden: true, default: person }
       - { name: title, label: Title, type: string, required: true }
@@ -250,7 +277,16 @@ content:
     path: _people/alumni/mtech-research-graduates
     format: yaml-frontmatter
     subfolders: true
-    filename: "{fields.year}/{fields.title}"
+    filename: "{fields.year}/{slug}"
+    view:
+      layout: list
+      hideDirs: all
+      primary: title
+      fields: [title, year]
+      sort: [year, title]
+      default:
+        sort: year
+        order: desc
     fields:
       - { name: layout, type: string, hidden: true, default: person }
       - { name: title, label: Title, type: string, required: true }
@@ -271,7 +307,16 @@ content:
     path: _people/alumni/interns
     format: yaml-frontmatter
     subfolders: true
-    filename: "{fields.year}/{fields.title}"
+    filename: "{fields.year}/{slug}"
+    view:
+      layout: list
+      hideDirs: all
+      primary: title
+      fields: [title, year]
+      sort: [year, title]
+      default:
+        sort: year
+        order: desc
     fields:
       - { name: layout, type: string, hidden: true, default: person }
       - { name: title, label: Title, type: string, required: true }
@@ -289,7 +334,16 @@ content:
     path: _people/alumni/post-doc
     format: yaml-frontmatter
     subfolders: true
-    filename: "{fields.year}/{fields.title}"
+    filename: "{fields.year}/{slug}"
+    view:
+      layout: list
+      hideDirs: all
+      primary: title
+      fields: [title, year]
+      sort: [year, title]
+      default:
+        sort: year
+        order: desc
     fields:
       - { name: layout, type: string, hidden: true, default: person }
       - { name: title, label: Title, type: string, required: true }
@@ -309,7 +363,16 @@ content:
     path: _people/alumni/research-associates
     format: yaml-frontmatter
     subfolders: true
-    filename: "{fields.year}/{fields.title}"
+    filename: "{fields.year}/{slug}"
+    view:
+      layout: list
+      hideDirs: all
+      primary: title
+      fields: [title, year]
+      sort: [year, title]
+      default:
+        sort: year
+        order: desc
     fields:
       - { name: layout, type: string, hidden: true, default: person }
       - { name: title, label: Title, type: string, required: true }

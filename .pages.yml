@@ -331,7 +331,7 @@ content:
     path: _talks/delivered
     format: yaml-frontmatter
     subfolders: true
-    filename: "{year}/{fields.title}"
+    filename: "{year}/{fields.date|date('YYYY-MM-DD')}-{slug}"
     view:
       layout: list
       primary: title
@@ -369,7 +369,7 @@ content:
     path: _talks/organized
     format: yaml-frontmatter
     subfolders: true
-    filename: "{year}/{fields.title}"
+    filename: "{year}/{fields.date|date('YYYY-MM-DD')}-{slug}"
     view:
       layout: list
       primary: title

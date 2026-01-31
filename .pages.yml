@@ -332,6 +332,14 @@ content:
     format: yaml-frontmatter
     subfolders: true
     filename: "{year}/{fields.title}"
+    view:
+      layout: list
+      primary: title
+      fields: [title, date, type, venue]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
     fields:
       - { name: layout, type: string, hidden: true, default: talk }
       - { name: title, label: Title, type: string, required: true }
@@ -362,6 +370,14 @@ content:
     format: yaml-frontmatter
     subfolders: true
     filename: "{year}/{fields.title}"
+    view:
+      layout: list
+      primary: title
+      fields: [title, date, type, candidate]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
     fields:
       - { name: layout, type: string, hidden: true, default: talk }
       - { name: title, label: Title, type: string, required: true }

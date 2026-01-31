@@ -8,6 +8,7 @@ img: assets/img/people/current/mtech-students/Bhuvan.jpeg
 category: M.Tech Students
 show: true
 email: bhuvanpalyam@iisc.ac.in
+alias: bhuvan_palyam
 website: https://www.linkedin.com/in/bhuvan-palyam/
 linkedin_username: bhuvan-palyam
 ---

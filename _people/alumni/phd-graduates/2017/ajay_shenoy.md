@@ -8,7 +8,6 @@ img: assets/img/people/alumni/phd-graduates/2017/ajay-shenoy.jpg
 description: AI consultant and Trainer
 category: PhD Graduates
 year: 2017
-img: assets/img/people/alumni/phd/2017/ajay-shenoy.jpg
 website: https://ajayshenoy.github.io/genai_intro
 orcid_id: ''
 linkedin_username: ''

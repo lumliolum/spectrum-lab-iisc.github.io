@@ -548,7 +548,7 @@
                     margin-top: 1.5rem;
                     margin-bottom: 0.5rem;
                 }
-                .post-title {
+                .post-title, .talk-title {
                     font-size: 2rem;
                     font-weight: 700;
                     color: #1a1a2e;
@@ -564,24 +564,134 @@
                 .post-content {
                     font-size: 1rem;
                 }
-                .badge {
+                .badge, .talk-badge {
                     display: inline-block;
-                    padding: 0.25rem 0.75rem;
-                    background: #4361ee;
+                    padding: 0.35rem 1rem;
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                     color: white;
                     border-radius: 20px;
-                    font-size: 0.8rem;
-                    font-weight: 500;
-                    margin-right: 0.5rem;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    margin-bottom: 1rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
                 }
-                .talk-info {
+                /* Talk Page Styles */
+                .talk-page {
+                    padding: 1.5rem;
+                }
+                .talk-header {
+                    margin-bottom: 2rem;
+                }
+                .talk-meta {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1.5rem;
+                    margin-top: 1rem;
+                    color: #666;
+                }
+                .talk-meta-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                }
+                .talk-meta-item i {
+                    color: #667eea;
+                    width: 20px;
+                }
+                .talk-keywords {
+                    margin-top: 1rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 0.5rem;
+                }
+                .talk-keyword {
+                    background: #f0f4ff;
+                    color: #4361ee;
+                    padding: 0.25rem 0.75rem;
+                    border-radius: 15px;
+                    font-size: 0.85rem;
+                }
+                .talk-section {
+                    margin-top: 2rem;
+                    padding-top: 1rem;
+                    border-top: 1px solid #eee;
+                }
+                .talk-section h2 {
+                    font-size: 1.25rem;
+                    color: #333;
+                    margin-bottom: 1rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                }
+                .talk-section h2 i {
+                    color: #667eea;
+                }
+                .talk-speaker-card {
                     background: #f8f9fa;
-                    padding: 1rem;
+                    padding: 1rem 1.5rem;
                     border-radius: 8px;
-                    margin-bottom: 1.5rem;
+                    border-left: 4px solid #667eea;
                 }
-                .talk-info p {
-                    margin: 0.25rem 0;
+                .speaker-affiliation {
+                    color: #666;
+                    font-size: 0.9rem;
+                }
+                .talk-abstract, .talk-bio {
+                    line-height: 1.7;
+                    color: #444;
+                }
+                /* Person Page Styles */
+                .initials-avatar {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 3rem;
+                    font-weight: 600;
+                    margin: 0 auto;
+                }
+                .social-icons {
+                    margin-top: 1rem;
+                }
+                .social-icon {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background: #f0f4ff;
+                    color: #667eea;
+                    transition: all 0.3s ease;
+                    text-decoration: none;
+                }
+                .social-icon:hover {
+                    background: #667eea;
+                    color: white;
+                    transform: translateY(-2px);
+                }
+                .card {
+                    background: white;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+                }
+                .card-body {
+                    padding: 1.5rem;
+                }
+                .card-title {
+                    font-weight: 600;
+                    color: #333;
+                    margin-bottom: 1rem;
+                }
+                .card-text {
+                    color: #555;
+                    line-height: 1.7;
                 }
                 img {
                     max-width: 100%;
@@ -614,55 +724,226 @@
                 }
             `, { raw: true });
 
-            // News Preview Template
+            // News Preview Template (matches post.liquid)
             const NewsPreview = ({ entry, widgetFor }) => {
                 const title = entry.getIn(['data', 'title']) || 'Untitled';
                 const date = entry.getIn(['data', 'date']);
                 const badge = entry.getIn(['data', 'badge']);
+                const author = entry.getIn(['data', 'author']);
                 const body = widgetFor('body');
 
-                return window.h('div', { className: 'preview-container' },
-                    window.h('h1', { className: 'post-title' }, title),
-                    window.h('div', { className: 'post-meta' },
-                        badge && window.h('span', { className: 'badge' }, badge),
-                        date && window.h('span', {}, new Date(date).toLocaleDateString('en-US', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric'
-                        }))
+                return window.h('div', { className: 'post' },
+                    window.h('header', { className: 'post-header' },
+                        window.h('h1', { className: 'post-title' }, title),
+                        window.h('p', { className: 'post-meta' },
+                            'Created in ',
+                            date && new Date(date).toLocaleDateString('en-US', {
+                                year: 'numeric', month: 'long', day: 'numeric'
+                            }),
+                            author && window.h('span', {}, ' by ', author)
+                        ),
+                        window.h('p', { className: 'post-tags' },
+                            window.h('i', { className: 'fa-solid fa-calendar fa-sm' }),
+                            ' ', date && new Date(date).getFullYear(),
+                            badge && window.h('span', { className: 'badge ms-2' }, badge)
+                        )
                     ),
-                    window.h('div', { className: 'post-content' }, body)
+                    window.h('article', { className: 'post-content' },
+                        window.h('div', { id: 'markdown-content' }, body)
+                    )
                 );
             };
 
-            // Talk Preview Template
+            // Talk Preview Template (matches talk.liquid)
             const TalkPreview = ({ entry, widgetFor }) => {
                 const title = entry.getIn(['data', 'title']) || 'Untitled';
                 const date = entry.getIn(['data', 'date']);
                 const time = entry.getIn(['data', 'time']);
                 const venue = entry.getIn(['data', 'venue']);
-                const speaker = entry.getIn(['data', 'speaker']) || entry.getIn(['data', 'candidate']);
+                const venueLink = entry.getIn(['data', 'venue_link']);
+                const speaker = entry.getIn(['data', 'speaker']);
+                const speakerAffiliation = entry.getIn(['data', 'speaker_affiliation']);
+                const candidate = entry.getIn(['data', 'candidate']);
+                const supervisor = entry.getIn(['data', 'supervisor']);
                 const type = entry.getIn(['data', 'type']);
                 const abstract = entry.getIn(['data', 'abstract']);
+                const speakerBio = entry.getIn(['data', 'speaker_bio']);
+                const candidateBio = entry.getIn(['data', 'candidate_bio']);
+                const keywords = entry.getIn(['data', 'keywords']);
+                const host = entry.getIn(['data', 'host']);
+                const collaboration = entry.getIn(['data', 'collaboration']);
 
-                return window.h('div', { className: 'preview-container' },
-                    window.h('h1', { className: 'post-title' }, title),
-                    window.h('div', { className: 'talk-info' },
-                        type && window.h('p', {}, window.h('strong', {}, 'Type: '), type),
-                        speaker && window.h('p', {}, window.h('strong', {}, 'Speaker: '), speaker),
-                        date && window.h('p', {}, window.h('strong', {}, 'Date: '),
-                            new Date(date).toLocaleDateString('en-US', {
-                                year: 'numeric',
-                                month: 'long',
-                                day: 'numeric'
-                            })
+                return window.h('div', { className: 'talk-page' },
+                    // Header
+                    window.h('header', { className: 'talk-header' },
+                        type && window.h('span', { className: 'talk-badge' }, type),
+                        window.h('h1', { className: 'talk-title' }, title),
+                        window.h('div', { className: 'talk-meta' },
+                            window.h('div', { className: 'talk-meta-item' },
+                                window.h('i', { className: 'fas fa-calendar-alt' }),
+                                window.h('span', {}, date && new Date(date).toLocaleDateString('en-US', {
+                                    year: 'numeric', month: 'long', day: 'numeric'
+                                }))
+                            ),
+                            time && window.h('div', { className: 'talk-meta-item' },
+                                window.h('i', { className: 'fas fa-clock' }),
+                                window.h('span', {}, time)
+                            ),
+                            venue && window.h('div', { className: 'talk-meta-item' },
+                                window.h('i', { className: 'fas fa-map-marker-alt' }),
+                                venueLink
+                                    ? window.h('a', { href: venueLink, target: '_blank' }, venue)
+                                    : window.h('span', {}, venue)
+                            ),
+                            collaboration && window.h('div', { className: 'talk-meta-item' },
+                                window.h('i', { className: 'fas fa-handshake' }),
+                                window.h('span', {}, collaboration)
+                            )
                         ),
-                        time && window.h('p', {}, window.h('strong', {}, 'Time: '), time),
-                        venue && window.h('p', {}, window.h('strong', {}, 'Venue: '), venue)
+                        keywords && keywords.size > 0 && window.h('div', { className: 'talk-keywords' },
+                            keywords.map(k => window.h('span', { className: 'talk-keyword' }, k))
+                        )
                     ),
-                    abstract && window.h('div', {},
-                        window.h('h3', {}, 'Abstract'),
-                        window.h('p', {}, abstract)
+                    // Speaker section
+                    speaker && window.h('section', { className: 'talk-section' },
+                        window.h('h2', {},
+                            window.h('i', { className: 'fas fa-user-tie' }),
+                            ' Speaker'
+                        ),
+                        window.h('div', { className: 'talk-speaker-card' },
+                            window.h('strong', {}, speaker),
+                            speakerAffiliation && window.h('span', { className: 'speaker-affiliation' },
+                                window.h('br'), speakerAffiliation
+                            )
+                        )
+                    ),
+                    // Candidate section (for organized talks)
+                    candidate && window.h('section', { className: 'talk-section' },
+                        window.h('h2', {},
+                            window.h('i', { className: 'fas fa-user-graduate' }),
+                            ' Candidate'
+                        ),
+                        window.h('div', { className: 'talk-speaker-card' },
+                            window.h('strong', {}, candidate),
+                            supervisor && window.h('span', { className: 'speaker-affiliation' },
+                                window.h('br'), 'Supervisor: ', supervisor
+                            )
+                        )
+                    ),
+                    // Host section
+                    host && window.h('section', { className: 'talk-section' },
+                        window.h('h2', {},
+                            window.h('i', { className: 'fas fa-user-friends' }),
+                            ' Host'
+                        ),
+                        window.h('p', {}, host)
+                    ),
+                    // Abstract section
+                    abstract && window.h('section', { className: 'talk-section' },
+                        window.h('h2', {},
+                            window.h('i', { className: 'fas fa-file-alt' }),
+                            ' Abstract'
+                        ),
+                        window.h('div', { className: 'talk-abstract' }, abstract)
+                    ),
+                    // Speaker Bio
+                    speakerBio && window.h('section', { className: 'talk-section' },
+                        window.h('h2', {},
+                            window.h('i', { className: 'fas fa-info-circle' }),
+                            ' About the Speaker'
+                        ),
+                        window.h('div', { className: 'talk-bio' }, speakerBio)
+                    ),
+                    // Candidate Bio
+                    candidateBio && window.h('section', { className: 'talk-section' },
+                        window.h('h2', {},
+                            window.h('i', { className: 'fas fa-info-circle' }),
+                            ' About the Candidate'
+                        ),
+                        window.h('div', { className: 'talk-bio' }, candidateBio)
+                    )
+                );
+            };
+
+            // Person Preview Template (matches person.liquid)
+            const PersonPreview = ({ entry, widgetFor }) => {
+                const firstname = entry.getIn(['data', 'firstname']) || '';
+                const lastname = entry.getIn(['data', 'lastname']) || '';
+                const description = entry.getIn(['data', 'description']);
+                const img = entry.getIn(['data', 'img']);
+                const email = entry.getIn(['data', 'email']);
+                const website = entry.getIn(['data', 'website']);
+                const linkedin = entry.getIn(['data', 'linkedin_username']);
+                const github = entry.getIn(['data', 'github_username']) || entry.getIn(['data', 'github']);
+                const scholar = entry.getIn(['data', 'scholar_userid']);
+                const orcid = entry.getIn(['data', 'orcid_id']);
+                const twitter = entry.getIn(['data', 'twitter_username']);
+                const bioParagraphs = entry.getIn(['data', 'biography_paragraphs']);
+                const academicRoles = entry.getIn(['data', 'academic_roles']);
+                const showAcademicRoles = entry.getIn(['data', 'show_academic_roles']);
+                const awards = entry.getIn(['data', 'awards']);
+                const showAwards = entry.getIn(['data', 'show_awards']);
+                const body = widgetFor('body');
+
+                const initials = (firstname.charAt(0) + lastname.charAt(0)).toUpperCase();
+
+                return window.h('div', { className: 'container my-5' },
+                    window.h('div', { className: 'row' },
+                        // Left column: Image and Contact
+                        window.h('div', { className: 'col-md-4 text-center' },
+                            img
+                                ? window.h('img', { src: img, alt: firstname, className: 'img-fluid rounded shadow mb-3', style: { maxHeight: '300px' } })
+                                : window.h('div', { className: 'initials-avatar shadow mb-3' }, initials),
+                            window.h('h1', { className: 'mt-3' }, firstname, ' ', lastname),
+                            window.h('p', { className: 'text-muted mb-2' }, description),
+                            // Social Icons
+                            window.h('div', { className: 'd-flex flex-wrap justify-content-center gap-3 mt-3 social-icons' },
+                                email && window.h('a', { href: 'mailto:' + email, title: 'Email', className: 'social-icon' },
+                                    window.h('i', { className: 'fas fa-envelope fa-lg' })
+                                ),
+                                orcid && window.h('a', { href: 'https://orcid.org/' + orcid, title: 'ORCID', className: 'social-icon' },
+                                    window.h('i', { className: 'ai ai-orcid ai-lg' })
+                                ),
+                                scholar && window.h('a', { href: 'https://scholar.google.com/citations?user=' + scholar, title: 'Google Scholar', className: 'social-icon' },
+                                    window.h('i', { className: 'ai ai-google-scholar ai-lg' })
+                                ),
+                                linkedin && window.h('a', { href: 'https://linkedin.com/in/' + linkedin, title: 'LinkedIn', className: 'social-icon' },
+                                    window.h('i', { className: 'fab fa-linkedin fa-lg' })
+                                ),
+                                github && window.h('a', { href: 'https://github.com/' + github, title: 'GitHub', className: 'social-icon' },
+                                    window.h('i', { className: 'fab fa-github fa-lg' })
+                                ),
+                                twitter && window.h('a', { href: 'https://twitter.com/' + twitter, title: 'Twitter', className: 'social-icon' },
+                                    window.h('i', { className: 'fab fa-twitter fa-lg' })
+                                ),
+                                website && window.h('a', { href: website, title: 'Website', className: 'social-icon' },
+                                    window.h('i', { className: 'fas fa-globe fa-lg' })
+                                )
+                            )
+                        ),
+                        // Right column: Biography
+                        window.h('div', { className: 'col-md-8' },
+                            window.h('div', { className: 'card shadow-sm border-0 mb-4' },
+                                window.h('div', { className: 'card-body' },
+                                    window.h('h5', { className: 'card-title' }, 'Biography'),
+                                    bioParagraphs && bioParagraphs.size > 0
+                                        ? bioParagraphs.map(p => window.h('p', { className: 'card-text' }, p))
+                                        : body,
+                                    showAcademicRoles && academicRoles && academicRoles.size > 0 && window.h('div', {},
+                                        window.h('h6', { className: 'mt-4' }, 'Academic and Editorial Roles'),
+                                        window.h('ul', {},
+                                            academicRoles.map(role => window.h('li', {}, role))
+                                        )
+                                    ),
+                                    showAwards && awards && awards.size > 0 && window.h('div', {},
+                                        window.h('h6', { className: 'mt-4' }, 'Awards'),
+                                        window.h('ul', {},
+                                            awards.map(award => window.h('li', {}, award))
+                                        )
+                                    )
+                                )
+                            )
+                        )
                     )
                 );
             };
@@ -671,6 +952,10 @@
             CMS_APP.registerPreviewTemplate('news', NewsPreview);
             CMS_APP.registerPreviewTemplate('talks_delivered', TalkPreview);
             CMS_APP.registerPreviewTemplate('talks_organized', TalkPreview);
+            // Register person previews for all people collections
+            ['lab_director', 'phd_students', 'mtech_students', 'mtech_research', 'project_associates', 'administrator',
+                'phd_graduates', 'mtech_graduates', 'mtech_research_graduates', 'interns', 'post_doc', 'research_associates'
+            ].forEach(collection => CMS_APP.registerPreviewTemplate(collection, PersonPreview));
 
         } else {
             console.error('Sveltia CMS global object not found. Ensure the UMD script is loaded.');

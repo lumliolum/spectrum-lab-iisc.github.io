@@ -298,7 +298,7 @@ plugins:
   - jekyll-email-protect
   - jekyll-feed
   - jekyll-get-json
-  # jekyll-imagemagick removed - using parallel pre-processing in GitHub Actions
+  - jekyll-imagemagick
   - jekyll-jupyter-notebook
   - jekyll-link-attributes
   - jekyll-paginate-v2
@@ -434,7 +434,8 @@ external_links:
 # MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
 #   convert -version
 imagemagick:
-  enabled: true # Keep true for templates to generate WebP paths; actual processing done by parallel script
+  enabled: true # true = templates generate WebP paths
+  skip_processing: true # true = don't run ImageMagick (using parallel script in CI instead)
   widths:
     - 480
     - 800

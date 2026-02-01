@@ -72,7 +72,7 @@ latest_posts:
 
 <div class="row mt-4">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path='assets/img/album/random-collection/specturm_in_front_main_building.jpg' alt="Spectrum Lab members" %}
+        {% include figure.liquid path='assets/img/gallery/album/random-collection/specturm_in_front_main_building.jpg' alt="Spectrum Lab members" %}
     </div>
 </div>
 <div class="caption">

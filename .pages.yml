@@ -21,7 +21,6 @@ content:
     path: _news
     filename: "{slug}"
     format: yaml-frontmatter
-    subfolders: true
     view:
       layout: list
       primary: title
@@ -210,7 +209,6 @@ content:
     type: collection
     path: _people/alumni/phd-graduates
     format: yaml-frontmatter
-    subfolders: true
     filename: "{slug}"
     view:
       layout: list
@@ -243,7 +241,6 @@ content:
     type: collection
     path: _people/alumni/mtech-graduates
     format: yaml-frontmatter
-    subfolders: true
     filename: "{slug}"
     view:
       layout: list
@@ -273,7 +270,6 @@ content:
     type: collection
     path: _people/alumni/mtech-research-graduates
     format: yaml-frontmatter
-    subfolders: true
     filename: "{slug}"
     view:
       layout: list
@@ -302,7 +298,6 @@ content:
     type: collection
     path: _people/alumni/interns
     format: yaml-frontmatter
-    subfolders: true
     filename: "{slug}"
     view:
       layout: list
@@ -328,7 +323,6 @@ content:
     type: collection
     path: _people/alumni/post-doc
     format: yaml-frontmatter
-    subfolders: true
     filename: "{slug}"
     view:
       layout: list
@@ -356,7 +350,6 @@ content:
     type: collection
     path: _people/alumni/research-associates
     format: yaml-frontmatter
-    subfolders: true
     filename: "{slug}"
     view:
       layout: list
@@ -384,9 +377,8 @@ content:
   - name: talks_delivered
     label: "Talks: Delivered"
     type: collection
-    path: _talks/delivered
+    path: _talks/delivered/**
     format: yaml-frontmatter
-    subfolders: true
     filename: "{slug}"
     view:
       layout: list
@@ -424,7 +416,6 @@ content:
     type: collection
     path: _talks/organized
     format: yaml-frontmatter
-    subfolders: true
     filename: "{slug}"
     view:
       layout: list

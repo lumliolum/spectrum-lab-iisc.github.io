@@ -84,17 +84,13 @@
                 {
                     name: "news",
                     label: "News",
-                    icon: "newspaper", // Material Symbol Name
+                    icon: "newspaper",
                     folder: "_news",
                     create: true,
-                    nested: { depth: 2, summary: "{{title}}" },
+                    nested: { depth: 2, summary: "{{title}}", subfolders: false },
+                    meta: { path: { widget: "string", label: "Path" } },
                     slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
-                    path: "{{fields.date | date('YYYY')}}/{{slug}}",
                     summary: "{{title}} ({{date | date('YYYY-MM-DD')}})",
-                    sortable_fields: ["title", "date"],
-                    view_groups: [
-                        { label: "Year", field: "date", pattern: "\\d{4}" }
-                    ],
                     fields: [
                         { label: "Layout", name: "layout", widget: "hidden", default: "post" },
                         { label: "Title", name: "title", widget: "string" },

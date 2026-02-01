@@ -84,13 +84,17 @@
                 {
                     name: "news",
                     label: "News",
-                    icon: "newspaper",
+                    icon: "newspaper", // Material Symbol Name
                     folder: "_news",
                     create: true,
-                    nested: { depth: 2, summary: "{{title}}", subfolders: false },
-                    meta: { path: { widget: "string", label: "Path" } },
+                    nested: { depth: 2, summary: "{{title}}" },
                     slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
+                    path: "{{fields.date | date('YYYY')}}/{{slug}}",
                     summary: "{{title}} ({{date | date('YYYY-MM-DD')}})",
+                    sortable_fields: ["title", "date"],
+                    view_groups: [
+                        { label: "Year", field: "date", pattern: "\\d{4}" }
+                    ],
                     fields: [
                         { label: "Layout", name: "layout", widget: "hidden", default: "post" },
                         { label: "Title", name: "title", widget: "string" },
@@ -278,8 +282,14 @@
                     icon: "mic",
                     folder: "_talks/delivered",
                     create: true,
-                    slug: "{{slug}}",
+                    nested: { depth: 2, summary: "{{title}}" },
+                    slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
                     path: "{{fields.date | date('YYYY')}}/{{slug}}",
+                    summary: "{{title}} ({{date | date('YYYY-MM-DD')}})",
+                    sortable_fields: ["title", "date"],
+                    view_groups: [
+                        { label: "Year", field: "date", pattern: "\\d{4}" }
+                    ],
                     fields: [
                         ...commonTalkFields,
                         { label: "Type", name: "type", widget: "select", options: ["Talk", "Conference Talk", "Keynote", "Invited Talk", "Plenary Talk", "Tutorial", "Workshop", "Seminar", "Guest Lecture", "Panel Discussion", "Webinar", "Other"], default: "Talk" },
@@ -296,8 +306,14 @@
                     icon: "mic",
                     folder: "_talks/organized",
                     create: true,
-                    slug: "{{slug}}",
+                    nested: { depth: 2, summary: "{{title}}" },
+                    slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
                     path: "{{fields.date | date('YYYY')}}/{{slug}}",
+                    summary: "{{title}} ({{date | date('YYYY-MM-DD')}})",
+                    sortable_fields: ["title", "date"],
+                    view_groups: [
+                        { label: "Year", field: "date", pattern: "\\d{4}" }
+                    ],
                     fields: [
                         ...commonTalkFields,
                         { label: "Type", name: "type", widget: "select", options: ["PhD Thesis Colloquium", "PhD Thesis Defense", "MSc Thesis Defense", "MTech Thesis Defense", "Comprehensive Exam", "Research Seminar", "Lab Meeting", "Journal Club", "Guest Seminar", "Other"], default: "PhD Thesis Colloquium" },

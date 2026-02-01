@@ -2,7 +2,7 @@
 layout: page
 permalink: /opportunities/
 title: Opportunities
-description:
+description: Join Spectrum Lab - PhD, MTech, internship and project positions available for exceptional students at IISc Bangalore
 nav: true
 nav_order: 8
 ---

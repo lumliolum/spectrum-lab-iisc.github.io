@@ -9,7 +9,7 @@
       {%- if person.img != blank %}
         {%- include responsive-image.liquid
           path=person.img
-          alt="Portrait"
+          alt=person.firstname | append: " " | append: person.lastname | append: " - " | append: person.description
           class="img-fluid rounded-circle z-depth-0"
         -%}
       {%- else %}

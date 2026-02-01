@@ -2,7 +2,7 @@
 layout: page
 title: Funding
 permalink: /funding/
-description:
+description: Research grants and sponsored projects at Spectrum Lab including government and industry-funded initiatives
 nav: true
 nav_order: 6
 horizontal: false

@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/
 title: Teaching
-description: Respository of course material
+description: Repository of course material
 nav: true
 nav_order: 7
 horizontal: false

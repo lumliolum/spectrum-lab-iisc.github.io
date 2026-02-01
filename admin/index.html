@@ -87,9 +87,14 @@
                     icon: "newspaper", // Material Symbol Name
                     folder: "_news",
                     create: true,
-                    nested: { depth: 2 },
-                    slug: "{{slug}}",
+                    nested: { depth: 2, summary: "{{title}}" },
+                    slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
                     path: "{{fields.date | date('YYYY')}}/{{slug}}",
+                    summary: "{{title}} ({{date | date('YYYY-MM-DD')}})",
+                    sortable_fields: ["title", "date"],
+                    view_groups: [
+                        { label: "Year", field: "date", pattern: "\\d{4}" }
+                    ],
                     fields: [
                         { label: "Layout", name: "layout", widget: "hidden", default: "post" },
                         { label: "Title", name: "title", widget: "string" },

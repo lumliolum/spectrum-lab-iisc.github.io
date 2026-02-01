@@ -19,12 +19,11 @@ content:
     label: News
     type: collection
     path: _news
-    filename: "{year}/{fields.date|date('YYYY-MM-DD')}-{slug}"
+    filename: "{slug}"
     format: yaml-frontmatter
     subfolders: true
     view:
       layout: list
-      hideDirs: all
       primary: title
       fields: [title, date, badge]
       sort: [date]
@@ -212,10 +211,9 @@ content:
     path: _people/alumni/phd-graduates
     format: yaml-frontmatter
     subfolders: true
-    filename: "{fields.year}/{slug}"
+    filename: "{slug}"
     view:
       layout: list
-      hideDirs: all
       primary: title
       fields: [title, year, category]
       sort: [year, title]
@@ -246,10 +244,9 @@ content:
     path: _people/alumni/mtech-graduates
     format: yaml-frontmatter
     subfolders: true
-    filename: "{fields.year}/{slug}"
+    filename: "{slug}"
     view:
       layout: list
-      hideDirs: all
       primary: title
       fields: [title, year]
       sort: [year, title]
@@ -277,10 +274,9 @@ content:
     path: _people/alumni/mtech-research-graduates
     format: yaml-frontmatter
     subfolders: true
-    filename: "{fields.year}/{slug}"
+    filename: "{slug}"
     view:
       layout: list
-      hideDirs: all
       primary: title
       fields: [title, year]
       sort: [year, title]
@@ -307,10 +303,9 @@ content:
     path: _people/alumni/interns
     format: yaml-frontmatter
     subfolders: true
-    filename: "{fields.year}/{slug}"
+    filename: "{slug}"
     view:
       layout: list
-      hideDirs: all
       primary: title
       fields: [title, year]
       sort: [year, title]
@@ -334,10 +329,9 @@ content:
     path: _people/alumni/post-doc
     format: yaml-frontmatter
     subfolders: true
-    filename: "{fields.year}/{slug}"
+    filename: "{slug}"
     view:
       layout: list
-      hideDirs: all
       primary: title
       fields: [title, year]
       sort: [year, title]
@@ -363,10 +357,9 @@ content:
     path: _people/alumni/research-associates
     format: yaml-frontmatter
     subfolders: true
-    filename: "{fields.year}/{slug}"
+    filename: "{slug}"
     view:
       layout: list
-      hideDirs: all
       primary: title
       fields: [title, year]
       sort: [year, title]
@@ -394,10 +387,9 @@ content:
     path: _talks/delivered
     format: yaml-frontmatter
     subfolders: true
-    filename: "{year}/{fields.date|date('YYYY-MM-DD')}-{slug}"
+    filename: "{slug}"
     view:
       layout: list
-      hideDirs: all
       primary: title
       fields: [title, date, type, venue]
       sort: [date, title]
@@ -433,10 +425,9 @@ content:
     path: _talks/organized
     format: yaml-frontmatter
     subfolders: true
-    filename: "{year}/{fields.date|date('YYYY-MM-DD')}-{slug}"
+    filename: "{slug}"
     view:
       layout: list
-      hideDirs: all
       primary: title
       fields: [title, date, type, candidate]
       sort: [date, title]

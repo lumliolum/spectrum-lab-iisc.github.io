@@ -49,8 +49,34 @@ jobs:
       - name: 📦 Install system dependencies
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends imagemagick libmagickwand-dev
+          sudo apt-get install -y --no-install-recommends imagemagick libmagickwand-dev parallel
           pip3 install -r requirements.txt
+
+      - name: 🖼️ Parallel Image Optimization
+        run: |
+          echo "Processing images in parallel using $(nproc) cores..."
+          
+          process_image() {
+            local input_file="$1"
+            local filename="${input_file%.*}"
+            
+            for width in 480 800 1400; do
+              output_file="${filename}-${width}.webp"
+              # Skip if output exists and is newer than input
+              if [[ -f "$output_file" && "$output_file" -nt "$input_file" ]]; then
+                continue
+              fi
+              convert "$input_file" -strip -resize "${width}x>" -quality 80 -define webp:method=4 "$output_file" 2>/dev/null && \
+                echo "✓ Generated: $output_file"
+            done
+          }
+          export -f process_image
+          
+          # Find and process all images in parallel
+          find assets -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | \
+            parallel -j $(nproc) process_image {}
+          
+          echo "Image optimization complete!"
 
       - name: Cache Jekyll build
         uses: actions/cache@v4

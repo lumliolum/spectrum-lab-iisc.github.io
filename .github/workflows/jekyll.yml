@@ -46,11 +46,15 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: true
 
-      - name: 📦 Install system dependencies
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends imagemagick libmagickwand-dev parallel
-          pip3 install -r requirements.txt
+      # Cache apt packages - bump APT_CACHE_VERSION to force reinstall
+      - name: Cache apt packages
+        uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: imagemagick libmagickwand-dev parallel
+          version: 1.0  # Bump this to reinstall dependencies
+
+      - name: 📦 Install Python dependencies
+        run: pip3 install -r requirements.txt
 
       - name: 🖼️ Parallel Image Optimization
         run: |

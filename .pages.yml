@@ -13,72 +13,31 @@ media:
 # =============================================================================
 content:
   # ---------------------------------------------------------------------------
-  # NEWS
+  # NEWS (nested by year)
   # ---------------------------------------------------------------------------
   - name: news
     label: News
     type: collection
     path: _news
-    filename: "{slug}"
     format: yaml-frontmatter
-    view:
-      layout: list
-      primary: title
-      fields: [title, date, badge]
-      sort: [date]
-      default:
-        sort: date
-        order: desc
+    subfolders: true
     fields:
-      - name: layout
-        type: string
-        hidden: true
-        default: post
-      - name: title
-        label: Title
-        type: string
-        required: true
-      - name: date
-        label: Posted Date
-        type: date
-        required: true
-      - name: event_date
-        label: Event Date
-        type: date
-        description: Date when the event occurs (optional)
-      - name: inline
-        label: Inline
-        type: boolean
-        default: false
-      - name: related_posts
-        label: Related Posts
-        type: boolean
-        default: false
-      - name: announce
-        label: Announce
-        type: boolean
-        default: false
-      - name: badge
-        label: Badge
-        type: string
-      - name: icon
-        label: Icon
-        type: string
-      - name: link
-        label: Link
-        type: string
-      - name: venue
-        label: Venue
-        type: string
-      - name: host
-        label: Host
-        type: string
-      - name: body
-        label: Body
-        type: rich-text
+      - { name: layout, type: string, hidden: true, default: post }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: date, label: Posted Date, type: date, required: true }
+      - { name: event_date, label: Event Date, type: date }
+      - { name: inline, label: Inline, type: boolean, default: false }
+      - { name: related_posts, label: Related Posts, type: boolean, default: false }
+      - { name: announce, label: Announce, type: boolean, default: false }
+      - { name: badge, label: Badge, type: string }
+      - { name: icon, label: Icon, type: string }
+      - { name: link, label: Link, type: string }
+      - { name: venue, label: Venue, type: string }
+      - { name: host, label: Host, type: string }
+      - { name: body, label: Body, type: rich-text }
 
   # ---------------------------------------------------------------------------
-  # PEOPLE - CURRENT
+  # PEOPLE - CURRENT (flat folders, no nesting)
   # ---------------------------------------------------------------------------
   - name: lab_director
     label: "People: Lab Director"
@@ -87,7 +46,7 @@ content:
     format: yaml-frontmatter
     fields:
       - { name: layout, type: string, hidden: true, default: person }
-      - { name: title, label: Title, type: string, required: true }
+      - { name: title, label: Name, type: string, required: true }
       - { name: firstname, label: First Name, type: string, required: true }
       - { name: lastname, label: Last Name, type: string, required: true }
       - { name: description, label: Description, type: string }
@@ -100,7 +59,6 @@ content:
       - { name: email, label: Email, type: string }
       - { name: scholar_userid, label: Google Scholar ID, type: string }
       - { name: twitter_username, label: Twitter, type: string }
-      - { name: badges, label: Badges, type: string, list: true }
       - { name: show, label: Show, type: boolean, default: true }
       - { name: biography_paragraphs, label: Biography, type: text, list: true }
 
@@ -111,7 +69,7 @@ content:
     format: yaml-frontmatter
     fields:
       - { name: layout, type: string, hidden: true, default: person }
-      - { name: title, label: Title, type: string, required: true }
+      - { name: title, label: Name, type: string, required: true }
       - { name: firstname, label: First Name, type: string, required: true }
       - { name: lastname, label: Last Name, type: string, required: true }
       - { name: description, label: Description, type: string }
@@ -123,7 +81,6 @@ content:
       - { name: github_username, label: GitHub, type: string }
       - { name: email, label: Email, type: string }
       - { name: scholar_userid, label: Google Scholar ID, type: string }
-      - { name: badges, label: Badges, type: string, list: true }
       - { name: show, label: Show, type: boolean, default: true }
       - { name: biography_paragraphs, label: Biography, type: text, list: true }
 
@@ -134,7 +91,7 @@ content:
     format: yaml-frontmatter
     fields:
       - { name: layout, type: string, hidden: true, default: person }
-      - { name: title, label: Title, type: string, required: true }
+      - { name: title, label: Name, type: string, required: true }
       - { name: firstname, label: First Name, type: string, required: true }
       - { name: lastname, label: Last Name, type: string, required: true }
       - { name: description, label: Description, type: string }
@@ -154,7 +111,7 @@ content:
     format: yaml-frontmatter
     fields:
       - { name: layout, type: string, hidden: true, default: person }
-      - { name: title, label: Title, type: string, required: true }
+      - { name: title, label: Name, type: string, required: true }
       - { name: firstname, label: First Name, type: string, required: true }
       - { name: lastname, label: Last Name, type: string, required: true }
       - { name: description, label: Description, type: string }
@@ -173,7 +130,7 @@ content:
     format: yaml-frontmatter
     fields:
       - { name: layout, type: string, hidden: true, default: person }
-      - { name: title, label: Title, type: string, required: true }
+      - { name: title, label: Name, type: string, required: true }
       - { name: firstname, label: First Name, type: string, required: true }
       - { name: lastname, label: Last Name, type: string, required: true }
       - { name: description, label: Description, type: string }
@@ -192,7 +149,7 @@ content:
     format: yaml-frontmatter
     fields:
       - { name: layout, type: string, hidden: true, default: person }
-      - { name: title, label: Title, type: string, required: true }
+      - { name: title, label: Name, type: string, required: true }
       - { name: firstname, label: First Name, type: string, required: true }
       - { name: lastname, label: Last Name, type: string, required: true }
       - { name: description, label: Description, type: string }
@@ -202,25 +159,17 @@ content:
       - { name: show, label: Show, type: boolean, default: true }
 
   # ---------------------------------------------------------------------------
-  # ALUMNI
+  # ALUMNI (nested by year)
   # ---------------------------------------------------------------------------
   - name: phd_graduates
     label: "Alumni: PhD Graduates"
     type: collection
     path: _people/alumni/phd-graduates
     format: yaml-frontmatter
-    filename: "{slug}"
-    view:
-      layout: list
-      primary: title
-      fields: [title, year, category]
-      sort: [year, title]
-      default:
-        sort: year
-        order: desc
+    subfolders: true
     fields:
       - { name: layout, type: string, hidden: true, default: person }
-      - { name: title, label: Title, type: string, required: true }
+      - { name: title, label: Name, type: string, required: true }
       - { name: firstname, label: First Name, type: string, required: true }
       - { name: lastname, label: Last Name, type: string, required: true }
       - { name: description, label: Description, type: string }
@@ -241,18 +190,10 @@ content:
     type: collection
     path: _people/alumni/mtech-graduates
     format: yaml-frontmatter
-    filename: "{slug}"
-    view:
-      layout: list
-      primary: title
-      fields: [title, year]
-      sort: [year, title]
-      default:
-        sort: year
-        order: desc
+    subfolders: true
     fields:
       - { name: layout, type: string, hidden: true, default: person }
-      - { name: title, label: Title, type: string, required: true }
+      - { name: title, label: Name, type: string, required: true }
       - { name: firstname, label: First Name, type: string, required: true }
       - { name: lastname, label: Last Name, type: string, required: true }
       - { name: description, label: Description, type: string }
@@ -270,18 +211,10 @@ content:
     type: collection
     path: _people/alumni/mtech-research-graduates
     format: yaml-frontmatter
-    filename: "{slug}"
-    view:
-      layout: list
-      primary: title
-      fields: [title, year]
-      sort: [year, title]
-      default:
-        sort: year
-        order: desc
+    subfolders: true
     fields:
       - { name: layout, type: string, hidden: true, default: person }
-      - { name: title, label: Title, type: string, required: true }
+      - { name: title, label: Name, type: string, required: true }
       - { name: firstname, label: First Name, type: string, required: true }
       - { name: lastname, label: Last Name, type: string, required: true }
       - { name: description, label: Description, type: string }
@@ -298,18 +231,10 @@ content:
     type: collection
     path: _people/alumni/interns
     format: yaml-frontmatter
-    filename: "{slug}"
-    view:
-      layout: list
-      primary: title
-      fields: [title, year]
-      sort: [year, title]
-      default:
-        sort: year
-        order: desc
+    subfolders: true
     fields:
       - { name: layout, type: string, hidden: true, default: person }
-      - { name: title, label: Title, type: string, required: true }
+      - { name: title, label: Name, type: string, required: true }
       - { name: firstname, label: First Name, type: string, required: true }
       - { name: lastname, label: Last Name, type: string, required: true }
       - { name: description, label: Description, type: string }
@@ -323,18 +248,10 @@ content:
     type: collection
     path: _people/alumni/post-doc
     format: yaml-frontmatter
-    filename: "{slug}"
-    view:
-      layout: list
-      primary: title
-      fields: [title, year]
-      sort: [year, title]
-      default:
-        sort: year
-        order: desc
+    subfolders: true
     fields:
       - { name: layout, type: string, hidden: true, default: person }
-      - { name: title, label: Title, type: string, required: true }
+      - { name: title, label: Name, type: string, required: true }
       - { name: firstname, label: First Name, type: string, required: true }
       - { name: lastname, label: Last Name, type: string, required: true }
       - { name: description, label: Description, type: string }
@@ -350,18 +267,10 @@ content:
     type: collection
     path: _people/alumni/research-associates
     format: yaml-frontmatter
-    filename: "{slug}"
-    view:
-      layout: list
-      primary: title
-      fields: [title, year]
-      sort: [year, title]
-      default:
-        sort: year
-        order: desc
+    subfolders: true
     fields:
       - { name: layout, type: string, hidden: true, default: person }
-      - { name: title, label: Title, type: string, required: true }
+      - { name: title, label: Name, type: string, required: true }
       - { name: firstname, label: First Name, type: string, required: true }
       - { name: lastname, label: Last Name, type: string, required: true }
       - { name: description, label: Description, type: string }
@@ -372,27 +281,19 @@ content:
       - { name: show, label: Show, type: boolean, default: true }
 
   # ---------------------------------------------------------------------------
-  # TALKS
+  # TALKS (nested by year)
   # ---------------------------------------------------------------------------
   - name: talks_delivered
     label: "Talks: Delivered"
     type: collection
-    path: _talks/delivered/**
+    path: _talks/delivered
     format: yaml-frontmatter
-    filename: "{slug}"
-    view:
-      layout: list
-      primary: title
-      fields: [title, date, type, venue]
-      sort: [date, title]
-      default:
-        sort: date
-        order: desc
+    subfolders: true
     fields:
       - { name: layout, type: string, hidden: true, default: talk }
       - { name: title, label: Title, type: string, required: true }
       - { name: date, label: Date, type: date, required: true }
-      - { name: time, label: Time, type: string, description: "e.g., 2:30 PM or 14:30-16:00" }
+      - { name: time, label: Time, type: string }
       - { name: venue, label: Venue, type: string }
       - { name: venue_link, label: Venue Link, type: string }
       - { name: collaboration, label: Collaboration, type: string }
@@ -416,15 +317,7 @@ content:
     type: collection
     path: _talks/organized
     format: yaml-frontmatter
-    filename: "{slug}"
-    view:
-      layout: list
-      primary: title
-      fields: [title, date, type, candidate]
-      sort: [date, title]
-      default:
-        sort: date
-        order: desc
+    subfolders: true
     fields:
       - { name: layout, type: string, hidden: true, default: talk }
       - { name: title, label: Title, type: string, required: true }
@@ -446,7 +339,7 @@ content:
       - { name: candidate_bio, label: Candidate Bio, type: text }
 
   # ---------------------------------------------------------------------------
-  # DATA FILES
+  # DATA FILES (single YAML files)
   # ---------------------------------------------------------------------------
   - name: funding
     label: Funding
@@ -461,15 +354,13 @@ content:
         fields:
           - { name: name, label: Name, type: string, required: true }
           - { name: logo, label: Logo, type: image }
-          - { name: url, label: URL, type: string }
-          - { name: invert, label: Invert Logo, type: boolean, default: false }
       - name: projects
         label: Projects
         type: object
         list: true
         fields:
           - { name: title, label: Title, type: string, required: true }
-          - { name: agency, label: Agency, type: string, required: true }
+          - { name: funder, label: Funder, type: string }
           - name: role
             label: Role
             type: select
@@ -486,27 +377,27 @@ content:
     path: _data/recognition.yml
     format: yaml
     fields:
-      - name: awards
-        label: Awards
+      - name: items
+        label: Items
         type: object
         list: true
         fields:
-          - { name: award, label: Award Name, type: string, required: true }
-          - { name: year, label: Year, type: string }
+          - { name: title, label: Title, type: string, required: true }
+          - { name: year, label: Year, type: number }
           - name: category
             label: Category
             type: select
             default: Award
             options:
               values: [Award, Recognition]
-          - { name: recipients, label: Recipients, type: string, description: "Comma-separated list" }
+          - { name: recipients, label: Recipients, type: string }
           - { name: image, label: Image, type: image }
           - { name: co_inventors, label: Co-inventors, type: string }
 
-  - name: albums
+  - name: gallery
     label: Photo Albums
     type: file
-    path: _data/album.yaml
+    path: _data/gallery.yml
     format: yaml
     fields:
       - name: albums
@@ -514,17 +405,15 @@ content:
         type: object
         list: true
         fields:
-          - { name: event, label: Event Name, type: string }
-          - { name: folder, label: Folder, type: string }
-          - { name: description, label: Description, type: string }
-          - name: photos
-            label: Photos
-            type: object
-            list: true
-            fields:
-              - { name: image, label: Image, type: image }
-              - { name: caption, label: Caption, type: string }
-              - { name: order, label: Order, type: number }
+          - { name: title, label: Title, type: string, required: true }
+          - { name: date, label: Date, type: date }
+          - name: category
+            label: Category
+            type: select
+            default: Research Talks
+            options:
+              values: [Research Talks, Tutorials, Lab Activities, Conferences, Workshops, Other]
+          - { name: thumbnail, label: Thumbnail, type: image }
 
   - name: videos
     label: Videos
@@ -538,22 +427,14 @@ content:
         list: true
         fields:
           - { name: title, label: Title, type: string, required: true }
-          - { name: speaker, label: Speaker, type: string }
+          - { name: youtube_id, label: YouTube ID, type: string, required: true }
           - { name: description, label: Description, type: text }
           - { name: date, label: Date, type: date }
-          - { name: url, label: Video URL, type: string, required: true }
-          - name: category
-            label: Category
-            type: select
-            default: Research Talks
-            options:
-              values: [Research Talks, Tutorials, Lab Activities, Conferences, Workshops, Other]
-          - { name: thumbnail, label: Thumbnail, type: image }
 
   - name: courses
     label: Courses
     type: file
-    path: _data/teaching.yml
+    path: _data/courses.yml
     format: yaml
     fields:
       - name: courses
@@ -561,16 +442,9 @@ content:
         type: object
         list: true
         fields:
+          - { name: id, label: Course ID, type: string, required: true }
           - { name: title, label: Title, type: string, required: true }
           - { name: description, label: Description, type: text }
-          - { name: instructor, label: Instructor, type: string }
-          - { name: instructor_bio, label: Instructor Bio, type: text }
-          - { name: instructor_photo, label: Instructor Photo, type: image }
-          - { name: teaching_assistants, label: Teaching Assistants, type: string, list: true }
-          - { name: hosts, label: Hosts, type: string, list: true }
-          - { name: semester, label: Semester, type: string }
-          - { name: permalink, label: Permalink, type: string }
-          - { name: course_id, label: Course ID, type: string }
           - name: type
             label: Type
             type: select

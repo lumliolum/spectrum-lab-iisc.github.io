@@ -377,27 +377,22 @@ content:
     path: _data/recognition.yml
     format: yaml
     fields:
-      - name: items
-        label: Items
+      - name: awards
+        label: Awards
         type: object
         list: true
         fields:
-          - { name: title, label: Title, type: string, required: true }
-          - { name: year, label: Year, type: number }
-          - name: category
-            label: Category
-            type: select
-            default: Award
-            options:
-              values: [Award, Recognition]
+          - { name: award, label: Award Title, type: string, required: true }
+          - { name: year, label: Year, type: string }
+          - { name: category, label: Category, type: string, default: Award }
           - { name: recipients, label: Recipients, type: string }
-          - { name: image, label: Image, type: image }
+          - { name: image, label: Image, type: string }
           - { name: co_inventors, label: Co-inventors, type: string }
 
   - name: gallery
     label: Photo Albums
     type: file
-    path: _data/gallery.yml
+    path: _data/album.yaml
     format: yaml
     fields:
       - name: albums
@@ -405,15 +400,17 @@ content:
         type: object
         list: true
         fields:
-          - { name: title, label: Title, type: string, required: true }
-          - { name: date, label: Date, type: date }
-          - name: category
-            label: Category
-            type: select
-            default: Research Talks
-            options:
-              values: [Research Talks, Tutorials, Lab Activities, Conferences, Workshops, Other]
-          - { name: thumbnail, label: Thumbnail, type: image }
+          - { name: event, label: Event Name, type: string }
+          - { name: folder, label: Folder, type: string, required: true }
+          - { name: description, label: Description, type: string }
+          - name: photos
+            label: Photos
+            type: object
+            list: true
+            fields:
+              - { name: image, label: Image Path, type: string, required: true }
+              - { name: caption, label: Caption, type: string }
+              - { name: order, label: Order, type: number }
 
   - name: videos
     label: Videos
@@ -434,7 +431,7 @@ content:
   - name: courses
     label: Courses
     type: file
-    path: _data/courses.yml
+    path: _data/teaching.yml
     format: yaml
     fields:
       - name: courses
@@ -442,9 +439,13 @@ content:
         type: object
         list: true
         fields:
-          - { name: id, label: Course ID, type: string, required: true }
           - { name: title, label: Title, type: string, required: true }
+          - { name: course_id, label: Course ID, type: string }
           - { name: description, label: Description, type: text }
+          - { name: instructor, label: Instructor, type: string }
+          - { name: semester, label: Semester, type: string }
+          - { name: permalink, label: Permalink, type: string }
+          - { name: teaching_assistants, label: Teaching Assistants, type: string, list: true }
           - name: type
             label: Type
             type: select

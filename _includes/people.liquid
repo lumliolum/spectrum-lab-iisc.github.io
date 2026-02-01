@@ -7,9 +7,10 @@
   {%- endif %}
     <div class="card hoverable">
       {%- if person.img != blank %}
+        {%- capture person_alt %}{{ person.firstname }} {{ person.lastname }}{% if person.description %} - {{ person.description }}{% endif %}{% endcapture -%}
         {%- include responsive-image.liquid
           path=person.img
-          alt=person.firstname | append: " " | append: person.lastname | append: " - " | append: person.description
+          alt=person_alt
           class="img-fluid rounded-circle z-depth-0"
         -%}
       {%- else %}

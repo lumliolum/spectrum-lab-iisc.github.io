@@ -7,7 +7,7 @@
 media:
   input: assets/img
   output: /assets/img
-
+name: "Spectrum Lab Admin"
 # =============================================================================
 # CONTENT COLLECTIONS
 # =============================================================================
@@ -458,7 +458,6 @@ content:
     type: collection
     path: _pages/teaching
     format: yaml-frontmatter
-    subfolders: true
     fields:
       - { name: layout, type: string, hidden: true, default: page }
       - { name: title, label: Title, type: string, required: true }

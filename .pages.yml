@@ -429,7 +429,7 @@ content:
           - { name: date, label: Date, type: date }
 
   - name: courses
-    label: Courses
+    label: "Courses: List"
     type: file
     path: _data/teaching.yml
     format: yaml
@@ -452,3 +452,49 @@ content:
             default: Regular Course
             options:
               values: [Regular Course, Short Course]
+
+  - name: course_pages
+    label: "Courses: Pages"
+    type: collection
+    path: _pages/teaching
+    format: yaml-frontmatter
+    fields:
+      - { name: layout, type: string, hidden: true, default: page }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: permalink, label: Permalink, type: string, required: true }
+      - { name: description, label: Description, type: text }
+      - { name: course_id, label: Course ID, type: string }
+      - { name: nav, label: Show in Nav, type: boolean, default: false }
+      - { name: parent_course, label: Parent Course, type: string }
+      - name: type
+        label: Type
+        type: select
+        default: Regular Course
+        options:
+          values: [Regular Course, Short Course]
+      - name: schedule
+        label: Schedule
+        type: object
+        fields:
+          - { name: dates_time, label: Dates/Time, type: string }
+          - { name: classroom, label: Classroom, type: string }
+          - { name: duration, label: Duration, type: string }
+          - { name: meeting_link, label: Meeting Link, type: string }
+      - name: news
+        label: Course News
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: date, label: Date, type: date }
+          - { name: description, label: Description, type: string }
+      - name: modules
+        label: Modules
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: description, label: Description, type: text }
+          - { name: lectures, label: Lectures, type: string }
+          - { name: status, label: Status, type: string }
+          - { name: link, label: Link, type: string }

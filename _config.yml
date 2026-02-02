@@ -263,7 +263,6 @@ exclude:
   - lighthouse_results/
   - package.json
   - package-lock.json
-  - _pages/about_einstein.md
   - README.md
   - readme_preview/
   - vendor

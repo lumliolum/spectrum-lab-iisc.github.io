@@ -73,7 +73,7 @@ spectrum-lab-iisc.github.io/
 │   └── papers.bib          # All publications go here
 ├── _data/                  # YAML data files
 │   ├── activities.yml      # Lab Director's professional activities
-│   ├── album.yaml          # Photo album categories
+│   ├── gallery.yml         # Photo album categories
 │   ├── coauthors.yml       # Co-author highlighting
 │   ├── contacts.yml        # Contact information
 │   ├── funding.yml         # Funding sources/sponsors
@@ -236,7 +236,7 @@ Announcement text here...
 | `_data/recognition.yml` | Awards, patents, and honors |
 | `_data/teaching.yml` | Courses taught |
 | `_data/activities.yml` | Professional activities (talks, committees) |
-| `_data/album.yaml` | Photo album event categories |
+| `_data/gallery.yml` | Photo album event categories |
 | `_data/videos.yml` | Video gallery entries |
 | `_data/typography.yml` | Site-wide typography and math settings |
 | `_data/coauthors.yml` | Co-author name highlighting |

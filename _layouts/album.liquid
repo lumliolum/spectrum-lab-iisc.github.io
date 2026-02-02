@@ -14,7 +14,7 @@ layout: default
 
 <!-- Album display -->
 <div class="album-container">
-  {% assign sorted_events = site.data.album.albums | sort: "date" | reverse %}
+  {% assign sorted_events = site.data.gallery.albums | sort: "date" | reverse %}
 
   {% for event in sorted_events %}
     <div class="event-section">
@@ -57,7 +57,7 @@ layout: default
     </div>
   {% endfor %}
 
-  {% if site.data.album.albums.size == 0 %}
+  {% if site.data.gallery.albums.size == 0 %}
     <div class="text-center py-5">
       <div class="alert alert-secondary">
         <i class="fas fa-camera"></i>

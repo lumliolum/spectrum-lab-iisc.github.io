@@ -68,7 +68,7 @@ layout: default
           <section class="committee-section">
             <h2>🏛️ Current Roles & Positions</h2>
             <div class="committee-items current-roles">
-              {% for item in site.data.activities.committees.current_roles %}
+              {% for item in page.activities.committees.current_roles %}
                 <div class="committee-item">
                   <h4 class="committee-title">{{ item.title }}</h4>
                   <div class="committee-org"><em>{{ item.organization }}</em></div>
@@ -83,7 +83,7 @@ layout: default
           <section class="committee-section">
             <h2>🎓 Academic & Administrative Service</h2>
             <div class="committee-items academic-service">
-              {% for item in site.data.activities.committees.academic_service %}
+              {% for item in page.activities.committees.academic_service %}
                 <div class="committee-item">
                   <h4 class="committee-title">{{ item.title }}</h4>
                   <div class="committee-org"><em>{{ item.organization }}</em></div>
@@ -98,7 +98,7 @@ layout: default
           <section class="committee-section">
             <h2>📊 Conference Organization & Leadership</h2>
             <div class="committee-items conference-org">
-              {% for item in site.data.activities.committees.conference_organization %}
+              {% for item in page.activities.committees.conference_organization %}
                 <div class="committee-item">
                   <h4 class="committee-title">{{ item.title }}</h4>
                   <div class="committee-org"><em>{{ item.organization }}</em>{% if item.location %}, {{ item.location }}{% endif %}</div>
@@ -113,7 +113,7 @@ layout: default
           <section class="committee-section">
             <h2>✍️ Editorial Service</h2>
             <div class="committee-items editorial-service">
-              {% for item in site.data.activities.committees.editorial_service %}
+              {% for item in page.activities.committees.editorial_service %}
                 <div class="committee-item">
                   <h4 class="committee-title">{{ item.title }}</h4>
                   <div class="committee-org"><em>{{ item.organization }}</em></div>
@@ -128,7 +128,7 @@ layout: default
           <section class="committee-section">
             <h2>🎤 Session & Special Session Organization</h2>
             <div class="committee-items session-org">
-              {% for item in site.data.activities.committees.session_organization %}
+              {% for item in page.activities.committees.session_organization %}
                 <div class="committee-item">
                   <h4 class="committee-title">{{ item.title }}</h4>
                   <div class="committee-org"><em>{{ item.organization }}</em></div>
@@ -145,7 +145,7 @@ layout: default
         <section class="recognition-section">
           <h2>📈 Impact & Recognition</h2>
           <ul class="recognition-list">
-            {% for item in site.data.activities.recognition %}
+            {% for item in page.activities.recognition %}
               <li>
                 <strong>{{ item.title }}</strong>: 
                 {% if item.organization %}{{ item.organization }}{% endif %}{% if item.year %}, {{ item.year }}{% endif %}

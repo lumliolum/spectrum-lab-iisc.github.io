@@ -63,6 +63,48 @@
             { label: "Abstract", name: "abstract", widget: "text", required: false },
         ];
 
+        const commonCommitteeRoleFields = [
+            { label: "Title", name: "title", widget: "string" },
+            { label: "Organization", name: "organization", widget: "string" },
+            { label: "Period", name: "period", widget: "string" },
+            { label: "Type", name: "type", widget: "string" },
+            { label: "Location", name: "location", widget: "string", required: false },
+            { label: "Note", name: "note", widget: "string", required: false }
+        ];
+
+        const activitiesField = {
+            label: "Activities",
+            name: "activities",
+            widget: "object",
+            required: false,
+            collapsed: true,
+            fields: [
+                {
+                    label: "Committees",
+                    name: "committees",
+                    widget: "object",
+                    fields: [
+                        { label: "Current Roles", name: "current_roles", widget: "list", fields: commonCommitteeRoleFields },
+                        { label: "Academic Service", name: "academic_service", widget: "list", fields: commonCommitteeRoleFields },
+                        { label: "Conference Organization", name: "conference_organization", widget: "list", fields: commonCommitteeRoleFields },
+                        { label: "Editorial Service", name: "editorial_service", widget: "list", fields: commonCommitteeRoleFields },
+                        { label: "Session Organization", name: "session_organization", widget: "list", fields: commonCommitteeRoleFields }
+                    ]
+                },
+                {
+                    label: "Recognition",
+                    name: "recognition",
+                    widget: "list",
+                    fields: [
+                        { label: "Title", name: "title", widget: "string" },
+                        { label: "Organization", name: "organization", widget: "string", required: false },
+                        { label: "Year", name: "year", widget: "string", required: false },
+                        { label: "Description", name: "description", widget: "string", required: false }
+                    ]
+                }
+            ]
+        };
+
         // --- Main Configuration ---
         const config = {
             load_config_file: false,
@@ -125,7 +167,8 @@
                         { label: "Category", name: "category", widget: "hidden", default: "Lab Director" },
                         { label: "Alias", name: "alias", widget: "string", hint: "Short alias for publications matching (e.g., 'css')" },
                         { label: "GitHub Username", name: "github", widget: "string", required: false },
-                        { label: "CV PDF", name: "cv_pdf", widget: "file", required: false, hint: "Upload CV PDF to assets/cv/" }
+                        { label: "CV PDF", name: "cv_pdf", widget: "file", required: false, hint: "Upload CV PDF to assets/cv/" },
+                        activitiesField
                     ]
                 },
                 {

@@ -119,15 +119,15 @@ layout: default
                 <div class="card-body px-0 pt-3">
                   <div class="accordion nested-accordion" id="committeesSubsections">
                     
-                    {% if site.data.activities.committees.current_roles %}
+                    {% if page.activities.committees.current_roles %}
                     <div class="year-group">
                       <button class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#committeesCurrentRoles" aria-expanded="false">
-                        <span><i class="fas fa-star me-2 text-muted"></i>Current Roles <span class="badge bg-light text-dark ms-1">{{ site.data.activities.committees.current_roles.size }}</span></span>
+                        <span><i class="fas fa-star me-2 text-muted"></i>Current Roles <span class="badge bg-light text-dark ms-1">{{ page.activities.committees.current_roles.size }}</span></span>
                         <i class="fas fa-chevron-down chevron-sm"></i>
                       </button>
                       <div id="committeesCurrentRoles" class="collapse year-content">
                         <ul class="list-unstyled activity-list ms-3">
-                          {% for role in site.data.activities.committees.current_roles %}
+                          {% for role in page.activities.committees.current_roles %}
                           <li class="activity-item py-1">
                             <span class="activity-title">{{ role.title }}</span>
                             <span class="activity-meta text-muted d-block small">{{ role.organization }} · {{ role.period }}</span>
@@ -138,15 +138,15 @@ layout: default
                     </div>
                     {% endif %}
 
-                    {% if site.data.activities.committees.editorial_service %}
+                    {% if page.activities.committees.editorial_service %}
                     <div class="year-group">
                       <button class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#committeesEditorial" aria-expanded="false">
-                        <span><i class="fas fa-pen me-2 text-muted"></i>Editorial Service <span class="badge bg-light text-dark ms-1">{{ site.data.activities.committees.editorial_service.size }}</span></span>
+                        <span><i class="fas fa-pen me-2 text-muted"></i>Editorial Service <span class="badge bg-light text-dark ms-1">{{ page.activities.committees.editorial_service.size }}</span></span>
                         <i class="fas fa-chevron-down chevron-sm"></i>
                       </button>
                       <div id="committeesEditorial" class="collapse year-content">
                         <ul class="list-unstyled activity-list ms-3">
-                          {% for item in site.data.activities.committees.editorial_service %}
+                          {% for item in page.activities.committees.editorial_service %}
                           <li class="activity-item py-1">
                             <span class="activity-title">{{ item.title }}</span>
                             <span class="activity-meta text-muted d-block small">{{ item.organization }} · {{ item.period }}</span>
@@ -157,15 +157,15 @@ layout: default
                     </div>
                     {% endif %}
 
-                    {% if site.data.activities.committees.conference_organization %}
+                    {% if page.activities.committees.conference_organization %}
                     <div class="year-group">
                       <button class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#committeesConference" aria-expanded="false">
-                        <span><i class="fas fa-calendar-alt me-2 text-muted"></i>Conference Leadership <span class="badge bg-light text-dark ms-1">{{ site.data.activities.committees.conference_organization.size }}</span></span>
+                        <span><i class="fas fa-calendar-alt me-2 text-muted"></i>Conference Leadership <span class="badge bg-light text-dark ms-1">{{ page.activities.committees.conference_organization.size }}</span></span>
                         <i class="fas fa-chevron-down chevron-sm"></i>
                       </button>
                       <div id="committeesConference" class="collapse year-content">
                         <ul class="list-unstyled activity-list ms-3">
-                          {% for item in site.data.activities.committees.conference_organization %}
+                          {% for item in page.activities.committees.conference_organization %}
                           <li class="activity-item py-1">
                             <span class="activity-title">{{ item.title }}</span>
                             <span class="activity-meta text-muted d-block small">{{ item.organization }} · {{ item.period }}{% if item.location %} · {{ item.location }}{% endif %}</span>
@@ -176,15 +176,15 @@ layout: default
                     </div>
                     {% endif %}
 
-                    {% if site.data.activities.committees.academic_service %}
+                    {% if page.activities.committees.academic_service %}
                     <div class="year-group">
                       <button class="btn btn-link btn-sm year-toggle collapsed w-100 text-start d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#committeesAcademic" aria-expanded="false">
-                        <span><i class="fas fa-graduation-cap me-2 text-muted"></i>Academic Service <span class="badge bg-light text-dark ms-1">{{ site.data.activities.committees.academic_service.size }}</span></span>
+                        <span><i class="fas fa-graduation-cap me-2 text-muted"></i>Academic Service <span class="badge bg-light text-dark ms-1">{{ page.activities.committees.academic_service.size }}</span></span>
                         <i class="fas fa-chevron-down chevron-sm"></i>
                       </button>
                       <div id="committeesAcademic" class="collapse year-content">
                         <ul class="list-unstyled activity-list ms-3">
-                          {% for item in site.data.activities.committees.academic_service %}
+                          {% for item in page.activities.committees.academic_service %}
                           <li class="activity-item py-1">
                             <span class="activity-title">{{ item.title }}</span>
                             <span class="activity-meta text-muted d-block small">{{ item.organization }} · {{ item.period }}</span>

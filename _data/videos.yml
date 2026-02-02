@@ -2,9 +2,95 @@
 # Each video entry has: title, description, date, url, category, speaker, thumbnail (optional)
 
 videos:
+  # Conference Presentations
   - title: "Spider GANs: Leveraging Friendly Neighbors to Accelerate GAN Training"
     description: "Video presentation accompanying the CVPR 2023 paper on Spider GANs - a novel approach to accelerate GAN training by leveraging friendly neighbors."
     date: 2023-06-18
     url: "https://youtu.be/EDrGSguQMBU"
     category: "Conferences"
     speaker: "Siddarth Asokan"
+
+  - title: "Fully-Automated Semantic Segmentation of Wireless Capsule Endoscopy Images"
+    description: "Presentation from April 2020 on automated semantic segmentation for wireless capsule endoscopy."
+    date: 2020-04-06
+    url: "https://www.youtube.com/watch?v=re5JogFECzE"
+    category: "Conferences"
+
+  - title: "Automatic Classification of Artery/Vein from Single-Wavelength Fundus Images"
+    description: "ISBI 2020 presentation on automatic classification of arteries and veins from fundus images."
+    date: 2020-04-03
+    url: "https://www.youtube.com/watch?v=5_IhnVJzYNk"
+    category: "Conferences"
+
+  # Research Demonstrations - Signal Processing
+  - title: "Differentiate-and-fire Time-Encoding of Finite-Rate-of-Innovation Signals"
+    description: "Demonstration of differentiate-and-fire time-encoding approach for FRI signals."
+    url: "https://www.youtube.com/watch?v=YetswOe1rPQ"
+    category: "Signal Processing"
+
+  - title: "A Time Based Sampling Framework for Finite Rate of Innovation Signals"
+    description: "Demonstration of a novel time-based sampling framework for FRI signals."
+    url: "https://www.youtube.com/watch?v=JdMvjfvdW38"
+    category: "Signal Processing"
+
+  - title: "Wirtinger Flow Algorithms for Phase Retrieval from Fourier Magnitude"
+    description: "Demonstration of Wirtinger Flow algorithms for solving the phase retrieval problem."
+    url: "https://www.youtube.com/watch?v=7JkHaAqxHss"
+    category: "Signal Processing"
+
+  # Research Demonstrations - Deep Learning
+  - title: "An Ensemble of Proximal Networks for Sparse Coding"
+    description: "Demonstration of ensemble proximal networks for sparse coding applications."
+    url: "https://www.youtube.com/watch?v=GcRYP0wce94"
+    category: "Deep Learning"
+
+  - title: "Deep Learning Meets Sparse Coding: Deep Unrolling for Compressive Sensing"
+    description: "Demonstration of deep unrolling techniques for compressive sensing."
+    url: "https://www.youtube.com/watch?v=r3q05c1PIRg"
+    category: "Deep Learning"
+
+  - title: "ConFirmNet: Convolutional FirmNet and Applications to Compressive Sensing"
+    description: "Demonstration of ConFirmNet architecture for compressive sensing applications."
+    url: "https://www.youtube.com/watch?v=ZsSRCPZM97A"
+    category: "Deep Learning"
+
+  - title: "Adaptive Weighted Minimax Concave Penalty Based Image Reconstruction"
+    description: "Demonstration of adaptive weighted minimax concave penalty for image reconstruction."
+    url: "https://www.youtube.com/watch?v=bHhDpKs-kAQ"
+    category: "Deep Learning"
+
+  - title: "Epoch Estimation from a Speech Signal using a Deep Neural Network"
+    description: "Demonstration of DNN-based epoch estimation from speech signals."
+    url: "https://www.youtube.com/watch?v=vz72WsxzikQ"
+    category: "Speech Processing"
+
+  # Healthcare Applications
+  - title: "AI Healthcare Diagnostic Platform: COVID-19"
+    description: "Demonstration of AI-powered COVID-19 diagnostic platform."
+    url: "https://www.youtube.com/watch?v=vVTJn1fJdMc"
+    category: "Healthcare"
+
+  - title: "AI Healthcare Diagnostic Platform: Wireless Capsule Endoscopy"
+    description: "Demonstration of AI diagnostic platform for wireless capsule endoscopy analysis."
+    url: "https://www.youtube.com/watch?v=rkCOURNNXHc"
+    category: "Healthcare"
+
+  - title: "AI Healthcare Diagnostic Platform: i-Care"
+    description: "Demonstration of the i-Care AI healthcare diagnostic platform."
+    url: "https://www.youtube.com/watch?v=LGpxmuPEK0o"
+    category: "Healthcare"
+
+  - title: "NAYANA: Glaucoma Pre-Screening App (iOS)"
+    description: "iOS app demonstration for glaucoma pre-screening."
+    url: "https://www.youtube.com/watch?v=gVpizEpOYrs"
+    category: "Healthcare"
+
+  - title: "iCare: Glaucoma Pre-Screening App (Android)"
+    description: "Android app demonstration for glaucoma pre-screening."
+    url: "https://www.youtube.com/watch?v=UDaLDf1_PGs"
+    category: "Healthcare"
+
+  - title: "ePrescription App"
+    description: "Demonstration of the ePrescription mobile application."
+    url: "https://www.youtube.com/watch?v=trI2_wJ8EPw"
+    category: "Healthcare"

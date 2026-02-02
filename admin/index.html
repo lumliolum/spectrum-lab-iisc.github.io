@@ -123,7 +123,9 @@
                     fields: [
                         ...commonPersonFields,
                         { label: "Category", name: "category", widget: "hidden", default: "Lab Director" },
-                        { label: "GitHub", name: "github", widget: "string", required: false }
+                        { label: "Alias", name: "alias", widget: "string", hint: "Short alias for publications matching (e.g., 'css')" },
+                        { label: "GitHub Username", name: "github", widget: "string", required: false },
+                        { label: "CV PDF", name: "cv_pdf", widget: "file", required: false, hint: "Upload CV PDF to assets/cv/" }
                     ]
                 },
                 {

@@ -4,7 +4,7 @@ title: Saisuchith Mahajan
 firstname: Suchith
 lastname: Mahajan
 description: MTech AI
-img:
+img: assets/img/people/current/mtech-students/saisuchith-mahajan.jpeg
 website: ''
 linkedin_username: ''
 github_username: ''
